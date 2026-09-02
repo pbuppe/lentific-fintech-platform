@@ -1,0 +1,565 @@
+// Schéma définitif, suite directe du Blueprint Technique V1 (§43, §65)
+// Seul le package @fintech/database importe ce client Prisma (règle §01 de communication inter-modules).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Identité & accès
+// ---------------------------------------------------------------------------
+
+enum Role {
+  BORROWER
+  INVESTOR
+  AGENT
+  ADMIN
+  SUPER_ADMIN
+}
+
+model User {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  name             String?
+  passwordHash     String?
+  phone            String?
+  countryId        String
+  role             Role
+  tenantId         String? // null en V1 mono-tenant, utilisé au passage SaaS B2B (§29)
+  borrowerProfile  BorrowerProfile?
+  investorProfile  InvestorProfile?
+  applications     Application[]
+  investments      Investment[]
+  investorListings InvestorListing[]
+  introductionsSent     IntroductionRequest[] @relation("IntroductionRequester")
+  introductionsReceived IntroductionRequest[] @relation("IntroductionTarget")
+  documentRequestsReceived DocumentRequest[] @relation("DocumentRequestTarget")
+  documentRequestsSent     DocumentRequest[] @relation("DocumentRequestRequester")
+  subscription     Subscription?
+  payments         Payment[]
+  documents        Document[]
+  notifications    Notification[]
+  supportTickets   SupportTicket[]
+  auditLogs        AuditLog[]
+  sessions         Session[]
+  createdAt        DateTime @default(now())
+
+  country Country @relation(fields: [countryId], references: [id])
+  tenant  Tenant?  @relation(fields: [tenantId], references: [id])
+
+  @@index([role])
+  @@index([tenantId])
+}
+
+// Session légère maison (§ décision produit : pas de fournisseur d'auth externe
+// pour l'instant, même logique que KYC/signature, voir packages/auth). Mot de
+// passe haché (bcrypt) + jeton de session opaque en cookie httpOnly.
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+}
+
+model BorrowerProfile {
+  id           String  @id @default(cuid())
+  userId       String  @unique
+  address      Json
+  employment   Json
+  income       Decimal
+  expenses     Decimal
+  existingDebt Decimal
+  user         User    @relation(fields: [userId], references: [id])
+}
+
+enum InvestorVerificationStatus {
+  UNVERIFIED      // par défaut, à l'inscription
+  PENDING_REVIEW  // justificatifs déposés, en attente d'un agent
+  VERIFIED
+  REJECTED
+}
+
+// Vérification manuelle d'un investisseur (§ demande produit : crédibilité de
+// la plateforme vis-à-vis des emprunteurs), même principe que le KYC
+// emprunteur (packages/kyc) : dépôt de justificatifs, revue humaine par un
+// agent depuis le back-office, jamais de prestataire tiers automatisé pour
+// l'instant. Deux justificatifs attendus (type sur Document) :
+// "proof_of_income" (source de revenus) et "proof_of_funds" (disponibilité
+// des fonds prétendus prêtables).
+model InvestorProfile {
+  id                 String                      @id @default(cuid())
+  userId             String                      @unique
+  riskTolerance      String
+  autoInvestRules    Json?
+  verificationStatus InvestorVerificationStatus  @default(UNVERIFIED)
+  verifiedAt         DateTime?
+  rejectionReason    String?
+  user               User                        @relation(fields: [userId], references: [id])
+}
+
+// ---------------------------------------------------------------------------
+// Demandes & prêts
+// ---------------------------------------------------------------------------
+
+enum ApplicationStatus {
+  DRAFT
+  SUBMITTED
+  KYC_PENDING
+  KYC_VERIFIED
+  UNDER_REVIEW
+  PUBLISHED
+  OFFER_ACCEPTED
+  CONTRACT_SIGNED
+  DISBURSED
+  REJECTED
+  CANCELLED
+}
+
+model Application {
+  id            String              @id @default(cuid())
+  reference     String              @unique // APP-2026-000184
+  borrowerId    String
+  productId     String
+  amount        Decimal
+  durationMonths Int
+  purpose       String
+  countryId     String
+  currencyId    String
+  status        ApplicationStatus   @default(DRAFT)
+  score         Int?
+  documents     Document[]
+  offers        Offer[]
+  statusHistory ApplicationStatusLog[]
+  createdAt     DateTime            @default(now())
+
+  // Option payante "Dossier Prioritaire" (49 €, payée d'avance au dépôt,
+  // indépendamment du résultat, jamais un success-fee) : traitement sous 48h
+  // garanties, suivi par slaDeadline pour la file d'attente back-office.
+  priority            Boolean   @default(false)
+  priorityRequestedAt DateTime?
+  slaDeadline         DateTime?
+  slaBreachedAt       DateTime? // posé une fois pour éviter de relancer en boucle à chaque balayage
+
+  borrower User        @relation(fields: [borrowerId], references: [id])
+  product  LoanProduct @relation(fields: [productId], references: [id])
+  country  Country     @relation(fields: [countryId], references: [id])
+  currency Currency    @relation(fields: [currencyId], references: [id])
+
+  @@index([status])
+  @@index([borrowerId])
+}
+
+model ApplicationStatusLog {
+  id            String             @id @default(cuid())
+  applicationId String
+  fromStatus    ApplicationStatus?
+  toStatus      ApplicationStatus
+  actorId       String?
+  createdAt     DateTime           @default(now())
+  application   Application        @relation(fields: [applicationId], references: [id])
+}
+
+enum OfferStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  EXPIRED
+}
+
+model Offer {
+  id             String      @id @default(cuid())
+  applicationId  String
+  amount         Decimal
+  durationMonths Int
+  rate           Decimal
+  status         OfferStatus @default(PENDING)
+  loan           Loan?
+  application    Application @relation(fields: [applicationId], references: [id])
+}
+
+model Loan {
+  id                String            @id @default(cuid())
+  offerId           String            @unique
+  contractId        String?           @unique
+  repayments        Repayment[]
+  fundingOpportunity FundingOpportunity?
+  offer             Offer             @relation(fields: [offerId], references: [id])
+}
+
+model LoanProduct {
+  id          String        @id @default(cuid())
+  code        String        @unique
+  countries   String[]
+  minAmount   Decimal
+  maxAmount   Decimal
+  active      Boolean       @default(true) // piloté par feature flag
+  applications Application[]
+}
+
+// ---------------------------------------------------------------------------
+// Marketplace P2P & investissement
+// ---------------------------------------------------------------------------
+
+model FundingOpportunity {
+  id           String       @id @default(cuid())
+  loanId       String       @unique
+  targetAmount Decimal
+  fundedAmount Decimal      @default(0)
+  riskLevel    String
+  investments  Investment[]
+  loan         Loan         @relation(fields: [loanId], references: [id])
+}
+
+enum InvestorListingStatus {
+  OPEN
+  CLOSED
+}
+
+// Capitaux disponibles publiés par un investisseur ("j'ai 100 000 € à prêter à
+// tel taux"), sens inverse de FundingOpportunity (qui porte sur un prêt déjà
+// approuvé cherchant des investisseurs). Ici, c'est le capital qui est publié
+// en premier, visible par les emprunteurs, avant qu'aucun dossier ne l'utilise.
+// V1 : purement déclaratif, pas encore de réservation/consommation automatique
+// du montant lors d'un rapprochement avec une demande.
+model InvestorListing {
+  id             String                @id @default(cuid())
+  investorId     String
+  amountAvailable Decimal
+  preferredRate  Decimal
+  preferredDurationMonths Int
+  riskAppetite   String                @default("moderate")
+  status         InvestorListingStatus @default(OPEN)
+  createdAt      DateTime              @default(now())
+  investor       User                  @relation(fields: [investorId], references: [id])
+}
+
+enum IntroductionTargetType {
+  APPLICATION       // un investisseur demande le contact direct d'un emprunteur
+  INVESTOR_LISTING  // un emprunteur demande le contact direct d'un investisseur/prêteur
+}
+
+enum IntroductionStatus {
+  PENDING_PAYMENT
+  PAID
+  CANCELLED
+}
+
+// Mise en relation directe, moyennant paiement (frais fixe, 15 € par défaut),
+// une fois payée, le contact (email / téléphone) est révélé dans les deux sens
+// entre le demandeur et la personne visée (§ demande produit : "rendre ça plus
+// accessible", particuliers comme entreprises).
+model IntroductionRequest {
+  id           String                 @id @default(cuid())
+  requesterId  String
+  targetUserId String
+  targetType   IntroductionTargetType
+  targetId     String
+  fee          Decimal                @default(15)
+  status       IntroductionStatus     @default(PENDING_PAYMENT)
+  message      String?
+  createdAt    DateTime               @default(now())
+  paidAt       DateTime?
+
+  requester  User @relation("IntroductionRequester", fields: [requesterId], references: [id])
+  targetUser User @relation("IntroductionTarget", fields: [targetUserId], references: [id])
+
+  @@index([requesterId])
+  @@index([targetUserId])
+}
+
+enum InvestmentStatus {
+  ACTIVE
+  COMPLETED
+  DEFAULTED
+  CANCELLED
+}
+
+model Investment {
+  id            String            @id @default(cuid())
+  investorId    String
+  opportunityId String
+  amount        Decimal
+  status        InvestmentStatus  @default(ACTIVE)
+  createdAt     DateTime          @default(now())
+  investor      User              @relation(fields: [investorId], references: [id])
+  opportunity   FundingOpportunity @relation(fields: [opportunityId], references: [id])
+}
+
+model Portfolio {
+  id            String  @id @default(cuid())
+  investorId    String  @unique
+  totalInvested Decimal @default(0)
+  totalReceived Decimal @default(0)
+}
+
+// ---------------------------------------------------------------------------
+// Documents, contrats, signature
+// ---------------------------------------------------------------------------
+
+// Contenu binaire d'un fichier déposé (pièce d'identité, contrat PDF...).
+// Stand-in pour un vrai bucket S3/R2 (§11, §12) : suffisant pour un
+// déploiement de démonstration accessible en ligne, où un disque local ne
+// survivrait pas d'une requête à l'autre sur un hébergement serverless.
+// À remplacer par un vrai stockage objet avant tout usage en production réelle.
+model StoredFile {
+  storageKey String   @id
+  content    Bytes
+  createdAt  DateTime @default(now())
+}
+
+enum DocumentStatus {
+  UPLOADED
+  VERIFIED
+  REJECTED
+  EXPIRED
+}
+
+model Document {
+  id            String         @id @default(cuid())
+  ownerId       String
+  applicationId String?
+  type          String
+  status        DocumentStatus @default(UPLOADED)
+  storageKey    String
+  version       Int            @default(1)
+  expiresAt     DateTime?
+  owner         User           @relation(fields: [ownerId], references: [id])
+  application   Application?   @relation(fields: [applicationId], references: [id])
+  fulfilledRequest DocumentRequest?
+}
+
+enum DocumentRequestStatus {
+  PENDING
+  FULFILLED
+  CANCELLED
+}
+
+// Demande ponctuelle d'un document par un agent/super administrateur, en
+// dehors des justificatifs déjà prévus par le parcours (identité, KYC
+// investisseur). Donne au super administrateur un vrai pouvoir d'action sur
+// un compte (§ demande produit : "plein pouvoir") : demander une pièce
+// précise, et le titulaire du compte n'a plus qu'à l'uploader en réponse.
+model DocumentRequest {
+  id            String                @id @default(cuid())
+  targetUserId  String
+  requestedById String
+  label         String                // ex. "Justificatif de domicile"
+  instructions  String?
+  status        DocumentRequestStatus @default(PENDING)
+  documentId    String?               @unique
+  createdAt     DateTime              @default(now())
+  fulfilledAt   DateTime?
+
+  targetUser  User      @relation("DocumentRequestTarget", fields: [targetUserId], references: [id])
+  requestedBy User      @relation("DocumentRequestRequester", fields: [requestedById], references: [id])
+  document    Document? @relation(fields: [documentId], references: [id])
+
+  @@index([targetUserId])
+}
+
+model Contract {
+  id              String     @id @default(cuid())
+  loanId          String     @unique
+  templateVersion String
+  storageKey      String
+  signature       Signature?
+}
+
+enum SignatureStatus {
+  PENDING
+  SIGNED
+  DECLINED
+  EXPIRED
+}
+
+model Signature {
+  id         String          @id @default(cuid())
+  contractId String          @unique
+  provider   String
+  status     SignatureStatus @default(PENDING)
+  signedAt   DateTime?
+  contract   Contract        @relation(fields: [contractId], references: [id])
+}
+
+// ---------------------------------------------------------------------------
+// Paiements, frais, abonnements
+// ---------------------------------------------------------------------------
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+model Payment {
+  id         String        @id @default(cuid())
+  loanId     String?
+  userId     String
+  amount     Decimal
+  currencyId String
+  type       String // disbursement | repayment | fee | payout | subscription
+  status     PaymentStatus @default(PENDING)
+  provider   String
+  createdAt  DateTime      @default(now())
+  user       User          @relation(fields: [userId], references: [id])
+  currency   Currency      @relation(fields: [currencyId], references: [id])
+}
+
+enum RepaymentStatus {
+  SCHEDULED
+  PAID
+  LATE
+  DEFAULTED
+}
+
+model Repayment {
+  id        String          @id @default(cuid())
+  loanId    String
+  dueDate   DateTime
+  amount    Decimal
+  paidAt    DateTime?
+  status    RepaymentStatus @default(SCHEDULED)
+  loan      Loan            @relation(fields: [loanId], references: [id])
+}
+
+model Fee {
+  id        String  @id @default(cuid())
+  type      String // ORIGINATION_FEE | MANAGEMENT_FEE | ...
+  isFixed   Boolean
+  value     Decimal
+  productId String?
+  countryId String?
+}
+
+enum SubscriptionStatus {
+  ACTIVE     // prélèvement à jour, se renouvelle automatiquement
+  CANCELLED  // résilié, reste actif jusqu'à currentPeriodEnd puis s'arrête
+  PAST_DUE   // le renouvellement automatique a échoué
+}
+
+// Facturation récurrente (§ demande produit : formule Premium investisseur,
+// 15 €/mois). Le prélèvement mensuel est simulé par un balayage périodique
+// (voir packages/payments.processDueSubscriptions, appelé automatiquement
+// par instrumentation-node.ts) qui débite currentPeriodEnd à échéance et
+// avance la période, ou clôture l'abonnement si cancelledAt est déjà posé.
+model Subscription {
+  id               String             @id @default(cuid())
+  userId           String             @unique
+  tier             String             // ex. "INVESTOR_PREMIUM"
+  amount           Decimal            @default(15)
+  status           SubscriptionStatus @default(ACTIVE)
+  startedAt        DateTime           @default(now())
+  currentPeriodEnd DateTime
+  cancelledAt      DateTime?
+  user             User               @relation(fields: [userId], references: [id])
+}
+
+// ---------------------------------------------------------------------------
+// Plateforme & méta
+// ---------------------------------------------------------------------------
+
+model Country {
+  id            String   @id @default(cuid())
+  code          String   @unique
+  currencyId    String
+  defaultLocale String
+  users         User[]
+  applications  Application[]
+}
+
+model Currency {
+  id           String        @id @default(cuid())
+  code         String        @unique
+  applications Application[]
+  payments     Payment[]
+}
+
+model Language {
+  id        String @id @default(cuid())
+  code      String @unique
+  subdomain String @unique
+}
+
+model Rule {
+  id      String  @id @default(cuid())
+  key     String  @unique
+  scope   Json
+  value   Json
+  enabled Boolean @default(true)
+}
+
+model Tenant {
+  id       String @id @default(cuid())
+  name     String
+  branding Json
+  users    User[]
+}
+
+model RoleDefinition {
+  id          String       @id @default(cuid())
+  name        String
+  permissions Permission[]
+}
+
+model Permission {
+  id       String         @id @default(cuid())
+  roleId   String
+  action   String
+  resource String
+  role     RoleDefinition @relation(fields: [roleId], references: [id])
+}
+
+model Notification {
+  id        String    @id @default(cuid())
+  userId    String
+  channel   String
+  event     String
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id])
+}
+
+model Conversation {
+  id            String    @id @default(cuid())
+  applicationId String?
+  participants  String[]
+  messages      Message[]
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  senderId       String
+  body           String
+  createdAt      DateTime     @default(now())
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+}
+
+model SupportTicket {
+  id      String @id @default(cuid())
+  userId  String
+  status  String @default("open")
+  subject String
+  user    User   @relation(fields: [userId], references: [id])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  entity    String
+  before    Json?
+  after     Json?
+  createdAt DateTime @default(now())
+  user      User?    @relation(fields: [userId], references: [id])
+}

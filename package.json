@@ -1,0 +1,23 @@
+{
+  "name": "fintech-platform",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": ">=20" },
+  "packageManager": "pnpm@9.9.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:admin": "turbo run dev --filter=admin",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @fintech/database run generate",
+    "db:migrate": "pnpm --filter @fintech/database run migrate",
+    "db:studio": "pnpm --filter @fintech/database run studio",
+    "db:seed": "pnpm --filter @fintech/database run seed"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.0",
+    "typescript": "^5.6.0"
+  }
+}
