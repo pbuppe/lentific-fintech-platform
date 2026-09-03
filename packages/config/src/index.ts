@@ -25,7 +25,7 @@ export const env = {
   inngestEventKey: () => process.env.INNGEST_EVENT_KEY ?? "",
 
   appUrl: () => process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
-  adminUrl: () => process.env.NEXT_PUBLIC_ADMIN_URL ?? "http://localhost:3001",
+  adminUrl: () => process.env.ADMIN_URL ?? "http://localhost:3001",
 };
 
 export const APP_NAME = "Lentific";

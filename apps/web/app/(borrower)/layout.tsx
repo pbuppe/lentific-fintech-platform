@@ -5,7 +5,7 @@ export default async function BorrowerLayout({ children }: { children: React.Rea
   const user = await getCurrentUser();
   if (!user) redirect("/login");
   if (user.role === "INVESTOR") redirect("/investor/dashboard");
-  if (user.role !== "BORROWER") redirect((process.env.NEXT_PUBLIC_ADMIN_URL ?? "http://localhost:3001") + "/");
+  if (user.role !== "BORROWER") redirect((process.env.ADMIN_URL ?? "http://localhost:3001") + "/");
 
   const NAV = [
     { href: "/dashboard", label: "Mes demandes" },

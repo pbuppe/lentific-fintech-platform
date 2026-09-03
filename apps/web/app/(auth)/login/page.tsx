@@ -29,7 +29,7 @@ async function loginAction(formData: FormData) {
   if (role === "INVESTOR") redirect("/investor/dashboard");
   if (role === "BORROWER") redirect("/dashboard");
   // Agent/Admin/Super Admin : le compte existe mais sa place est dans le back-office.
-  redirect((process.env.NEXT_PUBLIC_ADMIN_URL ?? "http://localhost:3001") + "/");
+  redirect((process.env.ADMIN_URL ?? "http://localhost:3001") + "/");
 }
 
 export default function LoginPage({ searchParams }: { searchParams: { error?: string } }) {

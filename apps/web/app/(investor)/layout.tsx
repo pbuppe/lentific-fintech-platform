@@ -5,7 +5,7 @@ export default async function InvestorLayout({ children }: { children: React.Rea
   const user = await getCurrentUser();
   if (!user) redirect("/login");
   if (user.role === "BORROWER") redirect("/dashboard");
-  if (user.role !== "INVESTOR") redirect((process.env.NEXT_PUBLIC_ADMIN_URL ?? "http://localhost:3001") + "/");
+  if (user.role !== "INVESTOR") redirect((process.env.ADMIN_URL ?? "http://localhost:3001") + "/");
 
   const NAV = [
     { href: "/investor/dashboard", label: "Marketplace" },
