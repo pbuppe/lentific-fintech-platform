@@ -28,6 +28,13 @@ const nextConfig = {
     // natif, hors de apps/admin) n'est alors pas inclus dans le déploiement
     // et chaque requête à la base échoue avec "Query Engine ... not found".
     outputFileTracingRoot: path.join(__dirname, "../../"),
+    // outputFileTracingRoot dit où chercher, mais le traceur ne suit pas les
+    // fichiers binaires natifs (le moteur Prisma) par simple analyse des
+    // imports : il faut lister explicitement leur chemin pour qu'ils soient
+    // copiés dans le paquet de chaque fonction serverless.
+    outputFileTracingIncludes: {
+      "/**/*": ["../../node_modules/.pnpm/@prisma+client@*/node_modules/.prisma/client/**"],
+    },
     // Active apps/admin/instrumentation.ts (même rôle que côté web, §ci-dessous) :
     // apps/web et apps/admin sont deux processus Node séparés, chacun a besoin de
     // charger tous les modules qui réagissent aux événements pour que les actions
