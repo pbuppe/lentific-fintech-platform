@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 import { SiteHeader } from "./components/SiteHeader";
 
@@ -7,12 +9,17 @@ export const metadata: Metadata = {
   description: "Le financement se répartit en confiance, pas au hasard.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="fr">
+    <html lang={locale}>
       <body className="font-sans">
-        <SiteHeader />
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          <SiteHeader />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

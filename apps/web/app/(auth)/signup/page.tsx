@@ -1,5 +1,6 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { prisma } from "@fintech/database";
 import { signUp, SESSION_COOKIE_NAME, AuthError } from "@fintech/auth";
 import { Card } from "@fintech/ui";
@@ -24,26 +25,28 @@ async function signupAction(formData: FormData) {
       path: "/",
     });
   } catch (error) {
-    const message = error instanceof AuthError ? error.message : "Impossible de créer le compte.";
+    const t = await getTranslations("SignupPage");
+    const message = error instanceof AuthError ? error.message : t("genericError");
     redirect(`/signup?error=${encodeURIComponent(message)}&role=${role}`);
   }
 
   redirect(role === "INVESTOR" ? "/investor/dashboard" : "/dashboard");
 }
 
-export default function SignupPage({
+export default async function SignupPage({
   searchParams,
 }: {
   searchParams: { error?: string; role?: string };
 }) {
   const defaultRole = searchParams.role === "INVESTOR" ? "INVESTOR" : "BORROWER";
+  const t = await getTranslations("SignupPage");
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 py-16">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">Lentific</p>
-      <h1 className="mt-1 font-display text-2xl font-semibold text-ink">Créer un compte</h1>
+      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">{t("brand")}</p>
+      <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
       <p className="mt-2 text-sm text-ink-soft">
-        Déjà inscrit ? <a href="/login" className="text-brand-ink underline">Se connecter</a>.
+        {t("alreadyRegisteredPart1")} <a href="/login" className="text-brand-ink underline">{t("alreadyRegisteredLink")}</a>.
       </p>
 
       <Card className="mt-6">
@@ -54,23 +57,23 @@ export default function SignupPage({
           <div className="grid grid-cols-2 gap-2">
             <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-line px-3 py-2.5 text-sm has-[:checked]:border-brand has-[:checked]:bg-brand-soft">
               <input type="radio" name="role" value="BORROWER" defaultChecked={defaultRole === "BORROWER"} />
-              Emprunteur
+              {t("roleBorrower")}
             </label>
             <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-line px-3 py-2.5 text-sm has-[:checked]:border-brand has-[:checked]:bg-brand-soft">
               <input type="radio" name="role" value="INVESTOR" defaultChecked={defaultRole === "INVESTOR"} />
-              Investisseur
+              {t("roleInvestor")}
             </label>
           </div>
           <label className="grid gap-1 text-sm text-ink-soft">
-            Nom
+            {t("nameLabel")}
             <input name="name" required className="rounded-lg border border-line px-3 py-2.5 text-ink" />
           </label>
           <label className="grid gap-1 text-sm text-ink-soft">
-            E-mail
+            {t("emailLabel")}
             <input type="email" name="email" required className="rounded-lg border border-line px-3 py-2.5 text-ink" />
           </label>
           <label className="grid gap-1 text-sm text-ink-soft">
-            Mot de passe (8 caractères minimum)
+            {t("passwordLabel")}
             <input
               type="password"
               name="password"
@@ -80,7 +83,7 @@ export default function SignupPage({
             />
           </label>
           <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
-            Créer mon compte
+            {t("submit")}
           </button>
         </form>
       </Card>

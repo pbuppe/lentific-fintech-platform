@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { getTranslations } from "next-intl/server";
 import { prisma } from "@fintech/database";
 import { confirmVerification, rejectVerification } from "@fintech/kyc";
 import { getFileUrl } from "@fintech/documents";
@@ -38,6 +39,7 @@ async function rejectAction(formData: FormData) {
 }
 
 export default async function KycQueuePage() {
+  const t = await getTranslations("KycPage");
   const documents = await getPendingIdentityDocuments().catch(() => []);
   const urlByDocument = new Map<string, string>();
   for (const doc of documents) {
@@ -47,19 +49,19 @@ export default async function KycQueuePage() {
   return (
     <div className="mx-auto max-w-3xl px-8 py-10">
       <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">
-        apps/admin · vérification manuelle
+        {t("kicker")}
       </p>
       <h1 className="relative mt-1 inline-block font-display text-2xl font-semibold text-brand after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:w-9 after:rounded after:bg-accent">
-        Vérification d&apos;identité : à traiter
+        {t("title")}
       </h1>
       <p className="mt-3 max-w-lg text-sm text-ink-soft">
-        Contacte le client pour vérifier sa pièce d&apos;identité, puis confirme ou rejette ci-dessous.
+        {t("description")}
       </p>
 
       <div className="mt-6 grid gap-3">
         {documents.length === 0 ? (
           <Card>
-            <p className="text-sm text-ink-soft">Aucun dossier en attente de vérification manuelle.</p>
+            <p className="text-sm text-ink-soft">{t("empty")}</p>
           </Card>
         ) : (
           documents.map((doc) => (
@@ -76,7 +78,7 @@ export default async function KycQueuePage() {
                     {doc.storageKey}
                   </a>
                 </div>
-                <StatusPill tone="pending">En attente de contact</StatusPill>
+                <StatusPill tone="pending">{t("pendingContact")}</StatusPill>
               </div>
               <div className="mt-3 flex gap-2">
                 <form action={confirmAction}>
@@ -87,7 +89,7 @@ export default async function KycQueuePage() {
                     className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink disabled:opacity-50"
                     disabled={!doc.applicationId}
                   >
-                    Confirmer la vérification
+                    {t("confirmVerification")}
                   </button>
                 </form>
                 <form action={rejectAction}>
@@ -98,13 +100,13 @@ export default async function KycQueuePage() {
                     className="rounded-lg border border-line px-3.5 py-2 text-xs font-semibold text-accent disabled:opacity-50"
                     disabled={!doc.applicationId}
                   >
-                    Rejeter
+                    {t("reject")}
                   </button>
                 </form>
               </div>
               {!doc.applicationId && (
                 <p className="mt-2 text-xs text-accent">
-                  Ce document n&apos;est rattaché à aucune demande : impossible de faire avancer un dossier.
+                  {t("noApplicationNote")}
                 </p>
               )}
             </Card>

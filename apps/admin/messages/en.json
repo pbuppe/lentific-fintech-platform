@@ -1,0 +1,144 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back office",
+    "cases": "Cases",
+    "kyc": "Identity verification",
+    "investorVerification": "Investor verification",
+    "contracts": "Contracts to review",
+    "introductions": "Introductions",
+    "installments": "Installments to collect",
+    "riskEngine": "Risk engine",
+    "accountsSuperAdmin": "Accounts (super admin)",
+    "logout": "Log out"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back office",
+    "title": "Agent sign-in",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "submit": "Sign in"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · back office",
+    "title": "Case queue",
+    "pendingCount": "{count, plural, one {# case pending} other {# cases pending}}",
+    "empty": "No cases pending for now.",
+    "amountDuration": "{amount} € · {months} months",
+    "score": "Score: {score}/100",
+    "slaBreached": "48h SLA breached — follow-up sent",
+    "priorityDeadline": "Priority, to be handled by {date}",
+    "startAnalysis": "Start analysis",
+    "amountLabel": "Amount (€)",
+    "durationLabel": "Duration (months)",
+    "rateLabel": "Rate (%)",
+    "createOffer": "Create and publish offer",
+    "status": {
+      "submitted": "Submitted",
+      "kycPending": "Identity pending",
+      "kycVerified": "Identity verified",
+      "underReview": "Under review"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · super admin",
+    "title": "Accounts",
+    "description": "Full view of every borrower or investor account: profile, documents, document requests, introductions.",
+    "empty": "No accounts yet.",
+    "verified": "Verified",
+    "roleBorrower": "Borrower",
+    "roleInvestor": "Investor"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Back to accounts",
+    "kicker": "apps/admin · super admin",
+    "phoneNotProvided": "phone not provided",
+    "roleBorrower": "Borrower",
+    "roleInvestor": "Investor",
+    "financialProfileTitle": "Financial profile",
+    "financialProfile": "Income {income} € · Expenses {expenses} € · Existing debt {debt} €",
+    "investorProfileTitle": "Investor profile",
+    "riskTolerance": "Risk tolerance: {tolerance}",
+    "applicationsTitle": "Financing requests",
+    "listingsTitle": "Published capital offers",
+    "introductionsTitle": "Introductions",
+    "introductionsDisclaimer": "Reminder: once an introduction has been paid for, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it.",
+    "introSent": "→ requested contact for {name} ({status})",
+    "introReceived": "← contact requested by {name} ({status})",
+    "documentsTitle": "Uploaded documents",
+    "noDocuments": "No documents uploaded.",
+    "requestDocumentTitle": "Request a document",
+    "requestDocumentHint": "The account holder will see this request and can respond by uploading the document from their space.",
+    "documentLabel": "Requested document",
+    "documentPlaceholder": "E.g. Proof of address",
+    "instructionsLabel": "Notes (optional)",
+    "instructionsPlaceholder": "E.g. less than 3 months old, in your name",
+    "sendRequest": "Send request",
+    "alreadySentTitle": "Requests already sent",
+    "requestStatus": {
+      "pending": "Pending",
+      "fulfilled": "Uploaded",
+      "cancelled": "Cancelled"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · manual signature",
+    "title": "Signed contracts: to review",
+    "description": "The client printed, hand-signed and uploaded their contract. Check the document before confirming.",
+    "empty": "No contracts pending review.",
+    "contractLabel": "Contract {id}",
+    "viewSignedContract": "View the signed contract uploaded by the client",
+    "pendingVerification": "Pending verification",
+    "confirmSignature": "Confirm signature",
+    "reject": "Reject"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · collections",
+    "title": "Installments to collect",
+    "description": "Confirm a monthly payment received from the borrower: it is automatically redistributed among the loan's investors, in proportion to their share, and feeds their performance dashboard.",
+    "empty": "No installments pending for now.",
+    "dueLabel": "{reference} · due {date}",
+    "overdue": "Overdue",
+    "upcoming": "Upcoming",
+    "confirmPayment": "Confirm payment received"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · manual verification",
+    "title": "Investor verification: to process",
+    "description": "Review the proof of income and the proof of funds availability, then confirm or reject below.",
+    "empty": "No investors pending verification.",
+    "pending": "Pending",
+    "incomeProofLabel": "Proof of income:",
+    "fundsProofLabel": "Proof of funds availability:",
+    "missing": "missing",
+    "confirmVerification": "Confirm verification",
+    "reject": "Reject",
+    "missingDocumentNote": "A document is missing: cannot confirm until both are uploaded."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · manual verification",
+    "title": "Identity verification: to process",
+    "description": "Contact the client to verify their identity document, then confirm or reject below.",
+    "empty": "No cases pending manual verification.",
+    "pendingContact": "Pending contact",
+    "confirmVerification": "Confirm verification",
+    "reject": "Reject",
+    "noApplicationNote": "This document is not linked to any application: the case cannot be moved forward."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · overview",
+    "title": "Introduced profiles",
+    "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it — only the contact was provided.",
+    "empty": "No paid introductions yet.",
+    "paid": "Paid",
+    "investorToBorrower": "Investor to borrower",
+    "borrowerToInvestor": "Borrower to investor"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · risk",
+    "title": "Risk engine",
+    "demoDescription": "Example computed by <code1>assessRisk()</code1> from <code2>@fintech/risk</code2> for the demo case (€18,500 / 24 months):",
+    "scoreLabel": "Score",
+    "gradeLabel": "Grade",
+    "riskLevelLabel": "Risk level"
+  }
+}

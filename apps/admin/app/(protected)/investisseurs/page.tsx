@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { getTranslations } from "next-intl/server";
 import { confirmVerification, rejectVerification, listPendingVerifications } from "@fintech/investors";
 import { getFileUrl } from "@fintech/documents";
 import { Card, StatusPill } from "@fintech/ui";
@@ -20,6 +21,7 @@ async function rejectAction(formData: FormData) {
 }
 
 export default async function InvestorVerificationQueuePage() {
+  const t = await getTranslations("InvestorVerificationPage");
   const pending = await listPendingVerifications().catch(() => []);
 
   const rows = await Promise.all(
@@ -39,20 +41,19 @@ export default async function InvestorVerificationQueuePage() {
   return (
     <div className="mx-auto max-w-3xl px-8 py-10">
       <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">
-        apps/admin · vérification manuelle
+        {t("kicker")}
       </p>
       <h1 className="relative mt-1 inline-block font-display text-2xl font-semibold text-brand after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:w-9 after:rounded after:bg-accent">
-        Vérification des investisseurs : à traiter
+        {t("title")}
       </h1>
       <p className="mt-3 max-w-lg text-sm text-ink-soft">
-        Examine le justificatif de revenus et le justificatif de disponibilité des fonds, puis confirme ou
-        rejette ci-dessous.
+        {t("description")}
       </p>
 
       <div className="mt-6 grid gap-3">
         {rows.length === 0 ? (
           <Card>
-            <p className="text-sm text-ink-soft">Aucun investisseur en attente de vérification.</p>
+            <p className="text-sm text-ink-soft">{t("empty")}</p>
           </Card>
         ) : (
           rows.map(({ profile, incomeDoc, fundsDoc, incomeUrl, fundsUrl }) => {
@@ -65,28 +66,28 @@ export default async function InvestorVerificationQueuePage() {
                     <p className="font-display text-base text-ink">{profile.user.name ?? profile.user.email}</p>
                     <p className="text-xs text-ink-faint">{profile.user.email}</p>
                   </div>
-                  <StatusPill tone="pending">En attente</StatusPill>
+                  <StatusPill tone="pending">{t("pending")}</StatusPill>
                 </div>
 
                 <div className="mt-3 grid gap-1.5 text-sm">
                   <p>
-                    Justificatif de revenus :{" "}
+                    {t("incomeProofLabel")}{" "}
                     {incomeUrl ? (
                       <a href={incomeUrl} target="_blank" rel="noreferrer" className="text-brand-ink underline">
                         {incomeDoc?.storageKey}
                       </a>
                     ) : (
-                      <span className="text-accent">manquant</span>
+                      <span className="text-accent">{t("missing")}</span>
                     )}
                   </p>
                   <p>
-                    Justificatif de disponibilité des fonds :{" "}
+                    {t("fundsProofLabel")}{" "}
                     {fundsUrl ? (
                       <a href={fundsUrl} target="_blank" rel="noreferrer" className="text-brand-ink underline">
                         {fundsDoc?.storageKey}
                       </a>
                     ) : (
-                      <span className="text-accent">manquant</span>
+                      <span className="text-accent">{t("missing")}</span>
                     )}
                   </p>
                 </div>
@@ -99,20 +100,20 @@ export default async function InvestorVerificationQueuePage() {
                       className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink disabled:opacity-50"
                       disabled={!complete}
                     >
-                      Confirmer la vérification
+                      {t("confirmVerification")}
                     </button>
                   </form>
                   <form action={rejectAction}>
                     <input type="hidden" name="userId" value={profile.userId} />
                     <input type="hidden" name="documentIds" value={documentIds} />
                     <button className="rounded-lg border border-line px-3.5 py-2 text-xs font-semibold text-accent">
-                      Rejeter
+                      {t("reject")}
                     </button>
                   </form>
                 </div>
                 {!complete && (
                   <p className="mt-2 text-xs text-accent">
-                    Il manque un justificatif : impossible de confirmer tant que les deux ne sont pas déposés.
+                    {t("missingDocumentNote")}
                   </p>
                 )}
               </Card>

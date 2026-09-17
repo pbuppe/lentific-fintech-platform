@@ -1,0 +1,144 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back-office",
+    "cases": "Processos",
+    "kyc": "Verificação de identidade",
+    "investorVerification": "Verificação de investidores",
+    "contracts": "Contratos a validar",
+    "introductions": "Apresentações",
+    "installments": "Prestações a cobrar",
+    "riskEngine": "Motor de risco",
+    "accountsSuperAdmin": "Contas (superadministrador)",
+    "logout": "Sair"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back-office",
+    "title": "Acesso de agente",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Palavra-passe",
+    "submit": "Iniciar sessão"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · back-office",
+    "title": "Fila de processos",
+    "pendingCount": "{count, plural, one {# processo pendente} other {# processos pendentes}}",
+    "empty": "De momento, não há processos pendentes.",
+    "amountDuration": "{amount} € · {months} meses",
+    "score": "Pontuação: {score}/100",
+    "slaBreached": "SLA de 48h ultrapassado — lembrete enviado",
+    "priorityDeadline": "Prioritário, a tratar até {date}",
+    "startAnalysis": "Iniciar análise",
+    "amountLabel": "Montante (€)",
+    "durationLabel": "Duração (meses)",
+    "rateLabel": "Taxa (%)",
+    "createOffer": "Criar e publicar a oferta",
+    "status": {
+      "submitted": "Enviado",
+      "kycPending": "Identidade pendente",
+      "kycVerified": "Identidade verificada",
+      "underReview": "Em análise"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · superadministrador",
+    "title": "Contas",
+    "description": "Vista completa de cada conta de mutuário ou investidor: perfil, documentos, pedidos de documentos, apresentações.",
+    "empty": "Ainda não há contas.",
+    "verified": "Verificado",
+    "roleBorrower": "Mutuário",
+    "roleInvestor": "Investidor"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Voltar às contas",
+    "kicker": "apps/admin · superadministrador",
+    "phoneNotProvided": "telefone não indicado",
+    "roleBorrower": "Mutuário",
+    "roleInvestor": "Investidor",
+    "financialProfileTitle": "Perfil financeiro",
+    "financialProfile": "Rendimentos {income} € · Despesas {expenses} € · Dívidas existentes {debt} €",
+    "investorProfileTitle": "Perfil de investidor",
+    "riskTolerance": "Tolerância ao risco: {tolerance}",
+    "applicationsTitle": "Pedidos de financiamento",
+    "listingsTitle": "Ofertas de capital publicadas",
+    "introductionsTitle": "Apresentações",
+    "introductionsDisclaimer": "Lembrete: uma vez paga a apresentação, o que acontece entre as duas partes decorre fora da plataforma; a Lentific não se responsabiliza.",
+    "introSent": "→ pediu o contacto de {name} ({status})",
+    "introReceived": "← contacto pedido por {name} ({status})",
+    "documentsTitle": "Documentos carregados",
+    "noDocuments": "Nenhum documento carregado.",
+    "requestDocumentTitle": "Pedir um documento",
+    "requestDocumentHint": "O titular da conta verá este pedido e poderá responder carregando o documento a partir do seu espaço.",
+    "documentLabel": "Documento pedido",
+    "documentPlaceholder": "Ex. Comprovativo de morada",
+    "instructionsLabel": "Precisões (opcional)",
+    "instructionsPlaceholder": "Ex. com menos de 3 meses, em seu nome",
+    "sendRequest": "Enviar pedido",
+    "alreadySentTitle": "Pedidos já enviados",
+    "requestStatus": {
+      "pending": "Pendente",
+      "fulfilled": "Carregado",
+      "cancelled": "Cancelado"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · assinatura manual",
+    "title": "Contratos assinados: por verificar",
+    "description": "O cliente imprimiu, assinou à mão e carregou o contrato. Verifica o documento antes de confirmar.",
+    "empty": "Não há contratos pendentes de verificação.",
+    "contractLabel": "Contrato {id}",
+    "viewSignedContract": "Ver o contrato assinado carregado pelo cliente",
+    "pendingVerification": "Pendente de verificação",
+    "confirmSignature": "Confirmar a assinatura",
+    "reject": "Rejeitar"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · cobrança",
+    "title": "Prestações a cobrar",
+    "description": "Confirma uma mensalidade recebida do mutuário: é redistribuída automaticamente entre os investidores do empréstimo, na proporção da sua parte, e alimenta o seu painel de desempenho.",
+    "empty": "De momento, não há prestações pendentes.",
+    "dueLabel": "{reference} · vencimento em {date}",
+    "overdue": "Em atraso",
+    "upcoming": "A vencer",
+    "confirmPayment": "Confirmar o pagamento recebido"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · verificação manual",
+    "title": "Verificação de investidores: por tratar",
+    "description": "Analisa o comprovativo de rendimentos e o comprovativo de disponibilidade de fundos, depois confirma ou rejeita abaixo.",
+    "empty": "Não há investidores pendentes de verificação.",
+    "pending": "Pendente",
+    "incomeProofLabel": "Comprovativo de rendimentos:",
+    "fundsProofLabel": "Comprovativo de disponibilidade de fundos:",
+    "missing": "em falta",
+    "confirmVerification": "Confirmar a verificação",
+    "reject": "Rejeitar",
+    "missingDocumentNote": "Falta um comprovativo: não é possível confirmar enquanto os dois não estiverem carregados."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · verificação manual",
+    "title": "Verificação de identidade: por tratar",
+    "description": "Contacta o cliente para verificar o seu documento de identificação, depois confirma ou rejeita abaixo.",
+    "empty": "Não há processos pendentes de verificação manual.",
+    "pendingContact": "Pendente de contacto",
+    "confirmVerification": "Confirmar a verificação",
+    "reject": "Rejeitar",
+    "noApplicationNote": "Este documento não está associado a nenhum pedido: não é possível avançar com o processo."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · visão geral",
+    "title": "Perfis apresentados",
+    "description": "Lista dos pares que trocaram os seus contactos através de uma apresentação paga. A partir desse momento, o que acontece entre as duas partes decorre fora da plataforma; a Lentific não se responsabiliza, apenas o contacto foi fornecido.",
+    "empty": "Ainda não há apresentações pagas.",
+    "paid": "Paga",
+    "investorToBorrower": "Investidor para mutuário",
+    "borrowerToInvestor": "Mutuário para investidor"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · risco",
+    "title": "Motor de risco",
+    "demoDescription": "Exemplo calculado por <code1>assessRisk()</code1> de <code2>@fintech/risk</code2> para o processo de demonstração (18 500 € / 24 meses):",
+    "scoreLabel": "Pontuação",
+    "gradeLabel": "Nota",
+    "riskLevelLabel": "Nível de risco"
+  }
+}

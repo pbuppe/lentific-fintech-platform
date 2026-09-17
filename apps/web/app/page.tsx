@@ -1,32 +1,23 @@
 import { Button, Card, StatusPill } from "@fintech/ui";
 import { prisma } from "@fintech/database";
 import { listOpportunities, listOpenInvestorListings } from "@fintech/funding";
+import { getTranslations } from "next-intl/server";
 
-const BORROWER_STEPS = [
-  { n: "01", title: "Simule ton besoin", body: "Montant, durée, mensualité estimée, sans engagement, sans compte." },
-  { n: "02", title: "Complète ton profil", body: "Une seule fois : revenus, charges, situation. Servira à toutes tes demandes." },
-  { n: "03", title: "Dépose ta demande", body: "Envoie une pièce d'identité, un agent vérifie ton dossier sous peu." },
-  { n: "04", title: "Reçois une offre", body: "Le moteur de risque calcule un score, un agent te propose un financement." },
-  { n: "05", title: "Signe et sois financé", body: "Accepte l'offre, signe ton contrat, et laisse la marketplace le financer." },
-];
-
-const INVESTOR_STEPS = [
-  { n: "01", title: "Crée ton compte investisseur", body: "Renseigne ton profil et ta tolérance au risque." },
-  { n: "02", title: "Parcours la marketplace", body: "Chaque dossier affiché est déjà vérifié et son contrat signé." },
-  { n: "03", title: "Investis le montant de ton choix", body: "Financement fractionné : plusieurs investisseurs par dossier." },
-  { n: "04", title: "Suis ton portefeuille", body: "Total investi, remboursements reçus, historique, en un coup d'œil." },
-];
-
-const TRUST_POINTS = [
-  { title: "Ouvert à tous", body: "Particuliers, PME et structures : chacun peut emprunter ou prêter, sans minimum réservé aux professionnels." },
-  { title: "Scoring instantané", body: "Le moteur de risque évalue la capacité de remboursement dès le dépôt du dossier." },
-  { title: "Financement fractionné", body: "Un même besoin peut être couvert par plusieurs investisseurs, répartis automatiquement." },
-  { title: "Vérifié à chaque étape", body: "Identité vérifiée manuellement, contrat encadré juridiquement, signature confirmée par un agent." },
-];
-
-const RISK_LABEL: Record<string, string> = { low: "Faible", moderate: "Modéré", high: "Élevé" };
+const STEP_NUMBERS = ["01", "02", "03", "04", "05"];
 
 export default async function LandingPage() {
+  const t = await getTranslations("LandingPage");
+  const BORROWER_STEPS = (t.raw("borrowerSteps") as { title: string; body: string }[]).map((s, i) => ({
+    n: STEP_NUMBERS[i],
+    ...s,
+  }));
+  const INVESTOR_STEPS = (t.raw("investorSteps") as { title: string; body: string }[]).map((s, i) => ({
+    n: STEP_NUMBERS[i],
+    ...s,
+  }));
+  const TRUST_POINTS = t.raw("trustPoints") as { title: string; body: string }[];
+  const RISK_LABEL = t.raw("riskLabel") as Record<string, string>;
+
   const [opportunities, investorListings, investedAgg, fundedDossiersCount, verifiedInvestorsCount] = await Promise.all([
     listOpportunities().catch(() => []),
     listOpenInvestorListings().catch(() => []),
@@ -45,26 +36,24 @@ export default async function LandingPage() {
         <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
         <div className="relative mx-auto max-w-3xl">
           <p className="mb-4 font-mono text-xs uppercase tracking-widest text-white/70">
-            Financement participatif · P2P
+            {t("eyebrow")}
           </p>
           <h1 className="font-display text-4xl font-semibold text-balance sm:text-5xl">
-            Le financement se répartit <span className="text-[#FF9AA2]">en confiance</span>, pas au hasard.
+            {t("heroTitlePart1")} <span className="text-[#FF9AA2]">{t("heroTitleHighlight")}</span>{t("heroTitlePart2")}
           </h1>
           <p className="mt-4 max-w-xl text-white/80">
-            Lentific met en relation particuliers, PME et structures qui cherchent un financement avec des
-            investisseurs (particuliers, entreprises ou institutions) qui veulent faire fructifier leur
-            épargne, avec un dossier vérifié à chaque étape : identité, capacité de remboursement, contrat signé.
+            {t("heroSubtitle")}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button variant="primary" href="/signup?role=BORROWER">
-              Déposer une demande
+              {t("ctaApply")}
             </Button>
             <Button variant="ghost" href="/marketplace" className="border-white/30 text-white hover:bg-white/10">
-              Voir la marketplace
+              {t("ctaMarketplace")}
             </Button>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/70">
-            <a href="/login" className="underline underline-offset-4 hover:text-white">Déjà un compte ? Se connecter</a>
+            <a href="/login" className="underline underline-offset-4 hover:text-white">{t("alreadyAccount")}</a>
           </div>
         </div>
       </section>
@@ -77,24 +66,24 @@ export default async function LandingPage() {
               <p className="font-display text-2xl font-semibold text-brand-ink">
                 {totalAvailable.toLocaleString("fr-FR")} €
               </p>
-              <p className="text-xs text-ink-faint">disponibles chez nos investisseurs</p>
+              <p className="text-xs text-ink-faint">{t("statAvailableLabel")}</p>
             </div>
             <div>
               <p className="font-display text-2xl font-semibold text-brand-ink">
                 {totalInvested.toLocaleString("fr-FR")} €
               </p>
-              <p className="text-xs text-ink-faint">déjà investis sur des dossiers</p>
+              <p className="text-xs text-ink-faint">{t("statInvestedLabel")}</p>
             </div>
             <div>
               <p className="font-display text-2xl font-semibold text-brand-ink">{fundedDossiersCount}</p>
-              <p className="text-xs text-ink-faint">dossier{fundedDossiersCount > 1 ? "s" : ""} déjà signé{fundedDossiersCount > 1 ? "s" : ""}</p>
+              <p className="text-xs text-ink-faint">{t("statDossiers", { count: fundedDossiersCount })}</p>
             </div>
             <div>
               <p className="font-display text-2xl font-semibold text-brand-ink">{verifiedInvestorsCount}</p>
-              <p className="text-xs text-ink-faint">investisseur{verifiedInvestorsCount > 1 ? "s" : ""} vérifié{verifiedInvestorsCount > 1 ? "s" : ""}</p>
+              <p className="text-xs text-ink-faint">{t("statInvestors", { count: verifiedInvestorsCount })}</p>
             </div>
           </div>
-          <Button variant="ghost" href="/marketplace">Voir les offres</Button>
+          <Button variant="ghost" href="/marketplace">{t("viewOffers")}</Button>
         </div>
       </section>
 
@@ -114,14 +103,14 @@ export default async function LandingPage() {
       {/* Comment ça marche */}
       <section id="comment-ca-marche" className="px-6 py-16 sm:px-12">
         <div className="mx-auto max-w-5xl">
-          <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">Comment ça marche</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">{t("howItWorksEyebrow")}</p>
           <h2 className="mt-1 font-display text-2xl font-semibold text-ink sm:text-3xl">
-            Deux parcours, un seul principe : la confiance vérifiée.
+            {t("howItWorksTitle")}
           </h2>
 
           <div className="mt-10 grid gap-10 sm:grid-cols-2">
             <div>
-              <h3 className="font-display text-lg font-semibold text-brand-ink">Pour un emprunteur</h3>
+              <h3 className="font-display text-lg font-semibold text-brand-ink">{t("borrowerColumnTitle")}</h3>
               <ol className="mt-4 grid gap-4">
                 {BORROWER_STEPS.map((s) => (
                   <li key={s.n} className="flex gap-3">
@@ -134,12 +123,12 @@ export default async function LandingPage() {
                 ))}
               </ol>
               <Button variant="link" href="/signup?role=BORROWER" className="mt-4 inline-block">
-                Déposer une demande →
+                {t("applyLinkArrow")}
               </Button>
             </div>
 
             <div>
-              <h3 className="font-display text-lg font-semibold text-brand-ink">Pour un investisseur</h3>
+              <h3 className="font-display text-lg font-semibold text-brand-ink">{t("investorColumnTitle")}</h3>
               <ol className="mt-4 grid gap-4">
                 {INVESTOR_STEPS.map((s) => (
                   <li key={s.n} className="flex gap-3">
@@ -152,23 +141,20 @@ export default async function LandingPage() {
                 ))}
               </ol>
               <Button variant="link" href="/marketplace" className="mt-4 inline-block">
-                Voir la marketplace →
+                {t("viewMarketplaceLinkArrow")}
               </Button>
             </div>
           </div>
 
           <div className="mt-10 rounded-xl border border-line bg-surface-alt p-5">
             <p className="font-display text-sm font-semibold text-ink">
-              Besoin d&apos;aller plus vite ? Demande une mise en relation directe (15 €)
+              {t("introBoxTitle")}
             </p>
             <p className="mt-1 text-sm text-ink-soft">
-              Plutôt que d&apos;attendre, un emprunteur peut demander le contact direct d&apos;un investisseur
-              (particulier, entreprise ou structure) et inversement. Une fois la demande payée, les
-              coordonnées sont échangées immédiatement dans les deux sens.
+              {t("introBoxBody")}
             </p>
             <p className="mt-2 text-xs text-ink-faint">
-              Lentific fournit le contact ; ce qui se passe ensuite entre les deux parties a lieu hors de la
-              plateforme et n&apos;engage pas notre responsabilité.
+              {t("introBoxDisclaimer")}
             </p>
           </div>
         </div>
@@ -179,21 +165,20 @@ export default async function LandingPage() {
         <div className="mx-auto max-w-5xl">
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">Marketplace</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">{t("marketplaceEyebrow")}</p>
               <h2 className="mt-1 font-display text-2xl font-semibold text-ink sm:text-3xl">
-                Des dossiers déjà vérifiés, prêts à être financés
+                {t("marketplaceTitle")}
               </h2>
             </div>
             <Button variant="ghost" href="/marketplace" className="hidden sm:inline-block">
-              Tout voir
+              {t("viewAll")}
             </Button>
           </div>
 
           {preview.length === 0 ? (
             <Card className="mt-6">
               <p className="text-sm text-ink-soft">
-                Aucune opportunité ouverte pour l&apos;instant, le premier dossier signé apparaîtra ici
-                automatiquement.
+                {t("noOpportunities")}
               </p>
             </Card>
           ) : (
@@ -207,14 +192,14 @@ export default async function LandingPage() {
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="font-display text-base text-ink">{opp.loan.offer.application.purpose}</h3>
                       <StatusPill tone={opp.riskLevel === "high" ? "risk" : opp.riskLevel === "low" ? "ok" : "pending"}>
-                        Risque {RISK_LABEL[opp.riskLevel] ?? opp.riskLevel}
+                        {t("riskPill", { label: RISK_LABEL[opp.riskLevel] ?? opp.riskLevel })}
                       </StatusPill>
                     </div>
                     <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface">
                       <span className="block h-full rounded-full bg-brand" style={{ width: `${pct}%` }} />
                     </div>
                     <p className="mt-2 text-sm text-ink-soft">
-                      {funded.toLocaleString("fr-FR")} € / {target.toLocaleString("fr-FR")} € financés ({pct}%)
+                      {t("fundedProgress", { funded: funded.toLocaleString("fr-FR"), target: target.toLocaleString("fr-FR"), pct })}
                     </p>
                   </Card>
                 );
@@ -222,30 +207,30 @@ export default async function LandingPage() {
             </div>
           )}
           <Button variant="ghost" href="/marketplace" className="mt-4 inline-block sm:hidden">
-            Tout voir
+            {t("viewAll")}
           </Button>
         </div>
       </section>
 
       {/* CTA final */}
       <section className="px-6 py-16 text-center sm:px-12">
-        <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">Prêt à commencer ?</h2>
+        <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">{t("ctaFinalTitle")}</h2>
         <p className="mx-auto mt-2 max-w-xl text-ink-soft">
-          Crée un compte en moins de deux minutes, que tu cherches un financement ou que tu veuilles investir.
+          {t("ctaFinalBody")}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Button variant="primary" href="/signup?role=BORROWER">Déposer une demande</Button>
-          <Button variant="ghost" href="/signup?role=INVESTOR">Devenir investisseur</Button>
+          <Button variant="primary" href="/signup?role=BORROWER">{t("ctaApply")}</Button>
+          <Button variant="ghost" href="/signup?role=INVESTOR">{t("becomeInvestor")}</Button>
         </div>
       </section>
 
       <footer className="border-t border-line px-6 py-8 text-sm text-ink-faint sm:px-12">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3">
-          <span>© {new Date().getFullYear()} Lentific · Plateforme de financement participatif.</span>
+          <span>{t("footerText", { year: new Date().getFullYear() })}</span>
           <div className="flex gap-4">
-            <a href="/marketplace" className="hover:text-ink">Marketplace</a>
-            <a href="/simulateur" className="hover:text-ink">Simulateur</a>
-            <a href="/login" className="hover:text-ink">Connexion</a>
+            <a href="/marketplace" className="hover:text-ink">{t("footerMarketplace")}</a>
+            <a href="/simulateur" className="hover:text-ink">{t("footerSimulator")}</a>
+            <a href="/login" className="hover:text-ink">{t("footerLogin")}</a>
           </div>
         </div>
       </footer>

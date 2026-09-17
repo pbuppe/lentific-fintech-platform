@@ -1,0 +1,490 @@
+{
+  "SiteHeader": {
+    "howItWorks": "Come funziona",
+    "marketplace": "Marketplace",
+    "simulator": "Simulatore",
+    "logout": "Disconnetti",
+    "login": "Accedi",
+    "signup": "Crea un account"
+  },
+  "LandingPage": {
+    "eyebrow": "Finanziamento partecipativo · P2P",
+    "heroTitlePart1": "Il finanziamento si distribuisce",
+    "heroTitleHighlight": "con fiducia",
+    "heroTitlePart2": ", non a caso.",
+    "heroSubtitle": "Lentific mette in contatto privati, PMI ed enti che cercano un finanziamento con investitori (privati, aziende o istituzioni) che vogliono far fruttare i propri risparmi, con un fascicolo verificato in ogni fase: identità, capacità di rimborso, contratto firmato.",
+    "ctaApply": "Richiedi un finanziamento",
+    "ctaMarketplace": "Vedi la marketplace",
+    "alreadyAccount": "Hai già un account? Accedi",
+    "statAvailableLabel": "disponibili presso i nostri investitori",
+    "statInvestedLabel": "già investiti in pratiche",
+    "statDossiers": "{count, plural, one {pratica già firmata} other {pratiche già firmate}}",
+    "statInvestors": "{count, plural, one {investitore verificato} other {investitori verificati}}",
+    "viewOffers": "Vedi le offerte",
+    "trustPoints": [
+      {
+        "title": "Aperto a tutti",
+        "body": "Privati, PMI ed enti: chiunque può prendere in prestito o prestare, senza soglia minima riservata ai professionisti."
+      },
+      {
+        "title": "Valutazione istantanea",
+        "body": "Il motore di rischio valuta la capacità di rimborso non appena la pratica viene presentata."
+      },
+      {
+        "title": "Finanziamento frazionato",
+        "body": "Uno stesso bisogno può essere coperto da più investitori, ripartiti automaticamente."
+      },
+      {
+        "title": "Verificato in ogni fase",
+        "body": "Identità verificata manualmente, contratto regolato giuridicamente, firma confermata da un agente."
+      }
+    ],
+    "howItWorksEyebrow": "Come funziona",
+    "howItWorksTitle": "Due percorsi, un solo principio: la fiducia verificata.",
+    "borrowerColumnTitle": "Per chi richiede un finanziamento",
+    "borrowerSteps": [
+      {
+        "title": "Simula il tuo bisogno",
+        "body": "Importo, durata, rata mensile stimata, senza impegno, senza account."
+      },
+      {
+        "title": "Completa il tuo profilo",
+        "body": "Una sola volta: redditi, spese, situazione. Servirà per tutte le tue richieste."
+      },
+      {
+        "title": "Presenta la tua richiesta",
+        "body": "Invia un documento d'identità, un agente verifica la tua pratica a breve."
+      },
+      {
+        "title": "Ricevi un'offerta",
+        "body": "Il motore di rischio calcola un punteggio, un agente ti propone un finanziamento."
+      },
+      {
+        "title": "Firma e ottieni il finanziamento",
+        "body": "Accetta l'offerta, firma il contratto e lascia che la marketplace lo finanzi."
+      }
+    ],
+    "applyLinkArrow": "Richiedi un finanziamento →",
+    "investorColumnTitle": "Per un investitore",
+    "investorSteps": [
+      {
+        "title": "Crea il tuo account investitore",
+        "body": "Indica il tuo profilo e la tua tolleranza al rischio."
+      },
+      {
+        "title": "Esplora la marketplace",
+        "body": "Ogni pratica mostrata è già verificata e il relativo contratto firmato."
+      },
+      {
+        "title": "Investi l'importo che scegli",
+        "body": "Finanziamento frazionato: più investitori per pratica."
+      },
+      {
+        "title": "Segui il tuo portafoglio",
+        "body": "Totale investito, rimborsi ricevuti, cronologia, in un colpo d'occhio."
+      }
+    ],
+    "viewMarketplaceLinkArrow": "Vedi la marketplace →",
+    "introBoxTitle": "Hai bisogno di andare più veloce? Richiedi una presentazione diretta (15 €)",
+    "introBoxBody": "Invece di aspettare, chi richiede un finanziamento può chiedere il contatto diretto di un investitore (privato, azienda o ente) e viceversa. Una volta pagata la richiesta, i contatti vengono scambiati immediatamente in entrambe le direzioni.",
+    "introBoxDisclaimer": "Lentific fornisce il contatto; ciò che accade in seguito tra le due parti avviene al di fuori della piattaforma e non è sotto la nostra responsabilità.",
+    "marketplaceEyebrow": "Marketplace",
+    "marketplaceTitle": "Pratiche già verificate, pronte per essere finanziate",
+    "viewAll": "Vedi tutto",
+    "noOpportunities": "Nessuna opportunità aperta al momento, la prima pratica firmata apparirà qui automaticamente.",
+    "riskLabel": {
+      "low": "Basso",
+      "moderate": "Moderato",
+      "high": "Alto"
+    },
+    "riskPill": "Rischio {label}",
+    "fundedProgress": "{funded} € / {target} € finanziati ({pct}%)",
+    "ctaFinalTitle": "Pronto per iniziare?",
+    "ctaFinalBody": "Crea un account in meno di due minuti, che tu stia cercando un finanziamento o voglia investire.",
+    "becomeInvestor": "Diventa investitore",
+    "footerText": "© {year} Lentific · Piattaforma di finanziamento partecipativo.",
+    "footerMarketplace": "Marketplace",
+    "footerSimulator": "Simulatore",
+    "footerLogin": "Accedi"
+  },
+  "MarketplacePage": {
+    "eyebrow": "Marketplace P2P",
+    "heroTitle": "Richiedenti e investitori, nello stesso posto",
+    "heroSubtitle": "Da un lato, pratiche già verificate (sia privati che PMI) in cerca di investitori. Dall'altro, investitori (privati, aziende o enti) che annunciano il capitale che sono disposti a prestare, così saprai, ancora prima di presentare una richiesta, cosa è disponibile.",
+    "availableCapitalTitle": "Capitale disponibile presso i nostri investitori",
+    "availableCapitalSubtitle": "Questi investitori hanno annunciato di essere disposti a prestare: utile per stimare le tue possibilità prima di presentare una richiesta.",
+    "noListings": "Nessun investitore ha pubblicato capitale disponibile per ora.",
+    "amountAvailable": "{amount} € disponibili",
+    "verifiedBadge": "Investitore verificato ✓",
+    "listingMeta": "{name} · Tasso desiderato {rate}% · Durata preferita {duration} mesi",
+    "defaultInvestorName": "Investitore",
+    "monthlyEstimateLabel": "Rata mensile indicativa per chi richiede il finanziamento:",
+    "monthlyEstimateValue": "{monthly} € / mese",
+    "riskAppetiteLabel": {
+      "low": "Accetta solo rischio basso",
+      "moderate": "Accetta rischio moderato e basso",
+      "high": "Accetta tutti i livelli di rischio"
+    },
+    "connectCta": "Accedi per richiedere la messa in contatto (15 €)",
+    "depositCta": "Presenta una richiesta di finanziamento",
+    "signedDossiersTitle": "Pratiche già firmate, aperte al finanziamento",
+    "signedDossiersSubtitle": "Queste pratiche sono già state verificate (identità, analisi del rischio) e il relativo contratto firmato.",
+    "noOpportunitiesPart1": "Nessuna opportunità aperta al momento, torna presto, oppure",
+    "noOpportunitiesLink": "presenta una richiesta di finanziamento",
+    "riskLabel": {
+      "low": "Basso",
+      "moderate": "Moderato",
+      "high": "Alto"
+    },
+    "riskPill": "Rischio {label}",
+    "dossierRef": "Pratica {reference}",
+    "fundedProgress": "{funded} € / {target} € finanziati ({pct}%)",
+    "investCta": "Accedi per investire"
+  },
+  "SimulatorPage": {
+    "eyebrow": "Simulatore",
+    "title": "Stima il tuo finanziamento",
+    "subtitle": "Regola l'importo e la durata per vedere la rata mensile e il costo totale stimati, prima di presentare una richiesta.",
+    "amountLabel": "Importo desiderato:",
+    "durationLabel": "Durata:",
+    "durationValue": "{duration} mesi",
+    "rateLabel": "Tasso annuo:",
+    "estimationEyebrow": "Stima",
+    "monthlyResult": "{monthly} € / mese",
+    "totalCost": "Costo totale stimato: {total} € (tasso simulato {rate}%, il tasso reale dipende dalla tua pratica)",
+    "applyCta": "Richiedi un finanziamento"
+  },
+  "LoginPage": {
+    "brand": "Lentific",
+    "title": "Accedi",
+    "noAccountPart1": "Non hai ancora un account?",
+    "noAccountLink": "Registrati",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Password",
+    "submit": "Accedi",
+    "genericError": "Accesso non riuscito."
+  },
+  "SignupPage": {
+    "brand": "Lentific",
+    "title": "Crea un account",
+    "alreadyRegisteredPart1": "Sei già registrato?",
+    "alreadyRegisteredLink": "Accedi",
+    "roleBorrower": "Richiedente",
+    "roleInvestor": "Investitore",
+    "nameLabel": "Nome",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Password (minimo 8 caratteri)",
+    "submit": "Crea il mio account",
+    "genericError": "Impossibile creare l'account."
+  },
+  "BorrowerLayout": {
+    "nav": {
+      "myApplications": "Le mie richieste",
+      "myProfile": "Il mio profilo",
+      "submitApplication": "Richiedi un finanziamento",
+      "availableInvestors": "Investitori disponibili",
+      "introductions": "Presentazioni",
+      "myDocuments": "I miei documenti"
+    }
+  },
+  "BorrowerDashboard": {
+    "statusLabel": {
+      "DRAFT": "Bozza",
+      "SUBMITTED": "Richiesta inviata",
+      "KYC_PENDING": "Identità in attesa di verifica",
+      "KYC_VERIFIED": "Identità verificata",
+      "UNDER_REVIEW": "In fase di analisi",
+      "PUBLISHED": "Offerta disponibile",
+      "OFFER_ACCEPTED": "Offerta accettata",
+      "CONTRACT_SIGNED": "Contratto firmato",
+      "DISBURSED": "Fondi erogati",
+      "REJECTED": "Rifiutata",
+      "CANCELLED": "Annullata"
+    },
+    "errorChooseFile": "Scegli un file prima di inviare.",
+    "pageEyebrow": "apps/web · (borrower)",
+    "title": "Area richiedente",
+    "pendingDocumentsCount": "{count, plural, one {# documento} other {# documenti}}",
+    "pendingDocumentsRequested": "{count, plural, one {richiesto} other {richiesti}} dal nostro team ({labels}).",
+    "sendArrow": "Invia →",
+    "noApplications": "Nessuna richiesta per ora.",
+    "noApplicationsLink": "Presenta la tua prima richiesta",
+    "amountDurationPurpose": "{amount} € · {duration} mesi · {purpose}",
+    "priorityBadge": "★ Pratica prioritaria",
+    "slaBreached": " — SLA di 48h superato, un sollecito è stato inviato al nostro team.",
+    "slaDeadline": " — revisione garantita entro il {date}.",
+    "priorityButton": "Passa a pratica prioritaria ({fee} €, revisione entro 48h)",
+    "identityRejectedPrompt": "Documento rifiutato, invia un nuovo documento:",
+    "identityNeededPrompt": "Invia un documento d'identità per continuare:",
+    "send": "Invia",
+    "identityUploadedPending": "Documento d'identità inviato, in attesa di verifica da parte di un agente.",
+    "offerProposed": "Offerta proposta: {amount} € su {duration} mesi, tasso {rate}%",
+    "acceptOffer": "Accetta l'offerta",
+    "downloadContract": "Scarica il mio contratto (PDF)",
+    "signInstructions": "Stampalo, firmalo a mano, poi invia una foto/scansione:",
+    "contractUploadedPending": "Contratto firmato inviato, in attesa di verifica da parte di un agente.",
+    "contractConfirmed": "Contratto confermato firmato: il tuo finanziamento è ora proposto agli investitori."
+  },
+  "BorrowerApplication": {
+    "pageEyebrow": "apps/web · (borrower)",
+    "title": "Presenta una richiesta",
+    "profileIntroPart1": "Completa prima",
+    "profileIntroLink": "il tuo profilo finanziario",
+    "profileIntroPart2": "se non l'hai ancora fatto: il motore di rischio ne ha bisogno per analizzare la tua pratica.",
+    "availableFundsAmount": "{amount} €",
+    "availableFundsRest": "{count, plural, one {sono attualmente disponibili presso # investitore pronto} other {sono attualmente disponibili presso # investitori pronti}} a finanziare una pratica come la tua,",
+    "availableFundsLink": "vedi il dettaglio",
+    "noActiveProducts": "Nessun prodotto di finanziamento attivo al momento.",
+    "productLabel": "Prodotto",
+    "productParticulier": "Privato: esigenza personale",
+    "productPME": "PMI: esigenza professionale",
+    "productOption": "{label} ({min} € – {max} €)",
+    "productHint": "Aperto sia ai privati che ai professionisti.",
+    "amountLabel": "Importo (€)",
+    "durationLabel": "Durata (mesi)",
+    "purposeLabel": "Oggetto del finanziamento",
+    "submit": "Invia la mia richiesta"
+  },
+  "BorrowerDocuments": {
+    "title": "I miei documenti",
+    "subtitle": "Documenti richiesti dal nostro team per completare o verificare il tuo fascicolo.",
+    "errorSelectFile": "Scegli un file prima di inviare.",
+    "pendingHeading": "Da caricare",
+    "pendingEmpty": "Nessun documento in attesa al momento.",
+    "statusPending": "In attesa",
+    "requestedBy": "Richiesto da {name}",
+    "submit": "Invia",
+    "fulfilledHeading": "Già caricati",
+    "fulfilledEmpty": "Nessun documento caricato per ora.",
+    "viewFile": "vedi il file"
+  },
+  "BorrowerInvestors": {
+    "title": "Investitori disponibili",
+    "intro": "Privati, aziende ed enti pubblicano qui il capitale che sono disposti a prestare. Richiedi una messa in contatto diretta (dati di contatto condivisi subito) per {fee} €.",
+    "disclaimer": "Una volta messi in contatto, gli scambi e l'eventuale prestito avvengono direttamente tra te e l'investitore, al di fuori della piattaforma. Lentific fornisce il contatto ma non è responsabile di ciò che accade in seguito tra voi.",
+    "empty": "Nessun capitale disponibile pubblicato al momento.",
+    "defaultInvestorName": "Investitore",
+    "verified": "Verificato ✓",
+    "risk": "Rischio {risk}",
+    "availability": "<amount>{amountValue} €</amount> disponibili · {rate}% · {duration} mesi · circa {monthlyValue} €/mese",
+    "alreadyIntroduced": "Messa in contatto pagata: dati di contatto in <link>Le mie messe in contatto</link>.",
+    "requestButton": "Richiedi la messa in contatto ({fee} €)"
+  },
+  "BorrowerIntroductions": {
+    "title": "Le mie messe in contatto",
+    "intro": "Una messa in contatto pagata rivela i dati di contatto in entrambe le direzioni: tu e l'altra persona potete scrivervi direttamente.",
+    "disclaimer": "Da quel momento, i vostri scambi e tutto ciò che deciderete insieme avvengono al di fuori della piattaforma. Lentific ha fornito il contatto ma non è responsabile di ciò che accade tra voi in seguito.",
+    "sentHeading": "Richieste che ho inviato",
+    "sentEmpty": "Nessuna richiesta inviata per ora.",
+    "targetTypeInvestor": "investitore / finanziatore",
+    "targetTypeBorrower": "richiedente di credito",
+    "verified": "Verificato ✓",
+    "contact": "Contatto: {email}",
+    "paymentPending": "Pagamento in attesa.",
+    "receivedHeading": "Richieste ricevute",
+    "receivedEmpty": "Nessuno ti ha ancora chiesto di essere contattato.",
+    "receivedRequest": "<name>{nameValue}</name> desidera essere messo in contatto con te."
+  },
+  "BorrowerOnboarding": {
+    "title": "Il mio profilo finanziario",
+    "subtitle": "Queste informazioni servono al motore di rischio e non ti verranno richieste di nuovo in una prossima domanda.",
+    "alreadySaved": "Il tuo profilo è già registrato: modifica ciò che è cambiato e salva di nuovo.",
+    "cityLabel": "Città",
+    "postalCodeLabel": "CAP",
+    "employmentLabel": "Situazione lavorativa",
+    "employmentEmployee": "Dipendente",
+    "employmentSelfEmployed": "Autonomo",
+    "employmentBusinessOwner": "Imprenditore",
+    "employmentOther": "Altro",
+    "incomeLabel": "Reddito mensile (€)",
+    "expensesLabel": "Spese mensili (€)",
+    "existingDebtLabel": "Rate di credito esistenti (€/mese)",
+    "submit": "Salva e continua"
+  },
+  "InvestorLayout": {
+    "nav": {
+      "marketplace": "Marketplace",
+      "capitalOffers": "Le mie offerte di capitale",
+      "portfolio": "Il mio portafoglio",
+      "introductions": "Presentazioni",
+      "verification": "Verifica",
+      "documents": "I miei documenti",
+      "premium": "Premium",
+      "notifications": "Avvisi"
+    }
+  },
+  "InvestorDashboard": {
+    "invalidAmount": "Importo non valido.",
+    "riskLabel": {
+      "low": "Basso",
+      "moderate": "Moderato",
+      "high": "Alto"
+    },
+    "title": "Marketplace P2P",
+    "intro": "Se richiedi una presentazione diretta a un richiedente, gli scambi successivi avvengono al di fuori della piattaforma. Lentific fornisce il contatto ma non è responsabile di ciò che accade in seguito tra voi.",
+    "pendingDocumentsCount": "{count, plural, one {# documento} other {# documenti}}",
+    "pendingDocumentsRequested": "{count, plural, one {richiesto} other {richiesti}} dal nostro team ({labels}).",
+    "send": "Invia →",
+    "noOpportunities": "Nessuna opportunità aperta al momento: un finanziamento compare qui una volta che il suo contratto è stato firmato e confermato da un agente.",
+    "riskPill": "Rischio {risk}",
+    "fileReference": "Pratica {reference}",
+    "fundedProgress": "{funded} € / {target} € finanziati ({pct}%)",
+    "fullyFunded": "Interamente finanziato.",
+    "maxAmountPlaceholder": "Max {remaining} €",
+    "invest": "Investi",
+    "introductionPaidPrefix": "Presentazione pagata: contatti in",
+    "introductionPaidLink": "Le mie presentazioni",
+    "requestIntroduction": "Ottenere una presentazione diretta al richiedente ({premium, select, yes {gratis, Premium} other {{fee} €}})"
+  },
+  "InvestorDocuments": {
+    "chooseFileError": "Scegli un file prima di inviarlo.",
+    "title": "I miei documenti",
+    "description": "Documenti richiesti dal nostro team, oltre ai giustificativi di verifica.",
+    "toUpload": "Da caricare",
+    "noPendingDocuments": "Nessun documento in attesa al momento.",
+    "pending": "In attesa",
+    "requestedBy": "Richiesto da {name}",
+    "send": "Invia",
+    "alreadyUploaded": "Già caricati",
+    "noUploadedDocuments": "Nessun documento caricato al momento.",
+    "viewFile": "vedi il file"
+  },
+  "InvestorIntroductions": {
+    "title": "Le mie presentazioni",
+    "description": "Una presentazione pagata rivela i contatti in entrambe le direzioni: tu e la persona coinvolta potete scrivervi direttamente.",
+    "disclaimer": "Da quel momento, i vostri scambi e tutto ciò che deciderete insieme avvengono al di fuori della piattaforma. Lentific ha fornito il contatto ma non è responsabile di ciò che accade tra voi in seguito.",
+    "sentTitle": "Richieste che ho inviato",
+    "noSentRequests": "Nessuna richiesta inviata al momento.",
+    "targetTypeApplication": "richiedente di credito",
+    "targetTypeInvestor": "investitore",
+    "contactInfo": "Contatto: {email}",
+    "paymentPending": "Pagamento in attesa.",
+    "receivedTitle": "Richieste ricevute",
+    "noReceivedRequests": "Nessuno ti ha ancora chiesto di essere contattato.",
+    "wantsToConnect": "desidera essere messo in contatto con te."
+  },
+  "InvestorNotifications": {
+    "eventLabels": {
+      "funding_match_alert": "Una nuova pratica corrisponde alla tua tolleranza al rischio",
+      "introduction_paid": "Qualcuno ha pagato per ottenere il tuo contatto",
+      "investor_verified": "Il tuo profilo investitore è stato verificato",
+      "investor_rejected": "La tua verifica come investitore è stata rifiutata",
+      "document_requested": "Ti è stato richiesto un documento"
+    },
+    "title": "I miei avvisi",
+    "subtitle": "Gli avvisi automatici sulle nuove pratiche che corrispondono al tuo profilo sono riservati agli investitori Premium.",
+    "empty": "Nessun avviso per ora."
+  },
+  "InvestorOffers": {
+    "title": "Le mie offerte di capitale",
+    "subtitle": "Pubblica un importo che sei disposto a prestare, con il tasso e la durata che preferisci: i richiedenti lo vedono direttamente sul marketplace, ancora prima di presentare la loro richiesta.",
+    "publishedHeading": "Offerte pubblicate",
+    "empty": "Nessuna offerta pubblicata per ora.",
+    "amountAvailable": "{amount} € disponibili",
+    "statusPublished": "Pubblicata",
+    "statusWithdrawn": "Ritirata",
+    "listingDetails": "Tasso desiderato {rate}% · Durata preferita {duration} mesi · Rischio: {risk}",
+    "withdrawButton": "Ritira questa offerta",
+    "riskLabels": {
+      "low": "Solo basso",
+      "moderate": "Moderato e basso",
+      "high": "Tutti i livelli"
+    }
+  },
+  "InvestorPortfolio": {
+    "title": "Il mio portafoglio",
+    "totalInvested": "Totale investito",
+    "totalReceived": "Rimborsi ricevuti",
+    "activeInvestments": "Investimenti attivi",
+    "performanceHeading": "Performance",
+    "yieldLabel": "Rendimento",
+    "yieldNote": "ricevuto / investito, cumulato",
+    "defaultRateLabel": "Tasso di default",
+    "defaultRateCount": "{defaulted} / {total, plural, one {# investimento} other {# investimenti}}",
+    "riskBreakdown": "Ripartizione per rischio",
+    "noData": "—",
+    "riskAmount": "{risk}: {amount} €",
+    "premiumLocked": "La dashboard di performance avanzata (rendimento, tasso di default, ripartizione per rischio) è riservata al piano Premium.",
+    "premiumCta": "Scopri Premium",
+    "historyHeading": "Cronologia",
+    "historyEmptyPrefix": "Ancora nessun investimento,",
+    "historyEmptyLink": "scopri il marketplace",
+    "investedDate": "{amount} € investiti · {date}",
+    "riskLabels": {
+      "low": "Basso",
+      "moderate": "Moderato",
+      "high": "Alto"
+    }
+  },
+  "InvestorPremium": {
+    "title": "Piano Premium",
+    "priceInfo": "{amount} € / mese, annullabile in qualsiasi momento. Si ripaga dalla seconda messa in contatto del mese (15 € a unità altrimenti).",
+    "statusLabels": {
+      "ACTIVE": "Attivo",
+      "CANCELLED": "Annullato",
+      "PAST_DUE": "Pagamento non riuscito"
+    },
+    "renewalAuto": "Rinnovo automatico il {date}.",
+    "renewalCancelled": "Annullato: resta attivo fino al {date}, poi si interrompe senza nuovo addebito.",
+    "featuresHeading": "Cosa cambia",
+    "features": {
+      "unlimited": {
+        "prefix": "→",
+        "bold": "Messe in contatto illimitate",
+        "suffix": " con i richiedenti, senza i 15 € a unità"
+      },
+      "alert": {
+        "prefix": "→",
+        "bold": "Avviso automatico",
+        "suffix": " non appena una nuova pratica corrisponde alla tua tolleranza al rischio"
+      },
+      "verification": {
+        "prefix": "→",
+        "bold": "Verifica accelerata",
+        "suffix": " entro 48h"
+      },
+      "badge": {
+        "prefix": "→",
+        "bold": "Badge Premium",
+        "suffix": " mostrato accanto al badge Verificato"
+      },
+      "dashboard": "→ Dashboard di performance avanzata (rendimento, tasso di default, cronologia)"
+    },
+    "cancelButton": "Annulla il mio abbonamento",
+    "reactivateButton": "Riattiva l'abbonamento",
+    "subscribeButton": "Passa a Premium (15 € simulati ora)"
+  },
+  "InvestorVerification": {
+    "title": "Verifica del mio profilo",
+    "subtitle": "Un investitore verificato mostra un badge visibile ai richiedenti sul marketplace, questo rassicura e distingue il tuo profilo. La verifica è manuale: un agente esamina i tuoi documenti.",
+    "statusLabels": {
+      "UNVERIFIED": "Non verificato",
+      "PENDING_REVIEW": "In attesa di verifica",
+      "VERIFIED": "Verificato",
+      "REJECTED": "Rifiutato"
+    },
+    "rejectionReason": "Motivo del rifiuto: {reason}",
+    "verifiedMessage": "Il tuo profilo è verificato: il badge ora appare sulle tue offerte di capitale e sul tuo profilo di contatto.",
+    "pendingMessage": "I tuoi documenti sono stati inviati, un agente li esaminerà. Sarai avvisato non appena la verifica sarà completata.",
+    "incomeDocLabel": "Documento di reddito: {name}",
+    "fundsDocLabel": "Documento di disponibilità fondi: {name}",
+    "incomeFieldLabel": "Documento di fonte di reddito",
+    "incomeFieldHint": "(busta paga, avviso di accertamento, visura camerale...)",
+    "fundsFieldLabel": "Documento di disponibilità fondi",
+    "fundsFieldHint": "(estratto conto bancario recente, attestazione di conto...)",
+    "submitButton": "Invia per la verifica",
+    "requiredDocsError": "Sono richiesti entrambi i documenti."
+  },
+  "OfferForm": {
+    "amountLabel": "Importo disponibile (€)",
+    "rateLabel": "Tasso desiderato (%)",
+    "durationLabel": "Durata preferita (mesi)",
+    "riskAppetiteLabel": "Livello di rischio accettato",
+    "riskOnlyLow": "Solo basso",
+    "riskModerateAndLow": "Moderato e basso",
+    "riskAllLevels": "Tutti i livelli, incluso alto",
+    "previewText": "Per chi richiede un finanziamento e utilizzasse l'intero importo su {duration} mesi al {rate}%:",
+    "previewMonthly": "{monthly} € / mese",
+    "submit": "Pubblica questa offerta"
+  }
+}

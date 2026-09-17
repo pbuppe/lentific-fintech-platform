@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { getTranslations } from "next-intl/server";
 import { prisma, subscriptionsRepo } from "@fintech/database";
 import { subscribe, cancelSubscription } from "@fintech/payments";
 import { Card, StatusPill } from "@fintech/ui";
@@ -27,13 +28,10 @@ async function cancelAction() {
   revalidatePath("/investor/premium");
 }
 
-const STATUS_LABEL: Record<string, string> = {
-  ACTIVE: "Actif",
-  CANCELLED: "Résilié",
-  PAST_DUE: "Paiement échoué",
-};
-
 export default async function InvestorPremiumPage() {
+  const t = await getTranslations("InvestorPremium");
+  const STATUS_LABEL: Record<string, string> = t.raw("statusLabels");
+
   const user = await getCurrentUser();
   if (!user) redirect("/login");
 
@@ -44,10 +42,9 @@ export default async function InvestorPremiumPage() {
   return (
     <main className="mx-auto max-w-2xl px-6 py-10">
       <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (investor)</p>
-      <h1 className="mt-1 font-display text-2xl font-semibold text-ink">Formule Premium</h1>
+      <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
       <p className="mt-2 text-sm text-ink-soft">
-        {MONTHLY_AMOUNT}&nbsp;€ / mois, résiliable à tout moment. Rentabilisé dès la deuxième mise en relation
-        du mois (15&nbsp;€ à l&apos;unité sinon).
+        {t("priceInfo", { amount: MONTHLY_AMOUNT })}
       </p>
 
       {subscription && (
@@ -56,21 +53,21 @@ export default async function InvestorPremiumPage() {
           {isActive && (
             <p className="mt-2 text-xs text-ink-faint">
               {willRenew
-                ? `Renouvellement automatique le ${subscription.currentPeriodEnd.toLocaleDateString("fr-FR")}.`
-                : `Résilié : reste actif jusqu'au ${subscription.currentPeriodEnd.toLocaleDateString("fr-FR")}, puis s'arrête sans nouveau prélèvement.`}
+                ? t("renewalAuto", { date: subscription.currentPeriodEnd.toLocaleDateString("fr-FR") })
+                : t("renewalCancelled", { date: subscription.currentPeriodEnd.toLocaleDateString("fr-FR") })}
             </p>
           )}
         </div>
       )}
 
       <Card className="mt-6">
-        <p className="font-display text-sm font-semibold text-ink">Ce que ça change</p>
+        <p className="font-display text-sm font-semibold text-ink">{t("featuresHeading")}</p>
         <ul className="mt-3 grid gap-2 text-sm text-ink-soft">
-          <li>→ Mises en relation <strong className="text-ink">illimitées</strong> avec des emprunteurs, sans les 15&nbsp;€ à l&apos;unité</li>
-          <li>→ <strong className="text-ink">Alerte automatique</strong> dès qu&apos;un nouveau dossier correspond à ta tolérance au risque</li>
-          <li>→ <strong className="text-ink">Vérification accélérée</strong> sous 48h</li>
-          <li>→ Badge <strong className="text-ink">Premium</strong> affiché en plus du badge Vérifié</li>
-          <li>→ Tableau de bord de performance avancé (rendement, taux de défaut, historique)</li>
+          <li>{t("features.unlimited.prefix")} <strong className="text-ink">{t("features.unlimited.bold")}</strong>{t("features.unlimited.suffix")}</li>
+          <li>{t("features.alert.prefix")} <strong className="text-ink">{t("features.alert.bold")}</strong>{t("features.alert.suffix")}</li>
+          <li>{t("features.verification.prefix")} <strong className="text-ink">{t("features.verification.bold")}</strong>{t("features.verification.suffix")}</li>
+          <li>{t("features.badge.prefix")} <strong className="text-ink">{t("features.badge.bold")}</strong>{t("features.badge.suffix")}</li>
+          <li>{t("features.dashboard")}</li>
         </ul>
 
         <div className="mt-5">
@@ -78,20 +75,20 @@ export default async function InvestorPremiumPage() {
             willRenew ? (
               <form action={cancelAction}>
                 <button className="rounded-lg border border-line px-4 py-2.5 text-sm font-semibold text-ink-soft hover:bg-surface-alt">
-                  Résilier mon abonnement
+                  {t("cancelButton")}
                 </button>
               </form>
             ) : (
               <form action={subscribeAction}>
                 <button className="rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
-                  Réactiver l&apos;abonnement
+                  {t("reactivateButton")}
                 </button>
               </form>
             )
           ) : (
             <form action={subscribeAction}>
               <button className="rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
-                Passer Premium (15&nbsp;€ simulés maintenant)
+                {t("subscribeButton")}
               </button>
             </form>
           )}

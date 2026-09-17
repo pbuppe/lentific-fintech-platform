@@ -1,0 +1,144 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back-office",
+    "cases": "Pratiche",
+    "kyc": "Verifica d'identità",
+    "investorVerification": "Verifica investitori",
+    "contracts": "Contratti da verificare",
+    "introductions": "Messe in contatto",
+    "installments": "Rate da incassare",
+    "riskEngine": "Motore del rischio",
+    "accountsSuperAdmin": "Account (super admin)",
+    "logout": "Disconnetti"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back-office",
+    "title": "Accesso operatore",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Password",
+    "submit": "Accedi"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · back-office",
+    "title": "Coda pratiche",
+    "pendingCount": "{count, plural, one {# pratica in attesa} other {# pratiche in attesa}}",
+    "empty": "Nessuna pratica in attesa per ora.",
+    "amountDuration": "{amount} € · {months} mesi",
+    "score": "Punteggio: {score}/100",
+    "slaBreached": "SLA di 48h superato — sollecito inviato",
+    "priorityDeadline": "Prioritaria, da gestire entro il {date}",
+    "startAnalysis": "Avvia analisi",
+    "amountLabel": "Importo (€)",
+    "durationLabel": "Durata (mesi)",
+    "rateLabel": "Tasso (%)",
+    "createOffer": "Crea e pubblica l'offerta",
+    "status": {
+      "submitted": "Inviata",
+      "kycPending": "Identità in attesa",
+      "kycVerified": "Identità verificata",
+      "underReview": "In revisione"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · super amministratore",
+    "title": "Account",
+    "description": "Vista completa di ogni account mutuatario o investitore: profilo, documenti, richieste di documenti, messe in contatto.",
+    "empty": "Nessun account per ora.",
+    "verified": "Verificato",
+    "roleBorrower": "Mutuatario",
+    "roleInvestor": "Investitore"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Torna agli account",
+    "kicker": "apps/admin · super amministratore",
+    "phoneNotProvided": "telefono non indicato",
+    "roleBorrower": "Mutuatario",
+    "roleInvestor": "Investitore",
+    "financialProfileTitle": "Profilo finanziario",
+    "financialProfile": "Reddito {income} € · Spese {expenses} € · Debiti esistenti {debt} €",
+    "investorProfileTitle": "Profilo investitore",
+    "riskTolerance": "Tolleranza al rischio: {tolerance}",
+    "applicationsTitle": "Richieste di finanziamento",
+    "listingsTitle": "Offerte di capitale pubblicate",
+    "introductionsTitle": "Messe in contatto",
+    "introductionsDisclaimer": "Promemoria: una volta pagata la messa in contatto, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; Lentific non se ne assume la responsabilità.",
+    "introSent": "→ ha richiesto il contatto di {name} ({status})",
+    "introReceived": "← contatto richiesto da {name} ({status})",
+    "documentsTitle": "Documenti caricati",
+    "noDocuments": "Nessun documento caricato.",
+    "requestDocumentTitle": "Richiedi un documento",
+    "requestDocumentHint": "Il titolare dell'account vedrà questa richiesta e potrà rispondere caricando il documento dal proprio spazio.",
+    "documentLabel": "Documento richiesto",
+    "documentPlaceholder": "Es. Prova di domicilio",
+    "instructionsLabel": "Precisazioni (facoltativo)",
+    "instructionsPlaceholder": "Es. di meno di 3 mesi, a tuo nome",
+    "sendRequest": "Invia la richiesta",
+    "alreadySentTitle": "Richieste già inviate",
+    "requestStatus": {
+      "pending": "In attesa",
+      "fulfilled": "Caricato",
+      "cancelled": "Annullato"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · firma manuale",
+    "title": "Contratti firmati: da verificare",
+    "description": "Il cliente ha stampato, firmato a mano e caricato il proprio contratto. Verifica il documento prima di confermare.",
+    "empty": "Nessun contratto in attesa di verifica.",
+    "contractLabel": "Contratto {id}",
+    "viewSignedContract": "Visualizza il contratto firmato caricato dal cliente",
+    "pendingVerification": "In attesa di verifica",
+    "confirmSignature": "Conferma la firma",
+    "reject": "Rifiuta"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · incasso",
+    "title": "Rate da incassare",
+    "description": "Conferma una rata mensile ricevuta dal mutuatario: viene ridistribuita automaticamente tra gli investitori del prestito, in proporzione alla loro quota, e alimenta la loro dashboard delle performance.",
+    "empty": "Nessuna rata in attesa per ora.",
+    "dueLabel": "{reference} · scadenza il {date}",
+    "overdue": "In ritardo",
+    "upcoming": "In arrivo",
+    "confirmPayment": "Conferma il pagamento ricevuto"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · verifica manuale",
+    "title": "Verifica investitori: da gestire",
+    "description": "Esamina la prova di reddito e la prova di disponibilità dei fondi, quindi conferma o rifiuta qui sotto.",
+    "empty": "Nessun investitore in attesa di verifica.",
+    "pending": "In attesa",
+    "incomeProofLabel": "Prova di reddito:",
+    "fundsProofLabel": "Prova di disponibilità dei fondi:",
+    "missing": "mancante",
+    "confirmVerification": "Conferma la verifica",
+    "reject": "Rifiuta",
+    "missingDocumentNote": "Manca un documento: impossibile confermare finché non sono stati caricati entrambi."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · verifica manuale",
+    "title": "Verifica d'identità: da gestire",
+    "description": "Contatta il cliente per verificare il suo documento d'identità, quindi conferma o rifiuta qui sotto.",
+    "empty": "Nessuna pratica in attesa di verifica manuale.",
+    "pendingContact": "In attesa di contatto",
+    "confirmVerification": "Conferma la verifica",
+    "reject": "Rifiuta",
+    "noApplicationNote": "Questo documento non è collegato a nessuna richiesta: impossibile far avanzare una pratica."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · panoramica",
+    "title": "Profili messi in contatto",
+    "description": "Elenco delle coppie che hanno scambiato i propri contatti tramite una messa in contatto pagata. Da quel momento, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; Lentific non se ne assume la responsabilità, è stato fornito solo il contatto.",
+    "empty": "Nessuna messa in contatto pagata per ora.",
+    "paid": "Pagata",
+    "investorToBorrower": "Investitore verso mutuatario",
+    "borrowerToInvestor": "Mutuatario verso investitore"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · rischio",
+    "title": "Motore del rischio",
+    "demoDescription": "Esempio calcolato da <code1>assessRisk()</code1> di <code2>@fintech/risk</code2> per la pratica dimostrativa (18.500 € / 24 mesi):",
+    "scoreLabel": "Punteggio",
+    "gradeLabel": "Voto",
+    "riskLevelLabel": "Livello di rischio"
+  }
+}

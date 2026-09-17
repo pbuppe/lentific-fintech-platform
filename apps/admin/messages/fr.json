@@ -1,0 +1,144 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back-office",
+    "cases": "Dossiers",
+    "kyc": "Vérification d'identité",
+    "investorVerification": "Vérification investisseurs",
+    "contracts": "Contrats à vérifier",
+    "introductions": "Mises en relation",
+    "installments": "Échéances à encaisser",
+    "riskEngine": "Moteur de risque",
+    "accountsSuperAdmin": "Comptes (super admin)",
+    "logout": "Déconnexion"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back-office",
+    "title": "Connexion agent",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe",
+    "submit": "Se connecter"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · back-office",
+    "title": "File d'attente : dossiers",
+    "pendingCount": "{count, plural, one {# dossier en attente} other {# dossiers en attente}}",
+    "empty": "Aucun dossier en attente pour l'instant.",
+    "amountDuration": "{amount} € · {months} mois",
+    "score": "Score : {score}/100",
+    "slaBreached": "SLA 48h dépassé — relance envoyée",
+    "priorityDeadline": "Prioritaire, à traiter avant le {date}",
+    "startAnalysis": "Lancer l'analyse",
+    "amountLabel": "Montant (€)",
+    "durationLabel": "Durée (mois)",
+    "rateLabel": "Taux (%)",
+    "createOffer": "Créer et publier l'offre",
+    "status": {
+      "submitted": "Envoyée",
+      "kycPending": "Identité en attente",
+      "kycVerified": "Identité vérifiée",
+      "underReview": "En revue"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · super administrateur",
+    "title": "Comptes",
+    "description": "Vue complète sur chaque compte emprunteur ou investisseur : profil, documents, demandes de pièces, mises en relation.",
+    "empty": "Aucun compte pour l'instant.",
+    "verified": "Vérifié",
+    "roleBorrower": "Emprunteur",
+    "roleInvestor": "Investisseur"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Retour aux comptes",
+    "kicker": "apps/admin · super administrateur",
+    "phoneNotProvided": "téléphone non renseigné",
+    "roleBorrower": "Emprunteur",
+    "roleInvestor": "Investisseur",
+    "financialProfileTitle": "Profil financier",
+    "financialProfile": "Revenus {income} € · Charges {expenses} € · Dettes existantes {debt} €",
+    "investorProfileTitle": "Profil investisseur",
+    "riskTolerance": "Tolérance au risque : {tolerance}",
+    "applicationsTitle": "Demandes de financement",
+    "listingsTitle": "Offres de capital publiées",
+    "introductionsTitle": "Mises en relation",
+    "introductionsDisclaimer": "Rappel : une fois la mise en relation payée, ce qui se passe entre les deux parties a lieu hors de la plateforme, Lentific n'en est pas responsable.",
+    "introSent": "→ a demandé le contact de {name} ({status})",
+    "introReceived": "← contact demandé par {name} ({status})",
+    "documentsTitle": "Documents déposés",
+    "noDocuments": "Aucun document déposé.",
+    "requestDocumentTitle": "Demander un document",
+    "requestDocumentHint": "Le titulaire du compte verra cette demande et pourra y répondre en uploadant le document depuis son espace.",
+    "documentLabel": "Document demandé",
+    "documentPlaceholder": "Ex. Justificatif de domicile",
+    "instructionsLabel": "Précisions (optionnel)",
+    "instructionsPlaceholder": "Ex. de moins de 3 mois, à ton nom",
+    "sendRequest": "Envoyer la demande",
+    "alreadySentTitle": "Demandes déjà envoyées",
+    "requestStatus": {
+      "pending": "En attente",
+      "fulfilled": "Déposé",
+      "cancelled": "Annulé"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · signature manuelle",
+    "title": "Contrats signés : à vérifier",
+    "description": "Le client a imprimé, signé à la main et uploadé son contrat. Vérifie la pièce avant de confirmer.",
+    "empty": "Aucun contrat en attente de vérification.",
+    "contractLabel": "Contrat {id}",
+    "viewSignedContract": "Voir le contrat signé déposé par le client",
+    "pendingVerification": "En attente de vérification",
+    "confirmSignature": "Confirmer la signature",
+    "reject": "Rejeter"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · encaissement",
+    "title": "Échéances à encaisser",
+    "description": "Confirme une mensualité reçue de l'emprunteur : elle est redistribuée automatiquement entre les investisseurs du prêt, au prorata de leur part, et vient nourrir leur tableau de bord de performance.",
+    "empty": "Aucune échéance en attente pour l'instant.",
+    "dueLabel": "{reference} · échéance du {date}",
+    "overdue": "En retard",
+    "upcoming": "À venir",
+    "confirmPayment": "Confirmer le paiement reçu"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · vérification manuelle",
+    "title": "Vérification des investisseurs : à traiter",
+    "description": "Examine le justificatif de revenus et le justificatif de disponibilité des fonds, puis confirme ou rejette ci-dessous.",
+    "empty": "Aucun investisseur en attente de vérification.",
+    "pending": "En attente",
+    "incomeProofLabel": "Justificatif de revenus :",
+    "fundsProofLabel": "Justificatif de disponibilité des fonds :",
+    "missing": "manquant",
+    "confirmVerification": "Confirmer la vérification",
+    "reject": "Rejeter",
+    "missingDocumentNote": "Il manque un justificatif : impossible de confirmer tant que les deux ne sont pas déposés."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · vérification manuelle",
+    "title": "Vérification d'identité : à traiter",
+    "description": "Contacte le client pour vérifier sa pièce d'identité, puis confirme ou rejette ci-dessous.",
+    "empty": "Aucun dossier en attente de vérification manuelle.",
+    "pendingContact": "En attente de contact",
+    "confirmVerification": "Confirmer la vérification",
+    "reject": "Rejeter",
+    "noApplicationNote": "Ce document n'est rattaché à aucune demande : impossible de faire avancer un dossier."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · vue d'ensemble",
+    "title": "Profils mis en relation",
+    "description": "Liste des paires ayant échangé leurs coordonnées via une mise en relation payée. À partir de ce moment, ce qui se passe entre les deux parties a lieu hors de la plateforme, Lentific n'en est pas responsable, seul le contact a été fourni.",
+    "empty": "Aucune mise en relation payée pour l'instant.",
+    "paid": "Payée",
+    "investorToBorrower": "Investisseur vers emprunteur",
+    "borrowerToInvestor": "Emprunteur vers investisseur"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · risk",
+    "title": "Moteur de risque",
+    "demoDescription": "Exemple calculé par <code1>assessRisk()</code1> de <code2>@fintech/risk</code2> pour le dossier de démo (18 500 € / 24 mois) :",
+    "scoreLabel": "Score",
+    "gradeLabel": "Note",
+    "riskLevelLabel": "Niveau de risque"
+  }
+}

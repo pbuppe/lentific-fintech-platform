@@ -1,0 +1,144 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back-office",
+    "cases": "Expedientes",
+    "kyc": "Verificación de identidad",
+    "investorVerification": "Verificación de inversores",
+    "contracts": "Contratos por revisar",
+    "introductions": "Puestas en contacto",
+    "installments": "Cuotas por cobrar",
+    "riskEngine": "Motor de riesgo",
+    "accountsSuperAdmin": "Cuentas (superadministrador)",
+    "logout": "Cerrar sesión"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back-office",
+    "title": "Acceso de agente",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "submit": "Iniciar sesión"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · back-office",
+    "title": "Cola de expedientes",
+    "pendingCount": "{count, plural, one {# expediente pendiente} other {# expedientes pendientes}}",
+    "empty": "No hay expedientes pendientes por ahora.",
+    "amountDuration": "{amount} € · {months} meses",
+    "score": "Puntuación: {score}/100",
+    "slaBreached": "SLA de 48h superado — recordatorio enviado",
+    "priorityDeadline": "Prioritario, a tramitar antes del {date}",
+    "startAnalysis": "Iniciar análisis",
+    "amountLabel": "Importe (€)",
+    "durationLabel": "Duración (meses)",
+    "rateLabel": "Tasa (%)",
+    "createOffer": "Crear y publicar la oferta",
+    "status": {
+      "submitted": "Enviada",
+      "kycPending": "Identidad pendiente",
+      "kycVerified": "Identidad verificada",
+      "underReview": "En revisión"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · superadministrador",
+    "title": "Cuentas",
+    "description": "Vista completa de cada cuenta de prestatario o inversor: perfil, documentos, solicitudes de documentos, puestas en contacto.",
+    "empty": "Todavía no hay cuentas.",
+    "verified": "Verificado",
+    "roleBorrower": "Prestatario",
+    "roleInvestor": "Inversor"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Volver a las cuentas",
+    "kicker": "apps/admin · superadministrador",
+    "phoneNotProvided": "teléfono no indicado",
+    "roleBorrower": "Prestatario",
+    "roleInvestor": "Inversor",
+    "financialProfileTitle": "Perfil financiero",
+    "financialProfile": "Ingresos {income} € · Gastos {expenses} € · Deudas existentes {debt} €",
+    "investorProfileTitle": "Perfil de inversor",
+    "riskTolerance": "Tolerancia al riesgo: {tolerance}",
+    "applicationsTitle": "Solicitudes de financiación",
+    "listingsTitle": "Ofertas de capital publicadas",
+    "introductionsTitle": "Puestas en contacto",
+    "introductionsDisclaimer": "Recordatorio: una vez pagada la puesta en contacto, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; Lentific no se hace responsable.",
+    "introSent": "→ solicitó el contacto de {name} ({status})",
+    "introReceived": "← contacto solicitado por {name} ({status})",
+    "documentsTitle": "Documentos aportados",
+    "noDocuments": "Ningún documento aportado.",
+    "requestDocumentTitle": "Solicitar un documento",
+    "requestDocumentHint": "El titular de la cuenta verá esta solicitud y podrá responder subiendo el documento desde su espacio.",
+    "documentLabel": "Documento solicitado",
+    "documentPlaceholder": "Ej. Justificante de domicilio",
+    "instructionsLabel": "Precisiones (opcional)",
+    "instructionsPlaceholder": "Ej. de menos de 3 meses, a tu nombre",
+    "sendRequest": "Enviar solicitud",
+    "alreadySentTitle": "Solicitudes ya enviadas",
+    "requestStatus": {
+      "pending": "Pendiente",
+      "fulfilled": "Aportado",
+      "cancelled": "Cancelado"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · firma manual",
+    "title": "Contratos firmados: por verificar",
+    "description": "El cliente imprimió, firmó a mano y subió su contrato. Revisa el documento antes de confirmar.",
+    "empty": "No hay contratos pendientes de verificación.",
+    "contractLabel": "Contrato {id}",
+    "viewSignedContract": "Ver el contrato firmado subido por el cliente",
+    "pendingVerification": "Pendiente de verificación",
+    "confirmSignature": "Confirmar la firma",
+    "reject": "Rechazar"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · cobro",
+    "title": "Cuotas por cobrar",
+    "description": "Confirma una mensualidad recibida del prestatario: se redistribuye automáticamente entre los inversores del préstamo, a prorrata de su parte, y alimenta su panel de rendimiento.",
+    "empty": "No hay cuotas pendientes por ahora.",
+    "dueLabel": "{reference} · vencimiento el {date}",
+    "overdue": "Atrasada",
+    "upcoming": "Próxima",
+    "confirmPayment": "Confirmar el pago recibido"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · verificación manual",
+    "title": "Verificación de inversores: por tramitar",
+    "description": "Examina el justificante de ingresos y el justificante de disponibilidad de fondos, y luego confirma o rechaza a continuación.",
+    "empty": "No hay inversores pendientes de verificación.",
+    "pending": "Pendiente",
+    "incomeProofLabel": "Justificante de ingresos:",
+    "fundsProofLabel": "Justificante de disponibilidad de fondos:",
+    "missing": "falta",
+    "confirmVerification": "Confirmar la verificación",
+    "reject": "Rechazar",
+    "missingDocumentNote": "Falta un justificante: no se puede confirmar hasta que se hayan aportado ambos."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · verificación manual",
+    "title": "Verificación de identidad: por tramitar",
+    "description": "Contacta con el cliente para verificar su documento de identidad y luego confirma o rechaza a continuación.",
+    "empty": "No hay expedientes pendientes de verificación manual.",
+    "pendingContact": "Pendiente de contacto",
+    "confirmVerification": "Confirmar la verificación",
+    "reject": "Rechazar",
+    "noApplicationNote": "Este documento no está vinculado a ninguna solicitud: no se puede avanzar en el expediente."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · vista general",
+    "title": "Perfiles puestos en contacto",
+    "description": "Lista de pares que intercambiaron sus datos de contacto mediante una puesta en contacto pagada. A partir de ese momento, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; Lentific no se hace responsable, solo se proporcionó el contacto.",
+    "empty": "Todavía no hay puestas en contacto pagadas.",
+    "paid": "Pagada",
+    "investorToBorrower": "Inversor hacia prestatario",
+    "borrowerToInvestor": "Prestatario hacia inversor"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · riesgo",
+    "title": "Motor de riesgo",
+    "demoDescription": "Ejemplo calculado por <code1>assessRisk()</code1> de <code2>@fintech/risk</code2> para el expediente de demostración (18.500 € / 24 meses):",
+    "scoreLabel": "Puntuación",
+    "gradeLabel": "Nota",
+    "riskLevelLabel": "Nivel de riesgo"
+  }
+}

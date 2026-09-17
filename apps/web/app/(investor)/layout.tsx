@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { getCurrentUser } from "../../lib/session";
 
 export default async function InvestorLayout({ children }: { children: React.ReactNode }) {
@@ -7,15 +8,17 @@ export default async function InvestorLayout({ children }: { children: React.Rea
   if (user.role === "BORROWER") redirect("/dashboard");
   if (user.role !== "INVESTOR") redirect((process.env.ADMIN_URL ?? "http://localhost:3001") + "/");
 
+  const t = await getTranslations("InvestorLayout");
+
   const NAV = [
-    { href: "/investor/dashboard", label: "Marketplace" },
-    { href: "/investor/offres", label: "Mes offres de capital" },
-    { href: "/investor/portfolio", label: "Mon portefeuille" },
-    { href: "/investor/mises-en-relation", label: "Mises en relation" },
-    { href: "/investor/verification", label: "Vérification" },
-    { href: "/investor/documents", label: "Mes documents" },
-    { href: "/investor/premium", label: "Premium" },
-    { href: "/investor/notifications", label: "Alertes" },
+    { href: "/investor/dashboard", label: t("nav.marketplace") },
+    { href: "/investor/offres", label: t("nav.capitalOffers") },
+    { href: "/investor/portfolio", label: t("nav.portfolio") },
+    { href: "/investor/mises-en-relation", label: t("nav.introductions") },
+    { href: "/investor/verification", label: t("nav.verification") },
+    { href: "/investor/documents", label: t("nav.documents") },
+    { href: "/investor/premium", label: t("nav.premium") },
+    { href: "/investor/notifications", label: t("nav.notifications") },
   ];
 
   return (

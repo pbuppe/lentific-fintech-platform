@@ -1,0 +1,144 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back office",
+    "cases": "Ügyek",
+    "kyc": "Személyazonosság-ellenőrzés",
+    "investorVerification": "Befektető-ellenőrzés",
+    "contracts": "Ellenőrzendő szerződések",
+    "introductions": "Kapcsolatba hozások",
+    "installments": "Beszedendő részletek",
+    "riskEngine": "Kockázatelemző motor",
+    "accountsSuperAdmin": "Fiókok (szuperadmin)",
+    "logout": "Kijelentkezés"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back office",
+    "title": "Ügyintézői bejelentkezés",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Jelszó",
+    "submit": "Bejelentkezés"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · back office",
+    "title": "Ügyek várólistája",
+    "pendingCount": "{count, plural, one {# függőben lévő ügy} other {# függőben lévő ügy}}",
+    "empty": "Jelenleg nincs függőben lévő ügy.",
+    "amountDuration": "{amount} € · {months} hónap",
+    "score": "Pontszám: {score}/100",
+    "slaBreached": "48 órás SLA túllépve — emlékeztető elküldve",
+    "priorityDeadline": "Prioritás, elintézendő eddig: {date}",
+    "startAnalysis": "Elemzés indítása",
+    "amountLabel": "Összeg (€)",
+    "durationLabel": "Futamidő (hónap)",
+    "rateLabel": "Kamat (%)",
+    "createOffer": "Ajánlat létrehozása és közzététele",
+    "status": {
+      "submitted": "Elküldve",
+      "kycPending": "Azonosítás folyamatban",
+      "kycVerified": "Azonosítás igazolva",
+      "underReview": "Elbírálás alatt"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · szuperadmin",
+    "title": "Fiókok",
+    "description": "Teljes áttekintés minden hitelfelvevői vagy befektetői fiókról: profil, dokumentumok, dokumentumkérések, kapcsolatba hozások.",
+    "empty": "Egyelőre nincs fiók.",
+    "verified": "Igazolva",
+    "roleBorrower": "Hitelfelvevő",
+    "roleInvestor": "Befektető"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Vissza a fiókokhoz",
+    "kicker": "apps/admin · szuperadmin",
+    "phoneNotProvided": "telefonszám nincs megadva",
+    "roleBorrower": "Hitelfelvevő",
+    "roleInvestor": "Befektető",
+    "financialProfileTitle": "Pénzügyi profil",
+    "financialProfile": "Jövedelem {income} € · Kiadások {expenses} € · Fennálló tartozás {debt} €",
+    "investorProfileTitle": "Befektetői profil",
+    "riskTolerance": "Kockázattűrés: {tolerance}",
+    "applicationsTitle": "Finanszírozási kérelmek",
+    "listingsTitle": "Közzétett tőkeajánlatok",
+    "introductionsTitle": "Kapcsolatba hozások",
+    "introductionsDisclaimer": "Emlékeztető: a kapcsolatba hozás kifizetése után a két fél között történtek a platformon kívül zajlanak, ezekért a Lentific nem vállal felelősséget.",
+    "introSent": "→ kapcsolatot kért vele: {name} ({status})",
+    "introReceived": "← kapcsolatot kérte tőle: {name} ({status})",
+    "documentsTitle": "Feltöltött dokumentumok",
+    "noDocuments": "Nincs feltöltött dokumentum.",
+    "requestDocumentTitle": "Dokumentum kérése",
+    "requestDocumentHint": "A fiók tulajdonosa látni fogja ezt a kérést, és a saját felületéről feltöltve válaszolhat rá.",
+    "documentLabel": "Kért dokumentum",
+    "documentPlaceholder": "Pl. lakcímigazolás",
+    "instructionsLabel": "Megjegyzések (opcionális)",
+    "instructionsPlaceholder": "Pl. 3 hónapnál nem régebbi, a te neveden",
+    "sendRequest": "Kérés elküldése",
+    "alreadySentTitle": "Már elküldött kérések",
+    "requestStatus": {
+      "pending": "Függőben",
+      "fulfilled": "Feltöltve",
+      "cancelled": "Törölve"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · kézi aláírás",
+    "title": "Aláírt szerződések: ellenőrzésre várnak",
+    "description": "Az ügyfél kinyomtatta, kézzel aláírta és feltöltötte a szerződését. Ellenőrizd a dokumentumot, mielőtt megerősítenéd.",
+    "empty": "Nincs ellenőrzésre váró szerződés.",
+    "contractLabel": "Szerződés {id}",
+    "viewSignedContract": "Az ügyfél által feltöltött aláírt szerződés megtekintése",
+    "pendingVerification": "Ellenőrzésre vár",
+    "confirmSignature": "Aláírás megerősítése",
+    "reject": "Elutasítás"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · beszedés",
+    "title": "Beszedendő részletek",
+    "description": "Erősítsd meg a hitelfelvevőtől beérkezett havi törlesztést: ez automatikusan szétosztásra kerül a kölcsön befektetői között, részesedésük arányában, és megjelenik a teljesítmény-irányítópultjukon.",
+    "empty": "Jelenleg nincs függőben lévő részlet.",
+    "dueLabel": "{reference} · esedékes: {date}",
+    "overdue": "Késedelmes",
+    "upcoming": "Közelgő",
+    "confirmPayment": "Beérkezett fizetés megerősítése"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · kézi ellenőrzés",
+    "title": "Befektetők ellenőrzése: elintézendő",
+    "description": "Vizsgáld meg a jövedelemigazolást és a pénzeszközök rendelkezésre állásáról szóló igazolást, majd erősítsd meg vagy utasítsd el alább.",
+    "empty": "Nincs ellenőrzésre váró befektető.",
+    "pending": "Függőben",
+    "incomeProofLabel": "Jövedelemigazolás:",
+    "fundsProofLabel": "Pénzeszközök rendelkezésre állásáról szóló igazolás:",
+    "missing": "hiányzik",
+    "confirmVerification": "Ellenőrzés megerősítése",
+    "reject": "Elutasítás",
+    "missingDocumentNote": "Hiányzik egy igazolás: nem erősíthető meg, amíg mindkettő nincs feltöltve."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · kézi ellenőrzés",
+    "title": "Személyazonosság-ellenőrzés: elintézendő",
+    "description": "Vedd fel a kapcsolatot az ügyféllel a személyazonosító okmány ellenőrzéséhez, majd erősítsd meg vagy utasítsd el alább.",
+    "empty": "Nincs kézi ellenőrzésre váró ügy.",
+    "pendingContact": "Kapcsolatfelvételre vár",
+    "confirmVerification": "Ellenőrzés megerősítése",
+    "reject": "Elutasítás",
+    "noApplicationNote": "Ez a dokumentum nincs kérelemhez rendelve: az ügy nem vihető tovább."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · áttekintés",
+    "title": "Kapcsolatba hozott profilok",
+    "description": "Azon párok listája, akik kifizetett kapcsolatba hozás révén kicserélték elérhetőségeiket. Ettől a pillanattól kezdve a két fél között történtek a platformon kívül zajlanak, ezekért a Lentific nem vállal felelősséget, kizárólag a kapcsolatfelvételi adatokat biztosította.",
+    "empty": "Egyelőre nincs kifizetett kapcsolatba hozás.",
+    "paid": "Kifizetve",
+    "investorToBorrower": "Befektetőtől hitelfelvevő felé",
+    "borrowerToInvestor": "Hitelfelvevőtől befektető felé"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · kockázat",
+    "title": "Kockázatelemző motor",
+    "demoDescription": "Példa, amelyet a <code2>@fintech/risk</code2> csomag <code1>assessRisk()</code1> függvénye számított ki a demó ügyre (18 500 € / 24 hónap):",
+    "scoreLabel": "Pontszám",
+    "gradeLabel": "Minősítés",
+    "riskLevelLabel": "Kockázati szint"
+  }
+}

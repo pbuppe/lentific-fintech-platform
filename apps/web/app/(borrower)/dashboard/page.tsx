@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { getTranslations } from "next-intl/server";
 import { listBorrowerApplications, acceptOffer } from "@fintech/applications";
 import { uploadDocument, listMyDocumentRequests } from "@fintech/documents";
 import { submitSignedContract, getSignatureForContract } from "@fintech/signatures";
@@ -9,20 +10,6 @@ import { getContractDownloadUrl } from "@fintech/contracts";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
 
-const STATUS_LABEL: Record<string, string> = {
-  DRAFT: "Brouillon",
-  SUBMITTED: "Demande envoyée",
-  KYC_PENDING: "Identité en attente de vérification",
-  KYC_VERIFIED: "Identité vérifiée",
-  UNDER_REVIEW: "Analyse en cours",
-  PUBLISHED: "Offre disponible",
-  OFFER_ACCEPTED: "Offre acceptée",
-  CONTRACT_SIGNED: "Contrat signé",
-  DISBURSED: "Fonds versés",
-  REJECTED: "Refusée",
-  CANCELLED: "Annulée",
-};
-
 async function uploadIdentityAction(formData: FormData) {
   "use server";
   const user = await getCurrentUser();
@@ -30,7 +17,10 @@ async function uploadIdentityAction(formData: FormData) {
 
   const applicationId = formData.get("applicationId") as string;
   const file = formData.get("identityDoc") as File;
-  if (!file || file.size === 0) redirect(`/dashboard?error=${encodeURIComponent("Choisis un fichier avant d'envoyer.")}`);
+  if (!file || file.size === 0) {
+    const t = await getTranslations("BorrowerDashboard");
+    redirect(`/dashboard?error=${encodeURIComponent(t("errorChooseFile"))}`);
+  }
 
   const content = Buffer.from(await file.arrayBuffer());
   await uploadDocument({ ownerId: user.id, applicationId, type: "identity", fileName: file.name, content });
@@ -70,7 +60,10 @@ async function uploadSignedContractAction(formData: FormData) {
   const signatureId = formData.get("signatureId") as string;
   const contractId = formData.get("contractId") as string;
   const file = formData.get("signedContract") as File;
-  if (!file || file.size === 0) redirect(`/dashboard?error=${encodeURIComponent("Choisis un fichier avant d'envoyer.")}`);
+  if (!file || file.size === 0) {
+    const t = await getTranslations("BorrowerDashboard");
+    redirect(`/dashboard?error=${encodeURIComponent(t("errorChooseFile"))}`);
+  }
 
   const content = Buffer.from(await file.arrayBuffer());
   await submitSignedContract({
@@ -87,6 +80,9 @@ async function uploadSignedContractAction(formData: FormData) {
 export default async function BorrowerDashboard() {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
+
+  const t = await getTranslations("BorrowerDashboard");
+  const STATUS_LABEL = t.raw("statusLabel") as Record<string, string>;
 
   const [applications, documentRequests] = await Promise.all([
     listBorrowerApplications(user.id),
@@ -111,9 +107,9 @@ export default async function BorrowerDashboard() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-10">
       <div className="mb-6">
-        <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (borrower)</p>
+        <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">{t("pageEyebrow")}</p>
         <h1 className="relative mt-1 inline-block font-display text-2xl font-semibold text-brand after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:w-9 after:rounded after:bg-accent">
-          Espace emprunteur
+          {t("title")}
         </h1>
       </div>
 
@@ -124,20 +120,20 @@ export default async function BorrowerDashboard() {
         >
           <span>
             <span className="font-semibold">
-              {pendingDocumentRequests.length} document{pendingDocumentRequests.length > 1 ? "s" : ""}
+              {t("pendingDocumentsCount", { count: pendingDocumentRequests.length })}
             </span>{" "}
-            demandé{pendingDocumentRequests.length > 1 ? "s" : ""} par notre équipe ({pendingDocumentRequests.map((r) => r.label).join(", ")}).
+            {t("pendingDocumentsRequested", { count: pendingDocumentRequests.length, labels: pendingDocumentRequests.map((r) => r.label).join(", ") })}
           </span>
-          <span className="whitespace-nowrap font-semibold underline">Envoyer →</span>
+          <span className="whitespace-nowrap font-semibold underline">{t("sendArrow")}</span>
         </a>
       )}
 
       {applications.length === 0 ? (
         <Card>
           <p className="text-sm text-ink-soft">
-            Aucune demande pour l&apos;instant.{" "}
+            {t("noApplications")}{" "}
             <a href="/demande" className="text-brand-ink underline">
-              Dépose ta première demande
+              {t("noApplicationsLink")}
             </a>
             .
           </p>
@@ -163,16 +159,16 @@ export default async function BorrowerDashboard() {
                   </StatusPill>
                 </div>
                 <p className="mt-1 text-sm text-ink-soft">
-                  {Number(app.amount).toLocaleString("fr-FR")} € · {app.durationMonths} mois · {app.purpose}
+                  {t("amountDurationPurpose", { amount: Number(app.amount).toLocaleString("fr-FR"), duration: app.durationMonths, purpose: app.purpose })}
                 </p>
 
                 {app.priority ? (
                   <p className="mt-2 text-xs font-semibold text-yellow-ink">
-                    ★ Dossier prioritaire
+                    {t("priorityBadge")}
                     {app.slaBreachedAt
-                      ? " — SLA de 48h dépassé, une relance a été envoyée à notre équipe."
+                      ? t("slaBreached")
                       : app.slaDeadline
-                        ? ` — revue garantie avant le ${app.slaDeadline.toLocaleString("fr-FR")}.`
+                        ? t("slaDeadline", { date: app.slaDeadline.toLocaleString("fr-FR") })
                         : ""}
                   </p>
                 ) : (
@@ -180,7 +176,7 @@ export default async function BorrowerDashboard() {
                     <form action={requestPriorityAction} className="mt-3">
                       <input type="hidden" name="applicationId" value={app.id} />
                       <button className="rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-ink-soft hover:border-yellow hover:text-yellow-ink">
-                        Passer en dossier prioritaire ({PRIORITY_FEE} €, revue sous 48h)
+                        {t("priorityButton", { fee: PRIORITY_FEE })}
                       </button>
                     </form>
                   )
@@ -191,30 +187,29 @@ export default async function BorrowerDashboard() {
                     <input type="hidden" name="applicationId" value={app.id} />
                     <span className="text-xs text-ink-soft">
                       {identityDoc?.status === "REJECTED"
-                        ? "Pièce refusée, envoie un nouveau document :"
-                        : "Envoie une pièce d'identité pour continuer :"}
+                        ? t("identityRejectedPrompt")
+                        : t("identityNeededPrompt")}
                     </span>
                     <input type="file" name="identityDoc" required className="text-xs" />
                     <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
-                      Envoyer
+                      {t("send")}
                     </button>
                   </form>
                 )}
 
                 {!identityNeedsUpload && identityDoc?.status === "UPLOADED" && (
-                  <p className="mt-3 text-xs text-ink-faint">Pièce d&apos;identité envoyée, en attente de vérification par un agent.</p>
+                  <p className="mt-3 text-xs text-ink-faint">{t("identityUploadedPending")}</p>
                 )}
 
                 {publishedOffer && (
                   <div className="mt-3 rounded-lg bg-brand-soft p-3">
                     <p className="text-sm text-brand-ink">
-                      Offre proposée : {Number(publishedOffer.amount).toLocaleString("fr-FR")} € sur{" "}
-                      {publishedOffer.durationMonths} mois, taux {Number(publishedOffer.rate)}%
+                      {t("offerProposed", { amount: Number(publishedOffer.amount).toLocaleString("fr-FR"), duration: publishedOffer.durationMonths, rate: Number(publishedOffer.rate) })}
                     </p>
                     <form action={acceptOfferAction} className="mt-2">
                       <input type="hidden" name="offerId" value={publishedOffer.id} />
                       <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
-                        Accepter l&apos;offre
+                        {t("acceptOffer")}
                       </button>
                     </form>
                   </div>
@@ -229,7 +224,7 @@ export default async function BorrowerDashboard() {
                         rel="noreferrer"
                         className="text-xs font-semibold text-brand-ink underline"
                       >
-                        Télécharger mon contrat (PDF)
+                        {t("downloadContract")}
                       </a>
                     )}
                     <form action={uploadSignedContractAction} className="mt-2 flex flex-wrap items-center gap-2">
@@ -237,23 +232,23 @@ export default async function BorrowerDashboard() {
                       <input type="hidden" name="signatureId" value={signatureByApplication.get(app.id) ?? ""} />
                       <input type="hidden" name="contractId" value={acceptedOffer.loan.contractId ?? ""} />
                       <span className="text-xs text-ink-soft">
-                        Imprime-le, signe-le à la main, puis envoie une photo/scan :
+                        {t("signInstructions")}
                       </span>
                       <input type="file" name="signedContract" required className="text-xs" />
                       <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
-                        Envoyer
+                        {t("send")}
                       </button>
                     </form>
                   </div>
                 )}
 
                 {signedContractDoc && app.status === "OFFER_ACCEPTED" && (
-                  <p className="mt-3 text-xs text-ink-faint">Contrat signé envoyé, en attente de vérification par un agent.</p>
+                  <p className="mt-3 text-xs text-ink-faint">{t("contractUploadedPending")}</p>
                 )}
 
                 {app.status === "CONTRACT_SIGNED" && (
                   <p className="mt-3 text-xs text-success">
-                    Contrat confirmé signé : ton financement est maintenant proposé aux investisseurs.
+                    {t("contractConfirmed")}
                   </p>
                 )}
               </Card>

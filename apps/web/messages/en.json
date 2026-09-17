@@ -1,0 +1,490 @@
+{
+  "SiteHeader": {
+    "howItWorks": "How it works",
+    "marketplace": "Marketplace",
+    "simulator": "Simulator",
+    "logout": "Log out",
+    "login": "Log in",
+    "signup": "Create an account"
+  },
+  "LandingPage": {
+    "eyebrow": "Crowdfunding · P2P",
+    "heroTitlePart1": "Funding gets shared",
+    "heroTitleHighlight": "with trust",
+    "heroTitlePart2": ", not by chance.",
+    "heroSubtitle": "Lentific connects individuals, SMEs and organizations seeking funding with investors (individuals, companies or institutions) looking to grow their savings, with every file verified at each step: identity, repayment capacity, signed contract.",
+    "ctaApply": "Submit a request",
+    "ctaMarketplace": "View the marketplace",
+    "alreadyAccount": "Already have an account? Log in",
+    "statAvailableLabel": "available from our investors",
+    "statInvestedLabel": "already invested in files",
+    "statDossiers": "{count, plural, one {file already signed} other {files already signed}}",
+    "statInvestors": "{count, plural, one {verified investor} other {verified investors}}",
+    "viewOffers": "View offers",
+    "trustPoints": [
+      {
+        "title": "Open to everyone",
+        "body": "Individuals, SMEs and organizations: anyone can borrow or lend, with no minimum reserved for professionals."
+      },
+      {
+        "title": "Instant scoring",
+        "body": "The risk engine evaluates repayment capacity as soon as the file is submitted."
+      },
+      {
+        "title": "Split funding",
+        "body": "A single need can be covered by several investors, allocated automatically."
+      },
+      {
+        "title": "Verified at every step",
+        "body": "Identity manually verified, contract legally framed, signature confirmed by an agent."
+      }
+    ],
+    "howItWorksEyebrow": "How it works",
+    "howItWorksTitle": "Two paths, one principle: verified trust.",
+    "borrowerColumnTitle": "For a borrower",
+    "borrowerSteps": [
+      {
+        "title": "Simulate your need",
+        "body": "Amount, duration, estimated monthly payment, no commitment, no account required."
+      },
+      {
+        "title": "Complete your profile",
+        "body": "Just once: income, expenses, situation. Used for all your future requests."
+      },
+      {
+        "title": "Submit your request",
+        "body": "Send an ID document, an agent reviews your file shortly after."
+      },
+      {
+        "title": "Receive an offer",
+        "body": "The risk engine calculates a score, an agent proposes financing."
+      },
+      {
+        "title": "Sign and get funded",
+        "body": "Accept the offer, sign your contract, and let the marketplace fund it."
+      }
+    ],
+    "applyLinkArrow": "Submit a request →",
+    "investorColumnTitle": "For an investor",
+    "investorSteps": [
+      {
+        "title": "Create your investor account",
+        "body": "Fill in your profile and risk tolerance."
+      },
+      {
+        "title": "Browse the marketplace",
+        "body": "Every file shown has already been verified and its contract signed."
+      },
+      {
+        "title": "Invest the amount you choose",
+        "body": "Split funding: several investors per file."
+      },
+      {
+        "title": "Track your portfolio",
+        "body": "Total invested, repayments received, history, all at a glance."
+      }
+    ],
+    "viewMarketplaceLinkArrow": "View the marketplace →",
+    "introBoxTitle": "Need to move faster? Request a direct introduction (€15)",
+    "introBoxBody": "Rather than waiting, a borrower can request direct contact with an investor (individual, company or organization) and vice versa. Once the request is paid, contact details are exchanged immediately both ways.",
+    "introBoxDisclaimer": "Lentific provides the contact; what happens next between the two parties takes place outside the platform and is not our responsibility.",
+    "marketplaceEyebrow": "Marketplace",
+    "marketplaceTitle": "Files already verified, ready to be funded",
+    "viewAll": "View all",
+    "noOpportunities": "No open opportunities right now, the first signed file will appear here automatically.",
+    "riskLabel": {
+      "low": "Low",
+      "moderate": "Moderate",
+      "high": "High"
+    },
+    "riskPill": "Risk {label}",
+    "fundedProgress": "{funded} € / {target} € funded ({pct}%)",
+    "ctaFinalTitle": "Ready to get started?",
+    "ctaFinalBody": "Create an account in under two minutes, whether you're seeking funding or want to invest.",
+    "becomeInvestor": "Become an investor",
+    "footerText": "© {year} Lentific · Crowdfunding platform.",
+    "footerMarketplace": "Marketplace",
+    "footerSimulator": "Simulator",
+    "footerLogin": "Log in"
+  },
+  "MarketplacePage": {
+    "eyebrow": "P2P Marketplace",
+    "heroTitle": "Borrowers and investors, in one place",
+    "heroSubtitle": "On one side, already verified files (individuals and SMEs alike) looking for investors. On the other, investors (individuals, companies or organizations) announcing the capital they're ready to lend, so you know, even before submitting a request, what's available.",
+    "availableCapitalTitle": "Capital available from our investors",
+    "availableCapitalSubtitle": "These investors have announced they're ready to lend: useful for estimating your chances before submitting a request.",
+    "noListings": "No investor has published available capital yet.",
+    "amountAvailable": "{amount} € available",
+    "verifiedBadge": "Verified investor ✓",
+    "listingMeta": "{name} · Desired rate {rate}% · Preferred duration {duration} months",
+    "defaultInvestorName": "Investor",
+    "monthlyEstimateLabel": "Indicative monthly payment for a borrower:",
+    "monthlyEstimateValue": "{monthly} € / month",
+    "riskAppetiteLabel": {
+      "low": "Only accepts low risk",
+      "moderate": "Accepts moderate and low risk",
+      "high": "Accepts all risk levels"
+    },
+    "connectCta": "Log in to request an introduction (€15)",
+    "depositCta": "Submit a funding request",
+    "signedDossiersTitle": "Already signed files, open for funding",
+    "signedDossiersSubtitle": "These files have already been verified (identity, risk analysis) and their contract signed.",
+    "noOpportunitiesPart1": "No open opportunities right now, check back soon, or",
+    "noOpportunitiesLink": "submit a funding request",
+    "riskLabel": {
+      "low": "Low",
+      "moderate": "Moderate",
+      "high": "High"
+    },
+    "riskPill": "Risk {label}",
+    "dossierRef": "File {reference}",
+    "fundedProgress": "{funded} € / {target} € funded ({pct}%)",
+    "investCta": "Log in to invest"
+  },
+  "SimulatorPage": {
+    "eyebrow": "Simulator",
+    "title": "Estimate your financing",
+    "subtitle": "Adjust the amount and duration to see the estimated monthly payment and total cost, before submitting a request.",
+    "amountLabel": "Desired amount:",
+    "durationLabel": "Duration:",
+    "durationValue": "{duration} months",
+    "rateLabel": "Annual rate:",
+    "estimationEyebrow": "Estimate",
+    "monthlyResult": "{monthly} € / month",
+    "totalCost": "Estimated total cost: {total} € (simulated rate {rate}%, the actual rate depends on your file)",
+    "applyCta": "Submit a request"
+  },
+  "LoginPage": {
+    "brand": "Lentific",
+    "title": "Log in",
+    "noAccountPart1": "Don't have an account yet?",
+    "noAccountLink": "Sign up",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "submit": "Log in",
+    "genericError": "Unable to log in."
+  },
+  "SignupPage": {
+    "brand": "Lentific",
+    "title": "Create an account",
+    "alreadyRegisteredPart1": "Already registered?",
+    "alreadyRegisteredLink": "Log in",
+    "roleBorrower": "Borrower",
+    "roleInvestor": "Investor",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "passwordLabel": "Password (minimum 8 characters)",
+    "submit": "Create my account",
+    "genericError": "Unable to create the account."
+  },
+  "BorrowerLayout": {
+    "nav": {
+      "myApplications": "My applications",
+      "myProfile": "My profile",
+      "submitApplication": "Submit a request",
+      "availableInvestors": "Available investors",
+      "introductions": "Introductions",
+      "myDocuments": "My documents"
+    }
+  },
+  "BorrowerDashboard": {
+    "statusLabel": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Application sent",
+      "KYC_PENDING": "Identity pending verification",
+      "KYC_VERIFIED": "Identity verified",
+      "UNDER_REVIEW": "Under review",
+      "PUBLISHED": "Offer available",
+      "OFFER_ACCEPTED": "Offer accepted",
+      "CONTRACT_SIGNED": "Contract signed",
+      "DISBURSED": "Funds disbursed",
+      "REJECTED": "Rejected",
+      "CANCELLED": "Cancelled"
+    },
+    "errorChooseFile": "Choose a file before sending.",
+    "pageEyebrow": "apps/web · (borrower)",
+    "title": "Borrower area",
+    "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
+    "pendingDocumentsRequested": "{count, plural, one {requested} other {requested}} by our team ({labels}).",
+    "sendArrow": "Send →",
+    "noApplications": "No applications yet.",
+    "noApplicationsLink": "Submit your first request",
+    "amountDurationPurpose": "{amount} € · {duration} months · {purpose}",
+    "priorityBadge": "★ Priority file",
+    "slaBreached": " — 48h SLA exceeded, a follow-up has been sent to our team.",
+    "slaDeadline": " — review guaranteed before {date}.",
+    "priorityButton": "Switch to priority file ({fee} €, review within 48h)",
+    "identityRejectedPrompt": "Document rejected, send a new one:",
+    "identityNeededPrompt": "Send an ID document to continue:",
+    "send": "Send",
+    "identityUploadedPending": "ID document sent, awaiting verification by an agent.",
+    "offerProposed": "Offer proposed: {amount} € over {duration} months, rate {rate}%",
+    "acceptOffer": "Accept the offer",
+    "downloadContract": "Download my contract (PDF)",
+    "signInstructions": "Print it, sign it by hand, then send a photo/scan:",
+    "contractUploadedPending": "Signed contract sent, awaiting verification by an agent.",
+    "contractConfirmed": "Contract confirmed signed: your financing is now offered to investors."
+  },
+  "BorrowerApplication": {
+    "pageEyebrow": "apps/web · (borrower)",
+    "title": "Submit a request",
+    "profileIntroPart1": "First complete",
+    "profileIntroLink": "your financial profile",
+    "profileIntroPart2": "if you haven't already: the risk engine needs it to analyze your file.",
+    "availableFundsAmount": "{amount} €",
+    "availableFundsRest": "{count, plural, one {is currently available from # investor ready} other {is currently available from # investors ready}} to fund a file like yours,",
+    "availableFundsLink": "see details",
+    "noActiveProducts": "No active financing product right now.",
+    "productLabel": "Product",
+    "productParticulier": "Individual: personal need",
+    "productPME": "SME: business need",
+    "productOption": "{label} ({min} € – {max} €)",
+    "productHint": "Open to individuals and professionals alike.",
+    "amountLabel": "Amount (€)",
+    "durationLabel": "Duration (months)",
+    "purposeLabel": "Purpose of the financing",
+    "submit": "Send my request"
+  },
+  "BorrowerDocuments": {
+    "title": "My documents",
+    "subtitle": "Documents requested by our team to complete or verify your file.",
+    "errorSelectFile": "Choose a file before sending.",
+    "pendingHeading": "To upload",
+    "pendingEmpty": "No documents pending right now.",
+    "statusPending": "Pending",
+    "requestedBy": "Requested by {name}",
+    "submit": "Send",
+    "fulfilledHeading": "Already uploaded",
+    "fulfilledEmpty": "No documents uploaded yet.",
+    "viewFile": "view file"
+  },
+  "BorrowerInvestors": {
+    "title": "Available investors",
+    "intro": "Individuals, companies, and organizations publish available capital here. Request a direct introduction (contact details shared immediately) for {fee} €.",
+    "disclaimer": "Once introduced, all further exchanges and any resulting loan take place directly between you and the investor, outside the platform. Lentific provides the contact but is not responsible for what happens between you afterwards.",
+    "empty": "No capital currently available.",
+    "defaultInvestorName": "Investor",
+    "verified": "Verified ✓",
+    "risk": "Risk {risk}",
+    "availability": "<amount>{amountValue} €</amount> available · {rate}% · {duration} months · about {monthlyValue} €/month",
+    "alreadyIntroduced": "Introduction paid: contact details in <link>My introductions</link>.",
+    "requestButton": "Request introduction ({fee} €)"
+  },
+  "BorrowerIntroductions": {
+    "title": "My introductions",
+    "intro": "A paid introduction reveals contact details both ways: you and the other person can message each other directly.",
+    "disclaimer": "From there, your exchanges and anything you decide together happen outside the platform. Lentific provided the contact but is not responsible for what happens between you afterwards.",
+    "sentHeading": "Requests I've sent",
+    "sentEmpty": "No requests sent yet.",
+    "targetTypeInvestor": "investor / lender",
+    "targetTypeBorrower": "loan applicant",
+    "verified": "Verified ✓",
+    "contact": "Contact: {email}",
+    "paymentPending": "Payment pending.",
+    "receivedHeading": "Requests received",
+    "receivedEmpty": "No one has asked to contact you yet.",
+    "receivedRequest": "<name>{nameValue}</name> wants to be introduced to you."
+  },
+  "BorrowerOnboarding": {
+    "title": "My financial profile",
+    "subtitle": "This information is used by the risk engine and won't be asked again on a future application.",
+    "alreadySaved": "Your profile is already saved — update what has changed, then save again.",
+    "cityLabel": "City",
+    "postalCodeLabel": "Postal code",
+    "employmentLabel": "Employment status",
+    "employmentEmployee": "Employee",
+    "employmentSelfEmployed": "Self-employed",
+    "employmentBusinessOwner": "Business owner",
+    "employmentOther": "Other",
+    "incomeLabel": "Monthly income (€)",
+    "expensesLabel": "Monthly expenses (€)",
+    "existingDebtLabel": "Existing loan payments (€/month)",
+    "submit": "Save and continue"
+  },
+  "InvestorLayout": {
+    "nav": {
+      "marketplace": "Marketplace",
+      "capitalOffers": "My capital offers",
+      "portfolio": "My portfolio",
+      "introductions": "Introductions",
+      "verification": "Verification",
+      "documents": "My documents",
+      "premium": "Premium",
+      "notifications": "Alerts"
+    }
+  },
+  "InvestorDashboard": {
+    "invalidAmount": "Invalid amount.",
+    "riskLabel": {
+      "low": "Low",
+      "moderate": "Moderate",
+      "high": "High"
+    },
+    "title": "P2P Marketplace",
+    "intro": "If you request a direct introduction to a borrower, everything that follows happens outside the platform. Lentific provides the contact but is not responsible for what happens between you afterwards.",
+    "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
+    "pendingDocumentsRequested": "{count, plural, one {requested} other {requested}} by our team ({labels}).",
+    "send": "Send →",
+    "noOpportunities": "No open opportunities for now: a funding round appears here once its contract has been signed and confirmed by an agent.",
+    "riskPill": "Risk {risk}",
+    "fileReference": "File {reference}",
+    "fundedProgress": "{funded} € / {target} € funded ({pct}%)",
+    "fullyFunded": "Fully funded.",
+    "maxAmountPlaceholder": "Max {remaining} €",
+    "invest": "Invest",
+    "introductionPaidPrefix": "Introduction paid: contact details in",
+    "introductionPaidLink": "My introductions",
+    "requestIntroduction": "Get a direct introduction to the borrower ({premium, select, yes {free, Premium} other {{fee} €}})"
+  },
+  "InvestorDocuments": {
+    "chooseFileError": "Choose a file before sending.",
+    "title": "My documents",
+    "description": "Documents requested by our team, in addition to verification proofs.",
+    "toUpload": "To upload",
+    "noPendingDocuments": "No pending documents for now.",
+    "pending": "Pending",
+    "requestedBy": "Requested by {name}",
+    "send": "Send",
+    "alreadyUploaded": "Already uploaded",
+    "noUploadedDocuments": "No documents uploaded for now.",
+    "viewFile": "view file"
+  },
+  "InvestorIntroductions": {
+    "title": "My introductions",
+    "description": "A paid introduction reveals contact details both ways: you and the other party can write to each other directly.",
+    "disclaimer": "From that point on, your exchanges and anything you decide together happen outside the platform. Lentific provided the contact but is not responsible for what happens between you afterwards.",
+    "sentTitle": "Requests I've sent",
+    "noSentRequests": "No requests sent for now.",
+    "targetTypeApplication": "credit applicant",
+    "targetTypeInvestor": "investor",
+    "contactInfo": "Contact: {email}",
+    "paymentPending": "Payment pending.",
+    "receivedTitle": "Requests received",
+    "noReceivedRequests": "No one has asked to contact you yet.",
+    "wantsToConnect": "wants to be introduced to you."
+  },
+  "InvestorNotifications": {
+    "eventLabels": {
+      "funding_match_alert": "A new application matches your risk tolerance",
+      "introduction_paid": "Someone paid to get your contact details",
+      "investor_verified": "Your investor profile has been verified",
+      "investor_rejected": "Your investor verification was rejected",
+      "document_requested": "A document has been requested from you"
+    },
+    "title": "My alerts",
+    "subtitle": "Automatic alerts for new applications matching your profile are reserved for Premium investors.",
+    "empty": "No alerts yet."
+  },
+  "InvestorOffers": {
+    "title": "My capital offers",
+    "subtitle": "Publish an amount you're ready to lend, with your preferred rate and duration: borrowers see it directly on the marketplace, even before submitting their request.",
+    "publishedHeading": "Published offers",
+    "empty": "No offers published yet.",
+    "amountAvailable": "{amount} € available",
+    "statusPublished": "Published",
+    "statusWithdrawn": "Withdrawn",
+    "listingDetails": "Desired rate {rate}% · Preferred duration {duration} months · Risk: {risk}",
+    "withdrawButton": "Withdraw this offer",
+    "riskLabels": {
+      "low": "Low only",
+      "moderate": "Moderate and low",
+      "high": "All levels"
+    }
+  },
+  "InvestorPortfolio": {
+    "title": "My portfolio",
+    "totalInvested": "Total invested",
+    "totalReceived": "Repayments received",
+    "activeInvestments": "Active investments",
+    "performanceHeading": "Performance",
+    "yieldLabel": "Yield",
+    "yieldNote": "received / invested, cumulative",
+    "defaultRateLabel": "Default rate",
+    "defaultRateCount": "{defaulted} / {total, plural, one {# investment} other {# investments}}",
+    "riskBreakdown": "Breakdown by risk",
+    "noData": "—",
+    "riskAmount": "{risk}: {amount} €",
+    "premiumLocked": "The advanced performance dashboard (yield, default rate, risk breakdown) is reserved for the Premium plan.",
+    "premiumCta": "Discover Premium",
+    "historyHeading": "History",
+    "historyEmptyPrefix": "No investments yet,",
+    "historyEmptyLink": "explore the marketplace",
+    "investedDate": "{amount} € invested · {date}",
+    "riskLabels": {
+      "low": "Low",
+      "moderate": "Moderate",
+      "high": "High"
+    }
+  },
+  "InvestorPremium": {
+    "title": "Premium plan",
+    "priceInfo": "{amount} € / month, cancel anytime. Pays for itself from the second introduction of the month (15 € each otherwise).",
+    "statusLabels": {
+      "ACTIVE": "Active",
+      "CANCELLED": "Cancelled",
+      "PAST_DUE": "Payment failed"
+    },
+    "renewalAuto": "Automatically renews on {date}.",
+    "renewalCancelled": "Cancelled: stays active until {date}, then stops with no further charge.",
+    "featuresHeading": "What changes",
+    "features": {
+      "unlimited": {
+        "prefix": "→",
+        "bold": "Unlimited introductions",
+        "suffix": " to borrowers, without the 15 € per-introduction fee"
+      },
+      "alert": {
+        "prefix": "→",
+        "bold": "Automatic alert",
+        "suffix": " as soon as a new application matches your risk tolerance"
+      },
+      "verification": {
+        "prefix": "→",
+        "bold": "Accelerated verification",
+        "suffix": " within 48h"
+      },
+      "badge": {
+        "prefix": "→",
+        "bold": "Premium badge",
+        "suffix": " shown alongside the Verified badge"
+      },
+      "dashboard": "→ Advanced performance dashboard (yield, default rate, history)"
+    },
+    "cancelButton": "Cancel my subscription",
+    "reactivateButton": "Reactivate subscription",
+    "subscribeButton": "Go Premium (15 € simulated now)"
+  },
+  "InvestorVerification": {
+    "title": "Verify my profile",
+    "subtitle": "A verified investor displays a badge visible to borrowers on the marketplace — it's reassuring and sets your profile apart. Verification is manual: an agent reviews your documents.",
+    "statusLabels": {
+      "UNVERIFIED": "Not verified",
+      "PENDING_REVIEW": "Pending verification",
+      "VERIFIED": "Verified",
+      "REJECTED": "Rejected"
+    },
+    "rejectionReason": "Reason for rejection: {reason}",
+    "verifiedMessage": "Your profile is verified: the badge now appears on your capital offers and your contact profile.",
+    "pendingMessage": "Your documents have been submitted, an agent will review them. You'll be notified once verification is complete.",
+    "incomeDocLabel": "Proof of income: {name}",
+    "fundsDocLabel": "Proof of funds availability: {name}",
+    "incomeFieldLabel": "Proof of income source",
+    "incomeFieldHint": "(pay slip, tax notice, company registration extract...)",
+    "fundsFieldLabel": "Proof of funds availability",
+    "fundsFieldHint": "(recent bank statement, account certificate...)",
+    "submitButton": "Submit for verification",
+    "requiredDocsError": "Both documents are required."
+  },
+  "OfferForm": {
+    "amountLabel": "Available amount (€)",
+    "rateLabel": "Desired rate (%)",
+    "durationLabel": "Preferred duration (months)",
+    "riskAppetiteLabel": "Accepted risk level",
+    "riskOnlyLow": "Low only",
+    "riskModerateAndLow": "Moderate and low",
+    "riskAllLevels": "All levels, including high",
+    "previewText": "For a borrower using the full amount over {duration} months at {rate}%:",
+    "previewMonthly": "{monthly} € / month",
+    "submit": "Publish this offer"
+  }
+}
