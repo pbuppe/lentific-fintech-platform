@@ -1,6 +1,6 @@
 import { prisma } from "../client";
 
-export function record(data: { path: string; locale?: string; countryCode?: string; referrer?: string }) {
+export function record(data: { path: string; locale?: string; countryCode?: string; referrer?: string; visitorId?: string }) {
   return prisma.pageView.create({ data });
 }
 
@@ -8,26 +8,48 @@ export function countSince(since: Date) {
   return prisma.pageView.count({ where: { createdAt: { gte: since } } });
 }
 
-/** Un point par jour sur les `days` derniers jours, jours sans visite inclus (à 0). */
+/** Visiteurs distincts (cookie NEXT_VISITOR_ID) depuis `since`, pas des pages vues. */
+export async function countUniqueVisitorsSince(since: Date) {
+  const rows = await prisma.$queryRaw<{ count: bigint }[]>`
+    SELECT count(DISTINCT "visitorId") as count
+    FROM "PageView"
+    WHERE "createdAt" >= ${since} AND "visitorId" IS NOT NULL
+  `;
+  return Number(rows[0]?.count ?? 0);
+}
+
+/**
+ * "Actifs maintenant" (§ demande produit 2026-09-18 : "connectées depuis les
+ * 30 dernières minutes") : visiteurs distincts ayant vu au moins une page
+ * dans la fenêtre donnée, pas de vraie présence temps réel (pas de
+ * websocket), recalculé à chaque chargement de la page Statistiques.
+ */
+export async function countActiveVisitors(minutesWindow: number) {
+  const since = new Date(Date.now() - minutesWindow * 60 * 1000);
+  return countUniqueVisitorsSince(since);
+}
+
+/** Un point par jour sur les `days` derniers jours (pages vues ET visiteurs uniques), jours sans visite inclus (à 0). */
 export async function countByDay(days: number) {
   const since = new Date();
   since.setDate(since.getDate() - days + 1);
   since.setHours(0, 0, 0, 0);
 
-  const rows = await prisma.$queryRaw<{ day: Date; count: bigint }[]>`
-    SELECT date_trunc('day', "createdAt") as day, count(*) as count
+  const rows = await prisma.$queryRaw<{ day: Date; views: bigint; visitors: bigint }[]>`
+    SELECT date_trunc('day', "createdAt") as day, count(*) as views, count(DISTINCT "visitorId") as visitors
     FROM "PageView"
     WHERE "createdAt" >= ${since}
     GROUP BY day
     ORDER BY day ASC
   `;
-  const byDay = new Map(rows.map((r) => [r.day.toISOString().slice(0, 10), Number(r.count)]));
+  const byDay = new Map(rows.map((r) => [r.day.toISOString().slice(0, 10), { views: Number(r.views), visitors: Number(r.visitors) }]));
 
   return Array.from({ length: days }, (_, i) => {
     const d = new Date(since);
     d.setDate(d.getDate() + i);
     const key = d.toISOString().slice(0, 10);
-    return { date: key, count: byDay.get(key) ?? 0 };
+    const entry = byDay.get(key);
+    return { date: key, views: entry?.views ?? 0, visitors: entry?.visitors ?? 0 };
   });
 }
 

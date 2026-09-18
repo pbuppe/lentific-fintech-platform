@@ -588,8 +588,14 @@ model PageView {
   locale      String?
   countryCode String?
   referrer    String?
+  // Identifiant anonyme côté navigateur (cookie NEXT_VISITOR_ID, non lié à un
+  // compte), seul moyen de distinguer "une personne qui a vu 5 pages" de
+  // "5 personnes qui ont vu 1 page chacune" (§ demande produit 2026-09-18 :
+  // visiteurs uniques par jour, visiteurs actifs sur les 30 dernières minutes).
+  visitorId   String?
   createdAt   DateTime @default(now())
 
   @@index([createdAt])
   @@index([path])
+  @@index([visitorId])
 }
