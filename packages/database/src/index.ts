@@ -78,3 +78,4 @@ export * as storedFilesRepo from "./repositories/storedFiles";
 export * as auditLogsRepo from "./repositories/auditLogs";
 export * as countriesRepo from "./repositories/countries";
 export * as pageViewsRepo from "./repositories/pageViews";
+export type { StatsRange } from "./repositories/pageViews";

@@ -585,8 +585,15 @@ model AuditLog {
 model PageView {
   id          String   @id @default(cuid())
   path        String
+  // Pays choisi par le visiteur (cookie NEXT_COUNTRY, dérivé de la langue du
+  // navigateur) : une préférence d'affichage, pas sa vraie localisation.
   locale      String?
   countryCode String?
+  // Pays réel de connexion, détecté par Vercel au niveau réseau (en-tête
+  // x-vercel-ip-country), gratuit, aucun compte/service tiers requis
+  // (§ demande produit 2026-09-18 : "voir le pays depuis lequel ils sont
+  // connectés"). Vide en local (pas d'edge network Vercel en dev).
+  geoCountryCode String?
   referrer    String?
   // Identifiant anonyme côté navigateur (cookie NEXT_VISITOR_ID, non lié à un
   // compte), seul moyen de distinguer "une personne qui a vu 5 pages" de
@@ -598,4 +605,5 @@ model PageView {
   @@index([createdAt])
   @@index([path])
   @@index([visitorId])
+  @@index([geoCountryCode])
 }

@@ -18,10 +18,16 @@ export async function POST(request: NextRequest) {
 
     const visitorId = typeof body.visitorId === "string" && UUID_RE.test(body.visitorId) ? body.visitorId : undefined;
 
+    // Détection réseau par Vercel (en-tête posé avant même que la requête
+    // n'atteigne cette fonction, gratuit, aucun compte tiers) : absent en
+    // local (pas d'edge network Vercel en dev), c'est attendu.
+    const geoCountryCode = request.headers.get("x-vercel-ip-country") ?? undefined;
+
     await pageViewsRepo.record({
       path,
       locale: request.cookies.get("NEXT_LOCALE")?.value,
       countryCode: request.cookies.get("NEXT_COUNTRY")?.value,
+      geoCountryCode,
       referrer: typeof body.referrer === "string" ? body.referrer.slice(0, 500) : undefined,
       visitorId,
     });
