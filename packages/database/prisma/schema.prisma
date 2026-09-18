@@ -479,6 +479,11 @@ model Country {
   defaultLocale String
   users         User[]
   applications  Application[]
+
+  // currencyId existait déjà comme simple colonne FK sans relation Prisma
+  // navigable : impossible jusqu'ici de lire la devise d'un pays depuis une
+  // requête (§ marketplace géographique, badge pays/devise par annonce).
+  currency Currency @relation(fields: [currencyId], references: [id])
 }
 
 model Currency {
@@ -486,6 +491,7 @@ model Currency {
   code         String        @unique
   applications Application[]
   payments     Payment[]
+  countries    Country[]
 }
 
 model Language {
@@ -566,4 +572,24 @@ model AuditLog {
   after     Json?
   createdAt DateTime @default(now())
   user      User?    @relation(fields: [userId], references: [id])
+}
+
+// Suivi de visite léger, auto-hébergé (§ demande produit 2026-09-18 : un
+// onglet "Statistiques" dans les comptes super admin/admin). Un vrai Matomo
+// suppose soit un compte Matomo Cloud (nouveau service externe, paiement),
+// soit un hébergement PHP+MySQL séparé (possible sur l'hébergement Hostinger
+// déjà utilisé pour le domaine, mais pas via ce pipeline Next.js/Vercel) :
+// aucun des deux ne peut être mis en place sans une action du côté de
+// l'utilisateur. Ceci reste un remplacement basique en attendant, pas une
+// tentative de reproduire Matomo.
+model PageView {
+  id          String   @id @default(cuid())
+  path        String
+  locale      String?
+  countryCode String?
+  referrer    String?
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([path])
 }

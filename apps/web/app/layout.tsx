@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 import { SiteHeader } from "./components/SiteHeader";
+import { PageViewTracker } from "./components/PageViewTracker";
 
 export const metadata: Metadata = {
   title: "Lentific · Financement participatif P2P",
@@ -17,6 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang={locale}>
       <body className="font-sans">
         <NextIntlClientProvider messages={messages}>
+          <PageViewTracker />
           <SiteHeader />
           {children}
         </NextIntlClientProvider>

@@ -92,6 +92,7 @@
     "marketplaceTitle": "Expedientes ya verificados, listos para financiar",
     "viewAll": "Ver todo",
     "noOpportunities": "No hay oportunidades abiertas por ahora, el primer expediente firmado aparecerá aquí automáticamente.",
+    "noOpportunitiesInCountryHome": "No hay oportunidades abiertas en tu país por ahora, cambia a la vista internacional en la marketplace para ver todas las ofertas.",
     "riskLabel": {
       "low": "Bajo",
       "moderate": "Moderado",
@@ -114,6 +115,7 @@
     "availableCapitalTitle": "Capital disponible entre nuestros inversores",
     "availableCapitalSubtitle": "Estos inversores han anunciado que están dispuestos a prestar: útil para estimar tus posibilidades antes de presentar una solicitud.",
     "noListings": "Ningún inversor ha publicado capital disponible por ahora.",
+    "noListingsInCountry": "Ningún inversor ha publicado capital disponible en este país por ahora, prueba la vista internacional.",
     "amountAvailable": "{amount} € disponibles",
     "verifiedBadge": "Inversor verificado ✓",
     "listingMeta": "{name} · Tasa deseada {rate}% · Duración preferida {duration} meses",
@@ -130,6 +132,7 @@
     "signedDossiersTitle": "Expedientes ya firmados, abiertos a financiación",
     "signedDossiersSubtitle": "Estos expedientes ya han sido verificados (identidad, análisis de riesgo) y su contrato firmado.",
     "noOpportunitiesPart1": "No hay oportunidades abiertas por ahora, vuelve pronto, o",
+    "noOpportunitiesInCountry": "No hay oportunidades abiertas en este país por ahora, prueba la vista internacional de arriba, o",
     "noOpportunitiesLink": "presenta una solicitud de financiación",
     "riskLabel": {
       "low": "Bajo",
@@ -211,8 +214,8 @@
     "noApplicationsLink": "Presenta tu primera solicitud",
     "amountDurationPurpose": "{amount} € · {duration} meses · {purpose}",
     "priorityBadge": "★ Expediente prioritario",
-    "slaBreached": " — SLA de 48h superado, se ha enviado un aviso a nuestro equipo.",
-    "slaDeadline": " — revisión garantizada antes del {date}.",
+    "slaBreached": ", SLA de 48h superado, se ha enviado un aviso a nuestro equipo.",
+    "slaDeadline": ", revisión garantizada antes del {date}.",
     "priorityButton": "Pasar a expediente prioritario ({fee} €, revisión en 48h)",
     "identityRejectedPrompt": "Documento rechazado, envía uno nuevo:",
     "identityNeededPrompt": "Envía un documento de identidad para continuar:",
@@ -402,7 +405,7 @@
     "defaultRateLabel": "Tasa de impago",
     "defaultRateCount": "{defaulted} / {total, plural, one {# inversión} other {# inversiones}}",
     "riskBreakdown": "Distribución por riesgo",
-    "noData": "—",
+    "noData": "–",
     "riskAmount": "{risk}: {amount} €",
     "premiumLocked": "El panel de rendimiento avanzado (rentabilidad, tasa de impago, distribución por riesgo) está reservado para el plan Premium.",
     "premiumCta": "Descubrir Premium",
@@ -486,5 +489,19 @@
     "previewText": "Para un prestatario que use la totalidad de este importe durante {duration} meses al {rate}%:",
     "previewMonthly": "{monthly} € / mes",
     "submit": "Publicar esta oferta"
+  },
+  "CountryFilter": {
+    "label": "País",
+    "international": "Internacional (todos los países)",
+    "countryName": {
+      "FR": "Francia",
+      "GB": "Reino Unido",
+      "ES": "España",
+      "IT": "Italia",
+      "HU": "Hungría",
+      "PT": "Portugal",
+      "DE": "Alemania",
+      "NL": "Países Bajos"
+    }
   }
 }

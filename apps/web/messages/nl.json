@@ -1,0 +1,507 @@
+{
+  "SiteHeader": {
+    "howItWorks": "Hoe het werkt",
+    "marketplace": "Marketplace",
+    "simulator": "Simulator",
+    "logout": "Uitloggen",
+    "login": "Inloggen",
+    "signup": "Account aanmaken"
+  },
+  "LandingPage": {
+    "eyebrow": "Crowdfunding · P2P",
+    "heroTitlePart1": "Financiering wordt verdeeld",
+    "heroTitleHighlight": "op basis van vertrouwen",
+    "heroTitlePart2": ", niet toevallig.",
+    "heroSubtitle": "Lentific brengt particulieren, mkb-bedrijven en organisaties die op zoek zijn naar financiering in contact met investeerders (particulieren, bedrijven of instellingen) die hun spaargeld willen laten renderen, met een dossier dat in elke stap wordt geverifieerd: identiteit, terugbetalingscapaciteit, ondertekend contract.",
+    "ctaApply": "Dien een aanvraag in",
+    "ctaMarketplace": "Bekijk de marketplace",
+    "alreadyAccount": "Al een account? Inloggen",
+    "statAvailableLabel": "beschikbaar bij onze investeerders",
+    "statInvestedLabel": "al geïnvesteerd in dossiers",
+    "statDossiers": "{count, plural, one {al ondertekend dossier} other {al ondertekende dossiers}}",
+    "statInvestors": "{count, plural, one {geverifieerde investeerder} other {geverifieerde investeerders}}",
+    "viewOffers": "Bekijk de aanbiedingen",
+    "trustPoints": [
+      {
+        "title": "Open voor iedereen",
+        "body": "Particulieren, mkb-bedrijven en organisaties: iedereen kan lenen of uitlenen, zonder minimum dat voorbehouden is aan professionals."
+      },
+      {
+        "title": "Directe score",
+        "body": "De risico-engine beoordeelt de terugbetalingscapaciteit zodra het dossier is ingediend."
+      },
+      {
+        "title": "Gespreide financiering",
+        "body": "Eenzelfde behoefte kan door meerdere investeerders worden gedekt, automatisch verdeeld."
+      },
+      {
+        "title": "Geverifieerd in elke stap",
+        "body": "Identiteit handmatig geverifieerd, contract juridisch omkaderd, ondertekening bevestigd door een medewerker."
+      }
+    ],
+    "howItWorksEyebrow": "Hoe het werkt",
+    "howItWorksTitle": "Twee trajecten, één principe: geverifieerd vertrouwen.",
+    "borrowerColumnTitle": "Voor een lener",
+    "borrowerSteps": [
+      {
+        "title": "Simuleer je behoefte",
+        "body": "Bedrag, looptijd, geschatte maandelijkse termijn, vrijblijvend, zonder account."
+      },
+      {
+        "title": "Vul je profiel aan",
+        "body": "Eenmalig: inkomen, uitgaven, situatie. Wordt gebruikt voor al je toekomstige aanvragen."
+      },
+      {
+        "title": "Dien je aanvraag in",
+        "body": "Stuur een identiteitsbewijs, een medewerker controleert je dossier binnenkort."
+      },
+      {
+        "title": "Ontvang een aanbod",
+        "body": "De risico-engine berekent een score, een medewerker stelt je een financiering voor."
+      },
+      {
+        "title": "Onderteken en word gefinancierd",
+        "body": "Accepteer het aanbod, onderteken je contract, en laat de marketplace het financieren."
+      }
+    ],
+    "applyLinkArrow": "Dien een aanvraag in →",
+    "investorColumnTitle": "Voor een investeerder",
+    "investorSteps": [
+      {
+        "title": "Maak je investeerdersaccount aan",
+        "body": "Vul je profiel en je risicotolerantie in."
+      },
+      {
+        "title": "Doorzoek de marketplace",
+        "body": "Elk getoond dossier is al geverifieerd en het contract al ondertekend."
+      },
+      {
+        "title": "Investeer het bedrag van jouw keuze",
+        "body": "Gespreide financiering: meerdere investeerders per dossier."
+      },
+      {
+        "title": "Volg je portefeuille",
+        "body": "Totaal geïnvesteerd, ontvangen terugbetalingen, geschiedenis, in één oogopslag."
+      }
+    ],
+    "viewMarketplaceLinkArrow": "Bekijk de marketplace →",
+    "introBoxTitle": "Moet het sneller gaan? Vraag een directe introductie aan (15 €)",
+    "introBoxBody": "In plaats van te wachten, kan een lener direct contact aanvragen met een investeerder (particulier, bedrijf of organisatie) en omgekeerd. Zodra de aanvraag betaald is, worden de contactgegevens onmiddellijk in beide richtingen uitgewisseld.",
+    "introBoxDisclaimer": "Lentific verzorgt het contact; wat daarna tussen de twee partijen gebeurt, vindt plaats buiten het platform en valt niet onder onze verantwoordelijkheid.",
+    "marketplaceEyebrow": "Marketplace",
+    "marketplaceTitle": "Al geverifieerde dossiers, klaar om gefinancierd te worden",
+    "viewAll": "Alles bekijken",
+    "noOpportunities": "Op dit moment geen open kansen, het eerste ondertekende dossier verschijnt hier automatisch.",
+    "noOpportunitiesInCountryHome": "Op dit moment geen open kansen in jouw land, schakel op de marketplace over naar de internationale weergave om alle aanbiedingen te zien.",
+    "riskLabel": {
+      "low": "Laag",
+      "moderate": "Gemiddeld",
+      "high": "Hoog"
+    },
+    "riskPill": "Risico {label}",
+    "fundedProgress": "{funded} € / {target} € gefinancierd ({pct}%)",
+    "ctaFinalTitle": "Klaar om te beginnen?",
+    "ctaFinalBody": "Maak in minder dan twee minuten een account aan, of je nu financiering zoekt of wilt investeren.",
+    "becomeInvestor": "Word investeerder",
+    "footerText": "© {year} Lentific · Crowdfundingplatform.",
+    "footerMarketplace": "Marketplace",
+    "footerSimulator": "Simulator",
+    "footerLogin": "Inloggen"
+  },
+  "MarketplacePage": {
+    "eyebrow": "P2P Marketplace",
+    "heroTitle": "Leners en investeerders, op één plek",
+    "heroSubtitle": "Aan de ene kant, al geverifieerde dossiers (zowel particulieren als mkb-bedrijven) die op zoek zijn naar investeerders. Aan de andere kant, investeerders (particulieren, bedrijven of organisaties) die aangeven welk kapitaal ze bereid zijn uit te lenen, zodat je al weet, nog voordat je een aanvraag indient, wat er beschikbaar is.",
+    "availableCapitalTitle": "Beschikbaar kapitaal bij onze investeerders",
+    "availableCapitalSubtitle": "Deze investeerders hebben aangegeven bereid te zijn uit te lenen: handig om je kansen in te schatten voordat je een aanvraag indient.",
+    "noListings": "Er is momenteel geen investeerder die beschikbaar kapitaal heeft gepubliceerd.",
+    "noListingsInCountry": "Er is momenteel geen investeerder die beschikbaar kapitaal in dit land heeft gepubliceerd, probeer de internationale weergave.",
+    "amountAvailable": "{amount} € beschikbaar",
+    "verifiedBadge": "Geverifieerde investeerder ✓",
+    "listingMeta": "{name} · Gewenst tarief {rate}% · Voorkeurslooptijd {duration} maanden",
+    "defaultInvestorName": "Investeerder",
+    "monthlyEstimateLabel": "Indicatieve maandelijkse termijn voor een lener:",
+    "monthlyEstimateValue": "{monthly} € / maand",
+    "riskAppetiteLabel": {
+      "low": "Accepteert alleen laag risico",
+      "moderate": "Accepteert gemiddeld en laag risico",
+      "high": "Accepteert alle risiconiveaus"
+    },
+    "connectCta": "Log in om een introductie aan te vragen (15 €)",
+    "depositCta": "Dien een financieringsaanvraag in",
+    "signedDossiersTitle": "Al ondertekende dossiers, open voor financiering",
+    "signedDossiersSubtitle": "Deze dossiers zijn al geverifieerd (identiteit, risicoanalyse) en hun contract is ondertekend.",
+    "noOpportunitiesPart1": "Op dit moment geen open kansen, kom snel terug, of",
+    "noOpportunitiesInCountry": "Op dit moment geen open kansen in dit land, probeer hierboven de internationale weergave, of",
+    "noOpportunitiesLink": "dien een financieringsaanvraag in",
+    "riskLabel": {
+      "low": "Laag",
+      "moderate": "Gemiddeld",
+      "high": "Hoog"
+    },
+    "riskPill": "Risico {label}",
+    "dossierRef": "Dossier {reference}",
+    "fundedProgress": "{funded} € / {target} € gefinancierd ({pct}%)",
+    "investCta": "Log in om te investeren"
+  },
+  "SimulatorPage": {
+    "eyebrow": "Simulator",
+    "title": "Bereken je financiering",
+    "subtitle": "Pas het bedrag en de looptijd aan om de geschatte maandelijkse termijn en de totale kosten te zien, voordat je een aanvraag indient.",
+    "amountLabel": "Gewenst bedrag:",
+    "durationLabel": "Looptijd:",
+    "durationValue": "{duration} maanden",
+    "rateLabel": "Jaarlijks tarief:",
+    "estimationEyebrow": "Schatting",
+    "monthlyResult": "{monthly} € / maand",
+    "totalCost": "Geschatte totale kosten: {total} € (gesimuleerd tarief {rate}%, het werkelijke tarief hangt af van jouw dossier)",
+    "applyCta": "Dien een aanvraag in"
+  },
+  "LoginPage": {
+    "brand": "Lentific",
+    "title": "Inloggen",
+    "noAccountPart1": "Nog geen account?",
+    "noAccountLink": "Registreren",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Wachtwoord",
+    "submit": "Inloggen",
+    "genericError": "Inloggen niet gelukt."
+  },
+  "SignupPage": {
+    "brand": "Lentific",
+    "title": "Account aanmaken",
+    "alreadyRegisteredPart1": "Al geregistreerd?",
+    "alreadyRegisteredLink": "Inloggen",
+    "roleBorrower": "Lener",
+    "roleInvestor": "Investeerder",
+    "nameLabel": "Naam",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Wachtwoord (minimaal 8 tekens)",
+    "submit": "Account aanmaken",
+    "genericError": "Het account kon niet worden aangemaakt."
+  },
+  "BorrowerLayout": {
+    "nav": {
+      "myApplications": "Mijn aanvragen",
+      "myProfile": "Mijn profiel",
+      "submitApplication": "Aanvraag indienen",
+      "availableInvestors": "Beschikbare investeerders",
+      "introductions": "Introducties",
+      "myDocuments": "Mijn documenten"
+    }
+  },
+  "BorrowerDashboard": {
+    "statusLabel": {
+      "DRAFT": "Concept",
+      "SUBMITTED": "Aanvraag verzonden",
+      "KYC_PENDING": "Identiteit in afwachting van verificatie",
+      "KYC_VERIFIED": "Identiteit geverifieerd",
+      "UNDER_REVIEW": "In behandeling",
+      "PUBLISHED": "Aanbod beschikbaar",
+      "OFFER_ACCEPTED": "Aanbod geaccepteerd",
+      "CONTRACT_SIGNED": "Contract ondertekend",
+      "DISBURSED": "Fondsen uitbetaald",
+      "REJECTED": "Afgewezen",
+      "CANCELLED": "Geannuleerd"
+    },
+    "errorChooseFile": "Kies een bestand voordat je het verstuurt.",
+    "pageEyebrow": "apps/web · (borrower)",
+    "title": "Lenersomgeving",
+    "pendingDocumentsCount": "{count, plural, one {# document} other {# documenten}}",
+    "pendingDocumentsRequested": "{count, plural, one {gevraagd} other {gevraagd}} door ons team ({labels}).",
+    "sendArrow": "Verstuur →",
+    "noApplications": "Nog geen aanvragen.",
+    "noApplicationsLink": "Dien je eerste aanvraag in",
+    "amountDurationPurpose": "{amount} € · {duration} maanden · {purpose}",
+    "priorityBadge": "★ Prioritair dossier",
+    "slaBreached": ", SLA van 48u overschreden, er is een herinnering naar ons team gestuurd.",
+    "slaDeadline": ", beoordeling gegarandeerd vóór {date}.",
+    "priorityButton": "Naar prioritair dossier ({fee} €, beoordeling binnen 48u)",
+    "identityRejectedPrompt": "Document afgewezen, stuur een nieuw document:",
+    "identityNeededPrompt": "Stuur een identiteitsbewijs om verder te gaan:",
+    "send": "Versturen",
+    "identityUploadedPending": "Identiteitsbewijs verstuurd, in afwachting van verificatie door een medewerker.",
+    "offerProposed": "Aanbod voorgesteld: {amount} € over {duration} maanden, tarief {rate}%",
+    "acceptOffer": "Aanbod accepteren",
+    "downloadContract": "Download mijn contract (PDF)",
+    "signInstructions": "Print het uit, onderteken het met de hand, en stuur vervolgens een foto/scan:",
+    "contractUploadedPending": "Ondertekend contract verstuurd, in afwachting van verificatie door een medewerker.",
+    "contractConfirmed": "Contract bevestigd ondertekend: jouw financiering wordt nu aangeboden aan investeerders."
+  },
+  "BorrowerApplication": {
+    "pageEyebrow": "apps/web · (borrower)",
+    "title": "Aanvraag indienen",
+    "profileIntroPart1": "Vul eerst",
+    "profileIntroLink": "je financieel profiel",
+    "profileIntroPart2": "aan als dat nog niet is gebeurd: de risico-engine heeft dit nodig om je dossier te analyseren.",
+    "availableFundsAmount": "{amount} €",
+    "availableFundsRest": "{count, plural, one {is momenteel beschikbaar bij # investeerder die klaarstaat} other {is momenteel beschikbaar bij # investeerders die klaarstaan}} om een dossier zoals het jouwe te financieren,",
+    "availableFundsLink": "bekijk de details",
+    "noActiveProducts": "Op dit moment geen actief financieringsproduct.",
+    "productLabel": "Product",
+    "productParticulier": "Particulier: persoonlijke behoefte",
+    "productPME": "Mkb: zakelijke behoefte",
+    "productOption": "{label} ({min} € – {max} €)",
+    "productHint": "Open voor zowel particulieren als professionals.",
+    "amountLabel": "Bedrag (€)",
+    "durationLabel": "Looptijd (maanden)",
+    "purposeLabel": "Doel van de financiering",
+    "submit": "Verstuur mijn aanvraag"
+  },
+  "BorrowerDocuments": {
+    "title": "Mijn documenten",
+    "subtitle": "Documenten die door ons team zijn gevraagd om je dossier te vervolledigen of te verifiëren.",
+    "errorSelectFile": "Kies een bestand voordat je het verstuurt.",
+    "pendingHeading": "In te dienen",
+    "pendingEmpty": "Op dit moment geen documenten in afwachting.",
+    "statusPending": "In afwachting",
+    "requestedBy": "Gevraagd door {name}",
+    "submit": "Versturen",
+    "fulfilledHeading": "Al ingediend",
+    "fulfilledEmpty": "Op dit moment geen ingediende documenten.",
+    "viewFile": "bestand bekijken"
+  },
+  "BorrowerInvestors": {
+    "title": "Beschikbare investeerders",
+    "intro": "Particulieren, bedrijven en organisaties publiceren hier het kapitaal dat ze bereid zijn uit te lenen. Vraag een directe introductie aan (contactgegevens direct uitgewisseld) voor {fee} €.",
+    "disclaimer": "Zodra je geïntroduceerd bent, verlopen de uitwisselingen en de eventuele lening rechtstreeks tussen jou en de investeerder, buiten het platform om. Lentific verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "empty": "Op dit moment geen beschikbaar kapitaal gepubliceerd.",
+    "defaultInvestorName": "Investeerder",
+    "verified": "Geverifieerd ✓",
+    "risk": "Risico {risk}",
+    "availability": "<amount>{amountValue} €</amount> beschikbaar · {rate}% · {duration} maanden · ongeveer {monthlyValue} €/maand",
+    "alreadyIntroduced": "Introductie betaald: contactgegevens in <link>Mijn introducties</link>.",
+    "requestButton": "Introductie aanvragen ({fee} €)"
+  },
+  "BorrowerIntroductions": {
+    "title": "Mijn introducties",
+    "intro": "Een betaalde introductie onthult de contactgegevens in beide richtingen: jij en de andere persoon kunnen elkaar rechtstreeks schrijven.",
+    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. Lentific heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "sentHeading": "Verzoeken die ik heb verstuurd",
+    "sentEmpty": "Op dit moment geen verzonden verzoeken.",
+    "targetTypeInvestor": "investeerder / kredietverstrekker",
+    "targetTypeBorrower": "kredietaanvrager",
+    "verified": "Geverifieerd ✓",
+    "contact": "Contact: {email}",
+    "paymentPending": "Betaling in afwachting.",
+    "receivedHeading": "Ontvangen verzoeken",
+    "receivedEmpty": "Nog niemand heeft gevraagd om contact met je op te nemen.",
+    "receivedRequest": "<name>{nameValue}</name> wil graag met je in contact komen."
+  },
+  "BorrowerOnboarding": {
+    "title": "Mijn financieel profiel",
+    "subtitle": "Deze gegevens worden gebruikt door de risico-engine en worden je bij een volgende aanvraag niet opnieuw gevraagd.",
+    "alreadySaved": "Je profiel is al opgeslagen, werk bij wat is veranderd en sla opnieuw op.",
+    "cityLabel": "Stad",
+    "postalCodeLabel": "Postcode",
+    "employmentLabel": "Arbeidssituatie",
+    "employmentEmployee": "Werknemer",
+    "employmentSelfEmployed": "Zelfstandige",
+    "employmentBusinessOwner": "Ondernemer",
+    "employmentOther": "Anders",
+    "incomeLabel": "Maandinkomen (€)",
+    "expensesLabel": "Maandelijkse uitgaven (€)",
+    "existingDebtLabel": "Bestaande kredieten (€/maand)",
+    "submit": "Opslaan en doorgaan"
+  },
+  "InvestorLayout": {
+    "nav": {
+      "marketplace": "Marketplace",
+      "capitalOffers": "Mijn kapitaalaanbiedingen",
+      "portfolio": "Mijn portefeuille",
+      "introductions": "Introducties",
+      "verification": "Verificatie",
+      "documents": "Mijn documenten",
+      "premium": "Premium",
+      "notifications": "Meldingen"
+    }
+  },
+  "InvestorDashboard": {
+    "invalidAmount": "Ongeldig bedrag.",
+    "riskLabel": {
+      "low": "Laag",
+      "moderate": "Gemiddeld",
+      "high": "Hoog"
+    },
+    "title": "P2P Marketplace",
+    "intro": "Als je een directe introductie met een lener aanvraagt, vinden alle uitwisselingen die daarop volgen plaats buiten het platform. Lentific verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "pendingDocumentsCount": "{count, plural, one {# document} other {# documenten}}",
+    "pendingDocumentsRequested": "{count, plural, one {gevraagd} other {gevraagd}} door ons team ({labels}).",
+    "send": "Versturen →",
+    "noOpportunities": "Op dit moment geen open kansen: een financiering verschijnt hier zodra het contract is ondertekend en bevestigd door een medewerker.",
+    "riskPill": "Risico {risk}",
+    "fileReference": "Dossier {reference}",
+    "fundedProgress": "{funded} € / {target} € gefinancierd ({pct}%)",
+    "fullyFunded": "Volledig gefinancierd.",
+    "maxAmountPlaceholder": "Max {remaining} €",
+    "invest": "Investeren",
+    "introductionPaidPrefix": "Introductie betaald: contactgegevens in",
+    "introductionPaidLink": "Mijn introducties",
+    "requestIntroduction": "Directe introductie met de lener krijgen ({premium, select, yes {gratis, Premium} other {{fee} €}})"
+  },
+  "InvestorDocuments": {
+    "chooseFileError": "Kies een bestand voordat je het verstuurt.",
+    "title": "Mijn documenten",
+    "description": "Documenten die door ons team zijn gevraagd, naast de verificatiebewijzen.",
+    "toUpload": "In te dienen",
+    "noPendingDocuments": "Op dit moment geen documenten in afwachting.",
+    "pending": "In afwachting",
+    "requestedBy": "Gevraagd door {name}",
+    "send": "Versturen",
+    "alreadyUploaded": "Al ingediend",
+    "noUploadedDocuments": "Op dit moment geen ingediende documenten.",
+    "viewFile": "bestand bekijken"
+  },
+  "InvestorIntroductions": {
+    "title": "Mijn introducties",
+    "description": "Een betaalde introductie onthult de contactgegevens in beide richtingen: jij en de andere partij kunnen elkaar rechtstreeks schrijven.",
+    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. Lentific heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "sentTitle": "Verzoeken die ik heb verstuurd",
+    "noSentRequests": "Op dit moment geen verzonden verzoeken.",
+    "targetTypeApplication": "kredietaanvrager",
+    "targetTypeInvestor": "investeerder",
+    "contactInfo": "Contact: {email}",
+    "paymentPending": "Betaling in afwachting.",
+    "receivedTitle": "Ontvangen verzoeken",
+    "noReceivedRequests": "Nog niemand heeft gevraagd om contact met je op te nemen.",
+    "wantsToConnect": "wil graag met je in contact komen."
+  },
+  "InvestorNotifications": {
+    "eventLabels": {
+      "funding_match_alert": "Een nieuw dossier komt overeen met jouw risicotolerantie",
+      "introduction_paid": "Iemand heeft betaald om jouw contactgegevens te krijgen",
+      "investor_verified": "Jouw investeerdersprofiel is geverifieerd",
+      "investor_rejected": "Jouw investeerdersverificatie is afgewezen",
+      "document_requested": "Er is een document bij je opgevraagd"
+    },
+    "title": "Mijn meldingen",
+    "subtitle": "Automatische meldingen over nieuwe dossiers die bij jouw profiel passen zijn voorbehouden aan Premium-investeerders.",
+    "empty": "Op dit moment geen meldingen."
+  },
+  "InvestorOffers": {
+    "title": "Mijn kapitaalaanbiedingen",
+    "subtitle": "Publiceer een bedrag dat je bereid bent uit te lenen, met het tarief en de looptijd die je verkiest: leners zien dit direct op de marketplace, nog voordat ze hun aanvraag indienen.",
+    "publishedHeading": "Gepubliceerde aanbiedingen",
+    "empty": "Op dit moment geen gepubliceerde aanbiedingen.",
+    "amountAvailable": "{amount} € beschikbaar",
+    "statusPublished": "Gepubliceerd",
+    "statusWithdrawn": "Ingetrokken",
+    "listingDetails": "Gewenst tarief {rate}% · Voorkeurslooptijd {duration} maanden · Risico: {risk}",
+    "withdrawButton": "Dit aanbod intrekken",
+    "riskLabels": {
+      "low": "Alleen laag",
+      "moderate": "Gemiddeld en laag",
+      "high": "Alle niveaus"
+    }
+  },
+  "InvestorPortfolio": {
+    "title": "Mijn portefeuille",
+    "totalInvested": "Totaal geïnvesteerd",
+    "totalReceived": "Ontvangen terugbetalingen",
+    "activeInvestments": "Actieve investeringen",
+    "performanceHeading": "Prestaties",
+    "yieldLabel": "Rendement",
+    "yieldNote": "ontvangen / geïnvesteerd, cumulatief",
+    "defaultRateLabel": "Wanbetalingspercentage",
+    "defaultRateCount": "{defaulted} / {total, plural, one {# investering} other {# investeringen}}",
+    "riskBreakdown": "Verdeling per risico",
+    "noData": "–",
+    "riskAmount": "{risk}: {amount} €",
+    "premiumLocked": "Het geavanceerde prestatiedashboard (rendement, wanbetalingspercentage, verdeling per risico) is voorbehouden aan de Premium-formule.",
+    "premiumCta": "Ontdek Premium",
+    "historyHeading": "Geschiedenis",
+    "historyEmptyPrefix": "Op dit moment geen investeringen,",
+    "historyEmptyLink": "ontdek de marketplace",
+    "investedDate": "{amount} € geïnvesteerd · {date}",
+    "riskLabels": {
+      "low": "Laag",
+      "moderate": "Gemiddeld",
+      "high": "Hoog"
+    }
+  },
+  "InvestorPremium": {
+    "title": "Premium-formule",
+    "priceInfo": "{amount} € / maand, op elk moment opzegbaar. Al terugverdiend vanaf de tweede introductie van de maand (anders 15 € per stuk).",
+    "statusLabels": {
+      "ACTIVE": "Actief",
+      "CANCELLED": "Opgezegd",
+      "PAST_DUE": "Betaling mislukt"
+    },
+    "renewalAuto": "Automatische verlenging op {date}.",
+    "renewalCancelled": "Opgezegd: blijft actief tot {date}, en stopt daarna zonder nieuwe afschrijving.",
+    "featuresHeading": "Wat dit verandert",
+    "features": {
+      "unlimited": {
+        "prefix": "→ Onbeperkte",
+        "bold": "introducties",
+        "suffix": " met leners, zonder de 15 € per stuk"
+      },
+      "alert": {
+        "prefix": "→",
+        "bold": "Automatische melding",
+        "suffix": " zodra een nieuw dossier overeenkomt met jouw risicotolerantie"
+      },
+      "verification": {
+        "prefix": "→",
+        "bold": "Versnelde verificatie",
+        "suffix": " binnen 48u"
+      },
+      "badge": {
+        "prefix": "→ Badge",
+        "bold": "Premium",
+        "suffix": " getoond naast de badge Geverifieerd"
+      },
+      "dashboard": "→ Geavanceerd prestatiedashboard (rendement, wanbetalingspercentage, geschiedenis)"
+    },
+    "cancelButton": "Mijn abonnement opzeggen",
+    "reactivateButton": "Abonnement heractiveren",
+    "subscribeButton": "Naar Premium (15 € nu gesimuleerd)"
+  },
+  "InvestorVerification": {
+    "title": "Verificatie van mijn profiel",
+    "subtitle": "Een geverifieerde investeerder toont een badge die zichtbaar is voor leners op de marketplace, dat stelt gerust en onderscheidt jouw profiel. De verificatie gebeurt handmatig: een medewerker beoordeelt je bewijsstukken.",
+    "statusLabels": {
+      "UNVERIFIED": "Niet geverifieerd",
+      "PENDING_REVIEW": "In afwachting van verificatie",
+      "VERIFIED": "Geverifieerd",
+      "REJECTED": "Afgewezen"
+    },
+    "rejectionReason": "Reden voor afwijzing: {reason}",
+    "verifiedMessage": "Je profiel is geverifieerd: de badge verschijnt nu bij je kapitaalaanbiedingen en je contactprofiel.",
+    "pendingMessage": "Je bewijsstukken zijn verstuurd, een medewerker gaat ze beoordelen. Je wordt op de hoogte gebracht zodra de verificatie is afgerond.",
+    "incomeDocLabel": "Inkomensbewijs: {name}",
+    "fundsDocLabel": "Bewijs van beschikbaarheid van fondsen: {name}",
+    "incomeFieldLabel": "Bewijs van inkomstenbron",
+    "incomeFieldHint": "(loonstrook, belastingaanslag, uittreksel Kamer van Koophandel...)",
+    "fundsFieldLabel": "Bewijs van beschikbaarheid van fondsen",
+    "fundsFieldHint": "(recent bankafschrift, rekeningverklaring...)",
+    "submitButton": "Versturen ter verificatie",
+    "requiredDocsError": "Beide bewijsstukken zijn vereist."
+  },
+  "OfferForm": {
+    "amountLabel": "Beschikbaar bedrag (€)",
+    "rateLabel": "Gewenst tarief (%)",
+    "durationLabel": "Voorkeurslooptijd (maanden)",
+    "riskAppetiteLabel": "Geaccepteerd risiconiveau",
+    "riskOnlyLow": "Alleen laag",
+    "riskModerateAndLow": "Gemiddeld en laag",
+    "riskAllLevels": "Alle niveaus, inclusief hoog",
+    "previewText": "Voor een lener die het volledige bedrag gebruikt over {duration} maanden tegen {rate}%:",
+    "previewMonthly": "{monthly} € / maand",
+    "submit": "Dit aanbod publiceren"
+  },
+  "CountryFilter": {
+    "label": "Land",
+    "international": "Internationaal (alle landen)",
+    "countryName": {
+      "FR": "Frankrijk",
+      "GB": "Verenigd Koninkrijk",
+      "ES": "Spanje",
+      "IT": "Italië",
+      "HU": "Hongarije",
+      "PT": "Portugal",
+      "DE": "Duitsland",
+      "NL": "Nederland"
+    }
+  }
+}

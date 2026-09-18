@@ -12,9 +12,9 @@
  * remplacer le contenu de ce fichier sans changer sa signature exportée.
  */
 
-import { randomBytes } from "node:crypto";
+import { randomBytes, timingSafeEqual } from "node:crypto";
 import bcrypt from "bcryptjs";
-import { usersRepo, sessionsRepo, type Role } from "@fintech/database";
+import { usersRepo, sessionsRepo, auditLogsRepo, type Role } from "@fintech/database";
 
 export const ROLE_HIERARCHY: Record<Role, number> = {
   BORROWER: 0,
@@ -124,4 +124,68 @@ export async function getSessionUser(token: string | undefined) {
   const session = await sessionsRepo.findByToken(token);
   if (!session || session.expiresAt < new Date()) return null;
   return session.user;
+}
+
+// ---------------------------------------------------------------------------
+// Lien secret de bootstrap admin (§ demande produit 2026-09-18)
+// ---------------------------------------------------------------------------
+
+/**
+ * Comparaison à temps constant du jeton fourni dans l'URL contre
+ * ADMIN_BOOTSTRAP_TOKEN (jamais committé, réglé dans les variables
+ * d'environnement Vercel). Un `===` classique fuit un timing différent selon
+ * le nombre de caractères corrects trouvés avant le premier écart, ce qui
+ * permettrait en théorie de deviner le jeton caractère par caractère.
+ */
+export function isValidBootstrapToken(provided: string | undefined): boolean {
+  const expected = process.env.ADMIN_BOOTSTRAP_TOKEN;
+  if (!expected || !provided) return false;
+  const a = Buffer.from(provided);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
+/**
+ * Crée un compte agent/admin/super-admin sans passer par le formulaire
+ * public de /signup (réservé à BORROWER/INVESTOR, voir signUp ci-dessus).
+ * N'ouvre pas de session : la personne créée se connecte ensuite normalement
+ * depuis /login, ce lien sert uniquement à amorcer un compte, pas à
+ * emprunter son identité (§ demande produit : "sans se connecter au compte
+ * administrateur principal"). Consigne systématiquement l'action dans
+ * AuditLog : un point d'entrée capable de créer un super administrateur sans
+ * authentification préalable doit laisser une trace exploitable.
+ */
+export async function bootstrapAdminAccount(input: {
+  email: string;
+  password: string;
+  name: string;
+  role: Extract<Role, "AGENT" | "ADMIN" | "SUPER_ADMIN">;
+  countryId: string;
+}) {
+  const existing = await usersRepo.findByEmail(input.email);
+  if (existing) {
+    throw new AuthError("Un compte existe déjà avec cet e-mail.");
+  }
+  if (input.password.length < 8) {
+    throw new AuthError("Le mot de passe doit contenir au moins 8 caractères.");
+  }
+
+  const passwordHash = await bcrypt.hash(input.password, 10);
+  const user = await usersRepo.create({
+    email: input.email,
+    countryId: input.countryId,
+    role: input.role,
+    name: input.name,
+    passwordHash,
+  });
+
+  await auditLogsRepo.create({
+    userId: user.id,
+    action: "admin.bootstrap_created",
+    entity: "User",
+    after: { email: user.email, role: user.role },
+  });
+
+  return user;
 }

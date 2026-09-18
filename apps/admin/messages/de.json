@@ -1,0 +1,157 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back-Office",
+    "cases": "Dossiers",
+    "kyc": "Identitätsprüfung",
+    "investorVerification": "Investorenverifizierung",
+    "contracts": "Zu prüfende Verträge",
+    "introductions": "Vermittlungen",
+    "installments": "Einzuziehende Raten",
+    "riskEngine": "Risiko-Engine",
+    "accountsSuperAdmin": "Konten (Super-Admin)",
+    "statistics": "Statistiken",
+    "logout": "Abmelden"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back-Office",
+    "title": "Mitarbeiteranmeldung",
+    "emailLabel": "E-Mail",
+    "passwordLabel": "Passwort",
+    "submit": "Anmelden"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · Back-Office",
+    "title": "Warteschlange: Dossiers",
+    "pendingCount": "{count, plural, one {# ausstehendes Dossier} other {# ausstehende Dossiers}}",
+    "empty": "Derzeit keine ausstehenden Dossiers.",
+    "amountDuration": "{amount} € · {months} Monate",
+    "score": "Score: {score}/100",
+    "slaBreached": "SLA von 48 Stunden überschritten, Erinnerung gesendet",
+    "priorityDeadline": "Prioritär, zu bearbeiten vor dem {date}",
+    "startAnalysis": "Analyse starten",
+    "amountLabel": "Betrag (€)",
+    "durationLabel": "Laufzeit (Monate)",
+    "rateLabel": "Zinssatz (%)",
+    "createOffer": "Angebot erstellen und veröffentlichen",
+    "status": {
+      "submitted": "Gesendet",
+      "kycPending": "Identität ausstehend",
+      "kycVerified": "Identität verifiziert",
+      "underReview": "Wird geprüft"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · Super-Admin",
+    "title": "Konten",
+    "description": "Vollständige Übersicht über jedes Kreditnehmer- oder Investorenkonto: Profil, Dokumente, Dokumentanfragen, Vermittlungen.",
+    "empty": "Noch keine Konten.",
+    "verified": "Verifiziert",
+    "roleBorrower": "Kreditnehmer",
+    "roleInvestor": "Investor"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Zurück zu den Konten",
+    "kicker": "apps/admin · Super-Admin",
+    "phoneNotProvided": "Telefonnummer nicht angegeben",
+    "roleBorrower": "Kreditnehmer",
+    "roleInvestor": "Investor",
+    "financialProfileTitle": "Finanzprofil",
+    "financialProfile": "Einkommen {income} € · Ausgaben {expenses} € · Bestehende Schulden {debt} €",
+    "investorProfileTitle": "Investorprofil",
+    "riskTolerance": "Risikotoleranz: {tolerance}",
+    "applicationsTitle": "Finanzierungsanträge",
+    "listingsTitle": "Veröffentlichte Kapitalangebote",
+    "introductionsTitle": "Vermittlungen",
+    "introductionsDisclaimer": "Hinweis: Sobald eine Vermittlung bezahlt wurde, findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, Lentific übernimmt dafür keine Verantwortung.",
+    "introSent": "→ hat den Kontakt von {name} angefordert ({status})",
+    "introReceived": "← Kontakt angefordert von {name} ({status})",
+    "documentsTitle": "Hochgeladene Dokumente",
+    "noDocuments": "Keine Dokumente hochgeladen.",
+    "requestDocumentTitle": "Ein Dokument anfordern",
+    "requestDocumentHint": "Der Kontoinhaber sieht diese Anfrage und kann antworten, indem er das Dokument aus seinem Bereich hochlädt.",
+    "documentLabel": "Angefordertes Dokument",
+    "documentPlaceholder": "Z. B. Wohnsitznachweis",
+    "instructionsLabel": "Hinweise (optional)",
+    "instructionsPlaceholder": "Z. B. nicht älter als 3 Monate, auf Ihren Namen",
+    "sendRequest": "Anfrage senden",
+    "alreadySentTitle": "Bereits gesendete Anfragen",
+    "requestStatus": {
+      "pending": "Ausstehend",
+      "fulfilled": "Hochgeladen",
+      "cancelled": "Storniert"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · manuelle Unterschrift",
+    "title": "Unterschriebene Verträge: zu prüfen",
+    "description": "Der Kunde hat den Vertrag ausgedruckt, handschriftlich unterschrieben und hochgeladen. Prüfen Sie das Dokument, bevor Sie bestätigen.",
+    "empty": "Keine Verträge zur Prüfung ausstehend.",
+    "contractLabel": "Vertrag {id}",
+    "viewSignedContract": "Den vom Kunden hochgeladenen unterschriebenen Vertrag ansehen",
+    "pendingVerification": "Prüfung ausstehend",
+    "confirmSignature": "Unterschrift bestätigen",
+    "reject": "Ablehnen"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · Inkasso",
+    "title": "Einzuziehende Raten",
+    "description": "Bestätigen Sie eine vom Kreditnehmer erhaltene Monatsrate: Sie wird automatisch anteilig unter den Investoren des Kredits verteilt und fließt in deren Leistungs-Dashboard ein.",
+    "empty": "Derzeit keine ausstehenden Raten.",
+    "dueLabel": "{reference} · fällig am {date}",
+    "overdue": "Überfällig",
+    "upcoming": "Bevorstehend",
+    "confirmPayment": "Erhaltene Zahlung bestätigen"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · manuelle Verifizierung",
+    "title": "Investorenverifizierung: zu bearbeiten",
+    "description": "Prüfen Sie den Einkommensnachweis und den Nachweis der Mittelverfügbarkeit, dann bestätigen oder lehnen Sie unten ab.",
+    "empty": "Keine Investoren zur Verifizierung ausstehend.",
+    "pending": "Ausstehend",
+    "incomeProofLabel": "Einkommensnachweis:",
+    "fundsProofLabel": "Nachweis der Mittelverfügbarkeit:",
+    "missing": "fehlt",
+    "confirmVerification": "Verifizierung bestätigen",
+    "reject": "Ablehnen",
+    "missingDocumentNote": "Ein Nachweis fehlt: Bestätigung erst möglich, wenn beide hochgeladen sind."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · manuelle Verifizierung",
+    "title": "Identitätsprüfung: zu bearbeiten",
+    "description": "Kontaktieren Sie den Kunden, um seinen Identitätsnachweis zu prüfen, dann bestätigen oder lehnen Sie unten ab.",
+    "empty": "Keine Dossiers zur manuellen Verifizierung ausstehend.",
+    "pendingContact": "Kontakt ausstehend",
+    "confirmVerification": "Verifizierung bestätigen",
+    "reject": "Ablehnen",
+    "noApplicationNote": "Dieses Dokument ist keinem Antrag zugeordnet: Das Dossier kann nicht weiterbearbeitet werden."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · Übersicht",
+    "title": "Vermittelte Profile",
+    "description": "Liste der Paare, die ihre Kontaktdaten über eine bezahlte Vermittlung ausgetauscht haben. Ab diesem Zeitpunkt findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, Lentific übernimmt dafür keine Verantwortung, es wurde lediglich der Kontakt hergestellt.",
+    "empty": "Noch keine bezahlten Vermittlungen.",
+    "paid": "Bezahlt",
+    "investorToBorrower": "Investor zu Kreditnehmer",
+    "borrowerToInvestor": "Kreditnehmer zu Investor"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · Risiko",
+    "title": "Risiko-Engine",
+    "demoDescription": "Von <code1>assessRisk()</code1> aus <code2>@fintech/risk</code2> berechnetes Beispiel für das Demo-Dossier (18.500 € / 24 Monate):",
+    "scoreLabel": "Score",
+    "gradeLabel": "Note",
+    "riskLevelLabel": "Risikostufe"
+  },
+  "StatisticsPage": {
+    "kicker": "apps/admin · Statistiken",
+    "title": "Besuchsstatistiken",
+    "description": "Eine einfache, selbst gehostete Besuchserfassung, direkt in die Plattform eingebaut. Das ist nicht Matomo: Matomo benötigt entweder ein Matomo-Cloud-Konto oder ein separates Hosting, bei Bedarf separat einzurichten.",
+    "last7days": "Letzte 7 Tage",
+    "last30days": "Letzte 30 Tage",
+    "dailyChart": "Aufrufe pro Tag (letzte 30 Tage)",
+    "topPages": "Meistgesehene Seiten",
+    "byLanguage": "Nach Sprache",
+    "byCountry": "Nach Land",
+    "noData": "Noch keine Daten."
+  }
+}

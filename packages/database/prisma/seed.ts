@@ -18,22 +18,56 @@ const DEMO_PASSWORD = "Demo1234!";
 async function main() {
   const passwordHash = await bcrypt.hash(DEMO_PASSWORD, 10);
 
+  // Devises d'abord (Country.currencyId les référence). Noter que le seed
+  // précédent posait littéralement currencyId: "eur" sur France plutôt que
+  // le véritable id généré par cette upsert, un décalage resté invisible tant
+  // que rien ne lisait la relation Country -> Currency ; corrigé ici (§ pays
+  // & devise par annonce, demande produit 2026-09-17).
+  const eur = await prisma.currency.upsert({ where: { code: "EUR" }, create: { code: "EUR" }, update: {} });
+  const gbp = await prisma.currency.upsert({ where: { code: "GBP" }, create: { code: "GBP" }, update: {} });
+  const huf = await prisma.currency.upsert({ where: { code: "HUF" }, create: { code: "HUF" }, update: {} });
+
   const france = await prisma.country.upsert({
     where: { code: "FR" },
-    create: { code: "FR", currencyId: "eur", defaultLocale: "fr-FR" },
-    update: {},
+    create: { code: "FR", currencyId: eur.id, defaultLocale: "fr-FR" },
+    update: { currencyId: eur.id },
   });
 
-  const eur = await prisma.currency.upsert({
-    where: { code: "EUR" },
-    create: { code: "EUR" },
-    update: {},
+  // Un pays de démonstration par langue prise en charge par la plateforme
+  // (§ marketplace géographique), pour que le filtre pays affiche autre
+  // chose qu'un état vide dès qu'un visiteur n'est pas en France.
+  const unitedKingdom = await prisma.country.upsert({
+    where: { code: "GB" },
+    create: { code: "GB", currencyId: gbp.id, defaultLocale: "en-GB" },
+    update: { currencyId: gbp.id },
   });
+  const spain = await prisma.country.upsert({
+    where: { code: "ES" },
+    create: { code: "ES", currencyId: eur.id, defaultLocale: "es-ES" },
+    update: { currencyId: eur.id },
+  });
+  const italy = await prisma.country.upsert({
+    where: { code: "IT" },
+    create: { code: "IT", currencyId: eur.id, defaultLocale: "it-IT" },
+    update: { currencyId: eur.id },
+  });
+  const hungary = await prisma.country.upsert({
+    where: { code: "HU" },
+    create: { code: "HU", currencyId: huf.id, defaultLocale: "hu-HU" },
+    update: { currencyId: huf.id },
+  });
+  const portugal = await prisma.country.upsert({
+    where: { code: "PT" },
+    create: { code: "PT", currencyId: eur.id, defaultLocale: "pt-PT" },
+    update: { currencyId: eur.id },
+  });
+
+  const ALL_COUNTRY_CODES = ["FR", "GB", "ES", "IT", "HU", "PT"];
 
   const product = await prisma.loanProduct.upsert({
     where: { code: "PME-STANDARD" },
-    create: { code: "PME-STANDARD", countries: ["FR"], minAmount: 2000, maxAmount: 100000 },
-    update: {},
+    create: { code: "PME-STANDARD", countries: ALL_COUNTRY_CODES, minAmount: 2000, maxAmount: 100000 },
+    update: { countries: ALL_COUNTRY_CODES },
   });
 
   // Ouverture aux particuliers (§ demande produit : "rendre ça plus accessible
@@ -41,8 +75,8 @@ async function main() {
   // besoin personnel plutôt qu'à un besoin professionnel.
   const particulierProduct = await prisma.loanProduct.upsert({
     where: { code: "PARTICULIER-STANDARD" },
-    create: { code: "PARTICULIER-STANDARD", countries: ["FR"], minAmount: 500, maxAmount: 50000 },
-    update: {},
+    create: { code: "PARTICULIER-STANDARD", countries: ALL_COUNTRY_CODES, minAmount: 500, maxAmount: 50000 },
+    update: { countries: ALL_COUNTRY_CODES },
   });
 
   const agent = await prisma.user.upsert({
@@ -708,6 +742,232 @@ async function main() {
         amountAvailable: 5000,
         preferredRate: 4.8,
         preferredDurationMonths: 12,
+        riskAppetite: "moderate",
+      },
+    });
+  }
+
+  // --- Marketplace internationale : dossier + investisseur en Hongrie --------
+  // Démontre que le filtre pays de la marketplace n'affiche pas un état vide
+  // hors de France (§ demande produit : marketplace géographique) : un
+  // dossier signé et ouvert au financement, plus une offre de capital,
+  // tous deux en Hongrie / forint (HUF).
+
+  const zoltan = await prisma.user.upsert({
+    where: { email: "zoltan.kovacs@example.com" },
+    update: { passwordHash, name: "Zoltán Kovács" },
+    create: {
+      email: "zoltan.kovacs@example.com",
+      name: "Zoltán Kovács",
+      countryId: hungary.id,
+      role: "BORROWER",
+      passwordHash,
+      borrowerProfile: {
+        create: {
+          address: { city: "Budapest", postalCode: "1051" },
+          employment: { status: "self-employed" },
+          income: 850000,
+          expenses: 320000,
+          existingDebt: 0,
+        },
+      },
+    },
+  });
+
+  const zoltanApp = await prisma.application.upsert({
+    where: { reference: "APP-2026-000410" },
+    create: {
+      reference: "APP-2026-000410",
+      borrowerId: zoltan.id,
+      productId: product.id,
+      amount: 5500000,
+      durationMonths: 24,
+      purpose: "Üzletfejlesztés",
+      countryId: hungary.id,
+      currencyId: huf.id,
+      status: "CONTRACT_SIGNED",
+      score: 66,
+    },
+    update: {},
+  });
+
+  await prisma.document.upsert({
+    where: { id: `${zoltanApp.id}-identity` },
+    create: {
+      id: `${zoltanApp.id}-identity`,
+      ownerId: zoltan.id,
+      applicationId: zoltanApp.id,
+      type: "identity",
+      storageKey: "local/demo-carte-identite-zoltan.pdf",
+      status: "VERIFIED",
+    },
+    update: {},
+  }).catch(() => {});
+
+  let zoltanOffer = await prisma.offer.findFirst({ where: { applicationId: zoltanApp.id } });
+  if (!zoltanOffer) {
+    zoltanOffer = await prisma.offer.create({
+      data: { applicationId: zoltanApp.id, amount: 5500000, durationMonths: 24, rate: 9.5, status: "ACCEPTED" },
+    });
+  }
+
+  let zoltanLoan = await prisma.loan.findUnique({ where: { offerId: zoltanOffer.id } });
+  if (!zoltanLoan) {
+    zoltanLoan = await prisma.loan.create({ data: { offerId: zoltanOffer.id } });
+  }
+
+  let zoltanContract = zoltanLoan.contractId ? await prisma.contract.findUnique({ where: { id: zoltanLoan.contractId } }) : null;
+  if (!zoltanContract) {
+    zoltanContract = await prisma.contract.create({
+      data: { loanId: zoltanLoan.id, templateVersion: "v1.0", storageKey: `contracts/${zoltanLoan.id}-v1.0.pdf` },
+    });
+    zoltanLoan = await prisma.loan.update({ where: { id: zoltanLoan.id }, data: { contractId: zoltanContract.id } });
+  }
+
+  await prisma.signature.upsert({
+    where: { contractId: zoltanContract.id },
+    create: { contractId: zoltanContract.id, provider: "manual_upload", status: "SIGNED", signedAt: new Date() },
+    update: { status: "SIGNED", signedAt: new Date() },
+  });
+
+  await prisma.fundingOpportunity.upsert({
+    where: { loanId: zoltanLoan.id },
+    create: { loanId: zoltanLoan.id, targetAmount: 5500000, fundedAmount: 0, riskLevel: "moderate" },
+    update: {},
+  });
+
+  const katalin = await prisma.user.upsert({
+    where: { email: "katalin.nagy@example.com" },
+    update: { passwordHash, name: "Katalin Nagy" },
+    create: {
+      email: "katalin.nagy@example.com",
+      name: "Katalin Nagy",
+      countryId: hungary.id,
+      role: "INVESTOR",
+      passwordHash,
+      investorProfile: { create: { riskTolerance: "moderate" } },
+    },
+  });
+
+  const existingKatalinListing = await prisma.investorListing.findFirst({ where: { investorId: katalin.id, status: "OPEN" } });
+  if (!existingKatalinListing) {
+    await prisma.investorListing.create({
+      data: {
+        investorId: katalin.id,
+        amountAvailable: 20000000,
+        preferredRate: 7.5,
+        preferredDurationMonths: 24,
+        riskAppetite: "moderate",
+      },
+    });
+  }
+
+  // --- Marketplace internationale : dossier + investisseur au Royaume-Uni ----
+
+  const oliver = await prisma.user.upsert({
+    where: { email: "oliver.bennett@example.com" },
+    update: { passwordHash, name: "Oliver Bennett" },
+    create: {
+      email: "oliver.bennett@example.com",
+      name: "Oliver Bennett",
+      countryId: unitedKingdom.id,
+      role: "BORROWER",
+      passwordHash,
+      borrowerProfile: {
+        create: {
+          address: { city: "Manchester", postalCode: "M1 1AE" },
+          employment: { status: "business-owner" },
+          income: 3600,
+          expenses: 1500,
+          existingDebt: 100,
+        },
+      },
+    },
+  });
+
+  const oliverApp = await prisma.application.upsert({
+    where: { reference: "APP-2026-000420" },
+    create: {
+      reference: "APP-2026-000420",
+      borrowerId: oliver.id,
+      productId: product.id,
+      amount: 15000,
+      durationMonths: 24,
+      purpose: "Business expansion",
+      countryId: unitedKingdom.id,
+      currencyId: gbp.id,
+      status: "CONTRACT_SIGNED",
+      score: 70,
+    },
+    update: {},
+  });
+
+  await prisma.document.upsert({
+    where: { id: `${oliverApp.id}-identity` },
+    create: {
+      id: `${oliverApp.id}-identity`,
+      ownerId: oliver.id,
+      applicationId: oliverApp.id,
+      type: "identity",
+      storageKey: "local/demo-carte-identite-oliver.pdf",
+      status: "VERIFIED",
+    },
+    update: {},
+  }).catch(() => {});
+
+  let oliverOffer = await prisma.offer.findFirst({ where: { applicationId: oliverApp.id } });
+  if (!oliverOffer) {
+    oliverOffer = await prisma.offer.create({
+      data: { applicationId: oliverApp.id, amount: 15000, durationMonths: 24, rate: 6.5, status: "ACCEPTED" },
+    });
+  }
+
+  let oliverLoan = await prisma.loan.findUnique({ where: { offerId: oliverOffer.id } });
+  if (!oliverLoan) {
+    oliverLoan = await prisma.loan.create({ data: { offerId: oliverOffer.id } });
+  }
+
+  let oliverContract = oliverLoan.contractId ? await prisma.contract.findUnique({ where: { id: oliverLoan.contractId } }) : null;
+  if (!oliverContract) {
+    oliverContract = await prisma.contract.create({
+      data: { loanId: oliverLoan.id, templateVersion: "v1.0", storageKey: `contracts/${oliverLoan.id}-v1.0.pdf` },
+    });
+    oliverLoan = await prisma.loan.update({ where: { id: oliverLoan.id }, data: { contractId: oliverContract.id } });
+  }
+
+  await prisma.signature.upsert({
+    where: { contractId: oliverContract.id },
+    create: { contractId: oliverContract.id, provider: "manual_upload", status: "SIGNED", signedAt: new Date() },
+    update: { status: "SIGNED", signedAt: new Date() },
+  });
+
+  await prisma.fundingOpportunity.upsert({
+    where: { loanId: oliverLoan.id },
+    create: { loanId: oliverLoan.id, targetAmount: 15000, fundedAmount: 0, riskLevel: "low" },
+    update: {},
+  });
+
+  const emily = await prisma.user.upsert({
+    where: { email: "emily.clarke@example.com" },
+    update: { passwordHash, name: "Emily Clarke" },
+    create: {
+      email: "emily.clarke@example.com",
+      name: "Emily Clarke",
+      countryId: unitedKingdom.id,
+      role: "INVESTOR",
+      passwordHash,
+      investorProfile: { create: { riskTolerance: "moderate" } },
+    },
+  });
+
+  const existingEmilyListing = await prisma.investorListing.findFirst({ where: { investorId: emily.id, status: "OPEN" } });
+  if (!existingEmilyListing) {
+    await prisma.investorListing.create({
+      data: {
+        investorId: emily.id,
+        amountAvailable: 50000,
+        preferredRate: 5.8,
+        preferredDurationMonths: 24,
         riskAppetite: "moderate",
       },
     });

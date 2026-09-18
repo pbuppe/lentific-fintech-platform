@@ -92,6 +92,7 @@
     "marketplaceTitle": "Files already verified, ready to be funded",
     "viewAll": "View all",
     "noOpportunities": "No open opportunities right now, the first signed file will appear here automatically.",
+    "noOpportunitiesInCountryHome": "No open opportunities in your country right now, switch to the international view on the marketplace to see all offers.",
     "riskLabel": {
       "low": "Low",
       "moderate": "Moderate",
@@ -114,6 +115,7 @@
     "availableCapitalTitle": "Capital available from our investors",
     "availableCapitalSubtitle": "These investors have announced they're ready to lend: useful for estimating your chances before submitting a request.",
     "noListings": "No investor has published available capital yet.",
+    "noListingsInCountry": "No investor has published available capital in this country yet, try the international view.",
     "amountAvailable": "{amount} € available",
     "verifiedBadge": "Verified investor ✓",
     "listingMeta": "{name} · Desired rate {rate}% · Preferred duration {duration} months",
@@ -130,6 +132,7 @@
     "signedDossiersTitle": "Already signed files, open for funding",
     "signedDossiersSubtitle": "These files have already been verified (identity, risk analysis) and their contract signed.",
     "noOpportunitiesPart1": "No open opportunities right now, check back soon, or",
+    "noOpportunitiesInCountry": "No open opportunities in this country right now, try the international view above, or",
     "noOpportunitiesLink": "submit a funding request",
     "riskLabel": {
       "low": "Low",
@@ -211,8 +214,8 @@
     "noApplicationsLink": "Submit your first request",
     "amountDurationPurpose": "{amount} € · {duration} months · {purpose}",
     "priorityBadge": "★ Priority file",
-    "slaBreached": " — 48h SLA exceeded, a follow-up has been sent to our team.",
-    "slaDeadline": " — review guaranteed before {date}.",
+    "slaBreached": ", 48h SLA exceeded, a follow-up has been sent to our team.",
+    "slaDeadline": ", review guaranteed before {date}.",
     "priorityButton": "Switch to priority file ({fee} €, review within 48h)",
     "identityRejectedPrompt": "Document rejected, send a new one:",
     "identityNeededPrompt": "Send an ID document to continue:",
@@ -288,7 +291,7 @@
   "BorrowerOnboarding": {
     "title": "My financial profile",
     "subtitle": "This information is used by the risk engine and won't be asked again on a future application.",
-    "alreadySaved": "Your profile is already saved — update what has changed, then save again.",
+    "alreadySaved": "Your profile is already saved, update what has changed, then save again.",
     "cityLabel": "City",
     "postalCodeLabel": "Postal code",
     "employmentLabel": "Employment status",
@@ -402,7 +405,7 @@
     "defaultRateLabel": "Default rate",
     "defaultRateCount": "{defaulted} / {total, plural, one {# investment} other {# investments}}",
     "riskBreakdown": "Breakdown by risk",
-    "noData": "—",
+    "noData": "–",
     "riskAmount": "{risk}: {amount} €",
     "premiumLocked": "The advanced performance dashboard (yield, default rate, risk breakdown) is reserved for the Premium plan.",
     "premiumCta": "Discover Premium",
@@ -456,7 +459,7 @@
   },
   "InvestorVerification": {
     "title": "Verify my profile",
-    "subtitle": "A verified investor displays a badge visible to borrowers on the marketplace — it's reassuring and sets your profile apart. Verification is manual: an agent reviews your documents.",
+    "subtitle": "A verified investor displays a badge visible to borrowers on the marketplace, it's reassuring and sets your profile apart. Verification is manual: an agent reviews your documents.",
     "statusLabels": {
       "UNVERIFIED": "Not verified",
       "PENDING_REVIEW": "Pending verification",
@@ -486,5 +489,19 @@
     "previewText": "For a borrower using the full amount over {duration} months at {rate}%:",
     "previewMonthly": "{monthly} € / month",
     "submit": "Publish this offer"
+  },
+  "CountryFilter": {
+    "label": "Country",
+    "international": "International (all countries)",
+    "countryName": {
+      "FR": "France",
+      "GB": "United Kingdom",
+      "ES": "Spain",
+      "IT": "Italy",
+      "HU": "Hungary",
+      "PT": "Portugal",
+      "DE": "Germany",
+      "NL": "Netherlands"
+    }
   }
 }

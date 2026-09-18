@@ -1,8 +1,14 @@
 import { prisma } from "../client";
 
-export function listOpenOpportunities() {
+// countryCode filtre par pays de la demande (§ marketplace géographique :
+// afficher en priorité les dossiers du pays du visiteur), undefined = tous
+// pays confondus (bascule "International" côté marketplace).
+export function listOpenOpportunities(countryCode?: string) {
   return prisma.fundingOpportunity.findMany({
-    include: { loan: { include: { offer: { include: { application: true } } } } },
+    where: countryCode ? { loan: { offer: { application: { country: { code: countryCode } } } } } : undefined,
+    include: {
+      loan: { include: { offer: { include: { application: { include: { country: true, currency: true } } } } } },
+    },
   });
 }
 

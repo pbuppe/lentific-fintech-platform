@@ -11,10 +11,12 @@ export function create(data: {
   return prisma.investorListing.create({ data });
 }
 
-export function listOpen() {
+// countryCode filtre par pays de résidence de l'investisseur (§ marketplace
+// géographique), undefined = tous pays confondus.
+export function listOpen(countryCode?: string) {
   return prisma.investorListing.findMany({
-    where: { status: "OPEN" },
-    include: { investor: { include: { investorProfile: true } } },
+    where: countryCode ? { status: "OPEN", investor: { country: { code: countryCode } } } : { status: "OPEN" },
+    include: { investor: { include: { investorProfile: true, country: { include: { currency: true } } } } },
     orderBy: { createdAt: "desc" },
   });
 }

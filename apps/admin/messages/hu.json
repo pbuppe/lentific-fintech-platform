@@ -9,6 +9,7 @@
     "installments": "Beszedendő részletek",
     "riskEngine": "Kockázatelemző motor",
     "accountsSuperAdmin": "Fiókok (szuperadmin)",
+    "statistics": "Statisztikák",
     "logout": "Kijelentkezés"
   },
   "AdminLoginPage": {
@@ -25,7 +26,7 @@
     "empty": "Jelenleg nincs függőben lévő ügy.",
     "amountDuration": "{amount} € · {months} hónap",
     "score": "Pontszám: {score}/100",
-    "slaBreached": "48 órás SLA túllépve — emlékeztető elküldve",
+    "slaBreached": "48 órás SLA túllépve, emlékeztető elküldve",
     "priorityDeadline": "Prioritás, elintézendő eddig: {date}",
     "startAnalysis": "Elemzés indítása",
     "amountLabel": "Összeg (€)",
@@ -140,5 +141,17 @@
     "scoreLabel": "Pontszám",
     "gradeLabel": "Minősítés",
     "riskLevelLabel": "Kockázati szint"
+  },
+  "StatisticsPage": {
+    "kicker": "apps/admin · statisztikák",
+    "title": "Látogatási statisztikák",
+    "description": "Egyszerű, saját hosztolású látogatáskövetés, közvetlenül a platformba építve. Ez nem a Matomo: a Matomo Matomo Cloud fiókot vagy külön hosztolást igényel, ezt igény esetén külön kell beállítani.",
+    "last7days": "Elmúlt 7 nap",
+    "last30days": "Elmúlt 30 nap",
+    "dailyChart": "Napi látogatások (elmúlt 30 nap)",
+    "topPages": "Legnézettebb oldalak",
+    "byLanguage": "Nyelv szerint",
+    "byCountry": "Ország szerint",
+    "noData": "Még nincs adat."
   }
 }

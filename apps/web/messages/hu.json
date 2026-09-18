@@ -92,6 +92,7 @@
     "marketplaceTitle": "Már ellenőrzött dossziék, finanszírozásra készen",
     "viewAll": "Összes megtekintése",
     "noOpportunities": "Jelenleg nincs nyitott lehetőség, az első aláírt dosszié automatikusan megjelenik itt.",
+    "noOpportunitiesInCountryHome": "Jelenleg nincs nyitott lehetőség a te országodban, váltson nemzetközi nézetre a piactéren, hogy lásson minden ajánlatot.",
     "riskLabel": {
       "low": "Alacsony",
       "moderate": "Közepes",
@@ -114,6 +115,7 @@
     "availableCapitalTitle": "Elérhető tőke befektetőinknél",
     "availableCapitalSubtitle": "Ezek a befektetők jelezték, hogy készek kölcsönt nyújtani: hasznos, hogy felmérd az esélyeidet az igénylés benyújtása előtt.",
     "noListings": "Jelenleg egyetlen befektető sem tett közzé elérhető tőkét.",
+    "noListingsInCountry": "Jelenleg egyetlen befektető sem tett közzé elérhető tőkét ebben az országban, próbálja ki a nemzetközi nézetet.",
     "amountAvailable": "{amount} € elérhető",
     "verifiedBadge": "Ellenőrzött befektető ✓",
     "listingMeta": "{name} · Kívánt kamat {rate}% · Preferált futamidő {duration} hónap",
@@ -130,6 +132,7 @@
     "signedDossiersTitle": "Már aláírt dossziék, finanszírozásra nyitva",
     "signedDossiersSubtitle": "Ezek a dossziék már ellenőrzésen estek át (személyazonosság, kockázatelemzés), és szerződésüket aláírták.",
     "noOpportunitiesPart1": "Jelenleg nincs nyitott lehetőség, nézz vissza hamarosan, vagy",
+    "noOpportunitiesInCountry": "Jelenleg nincs nyitott lehetőség ebben az országban, próbálja ki a fenti nemzetközi nézetet, vagy",
     "noOpportunitiesLink": "nyújts be finanszírozási igényt",
     "riskLabel": {
       "low": "Alacsony",
@@ -211,8 +214,8 @@
     "noApplicationsLink": "Nyújtsd be az első igénylésedet",
     "amountDurationPurpose": "{amount} € · {duration} hónap · {purpose}",
     "priorityBadge": "★ Prioritásos dosszié",
-    "slaBreached": " — a 48 órás SLA lejárt, csapatunk emlékeztetőt kapott.",
-    "slaDeadline": " — az elbírálás garantáltan {date} előtt megtörténik.",
+    "slaBreached": ", a 48 órás SLA lejárt, csapatunk emlékeztetőt kapott.",
+    "slaDeadline": ", az elbírálás garantáltan {date} előtt megtörténik.",
     "priorityButton": "Váltás prioritásos dossziéra ({fee} €, elbírálás 48 órán belül)",
     "identityRejectedPrompt": "A dokumentum elutasítva, küldj egy újat:",
     "identityNeededPrompt": "Küldj egy személyazonosító okmányt a folytatáshoz:",
@@ -288,7 +291,7 @@
   "BorrowerOnboarding": {
     "title": "Pénzügyi profilom",
     "subtitle": "Ezek az adatok a kockázatelemző motorhoz szükségesek, és egy következő igénylésnél nem kérjük újra.",
-    "alreadySaved": "A profilod már mentve van — módosítsd, ami változott, majd mentsd újra.",
+    "alreadySaved": "A profilod már mentve van, módosítsd, ami változott, majd mentsd újra.",
     "cityLabel": "Város",
     "postalCodeLabel": "Irányítószám",
     "employmentLabel": "Foglalkoztatási státusz",
@@ -402,7 +405,7 @@
     "defaultRateLabel": "Nemteljesítési arány",
     "defaultRateCount": "{defaulted} / {total, plural, one {# befektetés} other {# befektetés}}",
     "riskBreakdown": "Kockázat szerinti megoszlás",
-    "noData": "—",
+    "noData": "–",
     "riskAmount": "{risk}: {amount} €",
     "premiumLocked": "A fejlett teljesítmény-irányítópult (hozam, nemteljesítési arány, kockázat szerinti megoszlás) csak a Prémium csomagban érhető el.",
     "premiumCta": "Fedezd fel a Prémiumot",
@@ -486,5 +489,19 @@
     "previewText": "Egy hitelfelvevő számára, aki a teljes összeget {duration} hónapon át {rate}%-on használná:",
     "previewMonthly": "{monthly} € / hónap",
     "submit": "Ajánlat közzététele"
+  },
+  "CountryFilter": {
+    "label": "Ország",
+    "international": "Nemzetközi (minden ország)",
+    "countryName": {
+      "FR": "Franciaország",
+      "GB": "Egyesült Királyság",
+      "ES": "Spanyolország",
+      "IT": "Olaszország",
+      "HU": "Magyarország",
+      "PT": "Portugália",
+      "DE": "Németország",
+      "NL": "Hollandia"
+    }
   }
 }

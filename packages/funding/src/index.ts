@@ -7,8 +7,8 @@ import { fundingRepo, loansRepo, applicationsRepo, investorListingsRepo } from "
 import { riskLevelFromScore } from "@fintech/risk";
 import { emit, registerHandler } from "@fintech/workflow";
 
-export function listOpportunities() {
-  return fundingRepo.listOpenOpportunities();
+export function listOpportunities(countryCode?: string) {
+  return fundingRepo.listOpenOpportunities(countryCode);
 }
 
 export function getPortfolio(investorId: string) {
@@ -33,8 +33,8 @@ export function publishInvestorListing(
   return investorListingsRepo.create({ investorId, ...input });
 }
 
-export function listOpenInvestorListings() {
-  return investorListingsRepo.listOpen();
+export function listOpenInvestorListings(countryCode?: string) {
+  return investorListingsRepo.listOpen(countryCode);
 }
 
 export function listInvestorListingsFor(investorId: string) {

@@ -92,6 +92,7 @@
     "marketplaceTitle": "Des dossiers déjà vérifiés, prêts à être financés",
     "viewAll": "Tout voir",
     "noOpportunities": "Aucune opportunité ouverte pour l'instant, le premier dossier signé apparaîtra ici automatiquement.",
+    "noOpportunitiesInCountryHome": "Aucune opportunité ouverte dans ton pays pour l'instant, passe en vue internationale sur la marketplace pour voir toutes les offres.",
     "riskLabel": {
       "low": "Faible",
       "moderate": "Modéré",
@@ -114,6 +115,7 @@
     "availableCapitalTitle": "Capitaux disponibles chez nos investisseurs",
     "availableCapitalSubtitle": "Ces investisseurs ont annoncé être prêts à prêter : utile pour estimer tes chances avant de déposer une demande.",
     "noListings": "Aucun investisseur n'a publié de capital disponible pour l'instant.",
+    "noListingsInCountry": "Aucun investisseur n'a publié de capital disponible dans ce pays pour l'instant, essaie la vue internationale.",
     "amountAvailable": "{amount} € disponibles",
     "verifiedBadge": "Investisseur vérifié ✓",
     "listingMeta": "{name} · Taux souhaité {rate}% · Durée préférée {duration} mois",
@@ -130,6 +132,7 @@
     "signedDossiersTitle": "Dossiers déjà signés, ouverts au financement",
     "signedDossiersSubtitle": "Ces dossiers ont déjà été vérifiés (identité, analyse de risque) et leur contrat a été signé.",
     "noOpportunitiesPart1": "Aucune opportunité ouverte pour l'instant, reviens bientôt, ou",
+    "noOpportunitiesInCountry": "Aucune opportunité ouverte dans ce pays pour l'instant, essaie la vue internationale ci-dessus, ou",
     "noOpportunitiesLink": "dépose une demande de financement",
     "riskLabel": {
       "low": "Faible",
@@ -211,8 +214,8 @@
     "noApplicationsLink": "Dépose ta première demande",
     "amountDurationPurpose": "{amount} € · {duration} mois · {purpose}",
     "priorityBadge": "★ Dossier prioritaire",
-    "slaBreached": " — SLA de 48h dépassé, une relance a été envoyée à notre équipe.",
-    "slaDeadline": " — revue garantie avant le {date}.",
+    "slaBreached": ", SLA de 48h dépassé, une relance a été envoyée à notre équipe.",
+    "slaDeadline": ", revue garantie avant le {date}.",
     "priorityButton": "Passer en dossier prioritaire ({fee} €, revue sous 48h)",
     "identityRejectedPrompt": "Pièce refusée, envoie un nouveau document :",
     "identityNeededPrompt": "Envoie une pièce d'identité pour continuer :",
@@ -402,7 +405,7 @@
     "defaultRateLabel": "Taux de défaut",
     "defaultRateCount": "{defaulted} / {total, plural, one {# investissement} other {# investissements}}",
     "riskBreakdown": "Répartition par risque",
-    "noData": "—",
+    "noData": "–",
     "riskAmount": "{risk} : {amount} €",
     "premiumLocked": "Le tableau de bord de performance avancé (rendement, taux de défaut, répartition par risque) est réservé à la formule Premium.",
     "premiumCta": "Découvrir Premium",
@@ -486,5 +489,19 @@
     "previewText": "Pour un emprunteur qui utiliserait la totalité de ce montant sur {duration} mois à {rate}% :",
     "previewMonthly": "{monthly} € / mois",
     "submit": "Publier cette offre"
+  },
+  "CountryFilter": {
+    "label": "Pays",
+    "international": "International (tous pays)",
+    "countryName": {
+      "FR": "France",
+      "GB": "Royaume-Uni",
+      "ES": "Espagne",
+      "IT": "Italie",
+      "HU": "Hongrie",
+      "PT": "Portugal",
+      "DE": "Allemagne",
+      "NL": "Pays-Bas"
+    }
   }
 }

@@ -9,6 +9,7 @@
     "installments": "Prestações a cobrar",
     "riskEngine": "Motor de risco",
     "accountsSuperAdmin": "Contas (superadministrador)",
+    "statistics": "Estatísticas",
     "logout": "Sair"
   },
   "AdminLoginPage": {
@@ -25,7 +26,7 @@
     "empty": "De momento, não há processos pendentes.",
     "amountDuration": "{amount} € · {months} meses",
     "score": "Pontuação: {score}/100",
-    "slaBreached": "SLA de 48h ultrapassado — lembrete enviado",
+    "slaBreached": "SLA de 48h ultrapassado, lembrete enviado",
     "priorityDeadline": "Prioritário, a tratar até {date}",
     "startAnalysis": "Iniciar análise",
     "amountLabel": "Montante (€)",
@@ -140,5 +141,17 @@
     "scoreLabel": "Pontuação",
     "gradeLabel": "Nota",
     "riskLevelLabel": "Nível de risco"
+  },
+  "StatisticsPage": {
+    "kicker": "apps/admin · estatísticas",
+    "title": "Estatísticas de visitas",
+    "description": "Um sistema de acompanhamento de visitas leve e autoalojado, integrado na plataforma. Não é o Matomo: o Matomo exige uma conta Matomo Cloud ou alojamento à parte, a configurar separadamente se desejado.",
+    "last7days": "Últimos 7 dias",
+    "last30days": "Últimos 30 dias",
+    "dailyChart": "Visitas por dia (últimos 30 dias)",
+    "topPages": "Páginas mais vistas",
+    "byLanguage": "Por idioma",
+    "byCountry": "Por país",
+    "noData": "Ainda não há dados."
   }
 }

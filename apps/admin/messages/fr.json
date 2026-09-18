@@ -9,6 +9,7 @@
     "installments": "Échéances à encaisser",
     "riskEngine": "Moteur de risque",
     "accountsSuperAdmin": "Comptes (super admin)",
+    "statistics": "Statistiques",
     "logout": "Déconnexion"
   },
   "AdminLoginPage": {
@@ -25,7 +26,7 @@
     "empty": "Aucun dossier en attente pour l'instant.",
     "amountDuration": "{amount} € · {months} mois",
     "score": "Score : {score}/100",
-    "slaBreached": "SLA 48h dépassé — relance envoyée",
+    "slaBreached": "SLA 48h dépassé, relance envoyée",
     "priorityDeadline": "Prioritaire, à traiter avant le {date}",
     "startAnalysis": "Lancer l'analyse",
     "amountLabel": "Montant (€)",
@@ -140,5 +141,17 @@
     "scoreLabel": "Score",
     "gradeLabel": "Note",
     "riskLevelLabel": "Niveau de risque"
+  },
+  "StatisticsPage": {
+    "kicker": "apps/admin · statistiques",
+    "title": "Statistiques de visite",
+    "description": "Suivi de visite léger et auto-hébergé, propre à la plateforme. Ce n'est pas Matomo : Matomo demande soit un compte Matomo Cloud, soit un hébergement séparé, à mettre en place séparément si besoin.",
+    "last7days": "7 derniers jours",
+    "last30days": "30 derniers jours",
+    "dailyChart": "Visites par jour (30 derniers jours)",
+    "topPages": "Pages les plus vues",
+    "byLanguage": "Par langue",
+    "byCountry": "Par pays",
+    "noData": "Aucune donnée pour l'instant."
   }
 }

@@ -1,0 +1,157 @@
+{
+  "ProtectedLayout": {
+    "backOffice": "Back-office",
+    "cases": "Dossiers",
+    "kyc": "Identiteitsverificatie",
+    "investorVerification": "Verificatie investeerders",
+    "contracts": "Te verifiëren contracten",
+    "introductions": "Introducties",
+    "installments": "Te innen termijnen",
+    "riskEngine": "Risico-engine",
+    "accountsSuperAdmin": "Accounts (super admin)",
+    "statistics": "Statistieken",
+    "logout": "Uitloggen"
+  },
+  "AdminLoginPage": {
+    "kicker": "Lentific · Back-office",
+    "title": "Aanmelden medewerker",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Wachtwoord",
+    "submit": "Inloggen"
+  },
+  "CasesQueuePage": {
+    "kicker": "apps/admin · back-office",
+    "title": "Wachtrij: dossiers",
+    "pendingCount": "{count, plural, one {# dossier in afwachting} other {# dossiers in afwachting}}",
+    "empty": "Op dit moment geen dossiers in afwachting.",
+    "amountDuration": "{amount} € · {months} maanden",
+    "score": "Score: {score}/100",
+    "slaBreached": "SLA van 48u overschreden, herinnering verstuurd",
+    "priorityDeadline": "Prioritair, te behandelen vóór {date}",
+    "startAnalysis": "Analyse starten",
+    "amountLabel": "Bedrag (€)",
+    "durationLabel": "Looptijd (maanden)",
+    "rateLabel": "Tarief (%)",
+    "createOffer": "Aanbod aanmaken en publiceren",
+    "status": {
+      "submitted": "Verzonden",
+      "kycPending": "Identiteit in afwachting",
+      "kycVerified": "Identiteit geverifieerd",
+      "underReview": "In behandeling"
+    }
+  },
+  "AccountsPage": {
+    "kicker": "apps/admin · super administrator",
+    "title": "Accounts",
+    "description": "Volledig overzicht van elk lener- of investeerdersaccount: profiel, documenten, documentverzoeken, introducties.",
+    "empty": "Op dit moment geen accounts.",
+    "verified": "Geverifieerd",
+    "roleBorrower": "Lener",
+    "roleInvestor": "Investeerder"
+  },
+  "AccountDetailPage": {
+    "backToAccounts": "← Terug naar accounts",
+    "kicker": "apps/admin · super administrator",
+    "phoneNotProvided": "telefoonnummer niet opgegeven",
+    "roleBorrower": "Lener",
+    "roleInvestor": "Investeerder",
+    "financialProfileTitle": "Financieel profiel",
+    "financialProfile": "Inkomen {income} € · Uitgaven {expenses} € · Bestaande schulden {debt} €",
+    "investorProfileTitle": "Investeerdersprofiel",
+    "riskTolerance": "Risicotolerantie: {tolerance}",
+    "applicationsTitle": "Financieringsaanvragen",
+    "listingsTitle": "Gepubliceerde kapitaalaanbiedingen",
+    "introductionsTitle": "Introducties",
+    "introductionsDisclaimer": "Herinnering: zodra de introductie betaald is, vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, Lentific is daar niet verantwoordelijk voor.",
+    "introSent": "→ heeft het contact van {name} aangevraagd ({status})",
+    "introReceived": "← contact aangevraagd door {name} ({status})",
+    "documentsTitle": "Ingediende documenten",
+    "noDocuments": "Geen documenten ingediend.",
+    "requestDocumentTitle": "Een document opvragen",
+    "requestDocumentHint": "De accounthouder ziet dit verzoek en kan erop reageren door het document vanuit zijn of haar omgeving te uploaden.",
+    "documentLabel": "Opgevraagd document",
+    "documentPlaceholder": "Bijv. Bewijs van woonplaats",
+    "instructionsLabel": "Toelichting (optioneel)",
+    "instructionsPlaceholder": "Bijv. niet ouder dan 3 maanden, op jouw naam",
+    "sendRequest": "Verzoek versturen",
+    "alreadySentTitle": "Al verzonden verzoeken",
+    "requestStatus": {
+      "pending": "In afwachting",
+      "fulfilled": "Ingediend",
+      "cancelled": "Geannuleerd"
+    }
+  },
+  "ContractsPage": {
+    "kicker": "apps/admin · handmatige ondertekening",
+    "title": "Ondertekende contracten: te verifiëren",
+    "description": "De klant heeft het contract afgedrukt, met de hand ondertekend en geüpload. Controleer het document voordat je bevestigt.",
+    "empty": "Geen contracten in afwachting van verificatie.",
+    "contractLabel": "Contract {id}",
+    "viewSignedContract": "Bekijk het ondertekende contract dat door de klant is geüpload",
+    "pendingVerification": "In afwachting van verificatie",
+    "confirmSignature": "Ondertekening bevestigen",
+    "reject": "Afwijzen"
+  },
+  "InstallmentsPage": {
+    "kicker": "apps/admin · incasso",
+    "title": "Te innen termijnen",
+    "description": "Bevestig een maandelijkse termijn die van de lener is ontvangen: die wordt automatisch herverdeeld onder de investeerders van de lening, naar rato van hun aandeel, en voedt hun prestatiedashboard.",
+    "empty": "Op dit moment geen termijnen in afwachting.",
+    "dueLabel": "{reference} · vervaldatum {date}",
+    "overdue": "Achterstallig",
+    "upcoming": "Aankomend",
+    "confirmPayment": "Ontvangen betaling bevestigen"
+  },
+  "InvestorVerificationPage": {
+    "kicker": "apps/admin · handmatige verificatie",
+    "title": "Verificatie van investeerders: te behandelen",
+    "description": "Bekijk het inkomensbewijs en het bewijs van beschikbaarheid van fondsen, en bevestig of wijs hieronder af.",
+    "empty": "Geen investeerders in afwachting van verificatie.",
+    "pending": "In afwachting",
+    "incomeProofLabel": "Inkomensbewijs:",
+    "fundsProofLabel": "Bewijs van beschikbaarheid van fondsen:",
+    "missing": "ontbreekt",
+    "confirmVerification": "Verificatie bevestigen",
+    "reject": "Afwijzen",
+    "missingDocumentNote": "Er ontbreekt een bewijsstuk: bevestigen is niet mogelijk zolang niet beide zijn ingediend."
+  },
+  "KycPage": {
+    "kicker": "apps/admin · handmatige verificatie",
+    "title": "Identiteitsverificatie: te behandelen",
+    "description": "Neem contact op met de klant om het identiteitsbewijs te controleren, en bevestig of wijs hieronder af.",
+    "empty": "Geen dossiers in afwachting van handmatige verificatie.",
+    "pendingContact": "In afwachting van contact",
+    "confirmVerification": "Verificatie bevestigen",
+    "reject": "Afwijzen",
+    "noApplicationNote": "Dit document is aan geen enkele aanvraag gekoppeld: het is niet mogelijk een dossier te laten vorderen."
+  },
+  "IntroductionsPage": {
+    "kicker": "apps/admin · overzicht",
+    "title": "Geïntroduceerde profielen",
+    "description": "Lijst van paren die hun contactgegevens hebben uitgewisseld via een betaalde introductie. Vanaf dat moment vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, Lentific is daar niet verantwoordelijk voor, alleen het contact is verzorgd.",
+    "empty": "Op dit moment geen betaalde introducties.",
+    "paid": "Betaald",
+    "investorToBorrower": "Investeerder naar lener",
+    "borrowerToInvestor": "Lener naar investeerder"
+  },
+  "RiskEnginePage": {
+    "kicker": "apps/admin · risk",
+    "title": "Risico-engine",
+    "demoDescription": "Voorbeeld berekend door <code1>assessRisk()</code1> uit <code2>@fintech/risk</code2> voor het demodossier (18.500 € / 24 maanden):",
+    "scoreLabel": "Score",
+    "gradeLabel": "Cijfer",
+    "riskLevelLabel": "Risiconiveau"
+  },
+  "StatisticsPage": {
+    "kicker": "apps/admin · statistieken",
+    "title": "Bezoekstatistieken",
+    "description": "Een lichte, zelf gehoste bezoekregistratie, rechtstreeks in het platform ingebouwd. Dit is geen Matomo: Matomo vereist een Matomo Cloud-account of aparte hosting, indien gewenst apart in te stellen.",
+    "last7days": "Laatste 7 dagen",
+    "last30days": "Laatste 30 dagen",
+    "dailyChart": "Bezoeken per dag (laatste 30 dagen)",
+    "topPages": "Meest bekeken pagina's",
+    "byLanguage": "Per taal",
+    "byCountry": "Per land",
+    "noData": "Nog geen gegevens."
+  }
+}

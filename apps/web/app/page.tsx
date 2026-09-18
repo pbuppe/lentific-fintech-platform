@@ -2,6 +2,8 @@ import { Button, Card, StatusPill } from "@fintech/ui";
 import { prisma } from "@fintech/database";
 import { listOpportunities, listOpenInvestorListings } from "@fintech/funding";
 import { getTranslations } from "next-intl/server";
+import { getPreferredCountry } from "../lib/country";
+import { CountryBadge } from "./components/CountryBadge";
 
 const STEP_NUMBERS = ["01", "02", "03", "04", "05"];
 
@@ -18,8 +20,13 @@ export default async function LandingPage() {
   const TRUST_POINTS = t.raw("trustPoints") as { title: string; body: string }[];
   const RISK_LABEL = t.raw("riskLabel") as Record<string, string>;
 
+  // Aperçu marketplace filtré sur le pays déduit de la langue du navigateur
+  // (§ demande produit 2026-09-17) ; les chiffres globaux de la bannière
+  // restent, eux, tous pays confondus (indicateurs de confiance de la
+  // plateforme entière, pas de la seule sélection géographique courante).
+  const country = getPreferredCountry();
   const [opportunities, investorListings, investedAgg, fundedDossiersCount, verifiedInvestorsCount] = await Promise.all([
-    listOpportunities().catch(() => []),
+    listOpportunities(country ?? undefined).catch(() => []),
     listOpenInvestorListings().catch(() => []),
     prisma.investment.aggregate({ _sum: { amount: true } }).catch(() => ({ _sum: { amount: null } })),
     prisma.application.count({ where: { status: { in: ["CONTRACT_SIGNED", "DISBURSED"] } } }).catch(() => 0),
@@ -178,7 +185,7 @@ export default async function LandingPage() {
           {preview.length === 0 ? (
             <Card className="mt-6">
               <p className="text-sm text-ink-soft">
-                {t("noOpportunities")}
+                {country ? t("noOpportunitiesInCountryHome") : t("noOpportunities")}
               </p>
             </Card>
           ) : (
@@ -187,13 +194,17 @@ export default async function LandingPage() {
                 const funded = Number(opp.fundedAmount);
                 const target = Number(opp.targetAmount);
                 const pct = target > 0 ? Math.min(100, Math.round((funded / target) * 100)) : 0;
+                const application = opp.loan.offer.application;
                 return (
                   <Card key={opp.id}>
                     <div className="flex items-center justify-between gap-2">
-                      <h3 className="font-display text-base text-ink">{opp.loan.offer.application.purpose}</h3>
-                      <StatusPill tone={opp.riskLevel === "high" ? "risk" : opp.riskLevel === "low" ? "ok" : "pending"}>
-                        {t("riskPill", { label: RISK_LABEL[opp.riskLevel] ?? opp.riskLevel })}
-                      </StatusPill>
+                      <h3 className="font-display text-base text-ink">{application.purpose}</h3>
+                      <div className="flex items-center gap-1.5">
+                        <CountryBadge countryCode={application.country.code} currencyCode={application.currency.code} />
+                        <StatusPill tone={opp.riskLevel === "high" ? "risk" : opp.riskLevel === "low" ? "ok" : "pending"}>
+                          {t("riskPill", { label: RISK_LABEL[opp.riskLevel] ?? opp.riskLevel })}
+                        </StatusPill>
+                      </div>
                     </div>
                     <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface">
                       <span className="block h-full rounded-full bg-brand" style={{ width: `${pct}%` }} />

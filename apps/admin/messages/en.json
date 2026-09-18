@@ -9,6 +9,7 @@
     "installments": "Installments to collect",
     "riskEngine": "Risk engine",
     "accountsSuperAdmin": "Accounts (super admin)",
+    "statistics": "Statistics",
     "logout": "Log out"
   },
   "AdminLoginPage": {
@@ -25,7 +26,7 @@
     "empty": "No cases pending for now.",
     "amountDuration": "{amount} € · {months} months",
     "score": "Score: {score}/100",
-    "slaBreached": "48h SLA breached — follow-up sent",
+    "slaBreached": "48h SLA breached, follow-up sent",
     "priorityDeadline": "Priority, to be handled by {date}",
     "startAnalysis": "Start analysis",
     "amountLabel": "Amount (€)",
@@ -127,7 +128,7 @@
   "IntroductionsPage": {
     "kicker": "apps/admin · overview",
     "title": "Introduced profiles",
-    "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it — only the contact was provided.",
+    "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it, only the contact was provided.",
     "empty": "No paid introductions yet.",
     "paid": "Paid",
     "investorToBorrower": "Investor to borrower",
@@ -140,5 +141,17 @@
     "scoreLabel": "Score",
     "gradeLabel": "Grade",
     "riskLevelLabel": "Risk level"
+  },
+  "StatisticsPage": {
+    "kicker": "apps/admin · statistics",
+    "title": "Visit statistics",
+    "description": "A lightweight, self-hosted visit tracker built into the platform. This is not Matomo: Matomo needs either a Matomo Cloud account or separate hosting, to be set up separately if wanted.",
+    "last7days": "Last 7 days",
+    "last30days": "Last 30 days",
+    "dailyChart": "Views per day (last 30 days)",
+    "topPages": "Most viewed pages",
+    "byLanguage": "By language",
+    "byCountry": "By country",
+    "noData": "No data yet."
   }
 }

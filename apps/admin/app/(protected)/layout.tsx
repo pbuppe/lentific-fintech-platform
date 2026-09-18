@@ -19,6 +19,10 @@ const NAV_KEYS = [
 // administrateur, pas aux simples agents/admins.
 const SUPER_ADMIN_NAV_KEYS = [{ href: "/comptes", key: "accountsSuperAdmin" }] as const;
 
+// Statistiques de visite (§ demande produit 2026-09-18) : "dans les comptes
+// super admin ... et dans le compte admin", donc admin/super admin, pas agent.
+const ADMIN_AND_ABOVE_NAV_KEYS = [{ href: "/statistiques", key: "statistics" }] as const;
+
 const ADMIN_ROLES = ["AGENT", "ADMIN", "SUPER_ADMIN"];
 
 async function logoutAction() {
@@ -58,6 +62,16 @@ export default async function ProtectedLayout({ children }: { children: React.Re
               {t(item.key)}
             </a>
           ))}
+          {(user.role === "ADMIN" || user.role === "SUPER_ADMIN") &&
+            ADMIN_AND_ABOVE_NAV_KEYS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-md px-2.5 py-2 text-sm font-medium text-white/85 hover:bg-white/10"
+              >
+                {t(item.key)}
+              </a>
+            ))}
           {user.role === "SUPER_ADMIN" &&
             SUPER_ADMIN_NAV_KEYS.map((item) => (
               <a

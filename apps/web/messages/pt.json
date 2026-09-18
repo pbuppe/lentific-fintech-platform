@@ -92,6 +92,7 @@
     "marketplaceTitle": "Processos já verificados, prontos a ser financiados",
     "viewAll": "Ver tudo",
     "noOpportunities": "Nenhuma oportunidade aberta no momento, o primeiro processo assinado aparecerá aqui automaticamente.",
+    "noOpportunitiesInCountryHome": "Nenhuma oportunidade aberta no teu país no momento, muda para a vista internacional na marketplace para ver todas as ofertas.",
     "riskLabel": {
       "low": "Baixo",
       "moderate": "Moderado",
@@ -114,6 +115,7 @@
     "availableCapitalTitle": "Capital disponível junto dos nossos investidores",
     "availableCapitalSubtitle": "Estes investidores anunciaram que estão dispostos a emprestar: útil para estimares as tuas hipóteses antes de submeteres um pedido.",
     "noListings": "Nenhum investidor publicou capital disponível por agora.",
+    "noListingsInCountry": "Nenhum investidor publicou capital disponível neste país por agora, experimenta a vista internacional.",
     "amountAvailable": "{amount} € disponíveis",
     "verifiedBadge": "Investidor verificado ✓",
     "listingMeta": "{name} · Taxa pretendida {rate}% · Duração preferida {duration} meses",
@@ -130,6 +132,7 @@
     "signedDossiersTitle": "Processos já assinados, abertos a financiamento",
     "signedDossiersSubtitle": "Estes processos já foram verificados (identidade, análise de risco) e o respetivo contrato assinado.",
     "noOpportunitiesPart1": "Nenhuma oportunidade aberta no momento, volta em breve, ou",
+    "noOpportunitiesInCountry": "Nenhuma oportunidade aberta neste país no momento, experimenta a vista internacional acima, ou",
     "noOpportunitiesLink": "submete um pedido de financiamento",
     "riskLabel": {
       "low": "Baixo",
@@ -211,8 +214,8 @@
     "noApplicationsLink": "Submete o teu primeiro pedido",
     "amountDurationPurpose": "{amount} € · {duration} meses · {purpose}",
     "priorityBadge": "★ Processo prioritário",
-    "slaBreached": " — SLA de 48h ultrapassado, foi enviado um alerta à nossa equipa.",
-    "slaDeadline": " — revisão garantida antes de {date}.",
+    "slaBreached": ", SLA de 48h ultrapassado, foi enviado um alerta à nossa equipa.",
+    "slaDeadline": ", revisão garantida antes de {date}.",
     "priorityButton": "Passar a processo prioritário ({fee} €, revisão em 48h)",
     "identityRejectedPrompt": "Documento rejeitado, envia um novo:",
     "identityNeededPrompt": "Envia um documento de identificação para continuar:",
@@ -288,7 +291,7 @@
   "BorrowerOnboarding": {
     "title": "O meu perfil financeiro",
     "subtitle": "Esta informação é utilizada pelo motor de risco e não te será pedida novamente num próximo pedido.",
-    "alreadySaved": "O teu perfil já está guardado — atualiza o que mudou e guarda novamente.",
+    "alreadySaved": "O teu perfil já está guardado, atualiza o que mudou e guarda novamente.",
     "cityLabel": "Cidade",
     "postalCodeLabel": "Código postal",
     "employmentLabel": "Situação profissional",
@@ -402,7 +405,7 @@
     "defaultRateLabel": "Taxa de incumprimento",
     "defaultRateCount": "{defaulted} / {total, plural, one {# investimento} other {# investimentos}}",
     "riskBreakdown": "Distribuição por risco",
-    "noData": "—",
+    "noData": "–",
     "riskAmount": "{risk}: {amount} €",
     "premiumLocked": "O painel de desempenho avançado (rendimento, taxa de incumprimento, distribuição por risco) está reservado ao plano Premium.",
     "premiumCta": "Descobrir o Premium",
@@ -486,5 +489,19 @@
     "previewText": "Para um mutuário que utilizasse a totalidade deste montante durante {duration} meses a {rate}%:",
     "previewMonthly": "{monthly} € / mês",
     "submit": "Publicar esta oferta"
+  },
+  "CountryFilter": {
+    "label": "País",
+    "international": "Internacional (todos os países)",
+    "countryName": {
+      "FR": "França",
+      "GB": "Reino Unido",
+      "ES": "Espanha",
+      "IT": "Itália",
+      "HU": "Hungria",
+      "PT": "Portugal",
+      "DE": "Alemanha",
+      "NL": "Países Baixos"
+    }
   }
 }
