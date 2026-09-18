@@ -90,7 +90,11 @@
     "viewSignedContract": "Voir le contrat signé déposé par le client",
     "pendingVerification": "En attente de vérification",
     "confirmSignature": "Confirmer la signature",
-    "reject": "Rejeter"
+    "reject": "Rejeter",
+    "bilateralEligibleTitle": "Prêts éligibles à un contrat bilatéral",
+    "bilateralEligibleDescription": "Ces prêts sont financés par un seul investisseur : tu peux régénérer leur contrat en version bilatérale directe, nommant cet investisseur, à la place du contrat marketplace standard.",
+    "bilateralEligibleMeta": "{borrower} emprunte à {lender}",
+    "regenerateBilateral": "Régénérer en contrat bilatéral"
   },
   "InstallmentsPage": {
     "kicker": "apps/admin · encaissement",

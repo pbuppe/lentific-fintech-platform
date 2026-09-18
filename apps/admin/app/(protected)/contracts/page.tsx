@@ -1,8 +1,9 @@
 import { revalidatePath } from "next/cache";
 import { getTranslations } from "next-intl/server";
-import { prisma } from "@fintech/database";
+import { prisma, fundingRepo } from "@fintech/database";
 import { confirmSignature, rejectSignature } from "@fintech/signatures";
 import { getFileUrl } from "@fintech/documents";
+import { regenerateAsBilateralContract } from "@fintech/contracts";
 import { Card, StatusPill } from "@fintech/ui";
 
 /** Retrouve le scan déposé par le client pour ce contrat (contrat → prêt → offre → demande → document). */
@@ -49,6 +50,13 @@ async function rejectAction(formData: FormData) {
   revalidatePath("/");
 }
 
+async function regenerateBilateralAction(formData: FormData) {
+  "use server";
+  const loanId = formData.get("loanId") as string;
+  await regenerateAsBilateralContract(loanId);
+  revalidatePath("/contracts");
+}
+
 export default async function ContractsQueuePage() {
   const t = await getTranslations("ContractsPage");
   const signatures = await getPendingSignatures().catch(() => []);
@@ -57,6 +65,10 @@ export default async function ContractsQueuePage() {
     const scan = await findUploadedScan(sig.contractId);
     if (scan) scanUrlBySignature.set(sig.id, await getFileUrl(scan.storageKey));
   }
+
+  // § demande produit 2026-09-18 : prêts marketplace financés par un seul
+  // investisseur, éligibles à une régénération en contrat bilatéral direct.
+  const singleInvestorLoans = await fundingRepo.listSingleInvestorOpportunities().catch(() => []);
 
   return (
     <div className="mx-auto max-w-3xl px-8 py-10">
@@ -115,6 +127,36 @@ export default async function ContractsQueuePage() {
           ))
         )}
       </div>
+
+      {singleInvestorLoans.length > 0 && (
+        <div className="mt-10">
+          <h2 className="font-display text-lg font-semibold text-ink">{t("bilateralEligibleTitle")}</h2>
+          <p className="mt-1 max-w-lg text-sm text-ink-soft">{t("bilateralEligibleDescription")}</p>
+          <div className="mt-4 grid gap-3">
+            {singleInvestorLoans.map(({ loan, investor }) => (
+              <Card key={loan.id}>
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="font-display text-base text-ink">{loan.offer.application.reference}</p>
+                    <p className="mt-0.5 text-xs text-ink-faint">
+                      {t("bilateralEligibleMeta", {
+                        borrower: loan.offer.application.borrower.name ?? loan.offer.application.borrower.email,
+                        lender: investor.name ?? investor.email,
+                      })}
+                    </p>
+                  </div>
+                  <form action={regenerateBilateralAction}>
+                    <input type="hidden" name="loanId" value={loan.id} />
+                    <button className="rounded-lg border border-line px-3.5 py-2 text-xs font-semibold text-ink-soft hover:bg-surface-alt">
+                      {t("regenerateBilateral")}
+                    </button>
+                  </form>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

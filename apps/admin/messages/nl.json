@@ -90,7 +90,11 @@
     "viewSignedContract": "Bekijk het ondertekende contract dat door de klant is geüpload",
     "pendingVerification": "In afwachting van verificatie",
     "confirmSignature": "Ondertekening bevestigen",
-    "reject": "Afwijzen"
+    "reject": "Afwijzen",
+    "bilateralEligibleTitle": "Leningen die in aanmerking komen voor een bilateraal contract",
+    "bilateralEligibleDescription": "Deze leningen worden gefinancierd door één enkele investeerder: je kunt het contract opnieuw genereren als een directe bilaterale versie met vermelding van die investeerder, in plaats van het standaard marketplace-contract.",
+    "bilateralEligibleMeta": "{borrower} leent van {lender}",
+    "regenerateBilateral": "Opnieuw genereren als bilateraal contract"
   },
   "InstallmentsPage": {
     "kicker": "apps/admin · incasso",

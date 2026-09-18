@@ -52,6 +52,56 @@ export function listInvestmentsForInvestor(investorId: string) {
   });
 }
 
+// Utilisé pour détecter un prêt financé par un seul investisseur (§ demande
+// produit 2026-09-18 : contrat bilatéral alternatif au contrat marketplace
+// multi-prêteurs standard). include: investor pour connaître son identité
+// sans requête supplémentaire.
+export function listInvestmentsForOpportunity(opportunityId: string) {
+  return prisma.investment.findMany({
+    where: { opportunityId },
+    include: { investor: true },
+    orderBy: { createdAt: "asc" },
+  });
+}
+
+/**
+ * Opportunités financées par exactement un investisseur, contrat déjà émis
+ * (§ demande produit 2026-09-18) : liste affichée au back-office pour
+ * proposer la régénération en contrat bilatéral. Le SQL brut est nécessaire
+ * ici, Prisma ne sait pas filtrer sur "exactement N lignes liées" côté
+ * relation en un seul findMany.
+ */
+export async function listSingleInvestorOpportunities() {
+  const rows = await prisma.$queryRaw<{ opportunityId: string; loanId: string }[]>`
+    SELECT o."id" as "opportunityId", o."loanId" as "loanId"
+    FROM "FundingOpportunity" o
+    JOIN "Loan" l ON l."id" = o."loanId"
+    WHERE l."contractId" IS NOT NULL
+    AND (SELECT count(DISTINCT i."investorId") FROM "Investment" i WHERE i."opportunityId" = o."id") = 1
+  `;
+  if (rows.length === 0) return [];
+
+  const loans = await prisma.loan.findMany({
+    where: { id: { in: rows.map((r) => r.loanId) } },
+    include: { offer: { include: { application: { include: { borrower: true } } } } },
+  });
+  const investorByOpportunity = new Map<string, { id: string; name: string | null; email: string }>();
+  const investments = await prisma.investment.findMany({
+    where: { opportunityId: { in: rows.map((r) => r.opportunityId) } },
+    include: { investor: true },
+  });
+  for (const inv of investments) investorByOpportunity.set(inv.opportunityId, inv.investor);
+
+  return rows
+    .map((r) => {
+      const loan = loans.find((l) => l.id === r.loanId);
+      const investor = investorByOpportunity.get(r.opportunityId);
+      if (!loan || !investor) return null;
+      return { loan, investor };
+    })
+    .filter((x): x is NonNullable<typeof x> => x !== null);
+}
+
 /**
  * Répartit un remboursement reçu sur un prêt entre tous les investisseurs qui
  * l'ont financé, au prorata de leur part du montant financé (financement

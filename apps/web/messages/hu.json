@@ -286,7 +286,9 @@
     "paymentPending": "Fizetés függőben.",
     "receivedHeading": "Kapott kérések",
     "receivedEmpty": "Még senki sem kérte, hogy kapcsolatba lépjen veled.",
-    "receivedRequest": "<name>{nameValue}</name> szeretné felvenni veled a kapcsolatot."
+    "receivedRequest": "<name>{nameValue}</name> szeretné felvenni veled a kapcsolatot.",
+    "formalizeDirectLoan": "Közvetlen kölcsön hivatalossá tétele",
+    "viewDirectLoan": "Közvetlen kölcsön megtekintése"
   },
   "BorrowerOnboarding": {
     "title": "Pénzügyi profilom",
@@ -364,7 +366,9 @@
     "paymentPending": "Fizetés függőben.",
     "receivedTitle": "Kapott kérések",
     "noReceivedRequests": "Még senki nem kérte, hogy felvegye veled a kapcsolatot.",
-    "wantsToConnect": "szeretné felvenni veled a kapcsolatot."
+    "wantsToConnect": "szeretné felvenni veled a kapcsolatot.",
+    "formalizeDirectLoan": "Közvetlen kölcsön hivatalossá tétele",
+    "viewDirectLoan": "Közvetlen kölcsön megtekintése"
   },
   "InvestorNotifications": {
     "eventLabels": {
@@ -503,5 +507,19 @@
       "DE": "Németország",
       "NL": "Hollandia"
     }
+  },
+  "DirectLoanFormalize": {
+    "pageTitle": "Közvetlen kölcsön hivatalossá tétele",
+    "notFound": "A kapcsolatba hozás nem található.",
+    "notPaidYet": "Ezt a kapcsolatba hozást előbb ki kell fizetni.",
+    "intro": "Kapcsolatba hoztak {name} személlyel. Add meg a közösen megbeszélt kölcsönfeltételeket a szerződés létrehozásához.",
+    "alreadyFormalized": "Már hivatalossá tettetek egy kölcsönt {name} személlyel.",
+    "agreementSummary": "{amount} € {duration} hónapon át, {rate} %-os kamattal.",
+    "downloadContract": "Szerződés letöltése",
+    "amountLabel": "Összeg (€)",
+    "durationLabel": "Futamidő (hónap)",
+    "rateLabel": "Éves kamat (%)",
+    "disclaimer": "Ez a szerződés egy automatikusan generált minta. A Lentific nem részese a kölcsönnek, és nem vesz részt a törlesztésében: aláírás előtt ellenőrizd.",
+    "submit": "Szerződés létrehozása"
   }
 }

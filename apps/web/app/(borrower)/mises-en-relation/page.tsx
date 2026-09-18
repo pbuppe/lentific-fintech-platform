@@ -40,10 +40,15 @@ export default async function BorrowerIntroductionsPage() {
                 )}
               </p>
               {r.status === "PAID" ? (
-                <p className="mt-1 text-sm text-success">
-                  {t("contact", { email: r.targetUser.email })}
-                  {r.targetUser.phone ? ` · ${r.targetUser.phone}` : ""}
-                </p>
+                <>
+                  <p className="mt-1 text-sm text-success">
+                    {t("contact", { email: r.targetUser.email })}
+                    {r.targetUser.phone ? ` · ${r.targetUser.phone}` : ""}
+                  </p>
+                  <a href={`/mises-en-relation/${r.id}`} className="mt-2 inline-block text-sm text-brand-ink underline">
+                    {r.directLoanAgreement ? t("viewDirectLoan") : t("formalizeDirectLoan")}
+                  </a>
+                </>
               ) : (
                 <p className="mt-1 text-xs text-ink-faint">{t("paymentPending")}</p>
               )}
@@ -66,10 +71,15 @@ export default async function BorrowerIntroductionsPage() {
                 })}
               </p>
               {r.status === "PAID" && (
-                <p className="mt-1 text-sm text-success">
-                  {t("contact", { email: r.requester.email })}
-                  {r.requester.phone ? ` · ${r.requester.phone}` : ""}
-                </p>
+                <>
+                  <p className="mt-1 text-sm text-success">
+                    {t("contact", { email: r.requester.email })}
+                    {r.requester.phone ? ` · ${r.requester.phone}` : ""}
+                  </p>
+                  <a href={`/mises-en-relation/${r.id}`} className="mt-2 inline-block text-sm text-brand-ink underline">
+                    {r.directLoanAgreement ? t("viewDirectLoan") : t("formalizeDirectLoan")}
+                  </a>
+                </>
               )}
             </Card>
           ))}

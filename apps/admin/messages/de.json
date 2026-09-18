@@ -90,7 +90,11 @@
     "viewSignedContract": "Den vom Kunden hochgeladenen unterschriebenen Vertrag ansehen",
     "pendingVerification": "Prüfung ausstehend",
     "confirmSignature": "Unterschrift bestätigen",
-    "reject": "Ablehnen"
+    "reject": "Ablehnen",
+    "bilateralEligibleTitle": "Für einen bilateralen Vertrag geeignete Darlehen",
+    "bilateralEligibleDescription": "Diese Darlehen werden von einem einzigen Investor finanziert: Sie können den Vertrag als direkte bilaterale Version mit Nennung dieses Investors neu erstellen, anstelle des üblichen Marketplace-Vertrags.",
+    "bilateralEligibleMeta": "{borrower} leiht sich Geld von {lender}",
+    "regenerateBilateral": "Als bilateralen Vertrag neu erstellen"
   },
   "InstallmentsPage": {
     "kicker": "apps/admin · Inkasso",

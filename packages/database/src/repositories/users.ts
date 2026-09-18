@@ -60,6 +60,14 @@ export function setPassword(userId: string, passwordHash: string) {
   return prisma.user.update({ where: { id: userId }, data: { passwordHash } });
 }
 
+// Mémorise la langue active au moment de l'inscription ou d'un changement
+// via le sélecteur de langue, pour que la génération de contrat (déclenchée
+// par un événement serveur, pas par une page rendue) sache dans quelle
+// langue produire le document (§ demande produit 2026-09-18).
+export function setPreferredLocale(userId: string, locale: string) {
+  return prisma.user.update({ where: { id: userId }, data: { preferredLocale: locale } });
+}
+
 export function upsertBorrowerProfile(
   userId: string,
   data: { address: object; employment: object; income: number; expenses: number; existingDebt: number }

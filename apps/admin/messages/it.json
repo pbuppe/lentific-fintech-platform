@@ -90,7 +90,11 @@
     "viewSignedContract": "Visualizza il contratto firmato caricato dal cliente",
     "pendingVerification": "In attesa di verifica",
     "confirmSignature": "Conferma la firma",
-    "reject": "Rifiuta"
+    "reject": "Rifiuta",
+    "bilateralEligibleTitle": "Prestiti idonei a un contratto bilaterale",
+    "bilateralEligibleDescription": "Questi prestiti sono finanziati da un solo investitore: puoi rigenerare il loro contratto in versione bilaterale diretta, nominando quell'investitore, al posto del contratto marketplace standard.",
+    "bilateralEligibleMeta": "{borrower} prende in prestito da {lender}",
+    "regenerateBilateral": "Rigenera come contratto bilaterale"
   },
   "InstallmentsPage": {
     "kicker": "apps/admin · incasso",

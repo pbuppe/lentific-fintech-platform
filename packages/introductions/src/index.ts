@@ -7,9 +7,10 @@
  * Paiement simulé via @fintech/payments (mockPaymentProvider), comme le
  * reste de la plateforme, aucun prestataire réel branché pour l'instant.
  */
-import { introductionsRepo, subscriptionsRepo, type IntroductionTargetType } from "@fintech/database";
+import { introductionsRepo, subscriptionsRepo, directLoanAgreementsRepo, type IntroductionTargetType } from "@fintech/database";
 import { recordFee } from "@fintech/payments";
 import { emit } from "@fintech/workflow";
+import { generateDirectLoanContract } from "@fintech/contracts";
 
 const DEFAULT_FEE = 15;
 
@@ -73,3 +74,46 @@ export function findExisting(requesterId: string, targetType: IntroductionTarget
 }
 
 export const INTRODUCTION_FEE = DEFAULT_FEE;
+
+/**
+ * Trigger 1 du contrat bilatéral direct (§ demande produit 2026-09-18) :
+ * formalise en prêt, avec contrat généré immédiatement, un accord conclu
+ * entre les deux parties d'une mise en relation déjà payée. Déterminé par le
+ * rôle (BORROWER/INVESTOR) plutôt que par qui a demandé le contact, une
+ * mise en relation peut être initiée dans les deux sens.
+ */
+export async function formalizeDirectLoan(input: {
+  introductionRequestId: string;
+  requestingUserId: string; // qui soumet le formulaire, pour vérifier qu'il fait bien partie de la mise en relation
+  amount: number;
+  durationMonths: number;
+  rate: number;
+}) {
+  const introduction = await introductionsRepo.findById(input.introductionRequestId);
+  if (!introduction) throw new Error("Mise en relation introuvable.");
+  if (introduction.status !== "PAID") {
+    throw new Error("La mise en relation doit être payée avant de formaliser un prêt.");
+  }
+  if (introduction.requesterId !== input.requestingUserId && introduction.targetUserId !== input.requestingUserId) {
+    throw new Error("Cette mise en relation ne vous concerne pas.");
+  }
+  if (introduction.directLoanAgreement) {
+    throw new Error("Un prêt a déjà été formalisé pour cette mise en relation.");
+  }
+
+  const requesterIsBorrower = introduction.requester.role === "BORROWER";
+  const borrowerId = requesterIsBorrower ? introduction.requesterId : introduction.targetUserId;
+  const lenderId = requesterIsBorrower ? introduction.targetUserId : introduction.requesterId;
+
+  const agreement = await directLoanAgreementsRepo.create({
+    introductionRequestId: input.introductionRequestId,
+    borrowerId,
+    lenderId,
+    amount: input.amount,
+    durationMonths: input.durationMonths,
+    rate: input.rate,
+  });
+
+  await generateDirectLoanContract(agreement.id);
+  return agreement;
+}

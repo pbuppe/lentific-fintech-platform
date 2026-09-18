@@ -90,7 +90,11 @@
     "viewSignedContract": "Ver o contrato assinado carregado pelo cliente",
     "pendingVerification": "Pendente de verificação",
     "confirmSignature": "Confirmar a assinatura",
-    "reject": "Rejeitar"
+    "reject": "Rejeitar",
+    "bilateralEligibleTitle": "Empréstimos elegíveis para um contrato bilateral",
+    "bilateralEligibleDescription": "Estes empréstimos são financiados por um único investidor: podes gerar novamente o contrato numa versão bilateral direta, nomeando esse investidor, em vez do contrato marketplace padrão.",
+    "bilateralEligibleMeta": "{borrower} pede emprestado a {lender}",
+    "regenerateBilateral": "Gerar novamente como contrato bilateral"
   },
   "InstallmentsPage": {
     "kicker": "apps/admin · cobrança",

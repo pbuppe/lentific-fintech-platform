@@ -286,7 +286,9 @@
     "paymentPending": "Pagamento pendente.",
     "receivedHeading": "Pedidos recebidos",
     "receivedEmpty": "Ainda ninguém pediu para entrar em contacto contigo.",
-    "receivedRequest": "<name>{nameValue}</name> quer entrar em contacto contigo."
+    "receivedRequest": "<name>{nameValue}</name> quer entrar em contacto contigo.",
+    "formalizeDirectLoan": "Formalizar um empréstimo direto",
+    "viewDirectLoan": "Ver o empréstimo direto"
   },
   "BorrowerOnboarding": {
     "title": "O meu perfil financeiro",
@@ -364,7 +366,9 @@
     "paymentPending": "Pagamento pendente.",
     "receivedTitle": "Pedidos recebidos",
     "noReceivedRequests": "Ainda ninguém pediu para entrar em contacto contigo.",
-    "wantsToConnect": "deseja entrar em contacto contigo."
+    "wantsToConnect": "deseja entrar em contacto contigo.",
+    "formalizeDirectLoan": "Formalizar um empréstimo direto",
+    "viewDirectLoan": "Ver o empréstimo direto"
   },
   "InvestorNotifications": {
     "eventLabels": {
@@ -503,5 +507,19 @@
       "DE": "Alemanha",
       "NL": "Países Baixos"
     }
+  },
+  "DirectLoanFormalize": {
+    "pageTitle": "Formalizar um empréstimo direto",
+    "notFound": "Apresentação não encontrada.",
+    "notPaidYet": "Esta apresentação tem de ser paga primeiro.",
+    "intro": "Foste apresentado a {name}. Indica as condições do empréstimo combinadas entre vocês para gerar um contrato.",
+    "alreadyFormalized": "Já foi formalizado um empréstimo com {name}.",
+    "agreementSummary": "{amount} € ao longo de {duration} meses, taxa {rate} %.",
+    "downloadContract": "Transferir o contrato",
+    "amountLabel": "Montante (€)",
+    "durationLabel": "Duração (meses)",
+    "rateLabel": "Taxa anual (%)",
+    "disclaimer": "Este contrato é um modelo gerado automaticamente. A Lentific não é parte no empréstimo nem intervém no seu reembolso: revê-o antes de assinar.",
+    "submit": "Gerar o contrato"
   }
 }

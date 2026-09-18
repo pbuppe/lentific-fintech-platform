@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { getTranslations } from "next-intl/server";
-import { prisma } from "@fintech/database";
+import { getTranslations, getLocale } from "next-intl/server";
+import { prisma, usersRepo } from "@fintech/database";
 import { signUp, SESSION_COOKIE_NAME, AuthError } from "@fintech/auth";
 import { Card } from "@fintech/ui";
 
@@ -15,7 +15,13 @@ async function signupAction(formData: FormData) {
 
   try {
     const france = await prisma.country.findUniqueOrThrow({ where: { code: "FR" } });
-    const { token } = await signUp({ email, password, name, role, countryId: france.id });
+    const { token, user } = await signUp({ email, password, name, role, countryId: france.id });
+
+    // Langue active à l'inscription, mémorisée pour que tout document généré
+    // plus tard (ex. contrat) parte de cette préférence par défaut plutôt que
+    // du français (§ demande produit 2026-09-18).
+    const locale = await getLocale();
+    await usersRepo.setPreferredLocale(user.id, locale);
 
     cookies().set(SESSION_COOKIE_NAME, token, {
       httpOnly: true,

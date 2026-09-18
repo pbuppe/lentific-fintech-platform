@@ -286,7 +286,9 @@
     "paymentPending": "Betaling in afwachting.",
     "receivedHeading": "Ontvangen verzoeken",
     "receivedEmpty": "Nog niemand heeft gevraagd om contact met je op te nemen.",
-    "receivedRequest": "<name>{nameValue}</name> wil graag met je in contact komen."
+    "receivedRequest": "<name>{nameValue}</name> wil graag met je in contact komen.",
+    "formalizeDirectLoan": "Directe lening formaliseren",
+    "viewDirectLoan": "Directe lening bekijken"
   },
   "BorrowerOnboarding": {
     "title": "Mijn financieel profiel",
@@ -364,7 +366,9 @@
     "paymentPending": "Betaling in afwachting.",
     "receivedTitle": "Ontvangen verzoeken",
     "noReceivedRequests": "Nog niemand heeft gevraagd om contact met je op te nemen.",
-    "wantsToConnect": "wil graag met je in contact komen."
+    "wantsToConnect": "wil graag met je in contact komen.",
+    "formalizeDirectLoan": "Directe lening formaliseren",
+    "viewDirectLoan": "Directe lening bekijken"
   },
   "InvestorNotifications": {
     "eventLabels": {
@@ -503,5 +507,19 @@
       "DE": "Duitsland",
       "NL": "Nederland"
     }
+  },
+  "DirectLoanFormalize": {
+    "pageTitle": "Directe lening formaliseren",
+    "notFound": "Kennismaking niet gevonden.",
+    "notPaidYet": "Deze kennismaking moet eerst worden betaald.",
+    "intro": "Je bent in contact gebracht met {name}. Vul de leningsvoorwaarden in die jullie samen zijn overeengekomen om een contract te genereren.",
+    "alreadyFormalized": "Er is al een lening geformaliseerd met {name}.",
+    "agreementSummary": "{amount} € over {duration} maanden, rente {rate} %.",
+    "downloadContract": "Contract downloaden",
+    "amountLabel": "Bedrag (€)",
+    "durationLabel": "Looptijd (maanden)",
+    "rateLabel": "Jaarlijkse rente (%)",
+    "disclaimer": "Dit contract is een automatisch gegenereerd model. Lentific is geen partij bij de lening en komt niet tussen bij de terugbetaling: controleer het voor ondertekening.",
+    "submit": "Contract genereren"
   }
 }

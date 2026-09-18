@@ -15,3 +15,11 @@ export function findByLoanId(loanId: string) {
 export function attachSignature(contractId: string, signatureId: string) {
   return prisma.contract.update({ where: { id: contractId }, data: { signature: { connect: { id: signatureId } } } });
 }
+
+// Régénération en contrat bilatéral quand un prêt marketplace se trouve
+// financé par un seul investisseur (§ demande produit 2026-09-18) : remplace
+// le PDF standard multi-prêteurs par la version bilatérale, mêmes id/loanId,
+// juste un nouveau storageKey/version.
+export function updateStorageKey(contractId: string, storageKey: string, templateVersion: string) {
+  return prisma.contract.update({ where: { id: contractId }, data: { storageKey, templateVersion } });
+}

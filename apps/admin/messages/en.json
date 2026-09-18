@@ -90,7 +90,11 @@
     "viewSignedContract": "View the signed contract uploaded by the client",
     "pendingVerification": "Pending verification",
     "confirmSignature": "Confirm signature",
-    "reject": "Reject"
+    "reject": "Reject",
+    "bilateralEligibleTitle": "Loans eligible for a bilateral contract",
+    "bilateralEligibleDescription": "These loans are funded by a single investor: you can regenerate their contract as a direct bilateral version naming that investor, instead of the standard marketplace contract.",
+    "bilateralEligibleMeta": "{borrower} borrows from {lender}",
+    "regenerateBilateral": "Regenerate as bilateral contract"
   },
   "InstallmentsPage": {
     "kicker": "apps/admin · collections",

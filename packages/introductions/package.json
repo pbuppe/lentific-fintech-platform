@@ -7,7 +7,8 @@
   "dependencies": {
     "@fintech/database": "workspace:*",
     "@fintech/payments": "workspace:*",
-    "@fintech/workflow": "workspace:*"
+    "@fintech/workflow": "workspace:*",
+    "@fintech/contracts": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.6.0"

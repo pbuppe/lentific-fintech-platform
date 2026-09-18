@@ -90,7 +90,11 @@
     "viewSignedContract": "Az ügyfél által feltöltött aláírt szerződés megtekintése",
     "pendingVerification": "Ellenőrzésre vár",
     "confirmSignature": "Aláírás megerősítése",
-    "reject": "Elutasítás"
+    "reject": "Elutasítás",
+    "bilateralEligibleTitle": "Kétoldalú szerződésre jogosult kölcsönök",
+    "bilateralEligibleDescription": "Ezeket a kölcsönöket egyetlen befektető finanszírozza: a szerződésüket újragenerálhatod közvetlen kétoldalú változatként, megnevezve ezt a befektetőt, a szokásos piactéri szerződés helyett.",
+    "bilateralEligibleMeta": "{borrower} kölcsönt vesz fel {lender} személytől",
+    "regenerateBilateral": "Újragenerálás kétoldalú szerződésként"
   },
   "InstallmentsPage": {
     "kicker": "apps/admin · beszedés",

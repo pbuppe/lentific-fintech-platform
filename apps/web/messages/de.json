@@ -286,7 +286,9 @@
     "paymentPending": "Zahlung ausstehend.",
     "receivedHeading": "Erhaltene Anfragen",
     "receivedEmpty": "Noch niemand hat um Kontakt mit Ihnen gebeten.",
-    "receivedRequest": "<name>{nameValue}</name> möchte mit Ihnen in Kontakt treten."
+    "receivedRequest": "<name>{nameValue}</name> möchte mit Ihnen in Kontakt treten.",
+    "formalizeDirectLoan": "Direktdarlehen formalisieren",
+    "viewDirectLoan": "Direktdarlehen ansehen"
   },
   "BorrowerOnboarding": {
     "title": "Mein Finanzprofil",
@@ -364,7 +366,9 @@
     "paymentPending": "Zahlung ausstehend.",
     "receivedTitle": "Erhaltene Anfragen",
     "noReceivedRequests": "Noch niemand hat um Kontakt mit Ihnen gebeten.",
-    "wantsToConnect": "möchte mit Ihnen in Kontakt treten."
+    "wantsToConnect": "möchte mit Ihnen in Kontakt treten.",
+    "formalizeDirectLoan": "Direktdarlehen formalisieren",
+    "viewDirectLoan": "Direktdarlehen ansehen"
   },
   "InvestorNotifications": {
     "eventLabels": {
@@ -503,5 +507,19 @@
       "DE": "Deutschland",
       "NL": "Niederlande"
     }
+  },
+  "DirectLoanFormalize": {
+    "pageTitle": "Direktdarlehen formalisieren",
+    "notFound": "Kontaktvermittlung nicht gefunden.",
+    "notPaidYet": "Diese Kontaktvermittlung muss zuerst bezahlt werden.",
+    "intro": "Sie wurden mit {name} in Kontakt gebracht. Geben Sie die gemeinsam vereinbarten Darlehensbedingungen ein, um einen Vertrag zu erstellen.",
+    "alreadyFormalized": "Mit {name} wurde bereits ein Darlehen formalisiert.",
+    "agreementSummary": "{amount} € über {duration} Monate, Zinssatz {rate} %.",
+    "downloadContract": "Vertrag herunterladen",
+    "amountLabel": "Betrag (€)",
+    "durationLabel": "Laufzeit (Monate)",
+    "rateLabel": "Jahreszins (%)",
+    "disclaimer": "Dieser Vertrag ist eine automatisch erstellte Vorlage. Lentific ist nicht Vertragspartei des Darlehens und ist nicht an dessen Rückzahlung beteiligt: prüfen Sie ihn vor der Unterzeichnung.",
+    "submit": "Vertrag erstellen"
   }
 }

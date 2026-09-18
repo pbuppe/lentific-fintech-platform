@@ -35,6 +35,13 @@ model User {
   countryId        String
   role             Role
   tenantId         String? // null en V1 mono-tenant, utilisé au passage SaaS B2B (§29)
+  // Dernière langue d'interface utilisée en étant connecté (§ demande produit
+  // 2026-09-18 : le contrat doit se générer dans la langue du visiteur, mais
+  // sa génération est déclenchée par un événement serveur, pas par une page
+  // en cours de rendu ; il faut donc la mémoriser plutôt que la déduire du
+  // cookie au moment T). Posée par LanguageSwitcher quand une session existe,
+  // et à l'inscription. Absente => français par défaut.
+  preferredLocale  String?
   borrowerProfile  BorrowerProfile?
   investorProfile  InvestorProfile?
   applications     Application[]
@@ -51,6 +58,8 @@ model User {
   supportTickets   SupportTicket[]
   auditLogs        AuditLog[]
   sessions         Session[]
+  directLoansAsBorrower DirectLoanAgreement[] @relation("DirectLoanBorrower")
+  directLoansAsLender   DirectLoanAgreement[] @relation("DirectLoanLender")
   createdAt        DateTime @default(now())
 
   country Country @relation(fields: [countryId], references: [id])
@@ -275,9 +284,50 @@ model IntroductionRequest {
 
   requester  User @relation("IntroductionRequester", fields: [requesterId], references: [id])
   targetUser User @relation("IntroductionTarget", fields: [targetUserId], references: [id])
+  directLoanAgreement DirectLoanAgreement?
 
   @@index([requesterId])
   @@index([targetUserId])
+}
+
+enum DirectLoanAgreementStatus {
+  DRAFT              // montant/durée/taux saisis, contrat pas encore généré
+  CONTRACT_GENERATED // PDF prêt, en attente de signature manuelle (même principe que Signature, §24)
+  SIGNED
+}
+
+// Prêt bilatéral direct entre un emprunteur et le prêteur particulier précis
+// avec qui il a été mis en relation (§ demande produit 2026-09-18), par
+// opposition au parcours marketplace (Application -> Offer -> Loan,
+// financement fractionné possible, Lentific "intermédiaire"). Rattaché à une
+// IntroductionRequest déjà payée : ce n'est pas un nouveau canal de mise en
+// relation, seulement la formalisation de ce qui, jusqu'ici, se passait
+// entièrement hors plateforme une fois le contact échangé. Volontairement
+// indépendant de Contract/Signature (pensés pour Loan, financement
+// fractionné, risque, KYC) : ce parcours n'a ni scoring ni financement
+// fractionné, le forcer dans ce modèle aurait ajouté de la complexité sans
+// bénéfice.
+model DirectLoanAgreement {
+  id                     String                    @id @default(cuid())
+  introductionRequestId  String                    @unique
+  borrowerId             String
+  lenderId               String
+  amount                 Decimal
+  durationMonths         Int
+  rate                   Decimal
+  status                 DirectLoanAgreementStatus @default(DRAFT)
+  contractStorageKey     String?
+  contractGeneratedAt    DateTime?
+  signatureStorageKey    String?
+  signedAt               DateTime?
+  createdAt              DateTime                  @default(now())
+
+  introductionRequest IntroductionRequest @relation(fields: [introductionRequestId], references: [id])
+  borrower            User                 @relation("DirectLoanBorrower", fields: [borrowerId], references: [id])
+  lender              User                 @relation("DirectLoanLender", fields: [lenderId], references: [id])
+
+  @@index([borrowerId])
+  @@index([lenderId])
 }
 
 enum InvestmentStatus {

@@ -286,7 +286,9 @@
     "paymentPending": "Pagamento in attesa.",
     "receivedHeading": "Richieste ricevute",
     "receivedEmpty": "Nessuno ti ha ancora chiesto di essere contattato.",
-    "receivedRequest": "<name>{nameValue}</name> desidera essere messo in contatto con te."
+    "receivedRequest": "<name>{nameValue}</name> desidera essere messo in contatto con te.",
+    "formalizeDirectLoan": "Formalizza un prestito diretto",
+    "viewDirectLoan": "Vedi il prestito diretto"
   },
   "BorrowerOnboarding": {
     "title": "Il mio profilo finanziario",
@@ -364,7 +366,9 @@
     "paymentPending": "Pagamento in attesa.",
     "receivedTitle": "Richieste ricevute",
     "noReceivedRequests": "Nessuno ti ha ancora chiesto di essere contattato.",
-    "wantsToConnect": "desidera essere messo in contatto con te."
+    "wantsToConnect": "desidera essere messo in contatto con te.",
+    "formalizeDirectLoan": "Formalizza un prestito diretto",
+    "viewDirectLoan": "Vedi il prestito diretto"
   },
   "InvestorNotifications": {
     "eventLabels": {
@@ -503,5 +507,19 @@
       "DE": "Germania",
       "NL": "Paesi Bassi"
     }
+  },
+  "DirectLoanFormalize": {
+    "pageTitle": "Formalizza un prestito diretto",
+    "notFound": "Messa in contatto non trovata.",
+    "notPaidYet": "Questa messa in contatto deve prima essere pagata.",
+    "intro": "Sei stato messo in contatto con {name}. Inserisci le condizioni del prestito concordate insieme per generare un contratto.",
+    "alreadyFormalized": "È già stato formalizzato un prestito con {name}.",
+    "agreementSummary": "{amount} € su {duration} mesi, tasso {rate} %.",
+    "downloadContract": "Scarica il contratto",
+    "amountLabel": "Importo (€)",
+    "durationLabel": "Durata (mesi)",
+    "rateLabel": "Tasso annuo (%)",
+    "disclaimer": "Questo contratto è un modello generato automaticamente. Lentific non è parte del prestito e non interviene nel rimborso: verificalo prima di firmare.",
+    "submit": "Genera il contratto"
   }
 }

@@ -286,7 +286,9 @@
     "paymentPending": "Payment pending.",
     "receivedHeading": "Requests received",
     "receivedEmpty": "No one has asked to contact you yet.",
-    "receivedRequest": "<name>{nameValue}</name> wants to be introduced to you."
+    "receivedRequest": "<name>{nameValue}</name> wants to be introduced to you.",
+    "formalizeDirectLoan": "Formalize a direct loan",
+    "viewDirectLoan": "View the direct loan"
   },
   "BorrowerOnboarding": {
     "title": "My financial profile",
@@ -364,7 +366,9 @@
     "paymentPending": "Payment pending.",
     "receivedTitle": "Requests received",
     "noReceivedRequests": "No one has asked to contact you yet.",
-    "wantsToConnect": "wants to be introduced to you."
+    "wantsToConnect": "wants to be introduced to you.",
+    "formalizeDirectLoan": "Formalize a direct loan",
+    "viewDirectLoan": "View the direct loan"
   },
   "InvestorNotifications": {
     "eventLabels": {
@@ -503,5 +507,19 @@
       "DE": "Germany",
       "NL": "Netherlands"
     }
+  },
+  "DirectLoanFormalize": {
+    "pageTitle": "Formalize a direct loan",
+    "notFound": "Introduction not found.",
+    "notPaidYet": "This introduction must be paid first.",
+    "intro": "You've been introduced to {name}. Enter the loan terms you agreed on together to generate a contract.",
+    "alreadyFormalized": "A loan has already been formalized with {name}.",
+    "agreementSummary": "€{amount} over {duration} months, rate {rate}%.",
+    "downloadContract": "Download the contract",
+    "amountLabel": "Amount (€)",
+    "durationLabel": "Duration (months)",
+    "rateLabel": "Annual rate (%)",
+    "disclaimer": "This contract is an automatically generated template. Lentific is not a party to the loan and does not handle its repayment: review it before signing.",
+    "submit": "Generate the contract"
   }
 }

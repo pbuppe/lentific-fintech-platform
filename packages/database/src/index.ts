@@ -39,6 +39,7 @@ export type {
   Message,
   SupportTicket,
   AuditLog,
+  DirectLoanAgreement,
 } from "@prisma/client";
 
 export {
@@ -56,6 +57,7 @@ export {
   InvestorVerificationStatus,
   DocumentRequestStatus,
   SubscriptionStatus,
+  DirectLoanAgreementStatus,
 } from "@prisma/client";
 
 export * as applicationsRepo from "./repositories/applications";
@@ -79,3 +81,4 @@ export * as auditLogsRepo from "./repositories/auditLogs";
 export * as countriesRepo from "./repositories/countries";
 export * as pageViewsRepo from "./repositories/pageViews";
 export type { StatsRange } from "./repositories/pageViews";
+export * as directLoanAgreementsRepo from "./repositories/directLoanAgreements";

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import { SUPPORTED_LOCALES, LOCALE_LABELS } from "../../i18n/locales";
+import { setPreferredLocale } from "../../lib/actions/setPreferredLocale";
 
 export function LanguageSwitcher() {
   const locale = useLocale();
@@ -10,6 +11,7 @@ export function LanguageSwitcher() {
 
   function onChange(next: string) {
     document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000`;
+    setPreferredLocale(next).catch(() => {});
     router.refresh();
   }
 

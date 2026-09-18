@@ -14,7 +14,7 @@ export function create(data: {
 export function findById(id: string) {
   return prisma.introductionRequest.findUnique({
     where: { id },
-    include: { requester: true, targetUser: true },
+    include: { requester: true, targetUser: true, directLoanAgreement: true },
   });
 }
 
@@ -28,7 +28,7 @@ export function setPaid(id: string) {
 export function listSentBy(userId: string) {
   return prisma.introductionRequest.findMany({
     where: { requesterId: userId },
-    include: { targetUser: { include: { investorProfile: true } } },
+    include: { targetUser: { include: { investorProfile: true } }, directLoanAgreement: true },
     orderBy: { createdAt: "desc" },
   });
 }
@@ -36,7 +36,7 @@ export function listSentBy(userId: string) {
 export function listReceivedBy(userId: string) {
   return prisma.introductionRequest.findMany({
     where: { targetUserId: userId },
-    include: { requester: { include: { investorProfile: true } } },
+    include: { requester: { include: { investorProfile: true } }, directLoanAgreement: true },
     orderBy: { createdAt: "desc" },
   });
 }
