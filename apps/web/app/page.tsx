@@ -4,11 +4,14 @@ import { listOpportunities, listOpenInvestorListings } from "@fintech/funding";
 import { getTranslations } from "next-intl/server";
 import { getPreferredCountry } from "../lib/country";
 import { CountryBadge } from "./components/CountryBadge";
+import { HeroEstimator } from "./components/HeroEstimator";
+import { ServicesSection, AboutSection, FaqSection, ContactSection, SiteFooter } from "./components/BrokerSections";
 
 const STEP_NUMBERS = ["01", "02", "03", "04", "05"];
 
-export default async function LandingPage() {
+export default async function LandingPage({ searchParams }: { searchParams: { contact?: string } }) {
   const t = await getTranslations("LandingPage");
+  const tb = await getTranslations("HomeBroker.hero");
   const BORROWER_STEPS = (t.raw("borrowerSteps") as { title: string; body: string }[]).map((s, i) => ({
     n: STEP_NUMBERS[i],
     ...s,
@@ -17,7 +20,6 @@ export default async function LandingPage() {
     n: STEP_NUMBERS[i],
     ...s,
   }));
-  const TRUST_POINTS = t.raw("trustPoints") as { title: string; body: string }[];
   const RISK_LABEL = t.raw("riskLabel") as Record<string, string>;
 
   // Aperçu marketplace filtré sur le pays déduit de la langue du navigateur
@@ -38,30 +40,29 @@ export default async function LandingPage() {
 
   return (
     <main>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-brand to-brand-ink px-6 py-16 text-white sm:px-12 sm:py-20">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
-        <div className="relative mx-auto max-w-3xl">
-          <p className="mb-4 font-mono text-xs uppercase tracking-widest text-white/70">
-            {t("eyebrow")}
-          </p>
-          <h1 className="font-display text-4xl font-semibold text-balance sm:text-5xl">
-            {t("heroTitlePart1")} <span className="text-[#FF9AA2]">{t("heroTitleHighlight")}</span>{t("heroTitlePart2")}
-          </h1>
-          <p className="mt-4 max-w-xl text-white/80">
-            {t("heroSubtitle")}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button variant="primary" href="/signup?role=BORROWER">
-              {t("ctaApply")}
-            </Button>
-            <Button variant="ghost" href="/marketplace" className="border-white/30 text-white hover:bg-white/10">
-              {t("ctaMarketplace")}
-            </Button>
+      {/* Hero (maquette SODIVA : message courtier + estimation de mensualité) */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand to-brand-ink px-6 py-14 text-white sm:px-12 sm:py-20">
+        <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-sand/20 blur-3xl" />
+        <div className="relative mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[1.15fr_1fr]">
+          <div>
+            <p className="mb-4 font-mono text-xs uppercase tracking-widest text-white/70">{tb("eyebrow")}</p>
+            <h1 className="font-display text-4xl font-semibold text-balance sm:text-5xl">{tb("title")}</h1>
+            <p className="mt-4 max-w-xl text-white/80">{tb("lead")}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#contact" className="inline-block rounded-lg bg-bg px-4 py-2.5 text-sm font-semibold text-brand-ink hover:bg-white">
+                {tb("ctaStudy")}
+              </a>
+              <Button variant="ghost" href="/signup?role=BORROWER" className="border-white/30 text-white hover:bg-white/10">
+                {t("ctaApply")}
+              </Button>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/75">
+              <span>✓ {tb("trust1")}</span>
+              <span>✓ {tb("trust2")}</span>
+              <a href="/login" className="underline underline-offset-4 hover:text-white">{t("alreadyAccount")}</a>
+            </div>
           </div>
-          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/70">
-            <a href="/login" className="underline underline-offset-4 hover:text-white">{t("alreadyAccount")}</a>
-          </div>
+          <HeroEstimator />
         </div>
       </section>
 
@@ -94,18 +95,7 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      {/* Points clés */}
-      <section className="bg-surface-alt px-6 py-14 sm:px-12">
-        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {TRUST_POINTS.map((f, i) => (
-            <div key={f.title} className="rounded-xl border border-line bg-surface p-5">
-              <div className="font-mono text-xs font-semibold text-accent">{String(i + 1).padStart(2, "0")}</div>
-              <h3 className="mt-1.5 font-display text-lg text-brand-ink">{f.title}</h3>
-              <p className="mt-1.5 text-sm text-ink-soft">{f.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* Comment ça marche */}
       <section id="comment-ca-marche" className="px-6 py-16 sm:px-12">
@@ -167,6 +157,8 @@ export default async function LandingPage() {
         </div>
       </section>
 
+      <AboutSection />
+
       {/* Aperçu marketplace */}
       <section className="bg-surface-alt px-6 py-16 sm:px-12">
         <div className="mx-auto max-w-5xl">
@@ -223,28 +215,11 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      {/* CTA final */}
-      <section className="px-6 py-16 text-center sm:px-12">
-        <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">{t("ctaFinalTitle")}</h2>
-        <p className="mx-auto mt-2 max-w-xl text-ink-soft">
-          {t("ctaFinalBody")}
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Button variant="primary" href="/signup?role=BORROWER">{t("ctaApply")}</Button>
-          <Button variant="ghost" href="/signup?role=INVESTOR">{t("becomeInvestor")}</Button>
-        </div>
-      </section>
+      <FaqSection />
 
-      <footer className="border-t border-line px-6 py-8 text-sm text-ink-faint sm:px-12">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3">
-          <span>{t("footerText", { year: new Date().getFullYear() })}</span>
-          <div className="flex gap-4">
-            <a href="/marketplace" className="hover:text-ink">{t("footerMarketplace")}</a>
-            <a href="/simulateur" className="hover:text-ink">{t("footerSimulator")}</a>
-            <a href="/login" className="hover:text-ink">{t("footerLogin")}</a>
-          </div>
-        </div>
-      </footer>
+      <ContactSection status={searchParams.contact} />
+
+      <SiteFooter />
     </main>
   );
 }

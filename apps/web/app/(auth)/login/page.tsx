@@ -11,9 +11,11 @@ async function loginAction(formData: FormData) {
   const password = formData.get("password") as string;
 
   let role: string;
+  let accountStatus: string;
   try {
     const { token, user } = await signIn({ email, password });
     role = user.role;
+    accountStatus = user.accountStatus;
 
     cookies().set(SESSION_COOKIE_NAME, token, {
       httpOnly: true,
@@ -28,6 +30,8 @@ async function loginAction(formData: FormData) {
     redirect(`/login?error=${encodeURIComponent(message)}`);
   }
 
+  // Compte public pas encore validé (ou refusé/suspendu) : page d'état du compte.
+  if ((role === "INVESTOR" || role === "BORROWER") && accountStatus !== "ACTIVE") redirect("/compte-en-attente");
   if (role === "INVESTOR") redirect("/investor/dashboard");
   if (role === "BORROWER") redirect("/dashboard");
   // Agent/Admin/Super Admin : le compte existe mais sa place est dans le back-office.
@@ -57,7 +61,7 @@ export default async function LoginPage({ searchParams }: { searchParams: { erro
             {t("passwordLabel")}
             <input type="password" name="password" required className="rounded-lg border border-line px-3 py-2.5 text-ink" />
           </label>
-          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
+          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
             {t("submit")}
           </button>
         </form>

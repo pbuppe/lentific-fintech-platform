@@ -93,6 +93,20 @@ async function main() {
     update: { passwordHash },
   });
 
+  // Double validation des versements (demande produit 2026-11-14) : un admin
+  // déclare, un super admin DIFFÉRENT confirme. Il faut donc un admin et un
+  // second super admin pour pouvoir dérouler le parcours en démonstration.
+  await prisma.user.upsert({
+    where: { email: "admin@lentific.com" },
+    create: { email: "admin@lentific.com", name: "Admin Démo", countryId: france.id, role: "ADMIN", passwordHash },
+    update: { passwordHash },
+  });
+  await prisma.user.upsert({
+    where: { email: "superadmin2@lentific.com" },
+    create: { email: "superadmin2@lentific.com", name: "Super Admin Démo 2", countryId: france.id, role: "SUPER_ADMIN", passwordHash },
+    update: { passwordHash },
+  });
+
   // --- Dossier 1 : en cours de traitement (Camille) --------------------------
 
   const camille = await prisma.user.upsert({

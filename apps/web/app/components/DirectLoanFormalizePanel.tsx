@@ -54,7 +54,7 @@ export async function DirectLoanFormalizePanel({
           {t("agreementSummary", { amount: Number(agreement.amount), duration: agreement.durationMonths, rate: Number(agreement.rate) })}
         </p>
         {downloadUrl && (
-          <a href={downloadUrl} className="mt-3 inline-block rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
+          <a href={downloadUrl} className="mt-3 inline-block rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
             {t("downloadContract")}
           </a>
         )}
@@ -85,7 +85,7 @@ export async function DirectLoanFormalizePanel({
           </label>
         </div>
         <p className="text-xs text-ink-faint">{t("disclaimer")}</p>
-        <button className="justify-self-start rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
+        <button className="justify-self-start rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
           {t("submit")}
         </button>
       </form>

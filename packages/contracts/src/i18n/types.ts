@@ -15,7 +15,7 @@ export interface ContractStrings {
   signElectronic: string;
   noScoreAvailable: string;
 
-  // --- Contrat marketplace (multi-prêteurs, Lentific intermédiaire) ---
+  // --- Contrat marketplace (multi-prêteurs, SODIVA CREDITS intermédiaire) ---
   mp_pdfTitle: string; // {reference}
   mp_mainTitle: string;
   mp_mainSubtitle: string;

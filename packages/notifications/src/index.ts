@@ -89,9 +89,28 @@ registerHandler("investor.rejected", async (payload) => {
 // --- Demande de document par le super administrateur (§ demande produit) ---
 
 registerHandler("document.requested", async (payload) => {
-  const { targetUserId, label } = payload as { targetUserId: string; label: string };
-  await notify(targetUserId, "document.requested", "email"); // "un document t'a été demandé : ${label}"
-  console.log(`[notifications] document demandé à ${targetUserId} : ${label}`);
+  const { requestId, targetUserId, requestedById, label, instructions } = payload as {
+    requestId: string;
+    targetUserId: string;
+    requestedById?: string;
+    label: string;
+    instructions?: string;
+  };
+  // Notification enrichie (centre de notifications de l'espace client) : le
+  // libellé est saisi par l'équipe, dans la langue du client.
+  await prisma.notification.create({
+    data: {
+      userId: targetUserId,
+      channel: "in_app",
+      event: "document.requested",
+      kind: "document",
+      title: label,
+      body: instructions ?? null,
+      link: "/documents",
+      senderId: requestedById ?? null,
+      refId: requestId,
+    },
+  });
 });
 
 registerHandler("document.request_fulfilled", async (payload) => {
@@ -137,4 +156,37 @@ registerHandler("application.sla_breached", async (payload) => {
     borrowerId,
     `URGENT — SLA 48h dépassé sur le dossier prioritaire ${reference} (${applicationId})`
   );
+});
+
+// --- Versement des fonds et honoraires (demande produit 2026-11-14) --------
+
+registerHandler("disbursement.declared", async (payload) => {
+  const { applicationId, borrowerId } = payload as { applicationId: string; borrowerId: string };
+  // Action humaine requise : un super administrateur différent doit confirmer.
+  await openSupportTicket(borrowerId, `Versement déclaré à confirmer par un super administrateur : ${applicationId}`);
+});
+
+registerHandler("disbursement.confirmed", async (payload) => {
+  const { borrowerId } = payload as { borrowerId: string };
+  await notify(borrowerId, "disbursement.confirmed");
+});
+
+registerHandler("disbursement.funds_available", async (payload) => {
+  const { borrowerId } = payload as { borrowerId: string };
+  await notify(borrowerId, "disbursement.funds_available");
+});
+
+registerHandler("broker_fee.requested", async (payload) => {
+  const { borrowerId, feeId, requestedById } = payload as { borrowerId: string; feeId: string; requestedById?: string };
+  await prisma.notification.create({
+    data: {
+      userId: borrowerId,
+      channel: "in_app",
+      event: "broker_fee.requested",
+      kind: "payment",
+      link: "/paiements",
+      senderId: requestedById ?? null,
+      refId: feeId,
+    },
+  });
 });

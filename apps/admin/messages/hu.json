@@ -10,14 +10,24 @@
     "riskEngine": "Kockázatelemző motor",
     "accountsSuperAdmin": "Fiókok (szuperadmin)",
     "statistics": "Statisztikák",
-    "logout": "Kijelentkezés"
+    "logout": "Kijelentkezés",
+    "accountValidation": "Jóváhagyandó fiókok",
+    "outboundEmails": "Elküldött e-mailek",
+    "pendingCount": "{count} függő fiók",
+    "funds": "Folyósítások és díjak",
+    "pendingFundsCount": "{count, plural, one {# megerősítendő folyósítás} other {# megerősítendő folyósítás}}",
+    "clientRequests": "Kérések és üzenetek",
+    "console": "Szuperadmin konzol",
+    "prospects": "Kapcsolatfelvételek",
+    "newProspectsCount": "{count} új kérés"
   },
   "AdminLoginPage": {
-    "kicker": "Lentific · Back office",
+    "kicker": "SODIVA CREDITS · Back office",
     "title": "Ügyintézői bejelentkezés",
     "emailLabel": "E-mail",
     "passwordLabel": "Jelszó",
-    "submit": "Bejelentkezés"
+    "submit": "Bejelentkezés",
+    "activated": "Hozzáférése aktív: jelentkezzen be az új jelszavával."
   },
   "CasesQueuePage": {
     "kicker": "apps/admin · back office",
@@ -47,7 +57,14 @@
     "empty": "Egyelőre nincs fiók.",
     "verified": "Igazolva",
     "roleBorrower": "Hitelfelvevő",
-    "roleInvestor": "Befektető"
+    "roleInvestor": "Befektető",
+    "accountStatus": {
+      "PENDING_EMAIL": "Megerősítendő e-mail",
+      "PENDING_REVIEW": "Jóváhagyandó",
+      "ACTIVE": "Aktív",
+      "REJECTED": "Elutasítva",
+      "SUSPENDED": "Felfüggesztve"
+    }
   },
   "AccountDetailPage": {
     "backToAccounts": "← Vissza a fiókokhoz",
@@ -62,7 +79,7 @@
     "applicationsTitle": "Finanszírozási kérelmek",
     "listingsTitle": "Közzétett tőkeajánlatok",
     "introductionsTitle": "Kapcsolatba hozások",
-    "introductionsDisclaimer": "Emlékeztető: a kapcsolatba hozás kifizetése után a két fél között történtek a platformon kívül zajlanak, ezekért a Lentific nem vállal felelősséget.",
+    "introductionsDisclaimer": "Emlékeztető: a kapcsolatba hozás kifizetése után a két fél között történtek a platformon kívül zajlanak, ezekért a SODIVA CREDITS nem vállal felelősséget.",
     "introSent": "→ kapcsolatot kért vele: {name} ({status})",
     "introReceived": "← kapcsolatot kérte tőle: {name} ({status})",
     "documentsTitle": "Feltöltött dokumentumok",
@@ -132,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "apps/admin · áttekintés",
     "title": "Kapcsolatba hozott profilok",
-    "description": "Azon párok listája, akik kifizetett kapcsolatba hozás révén kicserélték elérhetőségeiket. Ettől a pillanattól kezdve a két fél között történtek a platformon kívül zajlanak, ezekért a Lentific nem vállal felelősséget, kizárólag a kapcsolatfelvételi adatokat biztosította.",
+    "description": "Azon párok listája, akik kifizetett kapcsolatba hozás révén kicserélték elérhetőségeiket. Ettől a pillanattól kezdve a két fél között történtek a platformon kívül zajlanak, ezekért a SODIVA CREDITS nem vállal felelősséget, kizárólag a kapcsolatfelvételi adatokat biztosította.",
     "empty": "Egyelőre nincs kifizetett kapcsolatba hozás.",
     "paid": "Kifizetve",
     "investorToBorrower": "Befektetőtől hitelfelvevő felé",
@@ -169,5 +186,460 @@
     "byLanguage": "Nyelv szerint",
     "byCountry": "Ország szerint",
     "noData": "Még nincs adat."
+  },
+  "AccountValidationPage": {
+    "kicker": "Regisztrációk",
+    "title": "Jóváhagyandó fiókok",
+    "description": "Egyetlen hitelfelvevő vagy befektető sem fér hozzá fiókjához az Ön jóváhagyása előtt. Ellenőrizze a regisztrációkat, majd hagyja jóvá vagy utasítsa el indoklással; az érintett e-mailt kap.",
+    "doneApproved": "Fiók jóváhagyva. Aktiváló e-mailt küldtünk.",
+    "doneRejected": "Regisztráció elutasítva. Az érintettet e-mailben értesítettük.",
+    "doneResent": "Új megerősítő link elküldve.",
+    "toReviewTitle": "E-mail megerősítve, az Ön döntésére vár",
+    "toReviewEmpty": "Nincs jóváhagyásra váró regisztráció.",
+    "roleBorrower": "Hitelfelvevő",
+    "roleInvestor": "Befektető",
+    "signedUpAt": "Regisztrált:",
+    "emailVerifiedAt": "E-mail megerősítve:",
+    "country": "Ország",
+    "approve": "Fiók jóváhagyása",
+    "reject": "Elutasítás…",
+    "reasonLabel": "Az elutasítás oka (az érintett megkapja)",
+    "reasonPlaceholder": "Pl.: hiányos adatok, nem megfelelő profil…",
+    "confirmReject": "Elutasítás megerősítése",
+    "emailPendingTitle": "Még nem megerősített e-mail",
+    "emailPendingDescription": "Ezek a személyek még nem kattintottak az e-mailben kapott linkre. Újraküldheti a linket, vagy jóváhagyhatja így is, ha ismeri az illetőt.",
+    "emailPendingEmpty": "Nincs e-mail-megerősítésre váró regisztráció.",
+    "resend": "Link újraküldése",
+    "approveAnyway": "Jóváhagyás így is",
+    "rejectedTitle": "Elutasított regisztrációk"
+  },
+  "OutboundEmailsPage": {
+    "kicker": "Kommunikáció",
+    "title": "Elküldött e-mailek",
+    "descriptionLocal": "Még nincs bekötve küldőszolgáltatás: az e-mailek valójában nem mennek ki, itt maradnak, hogy tesztelni lehessen a folyamatokat (pl. megerősítő linkre kattintani).",
+    "descriptionLive": "A platform által küldött utolsó 50 e-mail.",
+    "empty": "Még nincs e-mail.",
+    "to": "Címzett:",
+    "statusSent": "Elküldve",
+    "statusLocal": "Helyi (nem küldött)",
+    "statusFailed": "Hiba"
+  },
+  "FundsPage": {
+    "kicker": "Back office · Jóváhagyott hitelek",
+    "title": "Folyósítások és díjak",
+    "description": "Igazolja minden aláírt hitel folyósítását. Egy admin a hitelező igazolásával bejelenti, majd egy másik szuperadminisztrátor megerősíti. Díjat csak ezt követően lehet kérni.",
+    "empty": "Még nincs aláírt hitel.",
+    "section1": "1 · Jóváhagyott hitel",
+    "grantedSummary": "{amount} · kamat {rate}% · {months} hónap · szerződés aláírva",
+    "section2": "2 · A folyósítás igazolása",
+    "doubleValidationNote": "Kettős jóváhagyás: egy admin igazolással bejelenti, egy másik szuperadmin megerősíti.",
+    "proofRejected": "Igazolás elutasítva: {reason}. Jelentse be újra olvasható dokumentummal.",
+    "beneficiaryLabel": "Kedvezményezett",
+    "availabilityLabel": "Elérhetőség az adós számára",
+    "fundsDateLabel": "Folyósítás dátuma",
+    "lenderReferenceLabel": "Hitelezői hivatkozás",
+    "proofLabel": "Folyósítási értesítő",
+    "proofHint": "A hitelező vagy a közjegyző igazolása · PDF, JPG vagy PNG, max. 10 MB.",
+    "declare": "Folyósítás bejelentése",
+    "declaredBy": "Bejelentette",
+    "confirmedBy": "Megerősítette",
+    "confirm": "Folyósítás megerősítése",
+    "rejectProof": "Igazolás elutasítása…",
+    "reasonLabel": "Az elutasítás oka",
+    "reasonPlaceholder": "Pl.: olvashatatlan értesítő, eltérő összeg…",
+    "confirmReject": "Igazolás elutasítása",
+    "waitingSuperAdmin": "Szuperadminisztrátori megerősítésre vár.",
+    "waitingOtherSuperAdmin": "Ön jelentette be ezt a folyósítást: egy másik szuperadminisztrátornak kell megerősítenie. Saját bejelentést senki sem hagy jóvá.",
+    "markAvailableBank": "A bank rendelkezésre bocsátotta az összeget",
+    "markAvailableNotary": "A közjegyző rendelkezésre bocsátotta az összeget",
+    "section3": "3 · Díj bekérése",
+    "feesLocked": "Nem elérhető, amíg a folyósítás nincs megerősítve: a hitel megszerzése előtt semmilyen fizetés nem kérhető.",
+    "feesUnlocked": "Folyósítás igazolva: kérheti a megállapodásban rögzített díjat, akkor is, ha a bank vagy a közjegyző még ellenőriz.",
+    "feeKindLabel": "Tárgy",
+    "feeAmountLabel": "Összeg ({currency})",
+    "feeDueLabel": "Esedékesség",
+    "requestFee": "Fizetési kérés küldése",
+    "feePaymentNote": "Az ügyfél a saját felületén fizet, biztonságos fizetéssel az iroda nevére. IBAN-t soha nem küldünk üzenetben.",
+    "feeDue": "esedékes: {date}",
+    "cancelFee": "Visszavonás",
+    "noFeesYet": "Még nem küldtek díjkérést.",
+    "auditTitle": "Auditnapló ({count})",
+    "steps": {
+      "granted": "Jóváhagyva",
+      "grantedSub": "Szerződés aláírva",
+      "declared": "Folyósítás bejelentve",
+      "declaredSub": "Admin által",
+      "declaredWaiting": "Szuperadminra vár",
+      "confirmed": "Folyósítva",
+      "confirmedSub": "Igazolva",
+      "available": "Rendelkezésre bocsátás",
+      "availableSub": "Elérhető összeg",
+      "fees": "Díjak",
+      "feesSub": "Kérhető"
+    },
+    "status": {
+      "toDeclare": "Folyósítandó",
+      "declared": "Megerősítendő",
+      "confirmed": "Folyósítva",
+      "rejected": "Igazolás elutasítva"
+    },
+    "beneficiary": {
+      "BORROWER": "Az adós számlája",
+      "NOTARY": "Közjegyzői iroda",
+      "SUPPLIERS": "Vállalkozók, számla alapján"
+    },
+    "availability": {
+      "AVAILABLE": "Azonnal elérhető",
+      "BANK_CHECKS": "Banki ellenőrzés folyamatban",
+      "NOTARY_CHECKS": "Közjegyzőnél, ellenőrzés folyamatban"
+    },
+    "feeKind": {
+      "BROKER_FEE": "Közvetítői díj",
+      "COMPLEMENT": "Díjkiegészítés"
+    },
+    "feeStatus": {
+      "PENDING": "Függőben",
+      "PAID": "Kifizetve",
+      "CANCELLED": "Visszavonva"
+    },
+    "errors": {
+      "not_allowed": "Nincs jogosultsága ehhez a művelethez.",
+      "not_signed": "Ennek az ügynek nincs aláírt szerződése.",
+      "already_declared": "Ennek az ügynek a folyósítását már bejelentették.",
+      "invalid_input": "Néhány adat érvénytelen. Ellenőrizze az űrlapot.",
+      "not_declared": "Ebben az ügyben nincs megerősítésre váró folyósítás.",
+      "same_person": "Ön jelentette be ezt a folyósítást: egy másik szuperadminisztrátornak kell megerősítenie.",
+      "reason_required": "Adja meg az elutasítás okát (legalább 3 karakter).",
+      "not_confirmed": "A folyósítás még nincs megerősítve.",
+      "fees_locked": "Díjat csak a folyósítás megerősítése után lehet kérni.",
+      "not_pending": "Ez a díjkérés már nem függőben lévő.",
+      "proof_missing": "Csatolja a folyósítási értesítőt (max. 10 MB)."
+    },
+    "done": {
+      "declared": "Folyósítás bejelentve. Most egy szuperadminisztrátornak kell megerősítenie.",
+      "confirmed": "Folyósítás megerősítve. Az ügyfél látja az összeget, a díjak feloldva.",
+      "rejected": "Igazolás elutasítva. Az adminnak újra be kell jelentenie a folyósítást.",
+      "available": "Az összeg az ügyfél számára elérhetőként jelölve.",
+      "fee_requested": "Díjkérés elküldve az ügyfélnek.",
+      "fee_cancelled": "Díjkérés visszavonva."
+    },
+    "audit": {
+      "disbursement": {
+        "declared": "Folyósítás bejelentve",
+        "confirmed": "Folyósítás megerősítve",
+        "proof_rejected": "Folyósítási igazolás elutasítva",
+        "funds_available": "Összeg rendelkezésre bocsátva"
+      },
+      "broker_fee": {
+        "requested": "Díj bekérve",
+        "cancelled": "Díjkérés visszavonva",
+        "paid": "Díjat az ügyfél kifizette"
+      }
+    }
+  },
+  "ClientRequestsPage": {
+    "kicker": "Back office · Ügyfélkapcsolat",
+    "title": "Kérések és üzenetek",
+    "description": "Kérjen dokumentumot vagy fizetést, vagy írjon egy ügyfélnek. A küldés azonnal megjelenik a felületén (értesítések, üzenetnél az „Üzenetek” menüpont), és egy e-mail bejelentkezésre hívja.",
+    "done": {
+      "doc": "Kérés elküldve neki: {name}. A benyújtandó dokumentumai között jelenik meg.",
+      "pay": "Fizetési kérés elküldve neki: {name}.",
+      "msg": "Üzenet elküldve neki: {name}. E-mailben értesítettük."
+    },
+    "errors": {
+      "doc_missing": "Válasszon legalább egy dokumentumot (az „Egyéb dokumentum” esetén adjon meg megnevezést).",
+      "fees_locked": "Nem kérhető fizetés: az ügyfél összegét még nem folyósították és erősítették meg.",
+      "invalid": "Érvénytelen összeg vagy határidő.",
+      "msg_missing": "A tárgy és az üzenet kötelező.",
+      "client": "Az ügyfél nem található."
+    },
+    "searchPlaceholder": "Ügyfél keresése…",
+    "clientsCount": "{count, plural, other {# ügyfél}}",
+    "roleInvestor": "Befektető",
+    "roleBorrower": "Adós",
+    "noClients": "Nincs találat.",
+    "pickClient": "Válasszon ügyfelet a listából, hogy kérést vagy üzenetet küldjön.",
+    "recipient": "Címzett",
+    "tabs": {
+      "doc": "Dokumentum kérése",
+      "pay": "Fizetés kérése",
+      "msg": "Üzenet"
+    },
+    "docTypesLabel": "Kért dokumentumok",
+    "docTypes": {
+      "tax": "Legutóbbi adóbevallás",
+      "address": "3 hónapnál nem régebbi lakcímigazolás",
+      "payslips": "Utolsó 3 bérjegyzék",
+      "statements": "Bankszámlakivonatok (utolsó 3 hónap)",
+      "quote": "Árajánlat vagy számla a munkákról",
+      "identity": "Személyi igazolvány",
+      "sale": "Adásvételi előszerződés",
+      "other": "Egyéb dokumentum"
+    },
+    "otherLabel": "Megnevezés „Egyéb dokumentum” esetén",
+    "otherPlaceholder": "Pl.: munkáltatói igazolás",
+    "delayLabel": "Határidő",
+    "delays": {
+      "48h": "48 óra",
+      "7d": "7 nap",
+      "15d": "15 nap"
+    },
+    "instructionsLabel": "Megjegyzés az ügyfélnek (nem kötelező)",
+    "instructionsPlaceholder": "Pl.: a bank kéri a vizsgálat folytatásához.",
+    "sendDoc": "Kérés küldése",
+    "channelsNote": "Az ügyfél a felületén látja, és e-mailt kap, amely bejelentkezésre hívja (biztonsági okból tartalom nélkül).",
+    "payBlocked": "Fizetési kérés nem lehetséges: az ügyfél egyik hitelének sincs megerősített folyósítása. A törvény tiltja a díj beszedését a hitel megszerzése előtt.",
+    "payBlockedLink": "Folyósítások megtekintése",
+    "loanLabel": "Érintett hitel",
+    "fundsConfirmed": "folyósítva",
+    "feeKindLabel": "Tárgy",
+    "feeKind": {
+      "BROKER_FEE": "Közvetítői díj",
+      "COMPLEMENT": "Díjkiegészítés"
+    },
+    "amountLabel": "Összeg",
+    "dueLabel": "Esedékesség",
+    "payNote": "Az ügyfél a felületén fizet, biztonságos fizetéssel az iroda nevére. IBAN-t soha nem küldünk üzenetben.",
+    "sendPay": "Fizetési kérés küldése",
+    "otherCases": "Egyéb ügyek megerősített folyósítás nélkül: {list}",
+    "templatesLabel": "Sablonok",
+    "templates": {
+      "progress": {
+        "label": "Folyamatban lévő ügy",
+        "subject": "Ügye halad",
+        "body": "Kedves {name}!\n\nJó hír: több hitelező is vizsgálja kérelmét. Amint választ kapok, jelentkezem.\n\nÜdvözlettel:"
+      },
+      "granted": {
+        "label": "Jóváhagyott hitel",
+        "subject": "Hitelét jóváhagyták",
+        "body": "Kedves {name}!\n\nHitelét jóváhagyták. Az aláírandó hitelajánlatot a felületén kapja meg.\n\nÜdvözlettel:"
+      },
+      "appointment": {
+        "label": "Időpont",
+        "subject": "Egyeztessünk időpontot",
+        "body": "Kedves {name}!\n\nJavaslok egy telefonos vagy videós egyeztetést az ügyéről. Kérem, jelezze, melyik időpont felel meg.\n\nÜdvözlettel:"
+      }
+    },
+    "subjectLabel": "Tárgy",
+    "bodyLabel": "Üzenet",
+    "sendMsg": "Üzenet küldése",
+    "historyFor": "Küldési előzmények · {name}",
+    "historyAll": "Legutóbbi küldések",
+    "historyEmpty": "Még nincs küldés.",
+    "historyCols": {
+      "date": "Dátum",
+      "client": "Ügyfél",
+      "type": "Típus",
+      "subject": "Tárgy",
+      "by": "Küldő",
+      "status": "Állapot"
+    },
+    "historyStatus": {
+      "received": "Dokumentum beérkezett",
+      "cancelled": "Visszavonva",
+      "paid": "Kifizetve",
+      "read": "Olvasott",
+      "unread": "Elküldve · olvasatlan"
+    },
+    "kind": {
+      "document": "Dokumentum",
+      "payment": "Fizetés",
+      "message": "Üzenet"
+    }
+  },
+  "ConsolePage": {
+    "kicker": "Back office · Szuperadmin",
+    "title": "Szuperadmin konzol",
+    "description": "Kezelje a csapatot és az ügyfélfiókokat, és segítsen élőben egy ügyfélnek a telefonon megadott kóddal. Minden művelet naplózásra kerül.",
+    "tabs": {
+      "help": "Segítség",
+      "clients": "Ügyfelek",
+      "team": "Csapat"
+    },
+    "searchPlaceholder": "Ügyfél keresése…",
+    "suspend": "Felfüggesztés",
+    "reactivate": "Újraaktiválás",
+    "status": {
+      "ACTIVE": "Aktív",
+      "SUSPENDED": "Felfüggesztve"
+    },
+    "roles": {
+      "AGENT": "Ügyintéző",
+      "ADMIN": "Admin",
+      "SUPER_ADMIN": "Szuperadmin"
+    },
+    "rights": {
+      "AGENT": "Ügyek, azonosítás, szerződések",
+      "ADMIN": "+ jóváhagyások, folyósítások, üzenetek",
+      "SUPER_ADMIN": "Minden jogosultság"
+    },
+    "team": {
+      "inviteTitle": "Csapattag meghívása",
+      "name": "Név",
+      "email": "E-mail",
+      "role": "Szerepkör",
+      "invite": "Meghívó küldése",
+      "inviteNote": "A meghívott e-mailben kap egy linket (72 óráig érvényes) a jelszava megadásához. Jelszó soha nem megy át Önön.",
+      "listTitle": "Csapatfiókok",
+      "colName": "Név",
+      "colRole": "Szerepkör",
+      "colRights": "Jogok",
+      "colLogin": "Utolsó belépés",
+      "colStatus": "Állapot",
+      "invitationPending": "Meghívó elküldve",
+      "you": "Ön",
+      "resend": "Meghívó újraküldése",
+      "suspendNote": "A felfüggesztés azonnal megszünteti a hozzáférést (minden munkamenet bezárul). A fiók és korábbi műveletei a naplóban maradnak. Az utolsó aktív szuperadmin nem függeszthető fel."
+    },
+    "clients": {
+      "colClient": "Ügyfél",
+      "colCase": "Ügy",
+      "colAccount": "Fiók",
+      "colBlock": "Jelzett probléma",
+      "assist": "Segítség"
+    },
+    "help": {
+      "asking": "Segítséget kért",
+      "pick": "Válassza ki a listából a telefonáló ügyfelet.",
+      "kicker": "Segítség",
+      "activeUntil": "Munkamenet: {time}-ig",
+      "busy": "Már segíti: {name}",
+      "codeWaiting": "Kód létrehozva, várakozik",
+      "noCode": "Nincs aktív kód",
+      "problem": "Jelzett probléma:",
+      "noProblem": "nincs",
+      "codeExplain": "Telefonon kérje meg az ügyfelet, hogy nyissa meg a „Segítségre van szüksége?” menüt, és olvassa fel a 6 jegyű kódját. A kód 30 perc segítségnyújtáshoz való hozzájárulást jelent.",
+      "codeLabel": "6 jegyű kód",
+      "open": "Munkamenet megnyitása",
+      "doTitle": "Amit Ön elvégezhet helyette",
+      "noPendingDocs": "Nincs függő dokumentum ennél az ügyfélnél.",
+      "uploadFor": "Feltöltés helyette: {label}",
+      "uploadHint": "Az ügyféltől e-mailben vagy postán kapott dokumentum.",
+      "upload": "Feltöltés",
+      "moreActions": "Profil, dokumentumkérések, fájlok:",
+      "openAccount": "adatlap megnyitása",
+      "guideTitle": "Az ügyfélnek kell megtennie, Önnel telefonon",
+      "guideExplain": "Ezek a lépések az ügyfelet kötelezik: neki kell elvégeznie. Válasszon útmutatót, azonnal megjelenik a képernyőjén.",
+      "end": "Munkamenet befejezése"
+    },
+    "guidance": {
+      "sign": {
+        "title": "Ajánlat vagy dokumentum aláírása",
+        "why": "Az aláírásnak az ügyféltől kell származnia"
+      },
+      "pay": {
+        "title": "Díj kifizetése",
+        "why": "Az ügyfél maga hagyja jóvá a fizetést"
+      },
+      "identity": {
+        "title": "Személyazonosság ellenőrzése",
+        "why": "Az okmányt az ügyfélnek kell feltöltenie"
+      },
+      "accept": {
+        "title": "Ajánlat elfogadása",
+        "why": "A hozzájárulásnak az ügyféltől kell jönnie"
+      },
+      "documents": {
+        "title": "Dokumentum feltöltése",
+        "why": "Az ügyfél maga tölti fel a fájlt"
+      }
+    },
+    "done": {
+      "invited": "Meghívó elküldve.",
+      "invite_resent": "Új meghívó elküldve.",
+      "suspended": "Fiók felfüggesztve: a hozzáférés megszűnt.",
+      "reactivated": "Fiók újraaktiválva.",
+      "session_opened": "Segítségnyújtási munkamenet megnyitva 30 percre.",
+      "guided": "Az útmutató megjelent az ügyfél képernyőjén.",
+      "uploaded": "Dokumentum feltöltve az ügyfél helyett.",
+      "session_ended": "Segítségnyújtás befejezve."
+    },
+    "errors": {
+      "not_allowed": "Nem engedélyezett művelet.",
+      "invalid_input": "Érvénytelen adatok.",
+      "email_taken": "Ezzel az e-mail-címmel már van fiók.",
+      "self": "A saját fiókját itt nem módosíthatja.",
+      "last_super_admin": "Nem lehetséges: ő az utolsó aktív szuperadmin.",
+      "not_found": "A fiók vagy kérés nem található.",
+      "no_code": "Nincs érvényes kód: kérje meg az ügyfelet, hogy kérjen újat.",
+      "bad_code": "Hibás kód.",
+      "too_many_attempts": "Túl sok próbálkozás: a kód letiltva. Az ügyfélnek újat kell kérnie.",
+      "no_session": "Nincs Ön által nyitott munkamenet ennél az ügyfélnél.",
+      "file": "Válasszon fájlt (max. 10 MB)."
+    },
+    "log": {
+      "title": "Konzol műveleti napló",
+      "empty": "Még nincs művelet.",
+      "by": "végezte: {name}",
+      "note": "Csak olvasható napló. Az ügyfél a saját fiókját érintő tételeket a „Segítségre van szüksége?” menüben látja.",
+      "actions": {
+        "staff_invited": "Tag meghívva",
+        "staff_invite_resent": "Meghívó újraküldve",
+        "staff_activated": "Hozzáférés aktiválva",
+        "account_suspended": "Fiók felfüggesztve",
+        "account_reactivated": "Fiók újraaktiválva",
+        "assistance_opened": "Segítségnyújtás megnyitva (ügyfélkód)",
+        "assistance_guided": "Ügyfél lépésről lépésre vezetve",
+        "assistance_document": "Dokumentum feltöltve az ügyfél helyett",
+        "assistance_ended": "Segítségnyújtás befejezve"
+      }
+    },
+    "appStatus": {
+      "DRAFT": "Piszkozat",
+      "SUBMITTED": "Beadva",
+      "KYC_PENDING": "Azonosítás folyamatban",
+      "KYC_VERIFIED": "Azonosítva",
+      "UNDER_REVIEW": "Vizsgálat alatt",
+      "PUBLISHED": "Ajánlat elküldve",
+      "OFFER_ACCEPTED": "Ajánlat elfogadva",
+      "CONTRACT_SIGNED": "Szerződés aláírva",
+      "DISBURSED": "Folyósítva",
+      "REJECTED": "Elutasítva",
+      "CANCELLED": "Visszavonva"
+    }
+  },
+  "ActivatePage": {
+    "kicker": "SODIVA CREDITS · Back office",
+    "title": "Üdvözöljük, {name}",
+    "invalidTitle": "Érvénytelen link",
+    "invalidBody": "A meghívó link lejárt vagy már felhasználták. Kérjen új meghívót egy szuperadminisztrátortól.",
+    "intro": "Válasszon jelszót a(z) {email} fiókhoz.",
+    "password": "Jelszó",
+    "confirm": "Jelszó megerősítése",
+    "rule": "Legalább 10 karakter. Válasszon Önnek könnyen megjegyezhető, mások számára nehezen kitalálható kifejezést.",
+    "submit": "Hozzáférés aktiválása",
+    "errors": {
+      "mismatch": "A két jelszó nem egyezik.",
+      "password_short": "A jelszónak legalább 10 karakterből kell állnia.",
+      "invalid_link": "Ez a link már nem érvényes."
+    }
+  },
+  "ProspectsPage": {
+    "kicker": "Back office · Weboldal",
+    "title": "Kapcsolatfelvételi kérések",
+    "description": "A weboldalról érkezett ingyenes elemzés kérések. Hívja vissza az érdeklődőt, majd kövesse az állapotát.",
+    "status": {
+      "NEW": "Új",
+      "CONTACTED": "Megkeresve",
+      "CONVERTED": "Ügyfél lett",
+      "CLOSED": "Lezárva"
+    },
+    "filters": {
+      "open": "Teendő",
+      "closed": "Lezárt",
+      "all": "Összes"
+    },
+    "projects": {
+      "MORTGAGE": "Lakáshitel",
+      "CONSOLIDATION": "Hitelkiváltás",
+      "WORKS": "Felújítási / személyi kölcsön",
+      "OTHER": "Egyéb"
+    },
+    "saved": "Mentve.",
+    "empty": "Nincs kérés.",
+    "statusLabel": "Állapot",
+    "noteLabel": "Belső megjegyzés",
+    "notePlaceholder": "Pl.: visszahívva 11.14., találkozó kedden",
+    "save": "Mentés"
   }
 }

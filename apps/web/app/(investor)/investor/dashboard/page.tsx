@@ -143,7 +143,7 @@ export default async function InvestorDashboard({ searchParams }: { searchParams
                       required
                       className="w-40 rounded-lg border border-line px-3 py-1.5 text-sm text-ink"
                     />
-                    <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
+                    <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
                       {t("invest")}
                     </button>
                   </form>

@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
-import { prisma, usersRepo } from "@fintech/database";
+import { prisma } from "@fintech/database";
 import { signUp, SESSION_COOKIE_NAME, AuthError } from "@fintech/auth";
 import { Card } from "@fintech/ui";
 
@@ -15,13 +15,11 @@ async function signupAction(formData: FormData) {
 
   try {
     const france = await prisma.country.findUniqueOrThrow({ where: { code: "FR" } });
-    const { token, user } = await signUp({ email, password, name, role, countryId: france.id });
-
     // Langue active à l'inscription, mémorisée pour que tout document généré
-    // plus tard (ex. contrat) parte de cette préférence par défaut plutôt que
-    // du français (§ demande produit 2026-09-18).
+    // plus tard (ex. contrat) — et l'e-mail de confirmation envoyé tout de
+    // suite — parte de cette préférence plutôt que du français (§ 2026-09-18).
     const locale = await getLocale();
-    await usersRepo.setPreferredLocale(user.id, locale);
+    const { token } = await signUp({ email, password, name, role, countryId: france.id, locale });
 
     cookies().set(SESSION_COOKIE_NAME, token, {
       httpOnly: true,
@@ -36,7 +34,8 @@ async function signupAction(formData: FormData) {
     redirect(`/signup?error=${encodeURIComponent(message)}&role=${role}`);
   }
 
-  redirect(role === "INVESTOR" ? "/investor/dashboard" : "/dashboard");
+  // Nouveau compte = en attente (e-mail à confirmer puis validation admin).
+  redirect("/compte-en-attente");
 }
 
 export default async function SignupPage({
@@ -88,7 +87,7 @@ export default async function SignupPage({
               className="rounded-lg border border-line px-3 py-2.5 text-ink"
             />
           </label>
-          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
+          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
             {t("submit")}
           </button>
         </form>

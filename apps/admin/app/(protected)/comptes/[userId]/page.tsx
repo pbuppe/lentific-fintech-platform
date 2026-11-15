@@ -171,7 +171,7 @@ export default async function AccountDetailPage({ params }: { params: { userId: 
               className="rounded-lg border border-line px-3 py-2 text-ink"
             />
           </label>
-          <button className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
+          <button className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">
             {t("sendRequest")}
           </button>
         </form>

@@ -5,14 +5,17 @@
     "simulator": "Simulator",
     "logout": "Log out",
     "login": "Log in",
-    "signup": "Create an account"
+    "signup": "Create an account",
+    "notifications": "{count, plural, =0 {Notifications} one {# unread notification} other {# unread notifications}}",
+    "services": "Services",
+    "contact": "Contact"
   },
   "LandingPage": {
     "eyebrow": "Crowdfunding · P2P",
     "heroTitlePart1": "Funding gets shared",
     "heroTitleHighlight": "with trust",
     "heroTitlePart2": ", not by chance.",
-    "heroSubtitle": "Lentific connects individuals, SMEs and organizations seeking funding with investors (individuals, companies or institutions) looking to grow their savings, with every file verified at each step: identity, repayment capacity, signed contract.",
+    "heroSubtitle": "SODIVA CREDITS connects individuals, SMEs and organizations seeking funding with investors (individuals, companies or institutions) looking to grow their savings, with every file verified at each step: identity, repayment capacity, signed contract.",
     "ctaApply": "Submit a request",
     "ctaMarketplace": "View the marketplace",
     "alreadyAccount": "Already have an account? Log in",
@@ -87,7 +90,7 @@
     "viewMarketplaceLinkArrow": "View the marketplace →",
     "introBoxTitle": "Need to move faster? Request a direct introduction (€15)",
     "introBoxBody": "Rather than waiting, a borrower can request direct contact with an investor (individual, company or organization) and vice versa. Once the request is paid, contact details are exchanged immediately both ways.",
-    "introBoxDisclaimer": "Lentific provides the contact; what happens next between the two parties takes place outside the platform and is not our responsibility.",
+    "introBoxDisclaimer": "SODIVA CREDITS provides the contact; what happens next between the two parties takes place outside the platform and is not our responsibility.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Files already verified, ready to be funded",
     "viewAll": "View all",
@@ -103,7 +106,7 @@
     "ctaFinalTitle": "Ready to get started?",
     "ctaFinalBody": "Create an account in under two minutes, whether you're seeking funding or want to invest.",
     "becomeInvestor": "Become an investor",
-    "footerText": "© {year} Lentific · Crowdfunding platform.",
+    "footerText": "© {year} SODIVA CREDITS · Crowdfunding platform.",
     "footerMarketplace": "Marketplace",
     "footerSimulator": "Simulator",
     "footerLogin": "Log in"
@@ -155,10 +158,11 @@
     "estimationEyebrow": "Estimate",
     "monthlyResult": "{monthly} € / month",
     "totalCost": "Estimated total cost: {total} € (simulated rate {rate}%, the actual rate depends on your file)",
-    "applyCta": "Submit a request"
+    "applyCta": "Submit a request",
+    "legal": "A loan commits you and must be repaid. Check that you can afford the repayments before committing."
   },
   "LoginPage": {
-    "brand": "Lentific",
+    "brand": "SODIVA CREDITS",
     "title": "Log in",
     "noAccountPart1": "Don't have an account yet?",
     "noAccountLink": "Sign up",
@@ -168,7 +172,7 @@
     "genericError": "Unable to log in."
   },
   "SignupPage": {
-    "brand": "Lentific",
+    "brand": "SODIVA CREDITS",
     "title": "Create an account",
     "alreadyRegisteredPart1": "Already registered?",
     "alreadyRegisteredLink": "Log in",
@@ -187,8 +191,17 @@
       "submitApplication": "Submit a request",
       "availableInvestors": "Available investors",
       "introductions": "Introductions",
-      "myDocuments": "My documents"
-    }
+      "myDocuments": "My documents",
+      "messages": "Messages",
+      "payments": "Payments",
+      "notifications": "Notifications",
+      "help": "Need help?"
+    },
+    "sideTitle": "My space",
+    "advisorTitle": "Your adviser",
+    "teamTitle": "A question?",
+    "teamName": "Our team is here to help",
+    "advisorCta": "See my messages"
   },
   "BorrowerDashboard": {
     "statusLabel": {
@@ -226,7 +239,90 @@
     "downloadContract": "Download my contract (PDF)",
     "signInstructions": "Print it, sign it by hand, then send a photo/scan:",
     "contractUploadedPending": "Signed contract sent, awaiting verification by an agent.",
-    "contractConfirmed": "Contract confirmed signed: your financing is now offered to investors."
+    "contractConfirmed": "Contract confirmed signed: your financing is now offered to investors.",
+    "feePaid": "Payment received, thank you. Your invoice is available from your adviser.",
+    "fundsPending": "Contract signed: our team is checking the disbursement of your funds.",
+    "fundsDisbursedKicker": "Funds disbursed",
+    "fundsDisbursedOn": "Paid on {date} · {beneficiary}",
+    "fundsBeneficiary": {
+      "BORROWER": "to your account",
+      "NOTARY": "to your notary",
+      "SUPPLIERS": "to the contractors, on invoices"
+    },
+    "fundsAvailability": {
+      "AVAILABLE": "The funds are available.",
+      "BANK_CHECKS": "Your bank is finishing its usual checks before releasing the funds.",
+      "NOTARY_CHECKS": "Your notary is finishing the usual checks before releasing the funds."
+    },
+    "feeKind": {
+      "BROKER_FEE": "Brokerage fees",
+      "COMPLEMENT": "Additional fees"
+    },
+    "feeStatusPaid": "Paid",
+    "feeStatusDue": "Due by {date}",
+    "feeExplanation": "Due since your loan was disbursed, as set in the signed agreement.",
+    "payFee": "Pay securely",
+    "feeSafetyNote": "No payment may be required before you obtain your loan. Never pay fees to an account given to you by phone or e-mail.",
+    "greeting": "Hello {name}",
+    "greetingSub": "Here is where your requests and your loan stand.",
+    "newRequest": "+ New request",
+    "myApplications": "My requests",
+    "submittedOn": "Submitted on {date}",
+    "alerts": {
+      "docEyebrow": "Document requested",
+      "docDue": "To provide by {date}",
+      "docCta": "Send the document",
+      "feeEyebrow": "Payment due",
+      "feeDue": "To pay by {date}",
+      "feeCta": "See details",
+      "offerEyebrow": "Offer received",
+      "offerBody": "A loan offer is waiting for you.",
+      "offerCta": "See the offer",
+      "signEyebrow": "Contract to sign",
+      "signBody": "Sign and send back your contract.",
+      "signCta": "Sign"
+    },
+    "tracker": {
+      "progress": "Case progress",
+      "steps": {
+        "request": "Request",
+        "identity": "Identity",
+        "documents": "Documents",
+        "review": "Review",
+        "approval": "Approval",
+        "offer": "Offer",
+        "signature": "Signature",
+        "funds": "Funds"
+      },
+      "missingDocs": "{count} missing",
+      "stateDone": "Done",
+      "stateCurrent": "In progress"
+    },
+    "loan": {
+      "kicker": "Current loan · {reference}",
+      "title": "My loan",
+      "inProgress": "Repayment in progress",
+      "donutLabel": "{pct}% of the principal repaid",
+      "repaidShort": "repaid",
+      "borrowed": "Amount borrowed",
+      "repaid": "Already repaid",
+      "remaining": "Outstanding principal",
+      "monthly": "Monthly payment",
+      "nextDue": "Next payment",
+      "end": "Loan ends",
+      "curveTitle": "Outstanding principal over time",
+      "totalInterest": "Total interest cost over the term: {amount}",
+      "lastPaid": "Latest payments",
+      "upcoming": "Upcoming payments",
+      "ofWhichInterest": "of which interest {amount}",
+      "paid": "Debited",
+      "toCome": "Upcoming",
+      "fullSchedule": "Repayment schedule ({count} months)",
+      "colDate": "Date",
+      "colPayment": "Payment",
+      "colInterest": "Interest",
+      "colRemaining": "Outstanding"
+    }
   },
   "BorrowerApplication": {
     "pageEyebrow": "apps/web · (borrower)",
@@ -259,12 +355,43 @@
     "submit": "Send",
     "fulfilledHeading": "Already uploaded",
     "fulfilledEmpty": "No documents uploaded yet.",
-    "viewFile": "view file"
+    "viewFile": "view file",
+    "dueBefore": "To be provided by {date}",
+    "summary": {
+      "identityTitle": "Identity check",
+      "identityVerified": "Identity verified",
+      "identityPending": "In progress",
+      "idSteps": {
+        "upload": {
+          "title": "ID document",
+          "sub": "ID card or passport, both sides"
+        },
+        "review": {
+          "title": "Review by our team",
+          "sub": "Checked against your details"
+        },
+        "confirmed": {
+          "title": "Identity confirmed",
+          "sub": "File ready for lenders"
+        }
+      },
+      "identityRejected": "Your ID document was rejected: send a legible one from \"My requests\".",
+      "identityNote": "We will never ask for your banking login details or a code received by text message.",
+      "checklistTitle": "Case documents",
+      "validatedCount": "{ok} / {total} approved",
+      "identityDoc": "ID document",
+      "state": {
+        "ok": "Approved",
+        "wait": "Being checked",
+        "miss": "To send",
+        "rejected": "Rejected"
+      }
+    }
   },
   "BorrowerInvestors": {
     "title": "Available investors",
     "intro": "Individuals, companies, and organizations publish available capital here. Request a direct introduction (contact details shared immediately) for {fee} €.",
-    "disclaimer": "Once introduced, all further exchanges and any resulting loan take place directly between you and the investor, outside the platform. Lentific provides the contact but is not responsible for what happens between you afterwards.",
+    "disclaimer": "Once introduced, all further exchanges and any resulting loan take place directly between you and the investor, outside the platform. SODIVA CREDITS provides the contact but is not responsible for what happens between you afterwards.",
     "empty": "No capital currently available.",
     "defaultInvestorName": "Investor",
     "verified": "Verified ✓",
@@ -276,7 +403,7 @@
   "BorrowerIntroductions": {
     "title": "My introductions",
     "intro": "A paid introduction reveals contact details both ways: you and the other person can message each other directly.",
-    "disclaimer": "From there, your exchanges and anything you decide together happen outside the platform. Lentific provided the contact but is not responsible for what happens between you afterwards.",
+    "disclaimer": "From there, your exchanges and anything you decide together happen outside the platform. SODIVA CREDITS provided the contact but is not responsible for what happens between you afterwards.",
     "sentHeading": "Requests I've sent",
     "sentEmpty": "No requests sent yet.",
     "targetTypeInvestor": "investor / lender",
@@ -315,8 +442,11 @@
       "verification": "Verification",
       "documents": "My documents",
       "premium": "Premium",
-      "notifications": "Alerts"
-    }
+      "notifications": "Notifications",
+      "messages": "Messages",
+      "help": "Need help?"
+    },
+    "sideTitle": "My space"
   },
   "InvestorDashboard": {
     "invalidAmount": "Invalid amount.",
@@ -326,7 +456,7 @@
       "high": "High"
     },
     "title": "P2P Marketplace",
-    "intro": "If you request a direct introduction to a borrower, everything that follows happens outside the platform. Lentific provides the contact but is not responsible for what happens between you afterwards.",
+    "intro": "If you request a direct introduction to a borrower, everything that follows happens outside the platform. SODIVA CREDITS provides the contact but is not responsible for what happens between you afterwards.",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
     "pendingDocumentsRequested": "{count, plural, one {requested} other {requested}} by our team ({labels}).",
     "send": "Send →",
@@ -352,12 +482,13 @@
     "send": "Send",
     "alreadyUploaded": "Already uploaded",
     "noUploadedDocuments": "No documents uploaded for now.",
-    "viewFile": "view file"
+    "viewFile": "view file",
+    "dueBefore": "To be provided by {date}"
   },
   "InvestorIntroductions": {
     "title": "My introductions",
     "description": "A paid introduction reveals contact details both ways: you and the other party can write to each other directly.",
-    "disclaimer": "From that point on, your exchanges and anything you decide together happen outside the platform. Lentific provided the contact but is not responsible for what happens between you afterwards.",
+    "disclaimer": "From that point on, your exchanges and anything you decide together happen outside the platform. SODIVA CREDITS provided the contact but is not responsible for what happens between you afterwards.",
     "sentTitle": "Requests I've sent",
     "noSentRequests": "No requests sent for now.",
     "targetTypeApplication": "credit applicant",
@@ -459,7 +590,33 @@
     },
     "cancelButton": "Cancel my subscription",
     "reactivateButton": "Reactivate subscription",
-    "subscribeButton": "Go Premium (15 € simulated now)"
+    "subscribeButton": "Go Premium (15 € simulated now)",
+    "kicker": "Investor area",
+    "paypalPrice": "{amount} € / month, charged automatically by PayPal. Cancel at any time from this page, free of charge.",
+    "statusEnding": "Active until the end of the period",
+    "nextCharge": "Next PayPal payment on {date}.",
+    "pastDue": "The last payment did not go through: Premium is suspended. Check your payment method in your PayPal account, or subscribe again below.",
+    "ended": "Subscription ended on {date}.",
+    "legacyNote": "This trial subscription will stop on {date}. To keep Premium afterwards, subscribe again with PayPal.",
+    "cancelHint": "No more payments after cancelling. Premium stays active until {date}.",
+    "subscribePaypal": "Subscribe with PayPal · {amount} € / month",
+    "resubscribePaypal": "Subscribe again with PayPal · {amount} € / month",
+    "reactivatePaypal": "Subscribe again with PayPal",
+    "reactivateHint": "Nothing is charged before {date}: the new subscription takes over at the end of the period already paid.",
+    "paypalHint": "Secure payment by PayPal: PayPal account or bank card.",
+    "sandbox": "test mode",
+    "historyHeading": "Payment history",
+    "historyEmpty": "No payments yet.",
+    "simulated": "Simulated",
+    "notices": {
+      "active": "Welcome to Premium! Your subscription is active. Next payment on {date}.",
+      "deferred": "Subscription renewed. Premium continues without interruption; the first payment will be on {date}.",
+      "cancelled": "Subscription cancelled: no more payments. Premium stays active until {date}.",
+      "checkout_cancelled": "Subscription cancelled on PayPal: nothing was charged.",
+      "failed": "PayPal did not confirm the subscription: nothing was charged. Please try again or contact your adviser.",
+      "unavailable": "Online payment is temporarily unavailable. Please try again in a few minutes.",
+      "cancel_failed": "The cancellation could not be sent to PayPal. Please try again in a few minutes; if it is still not confirmed, contact your adviser."
+    }
   },
   "InvestorVerification": {
     "title": "Verify my profile",
@@ -519,7 +676,304 @@
     "amountLabel": "Amount (€)",
     "durationLabel": "Duration (months)",
     "rateLabel": "Annual rate (%)",
-    "disclaimer": "This contract is an automatically generated template. Lentific is not a party to the loan and does not handle its repayment: review it before signing.",
+    "disclaimer": "This contract is an automatically generated template. SODIVA CREDITS is not a party to the loan and does not handle its repayment: review it before signing.",
     "submit": "Generate the contract"
+  },
+  "AccountPending": {
+    "kicker": "SODIVA CREDITS · My account",
+    "titleEmail": "Confirm your email address",
+    "titleReview": "Your account is being reviewed",
+    "titleRejected": "Registration not approved",
+    "titleSuspended": "Account suspended",
+    "stepSignup": "Confirm your email address",
+    "stepEmail": "Review by an administrator",
+    "stepReview": "Access to your account",
+    "done": "done",
+    "inProgress": "in progress",
+    "pillEmail": "Email to confirm",
+    "pillReview": "Awaiting approval",
+    "pillRejected": "Rejected",
+    "pillSuspended": "Suspended",
+    "bodyEmail": "We sent a confirmation link to {email}. Click it to confirm your address. Remember to check your spam folder.",
+    "resend": "Resend the link",
+    "resent": "A new link has just been sent to you.",
+    "bodyReview": "Thank you, your email address is confirmed. An administrator will now review your registration. You will receive an email as soon as your account is active.",
+    "bodyRejected": "After review, your registration could not be approved.",
+    "reason": "Reason:",
+    "bodySuspended": "Access to your account has been suspended. Please contact support for more information."
+  },
+  "VerifyEmail": {
+    "kicker": "SODIVA CREDITS · Email confirmation",
+    "titleOk": "Email address confirmed",
+    "titleError": "Invalid link",
+    "pillOk": "Confirmed",
+    "pillError": "Error",
+    "bodyVerified": "Thank you! Your email address is confirmed. An administrator will now approve your account; you will be notified by email.",
+    "bodyAlready": "This email address was already confirmed.",
+    "bodyExpired": "This link has expired. Sign in to receive a new one.",
+    "bodyInvalid": "This link is invalid or has been replaced by a newer one. Sign in to receive a new one.",
+    "ctaStatus": "View my account status",
+    "ctaLogin": "Sign in"
+  },
+  "ClientInbox": {
+    "kicker": "My space",
+    "notificationsTitle": "Notifications",
+    "unreadCount": "{count, plural, =0 {All caught up.} one {# unread notification} other {# unread notifications}}",
+    "markAllRead": "Mark all as read",
+    "notificationsEmpty": "No notifications yet.",
+    "documentRequested": "Document requested: {label}",
+    "messageFrom": "Message from {name}",
+    "unread": "Unread",
+    "messagesTitle": "Messages",
+    "messagesSubtitle": "Messages from your adviser and the team. You get an e-mail for each new message.",
+    "messagesEmpty": "No messages yet.",
+    "team": "The team",
+    "advisorRole": "Your adviser",
+    "new": "New",
+    "safetyNote": "We will never ask for your login details, or for a payment to an account given by phone or e-mail.",
+    "eventLabels": {
+      "kyc_manual_review_requested": "Our team will verify your identity",
+      "kyc_completed": "Your identity has been verified",
+      "kyc_rejected": "Your identity check was unsuccessful",
+      "introduction_paid": "Someone asked to get in touch with you",
+      "investor_verified": "Your investor profile has been verified",
+      "investor_rejected": "Your investor verification was declined",
+      "document_requested": "A document was requested from you",
+      "funding_match_alert": "A new case matches your profile",
+      "disbursement_confirmed": "Your loan funds have been disbursed",
+      "disbursement_funds_available": "Your funds are available",
+      "broker_fee_requested": "New payment request",
+      "advisor_message": "New message",
+      "assistance_started": "An adviser opened an assistance session",
+      "assistance_document": "Your adviser uploaded a document for you",
+      "assistance_ended": "Assistance session ended"
+    }
+  },
+  "ClientPayments": {
+    "kicker": "My space",
+    "title": "Payments",
+    "subtitle": "Payment requests from the firm and your payment history. No payment can be required before you obtain your loan.",
+    "paidOk": "Payment received, thank you.",
+    "pendingHeading": "To pay",
+    "pendingEmpty": "No pending payment.",
+    "feeKind": {
+      "BROKER_FEE": "Brokerage fees",
+      "COMPLEMENT": "Additional fees"
+    },
+    "forApplication": "Case {reference}",
+    "dueBy": "By {date}",
+    "feeExplanation": "Due since your loan was disbursed, as set in the signed agreement.",
+    "pay": "Pay securely",
+    "historyHeading": "History",
+    "historyEmpty": "No payments made.",
+    "paymentType": {
+      "fee": "Fees",
+      "subscription": "Subscription"
+    },
+    "paymentStatus": {
+      "PENDING": "Processing",
+      "COMPLETED": "Paid",
+      "FAILED": "Failed",
+      "REFUNDED": "Refunded"
+    },
+    "safetyNote": "Never pay fees to an account given by phone or e-mail: all your payments are made here."
+  },
+  "ClientHelp": {
+    "title": "Need help?",
+    "subtitle": "Stuck on a step? Call your adviser and give them an assistance code: they can guide you, or do some steps for you, for 30 minutes.",
+    "askTitle": "Get an assistance code",
+    "problemLabel": "Describe what is blocking you (optional)",
+    "problemPlaceholder": "E.g. I can't upload my documents",
+    "askNote": "Only give this code to your adviser, during a call you made to the firm's official number. We will never ask for your password.",
+    "getCode": "Get my code",
+    "giveCode": "Give this code to your adviser:",
+    "codeValidity": "Valid until {time}.",
+    "codeConsent": "By giving this code, you allow your adviser to assist you for 30 minutes. Everything they do appears in the log below.",
+    "cancel": "Cancel this code",
+    "activeTitle": "{name}, from the firm, is helping you now",
+    "activeBody": "Assistance session open until {time}.",
+    "guideLabel": "Your adviser is guiding you:",
+    "guidance": {
+      "sign": "open \"My requests\", download the contract, sign it, then send it back with the \"Send\" button.",
+      "pay": "open \"Payments\" in the left menu, then tap \"Pay securely\".",
+      "identity": "open \"My requests\" and upload a clear photo of your ID, both sides.",
+      "accept": "open \"My requests\", read the proposed offer, then tap \"Accept the offer\" if it suits you.",
+      "documents": "open \"My documents\", choose the requested file, then tap \"Send\"."
+    },
+    "bannerPending": "Assistance code active: give it to your adviser.",
+    "bannerSeeCode": "See the code",
+    "bannerActive": "{name}, from the firm, is helping you · until {time}",
+    "logTitle": "What the team did on your account",
+    "logEmpty": "Nothing yet.",
+    "safety": "In doubt about a call? Hang up and call the firm's official number.",
+    "logActions": {
+      "assistance_opened": "Assistance session opened with your code",
+      "assistance_guided": "You were guided step by step",
+      "assistance_document": "A document was uploaded for you",
+      "assistance_ended": "Assistance session ended",
+      "account_suspended": "Account suspended",
+      "account_reactivated": "Account reactivated"
+    }
+  },
+  "HomeBroker": {
+    "hero": {
+      "eyebrow": "Credit broker in Troyes · crowdlending",
+      "title": "Your project deserves the right financing.",
+      "lead": "We compare offers from banks and from our platform's investors for you, put your file together and support you until the funds are paid out. First conversation free and without commitment.",
+      "ctaStudy": "Request a free study",
+      "trust1": "Fees due only if your loan is obtained",
+      "trust2": "Track your file online"
+    },
+    "estimator": {
+      "title": "Estimate your monthly payment",
+      "amount": "Project amount",
+      "duration": "Duration",
+      "years": "{years} years",
+      "rate": "Indicative rate",
+      "result": "Estimated monthly payment",
+      "perMonth": "/ month",
+      "total": "Estimated total cost: {total}",
+      "cta": "Get a free call back",
+      "legal": "Indicative estimate, not contractual (excluding insurance and fees). A loan commits you and must be repaid. Check that you can afford the repayments before committing."
+    },
+    "services": {
+      "eyebrow": "Our services",
+      "title": "Financing for every project",
+      "mortgage": {
+        "title": "Mortgage",
+        "body": "Purchase, construction or renegotiation: we champion your file to get the best terms.",
+        "cta": "Request a study"
+      },
+      "consolidation": {
+        "title": "Debt consolidation",
+        "body": "A single, lighter monthly payment to give your budget room to breathe.",
+        "cta": "Request a study"
+      },
+      "works": {
+        "title": "Home improvement & personal loans",
+        "body": "Renovation, vehicle, cash needs: a suitable loan, compared across several lenders.",
+        "cta": "Request a study"
+      },
+      "crowd": {
+        "title": "Crowdlending",
+        "body": "Verified investors on our platform fund projects directly, with transparent tracking.",
+        "cta": "See the marketplace"
+      }
+    },
+    "about": {
+      "eyebrow": "The firm",
+      "title": "A local broker in Troyes",
+      "text": "SODIVA CREDITS helps individuals and businesses in the Aube area find their financing. As independents with no exclusive ties, we compare offers and defend your interests.",
+      "points": {
+        "independent": "No lender imposes its offers on us",
+        "single": "A single point of contact from start to finish",
+        "remote": "Video meetings and a 100% online file",
+        "noFees": "Our fees are only due once your loan is obtained"
+      }
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "You may be wondering…",
+      "cost": {
+        "q": "How much does a broker cost?",
+        "a": "Our fees are set in writing at the first meeting and are only due if your loan is obtained. No payment of any kind may be required before one or more loans are obtained."
+      },
+      "individuals": {
+        "q": "Can my loan be funded by individuals?",
+        "a": "Yes, depending on your project: on our marketplace, investors whose identity we have verified fund projects, with a contract and tracking just like a regular loan. Beware of an \"individual\" offering you a loan online and asking for fees up front: it is a common scam."
+      },
+      "documents": {
+        "q": "Which documents should I prepare?",
+        "a": "ID, last three payslips, last two tax notices, last three bank statements and, if relevant, the sale agreement or quotes. You upload them directly from your space."
+      },
+      "delay": {
+        "q": "How long does it take to get my loan?",
+        "a": "Allow generally four to eight weeks between the first conversation and the loan offer, depending on the lender and how complex your file is. With the \"Priority file\" option, you can receive your loan within one to three weeks at most. You follow every step online."
+      },
+      "remote": {
+        "q": "Do you work remotely?",
+        "a": "Yes. Meetings by phone or video, documents sent from your secure space, and live assistance if you get stuck on a step."
+      }
+    },
+    "contact": {
+      "eyebrow": "Let's talk about your project",
+      "title": "Request your free study",
+      "sub": "Leave your details: an adviser will call you back to discuss your project.",
+      "free": "Free study",
+      "noCommitment": "No commitment",
+      "answer": "Call back within 1 working day",
+      "name": "Full name",
+      "phone": "Phone",
+      "email": "E-mail",
+      "project": "Your project",
+      "projects": {
+        "MORTGAGE": "Mortgage",
+        "CONSOLIDATION": "Debt consolidation",
+        "WORKS": "Home improvement / personal loan",
+        "OTHER": "Other"
+      },
+      "amount": "Amount considered (optional)",
+      "amountPlaceholder": "E.g. 150000",
+      "message": "Message (optional)",
+      "consent": "I agree to be contacted about my project. My data is only used to handle my request and is never sold.",
+      "send": "Send my request",
+      "invalid": "Please check your details: valid name, phone, e-mail and consent required.",
+      "thanksTitle": "Thank you, your request has been received!",
+      "thanksBody": "An adviser will call you back within one working day. We will never ask you for a payment before your loan is obtained."
+    },
+    "footer": {
+      "phone": "Tel.:",
+      "services": "Our services",
+      "simulator": "Simulator",
+      "marketplace": "Marketplace",
+      "faq": "FAQ",
+      "login": "Client area",
+      "orias": "Banking intermediary registered with ORIAS under no. {number} (www.orias.fr).",
+      "mediator": "Consumer mediator: {name}.",
+      "creditWarning": "A loan commits you and must be repaid. Check that you can afford the repayments before committing.",
+      "noFeeBefore": "No payment of any kind may be required before one or more loans are obtained.",
+      "copyright": "© {year} {company}. All rights reserved.",
+      "contactPerson": "Your contact: {name}"
+    }
+  },
+  "CreditsSummary": {
+    "title": "My loans",
+    "subtitle": "All your loans, from the application under review to the release of funds.",
+    "credited": "Amount credited",
+    "creditedNote": "of which {amount} being released",
+    "availableTotal": "Available",
+    "verifyingTotal": "Being verified",
+    "requestedOn": "requested on {date}",
+    "stage": {
+      "study": "Under review",
+      "granted": "Approved",
+      "verifying": "Payment being verified",
+      "releasing": "Being released",
+      "available": "Released",
+      "refused": "Declined",
+      "cancelled": "Cancelled"
+    },
+    "detail": {
+      "study": "Your application is being reviewed by our advisers.",
+      "granted": "Loan approved, the payment is being prepared.",
+      "verifying": "The payment has been made, we are checking the proof.",
+      "releasingNotary": "Amount credited. Your notary is completing checks before releasing the funds.",
+      "releasingBank": "Amount credited. Your bank is completing checks before releasing the funds.",
+      "available": "The funds are at your disposal.",
+      "availableOn": "Funds at your disposal since {date}."
+    }
+  },
+  "PaypalCheckout": {
+    "hint": "Secure payment by PayPal: PayPal account or bank card.",
+    "sandbox": "test mode",
+    "cancelled": "Payment cancelled: nothing was charged. You can try again whenever you like.",
+    "failed": "PayPal could not confirm the payment and nothing was charged. Please try again or contact your adviser.",
+    "unavailable": "Online payment is temporarily unavailable. Please try again in a few minutes.",
+    "priorityPaid": "Payment received: your application is now a priority.",
+    "description": {
+      "broker_fee": "Brokerage fees, application {reference}",
+      "priority": "Priority file option, application {reference}"
+    },
+    "review": "PayPal has received your payment. Our team is checking it and will get back to you very soon: there is no need to pay again."
   }
 }

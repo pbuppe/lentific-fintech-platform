@@ -1,5 +1,5 @@
 import { prisma } from "../client";
-import type { Role, InvestorVerificationStatus } from "@prisma/client";
+import type { Role, InvestorVerificationStatus, AccountStatus } from "@prisma/client";
 
 export function findById(id: string) {
   return prisma.user.findUnique({
@@ -106,5 +106,37 @@ export function listPendingInvestorVerifications() {
   return prisma.investorProfile.findMany({
     where: { verificationStatus: "PENDING_REVIEW" },
     include: { user: { include: { documents: true } } },
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Validation des comptes (demande produit 2026-11-14)
+// ---------------------------------------------------------------------------
+
+export function setAccountStatus(
+  userId: string,
+  status: AccountStatus,
+  extra?: {
+    emailVerifiedAt?: Date;
+    accountReviewedAt?: Date;
+    accountReviewedById?: string | null;
+    accountRejectionReason?: string | null;
+  }
+) {
+  return prisma.user.update({ where: { id: userId }, data: { accountStatus: status, ...extra } });
+}
+
+/** Comptes publics par statut, les plus anciens d'abord (file d'attente). */
+export function listByAccountStatus(status: AccountStatus) {
+  return prisma.user.findMany({
+    where: { role: { in: ["BORROWER", "INVESTOR"] }, accountStatus: status },
+    include: { country: true },
+    orderBy: { createdAt: "asc" },
+  });
+}
+
+export function countPendingReview() {
+  return prisma.user.count({
+    where: { role: { in: ["BORROWER", "INVESTOR"] }, accountStatus: "PENDING_REVIEW" },
   });
 }

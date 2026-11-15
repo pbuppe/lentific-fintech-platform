@@ -61,7 +61,7 @@ export default function AdminBootstrapPage({
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">Lentific · accès restreint</p>
+      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">SODIVA CREDITS · accès restreint</p>
       <h1 className="mt-1 font-display text-2xl font-semibold text-ink">Créer un compte back-office</h1>
       <p className="mt-2 text-sm text-ink-soft">
         Ce lien crée directement un compte agent, administrateur ou super administrateur, sans passer par un compte
@@ -107,7 +107,7 @@ export default function AdminBootstrapPage({
               ))}
             </select>
           </label>
-          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
+          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
             Créer le compte
           </button>
         </form>

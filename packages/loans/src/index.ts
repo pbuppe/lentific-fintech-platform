@@ -2,7 +2,7 @@
  * packages/loans : génération de l'échéancier une fois une offre acceptée.
  * Écoute "offer.accepted" plutôt que d'être appelé directement (règle §02).
  */
-import { loansRepo } from "@fintech/database";
+import { loansRepo, prisma } from "@fintech/database";
 import { registerHandler, emit } from "@fintech/workflow";
 
 export function createLoanFromOffer(offerId: string) {
@@ -44,4 +44,23 @@ registerHandler("offer.accepted", async (payload) => {
   // pouvoir être généré, c'est pourquoi il écoute "loan.created" et non
   // directement "offer.accepted" (l'ordre des handlers n'est pas garanti).
   await emit("loan.created", { loanId: loan.id, offerId, applicationId, amount, durationMonths, rate });
+});
+
+// Versement des fonds confirmé (demande produit 2026-11-14) : l'échéancier
+// démarre à la date réelle du versement, pas à l'acceptation de l'offre.
+// On ne le recale que si aucune échéance n'a encore été payée.
+registerHandler("disbursement.confirmed", async (payload) => {
+  const { applicationId } = payload as { applicationId: string };
+  const application = await prisma.application.findUnique({
+    where: { id: applicationId },
+    include: { disbursement: true, offers: { where: { status: "ACCEPTED" }, include: { loan: { include: { repayments: true } } } } },
+  });
+  const offer = application?.offers[0];
+  const loan = offer?.loan;
+  if (!application?.disbursement || !offer || !loan) return;
+  if (loan.repayments.some((r) => r.status === "PAID")) return;
+
+  await prisma.repayment.deleteMany({ where: { loanId: loan.id, status: "SCHEDULED" } });
+  const schedule = buildSchedule(Number(offer.amount), offer.durationMonths, Number(offer.rate), application.disbursement.fundsDate);
+  await loansRepo.generateRepaymentSchedule(loan.id, schedule);
 });

@@ -5,14 +5,17 @@
     "simulator": "Simulador",
     "logout": "Cerrar sesión",
     "login": "Iniciar sesión",
-    "signup": "Crear una cuenta"
+    "signup": "Crear una cuenta",
+    "notifications": "{count, plural, =0 {Notificaciones} one {# notificación sin leer} other {# notificaciones sin leer}}",
+    "services": "Servicios",
+    "contact": "Contacto"
   },
   "LandingPage": {
     "eyebrow": "Financiación participativa · P2P",
     "heroTitlePart1": "La financiación se reparte",
     "heroTitleHighlight": "con confianza",
     "heroTitlePart2": ", no al azar.",
-    "heroSubtitle": "Lentific pone en contacto a particulares, pymes y entidades que buscan financiación con inversores (particulares, empresas o instituciones) que quieren hacer crecer sus ahorros, con un expediente verificado en cada etapa: identidad, capacidad de reembolso, contrato firmado.",
+    "heroSubtitle": "SODIVA CREDITS pone en contacto a particulares, pymes y entidades que buscan financiación con inversores (particulares, empresas o instituciones) que quieren hacer crecer sus ahorros, con un expediente verificado en cada etapa: identidad, capacidad de reembolso, contrato firmado.",
     "ctaApply": "Solicitar financiación",
     "ctaMarketplace": "Ver la marketplace",
     "alreadyAccount": "¿Ya tienes cuenta? Iniciar sesión",
@@ -87,7 +90,7 @@
     "viewMarketplaceLinkArrow": "Ver la marketplace →",
     "introBoxTitle": "¿Necesitas ir más rápido? Solicita una puesta en contacto directa (15 €)",
     "introBoxBody": "En lugar de esperar, un prestatario puede solicitar el contacto directo de un inversor (particular, empresa o entidad) y viceversa. Una vez pagada la solicitud, los datos de contacto se intercambian de inmediato en ambos sentidos.",
-    "introBoxDisclaimer": "Lentific facilita el contacto; lo que ocurra después entre las dos partes tiene lugar fuera de la plataforma y no es responsabilidad nuestra.",
+    "introBoxDisclaimer": "SODIVA CREDITS facilita el contacto; lo que ocurra después entre las dos partes tiene lugar fuera de la plataforma y no es responsabilidad nuestra.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Expedientes ya verificados, listos para financiar",
     "viewAll": "Ver todo",
@@ -103,7 +106,7 @@
     "ctaFinalTitle": "¿Listo para empezar?",
     "ctaFinalBody": "Crea una cuenta en menos de dos minutos, ya sea que busques financiación o quieras invertir.",
     "becomeInvestor": "Conviértete en inversor",
-    "footerText": "© {year} Lentific · Plataforma de financiación participativa.",
+    "footerText": "© {year} SODIVA CREDITS · Plataforma de financiación participativa.",
     "footerMarketplace": "Marketplace",
     "footerSimulator": "Simulador",
     "footerLogin": "Iniciar sesión"
@@ -155,10 +158,11 @@
     "estimationEyebrow": "Estimación",
     "monthlyResult": "{monthly} € / mes",
     "totalCost": "Coste total estimado: {total} € (tasa simulada {rate}%, la tasa real depende de tu expediente)",
-    "applyCta": "Solicitar financiación"
+    "applyCta": "Solicitar financiación",
+    "legal": "Un crédito le compromete y debe devolverse. Compruebe su capacidad de reembolso antes de comprometerse."
   },
   "LoginPage": {
-    "brand": "Lentific",
+    "brand": "SODIVA CREDITS",
     "title": "Iniciar sesión",
     "noAccountPart1": "¿Aún no tienes cuenta?",
     "noAccountLink": "Regístrate",
@@ -168,7 +172,7 @@
     "genericError": "No se pudo iniciar sesión."
   },
   "SignupPage": {
-    "brand": "Lentific",
+    "brand": "SODIVA CREDITS",
     "title": "Crear una cuenta",
     "alreadyRegisteredPart1": "¿Ya estás registrado?",
     "alreadyRegisteredLink": "Iniciar sesión",
@@ -187,8 +191,17 @@
       "submitApplication": "Solicitar financiación",
       "availableInvestors": "Inversores disponibles",
       "introductions": "Puestas en contacto",
-      "myDocuments": "Mis documentos"
-    }
+      "myDocuments": "Mis documentos",
+      "messages": "Mensajes",
+      "payments": "Pagos",
+      "notifications": "Notificaciones",
+      "help": "¿Necesita ayuda?"
+    },
+    "sideTitle": "Mi espacio",
+    "advisorTitle": "Su asesor",
+    "teamTitle": "¿Una pregunta?",
+    "teamName": "Nuestro equipo le responde",
+    "advisorCta": "Ver mis mensajes"
   },
   "BorrowerDashboard": {
     "statusLabel": {
@@ -226,7 +239,90 @@
     "downloadContract": "Descargar mi contrato (PDF)",
     "signInstructions": "Imprímelo, fírmalo a mano y luego envía una foto/escaneo:",
     "contractUploadedPending": "Contrato firmado enviado, a la espera de verificación por un agente.",
-    "contractConfirmed": "Contrato confirmado firmado: tu financiación ya se ofrece a los inversores."
+    "contractConfirmed": "Contrato confirmado firmado: tu financiación ya se ofrece a los inversores.",
+    "feePaid": "Pago recibido, gracias. Su asesor tiene su factura a disposición.",
+    "fundsPending": "Contrato firmado: nuestro equipo está verificando el desembolso de sus fondos.",
+    "fundsDisbursedKicker": "Fondos desembolsados",
+    "fundsDisbursedOn": "Pagados el {date} · {beneficiary}",
+    "fundsBeneficiary": {
+      "BORROWER": "en su cuenta",
+      "NOTARY": "a su notario",
+      "SUPPLIERS": "a las empresas, contra facturas"
+    },
+    "fundsAvailability": {
+      "AVAILABLE": "Los fondos están disponibles.",
+      "BANK_CHECKS": "Su banco está terminando sus controles habituales antes de ponerlos a disposición.",
+      "NOTARY_CHECKS": "Su notario está terminando sus comprobaciones habituales antes de ponerlos a disposición."
+    },
+    "feeKind": {
+      "BROKER_FEE": "Honorarios de intermediación",
+      "COMPLEMENT": "Complemento de honorarios"
+    },
+    "feeStatusPaid": "Pagado",
+    "feeStatusDue": "A pagar antes del {date}",
+    "feeExplanation": "Adeudados desde el desembolso de su préstamo, según el convenio firmado.",
+    "payFee": "Pagar de forma segura",
+    "feeSafetyNote": "No se puede exigir ningún pago antes de obtener su préstamo. Nunca pague gastos a una cuenta comunicada por teléfono o correo electrónico.",
+    "greeting": "Hola {name}",
+    "greetingSub": "Así van sus solicitudes y su crédito.",
+    "newRequest": "+ Nueva solicitud",
+    "myApplications": "Mis solicitudes",
+    "submittedOn": "Presentada el {date}",
+    "alerts": {
+      "docEyebrow": "Documento solicitado",
+      "docDue": "A entregar antes del {date}",
+      "docCta": "Enviar el documento",
+      "feeEyebrow": "Pago pendiente",
+      "feeDue": "A pagar antes del {date}",
+      "feeCta": "Ver el detalle",
+      "offerEyebrow": "Oferta recibida",
+      "offerBody": "Le espera una oferta de préstamo.",
+      "offerCta": "Ver la oferta",
+      "signEyebrow": "Contrato por firmar",
+      "signBody": "Firme y devuelva su contrato.",
+      "signCta": "Firmar"
+    },
+    "tracker": {
+      "progress": "Avance del expediente",
+      "steps": {
+        "request": "Solicitud",
+        "identity": "Identidad",
+        "documents": "Documentos",
+        "review": "Estudio",
+        "approval": "Aprobación",
+        "offer": "Oferta",
+        "signature": "Firma",
+        "funds": "Fondos"
+      },
+      "missingDocs": "{count, plural, one {# pendiente} other {# pendientes}}",
+      "stateDone": "Hecho",
+      "stateCurrent": "En curso"
+    },
+    "loan": {
+      "kicker": "Crédito en curso · {reference}",
+      "title": "Mi crédito",
+      "inProgress": "Reembolso en curso",
+      "donutLabel": "{pct} % del capital reembolsado",
+      "repaidShort": "reembolsado",
+      "borrowed": "Importe prestado",
+      "repaid": "Ya reembolsado",
+      "remaining": "Capital pendiente",
+      "monthly": "Cuota mensual",
+      "nextDue": "Próximo vencimiento",
+      "end": "Fin del préstamo",
+      "curveTitle": "Evolución del capital pendiente",
+      "totalInterest": "Coste total de los intereses: {amount}",
+      "lastPaid": "Últimas cuotas",
+      "upcoming": "Próximas cuotas",
+      "ofWhichInterest": "de ellos intereses {amount}",
+      "paid": "Cargada",
+      "toCome": "Pendiente",
+      "fullSchedule": "Cuadro de amortización ({count} meses)",
+      "colDate": "Fecha",
+      "colPayment": "Cuota",
+      "colInterest": "Intereses",
+      "colRemaining": "Pendiente"
+    }
   },
   "BorrowerApplication": {
     "pageEyebrow": "apps/web · (borrower)",
@@ -259,12 +355,43 @@
     "submit": "Enviar",
     "fulfilledHeading": "Ya enviados",
     "fulfilledEmpty": "Aún no se ha enviado ningún documento.",
-    "viewFile": "ver el archivo"
+    "viewFile": "ver el archivo",
+    "dueBefore": "A entregar antes del {date}",
+    "summary": {
+      "identityTitle": "Verificación de identidad",
+      "identityVerified": "Identidad verificada",
+      "identityPending": "En curso",
+      "idSteps": {
+        "upload": {
+          "title": "Documento de identidad",
+          "sub": "DNI o pasaporte, por ambas caras"
+        },
+        "review": {
+          "title": "Control por nuestro equipo",
+          "sub": "Comparación con sus datos"
+        },
+        "confirmed": {
+          "title": "Identidad confirmada",
+          "sub": "Expediente listo para los prestamistas"
+        }
+      },
+      "identityRejected": "Su documento de identidad ha sido rechazado: envíe uno legible desde «Mis solicitudes».",
+      "identityNote": "Nunca le pediremos sus claves bancarias ni un código recibido por SMS.",
+      "checklistTitle": "Documentos del expediente",
+      "validatedCount": "{ok} / {total} validados",
+      "identityDoc": "Documento de identidad",
+      "state": {
+        "ok": "Validado",
+        "wait": "En verificación",
+        "miss": "Por enviar",
+        "rejected": "Rechazado"
+      }
+    }
   },
   "BorrowerInvestors": {
     "title": "Inversores disponibles",
     "intro": "Particulares, empresas y entidades publican aquí el capital que están dispuestos a prestar. Solicita una puesta en contacto directa (datos de contacto compartidos al instante) por {fee} €.",
-    "disclaimer": "Una vez puestos en contacto, los intercambios y el eventual préstamo se realizan directamente entre tú y el inversor, fuera de la plataforma. Lentific facilita el contacto, pero no es responsable de lo que ocurra después entre vosotros.",
+    "disclaimer": "Una vez puestos en contacto, los intercambios y el eventual préstamo se realizan directamente entre tú y el inversor, fuera de la plataforma. SODIVA CREDITS facilita el contacto, pero no es responsable de lo que ocurra después entre vosotros.",
     "empty": "No hay capital disponible publicado por ahora.",
     "defaultInvestorName": "Inversor",
     "verified": "Verificado ✓",
@@ -276,7 +403,7 @@
   "BorrowerIntroductions": {
     "title": "Mis puestas en contacto",
     "intro": "Una puesta en contacto pagada revela los datos de contacto en ambos sentidos: tú y la otra persona podéis escribiros directamente.",
-    "disclaimer": "A partir de ahí, vuestros intercambios y todo lo que decidáis juntos suceden fuera de la plataforma. Lentific facilitó el contacto, pero no es responsable de lo que ocurra entre vosotros después.",
+    "disclaimer": "A partir de ahí, vuestros intercambios y todo lo que decidáis juntos suceden fuera de la plataforma. SODIVA CREDITS facilitó el contacto, pero no es responsable de lo que ocurra entre vosotros después.",
     "sentHeading": "Solicitudes que he enviado",
     "sentEmpty": "Aún no se ha enviado ninguna solicitud.",
     "targetTypeInvestor": "inversor / prestamista",
@@ -315,8 +442,11 @@
       "verification": "Verificación",
       "documents": "Mis documentos",
       "premium": "Premium",
-      "notifications": "Alertas"
-    }
+      "notifications": "Notificaciones",
+      "messages": "Mensajes",
+      "help": "¿Necesita ayuda?"
+    },
+    "sideTitle": "Mi espacio"
   },
   "InvestorDashboard": {
     "invalidAmount": "Importe no válido.",
@@ -326,7 +456,7 @@
       "high": "Alto"
     },
     "title": "Marketplace P2P",
-    "intro": "Si solicitas una puesta en contacto directa con un prestatario, los intercambios posteriores tienen lugar fuera de la plataforma. Lentific facilita el contacto, pero no es responsable de lo que ocurra después entre vosotros.",
+    "intro": "Si solicitas una puesta en contacto directa con un prestatario, los intercambios posteriores tienen lugar fuera de la plataforma. SODIVA CREDITS facilita el contacto, pero no es responsable de lo que ocurra después entre vosotros.",
     "pendingDocumentsCount": "{count, plural, one {# documento} other {# documentos}}",
     "pendingDocumentsRequested": "{count, plural, one {solicitado} other {solicitados}} por nuestro equipo ({labels}).",
     "send": "Enviar →",
@@ -352,12 +482,13 @@
     "send": "Enviar",
     "alreadyUploaded": "Ya subidos",
     "noUploadedDocuments": "No se ha subido ningún documento por ahora.",
-    "viewFile": "ver archivo"
+    "viewFile": "ver archivo",
+    "dueBefore": "A entregar antes del {date}"
   },
   "InvestorIntroductions": {
     "title": "Mis puestas en contacto",
     "description": "Una puesta en contacto pagada revela los datos de contacto en ambos sentidos: tú y la otra persona podéis escribiros directamente.",
-    "disclaimer": "A partir de ahí, vuestros intercambios y todo lo que decidáis juntos tienen lugar fuera de la plataforma. Lentific ha facilitado el contacto, pero no es responsable de lo que ocurra entre vosotros a partir de entonces.",
+    "disclaimer": "A partir de ahí, vuestros intercambios y todo lo que decidáis juntos tienen lugar fuera de la plataforma. SODIVA CREDITS ha facilitado el contacto, pero no es responsable de lo que ocurra entre vosotros a partir de entonces.",
     "sentTitle": "Solicitudes que he enviado",
     "noSentRequests": "No hay solicitudes enviadas por ahora.",
     "targetTypeApplication": "solicitante de crédito",
@@ -459,7 +590,33 @@
     },
     "cancelButton": "Cancelar mi suscripción",
     "reactivateButton": "Reactivar la suscripción",
-    "subscribeButton": "Hazte Premium (15 € simulados ahora)"
+    "subscribeButton": "Hazte Premium (15 € simulados ahora)",
+    "kicker": "Espacio inversor",
+    "paypalPrice": "{amount} € / mes, cobrados automáticamente por PayPal. Cancelable en cualquier momento desde esta página, sin gastos.",
+    "statusEnding": "Activo hasta el final del periodo",
+    "nextCharge": "Próximo cobro de PayPal el {date}.",
+    "pastDue": "El último cobro no se ha realizado: Premium está suspendido. Compruebe su medio de pago en su cuenta PayPal o vuelva a suscribirse abajo.",
+    "ended": "Suscripción finalizada el {date}.",
+    "legacyNote": "Esta suscripción de prueba finalizará el {date}. Para mantener Premium después, vuelva a suscribirse con PayPal.",
+    "cancelHint": "No habrá más cobros tras la cancelación. Premium sigue activo hasta el {date}.",
+    "subscribePaypal": "Suscribirse con PayPal · {amount} € / mes",
+    "resubscribePaypal": "Volver a suscribirme con PayPal · {amount} € / mes",
+    "reactivatePaypal": "Volver a suscribirme con PayPal",
+    "reactivateHint": "No se cobra nada antes del {date}: la nueva suscripción toma el relevo al final del periodo ya pagado.",
+    "paypalHint": "Pago seguro con PayPal: cuenta PayPal o tarjeta bancaria.",
+    "sandbox": "modo de prueba",
+    "historyHeading": "Historial de cobros",
+    "historyEmpty": "Todavía no hay cobros.",
+    "simulated": "Simulado",
+    "notices": {
+      "active": "¡Bienvenido a Premium! Su suscripción está activa. Próximo cobro el {date}.",
+      "deferred": "Nueva suscripción registrada. Premium continúa sin interrupción; el primer cobro será el {date}.",
+      "cancelled": "Suscripción cancelada: no habrá más cobros. Premium sigue activo hasta el {date}.",
+      "checkout_cancelled": "Suscripción cancelada en PayPal: no se ha cobrado nada.",
+      "failed": "PayPal no ha confirmado la suscripción: no se ha cobrado nada. Inténtelo de nuevo o contacte con su asesor.",
+      "unavailable": "El pago en línea no está disponible temporalmente. Inténtelo de nuevo en unos minutos.",
+      "cancel_failed": "No se ha podido transmitir la cancelación a PayPal. Inténtelo de nuevo en unos minutos; si sigue sin confirmarse, contacte con su asesor."
+    }
   },
   "InvestorVerification": {
     "title": "Verificación de mi perfil",
@@ -519,7 +676,304 @@
     "amountLabel": "Importe (€)",
     "durationLabel": "Duración (meses)",
     "rateLabel": "Tasa anual (%)",
-    "disclaimer": "Este contrato es una plantilla generada automáticamente. Lentific no es parte del préstamo ni interviene en su reembolso: revísalo antes de firmar.",
+    "disclaimer": "Este contrato es una plantilla generada automáticamente. SODIVA CREDITS no es parte del préstamo ni interviene en su reembolso: revísalo antes de firmar.",
     "submit": "Generar el contrato"
+  },
+  "AccountPending": {
+    "kicker": "SODIVA CREDITS · Mi cuenta",
+    "titleEmail": "Confirma tu dirección de correo",
+    "titleReview": "Tu cuenta está en revisión",
+    "titleRejected": "Registro no validado",
+    "titleSuspended": "Cuenta suspendida",
+    "stepSignup": "Confirmar tu correo",
+    "stepEmail": "Validación por un administrador",
+    "stepReview": "Acceso a tu espacio",
+    "done": "completado",
+    "inProgress": "en curso",
+    "pillEmail": "Correo por confirmar",
+    "pillReview": "Pendiente de validación",
+    "pillRejected": "Rechazado",
+    "pillSuspended": "Suspendida",
+    "bodyEmail": "Hemos enviado un enlace de confirmación a {email}. Haz clic en él para confirmar tu dirección. Revisa también la carpeta de spam.",
+    "resend": "Reenviar el enlace",
+    "resent": "Te acabamos de enviar un nuevo enlace.",
+    "bodyReview": "Gracias, tu correo está confirmado. Un administrador revisará ahora tu registro. Recibirás un correo cuando tu cuenta esté activada.",
+    "bodyRejected": "Tras revisarlo, tu registro no ha podido ser validado.",
+    "reason": "Motivo:",
+    "bodySuspended": "El acceso a tu cuenta ha sido suspendido. Contacta con el soporte para más información."
+  },
+  "VerifyEmail": {
+    "kicker": "SODIVA CREDITS · Confirmación de correo",
+    "titleOk": "Correo confirmado",
+    "titleError": "Enlace no válido",
+    "pillOk": "Confirmado",
+    "pillError": "Error",
+    "bodyVerified": "¡Gracias! Tu correo está confirmado. Un administrador validará ahora tu cuenta; te avisaremos por correo.",
+    "bodyAlready": "Este correo ya estaba confirmado.",
+    "bodyExpired": "Este enlace ha caducado. Inicia sesión para recibir uno nuevo.",
+    "bodyInvalid": "Este enlace no es válido o ha sido sustituido por otro más reciente. Inicia sesión para recibir uno nuevo.",
+    "ctaStatus": "Ver el estado de mi cuenta",
+    "ctaLogin": "Iniciar sesión"
+  },
+  "ClientInbox": {
+    "kicker": "Mi espacio",
+    "notificationsTitle": "Notificaciones",
+    "unreadCount": "{count, plural, =0 {Todo leído.} one {# notificación sin leer} other {# notificaciones sin leer}}",
+    "markAllRead": "Marcar todo como leído",
+    "notificationsEmpty": "Todavía no hay notificaciones.",
+    "documentRequested": "Documento solicitado: {label}",
+    "messageFrom": "Mensaje de {name}",
+    "unread": "Sin leer",
+    "messagesTitle": "Mensajes",
+    "messagesSubtitle": "Los mensajes de su asesor y del equipo. Recibe un correo con cada mensaje nuevo.",
+    "messagesEmpty": "Todavía no hay mensajes.",
+    "team": "El equipo",
+    "advisorRole": "Su asesor",
+    "new": "Nuevo",
+    "safetyNote": "Nunca le pediremos sus credenciales ni un pago a una cuenta comunicada por teléfono o correo.",
+    "eventLabels": {
+      "kyc_manual_review_requested": "Nuestro equipo verificará su identidad",
+      "kyc_completed": "Su identidad ha sido verificada",
+      "kyc_rejected": "La verificación de su identidad no ha prosperado",
+      "introduction_paid": "Alguien ha pedido ponerse en contacto con usted",
+      "investor_verified": "Su perfil de inversor ha sido verificado",
+      "investor_rejected": "Su verificación de inversor ha sido rechazada",
+      "document_requested": "Se le ha solicitado un documento",
+      "funding_match_alert": "Un nuevo expediente corresponde a su perfil",
+      "disbursement_confirmed": "Los fondos de su préstamo han sido desembolsados",
+      "disbursement_funds_available": "Sus fondos están disponibles",
+      "broker_fee_requested": "Nueva solicitud de pago",
+      "advisor_message": "Nuevo mensaje",
+      "assistance_started": "Un asesor ha abierto una sesión de asistencia",
+      "assistance_document": "Su asesor ha depositado un documento por usted",
+      "assistance_ended": "Sesión de asistencia terminada"
+    }
+  },
+  "ClientPayments": {
+    "kicker": "Mi espacio",
+    "title": "Pagos",
+    "subtitle": "Las solicitudes de pago del despacho y el historial de sus pagos. No se le puede exigir ningún pago antes de obtener su préstamo.",
+    "paidOk": "Pago recibido, gracias.",
+    "pendingHeading": "Por pagar",
+    "pendingEmpty": "Ningún pago pendiente.",
+    "feeKind": {
+      "BROKER_FEE": "Honorarios de intermediación",
+      "COMPLEMENT": "Complemento de honorarios"
+    },
+    "forApplication": "Expediente {reference}",
+    "dueBy": "Antes del {date}",
+    "feeExplanation": "Adeudados desde el desembolso de su préstamo, según el convenio firmado.",
+    "pay": "Pagar de forma segura",
+    "historyHeading": "Historial",
+    "historyEmpty": "Ningún pago realizado.",
+    "paymentType": {
+      "fee": "Gastos",
+      "subscription": "Suscripción"
+    },
+    "paymentStatus": {
+      "PENDING": "En curso",
+      "COMPLETED": "Pagado",
+      "FAILED": "Fallido",
+      "REFUNDED": "Reembolsado"
+    },
+    "safetyNote": "Nunca pague gastos a una cuenta comunicada por teléfono o correo: todos sus pagos se hacen aquí."
+  },
+  "ClientHelp": {
+    "title": "¿Necesita ayuda?",
+    "subtitle": "¿Bloqueado en un paso? Llame a su asesor y dele un código de asistencia: podrá guiarle o hacer algunos trámites por usted durante 30 minutos.",
+    "askTitle": "Obtener un código de asistencia",
+    "problemLabel": "Describa su bloqueo (opcional)",
+    "problemPlaceholder": "Ej.: no consigo enviar mis documentos",
+    "askNote": "Dé este código solo a su asesor, durante una llamada que usted haya hecho al número oficial del despacho. Nunca le pediremos su contraseña.",
+    "getCode": "Obtener mi código",
+    "giveCode": "Dé este código a su asesor:",
+    "codeValidity": "Válido hasta las {time}.",
+    "codeConsent": "Al dar este código, autoriza a su asesor a asistirle durante 30 minutos. Todo lo que haga aparece en el registro de abajo.",
+    "cancel": "Anular este código",
+    "activeTitle": "{name}, del despacho, le está ayudando",
+    "activeBody": "Sesión de asistencia abierta hasta las {time}.",
+    "guideLabel": "Su asesor le guía:",
+    "guidance": {
+      "sign": "abra «Mis solicitudes», descargue el contrato, fírmelo y devuélvalo con el botón «Enviar».",
+      "pay": "abra «Pagos» en el menú de la izquierda y pulse «Pagar de forma segura».",
+      "identity": "abra «Mis solicitudes» y envíe una foto legible de su documento de identidad, por ambas caras.",
+      "accept": "abra «Mis solicitudes», lea la oferta y pulse «Aceptar la oferta» si le conviene.",
+      "documents": "abra «Mis documentos», elija el archivo solicitado y pulse «Enviar»."
+    },
+    "bannerPending": "Código de asistencia activo: déselo a su asesor.",
+    "bannerSeeCode": "Ver el código",
+    "bannerActive": "{name}, del despacho, le ayuda · hasta las {time}",
+    "logTitle": "Lo que el equipo ha hecho en su cuenta",
+    "logEmpty": "Nada por ahora.",
+    "safety": "¿Duda sobre una llamada? Cuelgue y llame al número oficial del despacho.",
+    "logActions": {
+      "assistance_opened": "Sesión de asistencia abierta con su código",
+      "assistance_guided": "Ha sido guiado paso a paso",
+      "assistance_document": "Se ha depositado un documento por usted",
+      "assistance_ended": "Sesión de asistencia terminada",
+      "account_suspended": "Cuenta suspendida",
+      "account_reactivated": "Cuenta reactivada"
+    }
+  },
+  "HomeBroker": {
+    "hero": {
+      "eyebrow": "Intermediario de crédito en Troyes · financiación participativa",
+      "title": "Su proyecto merece la financiación adecuada.",
+      "lead": "Comparamos por usted las ofertas de los bancos y de los inversores de nuestra plataforma, preparamos su expediente y le acompañamos hasta el desembolso. Primera conversación gratuita y sin compromiso.",
+      "ctaStudy": "Solicitar un estudio gratuito",
+      "trust1": "Honorarios solo si obtiene su préstamo",
+      "trust2": "Siga su expediente en línea"
+    },
+    "estimator": {
+      "title": "Calcule su cuota mensual",
+      "amount": "Importe del proyecto",
+      "duration": "Duración",
+      "years": "{years} años",
+      "rate": "Tipo orientativo",
+      "result": "Cuota estimada",
+      "perMonth": "/ mes",
+      "total": "Coste total estimado: {total}",
+      "cta": "Que me llamen gratis",
+      "legal": "Estimación orientativa, sin valor contractual (sin seguro ni gastos). Un crédito le compromete y debe devolverse. Compruebe su capacidad de reembolso antes de comprometerse."
+    },
+    "services": {
+      "eyebrow": "Nuestros servicios",
+      "title": "Una financiación para cada proyecto",
+      "mortgage": {
+        "title": "Crédito hipotecario",
+        "body": "Compra, construcción o renegociación: defendemos su expediente para obtener las mejores condiciones.",
+        "cta": "Solicitar un estudio"
+      },
+      "consolidation": {
+        "title": "Reunificación de deudas",
+        "body": "Una sola cuota, más ligera, para dar aire a su presupuesto.",
+        "cta": "Solicitar un estudio"
+      },
+      "works": {
+        "title": "Préstamo reformas y consumo",
+        "body": "Reformas, vehículo, tesorería: un crédito adaptado, comparado entre varios prestamistas.",
+        "cta": "Solicitar un estudio"
+      },
+      "crowd": {
+        "title": "Financiación participativa",
+        "body": "Inversores verificados de nuestra plataforma financian proyectos directamente, con un seguimiento transparente.",
+        "cta": "Ver el marketplace"
+      }
+    },
+    "about": {
+      "eyebrow": "El despacho",
+      "title": "Un intermediario de proximidad, en Troyes",
+      "text": "SODIVA CREDITS acompaña a particulares y profesionales del Aube en la búsqueda de su financiación. Independientes y sin exclusividad, comparamos y defendemos su interés.",
+      "points": {
+        "independent": "Ningún prestamista nos impone sus ofertas",
+        "single": "Un único interlocutor de principio a fin",
+        "remote": "Citas por videollamada y expediente 100 % en línea",
+        "noFees": "Nuestros honorarios solo se deben una vez obtenido el préstamo"
+      }
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Quizá se pregunte…",
+      "cost": {
+        "q": "¿Cuánto cuesta un intermediario?",
+        "a": "Nuestros honorarios se fijan por escrito en la primera cita y solo se deben si obtiene su préstamo. No puede exigirse ningún pago, de ninguna naturaleza, antes de obtener uno o varios préstamos."
+      },
+      "individuals": {
+        "q": "¿Pueden financiar mi préstamo particulares?",
+        "a": "Sí, según su proyecto: en nuestro marketplace, inversores cuya identidad hemos verificado financian proyectos, con contrato y seguimiento como un crédito clásico. Desconfíe de un «particular» que le ofrezca un préstamo por Internet pidiendo gastos por adelantado: es una estafa frecuente."
+      },
+      "documents": {
+        "q": "¿Qué documentos debo preparar?",
+        "a": "Documento de identidad, últimas tres nóminas, últimas dos declaraciones de la renta, últimos tres extractos y, en su caso, el contrato de arras o los presupuestos. Los envía directamente desde su espacio."
+      },
+      "delay": {
+        "q": "¿Cuánto tarda en obtener mi préstamo?",
+        "a": "Cuente en general de cuatro a ocho semanas entre el primer contacto y la oferta de préstamo, según el prestamista y la complejidad del expediente. Con la opción «Expediente prioritario», puede recibir su crédito en un plazo de una a tres semanas como máximo. Usted sigue cada etapa en línea."
+      },
+      "remote": {
+        "q": "¿Trabajan a distancia?",
+        "a": "Sí. Citas por teléfono o videollamada, documentos enviados desde su espacio seguro y asistencia en directo si se bloquea en un paso."
+      }
+    },
+    "contact": {
+      "eyebrow": "Hablemos de su proyecto",
+      "title": "Solicite su estudio gratuito",
+      "sub": "Déjenos sus datos: un asesor le llamará para hablar de su proyecto.",
+      "free": "Estudio gratuito",
+      "noCommitment": "Sin compromiso",
+      "answer": "Llamada en 24 h laborables",
+      "name": "Nombre y apellidos",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "project": "Su proyecto",
+      "projects": {
+        "MORTGAGE": "Crédito hipotecario",
+        "CONSOLIDATION": "Reunificación de deudas",
+        "WORKS": "Préstamo reformas / consumo",
+        "OTHER": "Otro"
+      },
+      "amount": "Importe previsto (opcional)",
+      "amountPlaceholder": "Ej.: 150000",
+      "message": "Mensaje (opcional)",
+      "consent": "Acepto que me contacten sobre mi proyecto. Mis datos solo sirven para tramitar mi solicitud y nunca se venden.",
+      "send": "Enviar mi solicitud",
+      "invalid": "Revise sus datos: nombre, teléfono y correo válidos y consentimiento obligatorio.",
+      "thanksTitle": "¡Gracias, hemos recibido su solicitud!",
+      "thanksBody": "Un asesor le llamará en 24 horas laborables. Nunca le pediremos un pago antes de obtener su préstamo."
+    },
+    "footer": {
+      "phone": "Tel.:",
+      "services": "Servicios",
+      "simulator": "Simulador",
+      "marketplace": "Marketplace",
+      "faq": "Preguntas frecuentes",
+      "login": "Área de cliente",
+      "orias": "Intermediario bancario inscrito en el ORIAS con el n.º {number} (www.orias.fr).",
+      "mediator": "Mediador de consumo: {name}.",
+      "creditWarning": "Un crédito le compromete y debe devolverse. Compruebe su capacidad de reembolso antes de comprometerse.",
+      "noFeeBefore": "No puede exigirse ningún pago, de ninguna naturaleza, antes de obtener uno o varios préstamos.",
+      "copyright": "© {year} {company}. Todos los derechos reservados.",
+      "contactPerson": "Su interlocutor: {name}"
+    }
+  },
+  "CreditsSummary": {
+    "title": "Mis créditos",
+    "subtitle": "Todos sus créditos, desde el expediente en estudio hasta la puesta a disposición de los fondos.",
+    "credited": "Importe abonado",
+    "creditedNote": "de los cuales {amount} en curso de puesta a disposición",
+    "availableTotal": "Disponible",
+    "verifyingTotal": "En verificación",
+    "requestedOn": "solicitado el {date}",
+    "stage": {
+      "study": "En estudio",
+      "granted": "Concedido",
+      "verifying": "Pago en verificación",
+      "releasing": "En curso de puesta a disposición",
+      "available": "A su disposición",
+      "refused": "Rechazado",
+      "cancelled": "Anulado"
+    },
+    "detail": {
+      "study": "Nuestros asesores están estudiando su expediente.",
+      "granted": "Crédito concedido, el pago se está preparando.",
+      "verifying": "El pago se ha realizado, estamos verificando el justificante.",
+      "releasingNotary": "Importe abonado. Su notario finaliza sus verificaciones antes de liberar los fondos.",
+      "releasingBank": "Importe abonado. Su banco finaliza sus controles antes de liberar los fondos.",
+      "available": "Los fondos están a su disposición.",
+      "availableOn": "Fondos a su disposición desde el {date}."
+    }
+  },
+  "PaypalCheckout": {
+    "hint": "Pago seguro con PayPal: cuenta PayPal o tarjeta bancaria.",
+    "sandbox": "modo de prueba",
+    "cancelled": "Pago cancelado: no se ha cobrado nada. Puede volver a intentarlo cuando quiera.",
+    "failed": "PayPal no ha podido confirmar el pago y no se ha cobrado nada. Inténtelo de nuevo o contacte con su asesor.",
+    "unavailable": "El pago en línea no está disponible temporalmente. Inténtelo de nuevo en unos minutos.",
+    "priorityPaid": "Pago recibido: su expediente es ahora prioritario.",
+    "description": {
+      "broker_fee": "Honorarios de intermediación, expediente {reference}",
+      "priority": "Opción Expediente prioritario, expediente {reference}"
+    },
+    "review": "PayPal ha recibido su pago. Nuestro equipo lo está verificando y se pondrá en contacto con usted muy pronto: no es necesario pagar de nuevo."
   }
 }

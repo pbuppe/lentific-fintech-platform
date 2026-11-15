@@ -16,8 +16,11 @@ export function listByBorrower(borrowerId: string) {
   return prisma.application.findMany({
     where: { borrowerId },
     include: {
-      offers: { include: { loan: { include: { fundingOpportunity: true } } } },
+      offers: { include: { loan: { include: { fundingOpportunity: true, repayments: { orderBy: { dueDate: "asc" } } } } } },
       documents: true,
+      currency: true,
+      disbursement: true,
+      brokerFees: { where: { status: { not: "CANCELLED" } }, orderBy: { createdAt: "desc" } },
     },
     orderBy: { createdAt: "desc" },
   });

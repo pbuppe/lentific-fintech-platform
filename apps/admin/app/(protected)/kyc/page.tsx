@@ -86,7 +86,7 @@ export default async function KycQueuePage() {
                   <input type="hidden" name="documentId" value={doc.id} />
                   <input type="hidden" name="applicationId" value={doc.applicationId ?? ""} />
                   <button
-                    className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink disabled:opacity-50"
+                    className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-white hover:bg-yellow-ink disabled:opacity-50"
                     disabled={!doc.applicationId}
                   >
                     {t("confirmVerification")}

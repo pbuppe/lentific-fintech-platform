@@ -10,14 +10,24 @@
     "riskEngine": "Risiko-Engine",
     "accountsSuperAdmin": "Konten (Super-Admin)",
     "statistics": "Statistiken",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "accountValidation": "Zu prüfende Konten",
+    "outboundEmails": "Gesendete E-Mails",
+    "pendingCount": "{count} Konto/Konten ausstehend",
+    "funds": "Auszahlungen & Honorare",
+    "pendingFundsCount": "{count, plural, one {# Auszahlung zu bestätigen} other {# Auszahlungen zu bestätigen}}",
+    "clientRequests": "Anfragen & Nachrichten",
+    "console": "Super-Admin-Konsole",
+    "prospects": "Kontaktanfragen",
+    "newProspectsCount": "{count, plural, one {# neue Anfrage} other {# neue Anfragen}}"
   },
   "AdminLoginPage": {
-    "kicker": "Lentific · Back-Office",
+    "kicker": "SODIVA CREDITS · Back-Office",
     "title": "Mitarbeiteranmeldung",
     "emailLabel": "E-Mail",
     "passwordLabel": "Passwort",
-    "submit": "Anmelden"
+    "submit": "Anmelden",
+    "activated": "Ihr Zugang ist aktiviert: Melden Sie sich mit Ihrem neuen Passwort an."
   },
   "CasesQueuePage": {
     "kicker": "apps/admin · Back-Office",
@@ -47,7 +57,14 @@
     "empty": "Noch keine Konten.",
     "verified": "Verifiziert",
     "roleBorrower": "Kreditnehmer",
-    "roleInvestor": "Investor"
+    "roleInvestor": "Investor",
+    "accountStatus": {
+      "PENDING_EMAIL": "E-Mail zu bestätigen",
+      "PENDING_REVIEW": "Zu prüfen",
+      "ACTIVE": "Aktiv",
+      "REJECTED": "Abgelehnt",
+      "SUSPENDED": "Gesperrt"
+    }
   },
   "AccountDetailPage": {
     "backToAccounts": "← Zurück zu den Konten",
@@ -62,7 +79,7 @@
     "applicationsTitle": "Finanzierungsanträge",
     "listingsTitle": "Veröffentlichte Kapitalangebote",
     "introductionsTitle": "Vermittlungen",
-    "introductionsDisclaimer": "Hinweis: Sobald eine Vermittlung bezahlt wurde, findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, Lentific übernimmt dafür keine Verantwortung.",
+    "introductionsDisclaimer": "Hinweis: Sobald eine Vermittlung bezahlt wurde, findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, SODIVA CREDITS übernimmt dafür keine Verantwortung.",
     "introSent": "→ hat den Kontakt von {name} angefordert ({status})",
     "introReceived": "← Kontakt angefordert von {name} ({status})",
     "documentsTitle": "Hochgeladene Dokumente",
@@ -132,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "apps/admin · Übersicht",
     "title": "Vermittelte Profile",
-    "description": "Liste der Paare, die ihre Kontaktdaten über eine bezahlte Vermittlung ausgetauscht haben. Ab diesem Zeitpunkt findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, Lentific übernimmt dafür keine Verantwortung, es wurde lediglich der Kontakt hergestellt.",
+    "description": "Liste der Paare, die ihre Kontaktdaten über eine bezahlte Vermittlung ausgetauscht haben. Ab diesem Zeitpunkt findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, SODIVA CREDITS übernimmt dafür keine Verantwortung, es wurde lediglich der Kontakt hergestellt.",
     "empty": "Noch keine bezahlten Vermittlungen.",
     "paid": "Bezahlt",
     "investorToBorrower": "Investor zu Kreditnehmer",
@@ -169,5 +186,460 @@
     "byLanguage": "Nach Sprache",
     "byCountry": "Nach Land",
     "noData": "Noch keine Daten."
+  },
+  "AccountValidationPage": {
+    "kicker": "Registrierungen",
+    "title": "Zu prüfende Konten",
+    "description": "Kein Kreditnehmer und kein Investor erhält Zugang zu seinem Konto, bevor Sie es freigeben. Prüfen Sie jede Registrierung und geben Sie sie frei oder lehnen Sie sie mit Begründung ab; die Person wird per E-Mail informiert.",
+    "doneApproved": "Konto freigegeben. Eine Aktivierungs-E-Mail wurde gesendet.",
+    "doneRejected": "Registrierung abgelehnt. Die Person wurde per E-Mail informiert.",
+    "doneResent": "Neuer Bestätigungslink gesendet.",
+    "toReviewTitle": "E-Mail bestätigt, wartet auf Ihre Entscheidung",
+    "toReviewEmpty": "Keine Registrierung wartet auf Freigabe.",
+    "roleBorrower": "Kreditnehmer",
+    "roleInvestor": "Investor",
+    "signedUpAt": "Registriert am",
+    "emailVerifiedAt": "E-Mail bestätigt am",
+    "country": "Land",
+    "approve": "Konto freigeben",
+    "reject": "Ablehnen…",
+    "reasonLabel": "Ablehnungsgrund (wird der Person gesendet)",
+    "reasonPlaceholder": "Z. B.: unvollständige Angaben, Profil außerhalb des Rahmens…",
+    "confirmReject": "Ablehnung bestätigen",
+    "emailPendingTitle": "E-Mail noch nicht bestätigt",
+    "emailPendingDescription": "Diese Personen haben den Link in der E-Mail noch nicht angeklickt. Sie können den Link erneut senden oder trotzdem freigeben, wenn Sie die Person kennen.",
+    "emailPendingEmpty": "Keine Registrierung wartet auf E-Mail-Bestätigung.",
+    "resend": "Link erneut senden",
+    "approveAnyway": "Trotzdem freigeben",
+    "rejectedTitle": "Abgelehnte Registrierungen"
+  },
+  "OutboundEmailsPage": {
+    "kicker": "Kommunikation",
+    "title": "Gesendete E-Mails",
+    "descriptionLocal": "Es ist noch kein Versanddienst angebunden: E-Mails werden nicht wirklich versendet, sondern hier aufbewahrt, damit Abläufe getestet werden können (z. B. einen Bestätigungslink anklicken).",
+    "descriptionLive": "Die letzten 50 von der Plattform gesendeten E-Mails.",
+    "empty": "Noch keine E-Mails.",
+    "to": "An:",
+    "statusSent": "Gesendet",
+    "statusLocal": "Lokal (nicht gesendet)",
+    "statusFailed": "Fehler"
+  },
+  "FundsPage": {
+    "kicker": "Backoffice · Bewilligte Kredite",
+    "title": "Auszahlungen und Honorare",
+    "description": "Bestätigen Sie die Auszahlung jedes unterzeichneten Kredits. Ein Admin meldet sie mit dem Nachweis des Kreditgebers, danach bestätigt ein anderer Super-Administrator. Honorare können erst nach dieser Bestätigung angefordert werden.",
+    "empty": "Noch keine unterzeichneten Kredite.",
+    "section1": "1 · Kredit bewilligt",
+    "grantedSummary": "{amount} · Zins {rate} % · {months} Monate · Vertrag unterzeichnet",
+    "section2": "2 · Auszahlung bestätigen",
+    "doubleValidationNote": "Vier-Augen-Prinzip: Ein Admin meldet mit Nachweis, ein anderer Super-Admin bestätigt.",
+    "proofRejected": "Nachweis abgelehnt: {reason}. Bitte mit einem lesbaren Dokument erneut melden.",
+    "beneficiaryLabel": "Ausgezahlt an",
+    "availabilityLabel": "Verfügbarkeit für den Kreditnehmer",
+    "fundsDateLabel": "Auszahlungsdatum",
+    "lenderReferenceLabel": "Referenz des Kreditgebers",
+    "proofLabel": "Auszahlungsmitteilung",
+    "proofHint": "Bescheinigung des Kreditgebers oder Notars · PDF, JPG oder PNG, max. 10 MB.",
+    "declare": "Auszahlung melden",
+    "declaredBy": "Gemeldet von",
+    "confirmedBy": "Bestätigt von",
+    "confirm": "Auszahlung bestätigen",
+    "rejectProof": "Nachweis ablehnen…",
+    "reasonLabel": "Grund der Ablehnung",
+    "reasonPlaceholder": "Z. B.: Mitteilung unleserlich, Betrag weicht vom Angebot ab…",
+    "confirmReject": "Nachweis ablehnen",
+    "waitingSuperAdmin": "Wartet auf die Bestätigung eines Super-Administrators.",
+    "waitingOtherSuperAdmin": "Sie haben diese Auszahlung gemeldet: Ein anderer Super-Administrator muss sie bestätigen. Niemand bestätigt die eigene Meldung.",
+    "markAvailableBank": "Die Bank hat die Mittel freigegeben",
+    "markAvailableNotary": "Der Notar hat die Mittel freigegeben",
+    "section3": "3 · Honorare anfordern",
+    "feesLocked": "Nicht verfügbar, solange die Auszahlung nicht bestätigt ist: Vor Erhalt des Kredits darf keine Zahlung verlangt werden.",
+    "feesUnlocked": "Auszahlung bestätigt: Sie können die vereinbarten Honorare anfordern, auch wenn Bank oder Notar ihre Prüfungen noch nicht abgeschlossen haben.",
+    "feeKindLabel": "Betreff",
+    "feeAmountLabel": "Betrag ({currency})",
+    "feeDueLabel": "Fälligkeit",
+    "requestFee": "Zahlungsaufforderung senden",
+    "feePaymentNote": "Der Kunde zahlt in seinem Bereich per sicherer Zahlung an die Kanzlei. Es wird nie eine IBAN per Nachricht verschickt.",
+    "feeDue": "fällig am {date}",
+    "cancelFee": "Stornieren",
+    "noFeesYet": "Noch keine Honoraranforderung gesendet.",
+    "auditTitle": "Audit-Protokoll ({count})",
+    "steps": {
+      "granted": "Bewilligt",
+      "grantedSub": "Vertrag unterzeichnet",
+      "declared": "Auszahlung gemeldet",
+      "declaredSub": "Durch einen Admin",
+      "declaredWaiting": "Wartet auf Super-Admin",
+      "confirmed": "Ausgezahlt",
+      "confirmedSub": "Bestätigt",
+      "available": "Freigabe",
+      "availableSub": "Mittel verfügbar",
+      "fees": "Honorare",
+      "feesSub": "Anforderung möglich"
+    },
+    "status": {
+      "toDeclare": "Auszuzahlen",
+      "declared": "Zu bestätigen",
+      "confirmed": "Ausgezahlt",
+      "rejected": "Nachweis abgelehnt"
+    },
+    "beneficiary": {
+      "BORROWER": "Konto des Kreditnehmers",
+      "NOTARY": "Notariat",
+      "SUPPLIERS": "Unternehmen, gegen Rechnung"
+    },
+    "availability": {
+      "AVAILABLE": "Sofort verfügbar",
+      "BANK_CHECKS": "Prüfungen bei der Bank laufen",
+      "NOTARY_CHECKS": "Beim Notar, Prüfungen laufen"
+    },
+    "feeKind": {
+      "BROKER_FEE": "Vermittlungshonorar",
+      "COMPLEMENT": "Honorarergänzung"
+    },
+    "feeStatus": {
+      "PENDING": "Offen",
+      "PAID": "Bezahlt",
+      "CANCELLED": "Storniert"
+    },
+    "errors": {
+      "not_allowed": "Sie haben keine Berechtigung für diese Aktion.",
+      "not_signed": "Für diesen Vorgang gibt es keinen unterzeichneten Vertrag.",
+      "already_declared": "Die Auszahlung dieses Vorgangs wurde bereits gemeldet.",
+      "invalid_input": "Einige Angaben sind ungültig. Bitte prüfen Sie das Formular.",
+      "not_declared": "Für diesen Vorgang wartet keine Auszahlung auf Bestätigung.",
+      "same_person": "Sie haben diese Auszahlung gemeldet: Ein anderer Super-Administrator muss sie bestätigen.",
+      "reason_required": "Geben Sie einen Ablehnungsgrund an (mindestens 3 Zeichen).",
+      "not_confirmed": "Die Auszahlung ist noch nicht bestätigt.",
+      "fees_locked": "Honorare können erst nach bestätigter Auszahlung angefordert werden.",
+      "not_pending": "Diese Honoraranforderung ist nicht mehr offen.",
+      "proof_missing": "Fügen Sie die Auszahlungsmitteilung bei (max. 10 MB)."
+    },
+    "done": {
+      "declared": "Auszahlung gemeldet. Nun muss ein Super-Administrator sie bestätigen.",
+      "confirmed": "Auszahlung bestätigt. Der Kunde sieht die Mittel, die Honorare sind freigeschaltet.",
+      "rejected": "Nachweis abgelehnt. Der Admin muss die Auszahlung erneut melden.",
+      "available": "Mittel für den Kunden als verfügbar markiert.",
+      "fee_requested": "Honoraranforderung an den Kunden gesendet.",
+      "fee_cancelled": "Honoraranforderung storniert."
+    },
+    "audit": {
+      "disbursement": {
+        "declared": "Auszahlung gemeldet",
+        "confirmed": "Auszahlung bestätigt",
+        "proof_rejected": "Auszahlungsnachweis abgelehnt",
+        "funds_available": "Mittel freigegeben"
+      },
+      "broker_fee": {
+        "requested": "Honorare angefordert",
+        "cancelled": "Honoraranforderung storniert",
+        "paid": "Honorare vom Kunden bezahlt"
+      }
+    }
+  },
+  "ClientRequestsPage": {
+    "kicker": "Backoffice · Kundenbeziehung",
+    "title": "Anfragen und Nachrichten",
+    "description": "Fordern Sie ein Dokument oder eine Zahlung an oder schreiben Sie einem Kunden. Die Sendung erscheint sofort in seinem Bereich (Benachrichtigungen, bei Nachrichten zusätzlich unter „Nachrichten“), und eine E-Mail fordert ihn zur Anmeldung auf.",
+    "done": {
+      "doc": "Anfrage an {name} gesendet. Sie erscheint bei den einzureichenden Dokumenten.",
+      "pay": "Zahlungsaufforderung an {name} gesendet.",
+      "msg": "Nachricht an {name} gesendet. Eine E-Mail hat ihn informiert."
+    },
+    "errors": {
+      "doc_missing": "Wählen Sie mindestens ein Dokument (und geben Sie bei „Anderes Dokument“ eine Bezeichnung an).",
+      "fees_locked": "Keine Zahlungsaufforderung möglich: Die Mittel dieses Kunden sind noch nicht ausgezahlt und bestätigt.",
+      "invalid": "Ungültiger Betrag oder Fälligkeit.",
+      "msg_missing": "Betreff und Nachricht sind Pflichtfelder.",
+      "client": "Kunde nicht gefunden."
+    },
+    "searchPlaceholder": "Kunden suchen…",
+    "clientsCount": "{count, plural, one {# Kunde} other {# Kunden}}",
+    "roleInvestor": "Investor",
+    "roleBorrower": "Kreditnehmer",
+    "noClients": "Kein Kunde gefunden.",
+    "pickClient": "Wählen Sie einen Kunden aus der Liste, um ihm eine Anfrage oder Nachricht zu senden.",
+    "recipient": "Empfänger",
+    "tabs": {
+      "doc": "Dokument anfordern",
+      "pay": "Zahlung anfordern",
+      "msg": "Nachricht"
+    },
+    "docTypesLabel": "Angeforderte Dokumente",
+    "docTypes": {
+      "tax": "Letzter Steuerbescheid",
+      "address": "Wohnsitznachweis, nicht älter als 3 Monate",
+      "payslips": "Letzte 3 Gehaltsabrechnungen",
+      "statements": "Kontoauszüge (letzte 3 Monate)",
+      "quote": "Kostenvoranschlag oder Rechnung der Arbeiten",
+      "identity": "Ausweisdokument",
+      "sale": "Kaufvorvertrag",
+      "other": "Anderes Dokument"
+    },
+    "otherLabel": "Bezeichnung bei „Anderes Dokument“",
+    "otherPlaceholder": "Z. B.: Arbeitgeberbescheinigung",
+    "delayLabel": "Einzureichen innerhalb von",
+    "delays": {
+      "48h": "48 Stunden",
+      "7d": "7 Tagen",
+      "15d": "15 Tagen"
+    },
+    "instructionsLabel": "Hinweise für den Kunden (optional)",
+    "instructionsPlaceholder": "Z. B.: von der Bank zur weiteren Prüfung angefordert.",
+    "sendDoc": "Anfrage senden",
+    "channelsNote": "Der Kunde sieht es in seinem Kundenbereich und erhält eine E-Mail mit der Aufforderung, sich anzumelden (aus Sicherheitsgründen ohne Inhalt).",
+    "payBlocked": "Zahlungsaufforderung nicht möglich: Keiner der Kredite dieses Kunden hat eine bestätigte Auszahlung. Vor Erhalt des Kredits darf nichts kassiert werden.",
+    "payBlockedLink": "Auszahlungen ansehen",
+    "loanLabel": "Betroffener Kredit",
+    "fundsConfirmed": "ausgezahlt",
+    "feeKindLabel": "Betreff",
+    "feeKind": {
+      "BROKER_FEE": "Vermittlungshonorar",
+      "COMPLEMENT": "Honorarergänzung"
+    },
+    "amountLabel": "Betrag",
+    "dueLabel": "Fälligkeit",
+    "payNote": "Der Kunde zahlt in seinem Bereich per sicherer Zahlung an die Kanzlei. Es wird nie eine IBAN per Nachricht verschickt.",
+    "sendPay": "Zahlungsaufforderung senden",
+    "otherCases": "Weitere Vorgänge ohne bestätigte Auszahlung: {list}",
+    "templatesLabel": "Vorlagen",
+    "templates": {
+      "progress": {
+        "label": "Vorgang läuft",
+        "subject": "Ihr Vorgang kommt voran",
+        "body": "Guten Tag {name},\n\ngute Nachrichten: Mehrere Kreditgeber prüfen derzeit Ihre Anfrage. Ich melde mich, sobald ich eine Antwort habe.\n\nMit freundlichen Grüßen"
+      },
+      "granted": {
+        "label": "Kredit bewilligt",
+        "subject": "Ihr Kredit ist bewilligt",
+        "body": "Guten Tag {name},\n\nIhr Kredit ist bewilligt. Sie erhalten das zu unterzeichnende Kreditangebot in Ihrem Bereich.\n\nMit freundlichen Grüßen"
+      },
+      "appointment": {
+        "label": "Termin",
+        "subject": "Lassen Sie uns einen Termin vereinbaren",
+        "body": "Guten Tag {name},\n\nich schlage ein Telefon- oder Videogespräch vor, um Ihren Vorgang zu besprechen. Teilen Sie mir mit, welcher Zeitpunkt Ihnen passt.\n\nMit freundlichen Grüßen"
+      }
+    },
+    "subjectLabel": "Betreff",
+    "bodyLabel": "Nachricht",
+    "sendMsg": "Nachricht senden",
+    "historyFor": "Sendeverlauf · {name}",
+    "historyAll": "Letzte Sendungen",
+    "historyEmpty": "Noch nichts gesendet.",
+    "historyCols": {
+      "date": "Datum",
+      "client": "Kunde",
+      "type": "Art",
+      "subject": "Betreff",
+      "by": "Von",
+      "status": "Status"
+    },
+    "historyStatus": {
+      "received": "Dokument erhalten",
+      "cancelled": "Storniert",
+      "paid": "Bezahlt",
+      "read": "Gelesen",
+      "unread": "Gesendet · ungelesen"
+    },
+    "kind": {
+      "document": "Dokument",
+      "payment": "Zahlung",
+      "message": "Nachricht"
+    }
+  },
+  "ConsolePage": {
+    "kicker": "Backoffice · Super-Admin",
+    "title": "Super-Admin-Konsole",
+    "description": "Verwalten Sie Team und Kundenkonten und helfen Sie einem Kunden live mit dem Code, den er Ihnen am Telefon nennt. Jede Aktion wird protokolliert.",
+    "tabs": {
+      "help": "Unterstützung",
+      "clients": "Kunden",
+      "team": "Team"
+    },
+    "searchPlaceholder": "Kunden suchen…",
+    "suspend": "Sperren",
+    "reactivate": "Reaktivieren",
+    "status": {
+      "ACTIVE": "Aktiv",
+      "SUSPENDED": "Gesperrt"
+    },
+    "roles": {
+      "AGENT": "Sachbearbeiter",
+      "ADMIN": "Admin",
+      "SUPER_ADMIN": "Super-Admin"
+    },
+    "rights": {
+      "AGENT": "Vorgänge, Identität, Verträge",
+      "ADMIN": "+ Freigaben, Auszahlungen, Nachrichten",
+      "SUPER_ADMIN": "Alle Rechte"
+    },
+    "team": {
+      "inviteTitle": "Teammitglied einladen",
+      "name": "Name",
+      "email": "E-Mail",
+      "role": "Rolle",
+      "invite": "Einladung senden",
+      "inviteNote": "Die Person erhält eine E-Mail mit einem Link (72 Std. gültig), um ihr Passwort zu wählen. Kein Passwort läuft über Sie.",
+      "listTitle": "Teamkonten",
+      "colName": "Name",
+      "colRole": "Rolle",
+      "colRights": "Rechte",
+      "colLogin": "Letzte Anmeldung",
+      "colStatus": "Status",
+      "invitationPending": "Einladung gesendet",
+      "you": "Sie",
+      "resend": "Einladung erneut senden",
+      "suspendNote": "Eine Sperre beendet den Zugang sofort (alle Sitzungen werden geschlossen). Konto und frühere Aktionen bleiben im Protokoll. Der letzte aktive Super-Admin kann nicht gesperrt werden."
+    },
+    "clients": {
+      "colClient": "Kunde",
+      "colCase": "Vorgang",
+      "colAccount": "Konto",
+      "colBlock": "Gemeldetes Problem",
+      "assist": "Unterstützen"
+    },
+    "help": {
+      "asking": "Hilfe angefragt",
+      "pick": "Wählen Sie den Kunden am Telefon aus der Liste.",
+      "kicker": "Unterstützung",
+      "activeUntil": "Sitzung offen · bis {time}",
+      "busy": "Bereits unterstützt von {name}",
+      "codeWaiting": "Code erzeugt, wartet",
+      "noCode": "Kein aktiver Code",
+      "problem": "Gemeldetes Problem:",
+      "noProblem": "keines",
+      "codeExplain": "Bitten Sie den Kunden am Telefon, „Brauchen Sie Hilfe?“ in seinem Bereich zu öffnen und Ihnen seinen 6-stelligen Code vorzulesen. Der Code gilt als Zustimmung für 30 Minuten Unterstützung.",
+      "codeLabel": "6-stelliger Code",
+      "open": "Sitzung öffnen",
+      "doTitle": "Was Sie für ihn erledigen können",
+      "noPendingDocs": "Kein offenes Dokument für diesen Kunden.",
+      "uploadFor": "Für ihn hochladen: {label}",
+      "uploadHint": "Vom Kunden per E-Mail oder Post erhaltenes Dokument.",
+      "upload": "Hochladen",
+      "moreActions": "Profil, Dokumentanfragen, Dateien:",
+      "openAccount": "Kundenakte öffnen",
+      "guideTitle": "Vom Kunden zu erledigen, mit Ihnen am Telefon",
+      "guideExplain": "Diese Schritte verpflichten den Kunden: Er muss sie selbst ausführen. Wählen Sie eine Anleitung, sie erscheint sofort auf seinem Bildschirm.",
+      "end": "Sitzung beenden"
+    },
+    "guidance": {
+      "sign": {
+        "title": "Angebot oder Dokument unterzeichnen",
+        "why": "Die Unterschrift muss vom Kunden kommen"
+      },
+      "pay": {
+        "title": "Honorar bezahlen",
+        "why": "Der Kunde bestätigt die Zahlung selbst"
+      },
+      "identity": {
+        "title": "Identitätsprüfung",
+        "why": "Der Ausweis muss vom Kunden kommen"
+      },
+      "accept": {
+        "title": "Ein Angebot annehmen",
+        "why": "Die Zustimmung muss vom Kunden kommen"
+      },
+      "documents": {
+        "title": "Ein Dokument hochladen",
+        "why": "Der Kunde lädt die Datei selbst hoch"
+      }
+    },
+    "done": {
+      "invited": "Einladung gesendet.",
+      "invite_resent": "Neue Einladung gesendet.",
+      "suspended": "Konto gesperrt: Zugang ist gesperrt.",
+      "reactivated": "Konto reaktiviert.",
+      "session_opened": "Unterstützungssitzung für 30 Minuten geöffnet.",
+      "guided": "Die Anleitung erscheint auf dem Bildschirm des Kunden.",
+      "uploaded": "Dokument für den Kunden hochgeladen.",
+      "session_ended": "Unterstützungssitzung beendet."
+    },
+    "errors": {
+      "not_allowed": "Aktion nicht erlaubt.",
+      "invalid_input": "Ungültige Angaben.",
+      "email_taken": "Mit dieser E-Mail existiert bereits ein Konto.",
+      "self": "Sie können Ihr eigenes Konto hier nicht ändern.",
+      "last_super_admin": "Nicht möglich: Das ist der letzte aktive Super-Admin.",
+      "not_found": "Konto oder Anfrage nicht gefunden.",
+      "no_code": "Kein gültiger Code für diesen Kunden: Bitten Sie ihn, einen neuen zu erzeugen.",
+      "bad_code": "Falscher Code.",
+      "too_many_attempts": "Zu viele Versuche: Der Code ist gesperrt. Der Kunde muss einen neuen erzeugen.",
+      "no_session": "Keine von Ihnen geöffnete Sitzung für diesen Kunden.",
+      "file": "Wählen Sie eine Datei (max. 10 MB)."
+    },
+    "log": {
+      "title": "Protokoll der Konsolenaktionen",
+      "empty": "Noch keine Aktionen.",
+      "by": "von {name}",
+      "note": "Nur lesbares Protokoll. Der Kunde sieht unter „Brauchen Sie Hilfe?“, was sein Konto betrifft.",
+      "actions": {
+        "staff_invited": "Mitglied eingeladen",
+        "staff_invite_resent": "Einladung erneut gesendet",
+        "staff_activated": "Zugang aktiviert",
+        "account_suspended": "Konto gesperrt",
+        "account_reactivated": "Konto reaktiviert",
+        "assistance_opened": "Unterstützung geöffnet (Kundencode)",
+        "assistance_guided": "Kunde Schritt für Schritt angeleitet",
+        "assistance_document": "Dokument für den Kunden hochgeladen",
+        "assistance_ended": "Unterstützung beendet"
+      }
+    },
+    "appStatus": {
+      "DRAFT": "Entwurf",
+      "SUBMITTED": "Eingereicht",
+      "KYC_PENDING": "Identität zu prüfen",
+      "KYC_VERIFIED": "Identität geprüft",
+      "UNDER_REVIEW": "In Prüfung",
+      "PUBLISHED": "Angebot gesendet",
+      "OFFER_ACCEPTED": "Angebot angenommen",
+      "CONTRACT_SIGNED": "Vertrag unterzeichnet",
+      "DISBURSED": "Ausgezahlt",
+      "REJECTED": "Abgelehnt",
+      "CANCELLED": "Storniert"
+    }
+  },
+  "ActivatePage": {
+    "kicker": "SODIVA CREDITS · Backoffice",
+    "title": "Willkommen {name}",
+    "invalidTitle": "Ungültiger Link",
+    "invalidBody": "Dieser Einladungslink ist abgelaufen oder wurde bereits verwendet. Bitten Sie einen Super-Administrator um eine neue Einladung.",
+    "intro": "Wählen Sie das Passwort für Ihr Konto {email}.",
+    "password": "Passwort",
+    "confirm": "Passwort bestätigen",
+    "rule": "Mindestens 10 Zeichen. Wählen Sie einen Satz, den Sie sich leicht merken und andere schwer erraten.",
+    "submit": "Zugang aktivieren",
+    "errors": {
+      "mismatch": "Die beiden Passwörter stimmen nicht überein.",
+      "password_short": "Das Passwort muss mindestens 10 Zeichen haben.",
+      "invalid_link": "Dieser Link ist nicht mehr gültig."
+    }
+  },
+  "ProspectsPage": {
+    "kicker": "Backoffice · Website",
+    "title": "Kontaktanfragen",
+    "description": "Über die Website gesendete Anfragen für eine kostenlose Analyse. Rufen Sie den Interessenten zurück und verfolgen Sie den Status.",
+    "status": {
+      "NEW": "Neu",
+      "CONTACTED": "Kontaktiert",
+      "CONVERTED": "Kunde geworden",
+      "CLOSED": "Abgeschlossen"
+    },
+    "filters": {
+      "open": "Offen",
+      "closed": "Erledigt",
+      "all": "Alle"
+    },
+    "projects": {
+      "MORTGAGE": "Immobilienkredit",
+      "CONSOLIDATION": "Umschuldung",
+      "WORKS": "Renovierungs- / Konsumkredit",
+      "OTHER": "Sonstiges"
+    },
+    "saved": "Gespeichert.",
+    "empty": "Keine Anfragen.",
+    "statusLabel": "Status",
+    "noteLabel": "Interne Notiz",
+    "notePlaceholder": "Z. B. am 14.11. zurückgerufen, Termin Dienstag",
+    "save": "Speichern"
   }
 }

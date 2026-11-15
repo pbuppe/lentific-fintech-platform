@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "LandingPage" });
   const title = `${t("heroTitlePart1")} ${t("heroTitleHighlight")}${t("heroTitlePart2")}`;
   return {
-    title: `Lentific · ${title}`,
+    title: `SODIVA CREDITS · ${title}`,
     description: t("heroSubtitle"),
   };
 }
@@ -66,15 +66,15 @@ export default async function LocaleLandingPage({ params }: Props) {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand to-brand-ink px-6 py-16 text-white sm:px-12 sm:py-20">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-sand/20 blur-3xl" />
         <div className="relative mx-auto max-w-3xl">
           <p className="mb-4 font-mono text-xs uppercase tracking-widest text-white/70">{t("eyebrow")}</p>
           <h1 className="font-display text-4xl font-semibold text-balance sm:text-5xl">
-            {t("heroTitlePart1")} <span className="text-[#FF9AA2]">{t("heroTitleHighlight")}</span>{t("heroTitlePart2")}
+            {t("heroTitlePart1")} <span className="text-sand">{t("heroTitleHighlight")}</span>{t("heroTitlePart2")}
           </h1>
           <p className="mt-4 max-w-xl text-white/80">{t("heroSubtitle")}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button variant="primary" href="/signup?role=BORROWER">{t("ctaApply")}</Button>
+            <Button variant="light" href="/signup?role=BORROWER">{t("ctaApply")}</Button>
             <Button variant="ghost" href="/marketplace" className="border-white/30 text-white hover:bg-white/10">
               {t("ctaMarketplace")}
             </Button>

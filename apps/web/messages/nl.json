@@ -5,14 +5,17 @@
     "simulator": "Simulator",
     "logout": "Uitloggen",
     "login": "Inloggen",
-    "signup": "Account aanmaken"
+    "signup": "Account aanmaken",
+    "notifications": "{count, plural, =0 {Meldingen} one {# ongelezen melding} other {# ongelezen meldingen}}",
+    "services": "Diensten",
+    "contact": "Contact"
   },
   "LandingPage": {
     "eyebrow": "Crowdfunding · P2P",
     "heroTitlePart1": "Financiering wordt verdeeld",
     "heroTitleHighlight": "op basis van vertrouwen",
     "heroTitlePart2": ", niet toevallig.",
-    "heroSubtitle": "Lentific brengt particulieren, mkb-bedrijven en organisaties die op zoek zijn naar financiering in contact met investeerders (particulieren, bedrijven of instellingen) die hun spaargeld willen laten renderen, met een dossier dat in elke stap wordt geverifieerd: identiteit, terugbetalingscapaciteit, ondertekend contract.",
+    "heroSubtitle": "SODIVA CREDITS brengt particulieren, mkb-bedrijven en organisaties die op zoek zijn naar financiering in contact met investeerders (particulieren, bedrijven of instellingen) die hun spaargeld willen laten renderen, met een dossier dat in elke stap wordt geverifieerd: identiteit, terugbetalingscapaciteit, ondertekend contract.",
     "ctaApply": "Dien een aanvraag in",
     "ctaMarketplace": "Bekijk de marketplace",
     "alreadyAccount": "Al een account? Inloggen",
@@ -87,7 +90,7 @@
     "viewMarketplaceLinkArrow": "Bekijk de marketplace →",
     "introBoxTitle": "Moet het sneller gaan? Vraag een directe introductie aan (15 €)",
     "introBoxBody": "In plaats van te wachten, kan een lener direct contact aanvragen met een investeerder (particulier, bedrijf of organisatie) en omgekeerd. Zodra de aanvraag betaald is, worden de contactgegevens onmiddellijk in beide richtingen uitgewisseld.",
-    "introBoxDisclaimer": "Lentific verzorgt het contact; wat daarna tussen de twee partijen gebeurt, vindt plaats buiten het platform en valt niet onder onze verantwoordelijkheid.",
+    "introBoxDisclaimer": "SODIVA CREDITS verzorgt het contact; wat daarna tussen de twee partijen gebeurt, vindt plaats buiten het platform en valt niet onder onze verantwoordelijkheid.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Al geverifieerde dossiers, klaar om gefinancierd te worden",
     "viewAll": "Alles bekijken",
@@ -103,7 +106,7 @@
     "ctaFinalTitle": "Klaar om te beginnen?",
     "ctaFinalBody": "Maak in minder dan twee minuten een account aan, of je nu financiering zoekt of wilt investeren.",
     "becomeInvestor": "Word investeerder",
-    "footerText": "© {year} Lentific · Crowdfundingplatform.",
+    "footerText": "© {year} SODIVA CREDITS · Crowdfundingplatform.",
     "footerMarketplace": "Marketplace",
     "footerSimulator": "Simulator",
     "footerLogin": "Inloggen"
@@ -155,10 +158,11 @@
     "estimationEyebrow": "Schatting",
     "monthlyResult": "{monthly} € / maand",
     "totalCost": "Geschatte totale kosten: {total} € (gesimuleerd tarief {rate}%, het werkelijke tarief hangt af van jouw dossier)",
-    "applyCta": "Dien een aanvraag in"
+    "applyCta": "Dien een aanvraag in",
+    "legal": "Een lening verbindt u en moet worden terugbetaald. Controleer of u de aflossingen kunt dragen voordat u zich verbindt."
   },
   "LoginPage": {
-    "brand": "Lentific",
+    "brand": "SODIVA CREDITS",
     "title": "Inloggen",
     "noAccountPart1": "Nog geen account?",
     "noAccountLink": "Registreren",
@@ -168,7 +172,7 @@
     "genericError": "Inloggen niet gelukt."
   },
   "SignupPage": {
-    "brand": "Lentific",
+    "brand": "SODIVA CREDITS",
     "title": "Account aanmaken",
     "alreadyRegisteredPart1": "Al geregistreerd?",
     "alreadyRegisteredLink": "Inloggen",
@@ -187,8 +191,17 @@
       "submitApplication": "Aanvraag indienen",
       "availableInvestors": "Beschikbare investeerders",
       "introductions": "Introducties",
-      "myDocuments": "Mijn documenten"
-    }
+      "myDocuments": "Mijn documenten",
+      "messages": "Berichten",
+      "payments": "Betalingen",
+      "notifications": "Meldingen",
+      "help": "Hulp nodig?"
+    },
+    "sideTitle": "Mijn omgeving",
+    "advisorTitle": "Uw adviseur",
+    "teamTitle": "Een vraag?",
+    "teamName": "Ons team helpt u",
+    "advisorCta": "Mijn berichten"
   },
   "BorrowerDashboard": {
     "statusLabel": {
@@ -226,7 +239,90 @@
     "downloadContract": "Download mijn contract (PDF)",
     "signInstructions": "Print het uit, onderteken het met de hand, en stuur vervolgens een foto/scan:",
     "contractUploadedPending": "Ondertekend contract verstuurd, in afwachting van verificatie door een medewerker.",
-    "contractConfirmed": "Contract bevestigd ondertekend: jouw financiering wordt nu aangeboden aan investeerders."
+    "contractConfirmed": "Contract bevestigd ondertekend: jouw financiering wordt nu aangeboden aan investeerders.",
+    "feePaid": "Betaling ontvangen, dank u. Uw factuur is beschikbaar bij uw adviseur.",
+    "fundsPending": "Contract ondertekend: ons team controleert de uitbetaling van uw geld.",
+    "fundsDisbursedKicker": "Geld uitbetaald",
+    "fundsDisbursedOn": "Uitbetaald op {date} · {beneficiary}",
+    "fundsBeneficiary": {
+      "BORROWER": "op uw rekening",
+      "NOTARY": "aan uw notaris",
+      "SUPPLIERS": "aan de bedrijven, op factuur"
+    },
+    "fundsAvailability": {
+      "AVAILABLE": "Het geld is beschikbaar.",
+      "BANK_CHECKS": "Uw bank rondt de gebruikelijke controles af vóór de vrijgave.",
+      "NOTARY_CHECKS": "Uw notaris rondt de gebruikelijke controles af vóór de vrijgave."
+    },
+    "feeKind": {
+      "BROKER_FEE": "Bemiddelingshonorarium",
+      "COMPLEMENT": "Aanvullend honorarium"
+    },
+    "feeStatusPaid": "Betaald",
+    "feeStatusDue": "Te betalen vóór {date}",
+    "feeExplanation": "Verschuldigd sinds de uitbetaling van uw lening, volgens de ondertekende overeenkomst.",
+    "payFee": "Veilig betalen",
+    "feeSafetyNote": "Vóór het verkrijgen van uw lening mag geen betaling worden geëist. Betaal nooit kosten op een rekening die u per telefoon of e-mail is meegedeeld.",
+    "greeting": "Hallo {name}",
+    "greetingSub": "Hier ziet u hoe uw aanvragen en uw krediet ervoor staan.",
+    "newRequest": "+ Nieuwe aanvraag",
+    "myApplications": "Mijn aanvragen",
+    "submittedOn": "Ingediend op {date}",
+    "alerts": {
+      "docEyebrow": "Document gevraagd",
+      "docDue": "Aan te leveren vóór {date}",
+      "docCta": "Document versturen",
+      "feeEyebrow": "Te betalen",
+      "feeDue": "Te betalen vóór {date}",
+      "feeCta": "Details bekijken",
+      "offerEyebrow": "Aanbod ontvangen",
+      "offerBody": "Er wacht een kredietaanbod op u.",
+      "offerCta": "Aanbod bekijken",
+      "signEyebrow": "Contract te ondertekenen",
+      "signBody": "Onderteken uw contract en stuur het terug.",
+      "signCta": "Ondertekenen"
+    },
+    "tracker": {
+      "progress": "Voortgang van het dossier",
+      "steps": {
+        "request": "Aanvraag",
+        "identity": "Identiteit",
+        "documents": "Documenten",
+        "review": "Analyse",
+        "approval": "Akkoord",
+        "offer": "Aanbod",
+        "signature": "Handtekening",
+        "funds": "Uitbetaling"
+      },
+      "missingDocs": "{count} ontbreken",
+      "stateDone": "Klaar",
+      "stateCurrent": "Bezig"
+    },
+    "loan": {
+      "kicker": "Lopend krediet · {reference}",
+      "title": "Mijn krediet",
+      "inProgress": "Terugbetaling loopt",
+      "donutLabel": "{pct}% van het kapitaal terugbetaald",
+      "repaidShort": "terugbetaald",
+      "borrowed": "Geleend bedrag",
+      "repaid": "Al terugbetaald",
+      "remaining": "Openstaand kapitaal",
+      "monthly": "Maandlast",
+      "nextDue": "Volgende aflossing",
+      "end": "Einde van de lening",
+      "curveTitle": "Verloop van het openstaand kapitaal",
+      "totalInterest": "Totale rentekost: {amount}",
+      "lastPaid": "Laatste aflossingen",
+      "upcoming": "Volgende aflossingen",
+      "ofWhichInterest": "waarvan rente {amount}",
+      "paid": "Afgeschreven",
+      "toCome": "Te betalen",
+      "fullSchedule": "Aflossingstabel ({count} maanden)",
+      "colDate": "Datum",
+      "colPayment": "Aflossing",
+      "colInterest": "Rente",
+      "colRemaining": "Openstaand"
+    }
   },
   "BorrowerApplication": {
     "pageEyebrow": "apps/web · (borrower)",
@@ -259,12 +355,43 @@
     "submit": "Versturen",
     "fulfilledHeading": "Al ingediend",
     "fulfilledEmpty": "Op dit moment geen ingediende documenten.",
-    "viewFile": "bestand bekijken"
+    "viewFile": "bestand bekijken",
+    "dueBefore": "Aan te leveren vóór {date}",
+    "summary": {
+      "identityTitle": "Identiteitscontrole",
+      "identityVerified": "Identiteit bevestigd",
+      "identityPending": "Bezig",
+      "idSteps": {
+        "upload": {
+          "title": "Identiteitsbewijs",
+          "sub": "Kaart of paspoort, beide zijden"
+        },
+        "review": {
+          "title": "Controle door ons team",
+          "sub": "Vergelijking met uw gegevens"
+        },
+        "confirmed": {
+          "title": "Identiteit bevestigd",
+          "sub": "Dossier klaar voor kredietgevers"
+        }
+      },
+      "identityRejected": "Uw identiteitsbewijs is geweigerd: stuur een leesbaar exemplaar via \"Mijn aanvragen\".",
+      "identityNote": "We vragen nooit uw bankgegevens of een code die u per sms ontving.",
+      "checklistTitle": "Documenten van het dossier",
+      "validatedCount": "{ok} / {total} goedgekeurd",
+      "identityDoc": "Identiteitsbewijs",
+      "state": {
+        "ok": "Goedgekeurd",
+        "wait": "In controle",
+        "miss": "Te versturen",
+        "rejected": "Geweigerd"
+      }
+    }
   },
   "BorrowerInvestors": {
     "title": "Beschikbare investeerders",
     "intro": "Particulieren, bedrijven en organisaties publiceren hier het kapitaal dat ze bereid zijn uit te lenen. Vraag een directe introductie aan (contactgegevens direct uitgewisseld) voor {fee} €.",
-    "disclaimer": "Zodra je geïntroduceerd bent, verlopen de uitwisselingen en de eventuele lening rechtstreeks tussen jou en de investeerder, buiten het platform om. Lentific verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "disclaimer": "Zodra je geïntroduceerd bent, verlopen de uitwisselingen en de eventuele lening rechtstreeks tussen jou en de investeerder, buiten het platform om. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "empty": "Op dit moment geen beschikbaar kapitaal gepubliceerd.",
     "defaultInvestorName": "Investeerder",
     "verified": "Geverifieerd ✓",
@@ -276,7 +403,7 @@
   "BorrowerIntroductions": {
     "title": "Mijn introducties",
     "intro": "Een betaalde introductie onthult de contactgegevens in beide richtingen: jij en de andere persoon kunnen elkaar rechtstreeks schrijven.",
-    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. Lentific heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. SODIVA CREDITS heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "sentHeading": "Verzoeken die ik heb verstuurd",
     "sentEmpty": "Op dit moment geen verzonden verzoeken.",
     "targetTypeInvestor": "investeerder / kredietverstrekker",
@@ -315,8 +442,11 @@
       "verification": "Verificatie",
       "documents": "Mijn documenten",
       "premium": "Premium",
-      "notifications": "Meldingen"
-    }
+      "notifications": "Meldingen",
+      "messages": "Berichten",
+      "help": "Hulp nodig?"
+    },
+    "sideTitle": "Mijn omgeving"
   },
   "InvestorDashboard": {
     "invalidAmount": "Ongeldig bedrag.",
@@ -326,7 +456,7 @@
       "high": "Hoog"
     },
     "title": "P2P Marketplace",
-    "intro": "Als je een directe introductie met een lener aanvraagt, vinden alle uitwisselingen die daarop volgen plaats buiten het platform. Lentific verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "intro": "Als je een directe introductie met een lener aanvraagt, vinden alle uitwisselingen die daarop volgen plaats buiten het platform. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documenten}}",
     "pendingDocumentsRequested": "{count, plural, one {gevraagd} other {gevraagd}} door ons team ({labels}).",
     "send": "Versturen →",
@@ -352,12 +482,13 @@
     "send": "Versturen",
     "alreadyUploaded": "Al ingediend",
     "noUploadedDocuments": "Op dit moment geen ingediende documenten.",
-    "viewFile": "bestand bekijken"
+    "viewFile": "bestand bekijken",
+    "dueBefore": "Aan te leveren vóór {date}"
   },
   "InvestorIntroductions": {
     "title": "Mijn introducties",
     "description": "Een betaalde introductie onthult de contactgegevens in beide richtingen: jij en de andere partij kunnen elkaar rechtstreeks schrijven.",
-    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. Lentific heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. SODIVA CREDITS heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "sentTitle": "Verzoeken die ik heb verstuurd",
     "noSentRequests": "Op dit moment geen verzonden verzoeken.",
     "targetTypeApplication": "kredietaanvrager",
@@ -459,7 +590,33 @@
     },
     "cancelButton": "Mijn abonnement opzeggen",
     "reactivateButton": "Abonnement heractiveren",
-    "subscribeButton": "Naar Premium (15 € nu gesimuleerd)"
+    "subscribeButton": "Naar Premium (15 € nu gesimuleerd)",
+    "kicker": "Beleggersomgeving",
+    "paypalPrice": "{amount} € / maand, automatisch afgeschreven via PayPal. Op elk moment kosteloos opzegbaar via deze pagina.",
+    "statusEnding": "Actief tot het einde van de periode",
+    "nextCharge": "Volgende PayPal-afschrijving op {date}.",
+    "pastDue": "De laatste afschrijving is mislukt: Premium is opgeschort. Controleer uw betaalmethode in uw PayPal-rekening of sluit hieronder opnieuw een abonnement af.",
+    "ended": "Abonnement beëindigd op {date}.",
+    "legacyNote": "Dit proefabonnement stopt op {date}. Wilt u daarna Premium houden, sluit dan opnieuw een abonnement af via PayPal.",
+    "cancelHint": "Na opzegging geen afschrijvingen meer. Premium blijft actief tot {date}.",
+    "subscribePaypal": "Abonneren met PayPal · {amount} € / maand",
+    "resubscribePaypal": "Opnieuw abonneren met PayPal · {amount} € / maand",
+    "reactivatePaypal": "Opnieuw abonneren met PayPal",
+    "reactivateHint": "Vóór {date} wordt niets afgeschreven: het nieuwe abonnement neemt het over aan het einde van de al betaalde periode.",
+    "paypalHint": "Veilig betalen via PayPal: PayPal-rekening of bankkaart.",
+    "sandbox": "testmodus",
+    "historyHeading": "Overzicht van afschrijvingen",
+    "historyEmpty": "Nog geen afschrijvingen.",
+    "simulated": "Gesimuleerd",
+    "notices": {
+      "active": "Welkom bij Premium! Uw abonnement is actief. Volgende afschrijving op {date}.",
+      "deferred": "Nieuw abonnement geregistreerd. Premium loopt zonder onderbreking door; de eerste afschrijving is op {date}.",
+      "cancelled": "Abonnement opgezegd: geen afschrijvingen meer. Premium blijft actief tot {date}.",
+      "checkout_cancelled": "Abonnement geannuleerd op PayPal: er is niets afgeschreven.",
+      "failed": "PayPal heeft het abonnement niet bevestigd: er is niets afgeschreven. Probeer het opnieuw of neem contact op met uw adviseur.",
+      "unavailable": "Online betalen is tijdelijk niet beschikbaar. Probeer het over enkele minuten opnieuw.",
+      "cancel_failed": "De opzegging kon niet naar PayPal worden verzonden. Probeer het over enkele minuten opnieuw; blijft ze onbevestigd, neem dan contact op met uw adviseur."
+    }
   },
   "InvestorVerification": {
     "title": "Verificatie van mijn profiel",
@@ -519,7 +676,304 @@
     "amountLabel": "Bedrag (€)",
     "durationLabel": "Looptijd (maanden)",
     "rateLabel": "Jaarlijkse rente (%)",
-    "disclaimer": "Dit contract is een automatisch gegenereerd model. Lentific is geen partij bij de lening en komt niet tussen bij de terugbetaling: controleer het voor ondertekening.",
+    "disclaimer": "Dit contract is een automatisch gegenereerd model. SODIVA CREDITS is geen partij bij de lening en komt niet tussen bij de terugbetaling: controleer het voor ondertekening.",
     "submit": "Contract genereren"
+  },
+  "AccountPending": {
+    "kicker": "SODIVA CREDITS · Mijn account",
+    "titleEmail": "Bevestig je e-mailadres",
+    "titleReview": "Je account wordt beoordeeld",
+    "titleRejected": "Registratie niet goedgekeurd",
+    "titleSuspended": "Account opgeschort",
+    "stepSignup": "E-mailadres bevestigen",
+    "stepEmail": "Beoordeling door een beheerder",
+    "stepReview": "Toegang tot je account",
+    "done": "klaar",
+    "inProgress": "bezig",
+    "pillEmail": "E-mail te bevestigen",
+    "pillReview": "Wacht op goedkeuring",
+    "pillRejected": "Afgewezen",
+    "pillSuspended": "Opgeschort",
+    "bodyEmail": "We hebben een bevestigingslink gestuurd naar {email}. Klik erop om je adres te bevestigen. Kijk ook in je spammap.",
+    "resend": "Link opnieuw sturen",
+    "resent": "We hebben je zojuist een nieuwe link gestuurd.",
+    "bodyReview": "Bedankt, je e-mailadres is bevestigd. Een beheerder beoordeelt nu je registratie. Je krijgt een e-mail zodra je account actief is.",
+    "bodyRejected": "Na beoordeling kon je registratie niet worden goedgekeurd.",
+    "reason": "Reden:",
+    "bodySuspended": "De toegang tot je account is opgeschort. Neem contact op met support voor meer informatie."
+  },
+  "VerifyEmail": {
+    "kicker": "SODIVA CREDITS · E-mailbevestiging",
+    "titleOk": "E-mailadres bevestigd",
+    "titleError": "Ongeldige link",
+    "pillOk": "Bevestigd",
+    "pillError": "Fout",
+    "bodyVerified": "Bedankt! Je e-mailadres is bevestigd. Een beheerder keurt nu je account goed; je krijgt bericht per e-mail.",
+    "bodyAlready": "Dit e-mailadres was al bevestigd.",
+    "bodyExpired": "Deze link is verlopen. Log in om een nieuwe te ontvangen.",
+    "bodyInvalid": "Deze link is ongeldig of vervangen door een nieuwere. Log in om een nieuwe te ontvangen.",
+    "ctaStatus": "Mijn accountstatus bekijken",
+    "ctaLogin": "Inloggen"
+  },
+  "ClientInbox": {
+    "kicker": "Mijn omgeving",
+    "notificationsTitle": "Meldingen",
+    "unreadCount": "{count, plural, =0 {Alles gelezen.} one {# ongelezen melding} other {# ongelezen meldingen}}",
+    "markAllRead": "Alles als gelezen markeren",
+    "notificationsEmpty": "Nog geen meldingen.",
+    "documentRequested": "Gevraagd document: {label}",
+    "messageFrom": "Bericht van {name}",
+    "unread": "Ongelezen",
+    "messagesTitle": "Berichten",
+    "messagesSubtitle": "Berichten van uw adviseur en het team. U krijgt een e-mail bij elk nieuw bericht.",
+    "messagesEmpty": "Nog geen berichten.",
+    "team": "Het team",
+    "advisorRole": "Uw adviseur",
+    "new": "Nieuw",
+    "safetyNote": "We vragen nooit uw inloggegevens, noch een betaling naar een rekening die per telefoon of e-mail is meegedeeld.",
+    "eventLabels": {
+      "kyc_manual_review_requested": "Ons team controleert uw identiteit",
+      "kyc_completed": "Uw identiteit is gecontroleerd",
+      "kyc_rejected": "Uw identiteitscontrole is niet gelukt",
+      "introduction_paid": "Iemand wil contact met u opnemen",
+      "investor_verified": "Uw investeerdersprofiel is gecontroleerd",
+      "investor_rejected": "Uw investeerderscontrole is geweigerd",
+      "document_requested": "Er is een document bij u opgevraagd",
+      "funding_match_alert": "Een nieuw dossier past bij uw profiel",
+      "disbursement_confirmed": "Uw lening is uitbetaald",
+      "disbursement_funds_available": "Uw geld is beschikbaar",
+      "broker_fee_requested": "Nieuw betaalverzoek",
+      "advisor_message": "Nieuw bericht",
+      "assistance_started": "Een adviseur heeft een assistentiesessie geopend",
+      "assistance_document": "Uw adviseur heeft een document voor u geüpload",
+      "assistance_ended": "Assistentiesessie beëindigd"
+    }
+  },
+  "ClientPayments": {
+    "kicker": "Mijn omgeving",
+    "title": "Betalingen",
+    "subtitle": "Betaalverzoeken van het kantoor en uw betalingsgeschiedenis. Vóór het verkrijgen van uw lening mag geen betaling worden geëist.",
+    "paidOk": "Betaling ontvangen, dank u.",
+    "pendingHeading": "Te betalen",
+    "pendingEmpty": "Geen openstaande betaling.",
+    "feeKind": {
+      "BROKER_FEE": "Bemiddelingshonorarium",
+      "COMPLEMENT": "Aanvullend honorarium"
+    },
+    "forApplication": "Dossier {reference}",
+    "dueBy": "Vóór {date}",
+    "feeExplanation": "Verschuldigd sinds de uitbetaling van uw lening, volgens de ondertekende overeenkomst.",
+    "pay": "Veilig betalen",
+    "historyHeading": "Geschiedenis",
+    "historyEmpty": "Nog geen betalingen.",
+    "paymentType": {
+      "fee": "Kosten",
+      "subscription": "Abonnement"
+    },
+    "paymentStatus": {
+      "PENDING": "In behandeling",
+      "COMPLETED": "Betaald",
+      "FAILED": "Mislukt",
+      "REFUNDED": "Terugbetaald"
+    },
+    "safetyNote": "Betaal nooit kosten op een rekening die per telefoon of e-mail is meegedeeld: al uw betalingen gebeuren hier."
+  },
+  "ClientHelp": {
+    "title": "Hulp nodig?",
+    "subtitle": "Vast bij een stap? Bel uw adviseur en geef hem een assistentiecode: hij kan u 30 minuten begeleiden of bepaalde stappen voor u doen.",
+    "askTitle": "Assistentiecode aanvragen",
+    "problemLabel": "Beschrijf wat u blokkeert (optioneel)",
+    "problemPlaceholder": "Bijv.: ik kan mijn documenten niet uploaden",
+    "askNote": "Geef deze code alleen aan uw adviseur, tijdens een gesprek dat u zelf naar het officiële nummer van het kantoor hebt gevoerd. We vragen nooit uw wachtwoord.",
+    "getCode": "Mijn code aanvragen",
+    "giveCode": "Geef deze code aan uw adviseur:",
+    "codeValidity": "Geldig tot {time}.",
+    "codeConsent": "Met deze code geeft u uw adviseur toestemming om u 30 minuten te helpen. Alles wat hij doet, verschijnt in het logboek hieronder.",
+    "cancel": "Deze code annuleren",
+    "activeTitle": "{name} van het kantoor helpt u nu",
+    "activeBody": "Assistentiesessie open tot {time}.",
+    "guideLabel": "Uw adviseur begeleidt u:",
+    "guidance": {
+      "sign": "open \"Mijn aanvragen\", download het contract, onderteken het en stuur het terug met de knop \"Versturen\".",
+      "pay": "open \"Betalingen\" in het linkermenu en tik op \"Veilig betalen\".",
+      "identity": "open \"Mijn aanvragen\" en upload een duidelijke foto van uw identiteitsbewijs, beide zijden.",
+      "accept": "open \"Mijn aanvragen\", lees het aanbod en tik op \"Aanbod aanvaarden\" als het u past.",
+      "documents": "open \"Mijn documenten\", kies het gevraagde bestand en tik op \"Versturen\"."
+    },
+    "bannerPending": "Assistentiecode actief: geef hem aan uw adviseur.",
+    "bannerSeeCode": "Code bekijken",
+    "bannerActive": "{name} van het kantoor helpt u · tot {time}",
+    "logTitle": "Wat het team op uw account heeft gedaan",
+    "logEmpty": "Nog niets.",
+    "safety": "Twijfelt u over een oproep? Hang op en bel het officiële nummer van het kantoor.",
+    "logActions": {
+      "assistance_opened": "Assistentie geopend met uw code",
+      "assistance_guided": "U werd stap voor stap begeleid",
+      "assistance_document": "Er is een document voor u geüpload",
+      "assistance_ended": "Assistentie beëindigd",
+      "account_suspended": "Account geschorst",
+      "account_reactivated": "Account heractiveerd"
+    }
+  },
+  "HomeBroker": {
+    "hero": {
+      "eyebrow": "Kredietbemiddelaar in Troyes · crowdlending",
+      "title": "Uw project verdient de juiste financiering.",
+      "lead": "Wij vergelijken voor u de aanbiedingen van banken en van investeerders op ons platform, stellen uw dossier samen en begeleiden u tot de uitbetaling. Eerste gesprek gratis en vrijblijvend.",
+      "ctaStudy": "Gratis studie aanvragen",
+      "trust1": "Honorarium enkel als uw lening wordt verkregen",
+      "trust2": "Volg uw dossier online"
+    },
+    "estimator": {
+      "title": "Schat uw maandlast",
+      "amount": "Bedrag van het project",
+      "duration": "Looptijd",
+      "years": "{years} jaar",
+      "rate": "Indicatieve rente",
+      "result": "Geschatte maandlast",
+      "perMonth": "/ maand",
+      "total": "Geschatte totale kost: {total}",
+      "cta": "Gratis teruggebeld worden",
+      "legal": "Indicatieve schatting, niet contractueel (zonder verzekering en kosten). Een lening verbindt u en moet worden terugbetaald. Controleer of u de aflossingen kunt dragen voordat u zich verbindt."
+    },
+    "services": {
+      "eyebrow": "Onze diensten",
+      "title": "Financiering voor elk project",
+      "mortgage": {
+        "title": "Hypothecaire lening",
+        "body": "Aankoop, bouw of herfinanciering: wij verdedigen uw dossier voor de beste voorwaarden.",
+        "cta": "Studie aanvragen"
+      },
+      "consolidation": {
+        "title": "Kredietconsolidatie",
+        "body": "Eén lagere maandlast om uw budget ademruimte te geven.",
+        "cta": "Studie aanvragen"
+      },
+      "works": {
+        "title": "Renovatie- en consumptielening",
+        "body": "Renovatie, voertuig, liquiditeit: een passende lening, vergeleken bij meerdere kredietgevers.",
+        "cta": "Studie aanvragen"
+      },
+      "crowd": {
+        "title": "Crowdlending",
+        "body": "Gecontroleerde investeerders op ons platform financieren projecten rechtstreeks, met transparante opvolging.",
+        "cta": "Naar de marketplace"
+      }
+    },
+    "about": {
+      "eyebrow": "Het kantoor",
+      "title": "Een bemiddelaar dichtbij, in Troyes",
+      "text": "SODIVA CREDITS begeleidt particulieren en professionals in de Aube bij het vinden van financiering. Onafhankelijk en zonder exclusiviteit vergelijken wij en verdedigen wij uw belang.",
+      "points": {
+        "independent": "Geen enkele kredietgever legt ons zijn aanbod op",
+        "single": "Eén aanspreekpunt van begin tot eind",
+        "remote": "Videogesprekken en een volledig online dossier",
+        "noFees": "Ons honorarium is pas verschuldigd zodra uw lening is verkregen"
+      }
+    },
+    "faq": {
+      "eyebrow": "Veelgestelde vragen",
+      "title": "U vraagt zich misschien af…",
+      "cost": {
+        "q": "Wat kost een bemiddelaar?",
+        "a": "Ons honorarium wordt bij het eerste gesprek schriftelijk vastgelegd en is enkel verschuldigd als u uw lening verkrijgt. Vóór het verkrijgen van een of meer leningen mag geen enkele betaling worden geëist."
+      },
+      "individuals": {
+        "q": "Kan mijn lening door particulieren worden gefinancierd?",
+        "a": "Ja, afhankelijk van uw project: op onze marketplace financieren investeerders van wie wij de identiteit hebben gecontroleerd projecten, met een contract en opvolging zoals bij een gewone lening. Wantrouw een \"particulier\" die u online een lening aanbiedt tegen vooruitbetaalde kosten: dat is vaak oplichting."
+      },
+      "documents": {
+        "q": "Welke documenten moet ik voorbereiden?",
+        "a": "Identiteitsbewijs, laatste drie loonstroken, laatste twee aanslagbiljetten, laatste drie rekeningafschriften en eventueel de voorlopige koopovereenkomst of offertes. U uploadt ze rechtstreeks in uw omgeving."
+      },
+      "delay": {
+        "q": "Hoe lang duurt het om mijn lening te krijgen?",
+        "a": "Reken doorgaans op vier tot acht weken tussen het eerste gesprek en het leningaanbod, afhankelijk van de kredietverstrekker en de complexiteit van het dossier. Met de optie 'Prioritair dossier' kunt u uw krediet binnen maximaal één tot drie weken ontvangen. U volgt elke stap online."
+      },
+      "remote": {
+        "q": "Werkt u op afstand?",
+        "a": "Ja. Afspraken per telefoon of video, documenten via uw beveiligde omgeving en live assistentie als u vastloopt."
+      }
+    },
+    "contact": {
+      "eyebrow": "Laten we over uw project praten",
+      "title": "Vraag uw gratis studie aan",
+      "sub": "Laat uw gegevens achter: een adviseur belt u terug om uw project te bespreken.",
+      "free": "Gratis studie",
+      "noCommitment": "Vrijblijvend",
+      "answer": "Teruggebeld binnen 1 werkdag",
+      "name": "Voor- en achternaam",
+      "phone": "Telefoon",
+      "email": "E-mail",
+      "project": "Uw project",
+      "projects": {
+        "MORTGAGE": "Hypothecaire lening",
+        "CONSOLIDATION": "Kredietconsolidatie",
+        "WORKS": "Renovatie- / consumptielening",
+        "OTHER": "Andere"
+      },
+      "amount": "Beoogd bedrag (optioneel)",
+      "amountPlaceholder": "Bijv. 150000",
+      "message": "Bericht (optioneel)",
+      "consent": "Ik ga akkoord om over mijn project gecontacteerd te worden. Mijn gegevens dienen enkel om mijn aanvraag te behandelen en worden nooit verkocht.",
+      "send": "Aanvraag versturen",
+      "invalid": "Controleer uw gegevens: geldige naam, telefoon, e-mail en toestemming vereist.",
+      "thanksTitle": "Bedankt, uw aanvraag is ontvangen!",
+      "thanksBody": "Een adviseur belt u binnen één werkdag terug. Wij vragen nooit een betaling vóór het verkrijgen van uw lening."
+    },
+    "footer": {
+      "phone": "Tel.:",
+      "services": "Diensten",
+      "simulator": "Simulator",
+      "marketplace": "Marketplace",
+      "faq": "FAQ",
+      "login": "Klantenzone",
+      "orias": "Bankbemiddelaar, ingeschreven bij ORIAS onder nr. {number} (www.orias.fr).",
+      "mediator": "Consumentenbemiddelaar: {name}.",
+      "creditWarning": "Een lening verbindt u en moet worden terugbetaald. Controleer of u de aflossingen kunt dragen voordat u zich verbindt.",
+      "noFeeBefore": "Vóór het verkrijgen van een of meer leningen mag geen enkele betaling worden geëist.",
+      "copyright": "© {year} {company}. Alle rechten voorbehouden.",
+      "contactPerson": "Uw contactpersoon: {name}"
+    }
+  },
+  "CreditsSummary": {
+    "title": "Mijn kredieten",
+    "subtitle": "Al uw kredieten, van het dossier in behandeling tot de terbeschikkingstelling van de middelen.",
+    "credited": "Gecrediteerd bedrag",
+    "creditedNote": "waarvan {amount} in terbeschikkingstelling",
+    "availableTotal": "Beschikbaar",
+    "verifyingTotal": "In controle",
+    "requestedOn": "aangevraagd op {date}",
+    "stage": {
+      "study": "In behandeling",
+      "granted": "Toegekend",
+      "verifying": "Uitbetaling in controle",
+      "releasing": "In terbeschikkingstelling",
+      "available": "Ter beschikking",
+      "refused": "Geweigerd",
+      "cancelled": "Geannuleerd"
+    },
+    "detail": {
+      "study": "Uw dossier wordt door onze adviseurs bestudeerd.",
+      "granted": "Krediet toegekend, de uitbetaling wordt voorbereid.",
+      "verifying": "De uitbetaling is gedaan, wij controleren het bewijsstuk.",
+      "releasingNotary": "Bedrag gecrediteerd. Uw notaris rondt zijn controles af voordat hij de middelen vrijgeeft.",
+      "releasingBank": "Bedrag gecrediteerd. Uw bank rondt haar controles af voordat zij de middelen vrijgeeft.",
+      "available": "De middelen staan tot uw beschikking.",
+      "availableOn": "Middelen ter beschikking sinds {date}."
+    }
+  },
+  "PaypalCheckout": {
+    "hint": "Veilig betalen via PayPal: PayPal-rekening of bankkaart.",
+    "sandbox": "testmodus",
+    "cancelled": "Betaling geannuleerd: er is niets afgeschreven. U kunt het op elk moment opnieuw proberen.",
+    "failed": "PayPal kon de betaling niet bevestigen en er is niets afgeschreven. Probeer het opnieuw of neem contact op met uw adviseur.",
+    "unavailable": "Online betalen is tijdelijk niet beschikbaar. Probeer het over enkele minuten opnieuw.",
+    "priorityPaid": "Betaling ontvangen: uw dossier is nu prioritair.",
+    "description": {
+      "broker_fee": "Bemiddelingskosten, dossier {reference}",
+      "priority": "Optie Prioritair dossier, dossier {reference}"
+    },
+    "review": "PayPal heeft uw betaling ontvangen. Ons team controleert deze en neemt zeer snel contact met u op: u hoeft niet opnieuw te betalen."
   }
 }

@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { fulfillDocumentRequest, listMyDocumentRequests, getFileUrl } from "@fintech/documents";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../../lib/session";
@@ -24,6 +24,7 @@ export default async function InvestorDocumentsPage({ searchParams }: { searchPa
   const user = await getCurrentUser();
   if (!user) redirect("/login");
   const t = await getTranslations("InvestorDocuments");
+  const locale = await getLocale();
 
   const requests = await listMyDocumentRequests(user.id);
   const pending = requests.filter((r) => r.status === "PENDING");
@@ -58,11 +59,16 @@ export default async function InvestorDocumentsPage({ searchParams }: { searchPa
                 <StatusPill tone="pending">{t("pending")}</StatusPill>
               </div>
               {r.instructions && <p className="mt-1 text-xs text-ink-soft">{r.instructions}</p>}
+              {r.dueAt && (
+                <p className="mt-1 text-xs font-semibold text-accent">
+                  {t("dueBefore", { date: new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(r.dueAt) })}
+                </p>
+              )}
               <p className="mt-1 text-xs text-ink-faint">{t("requestedBy", { name: r.requestedBy.name ?? r.requestedBy.email })}</p>
               <form action={fulfillAction} className="mt-3 flex flex-wrap items-center gap-2">
                 <input type="hidden" name="requestId" value={r.id} />
                 <input type="file" name="file" required className="text-xs" />
-                <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
+                <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
                   {t("send")}
                 </button>
               </form>

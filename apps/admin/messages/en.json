@@ -10,14 +10,24 @@
     "riskEngine": "Risk engine",
     "accountsSuperAdmin": "Accounts (super admin)",
     "statistics": "Statistics",
-    "logout": "Log out"
+    "logout": "Log out",
+    "accountValidation": "Accounts to approve",
+    "outboundEmails": "Sent emails",
+    "pendingCount": "{count} account(s) pending",
+    "funds": "Disbursements & fees",
+    "pendingFundsCount": "{count, plural, one {# disbursement to confirm} other {# disbursements to confirm}}",
+    "clientRequests": "Requests & messages",
+    "console": "Super admin console",
+    "prospects": "Contact requests",
+    "newProspectsCount": "{count, plural, one {# new request} other {# new requests}}"
   },
   "AdminLoginPage": {
-    "kicker": "Lentific · Back office",
+    "kicker": "SODIVA CREDITS · Back office",
     "title": "Agent sign-in",
     "emailLabel": "Email",
     "passwordLabel": "Password",
-    "submit": "Sign in"
+    "submit": "Sign in",
+    "activated": "Your access is activated: sign in with your new password."
   },
   "CasesQueuePage": {
     "kicker": "apps/admin · back office",
@@ -47,7 +57,14 @@
     "empty": "No accounts yet.",
     "verified": "Verified",
     "roleBorrower": "Borrower",
-    "roleInvestor": "Investor"
+    "roleInvestor": "Investor",
+    "accountStatus": {
+      "PENDING_EMAIL": "Email to confirm",
+      "PENDING_REVIEW": "To approve",
+      "ACTIVE": "Active",
+      "REJECTED": "Rejected",
+      "SUSPENDED": "Suspended"
+    }
   },
   "AccountDetailPage": {
     "backToAccounts": "← Back to accounts",
@@ -62,7 +79,7 @@
     "applicationsTitle": "Financing requests",
     "listingsTitle": "Published capital offers",
     "introductionsTitle": "Introductions",
-    "introductionsDisclaimer": "Reminder: once an introduction has been paid for, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it.",
+    "introductionsDisclaimer": "Reminder: once an introduction has been paid for, whatever happens between the two parties takes place outside the platform, and SODIVA CREDITS is not responsible for it.",
     "introSent": "→ requested contact for {name} ({status})",
     "introReceived": "← contact requested by {name} ({status})",
     "documentsTitle": "Uploaded documents",
@@ -132,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "apps/admin · overview",
     "title": "Introduced profiles",
-    "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it, only the contact was provided.",
+    "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and SODIVA CREDITS is not responsible for it, only the contact was provided.",
     "empty": "No paid introductions yet.",
     "paid": "Paid",
     "investorToBorrower": "Investor to borrower",
@@ -169,5 +186,460 @@
     "byLanguage": "By language",
     "byCountry": "By country",
     "noData": "No data yet."
+  },
+  "AccountValidationPage": {
+    "kicker": "Registrations",
+    "title": "Accounts to approve",
+    "description": "No borrower or investor can access their account until you approve it. Check each registration, then approve or reject with a reason; the person is notified by email.",
+    "doneApproved": "Account approved. An activation email has been sent.",
+    "doneRejected": "Registration rejected. The person has been notified by email.",
+    "doneResent": "New confirmation link sent.",
+    "toReviewTitle": "Email confirmed, awaiting your decision",
+    "toReviewEmpty": "No registration awaiting approval.",
+    "roleBorrower": "Borrower",
+    "roleInvestor": "Investor",
+    "signedUpAt": "Signed up on",
+    "emailVerifiedAt": "Email confirmed on",
+    "country": "Country",
+    "approve": "Approve account",
+    "reject": "Reject…",
+    "reasonLabel": "Reason for rejection (sent to the person)",
+    "reasonPlaceholder": "E.g. incomplete information, profile out of scope…",
+    "confirmReject": "Confirm rejection",
+    "emailPendingTitle": "Email not yet confirmed",
+    "emailPendingDescription": "These people have not yet clicked the link they received by email. You can resend the link, or approve anyway if you know the person.",
+    "emailPendingEmpty": "No registration awaiting email confirmation.",
+    "resend": "Resend link",
+    "approveAnyway": "Approve anyway",
+    "rejectedTitle": "Rejected registrations"
+  },
+  "OutboundEmailsPage": {
+    "kicker": "Communication",
+    "title": "Sent emails",
+    "descriptionLocal": "No sending service is connected yet: emails are not actually sent, they are kept here so you can test the flows (for example, click a confirmation link).",
+    "descriptionLive": "The last 50 emails sent by the platform.",
+    "empty": "No emails yet.",
+    "to": "To:",
+    "statusSent": "Sent",
+    "statusLocal": "Local (not sent)",
+    "statusFailed": "Failed"
+  },
+  "FundsPage": {
+    "kicker": "Back office · Granted loans",
+    "title": "Disbursements and fees",
+    "description": "Certify the disbursement of each signed loan. An admin declares it with the lender's proof, then a different super administrator confirms it. Fees can only be requested after this confirmation.",
+    "empty": "No signed loans yet.",
+    "section1": "1 · Loan granted",
+    "grantedSummary": "{amount} · rate {rate}% · {months} months · contract signed",
+    "section2": "2 · Certify the disbursement",
+    "doubleValidationNote": "Two-person check: an admin declares with proof, then a different super admin confirms.",
+    "proofRejected": "Proof rejected: {reason}. Declare again with a legible document.",
+    "beneficiaryLabel": "Funds paid to",
+    "availabilityLabel": "Availability for the borrower",
+    "fundsDateLabel": "Disbursement date",
+    "lenderReferenceLabel": "Lender reference",
+    "proofLabel": "Release notice",
+    "proofHint": "Certificate from the lender or notary · PDF, JPG or PNG, 10 MB max.",
+    "declare": "Declare funds disbursed",
+    "declaredBy": "Declared by",
+    "confirmedBy": "Confirmed by",
+    "confirm": "Confirm disbursement",
+    "rejectProof": "Reject proof…",
+    "reasonLabel": "Reason for rejection",
+    "reasonPlaceholder": "E.g. unreadable notice, amount differs from the offer…",
+    "confirmReject": "Reject proof",
+    "waitingSuperAdmin": "Waiting for a super administrator to confirm.",
+    "waitingOtherSuperAdmin": "You declared this disbursement: another super administrator must confirm it. Nobody approves their own declaration.",
+    "markAvailableBank": "The bank has released the funds",
+    "markAvailableNotary": "The notary has released the funds",
+    "section3": "3 · Request fees",
+    "feesLocked": "Unavailable until the disbursement is confirmed: no payment may be required before the loan is obtained.",
+    "feesUnlocked": "Disbursement certified: you can request the fees set in the agreement, even if the bank or notary is still finishing its checks.",
+    "feeKindLabel": "Purpose",
+    "feeAmountLabel": "Amount ({currency})",
+    "feeDueLabel": "Due date",
+    "requestFee": "Send payment request",
+    "feePaymentNote": "The client pays from their space, through a secure payment in the firm's name. No IBAN is ever sent by message.",
+    "feeDue": "due {date}",
+    "cancelFee": "Cancel",
+    "noFeesYet": "No fee request sent.",
+    "auditTitle": "Audit log ({count})",
+    "steps": {
+      "granted": "Granted",
+      "grantedSub": "Contract signed",
+      "declared": "Disbursement declared",
+      "declaredSub": "By an admin",
+      "declaredWaiting": "Awaiting super admin",
+      "confirmed": "Funds disbursed",
+      "confirmedSub": "Certified",
+      "available": "Released",
+      "availableSub": "Funds available",
+      "fees": "Fees",
+      "feesSub": "Can be requested"
+    },
+    "status": {
+      "toDeclare": "To disburse",
+      "declared": "To confirm",
+      "confirmed": "Funds disbursed",
+      "rejected": "Proof rejected"
+    },
+    "beneficiary": {
+      "BORROWER": "Borrower's account",
+      "NOTARY": "Notary's office",
+      "SUPPLIERS": "Contractors, on invoices"
+    },
+    "availability": {
+      "AVAILABLE": "Available immediately",
+      "BANK_CHECKS": "Bank checks in progress",
+      "NOTARY_CHECKS": "With the notary, checks in progress"
+    },
+    "feeKind": {
+      "BROKER_FEE": "Brokerage fees",
+      "COMPLEMENT": "Additional fees"
+    },
+    "feeStatus": {
+      "PENDING": "Pending",
+      "PAID": "Paid",
+      "CANCELLED": "Cancelled"
+    },
+    "errors": {
+      "not_allowed": "You are not allowed to do this.",
+      "not_signed": "This case has no signed contract.",
+      "already_declared": "This disbursement has already been declared.",
+      "invalid_input": "Some information is invalid. Please check the form.",
+      "not_declared": "No disbursement awaiting confirmation on this case.",
+      "same_person": "You declared this disbursement: another super administrator must confirm it.",
+      "reason_required": "Give a reason for the rejection (at least 3 characters).",
+      "not_confirmed": "The disbursement is not confirmed yet.",
+      "fees_locked": "Fees can only be requested once the disbursement is confirmed.",
+      "not_pending": "This fee request is no longer pending.",
+      "proof_missing": "Attach the release notice (10 MB max)."
+    },
+    "done": {
+      "declared": "Disbursement declared. A super administrator must now confirm it.",
+      "confirmed": "Disbursement confirmed. The client sees the funds and fees are unlocked.",
+      "rejected": "Proof rejected. The admin must declare the disbursement again.",
+      "available": "Funds marked as available to the client.",
+      "fee_requested": "Fee request sent to the client.",
+      "fee_cancelled": "Fee request cancelled."
+    },
+    "audit": {
+      "disbursement": {
+        "declared": "Disbursement declared",
+        "confirmed": "Disbursement confirmed",
+        "proof_rejected": "Disbursement proof rejected",
+        "funds_available": "Funds released"
+      },
+      "broker_fee": {
+        "requested": "Fees requested",
+        "cancelled": "Fee request cancelled",
+        "paid": "Fees paid by the client"
+      }
+    }
+  },
+  "ClientRequestsPage": {
+    "kicker": "Back office · Client relations",
+    "title": "Requests and messages",
+    "description": "Request a document or a payment, or write to a client. It appears right away in their space (notifications, and the \"Messages\" section for a message), and an e-mail invites them to sign in.",
+    "done": {
+      "doc": "Request sent to {name}. It shows in their documents to provide.",
+      "pay": "Payment request sent to {name}.",
+      "msg": "Message sent to {name}. An e-mail has notified them."
+    },
+    "errors": {
+      "doc_missing": "Choose at least one document (and give a label for \"Other document\").",
+      "fees_locked": "No payment request possible: this client's funds are not yet disbursed and confirmed.",
+      "invalid": "Invalid amount or due date.",
+      "msg_missing": "Subject and message are required.",
+      "client": "Client not found."
+    },
+    "searchPlaceholder": "Search a client…",
+    "clientsCount": "{count, plural, one {# client} other {# clients}}",
+    "roleInvestor": "Investor",
+    "roleBorrower": "Borrower",
+    "noClients": "No client found.",
+    "pickClient": "Pick a client from the list to send them a request or a message.",
+    "recipient": "Recipient",
+    "tabs": {
+      "doc": "Request a document",
+      "pay": "Request a payment",
+      "msg": "Message"
+    },
+    "docTypesLabel": "Requested documents",
+    "docTypes": {
+      "tax": "Latest tax notice",
+      "address": "Proof of address less than 3 months old",
+      "payslips": "Last 3 payslips",
+      "statements": "Bank statements (last 3 months)",
+      "quote": "Works quote or invoice",
+      "identity": "ID document",
+      "sale": "Preliminary sale agreement",
+      "other": "Other document"
+    },
+    "otherLabel": "Label for \"Other document\"",
+    "otherPlaceholder": "E.g. employer certificate",
+    "delayLabel": "To provide within",
+    "delays": {
+      "48h": "48 hours",
+      "7d": "7 days",
+      "15d": "15 days"
+    },
+    "instructionsLabel": "Details for the client (optional)",
+    "instructionsPlaceholder": "E.g. requested by the bank to continue the review.",
+    "sendDoc": "Send request",
+    "channelsNote": "The client will see it in their client space and get an e-mail inviting them to sign in (without the content, for security).",
+    "payBlocked": "Payment request unavailable: none of this client's loans has a confirmed disbursement. The law forbids collecting before the loan is obtained.",
+    "payBlockedLink": "See disbursements",
+    "loanLabel": "Loan concerned",
+    "fundsConfirmed": "funds disbursed",
+    "feeKindLabel": "Purpose",
+    "feeKind": {
+      "BROKER_FEE": "Brokerage fees",
+      "COMPLEMENT": "Additional fees"
+    },
+    "amountLabel": "Amount",
+    "dueLabel": "Due date",
+    "payNote": "The client pays from their space, through a secure payment in the firm's name. No IBAN is ever sent by message.",
+    "sendPay": "Send payment request",
+    "otherCases": "Other cases without confirmed disbursement: {list}",
+    "templatesLabel": "Templates",
+    "templates": {
+      "progress": {
+        "label": "Case in progress",
+        "subject": "Your case is moving forward",
+        "body": "Hello {name},\n\nGood news: several lenders are currently reviewing your request. I will get back to you as soon as I have an answer.\n\nKind regards,"
+      },
+      "granted": {
+        "label": "Loan granted",
+        "subject": "Your loan is granted",
+        "body": "Hello {name},\n\nYour loan is granted. You will receive the loan offer to sign in your space.\n\nKind regards,"
+      },
+      "appointment": {
+        "label": "Appointment",
+        "subject": "Let's schedule a call",
+        "body": "Hello {name},\n\nI suggest a phone or video call to review your case. Let me know which time suits you.\n\nKind regards,"
+      }
+    },
+    "subjectLabel": "Subject",
+    "bodyLabel": "Message",
+    "sendMsg": "Send message",
+    "historyFor": "Sent history · {name}",
+    "historyAll": "Latest sent",
+    "historyEmpty": "Nothing sent yet.",
+    "historyCols": {
+      "date": "Date",
+      "client": "Client",
+      "type": "Type",
+      "subject": "Subject",
+      "by": "By",
+      "status": "Status"
+    },
+    "historyStatus": {
+      "received": "Document received",
+      "cancelled": "Cancelled",
+      "paid": "Paid",
+      "read": "Read",
+      "unread": "Sent · unread"
+    },
+    "kind": {
+      "document": "Document",
+      "payment": "Payment",
+      "message": "Message"
+    }
+  },
+  "ConsolePage": {
+    "kicker": "Back office · Super admin",
+    "title": "Super admin console",
+    "description": "Manage the team and client accounts, and help a client live with the code they give you on the phone. Every action is logged.",
+    "tabs": {
+      "help": "Assistance",
+      "clients": "Clients",
+      "team": "Team"
+    },
+    "searchPlaceholder": "Search a client…",
+    "suspend": "Suspend",
+    "reactivate": "Reactivate",
+    "status": {
+      "ACTIVE": "Active",
+      "SUSPENDED": "Suspended"
+    },
+    "roles": {
+      "AGENT": "Agent",
+      "ADMIN": "Admin",
+      "SUPER_ADMIN": "Super admin"
+    },
+    "rights": {
+      "AGENT": "Cases, ID, contracts",
+      "ADMIN": "+ approvals, disbursements, messages",
+      "SUPER_ADMIN": "All rights"
+    },
+    "team": {
+      "inviteTitle": "Invite a team member",
+      "name": "Name",
+      "email": "E-mail",
+      "role": "Role",
+      "invite": "Send invitation",
+      "inviteNote": "The person gets an e-mail with a link (valid 72 h) to choose their password. No password ever goes through you.",
+      "listTitle": "Team accounts",
+      "colName": "Name",
+      "colRole": "Role",
+      "colRights": "Rights",
+      "colLogin": "Last login",
+      "colStatus": "Status",
+      "invitationPending": "Invitation sent",
+      "you": "you",
+      "resend": "Resend invitation",
+      "suspendNote": "Suspending cuts access immediately (all sessions are closed). The account and its past actions stay in the log. The last active super admin cannot be suspended."
+    },
+    "clients": {
+      "colClient": "Client",
+      "colCase": "Case",
+      "colAccount": "Account",
+      "colBlock": "Reported issue",
+      "assist": "Assist"
+    },
+    "help": {
+      "asking": "Help requested",
+      "pick": "Pick the client on the phone from the list.",
+      "kicker": "Assistance",
+      "activeUntil": "Session open · until {time}",
+      "busy": "Already assisted by {name}",
+      "codeWaiting": "Code generated, waiting",
+      "noCode": "No active code",
+      "problem": "Reported issue:",
+      "noProblem": "none",
+      "codeExplain": "On the phone, ask the client to open \"Need help?\" in their space and read you their 6-digit code. This code means they agree to 30 minutes of assistance.",
+      "codeLabel": "6-digit code",
+      "open": "Open session",
+      "doTitle": "What you can do for them",
+      "noPendingDocs": "No pending document for this client.",
+      "uploadFor": "Upload for them: {label}",
+      "uploadHint": "Document received from the client by e-mail or post.",
+      "upload": "Upload",
+      "moreActions": "Profile, document requests, files:",
+      "openAccount": "open their account",
+      "guideTitle": "For the client to do, with you on the phone",
+      "guideExplain": "These steps commit the client: they must do them. Pick a guide; it shows up on their screen right away.",
+      "end": "End session"
+    },
+    "guidance": {
+      "sign": {
+        "title": "Sign the offer or a document",
+        "why": "The signature must come from the client"
+      },
+      "pay": {
+        "title": "Pay fees",
+        "why": "The client approves the payment themselves"
+      },
+      "identity": {
+        "title": "Identity check",
+        "why": "The ID must be sent by the client"
+      },
+      "accept": {
+        "title": "Accept an offer",
+        "why": "Consent must come from the client"
+      },
+      "documents": {
+        "title": "Upload a document",
+        "why": "The client uploads the file themselves"
+      }
+    },
+    "done": {
+      "invited": "Invitation sent.",
+      "invite_resent": "New invitation sent.",
+      "suspended": "Account suspended: access is cut off.",
+      "reactivated": "Account reactivated.",
+      "session_opened": "Assistance session open for 30 minutes.",
+      "guided": "The guide is showing on the client's screen.",
+      "uploaded": "Document uploaded for the client.",
+      "session_ended": "Assistance session ended."
+    },
+    "errors": {
+      "not_allowed": "Action not allowed.",
+      "invalid_input": "Invalid information.",
+      "email_taken": "An account already exists with this e-mail.",
+      "self": "You cannot change your own account here.",
+      "last_super_admin": "Not possible: this is the last active super admin.",
+      "not_found": "Account or request not found.",
+      "no_code": "No valid code for this client: ask them to generate a new one.",
+      "bad_code": "Wrong code.",
+      "too_many_attempts": "Too many attempts: this code is blocked. The client must generate a new one.",
+      "no_session": "No assistance session opened by you for this client.",
+      "file": "Choose a file (10 MB max)."
+    },
+    "log": {
+      "title": "Console action log",
+      "empty": "No actions yet.",
+      "by": "by {name}",
+      "note": "Read-only log. The client sees what concerns their account under \"Need help?\".",
+      "actions": {
+        "staff_invited": "Member invited",
+        "staff_invite_resent": "Invitation resent",
+        "staff_activated": "Access activated",
+        "account_suspended": "Account suspended",
+        "account_reactivated": "Account reactivated",
+        "assistance_opened": "Assistance session opened (client code)",
+        "assistance_guided": "Client guided step by step",
+        "assistance_document": "Document uploaded for the client",
+        "assistance_ended": "Assistance session ended"
+      }
+    },
+    "appStatus": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "KYC_PENDING": "ID to check",
+      "KYC_VERIFIED": "ID verified",
+      "UNDER_REVIEW": "Under review",
+      "PUBLISHED": "Offer sent",
+      "OFFER_ACCEPTED": "Offer accepted",
+      "CONTRACT_SIGNED": "Contract signed",
+      "DISBURSED": "Funds disbursed",
+      "REJECTED": "Rejected",
+      "CANCELLED": "Cancelled"
+    }
+  },
+  "ActivatePage": {
+    "kicker": "SODIVA CREDITS · Back office",
+    "title": "Welcome {name}",
+    "invalidTitle": "Invalid link",
+    "invalidBody": "This invitation link has expired or has already been used. Ask a super administrator to send you a new one.",
+    "intro": "Choose the password for your account {email}.",
+    "password": "Password",
+    "confirm": "Confirm password",
+    "rule": "At least 10 characters. Use a phrase that is easy for you to remember and hard for others to guess.",
+    "submit": "Activate my access",
+    "errors": {
+      "mismatch": "The two passwords do not match.",
+      "password_short": "The password must be at least 10 characters.",
+      "invalid_link": "This link is no longer valid."
+    }
+  },
+  "ProspectsPage": {
+    "kicker": "Back office · Website",
+    "title": "Contact requests",
+    "description": "Free study requests sent from the website. Call the prospect back, then track their status.",
+    "status": {
+      "NEW": "New",
+      "CONTACTED": "Contacted",
+      "CONVERTED": "Became a client",
+      "CLOSED": "Closed"
+    },
+    "filters": {
+      "open": "To handle",
+      "closed": "Handled",
+      "all": "All"
+    },
+    "projects": {
+      "MORTGAGE": "Mortgage",
+      "CONSOLIDATION": "Debt consolidation",
+      "WORKS": "Home improvement / personal loan",
+      "OTHER": "Other"
+    },
+    "saved": "Saved.",
+    "empty": "No requests here.",
+    "statusLabel": "Status",
+    "noteLabel": "Internal note",
+    "notePlaceholder": "E.g. called back 14/11, meeting Tuesday",
+    "save": "Save"
   }
 }

@@ -79,7 +79,7 @@ export default async function OnboardingPage() {
               <input type="number" name="existingDebt" required min={0} defaultValue={profile ? Number(profile.existingDebt) : undefined} className="rounded-lg border border-line px-3 py-2.5 text-ink" />
             </label>
           </div>
-          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
+          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
             {t("submit")}
           </button>
         </form>

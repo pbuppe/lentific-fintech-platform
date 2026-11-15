@@ -4,7 +4,7 @@ type Tone = "ok" | "pending" | "risk";
 
 const toneClasses: Record<Tone, string> = {
   ok: "bg-success-soft text-success",
-  pending: "bg-brand-soft text-brand-ink",
+  pending: "bg-sand text-sand-ink",
   risk: "bg-accent-soft text-accent",
 };
 
