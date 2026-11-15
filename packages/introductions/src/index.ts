@@ -12,7 +12,7 @@ import { recordFee } from "@fintech/payments";
 import { emit } from "@fintech/workflow";
 import { generateDirectLoanContract } from "@fintech/contracts";
 
-const DEFAULT_FEE = 15;
+const DEFAULT_FEE = 14.9; // 14,90 € (tarif commercial décidé le 2026-11-15)
 
 export async function requestAndPayIntroduction(input: {
   requesterId: string;
@@ -58,6 +58,55 @@ export async function requestAndPayIntroduction(input: {
     targetId: input.targetId,
   });
 
+  return paid;
+}
+
+/**
+ * Paiement en ligne (PayPal, 2026-11-15) : la demande est créée d'abord, puis
+ * payée sur PayPal. Gratuite et immédiate pour un abonné Premium.
+ */
+export async function prepareIntroduction(input: {
+  requesterId: string;
+  targetUserId: string;
+  targetType: IntroductionTargetType;
+  targetId: string;
+  message?: string;
+}): Promise<{ status: "paid"; requestId: string } | { status: "payment_required"; requestId: string }> {
+  if (input.requesterId === input.targetUserId) {
+    throw new Error("Impossible de demander une mise en relation avec soi-même.");
+  }
+  const existing = await introductionsRepo.findExisting(input.requesterId, input.targetType, input.targetId);
+  if (existing && existing.status === "PAID") return { status: "paid", requestId: existing.id };
+  const request =
+    existing ??
+    (await introductionsRepo.create({
+      requesterId: input.requesterId,
+      targetUserId: input.targetUserId,
+      targetType: input.targetType,
+      targetId: input.targetId,
+      message: input.message,
+    }));
+  const subscription = await subscriptionsRepo.findForUser(input.requesterId);
+  if (subscription?.status === "ACTIVE") {
+    await markIntroductionPaid(request.id, input.requesterId);
+    return { status: "paid", requestId: request.id };
+  }
+  return { status: "payment_required", requestId: request.id };
+}
+
+/** Après paiement confirmé (ou abonnement Premium) : révèle le contact. Sans effet si déjà payée. */
+export async function markIntroductionPaid(requestId: string, requesterId: string) {
+  const request = await introductionsRepo.findById(requestId);
+  if (!request || request.requesterId !== requesterId) throw new Error("Mise en relation introuvable.");
+  if (request.status === "PAID") return request;
+  const paid = await introductionsRepo.setPaid(request.id);
+  await emit("introduction.paid", {
+    requestId: paid.id,
+    requesterId: request.requesterId,
+    targetUserId: request.targetUserId,
+    targetType: request.targetType,
+    targetId: request.targetId,
+  });
   return paid;
 }
 

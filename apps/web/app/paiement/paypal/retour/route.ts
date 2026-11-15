@@ -3,6 +3,7 @@ import { revalidatePath } from "next/cache";
 import { notificationsRepo } from "@fintech/database";
 import { completePaypalCheckout, applyPriority } from "@fintech/payments";
 import { markBrokerFeePaid, DisbursementError } from "@fintech/applications";
+import { markIntroductionPaid } from "@fintech/introductions";
 import { getCurrentUser } from "../../../../lib/session";
 import { safeBack } from "../../../../lib/paypalCheckout";
 
@@ -33,9 +34,11 @@ export async function GET(request: NextRequest) {
       await notificationsRepo.markAllRead(user.id, "payment");
     } else if (result.purpose === "priority" && result.firstTime) {
       await applyPriority(result.targetId);
+    } else if (result.purpose === "introduction") {
+      await markIntroductionPaid(result.targetId, user.id);
     }
     revalidatePath("/", "layout");
-    return to(result.purpose === "priority" ? "priority=1" : "paid=1");
+    return to(result.purpose === "priority" ? "priority=1" : result.purpose === "introduction" ? "introduction=1" : "paid=1");
   } catch (error) {
     console.error("[paypal] échec au retour de paiement", error);
     return to("payment=failed");

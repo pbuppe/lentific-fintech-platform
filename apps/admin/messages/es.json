@@ -30,7 +30,7 @@
     "activated": "Su acceso está activado: inicie sesión con su nueva contraseña."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "Cola de expedientes",
     "pendingCount": "{count, plural, one {# expediente pendiente} other {# expedientes pendientes}}",
     "empty": "No hay expedientes pendientes por ahora.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · superadministrador",
+    "kicker": "Superadministrador",
     "title": "Cuentas",
     "description": "Vista completa de cada cuenta de prestatario o inversor: perfil, documentos, solicitudes de documentos, puestas en contacto.",
     "empty": "Todavía no hay cuentas.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Volver a las cuentas",
-    "kicker": "apps/admin · superadministrador",
+    "kicker": "Superadministrador",
     "phoneNotProvided": "teléfono no indicado",
     "roleBorrower": "Prestatario",
     "roleInvestor": "Inversor",
@@ -89,7 +89,7 @@
     "documentLabel": "Documento solicitado",
     "documentPlaceholder": "Ej. Justificante de domicilio",
     "instructionsLabel": "Precisiones (opcional)",
-    "instructionsPlaceholder": "Ej. de menos de 3 meses, a tu nombre",
+    "instructionsPlaceholder": "Ej. de menos de 3 meses, a su nombre",
     "sendRequest": "Enviar solicitud",
     "alreadySentTitle": "Solicitudes ya enviadas",
     "requestStatus": {
@@ -99,7 +99,7 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · firma manual",
+    "kicker": "Firma manual",
     "title": "Contratos firmados: por verificar",
     "description": "El cliente imprimió, firmó a mano y subió su contrato. Revisa el documento antes de confirmar.",
     "empty": "No hay contratos pendientes de verificación.",
@@ -109,12 +109,12 @@
     "confirmSignature": "Confirmar la firma",
     "reject": "Rechazar",
     "bilateralEligibleTitle": "Préstamos aptos para un contrato bilateral",
-    "bilateralEligibleDescription": "Estos préstamos están financiados por un solo inversor: puedes regenerar su contrato en versión bilateral directa, nombrando a ese inversor, en lugar del contrato marketplace estándar.",
+    "bilateralEligibleDescription": "Estos préstamos están financiados por un solo inversor: puede regenerar su contrato en versión bilateral directa, nombrando a ese inversor, en lugar del contrato marketplace estándar.",
     "bilateralEligibleMeta": "{borrower} toma prestado de {lender}",
     "regenerateBilateral": "Regenerar como contrato bilateral"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · cobro",
+    "kicker": "Cobro",
     "title": "Cuotas por cobrar",
     "description": "Confirma una mensualidad recibida del prestatario: se redistribuye automáticamente entre los inversores del préstamo, a prorrata de su parte, y alimenta su panel de rendimiento.",
     "empty": "No hay cuotas pendientes por ahora.",
@@ -124,7 +124,7 @@
     "confirmPayment": "Confirmar el pago recibido"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · verificación manual",
+    "kicker": "Verificación manual",
     "title": "Verificación de inversores: por tramitar",
     "description": "Examina el justificante de ingresos y el justificante de disponibilidad de fondos, y luego confirma o rechaza a continuación.",
     "empty": "No hay inversores pendientes de verificación.",
@@ -137,7 +137,7 @@
     "missingDocumentNote": "Falta un justificante: no se puede confirmar hasta que se hayan aportado ambos."
   },
   "KycPage": {
-    "kicker": "apps/admin · verificación manual",
+    "kicker": "Verificación manual",
     "title": "Verificación de identidad: por tramitar",
     "description": "Contacta con el cliente para verificar su documento de identidad y luego confirma o rechaza a continuación.",
     "empty": "No hay expedientes pendientes de verificación manual.",
@@ -147,7 +147,7 @@
     "noApplicationNote": "Este documento no está vinculado a ninguna solicitud: no se puede avanzar en el expediente."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · vista general",
+    "kicker": "Vista general",
     "title": "Perfiles puestos en contacto",
     "description": "Lista de pares que intercambiaron sus datos de contacto mediante una puesta en contacto pagada. A partir de ese momento, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; SODIVA CREDITS no se hace responsable, solo se proporcionó el contacto.",
     "empty": "Todavía no hay puestas en contacto pagadas.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Prestatario hacia inversor"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · riesgo",
+    "kicker": "Riesgo",
     "title": "Motor de riesgo",
     "demoDescription": "Ejemplo calculado por <code1>assessRisk()</code1> de <code2>@fintech/risk</code2> para el expediente de demostración (18.500 € / 24 meses):",
     "scoreLabel": "Puntuación",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Nivel de riesgo"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · estadísticas",
+    "kicker": "Estadísticas",
     "title": "Estadísticas de visitas",
     "description": "Un seguimiento de visitas ligero y autoalojado, integrado en la plataforma. No es Matomo: Matomo necesita una cuenta Matomo Cloud o un alojamiento aparte, a configurar por separado si se desea.",
     "rightNow": "Ahora mismo",
@@ -190,11 +190,11 @@
   "AccountValidationPage": {
     "kicker": "Registros",
     "title": "Cuentas por validar",
-    "description": "Ningún prestatario ni inversor accede a su espacio antes de tu validación. Revisa cada registro y valida o rechaza con un motivo; la persona recibe un correo.",
+    "description": "Ningún prestatario ni inversor accede a su espacio antes de su validación. Revise cada registro y valide o rechace con un motivo; la persona recibe un correo.",
     "doneApproved": "Cuenta validada. Se ha enviado un correo de activación.",
     "doneRejected": "Registro rechazado. La persona ha sido avisada por correo.",
     "doneResent": "Nuevo enlace de confirmación enviado.",
-    "toReviewTitle": "Correo confirmado, pendiente de tu decisión",
+    "toReviewTitle": "Correo confirmado, pendiente de su decisión",
     "toReviewEmpty": "Ningún registro pendiente de validación.",
     "roleBorrower": "Prestatario",
     "roleInvestor": "Inversor",

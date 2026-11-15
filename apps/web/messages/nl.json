@@ -47,55 +47,55 @@
     "borrowerColumnTitle": "Voor een lener",
     "borrowerSteps": [
       {
-        "title": "Simuleer je behoefte",
+        "title": "Simuleer uw behoefte",
         "body": "Bedrag, looptijd, geschatte maandelijkse termijn, vrijblijvend, zonder account."
       },
       {
-        "title": "Vul je profiel aan",
-        "body": "Eenmalig: inkomen, uitgaven, situatie. Wordt gebruikt voor al je toekomstige aanvragen."
+        "title": "Vul uw profiel aan",
+        "body": "Eenmalig: inkomen, uitgaven, situatie. Wordt gebruikt voor al uw toekomstige aanvragen."
       },
       {
-        "title": "Dien je aanvraag in",
-        "body": "Stuur een identiteitsbewijs, een medewerker controleert je dossier binnenkort."
+        "title": "Dien uw aanvraag in",
+        "body": "Stuur een identiteitsbewijs: een medewerker controleert uw dossier binnenkort."
       },
       {
         "title": "Ontvang een aanbod",
-        "body": "De risico-engine berekent een score, een medewerker stelt je een financiering voor."
+        "body": "De risico-engine berekent een score en een medewerker stelt u een financiering voor."
       },
       {
         "title": "Onderteken en word gefinancierd",
-        "body": "Accepteer het aanbod, onderteken je contract, en laat de marketplace het financieren."
+        "body": "Accepteer het aanbod, onderteken uw contract en laat de marketplace het financieren."
       }
     ],
     "applyLinkArrow": "Dien een aanvraag in →",
     "investorColumnTitle": "Voor een investeerder",
     "investorSteps": [
       {
-        "title": "Maak je investeerdersaccount aan",
-        "body": "Vul je profiel en je risicotolerantie in."
+        "title": "Maak uw beleggersaccount aan",
+        "body": "Vul uw profiel en uw risicotolerantie in."
       },
       {
         "title": "Doorzoek de marketplace",
         "body": "Elk getoond dossier is al geverifieerd en het contract al ondertekend."
       },
       {
-        "title": "Investeer het bedrag van jouw keuze",
+        "title": "Investeer het bedrag van uw keuze",
         "body": "Gespreide financiering: meerdere investeerders per dossier."
       },
       {
-        "title": "Volg je portefeuille",
+        "title": "Volg uw portefeuille",
         "body": "Totaal geïnvesteerd, ontvangen terugbetalingen, geschiedenis, in één oogopslag."
       }
     ],
     "viewMarketplaceLinkArrow": "Bekijk de marketplace →",
-    "introBoxTitle": "Moet het sneller gaan? Vraag een directe introductie aan (15 €)",
+    "introBoxTitle": "Moet het sneller gaan? Vraag een directe introductie aan ({fee})",
     "introBoxBody": "In plaats van te wachten, kan een lener direct contact aanvragen met een investeerder (particulier, bedrijf of organisatie) en omgekeerd. Zodra de aanvraag betaald is, worden de contactgegevens onmiddellijk in beide richtingen uitgewisseld.",
     "introBoxDisclaimer": "SODIVA CREDITS verzorgt het contact; wat daarna tussen de twee partijen gebeurt, vindt plaats buiten het platform en valt niet onder onze verantwoordelijkheid.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Al geverifieerde dossiers, klaar om gefinancierd te worden",
     "viewAll": "Alles bekijken",
     "noOpportunities": "Op dit moment geen open kansen, het eerste ondertekende dossier verschijnt hier automatisch.",
-    "noOpportunitiesInCountryHome": "Op dit moment geen open kansen in jouw land, schakel op de marketplace over naar de internationale weergave om alle aanbiedingen te zien.",
+    "noOpportunitiesInCountryHome": "Op dit moment geen open kansen in uw land: schakel op de marketplace over naar de internationale weergave om alle aanbiedingen te zien.",
     "riskLabel": {
       "low": "Laag",
       "moderate": "Gemiddeld",
@@ -104,7 +104,7 @@
     "riskPill": "Risico {label}",
     "fundedProgress": "{funded} € / {target} € gefinancierd ({pct}%)",
     "ctaFinalTitle": "Klaar om te beginnen?",
-    "ctaFinalBody": "Maak in minder dan twee minuten een account aan, of je nu financiering zoekt of wilt investeren.",
+    "ctaFinalBody": "Maak in minder dan twee minuten een account aan, of u nu financiering zoekt of wilt investeren.",
     "becomeInvestor": "Word investeerder",
     "footerText": "© {year} SODIVA CREDITS · Crowdfundingplatform.",
     "footerMarketplace": "Marketplace",
@@ -114,9 +114,9 @@
   "MarketplacePage": {
     "eyebrow": "P2P Marketplace",
     "heroTitle": "Leners en investeerders, op één plek",
-    "heroSubtitle": "Aan de ene kant, al geverifieerde dossiers (zowel particulieren als mkb-bedrijven) die op zoek zijn naar investeerders. Aan de andere kant, investeerders (particulieren, bedrijven of organisaties) die aangeven welk kapitaal ze bereid zijn uit te lenen, zodat je al weet, nog voordat je een aanvraag indient, wat er beschikbaar is.",
+    "heroSubtitle": "Aan de ene kant, al geverifieerde dossiers (zowel particulieren als kmo's) die op zoek zijn naar investeerders. Aan de andere kant, investeerders (particulieren, bedrijven of organisaties) die aangeven welk kapitaal ze bereid zijn uit te lenen, zodat u al weet, nog voordat u een aanvraag indient, wat er beschikbaar is.",
     "availableCapitalTitle": "Beschikbaar kapitaal bij onze investeerders",
-    "availableCapitalSubtitle": "Deze investeerders hebben aangegeven bereid te zijn uit te lenen: handig om je kansen in te schatten voordat je een aanvraag indient.",
+    "availableCapitalSubtitle": "Deze investeerders hebben aangegeven bereid te zijn uit te lenen: handig om uw kansen in te schatten voordat u een aanvraag indient.",
     "noListings": "Er is momenteel geen investeerder die beschikbaar kapitaal heeft gepubliceerd.",
     "noListingsInCountry": "Er is momenteel geen investeerder die beschikbaar kapitaal in dit land heeft gepubliceerd, probeer de internationale weergave.",
     "amountAvailable": "{amount} € beschikbaar",
@@ -130,7 +130,7 @@
       "moderate": "Accepteert gemiddeld en laag risico",
       "high": "Accepteert alle risiconiveaus"
     },
-    "connectCta": "Log in om een introductie aan te vragen (15 €)",
+    "connectCta": "Log in om een introductie aan te vragen ({fee})",
     "depositCta": "Dien een financieringsaanvraag in",
     "signedDossiersTitle": "Al ondertekende dossiers, open voor financiering",
     "signedDossiersSubtitle": "Deze dossiers zijn al geverifieerd (identiteit, risicoanalyse) en hun contract is ondertekend.",
@@ -149,15 +149,15 @@
   },
   "SimulatorPage": {
     "eyebrow": "Simulator",
-    "title": "Bereken je financiering",
-    "subtitle": "Pas het bedrag en de looptijd aan om de geschatte maandelijkse termijn en de totale kosten te zien, voordat je een aanvraag indient.",
+    "title": "Bereken uw financiering",
+    "subtitle": "Pas het bedrag en de looptijd aan om de geschatte maandelijkse termijn en de totale kosten te zien, voordat u een aanvraag indient.",
     "amountLabel": "Gewenst bedrag:",
     "durationLabel": "Looptijd:",
     "durationValue": "{duration} maanden",
     "rateLabel": "Jaarlijks tarief:",
     "estimationEyebrow": "Schatting",
     "monthlyResult": "{monthly} € / maand",
-    "totalCost": "Geschatte totale kosten: {total} € (gesimuleerd tarief {rate}%, het werkelijke tarief hangt af van jouw dossier)",
+    "totalCost": "Geschatte totale kosten: {total} € (gesimuleerd tarief {rate} %, het werkelijke tarief hangt af van uw dossier)",
     "applyCta": "Dien een aanvraag in",
     "legal": "Een lening verbindt u en moet worden terugbetaald. Controleer of u de aflossingen kunt dragen voordat u zich verbindt."
   },
@@ -217,19 +217,19 @@
       "REJECTED": "Afgewezen",
       "CANCELLED": "Geannuleerd"
     },
-    "errorChooseFile": "Kies een bestand voordat je het verstuurt.",
-    "pageEyebrow": "apps/web · (borrower)",
+    "errorChooseFile": "Kies een bestand voordat u het verstuurt.",
+    "pageEyebrow": "(borrower)",
     "title": "Lenersomgeving",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documenten}}",
     "pendingDocumentsRequested": "{count, plural, one {gevraagd} other {gevraagd}} door ons team ({labels}).",
     "sendArrow": "Verstuur →",
     "noApplications": "Nog geen aanvragen.",
-    "noApplicationsLink": "Dien je eerste aanvraag in",
+    "noApplicationsLink": "Dien uw eerste aanvraag in",
     "amountDurationPurpose": "{amount} € · {duration} maanden · {purpose}",
     "priorityBadge": "★ Prioritair dossier",
     "slaBreached": ", SLA van 48u overschreden, er is een herinnering naar ons team gestuurd.",
     "slaDeadline": ", beoordeling gegarandeerd vóór {date}.",
-    "priorityButton": "Naar prioritair dossier ({fee} €, beoordeling binnen 48u)",
+    "priorityButton": "Naar prioritair dossier ({fee}, beoordeling binnen 48u)",
     "identityRejectedPrompt": "Document afgewezen, stuur een nieuw document:",
     "identityNeededPrompt": "Stuur een identiteitsbewijs om verder te gaan:",
     "send": "Versturen",
@@ -239,7 +239,7 @@
     "downloadContract": "Download mijn contract (PDF)",
     "signInstructions": "Print het uit, onderteken het met de hand, en stuur vervolgens een foto/scan:",
     "contractUploadedPending": "Ondertekend contract verstuurd, in afwachting van verificatie door een medewerker.",
-    "contractConfirmed": "Contract bevestigd ondertekend: jouw financiering wordt nu aangeboden aan investeerders.",
+    "contractConfirmed": "Contract bevestigd ondertekend: uw financiering wordt nu aangeboden aan investeerders.",
     "feePaid": "Betaling ontvangen, dank u. Uw factuur is beschikbaar bij uw adviseur.",
     "fundsPending": "Contract ondertekend: ons team controleert de uitbetaling van uw geld.",
     "fundsDisbursedKicker": "Geld uitbetaald",
@@ -325,11 +325,11 @@
     }
   },
   "BorrowerApplication": {
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Aanvraag indienen",
     "profileIntroPart1": "Vul eerst",
-    "profileIntroLink": "je financieel profiel",
-    "profileIntroPart2": "aan als dat nog niet is gebeurd: de risico-engine heeft dit nodig om je dossier te analyseren.",
+    "profileIntroLink": "uw financieel profiel",
+    "profileIntroPart2": "aan als dat nog niet is gebeurd: de risico-engine heeft dit nodig om uw dossier te analyseren.",
     "availableFundsAmount": "{amount} €",
     "availableFundsRest": "{count, plural, one {is momenteel beschikbaar bij # investeerder die klaarstaat} other {is momenteel beschikbaar bij # investeerders die klaarstaan}} om een dossier zoals het jouwe te financieren,",
     "availableFundsLink": "bekijk de details",
@@ -346,8 +346,8 @@
   },
   "BorrowerDocuments": {
     "title": "Mijn documenten",
-    "subtitle": "Documenten die door ons team zijn gevraagd om je dossier te vervolledigen of te verifiëren.",
-    "errorSelectFile": "Kies een bestand voordat je het verstuurt.",
+    "subtitle": "Documenten die door ons team zijn gevraagd om uw dossier te vervolledigen of te verifiëren.",
+    "errorSelectFile": "Kies een bestand voordat u het verstuurt.",
     "pendingHeading": "In te dienen",
     "pendingEmpty": "Op dit moment geen documenten in afwachting.",
     "statusPending": "In afwachting",
@@ -390,19 +390,21 @@
   },
   "BorrowerInvestors": {
     "title": "Beschikbare investeerders",
-    "intro": "Particulieren, bedrijven en organisaties publiceren hier het kapitaal dat ze bereid zijn uit te lenen. Vraag een directe introductie aan (contactgegevens direct uitgewisseld) voor {fee} €.",
-    "disclaimer": "Zodra je geïntroduceerd bent, verlopen de uitwisselingen en de eventuele lening rechtstreeks tussen jou en de investeerder, buiten het platform om. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "intro": "Particulieren, bedrijven en organisaties publiceren hier het kapitaal dat ze bereid zijn uit te lenen. Vraag een directe introductie aan (contactgegevens direct uitgewisseld) voor {fee}.",
+    "disclaimer": "Zodra u geïntroduceerd bent, verlopen de uitwisselingen en de eventuele lening rechtstreeks tussen u en de investeerder, buiten het platform om. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen beide partijen gebeurt.",
     "empty": "Op dit moment geen beschikbaar kapitaal gepubliceerd.",
     "defaultInvestorName": "Investeerder",
     "verified": "Geverifieerd ✓",
     "risk": "Risico {risk}",
     "availability": "<amount>{amountValue} €</amount> beschikbaar · {rate}% · {duration} maanden · ongeveer {monthlyValue} €/maand",
     "alreadyIntroduced": "Introductie betaald: contactgegevens in <link>Mijn introducties</link>.",
-    "requestButton": "Introductie aanvragen ({fee} €)"
+    "requestButton": "Introductie aanvragen ({fee})",
+    "introPremium": "Particulieren, bedrijven en organisaties publiceren hier het kapitaal dat ze willen uitlenen. Met uw Premium-abonnement zijn directe kennismakingen (contactgegevens meteen gedeeld) inbegrepen en onbeperkt.",
+    "requestButtonPremium": "Kennismaking aanvragen (inbegrepen in Premium)"
   },
   "BorrowerIntroductions": {
     "title": "Mijn introducties",
-    "intro": "Een betaalde introductie onthult de contactgegevens in beide richtingen: jij en de andere persoon kunnen elkaar rechtstreeks schrijven.",
+    "intro": "Een betaalde introductie onthult de contactgegevens in beide richtingen: u en de andere persoon kunnen elkaar rechtstreeks schrijven.",
     "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. SODIVA CREDITS heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "sentHeading": "Verzoeken die ik heb verstuurd",
     "sentEmpty": "Op dit moment geen verzonden verzoeken.",
@@ -412,15 +414,15 @@
     "contact": "Contact: {email}",
     "paymentPending": "Betaling in afwachting.",
     "receivedHeading": "Ontvangen verzoeken",
-    "receivedEmpty": "Nog niemand heeft gevraagd om contact met je op te nemen.",
-    "receivedRequest": "<name>{nameValue}</name> wil graag met je in contact komen.",
+    "receivedEmpty": "Nog niemand heeft gevraagd om contact met u op te nemen.",
+    "receivedRequest": "<name>{nameValue}</name> wil graag met u in contact komen.",
     "formalizeDirectLoan": "Directe lening formaliseren",
     "viewDirectLoan": "Directe lening bekijken"
   },
   "BorrowerOnboarding": {
     "title": "Mijn financieel profiel",
-    "subtitle": "Deze gegevens worden gebruikt door de risico-engine en worden je bij een volgende aanvraag niet opnieuw gevraagd.",
-    "alreadySaved": "Je profiel is al opgeslagen, werk bij wat is veranderd en sla opnieuw op.",
+    "subtitle": "Deze gegevens worden gebruikt door de risico-engine en worden u bij een volgende aanvraag niet opnieuw gevraagd.",
+    "alreadySaved": "Uw profiel is al opgeslagen: werk bij wat is veranderd en sla opnieuw op.",
     "cityLabel": "Stad",
     "postalCodeLabel": "Postcode",
     "employmentLabel": "Arbeidssituatie",
@@ -456,7 +458,7 @@
       "high": "Hoog"
     },
     "title": "P2P Marketplace",
-    "intro": "Als je een directe introductie met een lener aanvraagt, vinden alle uitwisselingen die daarop volgen plaats buiten het platform. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "intro": "Als u een directe introductie met een lener aanvraagt, vinden alle uitwisselingen die daarop volgen plaats buiten het platform. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen beide partijen gebeurt.",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documenten}}",
     "pendingDocumentsRequested": "{count, plural, one {gevraagd} other {gevraagd}} door ons team ({labels}).",
     "send": "Versturen →",
@@ -469,10 +471,10 @@
     "invest": "Investeren",
     "introductionPaidPrefix": "Introductie betaald: contactgegevens in",
     "introductionPaidLink": "Mijn introducties",
-    "requestIntroduction": "Directe introductie met de lener krijgen ({premium, select, yes {gratis, Premium} other {{fee} €}})"
+    "requestIntroduction": "Directe introductie met de lener krijgen ({premium, select, yes {gratis, Premium} other {{fee}}})"
   },
   "InvestorDocuments": {
-    "chooseFileError": "Kies een bestand voordat je het verstuurt.",
+    "chooseFileError": "Kies een bestand voordat u het verstuurt.",
     "title": "Mijn documenten",
     "description": "Documenten die door ons team zijn gevraagd, naast de verificatiebewijzen.",
     "toUpload": "In te dienen",
@@ -487,7 +489,7 @@
   },
   "InvestorIntroductions": {
     "title": "Mijn introducties",
-    "description": "Een betaalde introductie onthult de contactgegevens in beide richtingen: jij en de andere partij kunnen elkaar rechtstreeks schrijven.",
+    "description": "Een betaalde introductie onthult de contactgegevens in beide richtingen: u en de andere partij kunnen elkaar rechtstreeks schrijven.",
     "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. SODIVA CREDITS heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "sentTitle": "Verzoeken die ik heb verstuurd",
     "noSentRequests": "Op dit moment geen verzonden verzoeken.",
@@ -496,26 +498,26 @@
     "contactInfo": "Contact: {email}",
     "paymentPending": "Betaling in afwachting.",
     "receivedTitle": "Ontvangen verzoeken",
-    "noReceivedRequests": "Nog niemand heeft gevraagd om contact met je op te nemen.",
-    "wantsToConnect": "wil graag met je in contact komen.",
+    "noReceivedRequests": "Nog niemand heeft gevraagd om contact met u op te nemen.",
+    "wantsToConnect": "wil graag met u in contact komen.",
     "formalizeDirectLoan": "Directe lening formaliseren",
     "viewDirectLoan": "Directe lening bekijken"
   },
   "InvestorNotifications": {
     "eventLabels": {
-      "funding_match_alert": "Een nieuw dossier komt overeen met jouw risicotolerantie",
-      "introduction_paid": "Iemand heeft betaald om jouw contactgegevens te krijgen",
-      "investor_verified": "Jouw investeerdersprofiel is geverifieerd",
-      "investor_rejected": "Jouw investeerdersverificatie is afgewezen",
-      "document_requested": "Er is een document bij je opgevraagd"
+      "funding_match_alert": "Een nieuw dossier komt overeen met uw risicotolerantie",
+      "introduction_paid": "Iemand heeft betaald om uw contactgegevens te krijgen",
+      "investor_verified": "Uw beleggersprofiel is geverifieerd",
+      "investor_rejected": "Uw beleggersverificatie is afgewezen",
+      "document_requested": "Er is een document bij u opgevraagd"
     },
     "title": "Mijn meldingen",
-    "subtitle": "Automatische meldingen over nieuwe dossiers die bij jouw profiel passen zijn voorbehouden aan Premium-investeerders.",
+    "subtitle": "Automatische meldingen over nieuwe dossiers die bij uw profiel passen zijn voorbehouden aan Premium-investeerders.",
     "empty": "Op dit moment geen meldingen."
   },
   "InvestorOffers": {
     "title": "Mijn kapitaalaanbiedingen",
-    "subtitle": "Publiceer een bedrag dat je bereid bent uit te lenen, met het tarief en de looptijd die je verkiest: leners zien dit direct op de marketplace, nog voordat ze hun aanvraag indienen.",
+    "subtitle": "Publiceer een bedrag dat u bereid bent uit te lenen, met het tarief en de looptijd die u verkiest: leners zien dit direct op de marketplace, nog voordat ze hun aanvraag indienen.",
     "publishedHeading": "Gepubliceerde aanbiedingen",
     "empty": "Op dit moment geen gepubliceerde aanbiedingen.",
     "amountAvailable": "{amount} € beschikbaar",
@@ -574,7 +576,7 @@
       "alert": {
         "prefix": "→",
         "bold": "Automatische melding",
-        "suffix": " zodra een nieuw dossier overeenkomt met jouw risicotolerantie"
+        "suffix": " zodra een nieuw dossier overeenkomt met uw risicotolerantie"
       },
       "verification": {
         "prefix": "→",
@@ -620,7 +622,7 @@
   },
   "InvestorVerification": {
     "title": "Verificatie van mijn profiel",
-    "subtitle": "Een geverifieerde investeerder toont een badge die zichtbaar is voor leners op de marketplace, dat stelt gerust en onderscheidt jouw profiel. De verificatie gebeurt handmatig: een medewerker beoordeelt je bewijsstukken.",
+    "subtitle": "Een geverifieerde investeerder toont een badge die zichtbaar is voor leners op de marketplace: dat stelt gerust en onderscheidt uw profiel. De verificatie gebeurt handmatig: een medewerker beoordeelt uw bewijsstukken.",
     "statusLabels": {
       "UNVERIFIED": "Niet geverifieerd",
       "PENDING_REVIEW": "In afwachting van verificatie",
@@ -628,8 +630,8 @@
       "REJECTED": "Afgewezen"
     },
     "rejectionReason": "Reden voor afwijzing: {reason}",
-    "verifiedMessage": "Je profiel is geverifieerd: de badge verschijnt nu bij je kapitaalaanbiedingen en je contactprofiel.",
-    "pendingMessage": "Je bewijsstukken zijn verstuurd, een medewerker gaat ze beoordelen. Je wordt op de hoogte gebracht zodra de verificatie is afgerond.",
+    "verifiedMessage": "Uw profiel is geverifieerd: de badge verschijnt nu bij uw kapitaalaanbiedingen en uw contactprofiel.",
+    "pendingMessage": "Uw bewijsstukken zijn verstuurd en een medewerker gaat ze beoordelen. U wordt op de hoogte gebracht zodra de verificatie is afgerond.",
     "incomeDocLabel": "Inkomensbewijs: {name}",
     "fundsDocLabel": "Bewijs van beschikbaarheid van fondsen: {name}",
     "incomeFieldLabel": "Bewijs van inkomstenbron",
@@ -669,7 +671,7 @@
     "pageTitle": "Directe lening formaliseren",
     "notFound": "Kennismaking niet gevonden.",
     "notPaidYet": "Deze kennismaking moet eerst worden betaald.",
-    "intro": "Je bent in contact gebracht met {name}. Vul de leningsvoorwaarden in die jullie samen zijn overeengekomen om een contract te genereren.",
+    "intro": "U bent in contact gebracht met {name}. Vul de leningsvoorwaarden in die u samen bent overeengekomen om een contract te genereren.",
     "alreadyFormalized": "Er is al een lening geformaliseerd met {name}.",
     "agreementSummary": "{amount} € over {duration} maanden, rente {rate} %.",
     "downloadContract": "Contract downloaden",
@@ -681,26 +683,26 @@
   },
   "AccountPending": {
     "kicker": "SODIVA CREDITS · Mijn account",
-    "titleEmail": "Bevestig je e-mailadres",
-    "titleReview": "Je account wordt beoordeeld",
+    "titleEmail": "Bevestig uw e-mailadres",
+    "titleReview": "Uw account wordt beoordeeld",
     "titleRejected": "Registratie niet goedgekeurd",
     "titleSuspended": "Account opgeschort",
     "stepSignup": "E-mailadres bevestigen",
     "stepEmail": "Beoordeling door een beheerder",
-    "stepReview": "Toegang tot je account",
+    "stepReview": "Toegang tot uw account",
     "done": "klaar",
     "inProgress": "bezig",
     "pillEmail": "E-mail te bevestigen",
     "pillReview": "Wacht op goedkeuring",
     "pillRejected": "Afgewezen",
     "pillSuspended": "Opgeschort",
-    "bodyEmail": "We hebben een bevestigingslink gestuurd naar {email}. Klik erop om je adres te bevestigen. Kijk ook in je spammap.",
+    "bodyEmail": "We hebben een bevestigingslink gestuurd naar {email}. Klik erop om uw adres te bevestigen. Kijk ook in uw spammap.",
     "resend": "Link opnieuw sturen",
-    "resent": "We hebben je zojuist een nieuwe link gestuurd.",
-    "bodyReview": "Bedankt, je e-mailadres is bevestigd. Een beheerder beoordeelt nu je registratie. Je krijgt een e-mail zodra je account actief is.",
-    "bodyRejected": "Na beoordeling kon je registratie niet worden goedgekeurd.",
+    "resent": "We hebben u zojuist een nieuwe link gestuurd.",
+    "bodyReview": "Bedankt, uw e-mailadres is bevestigd. Een beheerder beoordeelt nu uw registratie. U krijgt een e-mail zodra uw account actief is.",
+    "bodyRejected": "Na beoordeling kon uw registratie niet worden goedgekeurd.",
     "reason": "Reden:",
-    "bodySuspended": "De toegang tot je account is opgeschort. Neem contact op met support voor meer informatie."
+    "bodySuspended": "De toegang tot uw account is opgeschort. Neem contact op met support voor meer informatie."
   },
   "VerifyEmail": {
     "kicker": "SODIVA CREDITS · E-mailbevestiging",
@@ -708,7 +710,7 @@
     "titleError": "Ongeldige link",
     "pillOk": "Bevestigd",
     "pillError": "Fout",
-    "bodyVerified": "Bedankt! Je e-mailadres is bevestigd. Een beheerder keurt nu je account goed; je krijgt bericht per e-mail.",
+    "bodyVerified": "Bedankt! Uw e-mailadres is bevestigd. Een beheerder keurt nu uw account goed; u krijgt bericht per e-mail.",
     "bodyAlready": "Dit e-mailadres was al bevestigd.",
     "bodyExpired": "Deze link is verlopen. Log in om een nieuwe te ontvangen.",
     "bodyInvalid": "Deze link is ongeldig of vervangen door een nieuwere. Log in om een nieuwe te ontvangen.",
@@ -746,7 +748,11 @@
       "advisor_message": "Nieuw bericht",
       "assistance_started": "Een adviseur heeft een assistentiesessie geopend",
       "assistance_document": "Uw adviseur heeft een document voor u geüpload",
-      "assistance_ended": "Assistentiesessie beëindigd"
+      "assistance_ended": "Assistentiesessie beëindigd",
+      "subscription_started": "Uw Premium-abonnement is actief",
+      "subscription_renewed": "Uw Premium-abonnement is verlengd",
+      "subscription_past_due": "De afschrijving voor uw Premium-abonnement is mislukt",
+      "subscription_ended": "Uw Premium-abonnement is beëindigd"
     }
   },
   "ClientPayments": {
@@ -776,7 +782,12 @@
       "FAILED": "Mislukt",
       "REFUNDED": "Terugbetaald"
     },
-    "safetyNote": "Betaal nooit kosten op een rekening die per telefoon of e-mail is meegedeeld: al uw betalingen gebeuren hier."
+    "safetyNote": "Betaal nooit kosten op een rekening die per telefoon of e-mail is meegedeeld: al uw betalingen gebeuren hier.",
+    "paymentPurpose": {
+      "introduction": "Kennismaking",
+      "priority": "Optie prioritair dossier",
+      "premium": "Premium-abonnement"
+    }
   },
   "ClientHelp": {
     "title": "Hulp nodig?",
@@ -972,8 +983,103 @@
     "priorityPaid": "Betaling ontvangen: uw dossier is nu prioritair.",
     "description": {
       "broker_fee": "Bemiddelingskosten, dossier {reference}",
-      "priority": "Optie Prioritair dossier, dossier {reference}"
+      "priority": "Optie Prioritair dossier, dossier {reference}",
+      "introduction": "SODIVA CREDITS-kennismaking, ref. {reference}"
     },
-    "review": "PayPal heeft uw betaling ontvangen. Ons team controleert deze en neemt zeer snel contact met u op: u hoeft niet opnieuw te betalen."
+    "review": "PayPal heeft uw betaling ontvangen. Ons team controleert deze en neemt zeer snel contact met u op: u hoeft niet opnieuw te betalen.",
+    "introductionPaid": "Betaling ontvangen: de kennismaking is gelegd, de contactgegevens staan onder \"Kennismakingen\".",
+    "introductionIncluded": "Kennismaking gelegd, inbegrepen in uw Premium-abonnement: de contactgegevens staan onder \"Kennismakingen\"."
+  },
+  "Premium": {
+    "title": "Premium-abonnement",
+    "eyebrow": "Onbeperkte kennismakingen",
+    "statusLabels": {
+      "ACTIVE": "Actief",
+      "CANCELLED": "Beëindigd",
+      "PAST_DUE": "Betaling mislukt"
+    },
+    "statusEnding": "Actief tot het einde van de periode",
+    "nextCharge": "Volgende PayPal-afschrijving op {date}.",
+    "renewalAuto": "Automatische verlenging op {date}.",
+    "renewalCancelled": "Opgezegd: blijft actief tot {date} en stopt daarna zonder nieuwe afschrijving.",
+    "pastDue": "De laatste afschrijving is mislukt: Premium is opgeschort. Controleer uw betaalmethode in uw PayPal-rekening of sluit hieronder opnieuw een abonnement af.",
+    "ended": "Abonnement beëindigd op {date}.",
+    "legacyNote": "Dit proefabonnement stopt op {date}. Wilt u daarna Premium houden, sluit dan opnieuw een abonnement af via PayPal.",
+    "featuresHeading": "Wat Premium u biedt",
+    "cancelButton": "Mijn abonnement opzeggen",
+    "cancelHint": "Na opzegging geen afschrijvingen meer. Premium blijft actief tot {date}.",
+    "subscribePaypal": "Abonneren met PayPal · {amount} / maand",
+    "resubscribePaypal": "Opnieuw abonneren met PayPal · {amount} / maand",
+    "reactivatePaypal": "Opnieuw abonneren met PayPal",
+    "reactivateButton": "Abonnement heractiveren",
+    "subscribeButton": "Overstappen op Premium · {amount} / maand",
+    "reactivateHint": "Vóór {date} wordt niets afgeschreven: het nieuwe abonnement neemt het over aan het einde van de al betaalde periode.",
+    "paypalHint": "Veilig betalen via PayPal: PayPal-rekening of bankkaart. Zonder verplichting, met één klik opzegbaar.",
+    "noCommitment": "Zonder verplichting, met één klik opzegbaar.",
+    "sandbox": "testmodus",
+    "historyHeading": "Overzicht van afschrijvingen",
+    "historyEmpty": "Nog geen afschrijvingen.",
+    "simulated": "Gesimuleerd",
+    "unitLabel": "Zonder abonnement",
+    "unitPrice": "{fee} per kennismaking",
+    "unitNote": "Elk nieuw contact betaalt u opnieuw.",
+    "premiumLabel": "Met Premium",
+    "premiumPrice": "{amount} / maand, onbeperkt",
+    "breakEven": "Drie losse kennismakingen kosten al bijna evenveel: vanaf de vierde is elk extra contact gratis.",
+    "notices": {
+      "active": "Welkom bij Premium! Uw abonnement is actief. Volgende afschrijving op {date}.",
+      "deferred": "Nieuw abonnement geregistreerd. Premium loopt zonder onderbreking door; de eerste afschrijving is op {date}.",
+      "cancelled": "Abonnement opgezegd: geen afschrijvingen meer. Premium blijft actief tot {date}.",
+      "checkout_cancelled": "Abonnement geannuleerd op PayPal: er is niets afgeschreven.",
+      "failed": "PayPal heeft het abonnement niet bevestigd: er is niets afgeschreven. Probeer het opnieuw of neem contact op met uw adviseur.",
+      "unavailable": "Online betalen is tijdelijk niet beschikbaar. Probeer het over enkele minuten opnieuw.",
+      "cancel_failed": "De opzegging kon niet naar PayPal worden verzonden. Probeer het over enkele minuten opnieuw; blijft ze onbevestigd, neem dan contact op met uw adviseur."
+    },
+    "investor": {
+      "kicker": "Beleggersomgeving",
+      "headline": "Beleg uw kapitaal sneller, met zoveel kennismakingen als u nodig hebt",
+      "pitch": "Eén contact is niet altijd genoeg: misschien heeft de lener al financiering gevonden, of past het project niet helemaal bij uw criteria. Met Premium neemt u contact op met zoveel leners als u wilt, vergelijkt u projecten en beslist u sneller.",
+      "features": [
+        "Onbeperkte kennismakingen met leners, zonder elk contact te betalen",
+        "Neem parallel contact op met meerdere leners om projecten te vergelijken",
+        "Automatische melding zodra een nieuw dossier bij uw risicobereidheid past",
+        "Versnelde controle van uw beleggersprofiel, binnen 48 uur",
+        "Premium-badge naast de badge Geverifieerd",
+        "Uitgebreid prestatiedashboard: rendement, wanbetalingsgraad, historiek"
+      ]
+    },
+    "borrower": {
+      "kicker": "Klantenomgeving",
+      "headline": "Vergroot uw kansen om snel uw financiering te krijgen",
+      "pitch": "Elke belegger heeft eigen criteria: bedrag, looptijd, soort project. Neemt u maar met één belegger contact op, dan hangt u af van één antwoord. Met Premium neemt u tegelijk contact op met zoveel beleggers als u wilt: u vergroot uw kansen en wint kostbare tijd.",
+      "features": [
+        "Onbeperkte kennismakingen met beleggers, zonder elk contact te betalen",
+        "Neem tegelijk contact op met meerdere beleggers in plaats van na elkaar op antwoord te wachten",
+        "Vergelijk de voorstellen en kies het voorstel dat het best bij u past",
+        "Zonder verplichting: met één klik kosteloos opzegbaar"
+      ],
+      "disclaimer": "Premium maakt het contact met beleggers eenvoudiger; het garandeert geen financiering. Een krediet verbindt u en moet worden terugbetaald: controleer uw terugbetalingscapaciteit voordat u zich verbindt."
+    }
+  },
+  "PremiumPromo": {
+    "eyebrow": "Premium-abonnement",
+    "title": "Meer contacten, meer kansen, minder wachten",
+    "text": "Een kennismaking kost {fee}. Met het Premium-abonnement van {amount} per maand zijn ze onbeperkt: neem parallel contact op met meerdere beleggers of leners en kom sneller vooruit.",
+    "borrowerTitle": "U zoekt financiering",
+    "borrowerText": "Neem tegelijk contact op met meerdere beleggers in plaats van op één antwoord te wachten: u vergroot uw kansen op snelle financiering.",
+    "investorTitle": "U wilt beleggen",
+    "investorText": "Neem contact op met zoveel leners als u wilt om projecten te vergelijken en uw kapitaal sneller te beleggen.",
+    "perMonth": "/ maand",
+    "unlimited": "Onbeperkte kennismakingen · zonder verplichting",
+    "breakEven": "Vanaf de 4e kennismaking van de maand is elk extra contact gratis.",
+    "ctaBorrower": "Ik zoek financiering",
+    "ctaInvestor": "Ik wil beleggen",
+    "ctaPremium": "Ontdek Premium",
+    "bannerBorrower": "Zet niet alles op één belegger: met Premium ({amount} / maand) neemt u contact op met zoveel als u wilt.",
+    "bannerInvestor": "Vergelijk meer projecten: met Premium ({amount} / maand) neemt u contact op met zoveel leners als u wilt.",
+    "bannerVisitor": "Onbeperkte kennismakingen met het Premium-abonnement: {amount} / maand, zonder verplichting.",
+    "bannerCta": "Bekijk het aanbod",
+    "noGuarantee": "Premium maakt contact eenvoudiger; het garandeert geen financiering.",
+    "navLabel": "Premium"
   }
 }

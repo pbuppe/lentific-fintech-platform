@@ -30,7 +30,7 @@
     "activated": "Your access is activated: sign in with your new password."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back office",
+    "kicker": "Back office",
     "title": "Case queue",
     "pendingCount": "{count, plural, one {# case pending} other {# cases pending}}",
     "empty": "No cases pending for now.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · super admin",
+    "kicker": "Super admin",
     "title": "Accounts",
     "description": "Full view of every borrower or investor account: profile, documents, document requests, introductions.",
     "empty": "No accounts yet.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Back to accounts",
-    "kicker": "apps/admin · super admin",
+    "kicker": "Super admin",
     "phoneNotProvided": "phone not provided",
     "roleBorrower": "Borrower",
     "roleInvestor": "Investor",
@@ -99,7 +99,7 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · manual signature",
+    "kicker": "Manual signature",
     "title": "Signed contracts: to review",
     "description": "The client printed, hand-signed and uploaded their contract. Check the document before confirming.",
     "empty": "No contracts pending review.",
@@ -114,7 +114,7 @@
     "regenerateBilateral": "Regenerate as bilateral contract"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · collections",
+    "kicker": "Collections",
     "title": "Installments to collect",
     "description": "Confirm a monthly payment received from the borrower: it is automatically redistributed among the loan's investors, in proportion to their share, and feeds their performance dashboard.",
     "empty": "No installments pending for now.",
@@ -124,7 +124,7 @@
     "confirmPayment": "Confirm payment received"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · manual verification",
+    "kicker": "Manual verification",
     "title": "Investor verification: to process",
     "description": "Review the proof of income and the proof of funds availability, then confirm or reject below.",
     "empty": "No investors pending verification.",
@@ -137,7 +137,7 @@
     "missingDocumentNote": "A document is missing: cannot confirm until both are uploaded."
   },
   "KycPage": {
-    "kicker": "apps/admin · manual verification",
+    "kicker": "Manual verification",
     "title": "Identity verification: to process",
     "description": "Contact the client to verify their identity document, then confirm or reject below.",
     "empty": "No cases pending manual verification.",
@@ -147,7 +147,7 @@
     "noApplicationNote": "This document is not linked to any application: the case cannot be moved forward."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · overview",
+    "kicker": "Overview",
     "title": "Introduced profiles",
     "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and SODIVA CREDITS is not responsible for it, only the contact was provided.",
     "empty": "No paid introductions yet.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Borrower to investor"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · risk",
+    "kicker": "Risk",
     "title": "Risk engine",
     "demoDescription": "Example computed by <code1>assessRisk()</code1> from <code2>@fintech/risk</code2> for the demo case (€18,500 / 24 months):",
     "scoreLabel": "Score",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Risk level"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · statistics",
+    "kicker": "Statistics",
     "title": "Visit statistics",
     "description": "A lightweight, self-hosted visit tracker built into the platform. This is not Matomo: Matomo needs either a Matomo Cloud account or separate hosting, to be set up separately if wanted.",
     "rightNow": "Right now",

@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getCurrentUser } from "../../../../../lib/session";
 import { DirectLoanFormalizePanel } from "../../../../components/DirectLoanFormalizePanel";
+import { SpaceKicker } from "../../../../components/SpaceKicker";
 
 export default async function InvestorFormalizeDirectLoanPage({
   params,
@@ -16,7 +17,7 @@ export default async function InvestorFormalizeDirectLoanPage({
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-10">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (investor)</p>
+      <SpaceKicker audience="investor" />
       <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("pageTitle")}</h1>
       <div className="mt-6">
         <DirectLoanFormalizePanel

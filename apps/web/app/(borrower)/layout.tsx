@@ -43,6 +43,7 @@ export default async function BorrowerLayout({ children }: { children: React.Rea
     { href: "/messages", label: t("nav.messages"), badge: unreadMessages },
     { href: "/paiements", label: t("nav.payments"), badge: pendingFees },
     { href: "/notifications", label: t("nav.notifications"), badge: unread },
+    { href: "/premium", label: `★ ${(await getTranslations("PremiumPromo"))("navLabel")}` },
     { href: "/aide", label: t("nav.help") },
     { href: "/onboarding", label: t("nav.myProfile") },
   ];

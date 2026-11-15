@@ -30,7 +30,7 @@
     "activated": "Ihr Zugang ist aktiviert: Melden Sie sich mit Ihrem neuen Passwort an."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · Back-Office",
+    "kicker": "Back-Office",
     "title": "Warteschlange: Dossiers",
     "pendingCount": "{count, plural, one {# ausstehendes Dossier} other {# ausstehende Dossiers}}",
     "empty": "Derzeit keine ausstehenden Dossiers.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · Super-Admin",
+    "kicker": "Super-Admin",
     "title": "Konten",
     "description": "Vollständige Übersicht über jedes Kreditnehmer- oder Investorenkonto: Profil, Dokumente, Dokumentanfragen, Vermittlungen.",
     "empty": "Noch keine Konten.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Zurück zu den Konten",
-    "kicker": "apps/admin · Super-Admin",
+    "kicker": "Super-Admin",
     "phoneNotProvided": "Telefonnummer nicht angegeben",
     "roleBorrower": "Kreditnehmer",
     "roleInvestor": "Investor",
@@ -99,7 +99,7 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · manuelle Unterschrift",
+    "kicker": "Manuelle Unterschrift",
     "title": "Unterschriebene Verträge: zu prüfen",
     "description": "Der Kunde hat den Vertrag ausgedruckt, handschriftlich unterschrieben und hochgeladen. Prüfen Sie das Dokument, bevor Sie bestätigen.",
     "empty": "Keine Verträge zur Prüfung ausstehend.",
@@ -114,7 +114,7 @@
     "regenerateBilateral": "Als bilateralen Vertrag neu erstellen"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · Inkasso",
+    "kicker": "Inkasso",
     "title": "Einzuziehende Raten",
     "description": "Bestätigen Sie eine vom Kreditnehmer erhaltene Monatsrate: Sie wird automatisch anteilig unter den Investoren des Kredits verteilt und fließt in deren Leistungs-Dashboard ein.",
     "empty": "Derzeit keine ausstehenden Raten.",
@@ -124,7 +124,7 @@
     "confirmPayment": "Erhaltene Zahlung bestätigen"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · manuelle Verifizierung",
+    "kicker": "Manuelle Verifizierung",
     "title": "Investorenverifizierung: zu bearbeiten",
     "description": "Prüfen Sie den Einkommensnachweis und den Nachweis der Mittelverfügbarkeit, dann bestätigen oder lehnen Sie unten ab.",
     "empty": "Keine Investoren zur Verifizierung ausstehend.",
@@ -137,7 +137,7 @@
     "missingDocumentNote": "Ein Nachweis fehlt: Bestätigung erst möglich, wenn beide hochgeladen sind."
   },
   "KycPage": {
-    "kicker": "apps/admin · manuelle Verifizierung",
+    "kicker": "Manuelle Verifizierung",
     "title": "Identitätsprüfung: zu bearbeiten",
     "description": "Kontaktieren Sie den Kunden, um seinen Identitätsnachweis zu prüfen, dann bestätigen oder lehnen Sie unten ab.",
     "empty": "Keine Dossiers zur manuellen Verifizierung ausstehend.",
@@ -147,7 +147,7 @@
     "noApplicationNote": "Dieses Dokument ist keinem Antrag zugeordnet: Das Dossier kann nicht weiterbearbeitet werden."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · Übersicht",
+    "kicker": "Übersicht",
     "title": "Vermittelte Profile",
     "description": "Liste der Paare, die ihre Kontaktdaten über eine bezahlte Vermittlung ausgetauscht haben. Ab diesem Zeitpunkt findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, SODIVA CREDITS übernimmt dafür keine Verantwortung, es wurde lediglich der Kontakt hergestellt.",
     "empty": "Noch keine bezahlten Vermittlungen.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Kreditnehmer zu Investor"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · Risiko",
+    "kicker": "Risiko",
     "title": "Risiko-Engine",
     "demoDescription": "Von <code1>assessRisk()</code1> aus <code2>@fintech/risk</code2> berechnetes Beispiel für das Demo-Dossier (18.500 € / 24 Monate):",
     "scoreLabel": "Score",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Risikostufe"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · Statistiken",
+    "kicker": "Statistiken",
     "title": "Besuchsstatistiken",
     "description": "Eine einfache, selbst gehostete Besuchserfassung, direkt in die Plattform eingebaut. Das ist nicht Matomo: Matomo benötigt entweder ein Matomo-Cloud-Konto oder ein separates Hosting, bei Bedarf separat einzurichten.",
     "rightNow": "Gerade jetzt",

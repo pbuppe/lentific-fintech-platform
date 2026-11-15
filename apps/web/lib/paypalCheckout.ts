@@ -4,7 +4,7 @@ import { webBaseUrl } from "@fintech/auth";
 import { startPaypalCheckout, type OnlinePurpose } from "@fintech/payments";
 
 /** Pages vers lesquelles le client peut revenir après PayPal (liste fermée). */
-export const PAYPAL_BACK_PAGES = ["/dashboard", "/paiements"] as const;
+export const PAYPAL_BACK_PAGES = ["/dashboard", "/paiements", "/investisseurs", "/investor/dashboard"] as const;
 export type PaypalBack = (typeof PAYPAL_BACK_PAGES)[number];
 
 export function safeBack(value: string | null | undefined): PaypalBack {

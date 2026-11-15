@@ -2,8 +2,11 @@ import { getTranslations } from "next-intl/server";
 import { isPaypalConfigured, paypalMode } from "@fintech/payments";
 
 /** Message affiché au retour de PayPal (annulé, refusé, indisponible, option prioritaire activée). */
-export async function PaymentNotice({ payment, priority }: { payment?: string; priority?: string }) {
+export async function PaymentNotice({ payment, priority, introduction }: { payment?: string; priority?: string; introduction?: string }) {
   const t = await getTranslations("PaypalCheckout");
+  if (introduction) {
+    return <p role="status" className="mb-6 rounded-lg bg-success-soft px-4 py-3 text-sm text-success">{t(introduction === "included" ? "introductionIncluded" : "introductionPaid")}</p>;
+  }
   if (priority) {
     return <p role="status" className="mb-6 rounded-lg bg-success-soft px-4 py-3 text-sm text-success">{t("priorityPaid")}</p>;
   }

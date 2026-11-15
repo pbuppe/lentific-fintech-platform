@@ -30,7 +30,7 @@
     "activated": "O seu acesso está ativado: inicie sessão com a nova palavra-passe."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "Fila de processos",
     "pendingCount": "{count, plural, one {# processo pendente} other {# processos pendentes}}",
     "empty": "De momento, não há processos pendentes.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · superadministrador",
+    "kicker": "Superadministrador",
     "title": "Contas",
     "description": "Vista completa de cada conta de mutuário ou investidor: perfil, documentos, pedidos de documentos, apresentações.",
     "empty": "Ainda não há contas.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Voltar às contas",
-    "kicker": "apps/admin · superadministrador",
+    "kicker": "Superadministrador",
     "phoneNotProvided": "telefone não indicado",
     "roleBorrower": "Mutuário",
     "roleInvestor": "Investidor",
@@ -99,9 +99,9 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · assinatura manual",
+    "kicker": "Assinatura manual",
     "title": "Contratos assinados: por verificar",
-    "description": "O cliente imprimiu, assinou à mão e carregou o contrato. Verifica o documento antes de confirmar.",
+    "description": "O cliente imprimiu, assinou à mão e carregou o contrato. Verifique o documento antes de confirmar.",
     "empty": "Não há contratos pendentes de verificação.",
     "contractLabel": "Contrato {id}",
     "viewSignedContract": "Ver o contrato assinado carregado pelo cliente",
@@ -109,12 +109,12 @@
     "confirmSignature": "Confirmar a assinatura",
     "reject": "Rejeitar",
     "bilateralEligibleTitle": "Empréstimos elegíveis para um contrato bilateral",
-    "bilateralEligibleDescription": "Estes empréstimos são financiados por um único investidor: podes gerar novamente o contrato numa versão bilateral direta, nomeando esse investidor, em vez do contrato marketplace padrão.",
+    "bilateralEligibleDescription": "Estes empréstimos são financiados por um único investidor: pode gerar novamente o contrato numa versão bilateral direta, nomeando esse investidor, em vez do contrato marketplace padrão.",
     "bilateralEligibleMeta": "{borrower} pede emprestado a {lender}",
     "regenerateBilateral": "Gerar novamente como contrato bilateral"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · cobrança",
+    "kicker": "Cobrança",
     "title": "Prestações a cobrar",
     "description": "Confirma uma mensalidade recebida do mutuário: é redistribuída automaticamente entre os investidores do empréstimo, na proporção da sua parte, e alimenta o seu painel de desempenho.",
     "empty": "De momento, não há prestações pendentes.",
@@ -124,7 +124,7 @@
     "confirmPayment": "Confirmar o pagamento recebido"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · verificação manual",
+    "kicker": "Verificação manual",
     "title": "Verificação de investidores: por tratar",
     "description": "Analisa o comprovativo de rendimentos e o comprovativo de disponibilidade de fundos, depois confirma ou rejeita abaixo.",
     "empty": "Não há investidores pendentes de verificação.",
@@ -137,7 +137,7 @@
     "missingDocumentNote": "Falta um comprovativo: não é possível confirmar enquanto os dois não estiverem carregados."
   },
   "KycPage": {
-    "kicker": "apps/admin · verificação manual",
+    "kicker": "Verificação manual",
     "title": "Verificação de identidade: por tratar",
     "description": "Contacta o cliente para verificar o seu documento de identificação, depois confirma ou rejeita abaixo.",
     "empty": "Não há processos pendentes de verificação manual.",
@@ -147,7 +147,7 @@
     "noApplicationNote": "Este documento não está associado a nenhum pedido: não é possível avançar com o processo."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · visão geral",
+    "kicker": "Visão geral",
     "title": "Perfis apresentados",
     "description": "Lista dos pares que trocaram os seus contactos através de uma apresentação paga. A partir desse momento, o que acontece entre as duas partes decorre fora da plataforma; a SODIVA CREDITS não se responsabiliza, apenas o contacto foi fornecido.",
     "empty": "Ainda não há apresentações pagas.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Mutuário para investidor"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · risco",
+    "kicker": "Risco",
     "title": "Motor de risco",
     "demoDescription": "Exemplo calculado por <code1>assessRisk()</code1> de <code2>@fintech/risk</code2> para o processo de demonstração (18 500 € / 24 meses):",
     "scoreLabel": "Pontuação",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Nível de risco"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · estatísticas",
+    "kicker": "Estatísticas",
     "title": "Estatísticas de visitas",
     "description": "Um sistema de acompanhamento de visitas leve e autoalojado, integrado na plataforma. Não é o Matomo: o Matomo exige uma conta Matomo Cloud ou alojamento à parte, a configurar separadamente se desejado.",
     "rightNow": "Neste momento",

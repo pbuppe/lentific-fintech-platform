@@ -30,7 +30,7 @@
     "activated": "Uw toegang is geactiveerd: log in met uw nieuwe wachtwoord."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "Wachtrij: dossiers",
     "pendingCount": "{count, plural, one {# dossier in afwachting} other {# dossiers in afwachting}}",
     "empty": "Op dit moment geen dossiers in afwachting.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · super administrator",
+    "kicker": "Super administrator",
     "title": "Accounts",
     "description": "Volledig overzicht van elk lener- of investeerdersaccount: profiel, documenten, documentverzoeken, introducties.",
     "empty": "Op dit moment geen accounts.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Terug naar accounts",
-    "kicker": "apps/admin · super administrator",
+    "kicker": "Super administrator",
     "phoneNotProvided": "telefoonnummer niet opgegeven",
     "roleBorrower": "Lener",
     "roleInvestor": "Investeerder",
@@ -89,7 +89,7 @@
     "documentLabel": "Opgevraagd document",
     "documentPlaceholder": "Bijv. Bewijs van woonplaats",
     "instructionsLabel": "Toelichting (optioneel)",
-    "instructionsPlaceholder": "Bijv. niet ouder dan 3 maanden, op jouw naam",
+    "instructionsPlaceholder": "Bijv. niet ouder dan 3 maanden, op uw naam",
     "sendRequest": "Verzoek versturen",
     "alreadySentTitle": "Al verzonden verzoeken",
     "requestStatus": {
@@ -99,9 +99,9 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · handmatige ondertekening",
+    "kicker": "Handmatige ondertekening",
     "title": "Ondertekende contracten: te verifiëren",
-    "description": "De klant heeft het contract afgedrukt, met de hand ondertekend en geüpload. Controleer het document voordat je bevestigt.",
+    "description": "De klant heeft het contract afgedrukt, met de hand ondertekend en geüpload. Controleer het document voordat u bevestigt.",
     "empty": "Geen contracten in afwachting van verificatie.",
     "contractLabel": "Contract {id}",
     "viewSignedContract": "Bekijk het ondertekende contract dat door de klant is geüpload",
@@ -109,12 +109,12 @@
     "confirmSignature": "Ondertekening bevestigen",
     "reject": "Afwijzen",
     "bilateralEligibleTitle": "Leningen die in aanmerking komen voor een bilateraal contract",
-    "bilateralEligibleDescription": "Deze leningen worden gefinancierd door één enkele investeerder: je kunt het contract opnieuw genereren als een directe bilaterale versie met vermelding van die investeerder, in plaats van het standaard marketplace-contract.",
+    "bilateralEligibleDescription": "Deze leningen worden gefinancierd door één enkele investeerder: u kunt het contract opnieuw genereren als een directe bilaterale versie met vermelding van die investeerder, in plaats van het standaard marketplace-contract.",
     "bilateralEligibleMeta": "{borrower} leent van {lender}",
     "regenerateBilateral": "Opnieuw genereren als bilateraal contract"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · incasso",
+    "kicker": "Incasso",
     "title": "Te innen termijnen",
     "description": "Bevestig een maandelijkse termijn die van de lener is ontvangen: die wordt automatisch herverdeeld onder de investeerders van de lening, naar rato van hun aandeel, en voedt hun prestatiedashboard.",
     "empty": "Op dit moment geen termijnen in afwachting.",
@@ -124,7 +124,7 @@
     "confirmPayment": "Ontvangen betaling bevestigen"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · handmatige verificatie",
+    "kicker": "Handmatige verificatie",
     "title": "Verificatie van investeerders: te behandelen",
     "description": "Bekijk het inkomensbewijs en het bewijs van beschikbaarheid van fondsen, en bevestig of wijs hieronder af.",
     "empty": "Geen investeerders in afwachting van verificatie.",
@@ -137,7 +137,7 @@
     "missingDocumentNote": "Er ontbreekt een bewijsstuk: bevestigen is niet mogelijk zolang niet beide zijn ingediend."
   },
   "KycPage": {
-    "kicker": "apps/admin · handmatige verificatie",
+    "kicker": "Handmatige verificatie",
     "title": "Identiteitsverificatie: te behandelen",
     "description": "Neem contact op met de klant om het identiteitsbewijs te controleren, en bevestig of wijs hieronder af.",
     "empty": "Geen dossiers in afwachting van handmatige verificatie.",
@@ -147,7 +147,7 @@
     "noApplicationNote": "Dit document is aan geen enkele aanvraag gekoppeld: het is niet mogelijk een dossier te laten vorderen."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · overzicht",
+    "kicker": "Overzicht",
     "title": "Geïntroduceerde profielen",
     "description": "Lijst van paren die hun contactgegevens hebben uitgewisseld via een betaalde introductie. Vanaf dat moment vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, SODIVA CREDITS is daar niet verantwoordelijk voor, alleen het contact is verzorgd.",
     "empty": "Op dit moment geen betaalde introducties.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Lener naar investeerder"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · risk",
+    "kicker": "Risk",
     "title": "Risico-engine",
     "demoDescription": "Voorbeeld berekend door <code1>assessRisk()</code1> uit <code2>@fintech/risk</code2> voor het demodossier (18.500 € / 24 maanden):",
     "scoreLabel": "Score",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Risiconiveau"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · statistieken",
+    "kicker": "Statistieken",
     "title": "Bezoekstatistieken",
     "description": "Een lichte, zelf gehoste bezoekregistratie, rechtstreeks in het platform ingebouwd. Dit is geen Matomo: Matomo vereist een Matomo Cloud-account of aparte hosting, indien gewenst apart in te stellen.",
     "rightNow": "Op dit moment",
@@ -190,11 +190,11 @@
   "AccountValidationPage": {
     "kicker": "Registraties",
     "title": "Te beoordelen accounts",
-    "description": "Geen enkele lener of investeerder krijgt toegang tot zijn account voordat jij het goedkeurt. Controleer elke registratie en keur goed of wijs af met een reden; de persoon krijgt een e-mail.",
+    "description": "Geen enkele lener of investeerder krijgt toegang tot zijn account voordat u het goedkeurt. Controleer elke registratie en keur goed of wijs af met een reden; de persoon krijgt een e-mail.",
     "doneApproved": "Account goedgekeurd. Er is een activeringsmail verstuurd.",
     "doneRejected": "Registratie afgewezen. De persoon is per e-mail op de hoogte gebracht.",
     "doneResent": "Nieuwe bevestigingslink verstuurd.",
-    "toReviewTitle": "E-mail bevestigd, wacht op jouw beslissing",
+    "toReviewTitle": "E-mail bevestigd, wacht op uw beslissing",
     "toReviewEmpty": "Geen registraties die op goedkeuring wachten.",
     "roleBorrower": "Lener",
     "roleInvestor": "Investeerder",
@@ -207,7 +207,7 @@
     "reasonPlaceholder": "Bijv.: onvolledige gegevens, profiel buiten scope…",
     "confirmReject": "Afwijzing bevestigen",
     "emailPendingTitle": "E-mail nog niet bevestigd",
-    "emailPendingDescription": "Deze personen hebben nog niet op de link in de e-mail geklikt. Je kunt de link opnieuw sturen of toch goedkeuren als je de persoon kent.",
+    "emailPendingDescription": "Deze personen hebben nog niet op de link in de e-mail geklikt. U kunt de link opnieuw sturen of toch goedkeuren als u de persoon kent.",
     "emailPendingEmpty": "Geen registraties die op e-mailbevestiging wachten.",
     "resend": "Link opnieuw sturen",
     "approveAnyway": "Toch goedkeuren",
@@ -216,7 +216,7 @@
   "OutboundEmailsPage": {
     "kicker": "Communicatie",
     "title": "Verzonden e-mails",
-    "descriptionLocal": "Er is nog geen verzenddienst gekoppeld: e-mails worden niet echt verstuurd, ze worden hier bewaard zodat je de flows kunt testen (bijvoorbeeld op een bevestigingslink klikken).",
+    "descriptionLocal": "Er is nog geen verzenddienst gekoppeld: e-mails worden niet echt verstuurd, ze worden hier bewaard zodat u de flows kunt testen (bijvoorbeeld op een bevestigingslink klikken).",
     "descriptionLive": "De laatste 50 e-mails die het platform heeft verstuurd.",
     "empty": "Nog geen e-mails.",
     "to": "Aan:",

@@ -88,7 +88,7 @@
       }
     ],
     "viewMarketplaceLinkArrow": "Marketplace ansehen →",
-    "introBoxTitle": "Muss es schneller gehen? Fordern Sie eine direkte Vermittlung an (15 €)",
+    "introBoxTitle": "Muss es schneller gehen? Fordern Sie eine direkte Vermittlung an ({fee})",
     "introBoxBody": "Statt zu warten, kann ein Kreditnehmer den direkten Kontakt zu einem Investor (Privatperson, Unternehmen oder Organisation) anfordern, und umgekehrt. Sobald die Anfrage bezahlt ist, werden die Kontaktdaten sofort in beide Richtungen ausgetauscht.",
     "introBoxDisclaimer": "SODIVA CREDITS stellt den Kontakt her; was danach zwischen den beiden Parteien geschieht, findet außerhalb der Plattform statt und liegt nicht in unserer Verantwortung.",
     "marketplaceEyebrow": "Marketplace",
@@ -130,7 +130,7 @@
       "moderate": "Akzeptiert moderates und niedriges Risiko",
       "high": "Akzeptiert alle Risikostufen"
     },
-    "connectCta": "Anmelden, um eine Vermittlung anzufordern (15 €)",
+    "connectCta": "Anmelden, um eine Vermittlung anzufordern ({fee})",
     "depositCta": "Finanzierungsantrag stellen",
     "signedDossiersTitle": "Bereits unterschriebene Dossiers, offen für Finanzierung",
     "signedDossiersSubtitle": "Diese Dossiers wurden bereits geprüft (Identität, Risikoanalyse) und ihr Vertrag unterschrieben.",
@@ -218,7 +218,7 @@
       "CANCELLED": "Storniert"
     },
     "errorChooseFile": "Wählen Sie eine Datei aus, bevor Sie sie senden.",
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Kreditnehmerbereich",
     "pendingDocumentsCount": "{count, plural, one {# Dokument} other {# Dokumente}}",
     "pendingDocumentsRequested": "{count, plural, one {angefordert} other {angefordert}} von unserem Team ({labels}).",
@@ -229,7 +229,7 @@
     "priorityBadge": "★ Prioritäres Dossier",
     "slaBreached": ", SLA von 48 Stunden überschritten, eine Erinnerung wurde an unser Team gesendet.",
     "slaDeadline": ", garantierte Prüfung vor dem {date}.",
-    "priorityButton": "Zum prioritären Dossier wechseln ({fee} €, Prüfung innerhalb von 48 Stunden)",
+    "priorityButton": "Zum prioritären Dossier wechseln ({fee}, Prüfung innerhalb von 48 Stunden)",
     "identityRejectedPrompt": "Dokument abgelehnt, senden Sie ein neues Dokument:",
     "identityNeededPrompt": "Senden Sie einen Identitätsnachweis, um fortzufahren:",
     "send": "Senden",
@@ -325,7 +325,7 @@
     }
   },
   "BorrowerApplication": {
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Antrag stellen",
     "profileIntroPart1": "Vervollständigen Sie zuerst",
     "profileIntroLink": "Ihr Finanzprofil",
@@ -390,7 +390,7 @@
   },
   "BorrowerInvestors": {
     "title": "Verfügbare Investoren",
-    "intro": "Privatpersonen, Unternehmen und Organisationen veröffentlichen hier das Kapital, das sie zu verleihen bereit sind. Fordern Sie eine direkte Vermittlung (Kontaktdaten sofort ausgetauscht) für {fee} € an.",
+    "intro": "Privatpersonen, Unternehmen und Organisationen veröffentlichen hier das Kapital, das sie zu verleihen bereit sind. Fordern Sie eine direkte Vermittlung (Kontaktdaten sofort ausgetauscht) für {fee} an.",
     "disclaimer": "Nach der Vermittlung finden der Austausch und ein eventueller Kredit direkt zwischen Ihnen und dem Investor statt, außerhalb der Plattform. SODIVA CREDITS stellt den Kontakt her, ist aber nicht verantwortlich für das, was danach zwischen Ihnen geschieht.",
     "empty": "Derzeit kein verfügbares Kapital veröffentlicht.",
     "defaultInvestorName": "Investor",
@@ -398,7 +398,9 @@
     "risk": "Risiko {risk}",
     "availability": "<amount>{amountValue} €</amount> verfügbar · {rate}% · {duration} Monate · etwa {monthlyValue} €/Monat",
     "alreadyIntroduced": "Vermittlung bezahlt: Kontaktdaten unter <link>Meine Vermittlungen</link>.",
-    "requestButton": "Vermittlung anfordern ({fee} €)"
+    "requestButton": "Vermittlung anfordern ({fee})",
+    "introPremium": "Privatpersonen, Unternehmen und Organisationen veröffentlichen hier das Kapital, das sie verleihen möchten. Mit Ihrem Premium-Abo sind direkte Kontaktvermittlungen (sofortiger Austausch der Kontaktdaten) inklusive und unbegrenzt.",
+    "requestButtonPremium": "Kontaktvermittlung anfordern (in Premium enthalten)"
   },
   "BorrowerIntroductions": {
     "title": "Meine Vermittlungen",
@@ -469,7 +471,7 @@
     "invest": "Investieren",
     "introductionPaidPrefix": "Vermittlung bezahlt: Kontaktdaten unter",
     "introductionPaidLink": "Meine Vermittlungen",
-    "requestIntroduction": "Direkte Vermittlung mit dem Kreditnehmer erhalten ({premium, select, yes {kostenlos, Premium} other {{fee} €}})"
+    "requestIntroduction": "Direkte Vermittlung mit dem Kreditnehmer erhalten ({premium, select, yes {kostenlos, Premium} other {{fee}}})"
   },
   "InvestorDocuments": {
     "chooseFileError": "Wählen Sie eine Datei aus, bevor Sie sie senden.",
@@ -746,7 +748,11 @@
       "advisor_message": "Neue Nachricht",
       "assistance_started": "Ein Berater hat eine Unterstützungssitzung geöffnet",
       "assistance_document": "Ihr Berater hat ein Dokument für Sie hochgeladen",
-      "assistance_ended": "Unterstützungssitzung beendet"
+      "assistance_ended": "Unterstützungssitzung beendet",
+      "subscription_started": "Ihr Premium-Abo ist aktiv",
+      "subscription_renewed": "Ihr Premium-Abo wurde verlängert",
+      "subscription_past_due": "Die Abbuchung für Ihr Premium-Abo ist fehlgeschlagen",
+      "subscription_ended": "Ihr Premium-Abo ist beendet"
     }
   },
   "ClientPayments": {
@@ -776,7 +782,12 @@
       "FAILED": "Fehlgeschlagen",
       "REFUNDED": "Erstattet"
     },
-    "safetyNote": "Zahlen Sie niemals Gebühren auf ein per Telefon oder E-Mail genanntes Konto: Alle Zahlungen erfolgen hier."
+    "safetyNote": "Zahlen Sie niemals Gebühren auf ein per Telefon oder E-Mail genanntes Konto: Alle Zahlungen erfolgen hier.",
+    "paymentPurpose": {
+      "introduction": "Kontaktvermittlung",
+      "priority": "Option vorrangige Bearbeitung",
+      "premium": "Premium-Abo"
+    }
   },
   "ClientHelp": {
     "title": "Brauchen Sie Hilfe?",
@@ -972,8 +983,103 @@
     "priorityPaid": "Zahlung erhalten: Ihr Antrag wird jetzt vorrangig bearbeitet.",
     "description": {
       "broker_fee": "Vermittlungshonorar, Antrag {reference}",
-      "priority": "Option Vorrangige Bearbeitung, Antrag {reference}"
+      "priority": "Option Vorrangige Bearbeitung, Antrag {reference}",
+      "introduction": "SODIVA CREDITS Kontaktvermittlung, Ref. {reference}"
     },
-    "review": "PayPal hat Ihre Zahlung erhalten. Unser Team prüft sie und meldet sich sehr bald bei Ihnen: Sie müssen nicht erneut zahlen."
+    "review": "PayPal hat Ihre Zahlung erhalten. Unser Team prüft sie und meldet sich sehr bald bei Ihnen: Sie müssen nicht erneut zahlen.",
+    "introductionPaid": "Zahlung erhalten: Die Kontaktvermittlung ist erfolgt, die Kontaktdaten finden Sie unter „Kontaktvermittlungen“.",
+    "introductionIncluded": "Kontaktvermittlung erfolgt, in Ihrem Premium-Abo enthalten: Die Kontaktdaten finden Sie unter „Kontaktvermittlungen“."
+  },
+  "Premium": {
+    "title": "Premium-Abo",
+    "eyebrow": "Unbegrenzte Kontaktvermittlungen",
+    "statusLabels": {
+      "ACTIVE": "Aktiv",
+      "CANCELLED": "Beendet",
+      "PAST_DUE": "Zahlung fehlgeschlagen"
+    },
+    "statusEnding": "Aktiv bis zum Ende des Zeitraums",
+    "nextCharge": "Nächste PayPal-Abbuchung am {date}.",
+    "renewalAuto": "Automatische Verlängerung am {date}.",
+    "renewalCancelled": "Gekündigt: bleibt bis zum {date} aktiv und endet dann ohne weitere Abbuchung.",
+    "pastDue": "Die letzte Abbuchung ist fehlgeschlagen: Premium ist ausgesetzt. Prüfen Sie Ihre Zahlungsmethode in Ihrem PayPal-Konto oder schließen Sie unten ein neues Abo ab.",
+    "ended": "Abo beendet am {date}.",
+    "legacyNote": "Dieses Test-Abo endet am {date}. Um Premium danach zu behalten, schließen Sie ein neues Abo mit PayPal ab.",
+    "featuresHeading": "Was Ihnen Premium bringt",
+    "cancelButton": "Mein Abo kündigen",
+    "cancelHint": "Nach der Kündigung erfolgen keine Abbuchungen mehr. Premium bleibt bis zum {date} aktiv.",
+    "subscribePaypal": "Mit PayPal abonnieren · {amount} / Monat",
+    "resubscribePaypal": "Erneut mit PayPal abonnieren · {amount} / Monat",
+    "reactivatePaypal": "Erneut mit PayPal abonnieren",
+    "reactivateButton": "Abo reaktivieren",
+    "subscribeButton": "Zu Premium wechseln · {amount} / Monat",
+    "reactivateHint": "Vor dem {date} wird nichts abgebucht: Das neue Abo übernimmt am Ende des bereits bezahlten Zeitraums.",
+    "paypalHint": "Sichere Zahlung über PayPal: PayPal-Konto oder Bankkarte. Ohne Vertragsbindung, mit einem Klick kündbar.",
+    "noCommitment": "Ohne Vertragsbindung, mit einem Klick kündbar.",
+    "sandbox": "Testmodus",
+    "historyHeading": "Abbuchungsverlauf",
+    "historyEmpty": "Noch keine Abbuchungen.",
+    "simulated": "Simuliert",
+    "unitLabel": "Ohne Abo",
+    "unitPrice": "{fee} pro Kontaktvermittlung",
+    "unitNote": "Jeder neue Kontakt wird erneut bezahlt.",
+    "premiumLabel": "Mit Premium",
+    "premiumPrice": "{amount} / Monat, unbegrenzt",
+    "breakEven": "Drei einzelne Kontaktvermittlungen kosten schon fast genauso viel: ab der vierten ist jeder weitere Kontakt kostenlos.",
+    "notices": {
+      "active": "Willkommen bei Premium! Ihr Abo ist aktiv. Nächste Abbuchung am {date}.",
+      "deferred": "Neues Abo erfasst. Premium läuft ohne Unterbrechung weiter; die erste Abbuchung erfolgt am {date}.",
+      "cancelled": "Abo gekündigt: keine weiteren Abbuchungen. Premium bleibt bis zum {date} aktiv.",
+      "checkout_cancelled": "Abo auf PayPal abgebrochen: Es wurde nichts abgebucht.",
+      "failed": "PayPal hat das Abo nicht bestätigt: Es wurde nichts abgebucht. Bitte versuchen Sie es erneut oder wenden Sie sich an Ihren Berater.",
+      "unavailable": "Die Online-Zahlung ist vorübergehend nicht verfügbar. Bitte versuchen Sie es in einigen Minuten erneut.",
+      "cancel_failed": "Die Kündigung konnte nicht an PayPal übermittelt werden. Bitte versuchen Sie es in einigen Minuten erneut; bleibt sie unbestätigt, wenden Sie sich an Ihren Berater."
+    },
+    "investor": {
+      "kicker": "Investorenbereich",
+      "headline": "Legen Sie Ihr Kapital schneller an – mit so vielen Kontakten, wie Sie brauchen",
+      "pitch": "Ein einzelner Kontakt reicht nicht immer: Vielleicht hat der Kreditnehmer schon eine Finanzierung gefunden, oder sein Projekt passt nicht ganz zu Ihren Kriterien. Mit Premium kontaktieren Sie so viele Kreditnehmer, wie Sie möchten, vergleichen Projekte und entscheiden schneller.",
+      "features": [
+        "Unbegrenzte Kontaktvermittlungen mit Kreditnehmern, ohne jeden Kontakt zu bezahlen",
+        "Kontaktieren Sie mehrere Kreditnehmer parallel, um Projekte zu vergleichen",
+        "Automatische Benachrichtigung, sobald ein neuer Antrag zu Ihrer Risikobereitschaft passt",
+        "Beschleunigte Prüfung Ihres Investorenprofils innerhalb von 48 Stunden",
+        "Premium-Abzeichen zusätzlich zum Verifiziert-Abzeichen",
+        "Erweitertes Performance-Dashboard: Rendite, Ausfallquote, Verlauf"
+      ]
+    },
+    "borrower": {
+      "kicker": "Kundenbereich",
+      "headline": "Erhöhen Sie Ihre Chancen, Ihre Finanzierung schnell zu erhalten",
+      "pitch": "Jeder Investor hat eigene Kriterien: Betrag, Laufzeit, Art des Projekts. Kontaktieren Sie nur einen Investor, hängen Sie von einer einzigen Antwort ab. Mit Premium kontaktieren Sie gleichzeitig so viele Investoren, wie Sie möchten: Sie erhöhen Ihre Chancen und gewinnen wertvolle Zeit.",
+      "features": [
+        "Unbegrenzte Kontaktvermittlungen mit Investoren, ohne jeden Kontakt zu bezahlen",
+        "Kontaktieren Sie mehrere Investoren gleichzeitig, statt nacheinander auf Antworten zu warten",
+        "Vergleichen Sie die Angebote und wählen Sie das passende",
+        "Ohne Vertragsbindung: mit einem Klick kostenlos kündbar"
+      ],
+      "disclaimer": "Premium erleichtert die Kontaktaufnahme mit Investoren; es garantiert keine Finanzierung. Ein Kredit verpflichtet Sie und muss zurückgezahlt werden: Prüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+    }
+  },
+  "PremiumPromo": {
+    "eyebrow": "Premium-Abo",
+    "title": "Mehr Kontakte, mehr Chancen, weniger Warten",
+    "text": "Eine Kontaktvermittlung kostet {fee}. Mit dem Premium-Abo für {amount} pro Monat sind sie unbegrenzt: Kontaktieren Sie mehrere Investoren oder Kreditnehmer parallel und kommen Sie schneller voran.",
+    "borrowerTitle": "Sie suchen eine Finanzierung",
+    "borrowerText": "Kontaktieren Sie mehrere Investoren auf einmal, statt auf eine einzige Antwort zu warten: Sie erhöhen Ihre Chancen auf eine schnelle Finanzierung.",
+    "investorTitle": "Sie möchten investieren",
+    "investorText": "Kontaktieren Sie so viele Kreditnehmer, wie Sie möchten, vergleichen Sie Projekte und legen Sie Ihr Kapital schneller an.",
+    "perMonth": "/ Monat",
+    "unlimited": "Unbegrenzte Kontaktvermittlungen · ohne Vertragsbindung",
+    "breakEven": "Ab der 4. Kontaktvermittlung im Monat ist jeder weitere Kontakt kostenlos.",
+    "ctaBorrower": "Ich suche eine Finanzierung",
+    "ctaInvestor": "Ich möchte investieren",
+    "ctaPremium": "Premium entdecken",
+    "bannerBorrower": "Setzen Sie nicht alles auf einen Investor: Mit Premium ({amount} / Monat) kontaktieren Sie so viele, wie Sie möchten.",
+    "bannerInvestor": "Vergleichen Sie mehr Projekte: Mit Premium ({amount} / Monat) kontaktieren Sie so viele Kreditnehmer, wie Sie möchten.",
+    "bannerVisitor": "Unbegrenzte Kontaktvermittlungen mit dem Premium-Abo: {amount} / Monat, ohne Vertragsbindung.",
+    "bannerCta": "Zum Angebot",
+    "noGuarantee": "Premium erleichtert die Kontaktaufnahme; es garantiert keine Finanzierung.",
+    "navLabel": "Premium"
   }
 }

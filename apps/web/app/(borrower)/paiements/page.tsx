@@ -89,9 +89,13 @@ export default async function PaymentsPage({ searchParams }: { searchParams: { p
                 <li key={p.id} className="flex flex-wrap items-center justify-between gap-2 py-2.5 text-sm">
                   <span>
                     <span className="font-semibold text-ink">
-                      {fee ? `${t(`feeKind.${fee.kind}`)} · ${fee.application.reference}` : t(`paymentType.${p.type}`)}
+                      {fee
+                        ? `${t(`feeKind.${fee.kind}`)} · ${fee.application.reference}`
+                        : p.purpose && ["introduction", "priority", "premium"].includes(p.purpose)
+                          ? t(`paymentPurpose.${p.purpose}`)
+                          : t(`paymentType.${p.type}`)}
                     </span>
-                    <span className="block text-xs text-ink-faint">{day.format(p.createdAt)}</span>
+                    <span className="block text-xs text-ink-faint">{day.format(p.capturedAt ?? p.createdAt)}</span>
                   </span>
                   <span className="flex items-center gap-2">
                     <span className="font-semibold text-ink">{money(p.amount.toString(), p.currency.code)}</span>

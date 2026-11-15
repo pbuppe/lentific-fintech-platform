@@ -88,7 +88,7 @@
       }
     ],
     "viewMarketplaceLinkArrow": "View the marketplace →",
-    "introBoxTitle": "Need to move faster? Request a direct introduction (€15)",
+    "introBoxTitle": "Need to move faster? Request a direct introduction ({fee})",
     "introBoxBody": "Rather than waiting, a borrower can request direct contact with an investor (individual, company or organization) and vice versa. Once the request is paid, contact details are exchanged immediately both ways.",
     "introBoxDisclaimer": "SODIVA CREDITS provides the contact; what happens next between the two parties takes place outside the platform and is not our responsibility.",
     "marketplaceEyebrow": "Marketplace",
@@ -130,7 +130,7 @@
       "moderate": "Accepts moderate and low risk",
       "high": "Accepts all risk levels"
     },
-    "connectCta": "Log in to request an introduction (€15)",
+    "connectCta": "Log in to request an introduction ({fee})",
     "depositCta": "Submit a funding request",
     "signedDossiersTitle": "Already signed files, open for funding",
     "signedDossiersSubtitle": "These files have already been verified (identity, risk analysis) and their contract signed.",
@@ -218,7 +218,7 @@
       "CANCELLED": "Cancelled"
     },
     "errorChooseFile": "Choose a file before sending.",
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Borrower area",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
     "pendingDocumentsRequested": "{count, plural, one {requested} other {requested}} by our team ({labels}).",
@@ -229,7 +229,7 @@
     "priorityBadge": "★ Priority file",
     "slaBreached": ", 48h SLA exceeded, a follow-up has been sent to our team.",
     "slaDeadline": ", review guaranteed before {date}.",
-    "priorityButton": "Switch to priority file ({fee} €, review within 48h)",
+    "priorityButton": "Switch to priority file ({fee}, review within 48h)",
     "identityRejectedPrompt": "Document rejected, send a new one:",
     "identityNeededPrompt": "Send an ID document to continue:",
     "send": "Send",
@@ -325,7 +325,7 @@
     }
   },
   "BorrowerApplication": {
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Submit a request",
     "profileIntroPart1": "First complete",
     "profileIntroLink": "your financial profile",
@@ -390,7 +390,7 @@
   },
   "BorrowerInvestors": {
     "title": "Available investors",
-    "intro": "Individuals, companies, and organizations publish available capital here. Request a direct introduction (contact details shared immediately) for {fee} €.",
+    "intro": "Individuals, companies, and organizations publish available capital here. Request a direct introduction (contact details shared immediately) for {fee}.",
     "disclaimer": "Once introduced, all further exchanges and any resulting loan take place directly between you and the investor, outside the platform. SODIVA CREDITS provides the contact but is not responsible for what happens between you afterwards.",
     "empty": "No capital currently available.",
     "defaultInvestorName": "Investor",
@@ -398,7 +398,9 @@
     "risk": "Risk {risk}",
     "availability": "<amount>{amountValue} €</amount> available · {rate}% · {duration} months · about {monthlyValue} €/month",
     "alreadyIntroduced": "Introduction paid: contact details in <link>My introductions</link>.",
-    "requestButton": "Request introduction ({fee} €)"
+    "requestButton": "Request introduction ({fee})",
+    "introPremium": "Individuals, companies and organisations publish here the capital they are ready to lend. With your Premium subscription, direct introductions (contact details shared immediately) are included and unlimited.",
+    "requestButtonPremium": "Request the introduction (included in Premium)"
   },
   "BorrowerIntroductions": {
     "title": "My introductions",
@@ -469,7 +471,7 @@
     "invest": "Invest",
     "introductionPaidPrefix": "Introduction paid: contact details in",
     "introductionPaidLink": "My introductions",
-    "requestIntroduction": "Get a direct introduction to the borrower ({premium, select, yes {free, Premium} other {{fee} €}})"
+    "requestIntroduction": "Get a direct introduction to the borrower ({premium, select, yes {free, Premium} other {{fee}}})"
   },
   "InvestorDocuments": {
     "chooseFileError": "Choose a file before sending.",
@@ -746,7 +748,11 @@
       "advisor_message": "New message",
       "assistance_started": "An adviser opened an assistance session",
       "assistance_document": "Your adviser uploaded a document for you",
-      "assistance_ended": "Assistance session ended"
+      "assistance_ended": "Assistance session ended",
+      "subscription_started": "Your Premium subscription is active",
+      "subscription_renewed": "Your Premium subscription has been renewed",
+      "subscription_past_due": "The payment for your Premium subscription did not go through",
+      "subscription_ended": "Your Premium subscription has ended"
     }
   },
   "ClientPayments": {
@@ -776,7 +782,12 @@
       "FAILED": "Failed",
       "REFUNDED": "Refunded"
     },
-    "safetyNote": "Never pay fees to an account given by phone or e-mail: all your payments are made here."
+    "safetyNote": "Never pay fees to an account given by phone or e-mail: all your payments are made here.",
+    "paymentPurpose": {
+      "introduction": "Introduction",
+      "priority": "Priority file option",
+      "premium": "Premium subscription"
+    }
   },
   "ClientHelp": {
     "title": "Need help?",
@@ -972,8 +983,103 @@
     "priorityPaid": "Payment received: your application is now a priority.",
     "description": {
       "broker_fee": "Brokerage fees, application {reference}",
-      "priority": "Priority file option, application {reference}"
+      "priority": "Priority file option, application {reference}",
+      "introduction": "SODIVA CREDITS introduction, ref. {reference}"
     },
-    "review": "PayPal has received your payment. Our team is checking it and will get back to you very soon: there is no need to pay again."
+    "review": "PayPal has received your payment. Our team is checking it and will get back to you very soon: there is no need to pay again.",
+    "introductionPaid": "Payment received: the introduction is done, the contact details are visible under \"Introductions\".",
+    "introductionIncluded": "Introduction done, included in your Premium subscription: the contact details are visible under \"Introductions\"."
+  },
+  "Premium": {
+    "title": "Premium subscription",
+    "eyebrow": "Unlimited introductions",
+    "statusLabels": {
+      "ACTIVE": "Active",
+      "CANCELLED": "Ended",
+      "PAST_DUE": "Payment failed"
+    },
+    "statusEnding": "Active until the end of the period",
+    "nextCharge": "Next PayPal payment on {date}.",
+    "renewalAuto": "Automatic renewal on {date}.",
+    "renewalCancelled": "Cancelled: stays active until {date}, then stops with no further payment.",
+    "pastDue": "The last payment did not go through: Premium is suspended. Check your payment method in your PayPal account, or subscribe again below.",
+    "ended": "Subscription ended on {date}.",
+    "legacyNote": "This trial subscription will stop on {date}. To keep Premium afterwards, subscribe again with PayPal.",
+    "featuresHeading": "What Premium gives you",
+    "cancelButton": "Cancel my subscription",
+    "cancelHint": "No more payments after cancelling. Premium stays active until {date}.",
+    "subscribePaypal": "Subscribe with PayPal · {amount} / month",
+    "resubscribePaypal": "Subscribe again with PayPal · {amount} / month",
+    "reactivatePaypal": "Subscribe again with PayPal",
+    "reactivateButton": "Reactivate subscription",
+    "subscribeButton": "Go Premium · {amount} / month",
+    "reactivateHint": "Nothing is charged before {date}: the new subscription takes over at the end of the period already paid.",
+    "paypalHint": "Secure payment by PayPal: PayPal account or bank card. No commitment, cancel in one click.",
+    "noCommitment": "No commitment, cancel in one click.",
+    "sandbox": "test mode",
+    "historyHeading": "Payment history",
+    "historyEmpty": "No payments yet.",
+    "simulated": "Simulated",
+    "unitLabel": "Without a subscription",
+    "unitPrice": "{fee} per introduction",
+    "unitNote": "Every new contact is paid for again.",
+    "premiumLabel": "With Premium",
+    "premiumPrice": "{amount} / month, unlimited",
+    "breakEven": "Three single introductions already cost almost as much: from the fourth one, every extra contact is free.",
+    "notices": {
+      "active": "Welcome to Premium! Your subscription is active. Next payment on {date}.",
+      "deferred": "Subscription renewed. Premium continues without interruption; the first payment will be on {date}.",
+      "cancelled": "Subscription cancelled: no more payments. Premium stays active until {date}.",
+      "checkout_cancelled": "Subscription cancelled on PayPal: nothing was charged.",
+      "failed": "PayPal did not confirm the subscription: nothing was charged. Please try again or contact your adviser.",
+      "unavailable": "Online payment is temporarily unavailable. Please try again in a few minutes.",
+      "cancel_failed": "The cancellation could not be sent to PayPal. Please try again in a few minutes; if it is still not confirmed, contact your adviser."
+    },
+    "investor": {
+      "kicker": "Investor area",
+      "headline": "Invest your capital faster, with as many introductions as you need",
+      "pitch": "One contact is not always enough: the borrower may already have found financing, or the project may not quite match your criteria. With Premium, contact as many borrowers as you like, compare projects and decide faster.",
+      "features": [
+        "Unlimited introductions to borrowers, without paying for each contact",
+        "Contact several borrowers in parallel to compare projects",
+        "Automatic alert as soon as a new application matches your risk tolerance",
+        "Fast-track verification of your investor profile, within 48 hours",
+        "Premium badge shown next to the Verified badge",
+        "Advanced performance dashboard: yield, default rate, history"
+      ]
+    },
+    "borrower": {
+      "kicker": "Client area",
+      "headline": "Increase your chances of getting your financing quickly",
+      "pitch": "Every investor has their own criteria: amount, duration, type of project. If you contact only one investor, you depend on a single answer. With Premium, contact as many investors as you like at the same time: you increase your chances and save precious time.",
+      "features": [
+        "Unlimited introductions to investors, without paying for each contact",
+        "Contact several investors at once instead of waiting for answers one after another",
+        "Compare the offers and choose the one that suits you best",
+        "No commitment: cancel in one click, free of charge"
+      ],
+      "disclaimer": "Premium makes it easier to contact investors; it does not guarantee that you will obtain financing. A loan is a commitment and must be repaid: check that you can afford the repayments before committing."
+    }
+  },
+  "PremiumPromo": {
+    "eyebrow": "Premium subscription",
+    "title": "More contacts, more chances, less waiting",
+    "text": "An introduction costs {fee}. With the Premium subscription at {amount} per month, they are unlimited: contact several investors or borrowers in parallel and move faster.",
+    "borrowerTitle": "Looking for financing",
+    "borrowerText": "Contact several investors at once instead of waiting for a single answer: you increase your chances of getting your financing quickly.",
+    "investorTitle": "Looking to invest",
+    "investorText": "Contact as many borrowers as you like to compare projects and invest your capital faster.",
+    "perMonth": "/ month",
+    "unlimited": "Unlimited introductions · no commitment",
+    "breakEven": "From the 4th introduction in a month, every extra contact is free.",
+    "ctaBorrower": "I need financing",
+    "ctaInvestor": "I want to invest",
+    "ctaPremium": "Discover Premium",
+    "bannerBorrower": "Don't rely on a single investor: with Premium ({amount} / month), contact as many as you like.",
+    "bannerInvestor": "Compare more projects: with Premium ({amount} / month), contact as many borrowers as you like.",
+    "bannerVisitor": "Unlimited introductions with the Premium subscription: {amount} / month, no commitment.",
+    "bannerCta": "See the offer",
+    "noGuarantee": "Premium makes contact easier; it does not guarantee financing.",
+    "navLabel": "Premium"
   }
 }

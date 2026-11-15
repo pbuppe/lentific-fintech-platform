@@ -18,7 +18,7 @@
     "heroSubtitle": "A SODIVA CREDITS összeköti a finanszírozást kereső magánszemélyeket, kkv-kat és szervezeteket olyan befektetőkkel (magánszemélyek, vállalatok vagy intézmények), akik szeretnék gyarapítani megtakarításaikat, minden lépésben ellenőrzött dossziéval: személyazonosság, visszafizetési képesség, aláírt szerződés.",
     "ctaApply": "Igénylés benyújtása",
     "ctaMarketplace": "Piactér megtekintése",
-    "alreadyAccount": "Már van fiókod? Jelentkezz be",
+    "alreadyAccount": "Már van fiókja? Jelentkezzen be",
     "statAvailableLabel": "elérhető befektetőinknél",
     "statInvestedLabel": "már befektetve dossziékba",
     "statDossiers": "{count, plural, one {aláírt dosszié} other {aláírt dosszié}}",
@@ -47,55 +47,55 @@
     "borrowerColumnTitle": "Hitelfelvevőknek",
     "borrowerSteps": [
       {
-        "title": "Szimuláld az igényedet",
+        "title": "Szimulálja igényét",
         "body": "Összeg, futamidő, becsült havi törlesztés, kötelezettség és fiók nélkül."
       },
       {
-        "title": "Töltsd ki a profilodat",
-        "body": "Csak egyszer: jövedelem, kiadások, helyzet. Minden jövőbeli igénylésedhez felhasználjuk."
+        "title": "Töltse ki profilját",
+        "body": "Csak egyszer: jövedelem, kiadások, helyzet. Minden jövőbeli igényléséhez felhasználjuk."
       },
       {
-        "title": "Nyújtsd be az igénylésed",
-        "body": "Küldj egy személyazonosító okmányt, egy ügyintéző hamarosan ellenőrzi a dossziédat."
+        "title": "Nyújtsa be igénylését",
+        "body": "Küldjön egy személyazonosító okmányt: egy ügyintéző hamarosan ellenőrzi az ügyét."
       },
       {
-        "title": "Kapj ajánlatot",
-        "body": "A kockázatelemző motor pontszámot számít, egy ügyintéző finanszírozást ajánl."
+        "title": "Kapjon ajánlatot",
+        "body": "A kockázatelemző motor pontszámot számít, majd egy ügyintéző finanszírozást ajánl Önnek."
       },
       {
-        "title": "Írd alá és jusson finanszírozáshoz",
-        "body": "Fogadd el az ajánlatot, írd alá a szerződést, és hagyd, hogy a piactér finanszírozza."
+        "title": "Írja alá, és jusson finanszírozáshoz",
+        "body": "Fogadja el az ajánlatot, írja alá a szerződést, és hagyja, hogy a piactér finanszírozza."
       }
     ],
     "applyLinkArrow": "Igénylés benyújtása →",
     "investorColumnTitle": "Befektetőknek",
     "investorSteps": [
       {
-        "title": "Hozd létre a befektetői fiókodat",
-        "body": "Add meg a profilodat és a kockázattűrő képességedet."
+        "title": "Hozza létre befektetői fiókját",
+        "body": "Adja meg profilját és kockázattűrő képességét."
       },
       {
-        "title": "Böngéssz a piactéren",
+        "title": "Böngésszen a piactéren",
         "body": "Minden megjelenített dosszié már ellenőrzött, szerződése aláírt."
       },
       {
-        "title": "Fektesd be a választott összeget",
+        "title": "Fektesse be a választott összeget",
         "body": "Megosztott finanszírozás: több befektető is részt vehet egy dossziéban."
       },
       {
-        "title": "Kövesd nyomon a portfóliódat",
+        "title": "Kövesse nyomon portfólióját",
         "body": "Összes befektetés, kapott törlesztések, előzmények, egy pillantással."
       }
     ],
     "viewMarketplaceLinkArrow": "Piactér megtekintése →",
-    "introBoxTitle": "Gyorsabban haladnál? Kérj közvetlen kapcsolatfelvételt (15 €)",
+    "introBoxTitle": "Gyorsabban haladna? Kérjen közvetlen kapcsolatfelvételt ({fee})",
     "introBoxBody": "Várakozás helyett a hitelfelvevő közvetlen kapcsolatot kérhet egy befektetővel (magánszemély, vállalat vagy szervezet), és fordítva is. A kérés kifizetése után az elérhetőségek azonnal kicserélődnek mindkét irányban.",
     "introBoxDisclaimer": "A SODIVA CREDITS biztosítja a kapcsolatot; ami ezután a két fél között történik, a platformon kívül zajlik, és nem tartozik a felelősségünkbe.",
     "marketplaceEyebrow": "Piactér",
     "marketplaceTitle": "Már ellenőrzött dossziék, finanszírozásra készen",
     "viewAll": "Összes megtekintése",
     "noOpportunities": "Jelenleg nincs nyitott lehetőség, az első aláírt dosszié automatikusan megjelenik itt.",
-    "noOpportunitiesInCountryHome": "Jelenleg nincs nyitott lehetőség a te országodban, váltson nemzetközi nézetre a piactéren, hogy lásson minden ajánlatot.",
+    "noOpportunitiesInCountryHome": "Jelenleg nincs nyitott lehetőség az Ön országában: váltson nemzetközi nézetre a piactéren, hogy minden ajánlatot lásson.",
     "riskLabel": {
       "low": "Alacsony",
       "moderate": "Közepes",
@@ -104,7 +104,7 @@
     "riskPill": "Kockázat: {label}",
     "fundedProgress": "{funded} € / {target} € finanszírozva ({pct}%)",
     "ctaFinalTitle": "Készen állsz a kezdésre?",
-    "ctaFinalBody": "Hozz létre fiókot két percen belül, akár finanszírozást keresel, akár befektetni szeretnél.",
+    "ctaFinalBody": "Hozzon létre fiókot két percen belül, akár finanszírozást keres, akár befektetni szeretne.",
     "becomeInvestor": "Válj befektetővé",
     "footerText": "© {year} SODIVA CREDITS · Közösségi finanszírozási platform.",
     "footerMarketplace": "Piactér",
@@ -114,9 +114,9 @@
   "MarketplacePage": {
     "eyebrow": "P2P piactér",
     "heroTitle": "Hitelfelvevők és befektetők, egy helyen",
-    "heroSubtitle": "Az egyik oldalon már ellenőrzött dossziék (magánszemélyeké és kkv-ké egyaránt), amelyek befektetőket keresnek. A másikon befektetők (magánszemélyek, vállalatok vagy szervezetek), akik meghirdetik a kölcsönözhető tőkéjüket, hogy már az igénylés benyújtása előtt tudd, mi érhető el.",
+    "heroSubtitle": "Az egyik oldalon már ellenőrzött ügyek (magánszemélyeké és kkv-ké egyaránt), amelyek befektetőket keresnek. A másikon befektetők (magánszemélyek, vállalatok vagy szervezetek), akik meghirdetik a kölcsönözhető tőkéjüket, hogy már az igénylés benyújtása előtt tudja, mi érhető el.",
     "availableCapitalTitle": "Elérhető tőke befektetőinknél",
-    "availableCapitalSubtitle": "Ezek a befektetők jelezték, hogy készek kölcsönt nyújtani: hasznos, hogy felmérd az esélyeidet az igénylés benyújtása előtt.",
+    "availableCapitalSubtitle": "Ezek a befektetők jelezték, hogy készek kölcsönt nyújtani: hasznos, hogy felmérje esélyeit az igénylés benyújtása előtt.",
     "noListings": "Jelenleg egyetlen befektető sem tett közzé elérhető tőkét.",
     "noListingsInCountry": "Jelenleg egyetlen befektető sem tett közzé elérhető tőkét ebben az országban, próbálja ki a nemzetközi nézetet.",
     "amountAvailable": "{amount} € elérhető",
@@ -130,11 +130,11 @@
       "moderate": "Közepes és alacsony kockázatot fogad el",
       "high": "Minden kockázati szintet elfogad"
     },
-    "connectCta": "Jelentkezz be a kapcsolatfelvétel kéréséhez (15 €)",
+    "connectCta": "Jelentkezzen be a kapcsolatfelvétel kéréséhez ({fee})",
     "depositCta": "Finanszírozási igény benyújtása",
     "signedDossiersTitle": "Már aláírt dossziék, finanszírozásra nyitva",
     "signedDossiersSubtitle": "Ezek a dossziék már ellenőrzésen estek át (személyazonosság, kockázatelemzés), és szerződésüket aláírták.",
-    "noOpportunitiesPart1": "Jelenleg nincs nyitott lehetőség, nézz vissza hamarosan, vagy",
+    "noOpportunitiesPart1": "Jelenleg nincs nyitott lehetőség, nézzen vissza hamarosan, vagy",
     "noOpportunitiesInCountry": "Jelenleg nincs nyitott lehetőség ebben az országban, próbálja ki a fenti nemzetközi nézetet, vagy",
     "noOpportunitiesLink": "nyújts be finanszírozási igényt",
     "riskLabel": {
@@ -145,27 +145,27 @@
     "riskPill": "Kockázat: {label}",
     "dossierRef": "Dosszié {reference}",
     "fundedProgress": "{funded} € / {target} € finanszírozva ({pct}%)",
-    "investCta": "Jelentkezz be a befektetéshez"
+    "investCta": "Jelentkezzen be a befektetéshez"
   },
   "SimulatorPage": {
     "eyebrow": "Szimulátor",
-    "title": "Becsüld meg a finanszírozásodat",
-    "subtitle": "Állítsd be az összeget és a futamidőt, hogy lásd a becsült havi törlesztést és a teljes költséget, mielőtt igénylést nyújtanál be.",
+    "title": "Becsülje meg finanszírozását",
+    "subtitle": "Állítsa be az összeget és a futamidőt, hogy lássa a becsült havi törlesztést és a teljes költséget, mielőtt igénylést nyújtana be.",
     "amountLabel": "Kívánt összeg:",
     "durationLabel": "Futamidő:",
     "durationValue": "{duration} hónap",
     "rateLabel": "Éves kamat:",
     "estimationEyebrow": "Becslés",
     "monthlyResult": "{monthly} € / hó",
-    "totalCost": "Becsült teljes költség: {total} € (szimulált kamat {rate}%, a tényleges kamat a dossziédtól függ)",
+    "totalCost": "Becsült teljes költség: {total} € (szimulált kamat {rate} %, a tényleges kamat az Ön ügyétől függ)",
     "applyCta": "Igénylés benyújtása",
     "legal": "A hitel kötelezettséggel jár, és vissza kell fizetni. Kötelezettségvállalás előtt ellenőrizze visszafizetési képességét."
   },
   "LoginPage": {
     "brand": "SODIVA CREDITS",
     "title": "Bejelentkezés",
-    "noAccountPart1": "Még nincs fiókod?",
-    "noAccountLink": "Regisztrálj",
+    "noAccountPart1": "Még nincs fiókja?",
+    "noAccountLink": "Regisztráljon",
     "emailLabel": "E-mail cím",
     "passwordLabel": "Jelszó",
     "submit": "Bejelentkezés",
@@ -174,8 +174,8 @@
   "SignupPage": {
     "brand": "SODIVA CREDITS",
     "title": "Fiók létrehozása",
-    "alreadyRegisteredPart1": "Már regisztráltál?",
-    "alreadyRegisteredLink": "Jelentkezz be",
+    "alreadyRegisteredPart1": "Már regisztrált?",
+    "alreadyRegisteredLink": "Jelentkezzen be",
     "roleBorrower": "Hitelfelvevő",
     "roleInvestor": "Befektető",
     "nameLabel": "Név",
@@ -217,29 +217,29 @@
       "REJECTED": "Elutasítva",
       "CANCELLED": "Visszavonva"
     },
-    "errorChooseFile": "Válassz ki egy fájlt a küldés előtt.",
-    "pageEyebrow": "apps/web · (borrower)",
+    "errorChooseFile": "Válasszon ki egy fájlt a küldés előtt.",
+    "pageEyebrow": "(borrower)",
     "title": "Hitelfelvevői felület",
     "pendingDocumentsCount": "{count, plural, one {# dokumentum} other {# dokumentum}}",
     "pendingDocumentsRequested": "{count, plural, one {kérve} other {kérve}} csapatunk által ({labels}).",
     "sendArrow": "Küldés →",
     "noApplications": "Jelenleg nincs igénylés.",
-    "noApplicationsLink": "Nyújtsd be az első igénylésedet",
+    "noApplicationsLink": "Nyújtsa be első igénylését",
     "amountDurationPurpose": "{amount} € · {duration} hónap · {purpose}",
     "priorityBadge": "★ Prioritásos dosszié",
     "slaBreached": ", a 48 órás SLA lejárt, csapatunk emlékeztetőt kapott.",
     "slaDeadline": ", az elbírálás garantáltan {date} előtt megtörténik.",
-    "priorityButton": "Váltás prioritásos dossziéra ({fee} €, elbírálás 48 órán belül)",
-    "identityRejectedPrompt": "A dokumentum elutasítva, küldj egy újat:",
-    "identityNeededPrompt": "Küldj egy személyazonosító okmányt a folytatáshoz:",
+    "priorityButton": "Váltás prioritásos dossziéra ({fee}, elbírálás 48 órán belül)",
+    "identityRejectedPrompt": "A dokumentumot elutasítottuk, küldjön egy újat:",
+    "identityNeededPrompt": "Küldjön egy személyazonosító okmányt a folytatáshoz:",
     "send": "Küldés",
     "identityUploadedPending": "A személyazonosító okmány elküldve, ügyintézői ellenőrzésre vár.",
     "offerProposed": "Ajánlott finanszírozás: {amount} €, {duration} hónap, {rate}% kamat",
     "acceptOffer": "Ajánlat elfogadása",
     "downloadContract": "Szerződés letöltése (PDF)",
-    "signInstructions": "Nyomtasd ki, írd alá kézzel, majd küldj róla fotót/szkennelt másolatot:",
+    "signInstructions": "Nyomtassa ki, írja alá kézzel, majd küldjön róla fotót vagy szkennelt másolatot:",
     "contractUploadedPending": "Az aláírt szerződés elküldve, ügyintézői ellenőrzésre vár.",
-    "contractConfirmed": "A szerződés aláírása megerősítve: a finanszírozásod most már megjelenik a befektetők számára.",
+    "contractConfirmed": "A szerződés aláírása megerősítve: finanszírozása most már megjelenik a befektetők számára.",
     "feePaid": "A fizetés beérkezett, köszönjük. A számlát tanácsadójától kérheti.",
     "fundsPending": "Szerződés aláírva: csapatunk ellenőrzi a folyósítást.",
     "fundsDisbursedKicker": "Folyósítva",
@@ -325,13 +325,13 @@
     }
   },
   "BorrowerApplication": {
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Igénylés benyújtása",
-    "profileIntroPart1": "Először töltsd ki",
-    "profileIntroLink": "a pénzügyi profilodat",
-    "profileIntroPart2": "ha még nem tetted meg: a kockázatelemző motornak szüksége van rá a dossziéd elemzéséhez.",
+    "profileIntroPart1": "Először töltse ki",
+    "profileIntroLink": "pénzügyi profilját",
+    "profileIntroPart2": "ha még nem tette meg: a kockázatelemző motornak szüksége van rá az ügye elemzéséhez.",
     "availableFundsAmount": "{amount} €",
-    "availableFundsRest": "{count, plural, one {jelenleg elérhető # befektetőnél, aki kész finanszírozni egy hozzád hasonló dossziét,} other {jelenleg elérhető # befektetőnél, aki kész finanszírozni egy hozzád hasonló dossziét,}}",
+    "availableFundsRest": "{count, plural, one {jelenleg elérhető # befektetőnél, aki kész finanszírozni egy az Önéhez hasonló ügyet,} other {jelenleg elérhető # befektetőnél, akik készek finanszírozni egy az Önéhez hasonló ügyet,}}",
     "availableFundsLink": "részletek megtekintése",
     "noActiveProducts": "Jelenleg nincs aktív finanszírozási termék.",
     "productLabel": "Termék",
@@ -346,8 +346,8 @@
   },
   "BorrowerDocuments": {
     "title": "Dokumentumaim",
-    "subtitle": "Csapatunk által kért dokumentumok az aktád kiegészítéséhez vagy ellenőrzéséhez.",
-    "errorSelectFile": "Válassz ki egy fájlt a küldés előtt.",
+    "subtitle": "Csapatunk által kért dokumentumok az ügye kiegészítéséhez vagy ellenőrzéséhez.",
+    "errorSelectFile": "Válasszon ki egy fájlt a küldés előtt.",
     "pendingHeading": "Feltöltendő",
     "pendingEmpty": "Jelenleg nincs függőben lévő dokumentum.",
     "statusPending": "Függőben",
@@ -390,20 +390,22 @@
   },
   "BorrowerInvestors": {
     "title": "Elérhető befektetők",
-    "intro": "Magánszemélyek, vállalkozások és intézmények itt teszik közzé a kölcsönözhető tőkéjüket. Kérj közvetlen kapcsolatfelvételt (az elérhetőségek azonnal megosztásra kerülnek) {fee} € ellenében.",
-    "disclaimer": "A kapcsolatfelvétel után a további egyeztetések és az esetleges kölcsön közvetlenül közted és a befektető között zajlanak, a platformon kívül. A SODIVA CREDITS biztosítja a kapcsolatot, de nem felelős azért, ami ezt követően köztetek történik.",
+    "intro": "Magánszemélyek, vállalkozások és intézmények itt teszik közzé a kölcsönözhető tőkéjüket. Kérjen közvetlen kapcsolatfelvételt (az elérhetőségek azonnal megosztásra kerülnek) {fee} ellenében.",
+    "disclaimer": "A kapcsolatfelvétel után a további egyeztetések és az esetleges kölcsön közvetlenül Ön és a befektető között zajlanak, a platformon kívül. A SODIVA CREDITS biztosítja a kapcsolatot, de nem felelős azért, ami ezt követően a felek között történik.",
     "empty": "Jelenleg nincs elérhető tőke közzétéve.",
     "defaultInvestorName": "Befektető",
     "verified": "Ellenőrzött ✓",
     "risk": "Kockázat: {risk}",
     "availability": "<amount>{amountValue} €</amount> elérhető · {rate}% · {duration} hónap · kb. {monthlyValue} €/hó",
     "alreadyIntroduced": "Kapcsolatfelvétel kifizetve: az elérhetőségek itt találhatók: <link>Kapcsolatfelvételeim</link>.",
-    "requestButton": "Kapcsolatfelvétel kérése ({fee} €)"
+    "requestButton": "Kapcsolatfelvétel kérése ({fee})",
+    "introPremium": "Magánszemélyek, vállalkozások és szervezetek teszik itt közzé a kölcsönadásra szánt tőkéjüket. Prémium előfizetésével a közvetlen kapcsolatfelvétel (azonnali elérhetőségcsere) benne van az árban, korlátlanul.",
+    "requestButtonPremium": "Kapcsolatfelvétel kérése (a Prémium része)"
   },
   "BorrowerIntroductions": {
     "title": "Kapcsolatfelvételeim",
-    "intro": "A kifizetett kapcsolatfelvétel mindkét irányban felfedi az elérhetőségeket: te és a másik fél közvetlenül tudtok egymásnak írni.",
-    "disclaimer": "Innentől a köztetek zajló egyeztetések és minden, amiben közösen döntötök, a platformon kívül történik. A SODIVA CREDITS biztosította a kapcsolatot, de nem felelős azért, ami ezt követően köztetek történik.",
+    "intro": "A kifizetett kapcsolatfelvétel mindkét irányban felfedi az elérhetőségeket: Ön és a másik fél közvetlenül írhatnak egymásnak.",
+    "disclaimer": "Innentől az egyeztetések és minden, amiről közösen döntenek, a platformon kívül történik. A SODIVA CREDITS biztosította a kapcsolatot, de nem felelős azért, ami ezt követően a felek között történik.",
     "sentHeading": "Általam küldött kérések",
     "sentEmpty": "Még nincs elküldött kérés.",
     "targetTypeInvestor": "befektető / hitelező",
@@ -412,15 +414,15 @@
     "contact": "Elérhetőség: {email}",
     "paymentPending": "Fizetés függőben.",
     "receivedHeading": "Kapott kérések",
-    "receivedEmpty": "Még senki sem kérte, hogy kapcsolatba lépjen veled.",
-    "receivedRequest": "<name>{nameValue}</name> szeretné felvenni veled a kapcsolatot.",
+    "receivedEmpty": "Még senki sem kérte, hogy kapcsolatba lépjen Önnel.",
+    "receivedRequest": "<name>{nameValue}</name> szeretné felvenni Önnel a kapcsolatot.",
     "formalizeDirectLoan": "Közvetlen kölcsön hivatalossá tétele",
     "viewDirectLoan": "Közvetlen kölcsön megtekintése"
   },
   "BorrowerOnboarding": {
     "title": "Pénzügyi profilom",
     "subtitle": "Ezek az adatok a kockázatelemző motorhoz szükségesek, és egy következő igénylésnél nem kérjük újra.",
-    "alreadySaved": "A profilod már mentve van, módosítsd, ami változott, majd mentsd újra.",
+    "alreadySaved": "Profilja már mentve van: módosítsa, ami változott, majd mentse újra.",
     "cityLabel": "Város",
     "postalCodeLabel": "Irányítószám",
     "employmentLabel": "Foglalkoztatási státusz",
@@ -456,7 +458,7 @@
       "high": "Magas"
     },
     "title": "P2P piactér",
-    "intro": "Ha közvetlen kapcsolatfelvételt kérsz egy hitelfelvevővel, az azt követő egyeztetések a platformon kívül zajlanak. A SODIVA CREDITS biztosítja a kapcsolatot, de nem felelős azért, ami ezután köztetek történik.",
+    "intro": "Ha közvetlen kapcsolatfelvételt kér egy hitelfelvevővel, az azt követő egyeztetések a platformon kívül zajlanak. A SODIVA CREDITS biztosítja a kapcsolatot, de nem felelős azért, ami ezután a felek között történik.",
     "pendingDocumentsCount": "{count, plural, one {# dokumentum} other {# dokumentum}}",
     "pendingDocumentsRequested": "{count, plural, one {kérve} other {kérve}} csapatunk által ({labels}).",
     "send": "Küldés →",
@@ -469,10 +471,10 @@
     "invest": "Befektetés",
     "introductionPaidPrefix": "A kapcsolatfelvétel kifizetve: az elérhetőségek itt találhatók:",
     "introductionPaidLink": "Kapcsolatfelvételeim",
-    "requestIntroduction": "Közvetlen kapcsolatfelvétel a hitelfelvevővel ({premium, select, yes {ingyenes, Prémium} other {{fee} €}})"
+    "requestIntroduction": "Közvetlen kapcsolatfelvétel a hitelfelvevővel ({premium, select, yes {ingyenes, Prémium} other {{fee}}})"
   },
   "InvestorDocuments": {
-    "chooseFileError": "Válassz ki egy fájlt küldés előtt.",
+    "chooseFileError": "Válasszon ki egy fájlt küldés előtt.",
     "title": "Dokumentumaim",
     "description": "Csapatunk által kért dokumentumok, az ellenőrzési igazolásokon felül.",
     "toUpload": "Feltöltendő",
@@ -487,8 +489,8 @@
   },
   "InvestorIntroductions": {
     "title": "Kapcsolatfelvételeim",
-    "description": "Egy kifizetett kapcsolatfelvétel mindkét irányban felfedi az elérhetőségeket: te és a célszemély is közvetlenül írhattok egymásnak.",
-    "disclaimer": "Ettől kezdve az egyeztetéseitek és minden, amiben közösen döntötök, a platformon kívül zajlik. A SODIVA CREDITS biztosította a kapcsolatot, de nem felelős azért, ami ezután köztetek történik.",
+    "description": "Egy kifizetett kapcsolatfelvétel mindkét irányban felfedi az elérhetőségeket: Ön és a célszemély közvetlenül írhatnak egymásnak.",
+    "disclaimer": "Ettől kezdve az egyeztetések és minden, amiről közösen döntenek, a platformon kívül zajlik. A SODIVA CREDITS biztosította a kapcsolatot, de nem felelős azért, ami ezután a felek között történik.",
     "sentTitle": "Az általam küldött kérések",
     "noSentRequests": "Jelenleg nincs elküldött kérés.",
     "targetTypeApplication": "hitelkérelmező",
@@ -496,26 +498,26 @@
     "contactInfo": "Elérhetőség: {email}",
     "paymentPending": "Fizetés függőben.",
     "receivedTitle": "Kapott kérések",
-    "noReceivedRequests": "Még senki nem kérte, hogy felvegye veled a kapcsolatot.",
-    "wantsToConnect": "szeretné felvenni veled a kapcsolatot.",
+    "noReceivedRequests": "Még senki nem kérte, hogy felvegye Önnel a kapcsolatot.",
+    "wantsToConnect": "szeretné felvenni Önnel a kapcsolatot.",
     "formalizeDirectLoan": "Közvetlen kölcsön hivatalossá tétele",
     "viewDirectLoan": "Közvetlen kölcsön megtekintése"
   },
   "InvestorNotifications": {
     "eventLabels": {
-      "funding_match_alert": "Egy új igénylés megfelel a kockázattűrésednek",
-      "introduction_paid": "Valaki fizetett, hogy megkapja az elérhetőségedet",
-      "investor_verified": "A befektetői profilodat ellenőrizték",
-      "investor_rejected": "A befektetői ellenőrzésedet elutasították",
-      "document_requested": "Egy dokumentumot kértek tőled"
+      "funding_match_alert": "Egy új igénylés megfelel az Ön kockázattűrésének",
+      "introduction_paid": "Valaki fizetett, hogy megkapja az Ön elérhetőségét",
+      "investor_verified": "Befektetői profilját ellenőrizték",
+      "investor_rejected": "Befektetői ellenőrzését elutasították",
+      "document_requested": "Egy dokumentumot kértek Öntől"
     },
     "title": "Értesítéseim",
-    "subtitle": "Az automatikus értesítések a profilodnak megfelelő új igénylésekről csak Prémium befektetők számára érhetők el.",
+    "subtitle": "Az automatikus értesítések az Ön profiljának megfelelő új igénylésekről csak Prémium befektetők számára érhetők el.",
     "empty": "Egyelőre nincs értesítés."
   },
   "InvestorOffers": {
     "title": "Tőkeajánlataim",
-    "subtitle": "Tegyél közzé egy összeget, amelyet hajlandó vagy kölcsönadni, a kívánt kamattal és futamidővel: a hitelfelvevők közvetlenül a piactéren látják, még mielőtt benyújtanák az igénylésüket.",
+    "subtitle": "Tegyen közzé egy összeget, amelyet hajlandó kölcsönadni, a kívánt kamattal és futamidővel: a hitelfelvevők közvetlenül a piactéren látják, még mielőtt benyújtanák az igénylésüket.",
     "publishedHeading": "Közzétett ajánlatok",
     "empty": "Egyelőre nincs közzétett ajánlat.",
     "amountAvailable": "{amount} € elérhető",
@@ -543,10 +545,10 @@
     "noData": "–",
     "riskAmount": "{risk}: {amount} €",
     "premiumLocked": "A fejlett teljesítmény-irányítópult (hozam, nemteljesítési arány, kockázat szerinti megoszlás) csak a Prémium csomagban érhető el.",
-    "premiumCta": "Fedezd fel a Prémiumot",
+    "premiumCta": "Fedezze fel a Prémiumot",
     "historyHeading": "Előzmények",
-    "historyEmptyPrefix": "Még nincs befektetésed,",
-    "historyEmptyLink": "fedezd fel a piacteret",
+    "historyEmptyPrefix": "Még nincs befektetése,",
+    "historyEmptyLink": "fedezze fel a piacteret",
     "investedDate": "{amount} € befektetve · {date}",
     "riskLabels": {
       "low": "Alacsony",
@@ -574,7 +576,7 @@
       "alert": {
         "prefix": "→",
         "bold": "Automatikus értesítés",
-        "suffix": " amint egy új igénylés megfelel a kockázattűrésednek"
+        "suffix": " amint egy új igénylés megfelel az Ön kockázattűrésének"
       },
       "verification": {
         "prefix": "→",
@@ -620,7 +622,7 @@
   },
   "InvestorVerification": {
     "title": "Profilom ellenőrzése",
-    "subtitle": "Egy ellenőrzött befektető jelvénye látható a hitelfelvevők számára a piactéren, ez bizalmat kelt és megkülönbözteti a profilodat. Az ellenőrzés manuális: egy ügyintéző vizsgálja meg a dokumentumaidat.",
+    "subtitle": "Egy ellenőrzött befektető jelvénye látható a hitelfelvevők számára a piactéren: ez bizalmat kelt és megkülönbözteti profilját. Az ellenőrzés manuális: egy ügyintéző vizsgálja meg dokumentumait.",
     "statusLabels": {
       "UNVERIFIED": "Nincs ellenőrizve",
       "PENDING_REVIEW": "Ellenőrzésre vár",
@@ -628,8 +630,8 @@
       "REJECTED": "Elutasítva"
     },
     "rejectionReason": "Elutasítás oka: {reason}",
-    "verifiedMessage": "A profilod ellenőrizve van: a jelvény mostantól megjelenik a tőkeajánlataidon és a kapcsolattartási profilodon.",
-    "pendingMessage": "A dokumentumaidat elküldtük, egy ügyintéző hamarosan megvizsgálja őket. Értesítést kapsz, amint az ellenőrzés befejeződött.",
+    "verifiedMessage": "Profilja ellenőrizve: a jelvény mostantól megjelenik tőkeajánlatain és kapcsolattartási profilján.",
+    "pendingMessage": "Dokumentumait elküldtük, egy ügyintéző hamarosan megvizsgálja őket. Értesítést kap, amint az ellenőrzés befejeződött.",
     "incomeDocLabel": "Jövedelemigazolás: {name}",
     "fundsDocLabel": "Pénzeszközök rendelkezésre állásának igazolása: {name}",
     "incomeFieldLabel": "Jövedelemforrás igazolása",
@@ -669,8 +671,8 @@
     "pageTitle": "Közvetlen kölcsön hivatalossá tétele",
     "notFound": "A kapcsolatba hozás nem található.",
     "notPaidYet": "Ezt a kapcsolatba hozást előbb ki kell fizetni.",
-    "intro": "Kapcsolatba hoztak {name} személlyel. Add meg a közösen megbeszélt kölcsönfeltételeket a szerződés létrehozásához.",
-    "alreadyFormalized": "Már hivatalossá tettetek egy kölcsönt {name} személlyel.",
+    "intro": "Kapcsolatba hozták {name} személlyel. Adja meg a közösen megbeszélt kölcsönfeltételeket a szerződés létrehozásához.",
+    "alreadyFormalized": "Már hivatalossá tettek egy kölcsönt {name} személlyel.",
     "agreementSummary": "{amount} € {duration} hónapon át, {rate} %-os kamattal.",
     "downloadContract": "Szerződés letöltése",
     "amountLabel": "Összeg (€)",
@@ -746,7 +748,11 @@
       "advisor_message": "Új üzenet",
       "assistance_started": "Egy tanácsadó segítségnyújtást indított",
       "assistance_document": "Tanácsadója feltöltött egy dokumentumot Ön helyett",
-      "assistance_ended": "Segítségnyújtás befejezve"
+      "assistance_ended": "Segítségnyújtás befejezve",
+      "subscription_started": "Premium előfizetése aktív",
+      "subscription_renewed": "Premium előfizetése megújult",
+      "subscription_past_due": "Premium előfizetésének terhelése nem sikerült",
+      "subscription_ended": "Premium előfizetése véget ért"
     }
   },
   "ClientPayments": {
@@ -776,7 +782,12 @@
       "FAILED": "Sikertelen",
       "REFUNDED": "Visszatérítve"
     },
-    "safetyNote": "Soha ne fizessen telefonon vagy e-mailben megadott számlára: minden fizetés itt történik."
+    "safetyNote": "Soha ne fizessen telefonon vagy e-mailben megadott számlára: minden fizetés itt történik.",
+    "paymentPurpose": {
+      "introduction": "Kapcsolatfelvétel",
+      "priority": "Elsőbbségi ügyintézés",
+      "premium": "Prémium előfizetés"
+    }
   },
   "ClientHelp": {
     "title": "Segítségre van szüksége?",
@@ -972,8 +983,103 @@
     "priorityPaid": "A fizetés megérkezett: ügye mostantól elsőbbséget élvez.",
     "description": {
       "broker_fee": "Közvetítői díj, {reference} ügy",
-      "priority": "Elsőbbségi ügyintézés, {reference} ügy"
+      "priority": "Elsőbbségi ügyintézés, {reference} ügy",
+      "introduction": "SODIVA CREDITS kapcsolatfelvétel, hiv. {reference}"
     },
-    "review": "A PayPal megkapta a fizetését. Csapatunk ellenőrzi, és hamarosan jelentkezik: nem kell újra fizetnie."
+    "review": "A PayPal megkapta a fizetését. Csapatunk ellenőrzi, és hamarosan jelentkezik: nem kell újra fizetnie.",
+    "introductionPaid": "A fizetés megérkezett: a kapcsolatfelvétel megtörtént, az elérhetőségek a „Kapcsolatfelvételek” menüpontban láthatók.",
+    "introductionIncluded": "A kapcsolatfelvétel megtörtént, Prémium előfizetése része: az elérhetőségek a „Kapcsolatfelvételek” menüpontban láthatók."
+  },
+  "Premium": {
+    "title": "Prémium előfizetés",
+    "eyebrow": "Korlátlan kapcsolatfelvétel",
+    "statusLabels": {
+      "ACTIVE": "Aktív",
+      "CANCELLED": "Lejárt",
+      "PAST_DUE": "Sikertelen fizetés"
+    },
+    "statusEnding": "Aktív az időszak végéig",
+    "nextCharge": "Következő PayPal-terhelés: {date}.",
+    "renewalAuto": "Automatikus megújítás: {date}.",
+    "renewalCancelled": "Lemondva: {date}-ig aktív marad, utána további terhelés nélkül megszűnik.",
+    "pastDue": "Az utolsó terhelés nem sikerült: a Prémium szünetel. Ellenőrizze fizetési módját PayPal-fiókjában, vagy fizessen elő újra alább.",
+    "ended": "Az előfizetés {date} napon véget ért.",
+    "legacyNote": "Ez a próba-előfizetés {date} napon megszűnik. Ha utána is Prémiumot szeretne, fizessen elő újra PayPallal.",
+    "featuresHeading": "Amit a Prémium nyújt Önnek",
+    "cancelButton": "Előfizetés lemondása",
+    "cancelHint": "A lemondás után nincs több terhelés. A Prémium {date}-ig aktív marad.",
+    "subscribePaypal": "Előfizetés PayPallal · {amount} / hó",
+    "resubscribePaypal": "Újra-előfizetés PayPallal · {amount} / hó",
+    "reactivatePaypal": "Újra-előfizetés PayPallal",
+    "reactivateButton": "Előfizetés újraaktiválása",
+    "subscribeButton": "Prémiumra váltok · {amount} / hó",
+    "reactivateHint": "{date} előtt nincs terhelés: az új előfizetés a már kifizetett időszak végén indul.",
+    "paypalHint": "Biztonságos fizetés PayPallal: PayPal-fiók vagy bankkártya. Kötöttség nélkül, egy kattintással lemondható.",
+    "noCommitment": "Kötöttség nélkül, egy kattintással lemondható.",
+    "sandbox": "teszt mód",
+    "historyHeading": "Terhelések előzményei",
+    "historyEmpty": "Még nincs terhelés.",
+    "simulated": "Szimulált",
+    "unitLabel": "Előfizetés nélkül",
+    "unitPrice": "{fee} kapcsolatfelvételenként",
+    "unitNote": "Minden új kapcsolatot újra ki kell fizetni.",
+    "premiumLabel": "Prémiummal",
+    "premiumPrice": "{amount} / hó, korlátlanul",
+    "breakEven": "Három egyedi kapcsolatfelvétel már majdnem ennyibe kerül: a negyediktől minden további kapcsolat ingyenes.",
+    "notices": {
+      "active": "Üdvözöljük a Prémiumban! Előfizetése aktív. Következő terhelés: {date}.",
+      "deferred": "Az újra-előfizetés rögzítve. A Prémium megszakítás nélkül folytatódik; az első terhelés: {date}.",
+      "cancelled": "Előfizetés lemondva: nincs több terhelés. A Prémium {date}-ig aktív marad.",
+      "checkout_cancelled": "Az előfizetést a PayPalon megszakította: semmit nem terheltünk.",
+      "failed": "A PayPal nem erősítette meg az előfizetést: semmit nem terheltünk. Próbálja újra, vagy forduljon tanácsadójához.",
+      "unavailable": "Az online fizetés átmenetileg nem érhető el. Próbálja újra néhány perc múlva.",
+      "cancel_failed": "A lemondást nem sikerült továbbítani a PayPalnak. Próbálja újra néhány perc múlva; ha továbbra sincs megerősítve, forduljon tanácsadójához."
+    },
+    "investor": {
+      "kicker": "Befektetői felület",
+      "headline": "Helyezze ki tőkéjét gyorsabban, korlátlan kapcsolatfelvétellel",
+      "pitch": "Egyetlen kapcsolat nem mindig elég: lehet, hogy a hitelfelvevő már talált finanszírozást, vagy a projektje nem egészen felel meg a feltételeinek. A Prémiummal annyi hitelfelvevővel veheti fel a kapcsolatot, amennyivel csak szeretné, összehasonlíthatja a projekteket, és gyorsabban dönthet.",
+      "features": [
+        "Korlátlan kapcsolatfelvétel hitelfelvevőkkel, kapcsolatonkénti díj nélkül",
+        "Vegye fel a kapcsolatot egyszerre több hitelfelvevővel a projektek összehasonlításához",
+        "Automatikus értesítés, amint egy új kérelem megfelel a kockázattűrésének",
+        "Befektetői profiljának gyorsított ellenőrzése, 48 órán belül",
+        "Prémium jelvény az Ellenőrzött jelvény mellett",
+        "Bővített teljesítmény-irányítópult: hozam, nemteljesítési arány, előzmények"
+      ]
+    },
+    "borrower": {
+      "kicker": "Ügyfélfelület",
+      "headline": "Növelje esélyeit, hogy gyorsan megkapja finanszírozását",
+      "pitch": "Minden befektetőnek megvannak a saját feltételei: összeg, futamidő, projekttípus. Ha csak egy befektetővel veszi fel a kapcsolatot, egyetlen választól függ. A Prémiummal egyszerre annyi befektetővel veheti fel a kapcsolatot, amennyivel szeretné: növeli esélyeit és értékes időt takarít meg.",
+      "features": [
+        "Korlátlan kapcsolatfelvétel befektetőkkel, kapcsolatonkénti díj nélkül",
+        "Vegye fel a kapcsolatot egyszerre több befektetővel ahelyett, hogy egymás után várná a válaszokat",
+        "Hasonlítsa össze az ajánlatokat, és válassza a legmegfelelőbbet",
+        "Kötöttség nélkül: egy kattintással, díjmentesen lemondható"
+      ],
+      "disclaimer": "A Prémium megkönnyíti a kapcsolatfelvételt a befektetőkkel, de nem garantálja a finanszírozás elnyerését. A hitel kötelezettséggel jár és vissza kell fizetni: kötelezettségvállalás előtt mérje fel visszafizetési képességét."
+    }
+  },
+  "PremiumPromo": {
+    "eyebrow": "Prémium előfizetés",
+    "title": "Több kapcsolat, több esély, kevesebb várakozás",
+    "text": "Egy kapcsolatfelvétel ára {fee}. A havi {amount} összegű Prémium előfizetéssel korlátlan: vegye fel a kapcsolatot egyszerre több befektetővel vagy hitelfelvevővel, és haladjon gyorsabban.",
+    "borrowerTitle": "Finanszírozást keres",
+    "borrowerText": "Vegye fel a kapcsolatot egyszerre több befektetővel ahelyett, hogy egyetlen válaszra várna: növeli esélyét a gyors finanszírozásra.",
+    "investorTitle": "Befektetne",
+    "investorText": "Vegye fel a kapcsolatot annyi hitelfelvevővel, amennyivel szeretné, hasonlítsa össze a projekteket, és helyezze ki tőkéjét gyorsabban.",
+    "perMonth": "/ hó",
+    "unlimited": "Korlátlan kapcsolatfelvétel · kötöttség nélkül",
+    "breakEven": "A hónap 4. kapcsolatfelvételétől minden további kapcsolat ingyenes.",
+    "ctaBorrower": "Finanszírozást keresek",
+    "ctaInvestor": "Befektetnék",
+    "ctaPremium": "A Prémium felfedezése",
+    "bannerBorrower": "Ne egyetlen befektetőre építsen: a Prémiummal ({amount} / hó) annyival veheti fel a kapcsolatot, amennyivel szeretné.",
+    "bannerInvestor": "Hasonlítson össze több projektet: a Prémiummal ({amount} / hó) annyi hitelfelvevővel veheti fel a kapcsolatot, amennyivel szeretné.",
+    "bannerVisitor": "Korlátlan kapcsolatfelvétel a Prémium előfizetéssel: {amount} / hó, kötöttség nélkül.",
+    "bannerCta": "Az ajánlat megtekintése",
+    "noGuarantee": "A Prémium megkönnyíti a kapcsolatfelvételt, de nem garantálja a finanszírozást.",
+    "navLabel": "Prémium"
   }
 }

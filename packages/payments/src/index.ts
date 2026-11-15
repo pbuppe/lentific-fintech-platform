@@ -66,7 +66,7 @@ export async function recordFee(userId: string, amount: number, currencyId: stri
 }
 
 // ---------------------------------------------------------------------------
-// Option "Dossier Prioritaire" (49 €, payée d'avance au dépôt, jamais un
+// Option "Dossier Prioritaire" (49,90 €, payée d'avance au dépôt, jamais un
 // success-fee) : voir §schema Application.priority.
 // ---------------------------------------------------------------------------
 
@@ -93,6 +93,8 @@ export async function applyPriority(applicationId: string) {
 export { isPaypalConfigured, paypalMode, PaypalError } from "./paypal";
 export {
   PREMIUM_TIER,
+  BORROWER_PREMIUM_TIER,
+  premiumTierFor,
   PREMIUM_MONTHLY_AMOUNT,
   PremiumError,
   startPremiumCheckout,
@@ -103,7 +105,7 @@ export {
   refreshPremiumIfStale,
 } from "./premium";
 
-export type OnlinePurpose = "broker_fee" | "priority";
+export type OnlinePurpose = "broker_fee" | "priority" | "introduction";
 
 /** Crée le paiement en attente et la commande PayPal ; renvoie l'adresse de paiement PayPal. */
 export async function startPaypalCheckout(input: {
@@ -229,7 +231,7 @@ export async function processDueSubscriptions(currencyId: string) {
     // Il s'arrête à la fin de sa période ; le client peut se réabonner via PayPal.
     if (isPaypalConfigured()) {
       await subscriptionsRepo.setStatus(subscription.id, "CANCELLED");
-      await emit("subscription.cancelled", { userId: subscription.userId });
+      await emit("subscription.ended", { userId: subscription.userId, legacy: true });
       continue;
     }
     if (subscription.cancelledAt) {

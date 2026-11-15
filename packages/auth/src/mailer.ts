@@ -104,32 +104,32 @@ const TEXTS: Record<Locale, AccountEmailTexts> = {
     signature: "The SODIVA CREDITS team",
   },
   es: {
-    hello: (n) => `Hola ${n}:`,
-    verifySubject: "Confirma tu dirección de correo – SODIVA CREDITS",
-    verifyBody: "Gracias por registrarte en SODIVA CREDITS. Para confirmar que esta dirección de correo es tuya, haz clic en el botón de abajo.",
+    hello: (n) => `Estimado/a ${n}:`,
+    verifySubject: "Confirme su dirección de correo – SODIVA CREDITS",
+    verifyBody: "Gracias por registrarse en SODIVA CREDITS. Para confirmar que esta dirección de correo es suya, haga clic en el botón de abajo.",
     verifyButton: "Confirmar mi correo",
-    verifyExpiry: "Este enlace es válido durante 48 horas. Una vez confirmada tu dirección, un administrador revisará tu registro antes de activar tu cuenta.",
-    verifyIgnore: "Si no te has registrado, ignora este correo.",
-    approvedSubject: "Tu cuenta de SODIVA CREDITS está activada",
-    approvedBody: "Buenas noticias: un administrador ha validado tu registro. Ya puedes iniciar sesión y acceder a tu espacio.",
+    verifyExpiry: "Este enlace es válido durante 48 horas. Una vez confirmada su dirección, un administrador revisará su registro antes de activar su cuenta.",
+    verifyIgnore: "Si no se ha registrado, ignore este correo.",
+    approvedSubject: "Su cuenta de SODIVA CREDITS está activada",
+    approvedBody: "Buenas noticias: un administrador ha validado su registro. Ya puede iniciar sesión y acceder a su espacio.",
     approvedButton: "Acceder a mi espacio",
-    rejectedSubject: "Tu registro en SODIVA CREDITS",
-    rejectedBody: "Tras revisarlo, no podemos validar tu registro por el momento.",
+    rejectedSubject: "Su registro en SODIVA CREDITS",
+    rejectedBody: "Tras revisarlo, no podemos validar su registro por el momento.",
     rejectedReason: "Motivo:",
     signature: "El equipo de SODIVA CREDITS",
   },
   it: {
-    hello: (n) => `Ciao ${n},`,
-    verifySubject: "Conferma il tuo indirizzo e-mail – SODIVA CREDITS",
-    verifyBody: "Grazie per esserti registrato su SODIVA CREDITS. Per confermare che questo indirizzo e-mail è tuo, clicca sul pulsante qui sotto.",
+    hello: (n) => `Gentile ${n},`,
+    verifySubject: "Confermate il vostro indirizzo e-mail – SODIVA CREDITS",
+    verifyBody: "Grazie per esservi registrati su SODIVA CREDITS. Per confermare che questo indirizzo e-mail è vostro, cliccate sul pulsante qui sotto.",
     verifyButton: "Conferma il mio indirizzo e-mail",
-    verifyExpiry: "Il link è valido 48 ore. Una volta confermato l'indirizzo, un amministratore esaminerà la tua registrazione prima di attivare l'account.",
-    verifyIgnore: "Se non sei stato tu a registrarti, ignora questa e-mail.",
-    approvedSubject: "Il tuo account SODIVA CREDITS è attivo",
-    approvedBody: "Buone notizie: un amministratore ha approvato la tua registrazione. Ora puoi accedere al tuo spazio.",
+    verifyExpiry: "Il link è valido 48 ore. Una volta confermato l'indirizzo, un amministratore esaminerà la vostra registrazione prima di attivare l'account.",
+    verifyIgnore: "Se non vi siete registrati, ignorate questa e-mail.",
+    approvedSubject: "Il vostro account SODIVA CREDITS è attivo",
+    approvedBody: "Buone notizie: un amministratore ha approvato la vostra registrazione. Ora potete accedere al vostro spazio.",
     approvedButton: "Vai al mio spazio",
-    rejectedSubject: "La tua registrazione su SODIVA CREDITS",
-    rejectedBody: "Dopo l'esame, al momento non possiamo approvare la tua registrazione.",
+    rejectedSubject: "La vostra registrazione su SODIVA CREDITS",
+    rejectedBody: "Dopo l'esame, al momento non possiamo approvare la vostra registrazione.",
     rejectedReason: "Motivo:",
     signature: "Il team SODIVA CREDITS",
   },
@@ -180,16 +180,16 @@ const TEXTS: Record<Locale, AccountEmailTexts> = {
   },
   nl: {
     hello: (n) => `Hallo ${n},`,
-    verifySubject: "Bevestig je e-mailadres – SODIVA CREDITS",
-    verifyBody: "Bedankt voor je registratie bij SODIVA CREDITS. Klik op de knop hieronder om te bevestigen dat dit e-mailadres van jou is.",
+    verifySubject: "Bevestig uw e-mailadres – SODIVA CREDITS",
+    verifyBody: "Bedankt voor uw registratie bij SODIVA CREDITS. Klik op de knop hieronder om te bevestigen dat dit e-mailadres van u is.",
     verifyButton: "Mijn e-mailadres bevestigen",
-    verifyExpiry: "Deze link is 48 uur geldig. Zodra je adres is bevestigd, beoordeelt een beheerder je registratie voordat je account wordt geactiveerd.",
-    verifyIgnore: "Heb je je niet geregistreerd? Negeer deze e-mail dan.",
-    approvedSubject: "Je SODIVA CREDITS-account is geactiveerd",
-    approvedBody: "Goed nieuws: een beheerder heeft je registratie goedgekeurd. Je kunt nu inloggen.",
+    verifyExpiry: "Deze link is 48 uur geldig. Zodra uw adres is bevestigd, beoordeelt een beheerder uw registratie voordat uw account wordt geactiveerd.",
+    verifyIgnore: "Hebt u zich niet geregistreerd? Negeer deze e-mail dan.",
+    approvedSubject: "Uw SODIVA CREDITS-account is geactiveerd",
+    approvedBody: "Goed nieuws: een beheerder heeft uw registratie goedgekeurd. U kunt nu inloggen.",
     approvedButton: "Naar mijn account",
-    rejectedSubject: "Je registratie bij SODIVA CREDITS",
-    rejectedBody: "Na beoordeling kunnen we je registratie op dit moment niet goedkeuren.",
+    rejectedSubject: "Uw registratie bij SODIVA CREDITS",
+    rejectedBody: "Na beoordeling kunnen we uw registratie op dit moment niet goedkeuren.",
     rejectedReason: "Reden:",
     signature: "Het SODIVA CREDITS-team",
   },
@@ -378,6 +378,31 @@ export function sendClientNoticeEmail(user: Recipient & { role?: string }, kind:
   const text = [t.hello(name), "", body, "", url, "", n.safety, "", t.signature].join("\n");
   const html = layout([escapeHtml(t.hello(name)), escapeHtml(body)], { label: n.button, url }, t.signature, escapeHtml(n.safety));
   return sendEmail({ to: user.email, subject: n.subject[kind], text, html, kind: `client.${kind}_notice`, userId: user.id });
+}
+
+// ---------------------------------------------------------------------------
+// Abonnement Premium : prélèvement PayPal échoué (2026-11-15)
+// ---------------------------------------------------------------------------
+
+const PREMIUM_FAILED_TEXTS: Record<Locale, { subject: string; body: string; button: string; safety: string }> = {
+  fr: { subject: "Votre abonnement Premium : prélèvement non abouti", body: "Le dernier prélèvement de votre abonnement Premium n'a pas abouti, Premium est donc suspendu. Retrouvez la marche à suivre dans votre espace, rubrique « Formule Premium ».", button: "Voir mon abonnement", safety: "Par sécurité, cet e-mail ne contient aucun détail. Nous ne vous demanderons jamais vos identifiants ni de payer vers un compte communiqué par e-mail." },
+  en: { subject: "Your Premium subscription: payment not completed", body: "The last payment for your Premium subscription did not go through, so Premium is suspended. See what to do in your client space, under \"Premium plan\".", button: "View my subscription", safety: "For your security, this e-mail contains no details. We will never ask for your login details or for a payment to an account given by e-mail." },
+  es: { subject: "Su suscripción Premium: cobro no realizado", body: "El último cobro de su suscripción Premium no se ha realizado, por lo que Premium está suspendido. Consulte cómo proceder en su espacio, en «Fórmula Premium».", button: "Ver mi suscripción", safety: "Por seguridad, este correo no contiene ningún detalle. Nunca le pediremos sus credenciales ni un pago a una cuenta comunicada por correo." },
+  it: { subject: "Il vostro abbonamento Premium: addebito non riuscito", body: "L'ultimo addebito del vostro abbonamento Premium non è andato a buon fine, quindi Premium è sospeso. Trovate come procedere nella vostra area, sezione «Formula Premium».", button: "Vedere il mio abbonamento", safety: "Per sicurezza, questa e-mail non contiene dettagli. Non vi chiederemo mai le credenziali né un pagamento su un conto comunicato per e-mail." },
+  hu: { subject: "Premium előfizetése: a terhelés nem sikerült", body: "Premium előfizetésének utolsó terhelése nem sikerült, ezért a Premium szünetel. A teendőket az ügyfélfelületén, a „Premium csomag” menüpontban találja.", button: "Előfizetésem megtekintése", safety: "Biztonsági okokból ez az e-mail nem tartalmaz részleteket. Soha nem kérjük a belépési adatait, sem e-mailben megadott számlára történő fizetést." },
+  pt: { subject: "A sua subscrição Premium: cobrança não concluída", body: "A última cobrança da sua subscrição Premium não foi concluída, pelo que o Premium está suspenso. Veja o que fazer no seu espaço, em «Fórmula Premium».", button: "Ver a minha subscrição", safety: "Por segurança, este e-mail não contém detalhes. Nunca lhe pediremos as suas credenciais nem um pagamento para uma conta comunicada por e-mail." },
+  de: { subject: "Ihr Premium-Abo: Abbuchung fehlgeschlagen", body: "Die letzte Abbuchung für Ihr Premium-Abo ist fehlgeschlagen, Premium ist daher ausgesetzt. Was zu tun ist, finden Sie in Ihrem Bereich unter „Premium-Tarif“.", button: "Mein Abo ansehen", safety: "Zu Ihrer Sicherheit enthält diese E-Mail keine Details. Wir fragen nie nach Ihren Zugangsdaten oder nach einer Zahlung auf ein per E-Mail genanntes Konto." },
+  nl: { subject: "Uw Premium-abonnement: afschrijving mislukt", body: "De laatste afschrijving voor uw Premium-abonnement is mislukt, daarom is Premium opgeschort. Wat u moet doen, vindt u in uw omgeving onder \"Premium-formule\".", button: "Mijn abonnement bekijken", safety: "Voor uw veiligheid bevat deze e-mail geen details. We vragen nooit uw inloggegevens of een betaling naar een rekening die per e-mail is meegedeeld." },
+};
+
+export function sendPremiumPaymentFailedEmail(user: Recipient) {
+  const t = textsFor(user.preferredLocale);
+  const n = PREMIUM_FAILED_TEXTS[(user.preferredLocale ?? "fr") as Locale] ?? PREMIUM_FAILED_TEXTS.fr;
+  const name = user.name ?? user.email;
+  const url = `${webBaseUrl()}/investor/premium`;
+  const text = [t.hello(name), "", n.body, "", url, "", n.safety, "", t.signature].join("\n");
+  const html = layout([escapeHtml(t.hello(name)), escapeHtml(n.body)], { label: n.button, url }, t.signature, escapeHtml(n.safety));
+  return sendEmail({ to: user.email, subject: n.subject, text, html, kind: "client.premium_payment_failed", userId: user.id });
 }
 
 // ---------------------------------------------------------------------------

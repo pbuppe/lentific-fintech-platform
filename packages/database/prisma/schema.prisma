@@ -214,7 +214,7 @@ model Application {
   brokerFees    BrokerFeeRequest[]
   createdAt     DateTime            @default(now())
 
-  // Option payante "Dossier Prioritaire" (49 €, payée d'avance au dépôt,
+  // Option payante "Dossier Prioritaire" (49,90 €, payée d'avance au dépôt,
   // indépendamment du résultat, jamais un success-fee) : traitement sous 48h
   // garanties, suivi par slaDeadline pour la file d'attente back-office.
   priority            Boolean   @default(false)

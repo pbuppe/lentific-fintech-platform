@@ -30,7 +30,7 @@
     "activated": "Il vostro accesso è attivato: accedete con la nuova password."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "Coda pratiche",
     "pendingCount": "{count, plural, one {# pratica in attesa} other {# pratiche in attesa}}",
     "empty": "Nessuna pratica in attesa per ora.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · super amministratore",
+    "kicker": "Super amministratore",
     "title": "Account",
     "description": "Vista completa di ogni account mutuatario o investitore: profilo, documenti, richieste di documenti, messe in contatto.",
     "empty": "Nessun account per ora.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Torna agli account",
-    "kicker": "apps/admin · super amministratore",
+    "kicker": "Super amministratore",
     "phoneNotProvided": "telefono non indicato",
     "roleBorrower": "Mutuatario",
     "roleInvestor": "Investitore",
@@ -89,7 +89,7 @@
     "documentLabel": "Documento richiesto",
     "documentPlaceholder": "Es. Prova di domicilio",
     "instructionsLabel": "Precisazioni (facoltativo)",
-    "instructionsPlaceholder": "Es. di meno di 3 mesi, a tuo nome",
+    "instructionsPlaceholder": "Es. di meno di 3 mesi, a vostro nome",
     "sendRequest": "Invia la richiesta",
     "alreadySentTitle": "Richieste già inviate",
     "requestStatus": {
@@ -99,7 +99,7 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · firma manuale",
+    "kicker": "Firma manuale",
     "title": "Contratti firmati: da verificare",
     "description": "Il cliente ha stampato, firmato a mano e caricato il proprio contratto. Verifica il documento prima di confermare.",
     "empty": "Nessun contratto in attesa di verifica.",
@@ -109,12 +109,12 @@
     "confirmSignature": "Conferma la firma",
     "reject": "Rifiuta",
     "bilateralEligibleTitle": "Prestiti idonei a un contratto bilaterale",
-    "bilateralEligibleDescription": "Questi prestiti sono finanziati da un solo investitore: puoi rigenerare il loro contratto in versione bilaterale diretta, nominando quell'investitore, al posto del contratto marketplace standard.",
+    "bilateralEligibleDescription": "Questi prestiti sono finanziati da un solo investitore: potete rigenerare il loro contratto in versione bilaterale diretta, nominando quell'investitore, al posto del contratto marketplace standard.",
     "bilateralEligibleMeta": "{borrower} prende in prestito da {lender}",
     "regenerateBilateral": "Rigenera come contratto bilaterale"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · incasso",
+    "kicker": "Incasso",
     "title": "Rate da incassare",
     "description": "Conferma una rata mensile ricevuta dal mutuatario: viene ridistribuita automaticamente tra gli investitori del prestito, in proporzione alla loro quota, e alimenta la loro dashboard delle performance.",
     "empty": "Nessuna rata in attesa per ora.",
@@ -124,7 +124,7 @@
     "confirmPayment": "Conferma il pagamento ricevuto"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · verifica manuale",
+    "kicker": "Verifica manuale",
     "title": "Verifica investitori: da gestire",
     "description": "Esamina la prova di reddito e la prova di disponibilità dei fondi, quindi conferma o rifiuta qui sotto.",
     "empty": "Nessun investitore in attesa di verifica.",
@@ -137,7 +137,7 @@
     "missingDocumentNote": "Manca un documento: impossibile confermare finché non sono stati caricati entrambi."
   },
   "KycPage": {
-    "kicker": "apps/admin · verifica manuale",
+    "kicker": "Verifica manuale",
     "title": "Verifica d'identità: da gestire",
     "description": "Contatta il cliente per verificare il suo documento d'identità, quindi conferma o rifiuta qui sotto.",
     "empty": "Nessuna pratica in attesa di verifica manuale.",
@@ -147,7 +147,7 @@
     "noApplicationNote": "Questo documento non è collegato a nessuna richiesta: impossibile far avanzare una pratica."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · panoramica",
+    "kicker": "Panoramica",
     "title": "Profili messi in contatto",
     "description": "Elenco delle coppie che hanno scambiato i propri contatti tramite una messa in contatto pagata. Da quel momento, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; SODIVA CREDITS non se ne assume la responsabilità, è stato fornito solo il contatto.",
     "empty": "Nessuna messa in contatto pagata per ora.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Mutuatario verso investitore"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · rischio",
+    "kicker": "Rischio",
     "title": "Motore del rischio",
     "demoDescription": "Esempio calcolato da <code1>assessRisk()</code1> di <code2>@fintech/risk</code2> per la pratica dimostrativa (18.500 € / 24 mesi):",
     "scoreLabel": "Punteggio",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Livello di rischio"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · statistiche",
+    "kicker": "Statistiche",
     "title": "Statistiche di visita",
     "description": "Un tracciamento delle visite leggero e autogestito, integrato nella piattaforma. Non è Matomo: Matomo richiede un account Matomo Cloud oppure un hosting separato, da configurare a parte se lo si desidera.",
     "rightNow": "In questo momento",
@@ -190,11 +190,11 @@
   "AccountValidationPage": {
     "kicker": "Registrazioni",
     "title": "Account da approvare",
-    "description": "Nessun mutuatario o investitore accede al proprio spazio prima della tua approvazione. Controlla ogni registrazione, poi approva o rifiuta con un motivo; la persona viene avvisata via e-mail.",
+    "description": "Nessun mutuatario o investitore accede al proprio spazio prima della vostra approvazione. Controllate ogni registrazione, poi approvate o rifiutate con un motivo; la persona viene avvisata via e-mail.",
     "doneApproved": "Account approvato. È stata inviata un'e-mail di attivazione.",
     "doneRejected": "Registrazione rifiutata. La persona è stata avvisata via e-mail.",
     "doneResent": "Nuovo link di conferma inviato.",
-    "toReviewTitle": "E-mail confermata, in attesa della tua decisione",
+    "toReviewTitle": "E-mail confermata, in attesa della vostra decisione",
     "toReviewEmpty": "Nessuna registrazione in attesa di approvazione.",
     "roleBorrower": "Mutuatario",
     "roleInvestor": "Investitore",

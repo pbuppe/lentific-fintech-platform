@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { formatPrice } from "../../../lib/price";
+import { INTRODUCTION_FEE } from "@fintech/introductions";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Button } from "@fintech/ui";
@@ -143,7 +145,7 @@ export default async function LocaleLandingPage({ params }: Props) {
           </div>
 
           <div className="mt-10 rounded-xl border border-line bg-surface-alt p-5">
-            <p className="font-display text-sm font-semibold text-ink">{t("introBoxTitle")}</p>
+            <p className="font-display text-sm font-semibold text-ink">{t("introBoxTitle", { fee: formatPrice(INTRODUCTION_FEE, locale) })}</p>
             <p className="mt-1 text-sm text-ink-soft">{t("introBoxBody")}</p>
             <p className="mt-2 text-xs text-ink-faint">{t("introBoxDisclaimer")}</p>
           </div>

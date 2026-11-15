@@ -18,7 +18,7 @@
     "heroSubtitle": "SODIVA CREDITS pone en contacto a particulares, pymes y entidades que buscan financiación con inversores (particulares, empresas o instituciones) que quieren hacer crecer sus ahorros, con un expediente verificado en cada etapa: identidad, capacidad de reembolso, contrato firmado.",
     "ctaApply": "Solicitar financiación",
     "ctaMarketplace": "Ver la marketplace",
-    "alreadyAccount": "¿Ya tienes cuenta? Iniciar sesión",
+    "alreadyAccount": "¿Ya tiene cuenta? Iniciar sesión",
     "statAvailableLabel": "disponibles entre nuestros inversores",
     "statInvestedLabel": "ya invertidos en expedientes",
     "statDossiers": "{count, plural, one {expediente ya firmado} other {expedientes ya firmados}}",
@@ -47,55 +47,55 @@
     "borrowerColumnTitle": "Para un prestatario",
     "borrowerSteps": [
       {
-        "title": "Simula tu necesidad",
+        "title": "Simule su necesidad",
         "body": "Importe, duración, cuota estimada, sin compromiso, sin cuenta."
       },
       {
-        "title": "Completa tu perfil",
-        "body": "Una sola vez: ingresos, gastos, situación. Servirá para todas tus solicitudes."
+        "title": "Complete su perfil",
+        "body": "Una sola vez: ingresos, gastos, situación. Servirá para todas sus solicitudes."
       },
       {
-        "title": "Presenta tu solicitud",
-        "body": "Envía un documento de identidad, un agente verifica tu expediente en breve."
+        "title": "Presente su solicitud",
+        "body": "Envíe un documento de identidad: un agente verifica su expediente en breve."
       },
       {
-        "title": "Recibe una oferta",
-        "body": "El motor de riesgo calcula una puntuación, un agente te propone una financiación."
+        "title": "Reciba una oferta",
+        "body": "El motor de riesgo calcula una puntuación y un agente le propone una financiación."
       },
       {
-        "title": "Firma y recibe la financiación",
-        "body": "Acepta la oferta, firma tu contrato y deja que la marketplace la financie."
+        "title": "Firme y reciba la financiación",
+        "body": "Acepte la oferta, firme su contrato y deje que la marketplace la financie."
       }
     ],
     "applyLinkArrow": "Solicitar financiación →",
     "investorColumnTitle": "Para un inversor",
     "investorSteps": [
       {
-        "title": "Crea tu cuenta de inversor",
-        "body": "Indica tu perfil y tu tolerancia al riesgo."
+        "title": "Cree su cuenta de inversor",
+        "body": "Indique su perfil y su tolerancia al riesgo."
       },
       {
-        "title": "Explora la marketplace",
+        "title": "Explore la marketplace",
         "body": "Cada expediente mostrado ya ha sido verificado y su contrato firmado."
       },
       {
-        "title": "Invierte el importe que elijas",
+        "title": "Invierta el importe que elija",
         "body": "Financiación fraccionada: varios inversores por expediente."
       },
       {
-        "title": "Sigue tu cartera",
+        "title": "Siga su cartera",
         "body": "Total invertido, reembolsos recibidos, historial, de un vistazo."
       }
     ],
     "viewMarketplaceLinkArrow": "Ver la marketplace →",
-    "introBoxTitle": "¿Necesitas ir más rápido? Solicita una puesta en contacto directa (15 €)",
+    "introBoxTitle": "¿Necesita ir más rápido? Solicite una puesta en contacto directa ({fee})",
     "introBoxBody": "En lugar de esperar, un prestatario puede solicitar el contacto directo de un inversor (particular, empresa o entidad) y viceversa. Una vez pagada la solicitud, los datos de contacto se intercambian de inmediato en ambos sentidos.",
     "introBoxDisclaimer": "SODIVA CREDITS facilita el contacto; lo que ocurra después entre las dos partes tiene lugar fuera de la plataforma y no es responsabilidad nuestra.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Expedientes ya verificados, listos para financiar",
     "viewAll": "Ver todo",
     "noOpportunities": "No hay oportunidades abiertas por ahora, el primer expediente firmado aparecerá aquí automáticamente.",
-    "noOpportunitiesInCountryHome": "No hay oportunidades abiertas en tu país por ahora, cambia a la vista internacional en la marketplace para ver todas las ofertas.",
+    "noOpportunitiesInCountryHome": "No hay oportunidades abiertas en su país por ahora: cambie a la vista internacional en la marketplace para ver todas las ofertas.",
     "riskLabel": {
       "low": "Bajo",
       "moderate": "Moderado",
@@ -104,7 +104,7 @@
     "riskPill": "Riesgo {label}",
     "fundedProgress": "{funded} € / {target} € financiados ({pct}%)",
     "ctaFinalTitle": "¿Listo para empezar?",
-    "ctaFinalBody": "Crea una cuenta en menos de dos minutos, ya sea que busques financiación o quieras invertir.",
+    "ctaFinalBody": "Cree una cuenta en menos de dos minutos, tanto si busca financiación como si quiere invertir.",
     "becomeInvestor": "Conviértete en inversor",
     "footerText": "© {year} SODIVA CREDITS · Plataforma de financiación participativa.",
     "footerMarketplace": "Marketplace",
@@ -116,7 +116,7 @@
     "heroTitle": "Prestatarios e inversores, en el mismo lugar",
     "heroSubtitle": "Por un lado, expedientes ya verificados (tanto de particulares como de pymes) que buscan inversores. Por otro, inversores (particulares, empresas o entidades) que anuncian el capital que están dispuestos a prestar, para que sepas, incluso antes de presentar una solicitud, qué hay disponible.",
     "availableCapitalTitle": "Capital disponible entre nuestros inversores",
-    "availableCapitalSubtitle": "Estos inversores han anunciado que están dispuestos a prestar: útil para estimar tus posibilidades antes de presentar una solicitud.",
+    "availableCapitalSubtitle": "Estos inversores han anunciado que están dispuestos a prestar: útil para estimar sus posibilidades antes de presentar una solicitud.",
     "noListings": "Ningún inversor ha publicado capital disponible por ahora.",
     "noListingsInCountry": "Ningún inversor ha publicado capital disponible en este país por ahora, prueba la vista internacional.",
     "amountAvailable": "{amount} € disponibles",
@@ -130,7 +130,7 @@
       "moderate": "Acepta riesgo moderado y bajo",
       "high": "Acepta todos los niveles de riesgo"
     },
-    "connectCta": "Inicia sesión para solicitar la puesta en contacto (15 €)",
+    "connectCta": "Inicie sesión para solicitar la puesta en contacto ({fee})",
     "depositCta": "Presentar una solicitud de financiación",
     "signedDossiersTitle": "Expedientes ya firmados, abiertos a financiación",
     "signedDossiersSubtitle": "Estos expedientes ya han sido verificados (identidad, análisis de riesgo) y su contrato firmado.",
@@ -145,11 +145,11 @@
     "riskPill": "Riesgo {label}",
     "dossierRef": "Expediente {reference}",
     "fundedProgress": "{funded} € / {target} € financiados ({pct}%)",
-    "investCta": "Inicia sesión para invertir"
+    "investCta": "Inicie sesión para invertir"
   },
   "SimulatorPage": {
     "eyebrow": "Simulador",
-    "title": "Estima tu financiación",
+    "title": "Estime su financiación",
     "subtitle": "Ajusta el importe y la duración para ver la cuota mensual y el coste total estimados, antes de presentar una solicitud.",
     "amountLabel": "Importe deseado:",
     "durationLabel": "Duración:",
@@ -157,14 +157,14 @@
     "rateLabel": "Tasa anual:",
     "estimationEyebrow": "Estimación",
     "monthlyResult": "{monthly} € / mes",
-    "totalCost": "Coste total estimado: {total} € (tasa simulada {rate}%, la tasa real depende de tu expediente)",
+    "totalCost": "Coste total estimado: {total} € (tasa simulada {rate} %, la tasa real depende de su expediente)",
     "applyCta": "Solicitar financiación",
     "legal": "Un crédito le compromete y debe devolverse. Compruebe su capacidad de reembolso antes de comprometerse."
   },
   "LoginPage": {
     "brand": "SODIVA CREDITS",
     "title": "Iniciar sesión",
-    "noAccountPart1": "¿Aún no tienes cuenta?",
+    "noAccountPart1": "¿Aún no tiene cuenta?",
     "noAccountLink": "Regístrate",
     "emailLabel": "Correo electrónico",
     "passwordLabel": "Contraseña",
@@ -174,7 +174,7 @@
   "SignupPage": {
     "brand": "SODIVA CREDITS",
     "title": "Crear una cuenta",
-    "alreadyRegisteredPart1": "¿Ya estás registrado?",
+    "alreadyRegisteredPart1": "¿Ya está registrado?",
     "alreadyRegisteredLink": "Iniciar sesión",
     "roleBorrower": "Prestatario",
     "roleInvestor": "Inversor",
@@ -217,21 +217,21 @@
       "REJECTED": "Rechazada",
       "CANCELLED": "Cancelada"
     },
-    "errorChooseFile": "Elige un archivo antes de enviar.",
-    "pageEyebrow": "apps/web · (borrower)",
+    "errorChooseFile": "Elija un archivo antes de enviar.",
+    "pageEyebrow": "(borrower)",
     "title": "Espacio del prestatario",
     "pendingDocumentsCount": "{count, plural, one {# documento} other {# documentos}}",
     "pendingDocumentsRequested": "{count, plural, one {solicitado} other {solicitados}} por nuestro equipo ({labels}).",
     "sendArrow": "Enviar →",
     "noApplications": "Aún no hay solicitudes.",
-    "noApplicationsLink": "Presenta tu primera solicitud",
+    "noApplicationsLink": "Presente su primera solicitud",
     "amountDurationPurpose": "{amount} € · {duration} meses · {purpose}",
     "priorityBadge": "★ Expediente prioritario",
     "slaBreached": ", SLA de 48h superado, se ha enviado un aviso a nuestro equipo.",
     "slaDeadline": ", revisión garantizada antes del {date}.",
-    "priorityButton": "Pasar a expediente prioritario ({fee} €, revisión en 48h)",
+    "priorityButton": "Pasar a expediente prioritario ({fee}, revisión en 48h)",
     "identityRejectedPrompt": "Documento rechazado, envía uno nuevo:",
-    "identityNeededPrompt": "Envía un documento de identidad para continuar:",
+    "identityNeededPrompt": "Envíe un documento de identidad para continuar:",
     "send": "Enviar",
     "identityUploadedPending": "Documento de identidad enviado, a la espera de verificación por un agente.",
     "offerProposed": "Oferta propuesta: {amount} € en {duration} meses, tasa {rate}%",
@@ -239,7 +239,7 @@
     "downloadContract": "Descargar mi contrato (PDF)",
     "signInstructions": "Imprímelo, fírmalo a mano y luego envía una foto/escaneo:",
     "contractUploadedPending": "Contrato firmado enviado, a la espera de verificación por un agente.",
-    "contractConfirmed": "Contrato confirmado firmado: tu financiación ya se ofrece a los inversores.",
+    "contractConfirmed": "Contrato confirmado firmado: su financiación ya se ofrece a los inversores.",
     "feePaid": "Pago recibido, gracias. Su asesor tiene su factura a disposición.",
     "fundsPending": "Contrato firmado: nuestro equipo está verificando el desembolso de sus fondos.",
     "fundsDisbursedKicker": "Fondos desembolsados",
@@ -325,11 +325,11 @@
     }
   },
   "BorrowerApplication": {
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Presentar una solicitud",
-    "profileIntroPart1": "Completa primero",
-    "profileIntroLink": "tu perfil financiero",
-    "profileIntroPart2": "si aún no lo has hecho: el motor de riesgo lo necesita para analizar tu expediente.",
+    "profileIntroPart1": "Complete primero",
+    "profileIntroLink": "su perfil financiero",
+    "profileIntroPart2": "si aún no lo ha hecho: el motor de riesgo lo necesita para analizar su expediente.",
     "availableFundsAmount": "{amount} €",
     "availableFundsRest": "{count, plural, one {están actualmente disponibles con # inversor dispuesto} other {están actualmente disponibles con # inversores dispuestos}} a financiar un expediente como el tuyo,",
     "availableFundsLink": "ver el detalle",
@@ -346,8 +346,8 @@
   },
   "BorrowerDocuments": {
     "title": "Mis documentos",
-    "subtitle": "Documentos solicitados por nuestro equipo para completar o verificar tu expediente.",
-    "errorSelectFile": "Elige un archivo antes de enviar.",
+    "subtitle": "Documentos solicitados por nuestro equipo para completar o verificar su expediente.",
+    "errorSelectFile": "Elija un archivo antes de enviar.",
     "pendingHeading": "Por enviar",
     "pendingEmpty": "No hay documentos pendientes por ahora.",
     "statusPending": "Pendiente",
@@ -390,7 +390,7 @@
   },
   "BorrowerInvestors": {
     "title": "Inversores disponibles",
-    "intro": "Particulares, empresas y entidades publican aquí el capital que están dispuestos a prestar. Solicita una puesta en contacto directa (datos de contacto compartidos al instante) por {fee} €.",
+    "intro": "Particulares, empresas y entidades publican aquí el capital que están dispuestos a prestar. Solicite una puesta en contacto directa (datos de contacto compartidos al instante) por {fee}.",
     "disclaimer": "Una vez puestos en contacto, los intercambios y el eventual préstamo se realizan directamente entre tú y el inversor, fuera de la plataforma. SODIVA CREDITS facilita el contacto, pero no es responsable de lo que ocurra después entre vosotros.",
     "empty": "No hay capital disponible publicado por ahora.",
     "defaultInvestorName": "Inversor",
@@ -398,7 +398,9 @@
     "risk": "Riesgo {risk}",
     "availability": "<amount>{amountValue} €</amount> disponibles · {rate}% · {duration} meses · aprox. {monthlyValue} €/mes",
     "alreadyIntroduced": "Puesta en contacto pagada: datos de contacto en <link>Mis puestas en contacto</link>.",
-    "requestButton": "Solicitar puesta en contacto ({fee} €)"
+    "requestButton": "Solicitar puesta en contacto ({fee})",
+    "introPremium": "Particulares, empresas y entidades publican aquí el capital que están dispuestos a prestar. Con su suscripción Premium, las puestas en contacto directas (datos compartidos al instante) están incluidas y son ilimitadas.",
+    "requestButtonPremium": "Solicitar la puesta en contacto (incluida en Premium)"
   },
   "BorrowerIntroductions": {
     "title": "Mis puestas en contacto",
@@ -412,14 +414,14 @@
     "contact": "Contacto: {email}",
     "paymentPending": "Pago pendiente.",
     "receivedHeading": "Solicitudes recibidas",
-    "receivedEmpty": "Todavía nadie ha pedido contactar contigo.",
-    "receivedRequest": "<name>{nameValue}</name> quiere ponerse en contacto contigo.",
+    "receivedEmpty": "Todavía nadie ha pedido contactar con usted.",
+    "receivedRequest": "<name>{nameValue}</name> quiere ponerse en contacto con usted.",
     "formalizeDirectLoan": "Formalizar un préstamo directo",
     "viewDirectLoan": "Ver el préstamo directo"
   },
   "BorrowerOnboarding": {
     "title": "Mi perfil financiero",
-    "subtitle": "Esta información la usa el motor de riesgo y no se te volverá a pedir en una próxima solicitud.",
+    "subtitle": "Esta información la usa el motor de riesgo y no se le volverá a pedir en una próxima solicitud.",
     "alreadySaved": "Tu perfil ya está guardado; modifica lo que haya cambiado y guarda de nuevo.",
     "cityLabel": "Ciudad",
     "postalCodeLabel": "Código postal",
@@ -469,10 +471,10 @@
     "invest": "Invertir",
     "introductionPaidPrefix": "Puesta en contacto pagada: datos de contacto en",
     "introductionPaidLink": "Mis puestas en contacto",
-    "requestIntroduction": "Ponerte en contacto directo con el prestatario ({premium, select, yes {gratis, Premium} other {{fee} €}})"
+    "requestIntroduction": "Ponerte en contacto directo con el prestatario ({premium, select, yes {gratis, Premium} other {{fee}}})"
   },
   "InvestorDocuments": {
-    "chooseFileError": "Elige un archivo antes de enviarlo.",
+    "chooseFileError": "Elija un archivo antes de enviarlo.",
     "title": "Mis documentos",
     "description": "Documentos solicitados por nuestro equipo, además de los justificantes de verificación.",
     "toUpload": "Por subir",
@@ -496,26 +498,26 @@
     "contactInfo": "Contacto: {email}",
     "paymentPending": "Pago pendiente.",
     "receivedTitle": "Solicitudes recibidas",
-    "noReceivedRequests": "Nadie te ha pedido contacto todavía.",
-    "wantsToConnect": "quiere ponerse en contacto contigo.",
+    "noReceivedRequests": "Nadie le ha pedido contacto todavía.",
+    "wantsToConnect": "quiere ponerse en contacto con usted.",
     "formalizeDirectLoan": "Formalizar un préstamo directo",
     "viewDirectLoan": "Ver el préstamo directo"
   },
   "InvestorNotifications": {
     "eventLabels": {
-      "funding_match_alert": "Un nuevo expediente coincide con tu tolerancia al riesgo",
-      "introduction_paid": "Alguien ha pagado para obtener tu contacto",
+      "funding_match_alert": "Un nuevo expediente coincide con su tolerancia al riesgo",
+      "introduction_paid": "Alguien ha pagado para obtener su contacto",
       "investor_verified": "Tu perfil de inversor ha sido verificado",
       "investor_rejected": "Tu verificación de inversor ha sido rechazada",
-      "document_requested": "Se te ha solicitado un documento"
+      "document_requested": "Se le ha solicitado un documento"
     },
     "title": "Mis alertas",
-    "subtitle": "Las alertas automáticas sobre nuevos expedientes que coinciden con tu perfil están reservadas para los inversores Premium.",
+    "subtitle": "Las alertas automáticas sobre nuevos expedientes que coinciden con su perfil están reservadas para los inversores Premium.",
     "empty": "Todavía no hay alertas."
   },
   "InvestorOffers": {
     "title": "Mis ofertas de capital",
-    "subtitle": "Publica un importe que estés dispuesto a prestar, con la tasa y la duración que prefieras: los prestatarios lo ven directamente en el mercado, incluso antes de enviar su solicitud.",
+    "subtitle": "Publique un importe que esté dispuesto a prestar, con la tasa y la duración que prefiera: los prestatarios lo ven directamente en la marketplace, incluso antes de enviar su solicitud.",
     "publishedHeading": "Ofertas publicadas",
     "empty": "Todavía no hay ofertas publicadas.",
     "amountAvailable": "{amount} € disponibles",
@@ -545,7 +547,7 @@
     "premiumLocked": "El panel de rendimiento avanzado (rentabilidad, tasa de impago, distribución por riesgo) está reservado para el plan Premium.",
     "premiumCta": "Descubrir Premium",
     "historyHeading": "Historial",
-    "historyEmptyPrefix": "Todavía no tienes inversiones,",
+    "historyEmptyPrefix": "Todavía no tiene inversiones,",
     "historyEmptyLink": "descubre el mercado",
     "investedDate": "{amount} € invertidos · {date}",
     "riskLabels": {
@@ -574,7 +576,7 @@
       "alert": {
         "prefix": "→",
         "bold": "Alerta automática",
-        "suffix": " en cuanto un nuevo expediente coincida con tu tolerancia al riesgo"
+        "suffix": " en cuanto un nuevo expediente coincida con su tolerancia al riesgo"
       },
       "verification": {
         "prefix": "→",
@@ -620,7 +622,7 @@
   },
   "InvestorVerification": {
     "title": "Verificación de mi perfil",
-    "subtitle": "Un inversor verificado muestra una insignia visible para los prestatarios en el mercado, esto genera confianza y distingue tu perfil. La verificación es manual: un agente revisa tus justificantes.",
+    "subtitle": "Un inversor verificado muestra una insignia visible para los prestatarios en la marketplace: genera confianza y distingue su perfil. La verificación es manual: un agente revisa sus justificantes.",
     "statusLabels": {
       "UNVERIFIED": "No verificado",
       "PENDING_REVIEW": "Pendiente de verificación",
@@ -628,8 +630,8 @@
       "REJECTED": "Rechazado"
     },
     "rejectionReason": "Motivo del rechazo: {reason}",
-    "verifiedMessage": "Tu perfil está verificado: la insignia aparece ahora en tus ofertas de capital y tu perfil de contacto.",
-    "pendingMessage": "Tus justificantes han sido enviados, un agente los revisará. Se te notificará en cuanto la verificación esté completa.",
+    "verifiedMessage": "Su perfil está verificado: la insignia aparece ahora en sus ofertas de capital y su perfil de contacto.",
+    "pendingMessage": "Sus justificantes han sido enviados y un agente los revisará. Se le notificará en cuanto la verificación esté completa.",
     "incomeDocLabel": "Justificante de ingresos: {name}",
     "fundsDocLabel": "Justificante de disponibilidad de fondos: {name}",
     "incomeFieldLabel": "Justificante de origen de ingresos",
@@ -669,7 +671,7 @@
     "pageTitle": "Formalizar un préstamo directo",
     "notFound": "Puesta en contacto no encontrada.",
     "notPaidYet": "Esta puesta en contacto debe pagarse antes.",
-    "intro": "Has sido puesto en contacto con {name}. Indica las condiciones del préstamo que habéis acordado para generar un contrato.",
+    "intro": "Ha sido puesto en contacto con {name}. Indique las condiciones del préstamo que han acordado para generar un contrato.",
     "alreadyFormalized": "Ya se ha formalizado un préstamo con {name}.",
     "agreementSummary": "{amount} € en {duration} meses, tasa {rate} %.",
     "downloadContract": "Descargar el contrato",
@@ -681,26 +683,26 @@
   },
   "AccountPending": {
     "kicker": "SODIVA CREDITS · Mi cuenta",
-    "titleEmail": "Confirma tu dirección de correo",
+    "titleEmail": "Confirme su dirección de correo",
     "titleReview": "Tu cuenta está en revisión",
     "titleRejected": "Registro no validado",
     "titleSuspended": "Cuenta suspendida",
-    "stepSignup": "Confirmar tu correo",
+    "stepSignup": "Confirmar su correo",
     "stepEmail": "Validación por un administrador",
-    "stepReview": "Acceso a tu espacio",
+    "stepReview": "Acceso a su espacio",
     "done": "completado",
     "inProgress": "en curso",
     "pillEmail": "Correo por confirmar",
     "pillReview": "Pendiente de validación",
     "pillRejected": "Rechazado",
     "pillSuspended": "Suspendida",
-    "bodyEmail": "Hemos enviado un enlace de confirmación a {email}. Haz clic en él para confirmar tu dirección. Revisa también la carpeta de spam.",
+    "bodyEmail": "Hemos enviado un enlace de confirmación a {email}. Haga clic en él para confirmar su dirección. Revise también la carpeta de spam.",
     "resend": "Reenviar el enlace",
     "resent": "Te acabamos de enviar un nuevo enlace.",
-    "bodyReview": "Gracias, tu correo está confirmado. Un administrador revisará ahora tu registro. Recibirás un correo cuando tu cuenta esté activada.",
-    "bodyRejected": "Tras revisarlo, tu registro no ha podido ser validado.",
+    "bodyReview": "Gracias, su correo está confirmado. Un administrador revisará ahora su registro. Recibirá un correo cuando su cuenta esté activada.",
+    "bodyRejected": "Tras revisarlo, su registro no ha podido ser validado.",
     "reason": "Motivo:",
-    "bodySuspended": "El acceso a tu cuenta ha sido suspendido. Contacta con el soporte para más información."
+    "bodySuspended": "El acceso a su cuenta ha sido suspendido. Contacte con el soporte para más información."
   },
   "VerifyEmail": {
     "kicker": "SODIVA CREDITS · Confirmación de correo",
@@ -708,10 +710,10 @@
     "titleError": "Enlace no válido",
     "pillOk": "Confirmado",
     "pillError": "Error",
-    "bodyVerified": "¡Gracias! Tu correo está confirmado. Un administrador validará ahora tu cuenta; te avisaremos por correo.",
+    "bodyVerified": "¡Gracias! Su correo está confirmado. Un administrador validará ahora su cuenta; le avisaremos por correo.",
     "bodyAlready": "Este correo ya estaba confirmado.",
-    "bodyExpired": "Este enlace ha caducado. Inicia sesión para recibir uno nuevo.",
-    "bodyInvalid": "Este enlace no es válido o ha sido sustituido por otro más reciente. Inicia sesión para recibir uno nuevo.",
+    "bodyExpired": "Este enlace ha caducado. Inicie sesión para recibir uno nuevo.",
+    "bodyInvalid": "Este enlace no es válido o ha sido sustituido por otro más reciente. Inicie sesión para recibir uno nuevo.",
     "ctaStatus": "Ver el estado de mi cuenta",
     "ctaLogin": "Iniciar sesión"
   },
@@ -746,7 +748,11 @@
       "advisor_message": "Nuevo mensaje",
       "assistance_started": "Un asesor ha abierto una sesión de asistencia",
       "assistance_document": "Su asesor ha depositado un documento por usted",
-      "assistance_ended": "Sesión de asistencia terminada"
+      "assistance_ended": "Sesión de asistencia terminada",
+      "subscription_started": "Su suscripción Premium está activa",
+      "subscription_renewed": "Su suscripción Premium se ha renovado",
+      "subscription_past_due": "El cobro de su suscripción Premium no se ha realizado",
+      "subscription_ended": "Su suscripción Premium ha finalizado"
     }
   },
   "ClientPayments": {
@@ -776,7 +782,12 @@
       "FAILED": "Fallido",
       "REFUNDED": "Reembolsado"
     },
-    "safetyNote": "Nunca pague gastos a una cuenta comunicada por teléfono o correo: todos sus pagos se hacen aquí."
+    "safetyNote": "Nunca pague gastos a una cuenta comunicada por teléfono o correo: todos sus pagos se hacen aquí.",
+    "paymentPurpose": {
+      "introduction": "Puesta en contacto",
+      "priority": "Opción expediente prioritario",
+      "premium": "Suscripción Premium"
+    }
   },
   "ClientHelp": {
     "title": "¿Necesita ayuda?",
@@ -972,8 +983,103 @@
     "priorityPaid": "Pago recibido: su expediente es ahora prioritario.",
     "description": {
       "broker_fee": "Honorarios de intermediación, expediente {reference}",
-      "priority": "Opción Expediente prioritario, expediente {reference}"
+      "priority": "Opción Expediente prioritario, expediente {reference}",
+      "introduction": "Puesta en contacto SODIVA CREDITS, ref. {reference}"
     },
-    "review": "PayPal ha recibido su pago. Nuestro equipo lo está verificando y se pondrá en contacto con usted muy pronto: no es necesario pagar de nuevo."
+    "review": "PayPal ha recibido su pago. Nuestro equipo lo está verificando y se pondrá en contacto con usted muy pronto: no es necesario pagar de nuevo.",
+    "introductionPaid": "Pago recibido: la puesta en contacto está hecha, los datos son visibles en «Puestas en contacto».",
+    "introductionIncluded": "Puesta en contacto realizada, incluida en su suscripción Premium: los datos son visibles en «Puestas en contacto»."
+  },
+  "Premium": {
+    "title": "Suscripción Premium",
+    "eyebrow": "Puestas en contacto ilimitadas",
+    "statusLabels": {
+      "ACTIVE": "Activa",
+      "CANCELLED": "Finalizada",
+      "PAST_DUE": "Pago fallido"
+    },
+    "statusEnding": "Activa hasta el final del periodo",
+    "nextCharge": "Próximo cobro de PayPal el {date}.",
+    "renewalAuto": "Renovación automática el {date}.",
+    "renewalCancelled": "Cancelada: sigue activa hasta el {date} y luego se detiene sin nuevos cobros.",
+    "pastDue": "El último cobro no se ha realizado: Premium está suspendido. Compruebe su medio de pago en su cuenta PayPal o vuelva a suscribirse abajo.",
+    "ended": "Suscripción finalizada el {date}.",
+    "legacyNote": "Esta suscripción de prueba finalizará el {date}. Para mantener Premium después, vuelva a suscribirse con PayPal.",
+    "featuresHeading": "Lo que le aporta Premium",
+    "cancelButton": "Cancelar mi suscripción",
+    "cancelHint": "No habrá más cobros tras la cancelación. Premium sigue activo hasta el {date}.",
+    "subscribePaypal": "Suscribirse con PayPal · {amount} / mes",
+    "resubscribePaypal": "Volver a suscribirme con PayPal · {amount} / mes",
+    "reactivatePaypal": "Volver a suscribirme con PayPal",
+    "reactivateButton": "Reactivar la suscripción",
+    "subscribeButton": "Pasar a Premium · {amount} / mes",
+    "reactivateHint": "No se cobra nada antes del {date}: la nueva suscripción toma el relevo al final del periodo ya pagado.",
+    "paypalHint": "Pago seguro con PayPal: cuenta PayPal o tarjeta bancaria. Sin compromiso, cancelable en un clic.",
+    "noCommitment": "Sin compromiso, cancelable en un clic.",
+    "sandbox": "modo de prueba",
+    "historyHeading": "Historial de cobros",
+    "historyEmpty": "Todavía no hay cobros.",
+    "simulated": "Simulado",
+    "unitLabel": "Sin suscripción",
+    "unitPrice": "{fee} por puesta en contacto",
+    "unitNote": "Cada nuevo contacto se vuelve a pagar.",
+    "premiumLabel": "Con Premium",
+    "premiumPrice": "{amount} / mes, ilimitado",
+    "breakEven": "Tres puestas en contacto sueltas ya cuestan casi lo mismo: a partir de la cuarta, cada contacto adicional es gratis.",
+    "notices": {
+      "active": "¡Bienvenido a Premium! Su suscripción está activa. Próximo cobro el {date}.",
+      "deferred": "Nueva suscripción registrada. Premium continúa sin interrupción; el primer cobro será el {date}.",
+      "cancelled": "Suscripción cancelada: no habrá más cobros. Premium sigue activo hasta el {date}.",
+      "checkout_cancelled": "Suscripción cancelada en PayPal: no se ha cobrado nada.",
+      "failed": "PayPal no ha confirmado la suscripción: no se ha cobrado nada. Inténtelo de nuevo o contacte con su asesor.",
+      "unavailable": "El pago en línea no está disponible temporalmente. Inténtelo de nuevo en unos minutos.",
+      "cancel_failed": "No se ha podido transmitir la cancelación a PayPal. Inténtelo de nuevo en unos minutos; si sigue sin confirmarse, contacte con su asesor."
+    },
+    "investor": {
+      "kicker": "Espacio inversor",
+      "headline": "Invierta su capital más rápido, sin contar sus puestas en contacto",
+      "pitch": "Un solo contacto no siempre basta: puede que el prestatario ya haya encontrado financiación o que su proyecto no encaje del todo con sus criterios. Con Premium, contacte con tantos prestatarios como desee, compare los proyectos y decida antes.",
+      "features": [
+        "Puestas en contacto ilimitadas con prestatarios, sin pagar cada contacto",
+        "Contacte con varios prestatarios a la vez para comparar proyectos",
+        "Alerta automática en cuanto un nuevo expediente encaja con su tolerancia al riesgo",
+        "Verificación acelerada de su perfil inversor, en 48 h",
+        "Distintivo Premium junto al distintivo Verificado",
+        "Panel de rendimiento avanzado: rentabilidad, tasa de impago, historial"
+      ]
+    },
+    "borrower": {
+      "kicker": "Espacio cliente",
+      "headline": "Multiplique sus posibilidades de obtener su financiación rápidamente",
+      "pitch": "Cada inversor tiene sus propios criterios: importe, duración, tipo de proyecto. Si solo contacta con un inversor, depende de una única respuesta. Con Premium, contacte con tantos inversores como desee al mismo tiempo: aumenta sus posibilidades y gana un tiempo valioso.",
+      "features": [
+        "Puestas en contacto ilimitadas con inversores, sin pagar cada contacto",
+        "Contacte con varios inversores a la vez en lugar de esperar las respuestas una tras otra",
+        "Compare las propuestas y elija la que más le convenga",
+        "Sin compromiso: cancelable en un clic, sin gastos"
+      ],
+      "disclaimer": "Premium facilita el contacto con los inversores; no garantiza la obtención de financiación. Un crédito le compromete y debe reembolsarse: compruebe su capacidad de reembolso antes de comprometerse."
+    }
+  },
+  "PremiumPromo": {
+    "eyebrow": "Suscripción Premium",
+    "title": "Más contactos, más posibilidades, menos espera",
+    "text": "Una puesta en contacto cuesta {fee}. Con la suscripción Premium a {amount} al mes, son ilimitadas: contacte con varios inversores o prestatarios a la vez y avance más rápido.",
+    "borrowerTitle": "Busca financiación",
+    "borrowerText": "Contacte con varios inversores a la vez en lugar de esperar una sola respuesta: aumenta sus posibilidades de obtener su financiación rápidamente.",
+    "investorTitle": "Quiere invertir",
+    "investorText": "Contacte con tantos prestatarios como quiera para comparar proyectos e invertir su capital más rápido.",
+    "perMonth": "/ mes",
+    "unlimited": "Puestas en contacto ilimitadas · sin compromiso",
+    "breakEven": "A partir de la 4.ª puesta en contacto del mes, cada contacto adicional es gratis.",
+    "ctaBorrower": "Busco financiación",
+    "ctaInvestor": "Quiero invertir",
+    "ctaPremium": "Descubrir Premium",
+    "bannerBorrower": "No lo apueste todo a un solo inversor: con Premium ({amount} / mes), contacte con tantos como quiera.",
+    "bannerInvestor": "Compare más proyectos: con Premium ({amount} / mes), contacte con tantos prestatarios como quiera.",
+    "bannerVisitor": "Puestas en contacto ilimitadas con la suscripción Premium: {amount} / mes, sin compromiso.",
+    "bannerCta": "Ver la oferta",
+    "noGuarantee": "Premium facilita el contacto; no garantiza la obtención de financiación.",
+    "navLabel": "Premium"
   }
 }

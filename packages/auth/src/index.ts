@@ -24,7 +24,8 @@ import {
 } from "@fintech/database";
 import { sendVerifyEmail, sendAccountApprovedEmail, sendAccountRejectedEmail, webBaseUrl } from "./mailer";
 
-export { sendEmail, webBaseUrl, sendClientNoticeEmail, type ClientNoticeKind } from "./mailer";
+export { sendEmail, webBaseUrl, sendClientNoticeEmail,
+  sendPremiumPaymentFailedEmail, type ClientNoticeKind } from "./mailer";
 
 export const ROLE_HIERARCHY: Record<Role, number> = {
   BORROWER: 0,

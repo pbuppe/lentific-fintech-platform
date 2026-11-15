@@ -25,7 +25,13 @@ import {
 } from "./paypal";
 
 export const PREMIUM_TIER = "INVESTOR_PREMIUM";
-export const PREMIUM_MONTHLY_AMOUNT = 15;
+export const BORROWER_PREMIUM_TIER = "BORROWER_PREMIUM";
+/** Même tarif pour investisseurs et emprunteurs (décision 2026-11-15) : 44,90 €/mois, mises en relation illimitées. */
+export const PREMIUM_MONTHLY_AMOUNT = 44.9; // 44,90 €
+
+export function premiumTierFor(role: string) {
+  return role === "BORROWER" ? BORROWER_PREMIUM_TIER : PREMIUM_TIER;
+}
 const DAY = 24 * 60 * 60 * 1000;
 const BILLING_GRACE_MS = 3 * DAY; // délai laissé à PayPal pour prélever avant « paiement échoué »
 
@@ -47,7 +53,7 @@ async function ensurePremiumPlan(currency: string) {
   }
   const planId = await createPaypalMonthlyPlan({
     productId,
-    name: `Formule Premium (${PREMIUM_MONTHLY_AMOUNT} ${currency} / mois)`,
+    name: `Abonnement Premium SODIVA CREDITS (${PREMIUM_MONTHLY_AMOUNT} ${currency} / mois)`,
     amount: PREMIUM_MONTHLY_AMOUNT,
     currency,
   });
@@ -137,7 +143,7 @@ export type PremiumCheckoutResult =
   | { ok: false; reason: "unknown" | "not_owner" | "not_approved" };
 
 /** Au retour de PayPal : vérifie la souscription chez PayPal puis active Premium. Rejouable sans risque. */
-export async function completePremiumCheckout(subscriptionId: string, userId: string): Promise<PremiumCheckoutResult> {
+export async function completePremiumCheckout(subscriptionId: string, userId: string, tier: string = PREMIUM_TIER): Promise<PremiumCheckoutResult> {
   const already = await subscriptionsRepo.findByProviderRef(subscriptionId);
   if (already) {
     if (already.userId !== userId) return { ok: false, reason: "not_owner" };
@@ -168,7 +174,7 @@ export async function completePremiumCheckout(subscriptionId: string, userId: st
 
   await subscriptionsRepo.activatePaypal({
     userId,
-    tier: PREMIUM_TIER,
+    tier,
     amount: PREMIUM_MONTHLY_AMOUNT,
     providerRef: subscriptionId,
     currentPeriodEnd: periodEnd,
@@ -179,7 +185,7 @@ export async function completePremiumCheckout(subscriptionId: string, userId: st
   } else {
     await recordCharge(subscriptionId, userId, state);
   }
-  await emit("subscription.started", { userId, tier: PREMIUM_TIER });
+  await emit("subscription.started", { userId, tier });
   return { ok: true, deferred, firstTime: true };
 }
 
@@ -221,7 +227,8 @@ export async function syncPaypalSubscription(subscriptionRowId: string) {
     // Réactivation différée : la nouvelle souscription démarre à la fin de la période déjà payée.
     status = currentPeriodEnd.getTime() > now ? "ACTIVE" : status;
   } else if (state.status === "SUSPENDED") {
-    status = "PAST_DUE";
+    // Le mois en cours est déjà payé : Premium reste actif jusqu'à sa fin, puis « paiement échoué ».
+    status = currentPeriodEnd.getTime() > now ? "ACTIVE" : "PAST_DUE";
   } else if (state.status === "CANCELLED" || state.status === "EXPIRED") {
     if (!cancelledAt) cancelledAt = new Date(); // résilié depuis le compte PayPal du client
     status = currentPeriodEnd.getTime() > now ? "ACTIVE" : "CANCELLED";
@@ -230,8 +237,11 @@ export async function syncPaypalSubscription(subscriptionRowId: string) {
   const changed = status !== sub.status || currentPeriodEnd.getTime() !== sub.currentPeriodEnd.getTime() || cancelledAt?.getTime() !== sub.cancelledAt?.getTime();
   const updated = await subscriptionsRepo.updateSync(sub.id, { status, currentPeriodEnd, cancelledAt });
   if (renewed && sub.status === "ACTIVE" && currentPeriodEnd > sub.currentPeriodEnd) await emit("subscription.renewed", { userId: sub.userId });
-  if (changed && status === "PAST_DUE" && sub.status !== "PAST_DUE") console.warn(`[payments:paypal] prélèvement Premium en échec pour ${sub.userId}`);
-  if (changed && status === "CANCELLED" && sub.status !== "CANCELLED") await emit("subscription.cancelled", { userId: sub.userId });
+  if (changed && status === "PAST_DUE" && sub.status !== "PAST_DUE") {
+    console.warn(`[payments:paypal] prélèvement Premium en échec pour ${sub.userId}`);
+    await emit("subscription.past_due", { userId: sub.userId });
+  }
+  if (changed && status === "CANCELLED" && sub.status !== "CANCELLED") await emit("subscription.ended", { userId: sub.userId });
   return updated;
 }
 

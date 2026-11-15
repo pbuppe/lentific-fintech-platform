@@ -5,6 +5,7 @@ import { signOut, SESSION_COOKIE_NAME } from "@fintech/auth";
 import { notificationsRepo } from "@fintech/database";
 import { getSignedInUser } from "../../lib/session";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { premiumPath } from "../../lib/premiumPath";
 
 async function logoutAction() {
   "use server";
@@ -19,6 +20,8 @@ export async function SiteHeader() {
   const t = await getTranslations("SiteHeader");
   const active = user?.accountStatus === "ACTIVE" && (user.role === "BORROWER" || user.role === "INVESTOR");
   const unread = active ? await notificationsRepo.countUnread(user!.id) : 0;
+  const premiumLink = active ? premiumPath(user!.role) : "/#premium";
+  const premiumLabel = (await getTranslations("PremiumPromo"))("navLabel");
 
   return (
     <header className="flex flex-wrap items-center justify-between gap-y-2 border-b border-line bg-surface px-6 py-3 sm:px-12">
@@ -27,18 +30,20 @@ export async function SiteHeader() {
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand font-display text-base font-semibold text-white">
             S
           </div>
-          <span className="font-sans text-sm font-bold uppercase tracking-wide text-ink">SODIVA CREDITS</span>
+          <span className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-wide text-ink">SODIVA CREDITS</span>
         </a>
-        <nav className="hidden items-center gap-5 text-sm text-ink-soft sm:flex">
+        <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-ink-soft lg:flex">
           <a href="/#services" className="hover:text-ink">{t("services")}</a>
           <a href="/#comment-ca-marche" className="hover:text-ink">{t("howItWorks")}</a>
           <a href="/marketplace" className="hover:text-ink">{t("marketplace")}</a>
           <a href="/simulateur" className="hover:text-ink">{t("simulator")}</a>
           <a href="/#contact" className="hover:text-ink">{t("contact")}</a>
+          <a href={premiumLink} className="rounded-full bg-brand-soft px-3 py-1 font-semibold text-brand-ink hover:bg-brand hover:text-white">★ {premiumLabel}</a>
         </nav>
       </div>
 
       <div className="flex items-center gap-3">
+        <a href={premiumLink} className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-semibold text-brand-ink lg:hidden">★ {premiumLabel}</a>
         {user ? (
           <div className="flex items-center gap-3 text-sm">
             {active && (

@@ -30,7 +30,7 @@
     "activated": "Votre accès est activé : connectez-vous avec votre nouveau mot de passe."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "File d'attente : dossiers",
     "pendingCount": "{count, plural, one {# dossier en attente} other {# dossiers en attente}}",
     "empty": "Aucun dossier en attente pour l'instant.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · super administrateur",
+    "kicker": "Super administrateur",
     "title": "Comptes",
     "description": "Vue complète sur chaque compte emprunteur ou investisseur : profil, documents, demandes de pièces, mises en relation.",
     "empty": "Aucun compte pour l'instant.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Retour aux comptes",
-    "kicker": "apps/admin · super administrateur",
+    "kicker": "Super administrateur",
     "phoneNotProvided": "téléphone non renseigné",
     "roleBorrower": "Emprunteur",
     "roleInvestor": "Investisseur",
@@ -89,7 +89,7 @@
     "documentLabel": "Document demandé",
     "documentPlaceholder": "Ex. Justificatif de domicile",
     "instructionsLabel": "Précisions (optionnel)",
-    "instructionsPlaceholder": "Ex. de moins de 3 mois, à ton nom",
+    "instructionsPlaceholder": "Ex. de moins de 3 mois, à votre nom",
     "sendRequest": "Envoyer la demande",
     "alreadySentTitle": "Demandes déjà envoyées",
     "requestStatus": {
@@ -99,7 +99,7 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · signature manuelle",
+    "kicker": "Signature manuelle",
     "title": "Contrats signés : à vérifier",
     "description": "Le client a imprimé, signé à la main et uploadé son contrat. Vérifie la pièce avant de confirmer.",
     "empty": "Aucun contrat en attente de vérification.",
@@ -109,12 +109,12 @@
     "confirmSignature": "Confirmer la signature",
     "reject": "Rejeter",
     "bilateralEligibleTitle": "Prêts éligibles à un contrat bilatéral",
-    "bilateralEligibleDescription": "Ces prêts sont financés par un seul investisseur : tu peux régénérer leur contrat en version bilatérale directe, nommant cet investisseur, à la place du contrat marketplace standard.",
+    "bilateralEligibleDescription": "Ces prêts sont financés par un seul investisseur : vous pouvez régénérer leur contrat en version bilatérale directe, nommant cet investisseur, à la place du contrat marketplace standard.",
     "bilateralEligibleMeta": "{borrower} emprunte à {lender}",
     "regenerateBilateral": "Régénérer en contrat bilatéral"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · encaissement",
+    "kicker": "Encaissement",
     "title": "Échéances à encaisser",
     "description": "Confirme une mensualité reçue de l'emprunteur : elle est redistribuée automatiquement entre les investisseurs du prêt, au prorata de leur part, et vient nourrir leur tableau de bord de performance.",
     "empty": "Aucune échéance en attente pour l'instant.",
@@ -124,7 +124,7 @@
     "confirmPayment": "Confirmer le paiement reçu"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · vérification manuelle",
+    "kicker": "Vérification manuelle",
     "title": "Vérification des investisseurs : à traiter",
     "description": "Examine le justificatif de revenus et le justificatif de disponibilité des fonds, puis confirme ou rejette ci-dessous.",
     "empty": "Aucun investisseur en attente de vérification.",
@@ -137,7 +137,7 @@
     "missingDocumentNote": "Il manque un justificatif : impossible de confirmer tant que les deux ne sont pas déposés."
   },
   "KycPage": {
-    "kicker": "apps/admin · vérification manuelle",
+    "kicker": "Vérification manuelle",
     "title": "Vérification d'identité : à traiter",
     "description": "Contacte le client pour vérifier sa pièce d'identité, puis confirme ou rejette ci-dessous.",
     "empty": "Aucun dossier en attente de vérification manuelle.",
@@ -147,7 +147,7 @@
     "noApplicationNote": "Ce document n'est rattaché à aucune demande : impossible de faire avancer un dossier."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · vue d'ensemble",
+    "kicker": "Vue d'ensemble",
     "title": "Profils mis en relation",
     "description": "Liste des paires ayant échangé leurs coordonnées via une mise en relation payée. À partir de ce moment, ce qui se passe entre les deux parties a lieu hors de la plateforme, SODIVA CREDITS n'en est pas responsable, seul le contact a été fourni.",
     "empty": "Aucune mise en relation payée pour l'instant.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Emprunteur vers investisseur"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · risk",
+    "kicker": "Risk",
     "title": "Moteur de risque",
     "demoDescription": "Exemple calculé par <code1>assessRisk()</code1> de <code2>@fintech/risk</code2> pour le dossier de démo (18 500 € / 24 mois) :",
     "scoreLabel": "Score",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Niveau de risque"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · statistiques",
+    "kicker": "Statistiques",
     "title": "Statistiques de visite",
     "description": "Suivi de visite léger et auto-hébergé, propre à la plateforme. Ce n'est pas Matomo : Matomo demande soit un compte Matomo Cloud, soit un hébergement séparé, à mettre en place séparément si besoin.",
     "rightNow": "En ce moment",

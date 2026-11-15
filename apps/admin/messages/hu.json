@@ -30,7 +30,7 @@
     "activated": "Hozzáférése aktív: jelentkezzen be az új jelszavával."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back office",
+    "kicker": "Back office",
     "title": "Ügyek várólistája",
     "pendingCount": "{count, plural, one {# függőben lévő ügy} other {# függőben lévő ügy}}",
     "empty": "Jelenleg nincs függőben lévő ügy.",
@@ -51,7 +51,7 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · szuperadmin",
+    "kicker": "Szuperadmin",
     "title": "Fiókok",
     "description": "Teljes áttekintés minden hitelfelvevői vagy befektetői fiókról: profil, dokumentumok, dokumentumkérések, kapcsolatba hozások.",
     "empty": "Egyelőre nincs fiók.",
@@ -68,7 +68,7 @@
   },
   "AccountDetailPage": {
     "backToAccounts": "← Vissza a fiókokhoz",
-    "kicker": "apps/admin · szuperadmin",
+    "kicker": "Szuperadmin",
     "phoneNotProvided": "telefonszám nincs megadva",
     "roleBorrower": "Hitelfelvevő",
     "roleInvestor": "Befektető",
@@ -89,7 +89,7 @@
     "documentLabel": "Kért dokumentum",
     "documentPlaceholder": "Pl. lakcímigazolás",
     "instructionsLabel": "Megjegyzések (opcionális)",
-    "instructionsPlaceholder": "Pl. 3 hónapnál nem régebbi, a te neveden",
+    "instructionsPlaceholder": "Pl. 3 hónapnál nem régebbi, az Ön nevére szóló",
     "sendRequest": "Kérés elküldése",
     "alreadySentTitle": "Már elküldött kérések",
     "requestStatus": {
@@ -99,9 +99,9 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · kézi aláírás",
+    "kicker": "Kézi aláírás",
     "title": "Aláírt szerződések: ellenőrzésre várnak",
-    "description": "Az ügyfél kinyomtatta, kézzel aláírta és feltöltötte a szerződését. Ellenőrizd a dokumentumot, mielőtt megerősítenéd.",
+    "description": "Az ügyfél kinyomtatta, kézzel aláírta és feltöltötte a szerződését. Ellenőrizze a dokumentumot, mielőtt megerősítené.",
     "empty": "Nincs ellenőrzésre váró szerződés.",
     "contractLabel": "Szerződés {id}",
     "viewSignedContract": "Az ügyfél által feltöltött aláírt szerződés megtekintése",
@@ -109,14 +109,14 @@
     "confirmSignature": "Aláírás megerősítése",
     "reject": "Elutasítás",
     "bilateralEligibleTitle": "Kétoldalú szerződésre jogosult kölcsönök",
-    "bilateralEligibleDescription": "Ezeket a kölcsönöket egyetlen befektető finanszírozza: a szerződésüket újragenerálhatod közvetlen kétoldalú változatként, megnevezve ezt a befektetőt, a szokásos piactéri szerződés helyett.",
+    "bilateralEligibleDescription": "Ezeket a kölcsönöket egyetlen befektető finanszírozza: a szerződésüket újragenerálhatja közvetlen kétoldalú változatként, megnevezve ezt a befektetőt, a szokásos piactéri szerződés helyett.",
     "bilateralEligibleMeta": "{borrower} kölcsönt vesz fel {lender} személytől",
     "regenerateBilateral": "Újragenerálás kétoldalú szerződésként"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · beszedés",
+    "kicker": "Beszedés",
     "title": "Beszedendő részletek",
-    "description": "Erősítsd meg a hitelfelvevőtől beérkezett havi törlesztést: ez automatikusan szétosztásra kerül a kölcsön befektetői között, részesedésük arányában, és megjelenik a teljesítmény-irányítópultjukon.",
+    "description": "Erősítse meg a hitelfelvevőtől beérkezett havi törlesztést: ez automatikusan szétosztásra kerül a kölcsön befektetői között, részesedésük arányában, és megjelenik a teljesítmény-irányítópultjukon.",
     "empty": "Jelenleg nincs függőben lévő részlet.",
     "dueLabel": "{reference} · esedékes: {date}",
     "overdue": "Késedelmes",
@@ -124,9 +124,9 @@
     "confirmPayment": "Beérkezett fizetés megerősítése"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · kézi ellenőrzés",
+    "kicker": "Kézi ellenőrzés",
     "title": "Befektetők ellenőrzése: elintézendő",
-    "description": "Vizsgáld meg a jövedelemigazolást és a pénzeszközök rendelkezésre állásáról szóló igazolást, majd erősítsd meg vagy utasítsd el alább.",
+    "description": "Vizsgálja meg a jövedelemigazolást és a pénzeszközök rendelkezésre állásáról szóló igazolást, majd erősítse meg vagy utasítsa el alább.",
     "empty": "Nincs ellenőrzésre váró befektető.",
     "pending": "Függőben",
     "incomeProofLabel": "Jövedelemigazolás:",
@@ -137,9 +137,9 @@
     "missingDocumentNote": "Hiányzik egy igazolás: nem erősíthető meg, amíg mindkettő nincs feltöltve."
   },
   "KycPage": {
-    "kicker": "apps/admin · kézi ellenőrzés",
+    "kicker": "Kézi ellenőrzés",
     "title": "Személyazonosság-ellenőrzés: elintézendő",
-    "description": "Vedd fel a kapcsolatot az ügyféllel a személyazonosító okmány ellenőrzéséhez, majd erősítsd meg vagy utasítsd el alább.",
+    "description": "Vegye fel a kapcsolatot az ügyféllel a személyazonosító okmány ellenőrzéséhez, majd erősítse meg vagy utasítsa el alább.",
     "empty": "Nincs kézi ellenőrzésre váró ügy.",
     "pendingContact": "Kapcsolatfelvételre vár",
     "confirmVerification": "Ellenőrzés megerősítése",
@@ -147,7 +147,7 @@
     "noApplicationNote": "Ez a dokumentum nincs kérelemhez rendelve: az ügy nem vihető tovább."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · áttekintés",
+    "kicker": "Áttekintés",
     "title": "Kapcsolatba hozott profilok",
     "description": "Azon párok listája, akik kifizetett kapcsolatba hozás révén kicserélték elérhetőségeiket. Ettől a pillanattól kezdve a két fél között történtek a platformon kívül zajlanak, ezekért a SODIVA CREDITS nem vállal felelősséget, kizárólag a kapcsolatfelvételi adatokat biztosította.",
     "empty": "Egyelőre nincs kifizetett kapcsolatba hozás.",
@@ -156,7 +156,7 @@
     "borrowerToInvestor": "Hitelfelvevőtől befektető felé"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · kockázat",
+    "kicker": "Kockázat",
     "title": "Kockázatelemző motor",
     "demoDescription": "Példa, amelyet a <code2>@fintech/risk</code2> csomag <code1>assessRisk()</code1> függvénye számított ki a demó ügyre (18 500 € / 24 hónap):",
     "scoreLabel": "Pontszám",
@@ -164,7 +164,7 @@
     "riskLevelLabel": "Kockázati szint"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · statisztikák",
+    "kicker": "Statisztikák",
     "title": "Látogatási statisztikák",
     "description": "Egyszerű, saját hosztolású látogatáskövetés, közvetlenül a platformba építve. Ez nem a Matomo: a Matomo Matomo Cloud fiókot vagy külön hosztolást igényel, ezt igény esetén külön kell beállítani.",
     "rightNow": "Éppen most",

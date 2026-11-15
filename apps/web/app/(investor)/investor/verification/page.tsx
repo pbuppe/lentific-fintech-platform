@@ -6,6 +6,7 @@ import { uploadDocument } from "@fintech/documents";
 import { submitForVerification, listOwnDocuments } from "@fintech/investors";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../../lib/session";
+import { SpaceKicker } from "../../../components/SpaceKicker";
 
 async function submitVerificationAction(formData: FormData) {
   "use server";
@@ -54,7 +55,7 @@ export default async function InvestorVerificationPage({ searchParams }: { searc
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-10">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (investor)</p>
+      <SpaceKicker audience="investor" />
       <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
       <p className="mt-2 text-sm text-ink-soft">
         {t("subtitle")}

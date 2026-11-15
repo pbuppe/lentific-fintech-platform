@@ -48,6 +48,8 @@ export type WorkflowEvent =
   | "subscription.started"
   | "subscription.renewed"
   | "subscription.cancelled"
+  | "subscription.past_due"
+  | "subscription.ended"
   | "application.sla_breached"
   | "disbursement.declared"
   | "disbursement.confirmed"

@@ -14,7 +14,9 @@ import { getCurrentUser } from "../../../lib/session";
 import { ApplicationTracker } from "./ApplicationTracker";
 import { LoanOverview } from "./LoanOverview";
 import { CreditsSummary, toCreditRows } from "./CreditsSummary";
+import { PRIORITY_FEE, commercialPrices } from "../../../lib/price";
 import { PaymentNotice, PaypalHint } from "../../components/PaymentNotice";
+import { PremiumBanner } from "../../components/PremiumPromo";
 
 async function uploadIdentityAction(formData: FormData) {
   "use server";
@@ -33,7 +35,6 @@ async function uploadIdentityAction(formData: FormData) {
   revalidatePath("/dashboard");
 }
 
-const PRIORITY_FEE = 49;
 const PRIORITY_ELIGIBLE_STATUSES = ["SUBMITTED", "KYC_PENDING", "KYC_VERIFIED", "UNDER_REVIEW"];
 
 async function requestPriorityAction(formData: FormData) {
@@ -110,6 +111,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
   const t = await getTranslations("BorrowerDashboard");
   const STATUS_LABEL = t.raw("statusLabel") as Record<string, string>;
   const locale = await getLocale();
+  const prices = await commercialPrices();
   const dateFmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
   const money = (value: number | string, currency: string) =>
     new Intl.NumberFormat(locale, { style: "currency", currency, maximumFractionDigits: 2 }).format(Number(value));
@@ -205,6 +207,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
         <p role="alert" className="mb-6 rounded-lg bg-accent-soft px-4 py-3 text-sm text-accent">{searchParams.error}</p>
       )}
 
+      <PremiumBanner className="mb-6" />
       {alerts.length > 0 && (
         <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {alerts.map((a) => (
@@ -294,7 +297,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                     <form action={requestPriorityAction} className="mt-3">
                       <input type="hidden" name="applicationId" value={app.id} />
                       <button className="rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-ink-soft hover:border-yellow hover:text-yellow-ink">
-                        {t("priorityButton", { fee: PRIORITY_FEE })}
+                        {t("priorityButton", { fee: prices.priority })}
                       </button>
                     </form>
                   )

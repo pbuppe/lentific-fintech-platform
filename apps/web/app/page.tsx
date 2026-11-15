@@ -1,4 +1,5 @@
 import { Button, Card, StatusPill } from "@fintech/ui";
+import { commercialPrices } from "../lib/price";
 import { prisma } from "@fintech/database";
 import { listOpportunities, listOpenInvestorListings } from "@fintech/funding";
 import { getTranslations } from "next-intl/server";
@@ -6,6 +7,7 @@ import { getPreferredCountry } from "../lib/country";
 import { CountryBadge } from "./components/CountryBadge";
 import { HeroEstimator } from "./components/HeroEstimator";
 import { ServicesSection, AboutSection, FaqSection, ContactSection, SiteFooter } from "./components/BrokerSections";
+import { PremiumHomeSection } from "./components/PremiumPromo";
 
 const STEP_NUMBERS = ["01", "02", "03", "04", "05"];
 
@@ -97,6 +99,8 @@ export default async function LandingPage({ searchParams }: { searchParams: { co
 
       <ServicesSection />
 
+      <PremiumHomeSection />
+
       {/* Comment ça marche */}
       <section id="comment-ca-marche" className="px-6 py-16 sm:px-12">
         <div className="mx-auto max-w-5xl">
@@ -145,7 +149,7 @@ export default async function LandingPage({ searchParams }: { searchParams: { co
 
           <div className="mt-10 rounded-xl border border-line bg-surface-alt p-5">
             <p className="font-display text-sm font-semibold text-ink">
-              {t("introBoxTitle")}
+              {t("introBoxTitle", { fee: (await commercialPrices()).fee })}
             </p>
             <p className="mt-1 text-sm text-ink-soft">
               {t("introBoxBody")}
