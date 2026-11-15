@@ -90,7 +90,7 @@ async function main() {
   const superAdmin = await prisma.user.upsert({
     where: { email: "superadmin@lentific.com" },
     create: { email: "superadmin@lentific.com", name: "Super Admin Démo", countryId: france.id, role: "SUPER_ADMIN", passwordHash },
-    update: { passwordHash },
+    update: {}, // ne jamais écraser un mot de passe changé (scripts/set-password.mjs)
   });
 
   // --- Dossier 1 : en cours de traitement (Camille) --------------------------
