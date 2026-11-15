@@ -187,7 +187,7 @@
     "byLanguage": "Nyelv szerint",
     "byCountry": "Ország szerint",
     "noData": "Még nincs adat.",
-    "descriptionV2": "Az oldal látogatóinak teljes követése, saját tárhelyen: ki van online, honnan, milyen eszközzel, mennyi ideig, mely oldalakon és milyen műveletekkel. IP-címet nem tárolunk.",
+    "descriptionV2": "Az oldal látogatóinak teljes követése: ki van online, honnan (az ország és a város az IP-címből származik, amelyet soha nem tárolunk), milyen eszközzel, mennyi ideig, mely oldalakon és milyen műveletekkel. A sütiket elutasító látogatókat névtelenül továbbra is számoljuk.",
     "rightNow5": "Online (5 perc)",
     "tabs": {
       "overview": "Áttekintés",
@@ -201,7 +201,8 @@
       "pagesPerVisit": "Oldal / látogatás",
       "avgDuration": "Átlagos időtartam",
       "bounceRate": "Visszafordulási arány",
-      "members": "Bejelentkezett tagok"
+      "members": "Bejelentkezett tagok",
+      "anonymous": "Névtelen látogatások (sütik elutasítva)"
     },
     "chart": {
       "title": "Látogatások alakulása",
@@ -232,7 +233,9 @@
     },
     "live": {
       "hint": "Az elmúlt 5 percben aktív látogatók. Az oldal 10 másodpercenként magától frissül.",
-      "empty": "Jelenleg senki sincs az oldalon."
+      "empty": "Jelenleg senki sincs az oldalon.",
+      "anonymousTitle": "Névtelen látogatók (sütik elutasítva)",
+      "anonymousHint": "Az ország, a város és az eszköz ismert, az útvonal nem: ezek a látogatók nem fogadták el a sütiket."
     },
     "visit": {
       "anonymous": "Névtelen látogató",
@@ -262,6 +265,42 @@
       "empty": "Ebben az időszakban nincs látogatás.",
       "prev": "Újabbak",
       "next": "Régebbiek"
+    },
+    "visitors": {
+      "title": "Látogatók listája",
+      "hint": "Soronként egy látogató (a sütiket elfogadók, csak ők ismerhetők fel látogatásról látogatásra): új vagy visszatérő, a látogatások száma az első óta, ország, eltöltött idő és műveletek. Kattintson az „Előzmények” gombra, hogy egészen az első látogatásáig visszamenjen.",
+      "country": "Ország",
+      "action": "Művelet típusa",
+      "anyAction": "Mind",
+      "rows": "Sorok",
+      "apply": "Szűrés",
+      "empty": "Nincs látogató ezekkel a feltételekkel.",
+      "colVisitor": "Látogató",
+      "colCountry": "Ország",
+      "colDevice": "Eszköz",
+      "colVisits": "Látogatások",
+      "colFirst": "Első látogatás",
+      "colLast": "Utolsó látogatás",
+      "colTime": "Az oldalon töltött idő",
+      "colPages": "Oldalak",
+      "colActions": "Műveletek",
+      "new": "Új",
+      "returning": "Visszatérő · {n} látogatás",
+      "inPeriod": "{n} az időszakban",
+      "history": "Előzmények"
+    },
+    "visitor": {
+      "back": "Vissza a statisztikákhoz",
+      "kicker": "Látogatói adatlap",
+      "title": "Látogató #{id}",
+      "empty": "Ehhez a látogatóhoz nincs rögzített látogatás.",
+      "visits": "Látogatások",
+      "firstVisit": "Első látogatás",
+      "totalTime": "Teljes idő",
+      "pagesActions": "Oldalak · műveletek",
+      "countries": "Országok",
+      "historyTitle": "Látogatási előzmények",
+      "visitLabel": "{n}. látogatás"
     }
   },
   "AccountValidationPage": {
@@ -753,7 +792,7 @@
       "basis": "Adja meg a jogalapot, és jelölje be a megerősítő négyzetet."
     },
     "templates": {
-      "intro": "Hat formátum az oldal 8 nyelvén. Válasszon egyet, szükség esetén igazítsa a szöveget, majd mentse kampányként.",
+      "intro": "Tizennégy formátum az oldal 8 nyelvén: rövid, figyelemfelkeltő üzenetek, amelyek kedvet csinálnak az oldal felkereséséhez, és részletesebb sablonok. Válasszon egyet, szükség esetén igazítsa a szöveget, majd mentse kampányként.",
       "use": "Sablon használata",
       "preview": "Előnézet",
       "names": {
@@ -762,7 +801,15 @@
         "investors": "Befektetők",
         "followup": "Rövid emlékeztető",
         "premium": "Premium ajánlat",
-        "partners": "Szakmai partnerség"
+        "partners": "Szakmai partnerség",
+        "s_bank": "„A bank nemet mondott?”",
+        "s_minutes": "„2 perc, és tudja”",
+        "s_monthly": "„Túl sok törlesztés?”",
+        "s_works": "„A felújítás nem várhat”",
+        "s_invest": "„Megtakarítás valódi projektekért”",
+        "s_waiting": "„Ingyenes elemzése várja”",
+        "s_question": "„Csak egy kérdés”",
+        "s_how": "„Finanszírozás másképp”"
       },
       "uses": {
         "discover": "Első megkeresés, minden célcsoport",
@@ -770,8 +817,19 @@
         "investors": "Befektetés iránt érdeklődők",
         "followup": "Néhány nappal az első e-mail után",
         "premium": "Már regisztrált tagok",
-        "partners": "Hitelközvetítők, ingatlanosok, tanácsadók"
-      }
+        "partners": "Hitelközvetítők, ingatlanosok, tanácsadók",
+        "s_bank": "Akiknek hitelkérelmét elutasították",
+        "s_minutes": "A kalkulátorhoz vezet",
+        "s_monthly": "Hitelkiváltás",
+        "s_works": "Felújítási projektek",
+        "s_invest": "Leendő befektetők",
+        "s_waiting": "Akik nem fejezték be kérelmüket",
+        "s_question": "Első megkeresés, minden projekt",
+        "s_how": "A platform működésének bemutatása"
+      },
+      "shortTitle": "Rövid és ütős — azoknak, akik megadták e-mail-címüket",
+      "classicTitle": "Klasszikus sablonok",
+      "shortBadge": "Rövid"
     },
     "editor": {
       "newTitle": "Új kampány",

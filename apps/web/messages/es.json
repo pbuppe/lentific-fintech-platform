@@ -944,7 +944,8 @@
       "creditWarning": "Un crédito le compromete y debe devolverse. Compruebe su capacidad de reembolso antes de comprometerse.",
       "noFeeBefore": "No puede exigirse ningún pago, de ninguna naturaleza, antes de obtener uno o varios préstamos.",
       "copyright": "© {year} {company}. Todos los derechos reservados.",
-      "contactPerson": "Su interlocutor: {name}"
+      "contactPerson": "Su interlocutor: {name}",
+      "cookies": "Gestionar las cookies"
     }
   },
   "CreditsSummary": {
@@ -1081,5 +1082,11 @@
     "bannerCta": "Ver la oferta",
     "noGuarantee": "Premium facilita el contacto; no garantiza la obtención de financiación.",
     "navLabel": "Premium"
+  },
+  "CookieBanner": {
+    "title": "Su privacidad",
+    "text": "Con su consentimiento, utilizamos cookies de medición de audiencia para entender cómo se usa el sitio (páginas vistas, recorridos, clics) y mejorarlo. Si las rechaza, solo contamos la visita de forma anónima (país, ciudad aproximada, tipo de dispositivo), sin cookies. Puede cambiar de opinión en cualquier momento al pie de la página.",
+    "accept": "Aceptar",
+    "refuse": "Rechazar"
   }
 }

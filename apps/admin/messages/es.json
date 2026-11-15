@@ -187,7 +187,7 @@
     "byLanguage": "Por idioma",
     "byCountry": "Por país",
     "noData": "Todavía no hay datos.",
-    "descriptionV2": "Seguimiento completo de los visitantes del sitio, alojado por nosotros: quién está en línea, desde dónde, con qué dispositivo, cuánto tiempo, qué páginas y qué acciones. No se guarda ninguna dirección IP.",
+    "descriptionV2": "Seguimiento completo de los visitantes del sitio: quién está en línea, desde dónde (país y ciudad deducidos de la dirección IP, que nunca se guarda), con qué dispositivo, cuánto tiempo, qué páginas y qué acciones. Quienes rechazan las cookies se siguen contando de forma anónima.",
     "rightNow5": "En línea (5 min)",
     "tabs": {
       "overview": "Resumen",
@@ -201,7 +201,8 @@
       "pagesPerVisit": "Páginas / visita",
       "avgDuration": "Duración media",
       "bounceRate": "Tasa de rebote",
-      "members": "Miembros conectados"
+      "members": "Miembros conectados",
+      "anonymous": "Visitas anónimas (cookies rechazadas)"
     },
     "chart": {
       "title": "Evolución de las visitas",
@@ -232,7 +233,9 @@
     },
     "live": {
       "hint": "Visitantes activos en los últimos 5 minutos. La página se actualiza sola cada 10 segundos.",
-      "empty": "No hay nadie en el sitio en este momento."
+      "empty": "No hay nadie en el sitio en este momento.",
+      "anonymousTitle": "Visitantes anónimos (cookies rechazadas)",
+      "anonymousHint": "Se conocen el país, la ciudad y el dispositivo, pero no el recorrido: estos visitantes no aceptaron las cookies."
     },
     "visit": {
       "anonymous": "Visitante anónimo",
@@ -262,6 +265,42 @@
       "empty": "No hay visitas en este periodo.",
       "prev": "Más recientes",
       "next": "Más antiguas"
+    },
+    "visitors": {
+      "title": "Lista de visitantes",
+      "hint": "Una línea por visitante (personas que aceptaron las cookies, las únicas reconocibles de una visita a otra): nuevo o recurrente, número de visitas desde la primera, país, tiempo y acciones. Haga clic en «Historial» para remontarse a su primera visita.",
+      "country": "País",
+      "action": "Tipo de acción",
+      "anyAction": "Todas",
+      "rows": "Líneas",
+      "apply": "Filtrar",
+      "empty": "Ningún visitante con estos criterios.",
+      "colVisitor": "Visitante",
+      "colCountry": "País",
+      "colDevice": "Dispositivo",
+      "colVisits": "Visitas",
+      "colFirst": "Primera visita",
+      "colLast": "Última visita",
+      "colTime": "Tiempo en el sitio",
+      "colPages": "Páginas",
+      "colActions": "Acciones",
+      "new": "Nuevo",
+      "returning": "Vuelve · {n} visitas",
+      "inPeriod": "{n} en el periodo",
+      "history": "Historial"
+    },
+    "visitor": {
+      "back": "Volver a las estadísticas",
+      "kicker": "Ficha del visitante",
+      "title": "Visitante #{id}",
+      "empty": "No hay visitas registradas para este visitante.",
+      "visits": "Visitas",
+      "firstVisit": "Primera visita",
+      "totalTime": "Tiempo total",
+      "pagesActions": "Páginas · acciones",
+      "countries": "Países",
+      "historyTitle": "Historial de visitas",
+      "visitLabel": "Visita n.º {n}"
     }
   },
   "AccountValidationPage": {
@@ -753,7 +792,7 @@
       "basis": "Indique la base legal y marque la casilla de confirmación."
     },
     "templates": {
-      "intro": "Seis formatos redactados en los 8 idiomas del sitio. Elija uno, adapte el texto si es necesario y guárdelo como campaña.",
+      "intro": "Catorce formatos redactados en los 8 idiomas del sitio: mensajes cortos y llamativos que invitan a visitar el sitio, y plantillas más completas. Elija uno, adapte el texto si es necesario y guárdelo como campaña.",
       "use": "Usar esta plantilla",
       "preview": "Vista previa",
       "names": {
@@ -762,7 +801,15 @@
         "investors": "Inversores",
         "followup": "Recordatorio breve",
         "premium": "Oferta Premium",
-        "partners": "Colaboración profesional"
+        "partners": "Colaboración profesional",
+        "s_bank": "«¿Su banco dijo que no?»",
+        "s_minutes": "«2 minutos para saberlo»",
+        "s_monthly": "«¿Demasiadas cuotas?»",
+        "s_works": "«Sus obras no esperan»",
+        "s_invest": "«Sus ahorros para proyectos reales»",
+        "s_waiting": "«Su estudio gratuito le espera»",
+        "s_question": "«Una sola pregunta»",
+        "s_how": "«Financiarse de otra manera»"
       },
       "uses": {
         "discover": "Primer contacto, todo público",
@@ -770,8 +817,19 @@
         "investors": "Personas interesadas en invertir",
         "followup": "Unos días después de un primer correo",
         "premium": "Miembros ya registrados",
-        "partners": "Corredores, agentes inmobiliarios, asesores"
-      }
+        "partners": "Corredores, agentes inmobiliarios, asesores",
+        "s_bank": "Personas a las que denegaron un préstamo",
+        "s_minutes": "Lleva al simulador",
+        "s_monthly": "Agrupación de créditos",
+        "s_works": "Proyectos de obras",
+        "s_invest": "Futuros inversores",
+        "s_waiting": "Quienes no terminaron su solicitud",
+        "s_question": "Primer contacto, todos los proyectos",
+        "s_how": "Explicar cómo funciona la plataforma"
+      },
+      "shortTitle": "Cortos e impactantes — para quienes le dejaron su dirección",
+      "classicTitle": "Plantillas clásicas",
+      "shortBadge": "Corto"
     },
     "editor": {
       "newTitle": "Nueva campaña",

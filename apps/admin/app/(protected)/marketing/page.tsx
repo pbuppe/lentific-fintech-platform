@@ -7,6 +7,7 @@ import {
   MARKETING_LOCALES,
   MARKETING_TEMPLATE_KEYS,
   MARKETING_TEMPLATE_PATHS,
+  MARKETING_SHORT_TEMPLATE_KEYS,
   addMarketingContacts,
   contactInbox,
   countCampaignPending,
@@ -219,14 +220,21 @@ function TemplatesTab({ lang, t }: { lang: string; t: T }) {
     <div className="mt-6 grid gap-4">
       <p className="text-sm text-ink-soft">{t("templates.intro")}</p>
       <LangPicker base="/marketing?tab=templates" lang={lang} t={t} />
-      {MARKETING_TEMPLATE_KEYS.map((key) => {
+      {MARKETING_TEMPLATE_KEYS.map((key, index) => {
+        const isShort = MARKETING_SHORT_TEMPLATE_KEYS.includes(key);
+        const heading = index === 0 ? t("templates.shortTitle") : index === MARKETING_SHORT_TEMPLATE_KEYS.length ? t("templates.classicTitle") : null;
         const tpl = marketingTemplate(key, lang)!;
         const r = renderMarketingEmail({ ...tpl, ctaUrl: MARKETING_TEMPLATE_PATHS[key], locale: lang }, { name: "Camille Martin", unsubscribeToken: "apercu" });
         return (
-          <Card key={key}>
+          <div key={key} className="grid gap-2">
+          {heading && <p className="mt-2 font-display text-lg text-brand">{heading}</p>}
+          <Card>
             <div className="flex flex-wrap items-start justify-between gap-2">
               <div>
-                <p className="font-display text-base text-ink">{t(`templates.names.${key}` as "templates.names.discover")}</p>
+                <p className="flex items-center gap-2 font-display text-base text-ink">
+                  {t(`templates.names.${key}` as "templates.names.discover")}
+                  {isShort && <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent">{t("templates.shortBadge")}</span>}
+                </p>
                 <p className="text-xs text-ink-faint">{t(`templates.uses.${key}` as "templates.uses.discover")}</p>
                 <p className="mt-2 text-sm font-semibold text-ink">{tpl.subject}</p>
               </div>
@@ -237,6 +245,7 @@ function TemplatesTab({ lang, t }: { lang: string; t: T }) {
               <iframe title={tpl.subject} srcDoc={`<base target="_blank">${r.html}`} sandbox="allow-popups allow-popups-to-escape-sandbox" className="mt-3 h-[520px] w-full rounded-lg border border-line bg-white" />
             </details>
           </Card>
+          </div>
         );
       })}
     </div>

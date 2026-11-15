@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { readConsent } from "./CookieConsent";
 
 const VISITOR_COOKIE_NAME = "NEXT_VISITOR_ID";
 const SESSION_COOKIE = "NEXT_VISIT_ID";
@@ -55,7 +56,14 @@ function labelOf(el: Element) {
  * passé sur chaque page, les clics sur les boutons et liens, les envois de
  * formulaires (jamais leur contenu) et les liens sortants. Monté une seule
  * fois dans app/layout.tsx, ne rend rien à l'écran.
+ *
+ * Consentement (bandeau CookieConsent, 2026-11-16) : avec accord, suivi complet
+ * (identifiants en cookie, parcours, clics). Sans accord (refus ou pas encore
+ * de choix), la page vue est comptée de façon anonyme : pays et ville
+ * (déduits de l'adresse IP par Vercel, adresse jamais conservée), appareil,
+ * page et temps passé, sans aucun cookie ni lien entre les pages.
  */
+const tracked = () => readConsent() === "all";
 export function PageViewTracker() {
   const pathname = usePathname();
   const current = useRef<{ id: string; path: string; visible: number; since: number | null } | null>(null);
@@ -65,14 +73,15 @@ export function PageViewTracker() {
     const c = current.current;
     if (!c) return;
     const ms = c.visible + (c.since ? Date.now() - c.since : 0);
-    if (ms > 500) send({ t: "ping", id: c.id, ms, visitorId: getOrCreateVisitorId() });
+    if (ms > 500) send({ t: "ping", id: c.id, ms, visitorId: tracked() ? getOrCreateVisitorId() : undefined });
   };
 
   useEffect(() => {
     if (!pathname || current.current?.path === pathname) return;
     flush();
-    const visitorId = getOrCreateVisitorId();
-    const sessionId = touchSessionId();
+    const consent = tracked();
+    const visitorId = consent ? getOrCreateVisitorId() : undefined;
+    const sessionId = consent ? touchSessionId() : undefined;
     const id = crypto.randomUUID();
     current.current = { id, path: pathname, visible: 0, since: document.visibilityState === "visible" ? Date.now() : null };
     const params = new URLSearchParams(window.location.search);
@@ -85,6 +94,7 @@ export function PageViewTracker() {
       sw: window.screen?.width,
       visitorId,
       sessionId,
+      c: consent ? 1 : 0,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
@@ -99,7 +109,7 @@ export function PageViewTracker() {
         flush();
       } else {
         c.since = Date.now();
-        touchSessionId();
+        if (tracked()) touchSessionId();
       }
     };
     const heartbeat = window.setInterval(() => {
@@ -108,7 +118,7 @@ export function PageViewTracker() {
 
     const onClick = (e: MouseEvent) => {
       const el = (e.target as Element | null)?.closest?.("a, button, [role=button], [data-track], input[type=submit]");
-      if (!el || !current.current) return;
+      if (!el || !current.current || !tracked()) return;
       // Bouton d'envoi d'un formulaire : compté par l'événement « submit » ci-dessous.
       if ((el as HTMLButtonElement).type === "submit" && el.closest("form")) return;
       const label = labelOf(el);
@@ -125,7 +135,7 @@ export function PageViewTracker() {
     };
     const onSubmit = (e: SubmitEvent) => {
       const form = e.target as HTMLFormElement | null;
-      if (!form || !current.current) return;
+      if (!form || !current.current || !tracked()) return;
       const submitter = e.submitter ? labelOf(e.submitter) : "";
       const label = form.getAttribute("data-track") || form.getAttribute("aria-label") || submitter || form.id || "formulaire";
       send({ t: "ev", kind: "submit", label: label.slice(0, 120), path: current.current.path, pageViewId: current.current.id, visitorId: getOrCreateVisitorId(), sessionId: touchSessionId() });

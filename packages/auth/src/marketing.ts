@@ -20,11 +20,15 @@
 import { randomBytes } from "node:crypto";
 import { prisma } from "@fintech/database";
 import { sendEmail, layout, escapeHtml, webBaseUrl, webUrlInLocale, contactInbox } from "./mailer";
+import { SHORT_TEMPLATES, SHORT_TEMPLATE_KEYS, SHORT_TEMPLATE_PATHS } from "./marketingShortTemplates";
 
 export const MARKETING_LOCALES = ["fr", "en", "es", "it", "hu", "pt", "de", "nl"] as const;
 export type MarketingLocale = (typeof MARKETING_LOCALES)[number];
 
-export const MARKETING_TEMPLATE_KEYS = ["discover", "borrowers", "investors", "followup", "premium", "partners"] as const;
+const CLASSIC_TEMPLATE_KEYS = ["discover", "borrowers", "investors", "followup", "premium", "partners"] as const;
+/** Modèles courts et percutants d'abord (2026-11-16), puis les modèles classiques. */
+export const MARKETING_TEMPLATE_KEYS = [...SHORT_TEMPLATE_KEYS, ...CLASSIC_TEMPLATE_KEYS] as const;
+export const MARKETING_SHORT_TEMPLATE_KEYS: readonly string[] = SHORT_TEMPLATE_KEYS;
 export type MarketingTemplateKey = (typeof MARKETING_TEMPLATE_KEYS)[number];
 
 export interface MarketingTemplateText {
@@ -35,6 +39,7 @@ export interface MarketingTemplateText {
 
 /** Page du site ouverte par le bouton de chaque modèle. */
 export const MARKETING_TEMPLATE_PATHS: Record<MarketingTemplateKey, string> = {
+  ...SHORT_TEMPLATE_PATHS,
   discover: "/",
   borrowers: "/#contact",
   investors: "/marketplace",
@@ -75,7 +80,7 @@ const COMMON: Record<MarketingLocale, CommonTexts> = {
 // Modèles prêts à l'emploi : 6 formats, dans les 8 langues du site
 // ---------------------------------------------------------------------------
 
-export const MARKETING_TEMPLATES: Record<MarketingTemplateKey, Record<MarketingLocale, MarketingTemplateText>> = {
+const CLASSIC_TEMPLATES: Record<(typeof CLASSIC_TEMPLATE_KEYS)[number], Record<MarketingLocale, MarketingTemplateText>> = {
   // 1. Invitation générale à découvrir la plateforme
   discover: {
     fr: {
@@ -340,6 +345,8 @@ export const MARKETING_TEMPLATES: Record<MarketingTemplateKey, Record<MarketingL
     },
   },
 };
+
+export const MARKETING_TEMPLATES: Record<MarketingTemplateKey, Record<MarketingLocale, MarketingTemplateText>> = { ...SHORT_TEMPLATES, ...CLASSIC_TEMPLATES };
 
 export function marketingTemplate(key: string, locale: string): MarketingTemplateText | null {
   if (!(MARKETING_TEMPLATE_KEYS as readonly string[]).includes(key) || !isMarketingLocale(locale)) return null;

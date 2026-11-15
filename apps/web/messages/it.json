@@ -944,7 +944,8 @@
       "creditWarning": "Un finanziamento vi impegna e deve essere rimborsato. Verificate la vostra capacità di rimborso prima di impegnarvi.",
       "noFeeBefore": "Nessun pagamento, di qualsiasi natura, può essere richiesto prima dell'ottenimento di uno o più prestiti.",
       "copyright": "© {year} {company}. Tutti i diritti riservati.",
-      "contactPerson": "Il vostro referente: {name}"
+      "contactPerson": "Il vostro referente: {name}",
+      "cookies": "Gestire i cookie"
     }
   },
   "CreditsSummary": {
@@ -1081,5 +1082,11 @@
     "bannerCta": "Vedere l'offerta",
     "noGuarantee": "Premium facilita il contatto; non garantisce l'ottenimento di un finanziamento.",
     "navLabel": "Premium"
+  },
+  "CookieBanner": {
+    "title": "La sua privacy",
+    "text": "Con il suo consenso utilizziamo cookie di misurazione dell'audience per capire come viene usato il sito (pagine visitate, percorsi, clic) e migliorarlo. Se rifiuta, contiamo la visita solo in forma anonima (paese, città approssimativa, tipo di dispositivo), senza cookie. Può cambiare idea in qualsiasi momento in fondo alla pagina.",
+    "accept": "Accettare",
+    "refuse": "Rifiutare"
   }
 }
