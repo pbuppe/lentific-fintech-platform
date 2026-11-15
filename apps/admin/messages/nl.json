@@ -10,17 +10,27 @@
     "riskEngine": "Risico-engine",
     "accountsSuperAdmin": "Accounts (super admin)",
     "statistics": "Statistieken",
-    "logout": "Uitloggen"
+    "logout": "Uitloggen",
+    "accountValidation": "Te beoordelen accounts",
+    "outboundEmails": "Verzonden e-mails",
+    "pendingCount": "{count} account(s) in afwachting",
+    "funds": "Uitbetalingen & honoraria",
+    "pendingFundsCount": "{count, plural, one {# uitbetaling te bevestigen} other {# uitbetalingen te bevestigen}}",
+    "clientRequests": "Verzoeken & berichten",
+    "console": "Superadmin-console",
+    "prospects": "Contactaanvragen",
+    "newProspectsCount": "{count, plural, one {# nieuwe aanvraag} other {# nieuwe aanvragen}}"
   },
   "AdminLoginPage": {
     "kicker": "Lentific · Back-office",
     "title": "Aanmelden medewerker",
     "emailLabel": "E-mail",
     "passwordLabel": "Wachtwoord",
-    "submit": "Inloggen"
+    "submit": "Inloggen",
+    "activated": "Uw toegang is geactiveerd: log in met uw nieuwe wachtwoord."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "Wachtrij: dossiers",
     "pendingCount": "{count, plural, one {# dossier in afwachting} other {# dossiers in afwachting}}",
     "empty": "Op dit moment geen dossiers in afwachting.",
@@ -41,17 +51,24 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · super administrator",
+    "kicker": "Super administrator",
     "title": "Accounts",
     "description": "Volledig overzicht van elk lener- of investeerdersaccount: profiel, documenten, documentverzoeken, introducties.",
     "empty": "Op dit moment geen accounts.",
     "verified": "Geverifieerd",
     "roleBorrower": "Lener",
-    "roleInvestor": "Investeerder"
+    "roleInvestor": "Investeerder",
+    "accountStatus": {
+      "PENDING_EMAIL": "E-mail te bevestigen",
+      "PENDING_REVIEW": "Te beoordelen",
+      "ACTIVE": "Actief",
+      "REJECTED": "Afgewezen",
+      "SUSPENDED": "Opgeschort"
+    }
   },
   "AccountDetailPage": {
     "backToAccounts": "← Terug naar accounts",
-    "kicker": "apps/admin · super administrator",
+    "kicker": "Super administrator",
     "phoneNotProvided": "telefoonnummer niet opgegeven",
     "roleBorrower": "Lener",
     "roleInvestor": "Investeerder",
@@ -72,7 +89,7 @@
     "documentLabel": "Opgevraagd document",
     "documentPlaceholder": "Bijv. Bewijs van woonplaats",
     "instructionsLabel": "Toelichting (optioneel)",
-    "instructionsPlaceholder": "Bijv. niet ouder dan 3 maanden, op jouw naam",
+    "instructionsPlaceholder": "Bijv. niet ouder dan 3 maanden, op uw naam",
     "sendRequest": "Verzoek versturen",
     "alreadySentTitle": "Al verzonden verzoeken",
     "requestStatus": {
@@ -82,9 +99,9 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · handmatige ondertekening",
+    "kicker": "Handmatige ondertekening",
     "title": "Ondertekende contracten: te verifiëren",
-    "description": "De klant heeft het contract afgedrukt, met de hand ondertekend en geüpload. Controleer het document voordat je bevestigt.",
+    "description": "De klant heeft het contract afgedrukt, met de hand ondertekend en geüpload. Controleer het document voordat u bevestigt.",
     "empty": "Geen contracten in afwachting van verificatie.",
     "contractLabel": "Contract {id}",
     "viewSignedContract": "Bekijk het ondertekende contract dat door de klant is geüpload",
@@ -92,12 +109,12 @@
     "confirmSignature": "Ondertekening bevestigen",
     "reject": "Afwijzen",
     "bilateralEligibleTitle": "Leningen die in aanmerking komen voor een bilateraal contract",
-    "bilateralEligibleDescription": "Deze leningen worden gefinancierd door één enkele investeerder: je kunt het contract opnieuw genereren als een directe bilaterale versie met vermelding van die investeerder, in plaats van het standaard marketplace-contract.",
+    "bilateralEligibleDescription": "Deze leningen worden gefinancierd door één enkele investeerder: u kunt het contract opnieuw genereren als een directe bilaterale versie met vermelding van die investeerder, in plaats van het standaard marketplace-contract.",
     "bilateralEligibleMeta": "{borrower} leent van {lender}",
     "regenerateBilateral": "Opnieuw genereren als bilateraal contract"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · incasso",
+    "kicker": "Incasso",
     "title": "Te innen termijnen",
     "description": "Bevestig een maandelijkse termijn die van de lener is ontvangen: die wordt automatisch herverdeeld onder de investeerders van de lening, naar rato van hun aandeel, en voedt hun prestatiedashboard.",
     "empty": "Op dit moment geen termijnen in afwachting.",
@@ -107,7 +124,7 @@
     "confirmPayment": "Ontvangen betaling bevestigen"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · handmatige verificatie",
+    "kicker": "Handmatige verificatie",
     "title": "Verificatie van investeerders: te behandelen",
     "description": "Bekijk het inkomensbewijs en het bewijs van beschikbaarheid van fondsen, en bevestig of wijs hieronder af.",
     "empty": "Geen investeerders in afwachting van verificatie.",
@@ -120,7 +137,7 @@
     "missingDocumentNote": "Er ontbreekt een bewijsstuk: bevestigen is niet mogelijk zolang niet beide zijn ingediend."
   },
   "KycPage": {
-    "kicker": "apps/admin · handmatige verificatie",
+    "kicker": "Handmatige verificatie",
     "title": "Identiteitsverificatie: te behandelen",
     "description": "Neem contact op met de klant om het identiteitsbewijs te controleren, en bevestig of wijs hieronder af.",
     "empty": "Geen dossiers in afwachting van handmatige verificatie.",
@@ -130,7 +147,7 @@
     "noApplicationNote": "Dit document is aan geen enkele aanvraag gekoppeld: het is niet mogelijk een dossier te laten vorderen."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · overzicht",
+    "kicker": "Overzicht",
     "title": "Geïntroduceerde profielen",
     "description": "Lijst van paren die hun contactgegevens hebben uitgewisseld via een betaalde introductie. Vanaf dat moment vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, Lentific is daar niet verantwoordelijk voor, alleen het contact is verzorgd.",
     "empty": "Op dit moment geen betaalde introducties.",
@@ -139,7 +156,7 @@
     "borrowerToInvestor": "Lener naar investeerder"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · risk",
+    "kicker": "Risk",
     "title": "Risico-engine",
     "demoDescription": "Voorbeeld berekend door <code1>assessRisk()</code1> uit <code2>@fintech/risk</code2> voor het demodossier (18.500 € / 24 maanden):",
     "scoreLabel": "Score",
@@ -147,7 +164,7 @@
     "riskLevelLabel": "Risiconiveau"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · statistieken",
+    "kicker": "Statistieken",
     "title": "Bezoekstatistieken",
     "description": "Een lichte, zelf gehoste bezoekregistratie, rechtstreeks in het platform ingebouwd. Dit is geen Matomo: Matomo vereist een Matomo Cloud-account of aparte hosting, indien gewenst apart in te stellen.",
     "rightNow": "Op dit moment",
@@ -169,5 +186,460 @@
     "byLanguage": "Per taal",
     "byCountry": "Per land",
     "noData": "Nog geen gegevens."
+  },
+  "AccountValidationPage": {
+    "kicker": "Registraties",
+    "title": "Te beoordelen accounts",
+    "description": "Geen enkele lener of investeerder krijgt toegang tot zijn account voordat u het goedkeurt. Controleer elke registratie en keur goed of wijs af met een reden; de persoon krijgt een e-mail.",
+    "doneApproved": "Account goedgekeurd. Er is een activeringsmail verstuurd.",
+    "doneRejected": "Registratie afgewezen. De persoon is per e-mail op de hoogte gebracht.",
+    "doneResent": "Nieuwe bevestigingslink verstuurd.",
+    "toReviewTitle": "E-mail bevestigd, wacht op uw beslissing",
+    "toReviewEmpty": "Geen registraties die op goedkeuring wachten.",
+    "roleBorrower": "Lener",
+    "roleInvestor": "Investeerder",
+    "signedUpAt": "Geregistreerd op",
+    "emailVerifiedAt": "E-mail bevestigd op",
+    "country": "Land",
+    "approve": "Account goedkeuren",
+    "reject": "Afwijzen…",
+    "reasonLabel": "Reden van afwijzing (wordt naar de persoon gestuurd)",
+    "reasonPlaceholder": "Bijv.: onvolledige gegevens, profiel buiten scope…",
+    "confirmReject": "Afwijzing bevestigen",
+    "emailPendingTitle": "E-mail nog niet bevestigd",
+    "emailPendingDescription": "Deze personen hebben nog niet op de link in de e-mail geklikt. U kunt de link opnieuw sturen of toch goedkeuren als u de persoon kent.",
+    "emailPendingEmpty": "Geen registraties die op e-mailbevestiging wachten.",
+    "resend": "Link opnieuw sturen",
+    "approveAnyway": "Toch goedkeuren",
+    "rejectedTitle": "Afgewezen registraties"
+  },
+  "OutboundEmailsPage": {
+    "kicker": "Communicatie",
+    "title": "Verzonden e-mails",
+    "descriptionLocal": "Er is nog geen verzenddienst gekoppeld: e-mails worden niet echt verstuurd, ze worden hier bewaard zodat u de flows kunt testen (bijvoorbeeld op een bevestigingslink klikken).",
+    "descriptionLive": "De laatste 50 e-mails die het platform heeft verstuurd.",
+    "empty": "Nog geen e-mails.",
+    "to": "Aan:",
+    "statusSent": "Verzonden",
+    "statusLocal": "Lokaal (niet verzonden)",
+    "statusFailed": "Mislukt"
+  },
+  "FundsPage": {
+    "kicker": "Backoffice · Toegekende kredieten",
+    "title": "Uitbetalingen en honoraria",
+    "description": "Bevestig de uitbetaling van elk ondertekend krediet. Een admin meldt die met het bewijs van de kredietgever, daarna bevestigt een andere superbeheerder. Honoraria kunnen pas na deze bevestiging worden gevraagd.",
+    "empty": "Nog geen ondertekende kredieten.",
+    "section1": "1 · Krediet toegekend",
+    "grantedSummary": "{amount} · rente {rate}% · {months} maanden · contract ondertekend",
+    "section2": "2 · Uitbetaling bevestigen",
+    "doubleValidationNote": "Vier-ogenprincipe: een admin meldt met bewijs, een andere superadmin bevestigt.",
+    "proofRejected": "Bewijs geweigerd: {reason}. Meld opnieuw met een leesbaar document.",
+    "beneficiaryLabel": "Uitbetaald aan",
+    "availabilityLabel": "Beschikbaarheid voor de kredietnemer",
+    "fundsDateLabel": "Datum van uitbetaling",
+    "lenderReferenceLabel": "Referentie kredietgever",
+    "proofLabel": "Uitbetalingsbericht",
+    "proofHint": "Attest van de kredietgever of notaris · PDF, JPG of PNG, max. 10 MB.",
+    "declare": "Uitbetaling melden",
+    "declaredBy": "Gemeld door",
+    "confirmedBy": "Bevestigd door",
+    "confirm": "Uitbetaling bevestigen",
+    "rejectProof": "Bewijs weigeren…",
+    "reasonLabel": "Reden van weigering",
+    "reasonPlaceholder": "Bijv.: bericht onleesbaar, bedrag wijkt af van het aanbod…",
+    "confirmReject": "Bewijs weigeren",
+    "waitingSuperAdmin": "Wacht op bevestiging door een superbeheerder.",
+    "waitingOtherSuperAdmin": "U hebt deze uitbetaling gemeld: een andere superbeheerder moet ze bevestigen. Niemand keurt zijn eigen melding goed.",
+    "markAvailableBank": "De bank heeft het geld vrijgegeven",
+    "markAvailableNotary": "De notaris heeft het geld vrijgegeven",
+    "section3": "3 · Honoraria vragen",
+    "feesLocked": "Niet beschikbaar zolang de uitbetaling niet bevestigd is: vóór het verkrijgen van de lening mag geen betaling worden geëist.",
+    "feesUnlocked": "Uitbetaling bevestigd: u kunt de overeengekomen honoraria vragen, ook als de bank of notaris de controles nog niet heeft afgerond.",
+    "feeKindLabel": "Onderwerp",
+    "feeAmountLabel": "Bedrag ({currency})",
+    "feeDueLabel": "Vervaldatum",
+    "requestFee": "Betaalverzoek versturen",
+    "feePaymentNote": "De klant betaalt vanuit zijn omgeving via een beveiligde betaling op naam van het kantoor. Er wordt nooit een IBAN per bericht verstuurd.",
+    "feeDue": "vervalt op {date}",
+    "cancelFee": "Annuleren",
+    "noFeesYet": "Nog geen honorariumverzoek verstuurd.",
+    "auditTitle": "Auditlogboek ({count})",
+    "steps": {
+      "granted": "Toegekend",
+      "grantedSub": "Contract ondertekend",
+      "declared": "Uitbetaling gemeld",
+      "declaredSub": "Door een admin",
+      "declaredWaiting": "Wacht op superadmin",
+      "confirmed": "Uitbetaald",
+      "confirmedSub": "Bevestigd",
+      "available": "Vrijgave",
+      "availableSub": "Geld beschikbaar",
+      "fees": "Honoraria",
+      "feesSub": "Verzoek mogelijk"
+    },
+    "status": {
+      "toDeclare": "Uit te betalen",
+      "declared": "Te bevestigen",
+      "confirmed": "Uitbetaald",
+      "rejected": "Bewijs geweigerd"
+    },
+    "beneficiary": {
+      "BORROWER": "Rekening van de kredietnemer",
+      "NOTARY": "Notariskantoor",
+      "SUPPLIERS": "Bedrijven, op factuur"
+    },
+    "availability": {
+      "AVAILABLE": "Direct beschikbaar",
+      "BANK_CHECKS": "Controles bij de bank lopen",
+      "NOTARY_CHECKS": "Bij de notaris, controles lopen"
+    },
+    "feeKind": {
+      "BROKER_FEE": "Bemiddelingshonorarium",
+      "COMPLEMENT": "Aanvullend honorarium"
+    },
+    "feeStatus": {
+      "PENDING": "Openstaand",
+      "PAID": "Betaald",
+      "CANCELLED": "Geannuleerd"
+    },
+    "errors": {
+      "not_allowed": "U hebt geen rechten voor deze actie.",
+      "not_signed": "Dit dossier heeft geen ondertekend contract.",
+      "already_declared": "De uitbetaling van dit dossier is al gemeld.",
+      "invalid_input": "Sommige gegevens zijn ongeldig. Controleer het formulier.",
+      "not_declared": "Geen uitbetaling die op bevestiging wacht voor dit dossier.",
+      "same_person": "U hebt deze uitbetaling gemeld: een andere superbeheerder moet ze bevestigen.",
+      "reason_required": "Geef een reden voor de weigering op (minstens 3 tekens).",
+      "not_confirmed": "De uitbetaling is nog niet bevestigd.",
+      "fees_locked": "Honoraria kunnen pas na bevestigde uitbetaling worden gevraagd.",
+      "not_pending": "Dit honorariumverzoek staat niet meer open.",
+      "proof_missing": "Voeg het uitbetalingsbericht toe (max. 10 MB)."
+    },
+    "done": {
+      "declared": "Uitbetaling gemeld. Een superbeheerder moet ze nu bevestigen.",
+      "confirmed": "Uitbetaling bevestigd. De klant ziet het geld en de honoraria zijn vrijgegeven.",
+      "rejected": "Bewijs geweigerd. De admin moet de uitbetaling opnieuw melden.",
+      "available": "Geld gemarkeerd als beschikbaar voor de klant.",
+      "fee_requested": "Honorariumverzoek naar de klant verstuurd.",
+      "fee_cancelled": "Honorariumverzoek geannuleerd."
+    },
+    "audit": {
+      "disbursement": {
+        "declared": "Uitbetaling gemeld",
+        "confirmed": "Uitbetaling bevestigd",
+        "proof_rejected": "Uitbetalingsbewijs geweigerd",
+        "funds_available": "Geld vrijgegeven"
+      },
+      "broker_fee": {
+        "requested": "Honoraria gevraagd",
+        "cancelled": "Honorariumverzoek geannuleerd",
+        "paid": "Honoraria betaald door de klant"
+      }
+    }
+  },
+  "ClientRequestsPage": {
+    "kicker": "Backoffice · Klantrelatie",
+    "title": "Verzoeken en berichten",
+    "description": "Vraag een document of een betaling, of schrijf een klant. Het verschijnt meteen in zijn omgeving (meldingen, en de rubriek \"Berichten\" bij een bericht), en een e-mail nodigt hem uit om in te loggen.",
+    "done": {
+      "doc": "Verzoek verstuurd naar {name}. Het staat bij de aan te leveren documenten.",
+      "pay": "Betaalverzoek verstuurd naar {name}.",
+      "msg": "Bericht verstuurd naar {name}. Een e-mail heeft hem verwittigd."
+    },
+    "errors": {
+      "doc_missing": "Kies minstens één document (en geef een naam op bij \"Ander document\").",
+      "fees_locked": "Geen betaalverzoek mogelijk: het geld van deze klant is nog niet uitbetaald en bevestigd.",
+      "invalid": "Ongeldig bedrag of vervaldatum.",
+      "msg_missing": "Onderwerp en bericht zijn verplicht.",
+      "client": "Klant niet gevonden."
+    },
+    "searchPlaceholder": "Klant zoeken…",
+    "clientsCount": "{count, plural, one {# klant} other {# klanten}}",
+    "roleInvestor": "Investeerder",
+    "roleBorrower": "Kredietnemer",
+    "noClients": "Geen klant gevonden.",
+    "pickClient": "Kies een klant in de lijst om hem een verzoek of bericht te sturen.",
+    "recipient": "Ontvanger",
+    "tabs": {
+      "doc": "Document vragen",
+      "pay": "Betaling vragen",
+      "msg": "Bericht"
+    },
+    "docTypesLabel": "Gevraagde documenten",
+    "docTypes": {
+      "tax": "Laatste aanslagbiljet",
+      "address": "Bewijs van adres, minder dan 3 maanden oud",
+      "payslips": "Laatste 3 loonstroken",
+      "statements": "Rekeningafschriften (laatste 3 maanden)",
+      "quote": "Offerte of factuur van de werken",
+      "identity": "Identiteitsbewijs",
+      "sale": "Voorlopige koopovereenkomst",
+      "other": "Ander document"
+    },
+    "otherLabel": "Naam bij \"Ander document\"",
+    "otherPlaceholder": "Bijv.: werkgeversverklaring",
+    "delayLabel": "Aan te leveren binnen",
+    "delays": {
+      "48h": "48 uur",
+      "7d": "7 dagen",
+      "15d": "15 dagen"
+    },
+    "instructionsLabel": "Toelichting voor de klant (optioneel)",
+    "instructionsPlaceholder": "Bijv.: gevraagd door de bank om de analyse voort te zetten.",
+    "sendDoc": "Verzoek versturen",
+    "channelsNote": "De klant ziet het in zijn klantenomgeving en krijgt een e-mail met de uitnodiging om in te loggen (zonder inhoud, voor de veiligheid).",
+    "payBlocked": "Betaalverzoek niet mogelijk: geen enkel krediet van deze klant heeft een bevestigde uitbetaling. De wet verbiedt innen vóór het verkrijgen van de lening.",
+    "payBlockedLink": "Uitbetalingen bekijken",
+    "loanLabel": "Betrokken krediet",
+    "fundsConfirmed": "uitbetaald",
+    "feeKindLabel": "Onderwerp",
+    "feeKind": {
+      "BROKER_FEE": "Bemiddelingshonorarium",
+      "COMPLEMENT": "Aanvullend honorarium"
+    },
+    "amountLabel": "Bedrag",
+    "dueLabel": "Vervaldatum",
+    "payNote": "De klant betaalt vanuit zijn omgeving via een beveiligde betaling op naam van het kantoor. Er wordt nooit een IBAN per bericht verstuurd.",
+    "sendPay": "Betaalverzoek versturen",
+    "otherCases": "Andere dossiers zonder bevestigde uitbetaling: {list}",
+    "templatesLabel": "Sjablonen",
+    "templates": {
+      "progress": {
+        "label": "Dossier loopt",
+        "subject": "Uw dossier vordert",
+        "body": "Beste {name},\n\nGoed nieuws: verschillende kredietgevers bestuderen momenteel uw aanvraag. Ik laat iets weten zodra ik een antwoord heb.\n\nMet vriendelijke groeten,"
+      },
+      "granted": {
+        "label": "Krediet toegekend",
+        "subject": "Uw krediet is toegekend",
+        "body": "Beste {name},\n\nUw krediet is toegekend. U ontvangt het te ondertekenen kredietaanbod in uw omgeving.\n\nMet vriendelijke groeten,"
+      },
+      "appointment": {
+        "label": "Afspraak",
+        "subject": "Laten we een afspraak maken",
+        "body": "Beste {name},\n\nIk stel een telefoon- of videogesprek voor om uw dossier te bespreken. Laat me weten welk moment u past.\n\nMet vriendelijke groeten,"
+      }
+    },
+    "subjectLabel": "Onderwerp",
+    "bodyLabel": "Bericht",
+    "sendMsg": "Bericht versturen",
+    "historyFor": "Verzendgeschiedenis · {name}",
+    "historyAll": "Laatste verzendingen",
+    "historyEmpty": "Nog niets verstuurd.",
+    "historyCols": {
+      "date": "Datum",
+      "client": "Klant",
+      "type": "Type",
+      "subject": "Onderwerp",
+      "by": "Door",
+      "status": "Status"
+    },
+    "historyStatus": {
+      "received": "Document ontvangen",
+      "cancelled": "Geannuleerd",
+      "paid": "Betaald",
+      "read": "Gelezen",
+      "unread": "Verstuurd · ongelezen"
+    },
+    "kind": {
+      "document": "Document",
+      "payment": "Betaling",
+      "message": "Bericht"
+    }
+  },
+  "ConsolePage": {
+    "kicker": "Backoffice · Superadmin",
+    "title": "Superadmin-console",
+    "description": "Beheer het team en de klantaccounts, en help een klant live met de code die hij u telefonisch geeft. Elke actie wordt gelogd.",
+    "tabs": {
+      "help": "Assistentie",
+      "clients": "Klanten",
+      "team": "Team"
+    },
+    "searchPlaceholder": "Klant zoeken…",
+    "suspend": "Schorsen",
+    "reactivate": "Heractiveren",
+    "status": {
+      "ACTIVE": "Actief",
+      "SUSPENDED": "Geschorst"
+    },
+    "roles": {
+      "AGENT": "Medewerker",
+      "ADMIN": "Admin",
+      "SUPER_ADMIN": "Superadmin"
+    },
+    "rights": {
+      "AGENT": "Dossiers, identiteit, contracten",
+      "ADMIN": "+ goedkeuringen, uitbetalingen, berichten",
+      "SUPER_ADMIN": "Alle rechten"
+    },
+    "team": {
+      "inviteTitle": "Teamlid uitnodigen",
+      "name": "Naam",
+      "email": "E-mail",
+      "role": "Rol",
+      "invite": "Uitnodiging versturen",
+      "inviteNote": "De persoon krijgt een e-mail met een link (72 u geldig) om een wachtwoord te kiezen. Er gaat nooit een wachtwoord via u.",
+      "listTitle": "Teamaccounts",
+      "colName": "Naam",
+      "colRole": "Rol",
+      "colRights": "Rechten",
+      "colLogin": "Laatste login",
+      "colStatus": "Status",
+      "invitationPending": "Uitnodiging verstuurd",
+      "you": "u",
+      "resend": "Uitnodiging opnieuw sturen",
+      "suspendNote": "Schorsen sluit de toegang onmiddellijk af (alle sessies worden gesloten). Het account en zijn eerdere acties blijven in het logboek. De laatste actieve superadmin kan niet worden geschorst."
+    },
+    "clients": {
+      "colClient": "Klant",
+      "colCase": "Dossier",
+      "colAccount": "Account",
+      "colBlock": "Gemeld probleem",
+      "assist": "Assisteren"
+    },
+    "help": {
+      "asking": "Hulp gevraagd",
+      "pick": "Kies de klant aan de telefoon uit de lijst.",
+      "kicker": "Assistentie",
+      "activeUntil": "Sessie open · tot {time}",
+      "busy": "Al geholpen door {name}",
+      "codeWaiting": "Code aangemaakt, wacht",
+      "noCode": "Geen actieve code",
+      "problem": "Gemeld probleem:",
+      "noProblem": "geen",
+      "codeExplain": "Vraag de klant telefonisch om \"Hulp nodig?\" te openen in zijn omgeving en u zijn 6-cijferige code voor te lezen. Deze code geldt als akkoord voor 30 minuten assistentie.",
+      "codeLabel": "6-cijferige code",
+      "open": "Sessie openen",
+      "doTitle": "Wat u in zijn plaats kunt doen",
+      "noPendingDocs": "Geen openstaand document voor deze klant.",
+      "uploadFor": "Voor hem uploaden: {label}",
+      "uploadHint": "Document van de klant ontvangen per e-mail of post.",
+      "upload": "Uploaden",
+      "moreActions": "Profiel, documentverzoeken, bestanden:",
+      "openAccount": "fiche openen",
+      "guideTitle": "Door de klant te doen, met u aan de telefoon",
+      "guideExplain": "Deze stappen verbinden de klant: hij moet ze zelf doen. Kies een begeleiding, die verschijnt meteen op zijn scherm.",
+      "end": "Sessie beëindigen"
+    },
+    "guidance": {
+      "sign": {
+        "title": "Aanbod of document ondertekenen",
+        "why": "De handtekening moet van de klant komen"
+      },
+      "pay": {
+        "title": "Honorarium betalen",
+        "why": "De klant keurt de betaling zelf goed"
+      },
+      "identity": {
+        "title": "Identiteitscontrole",
+        "why": "Het identiteitsbewijs moet de klant zelf sturen"
+      },
+      "accept": {
+        "title": "Een aanbod aanvaarden",
+        "why": "De toestemming moet van de klant komen"
+      },
+      "documents": {
+        "title": "Een document uploaden",
+        "why": "De klant uploadt het bestand zelf"
+      }
+    },
+    "done": {
+      "invited": "Uitnodiging verstuurd.",
+      "invite_resent": "Nieuwe uitnodiging verstuurd.",
+      "suspended": "Account geschorst: de toegang is afgesloten.",
+      "reactivated": "Account opnieuw geactiveerd.",
+      "session_opened": "Assistentiesessie geopend voor 30 minuten.",
+      "guided": "De begeleiding verschijnt op het scherm van de klant.",
+      "uploaded": "Document voor de klant geüpload.",
+      "session_ended": "Assistentiesessie beëindigd."
+    },
+    "errors": {
+      "not_allowed": "Actie niet toegestaan.",
+      "invalid_input": "Ongeldige gegevens.",
+      "email_taken": "Er bestaat al een account met dit e-mailadres.",
+      "self": "U kunt uw eigen account hier niet wijzigen.",
+      "last_super_admin": "Onmogelijk: dit is de laatste actieve superadmin.",
+      "not_found": "Account of verzoek niet gevonden.",
+      "no_code": "Geen geldige code voor deze klant: vraag hem een nieuwe aan te maken.",
+      "bad_code": "Onjuiste code.",
+      "too_many_attempts": "Te veel pogingen: de code is geblokkeerd. De klant moet een nieuwe aanmaken.",
+      "no_session": "Geen door u geopende sessie voor deze klant.",
+      "file": "Kies een bestand (max. 10 MB)."
+    },
+    "log": {
+      "title": "Logboek van console-acties",
+      "empty": "Nog geen acties.",
+      "by": "door {name}",
+      "note": "Alleen-lezen logboek. De klant ziet onder \"Hulp nodig?\" wat zijn account betreft.",
+      "actions": {
+        "staff_invited": "Lid uitgenodigd",
+        "staff_invite_resent": "Uitnodiging opnieuw verstuurd",
+        "staff_activated": "Toegang geactiveerd",
+        "account_suspended": "Account geschorst",
+        "account_reactivated": "Account heractiveerd",
+        "assistance_opened": "Assistentie geopend (klantcode)",
+        "assistance_guided": "Klant stap voor stap begeleid",
+        "assistance_document": "Document voor de klant geüpload",
+        "assistance_ended": "Assistentie beëindigd"
+      }
+    },
+    "appStatus": {
+      "DRAFT": "Concept",
+      "SUBMITTED": "Ingediend",
+      "KYC_PENDING": "Identiteit te controleren",
+      "KYC_VERIFIED": "Identiteit gecontroleerd",
+      "UNDER_REVIEW": "In analyse",
+      "PUBLISHED": "Aanbod verstuurd",
+      "OFFER_ACCEPTED": "Aanbod aanvaard",
+      "CONTRACT_SIGNED": "Contract ondertekend",
+      "DISBURSED": "Uitbetaald",
+      "REJECTED": "Geweigerd",
+      "CANCELLED": "Geannuleerd"
+    }
+  },
+  "ActivatePage": {
+    "kicker": "Lentific · Backoffice",
+    "title": "Welkom {name}",
+    "invalidTitle": "Ongeldige link",
+    "invalidBody": "Deze uitnodigingslink is verlopen of al gebruikt. Vraag een superbeheerder om een nieuwe.",
+    "intro": "Kies het wachtwoord voor uw account {email}.",
+    "password": "Wachtwoord",
+    "confirm": "Wachtwoord bevestigen",
+    "rule": "Minstens 10 tekens. Gebruik een zin die u makkelijk onthoudt en die anderen moeilijk raden.",
+    "submit": "Mijn toegang activeren",
+    "errors": {
+      "mismatch": "De twee wachtwoorden komen niet overeen.",
+      "password_short": "Het wachtwoord moet minstens 10 tekens hebben.",
+      "invalid_link": "Deze link is niet meer geldig."
+    }
+  },
+  "ProspectsPage": {
+    "kicker": "Backoffice · Website",
+    "title": "Contactaanvragen",
+    "description": "Aanvragen voor een gratis studie via de website. Bel de prospect terug en volg de status op.",
+    "status": {
+      "NEW": "Nieuw",
+      "CONTACTED": "Gecontacteerd",
+      "CONVERTED": "Klant geworden",
+      "CLOSED": "Gesloten"
+    },
+    "filters": {
+      "open": "Te behandelen",
+      "closed": "Behandeld",
+      "all": "Alle"
+    },
+    "projects": {
+      "MORTGAGE": "Hypothecaire lening",
+      "CONSOLIDATION": "Kredietconsolidatie",
+      "WORKS": "Renovatie- / consumptielening",
+      "OTHER": "Andere"
+    },
+    "saved": "Opgeslagen.",
+    "empty": "Geen aanvragen.",
+    "statusLabel": "Status",
+    "noteLabel": "Interne notitie",
+    "notePlaceholder": "Bijv. teruggebeld op 14/11, afspraak dinsdag",
+    "save": "Opslaan"
   }
 }

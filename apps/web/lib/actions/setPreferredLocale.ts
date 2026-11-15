@@ -1,7 +1,7 @@
 "use server";
 
 import { usersRepo } from "@fintech/database";
-import { getCurrentUser } from "../session";
+import { getSignedInUser } from "../session";
 
 /**
  * Mémorise la langue choisie sur le compte, quand une session existe
@@ -12,7 +12,7 @@ import { getCurrentUser } from "../session";
  * marche déjà très bien sans compte via le cookie NEXT_LOCALE.
  */
 export async function setPreferredLocale(locale: string) {
-  const user = await getCurrentUser();
+  const user = await getSignedInUser();
   if (!user) return;
   await usersRepo.setPreferredLocale(user.id, locale);
 }

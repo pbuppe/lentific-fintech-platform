@@ -2,6 +2,8 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { signOut, SESSION_COOKIE_NAME } from "@fintech/auth";
+import { usersRepo, prisma } from "@fintech/database";
+import { countDisbursementsAwaitingConfirmation } from "@fintech/applications";
 import { getCurrentUser } from "../../lib/session";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 
@@ -17,11 +19,23 @@ const NAV_KEYS = [
 
 // Pouvoir complet sur les comptes (§ demande produit) réservé au super
 // administrateur, pas aux simples agents/admins.
-const SUPER_ADMIN_NAV_KEYS = [{ href: "/comptes", key: "accountsSuperAdmin" }] as const;
+const SUPER_ADMIN_NAV_KEYS = [
+  { href: "/console", key: "console" },
+  { href: "/comptes", key: "accountsSuperAdmin" },
+] as const;
 
 // Statistiques de visite (§ demande produit 2026-09-18) : "dans les comptes
 // super admin ... et dans le compte admin", donc admin/super admin, pas agent.
-const ADMIN_AND_ABOVE_NAV_KEYS = [{ href: "/statistiques", key: "statistics" }] as const;
+// Validation des inscriptions + journal des e-mails (demande produit
+// 2026-11-14) : décision d'administrateur, pas d'agent.
+const ADMIN_AND_ABOVE_NAV_KEYS = [
+  { href: "/prospects", key: "prospects" },
+  { href: "/messages", key: "clientRequests" },
+  { href: "/validations", key: "accountValidation" },
+  { href: "/versements", key: "funds" },
+  { href: "/emails", key: "outboundEmails" },
+  { href: "/statistiques", key: "statistics" },
+] as const;
 
 const ADMIN_ROLES = ["AGENT", "ADMIN", "SUPER_ADMIN"];
 
@@ -39,6 +53,12 @@ export default async function ProtectedLayout({ children }: { children: React.Re
     redirect("/login");
   }
   const t = await getTranslations("ProtectedLayout");
+  const isAdminOrAbove = user.role === "ADMIN" || user.role === "SUPER_ADMIN";
+  const pendingAccounts = isAdminOrAbove ? await usersRepo.countPendingReview() : 0;
+  // Nouvelles demandes d étude gratuite du site vitrine, à rappeler.
+  const newProspects = isAdminOrAbove ? await prisma.contactRequest.count({ where: { status: "NEW" } }) : 0;
+  // Versements déclarés en attente : seul un super admin peut les confirmer.
+  const pendingDisbursements = user.role === "SUPER_ADMIN" ? await countDisbursementsAwaitingConfirmation() : 0;
 
   return (
     <div className="grid min-h-screen grid-cols-[220px_1fr]">
@@ -62,14 +82,35 @@ export default async function ProtectedLayout({ children }: { children: React.Re
               {t(item.key)}
             </a>
           ))}
-          {(user.role === "ADMIN" || user.role === "SUPER_ADMIN") &&
+          {isAdminOrAbove &&
             ADMIN_AND_ABOVE_NAV_KEYS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-md px-2.5 py-2 text-sm font-medium text-white/85 hover:bg-white/10"
+                className="flex items-center justify-between rounded-md px-2.5 py-2 text-sm font-medium text-white/85 hover:bg-white/10"
               >
                 {t(item.key)}
+                {item.href === "/validations" && pendingAccounts > 0 && (
+                  <span
+                    className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-bold text-white"
+                    aria-label={t("pendingCount", { count: pendingAccounts })}
+                  >
+                    {pendingAccounts}
+                  </span>
+                )}
+                {item.href === "/prospects" && newProspects > 0 && (
+                  <span className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-bold text-white" aria-label={t("newProspectsCount", { count: newProspects })}>
+                    {newProspects}
+                  </span>
+                )}
+                {item.href === "/versements" && pendingDisbursements > 0 && (
+                  <span
+                    className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-bold text-white"
+                    aria-label={t("pendingFundsCount", { count: pendingDisbursements })}
+                  >
+                    {pendingDisbursements}
+                  </span>
+                )}
               </a>
             ))}
           {user.role === "SUPER_ADMIN" &&

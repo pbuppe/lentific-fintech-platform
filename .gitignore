@@ -9,3 +9,8 @@ dist
 /storage
 *.tsbuildinfo
 .vercel
+# Sauvegardes de base (données personnelles)
+backups/
+
+# Mots de passe des comptes de test locaux
+test-accounts.local.txt

@@ -8,13 +8,16 @@ export function Card({
   children,
   accented = false,
   className = "",
+  id,
 }: {
   children: ReactNode;
   accented?: boolean;
   className?: string;
+  id?: string;
 }) {
   return (
     <div
+      id={id}
       className={`relative rounded-xl border border-line bg-surface p-5 shadow-sm ${
         accented ? "before:absolute before:left-0 before:top-0 before:h-full before:w-[3px] before:rounded-l-xl before:bg-accent" : ""
       } ${className}`}

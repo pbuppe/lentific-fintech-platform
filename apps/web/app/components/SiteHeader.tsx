@@ -2,8 +2,10 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { signOut, SESSION_COOKIE_NAME } from "@fintech/auth";
-import { getCurrentUser } from "../../lib/session";
+import { notificationsRepo } from "@fintech/database";
+import { getSignedInUser } from "../../lib/session";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { premiumPath } from "../../lib/premiumPath";
 
 async function logoutAction() {
   "use server";
@@ -14,31 +16,54 @@ async function logoutAction() {
 }
 
 export async function SiteHeader() {
-  const user = await getCurrentUser();
+  const user = await getSignedInUser();
   const t = await getTranslations("SiteHeader");
+  const active = user?.accountStatus === "ACTIVE" && (user.role === "BORROWER" || user.role === "INVESTOR");
+  const unread = active ? await notificationsRepo.countUnread(user!.id) : 0;
+  const premiumLink = active ? premiumPath(user!.role) : "/#premium";
+  const premiumLabel = (await getTranslations("PremiumPromo"))("navLabel");
 
   return (
-    <header className="flex items-center justify-between border-b border-line bg-surface px-6 py-3 sm:px-12">
+    <header className="flex flex-wrap items-center justify-between gap-y-2 border-b border-line bg-surface px-6 py-3 sm:px-12">
       <div className="flex items-center gap-8">
         <a href="/" className="flex items-center gap-2">
           <div className="flex h-6 w-6 items-center justify-center rounded-md bg-accent font-display text-sm font-bold text-white">
             L
           </div>
-          <span className="font-sans text-sm font-bold uppercase tracking-wide text-ink">Lentific</span>
+          <span className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-wide text-ink">Lentific</span>
         </a>
-        <nav className="hidden items-center gap-5 text-sm text-ink-soft sm:flex">
+        <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-ink-soft lg:flex">
+          <a href="/#services" className="hover:text-ink">{t("services")}</a>
           <a href="/#comment-ca-marche" className="hover:text-ink">{t("howItWorks")}</a>
           <a href="/marketplace" className="hover:text-ink">{t("marketplace")}</a>
           <a href="/simulateur" className="hover:text-ink">{t("simulator")}</a>
+          <a href="/#contact" className="hover:text-ink">{t("contact")}</a>
+          <a href={premiumLink} className="rounded-full bg-brand-soft px-3 py-1 font-semibold text-brand-ink hover:bg-brand hover:text-white">★ {premiumLabel}</a>
         </nav>
       </div>
 
       <div className="flex items-center gap-3">
+        <a href={premiumLink} className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-semibold text-brand-ink lg:hidden">★ {premiumLabel}</a>
         {user ? (
           <div className="flex items-center gap-3 text-sm">
+            {active && (
+              <a
+                href={user.role === "INVESTOR" ? "/investor/notifications" : "/notifications"}
+                className="relative rounded-lg border border-line px-2.5 py-1 text-base leading-none hover:bg-surface-alt"
+                aria-label={t("notifications", { count: unread })}
+                title={t("notifications", { count: unread })}
+              >
+                <span aria-hidden>🔔</span>
+                {unread > 0 && (
+                  <span className="absolute -right-2 -top-2 min-w-[18px] rounded-full bg-accent px-1 text-center text-[10px] font-bold leading-[18px] text-white">
+                    {unread > 99 ? "99+" : unread}
+                  </span>
+                )}
+              </a>
+            )}
             <a
-              href={user.role === "INVESTOR" ? "/investor/dashboard" : "/dashboard"}
-              className="text-ink-soft hover:text-ink"
+              href={user.accountStatus !== "ACTIVE" ? "/compte-en-attente" : user.role === "INVESTOR" ? "/investor/dashboard" : "/dashboard"}
+              className="hidden text-ink-soft hover:text-ink sm:inline"
             >
               {user.name ?? user.email}
             </a>

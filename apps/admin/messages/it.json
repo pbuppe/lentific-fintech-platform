@@ -10,17 +10,27 @@
     "riskEngine": "Motore del rischio",
     "accountsSuperAdmin": "Account (super admin)",
     "statistics": "Statistiche",
-    "logout": "Disconnetti"
+    "logout": "Disconnetti",
+    "accountValidation": "Account da approvare",
+    "outboundEmails": "E-mail inviate",
+    "pendingCount": "{count} account in attesa",
+    "funds": "Erogazioni e onorari",
+    "pendingFundsCount": "{count, plural, one {# erogazione da confermare} other {# erogazioni da confermare}}",
+    "clientRequests": "Richieste e messaggi",
+    "console": "Console super admin",
+    "prospects": "Richieste di contatto",
+    "newProspectsCount": "{count, plural, one {# nuova richiesta} other {# nuove richieste}}"
   },
   "AdminLoginPage": {
     "kicker": "Lentific · Back-office",
     "title": "Accesso operatore",
     "emailLabel": "E-mail",
     "passwordLabel": "Password",
-    "submit": "Accedi"
+    "submit": "Accedi",
+    "activated": "Il vostro accesso è attivato: accedete con la nuova password."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "Coda pratiche",
     "pendingCount": "{count, plural, one {# pratica in attesa} other {# pratiche in attesa}}",
     "empty": "Nessuna pratica in attesa per ora.",
@@ -41,17 +51,24 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · super amministratore",
+    "kicker": "Super amministratore",
     "title": "Account",
     "description": "Vista completa di ogni account mutuatario o investitore: profilo, documenti, richieste di documenti, messe in contatto.",
     "empty": "Nessun account per ora.",
     "verified": "Verificato",
     "roleBorrower": "Mutuatario",
-    "roleInvestor": "Investitore"
+    "roleInvestor": "Investitore",
+    "accountStatus": {
+      "PENDING_EMAIL": "E-mail da confermare",
+      "PENDING_REVIEW": "Da approvare",
+      "ACTIVE": "Attivo",
+      "REJECTED": "Rifiutato",
+      "SUSPENDED": "Sospeso"
+    }
   },
   "AccountDetailPage": {
     "backToAccounts": "← Torna agli account",
-    "kicker": "apps/admin · super amministratore",
+    "kicker": "Super amministratore",
     "phoneNotProvided": "telefono non indicato",
     "roleBorrower": "Mutuatario",
     "roleInvestor": "Investitore",
@@ -72,7 +89,7 @@
     "documentLabel": "Documento richiesto",
     "documentPlaceholder": "Es. Prova di domicilio",
     "instructionsLabel": "Precisazioni (facoltativo)",
-    "instructionsPlaceholder": "Es. di meno di 3 mesi, a tuo nome",
+    "instructionsPlaceholder": "Es. di meno di 3 mesi, a vostro nome",
     "sendRequest": "Invia la richiesta",
     "alreadySentTitle": "Richieste già inviate",
     "requestStatus": {
@@ -82,7 +99,7 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · firma manuale",
+    "kicker": "Firma manuale",
     "title": "Contratti firmati: da verificare",
     "description": "Il cliente ha stampato, firmato a mano e caricato il proprio contratto. Verifica il documento prima di confermare.",
     "empty": "Nessun contratto in attesa di verifica.",
@@ -92,12 +109,12 @@
     "confirmSignature": "Conferma la firma",
     "reject": "Rifiuta",
     "bilateralEligibleTitle": "Prestiti idonei a un contratto bilaterale",
-    "bilateralEligibleDescription": "Questi prestiti sono finanziati da un solo investitore: puoi rigenerare il loro contratto in versione bilaterale diretta, nominando quell'investitore, al posto del contratto marketplace standard.",
+    "bilateralEligibleDescription": "Questi prestiti sono finanziati da un solo investitore: potete rigenerare il loro contratto in versione bilaterale diretta, nominando quell'investitore, al posto del contratto marketplace standard.",
     "bilateralEligibleMeta": "{borrower} prende in prestito da {lender}",
     "regenerateBilateral": "Rigenera come contratto bilaterale"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · incasso",
+    "kicker": "Incasso",
     "title": "Rate da incassare",
     "description": "Conferma una rata mensile ricevuta dal mutuatario: viene ridistribuita automaticamente tra gli investitori del prestito, in proporzione alla loro quota, e alimenta la loro dashboard delle performance.",
     "empty": "Nessuna rata in attesa per ora.",
@@ -107,7 +124,7 @@
     "confirmPayment": "Conferma il pagamento ricevuto"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · verifica manuale",
+    "kicker": "Verifica manuale",
     "title": "Verifica investitori: da gestire",
     "description": "Esamina la prova di reddito e la prova di disponibilità dei fondi, quindi conferma o rifiuta qui sotto.",
     "empty": "Nessun investitore in attesa di verifica.",
@@ -120,9 +137,9 @@
     "missingDocumentNote": "Manca un documento: impossibile confermare finché non sono stati caricati entrambi."
   },
   "KycPage": {
-    "kicker": "apps/admin · verifica manuale",
+    "kicker": "Verifica manuale",
     "title": "Verifica d'identità: da gestire",
-    "description": "Contatta il cliente per verificare il suo documento d'identità, quindi conferma o rifiuta qui sotto.",
+    "description": "Contattate il cliente per verificare il suo documento d'identità, quindi confermate o rifiutate qui sotto.",
     "empty": "Nessuna pratica in attesa di verifica manuale.",
     "pendingContact": "In attesa di contatto",
     "confirmVerification": "Conferma la verifica",
@@ -130,7 +147,7 @@
     "noApplicationNote": "Questo documento non è collegato a nessuna richiesta: impossibile far avanzare una pratica."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · panoramica",
+    "kicker": "Panoramica",
     "title": "Profili messi in contatto",
     "description": "Elenco delle coppie che hanno scambiato i propri contatti tramite una messa in contatto pagata. Da quel momento, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; Lentific non se ne assume la responsabilità, è stato fornito solo il contatto.",
     "empty": "Nessuna messa in contatto pagata per ora.",
@@ -139,7 +156,7 @@
     "borrowerToInvestor": "Mutuatario verso investitore"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · rischio",
+    "kicker": "Rischio",
     "title": "Motore del rischio",
     "demoDescription": "Esempio calcolato da <code1>assessRisk()</code1> di <code2>@fintech/risk</code2> per la pratica dimostrativa (18.500 € / 24 mesi):",
     "scoreLabel": "Punteggio",
@@ -147,7 +164,7 @@
     "riskLevelLabel": "Livello di rischio"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · statistiche",
+    "kicker": "Statistiche",
     "title": "Statistiche di visita",
     "description": "Un tracciamento delle visite leggero e autogestito, integrato nella piattaforma. Non è Matomo: Matomo richiede un account Matomo Cloud oppure un hosting separato, da configurare a parte se lo si desidera.",
     "rightNow": "In questo momento",
@@ -169,5 +186,460 @@
     "byLanguage": "Per lingua",
     "byCountry": "Per paese",
     "noData": "Nessun dato per ora."
+  },
+  "AccountValidationPage": {
+    "kicker": "Registrazioni",
+    "title": "Account da approvare",
+    "description": "Nessun mutuatario o investitore accede al proprio spazio prima della vostra approvazione. Controllate ogni registrazione, poi approvate o rifiutate con un motivo; la persona viene avvisata via e-mail.",
+    "doneApproved": "Account approvato. È stata inviata un'e-mail di attivazione.",
+    "doneRejected": "Registrazione rifiutata. La persona è stata avvisata via e-mail.",
+    "doneResent": "Nuovo link di conferma inviato.",
+    "toReviewTitle": "E-mail confermata, in attesa della vostra decisione",
+    "toReviewEmpty": "Nessuna registrazione in attesa di approvazione.",
+    "roleBorrower": "Mutuatario",
+    "roleInvestor": "Investitore",
+    "signedUpAt": "Registrato il",
+    "emailVerifiedAt": "E-mail confermata il",
+    "country": "Paese",
+    "approve": "Approva l'account",
+    "reject": "Rifiuta…",
+    "reasonLabel": "Motivo del rifiuto (inviato alla persona)",
+    "reasonPlaceholder": "Es.: informazioni incomplete, profilo fuori ambito…",
+    "confirmReject": "Conferma il rifiuto",
+    "emailPendingTitle": "E-mail non ancora confermata",
+    "emailPendingDescription": "Queste persone non hanno ancora cliccato sul link ricevuto via e-mail. Potete inviare di nuovo il link o approvare comunque se conoscete la persona.",
+    "emailPendingEmpty": "Nessuna registrazione in attesa di conferma e-mail.",
+    "resend": "Invia di nuovo il link",
+    "approveAnyway": "Approva comunque",
+    "rejectedTitle": "Registrazioni rifiutate"
+  },
+  "OutboundEmailsPage": {
+    "kicker": "Comunicazione",
+    "title": "E-mail inviate",
+    "descriptionLocal": "Nessun servizio di invio è ancora collegato: le e-mail non vengono realmente inviate, sono conservate qui per poter testare i percorsi (ad esempio cliccare su un link di conferma).",
+    "descriptionLive": "Le ultime 50 e-mail inviate dalla piattaforma.",
+    "empty": "Nessuna e-mail per ora.",
+    "to": "A:",
+    "statusSent": "Inviata",
+    "statusLocal": "Locale (non inviata)",
+    "statusFailed": "Errore"
+  },
+  "FundsPage": {
+    "kicker": "Back office · Crediti concessi",
+    "title": "Erogazioni e onorari",
+    "description": "Attestate l'erogazione di ogni credito firmato. Un admin la dichiara con la prova del finanziatore, poi un super amministratore diverso la conferma. Gli onorari possono essere richiesti solo dopo questa conferma.",
+    "empty": "Nessun credito firmato per il momento.",
+    "section1": "1 · Credito concesso",
+    "grantedSummary": "{amount} · tasso {rate} % · {months} mesi · contratto firmato",
+    "section2": "2 · Attestare l'erogazione dei fondi",
+    "doubleValidationNote": "Doppia convalida: un admin dichiara con prova, poi un super admin diverso conferma.",
+    "proofRejected": "Prova rifiutata: {reason}. Dichiarate di nuovo con un documento leggibile.",
+    "beneficiaryLabel": "Fondi versati a",
+    "availabilityLabel": "Disponibilità per il mutuatario",
+    "fundsDateLabel": "Data dell'erogazione",
+    "lenderReferenceLabel": "Riferimento del finanziatore",
+    "proofLabel": "Avviso di erogazione",
+    "proofHint": "Attestazione del finanziatore o del notaio · PDF, JPG o PNG, max 10 MB.",
+    "declare": "Dichiarare i fondi erogati",
+    "declaredBy": "Dichiarato da",
+    "confirmedBy": "Confermato da",
+    "confirm": "Confermare l'erogazione",
+    "rejectProof": "Rifiutare la prova…",
+    "reasonLabel": "Motivo del rifiuto",
+    "reasonPlaceholder": "Es.: avviso illeggibile, importo diverso dall'offerta…",
+    "confirmReject": "Rifiutare la prova",
+    "waitingSuperAdmin": "In attesa della conferma di un super amministratore.",
+    "waitingOtherSuperAdmin": "Avete dichiarato questa erogazione: un altro super amministratore deve confermarla. Nessuno convalida la propria dichiarazione.",
+    "markAvailableBank": "La banca ha messo a disposizione i fondi",
+    "markAvailableNotary": "Il notaio ha messo a disposizione i fondi",
+    "section3": "3 · Richiedere gli onorari",
+    "feesLocked": "Non disponibile finché l'erogazione non è confermata: nessun pagamento può essere richiesto prima dell'ottenimento del prestito.",
+    "feesUnlocked": "Erogazione attestata: potete richiedere gli onorari previsti dalla convenzione, anche se la banca o il notaio non hanno finito i controlli.",
+    "feeKindLabel": "Oggetto",
+    "feeAmountLabel": "Importo ({currency})",
+    "feeDueLabel": "Scadenza",
+    "requestFee": "Inviare la richiesta di pagamento",
+    "feePaymentNote": "Il cliente paga dal proprio spazio, con pagamento sicuro intestato allo studio. Nessun IBAN viene inviato per messaggio.",
+    "feeDue": "scadenza {date}",
+    "cancelFee": "Annullare",
+    "noFeesYet": "Nessuna richiesta di onorari inviata.",
+    "auditTitle": "Registro di audit ({count})",
+    "steps": {
+      "granted": "Concesso",
+      "grantedSub": "Contratto firmato",
+      "declared": "Erogazione dichiarata",
+      "declaredSub": "Da un admin",
+      "declaredWaiting": "Attesa super admin",
+      "confirmed": "Fondi erogati",
+      "confirmedSub": "Attestato",
+      "available": "Messa a disposizione",
+      "availableSub": "Fondi disponibili",
+      "fees": "Onorari",
+      "feesSub": "Richiesta possibile"
+    },
+    "status": {
+      "toDeclare": "Da erogare",
+      "declared": "Da confermare",
+      "confirmed": "Fondi erogati",
+      "rejected": "Prova rifiutata"
+    },
+    "beneficiary": {
+      "BORROWER": "Conto del mutuatario",
+      "NOTARY": "Studio notarile",
+      "SUPPLIERS": "Imprese, su fattura"
+    },
+    "availability": {
+      "AVAILABLE": "Disponibili subito",
+      "BANK_CHECKS": "Controlli in corso presso la banca",
+      "NOTARY_CHECKS": "Presso il notaio, verifiche in corso"
+    },
+    "feeKind": {
+      "BROKER_FEE": "Onorari di mediazione",
+      "COMPLEMENT": "Integrazione onorari"
+    },
+    "feeStatus": {
+      "PENDING": "In attesa",
+      "PAID": "Pagato",
+      "CANCELLED": "Annullato"
+    },
+    "errors": {
+      "not_allowed": "Non avete i permessi per questa azione.",
+      "not_signed": "Questa pratica non ha un contratto firmato.",
+      "already_declared": "L'erogazione di questa pratica è già stata dichiarata.",
+      "invalid_input": "Alcune informazioni non sono valide. Controllate il modulo.",
+      "not_declared": "Nessuna erogazione in attesa di conferma su questa pratica.",
+      "same_person": "Avete dichiarato questa erogazione: un altro super amministratore deve confermarla.",
+      "reason_required": "Indicate il motivo del rifiuto (almeno 3 caratteri).",
+      "not_confirmed": "L'erogazione non è ancora confermata.",
+      "fees_locked": "Gli onorari possono essere richiesti solo dopo la conferma dell'erogazione.",
+      "not_pending": "Questa richiesta di onorari non è più in attesa.",
+      "proof_missing": "Allegate l'avviso di erogazione (max 10 MB)."
+    },
+    "done": {
+      "declared": "Erogazione dichiarata. Ora un super amministratore deve confermarla.",
+      "confirmed": "Erogazione confermata. Il cliente vede i fondi e gli onorari sono sbloccati.",
+      "rejected": "Prova rifiutata. L'admin deve dichiarare di nuovo l'erogazione.",
+      "available": "Fondi segnati come disponibili per il cliente.",
+      "fee_requested": "Richiesta di onorari inviata al cliente.",
+      "fee_cancelled": "Richiesta di onorari annullata."
+    },
+    "audit": {
+      "disbursement": {
+        "declared": "Erogazione dichiarata",
+        "confirmed": "Erogazione confermata",
+        "proof_rejected": "Prova di erogazione rifiutata",
+        "funds_available": "Fondi messi a disposizione"
+      },
+      "broker_fee": {
+        "requested": "Onorari richiesti",
+        "cancelled": "Richiesta di onorari annullata",
+        "paid": "Onorari pagati dal cliente"
+      }
+    }
+  },
+  "ClientRequestsPage": {
+    "kicker": "Back office · Relazione clienti",
+    "title": "Richieste e messaggi",
+    "description": "Richiedete un documento o un pagamento, o scrivete a un cliente. L'invio compare subito nella sua area (notifiche, e sezione «Messaggi» per un messaggio), e un'e-mail lo invita ad accedere.",
+    "done": {
+      "doc": "Richiesta inviata a {name}. Compare tra i documenti da fornire.",
+      "pay": "Richiesta di pagamento inviata a {name}.",
+      "msg": "Messaggio inviato a {name}. Un'e-mail lo ha avvisato."
+    },
+    "errors": {
+      "doc_missing": "Scegliete almeno un documento (e indicate il nome per «Altro documento»).",
+      "fees_locked": "Nessuna richiesta di pagamento possibile: i fondi di questo cliente non sono ancora erogati e confermati.",
+      "invalid": "Importo o scadenza non validi.",
+      "msg_missing": "Oggetto e messaggio sono obbligatori.",
+      "client": "Cliente non trovato."
+    },
+    "searchPlaceholder": "Cerca un cliente…",
+    "clientsCount": "{count, plural, one {# cliente} other {# clienti}}",
+    "roleInvestor": "Investitore",
+    "roleBorrower": "Mutuatario",
+    "noClients": "Nessun cliente trovato.",
+    "pickClient": "Scegliete un cliente nell'elenco per inviargli una richiesta o un messaggio.",
+    "recipient": "Destinatario",
+    "tabs": {
+      "doc": "Richiedere un documento",
+      "pay": "Richiedere un pagamento",
+      "msg": "Messaggio"
+    },
+    "docTypesLabel": "Documenti richiesti",
+    "docTypes": {
+      "tax": "Ultima dichiarazione dei redditi",
+      "address": "Prova di residenza di meno di 3 mesi",
+      "payslips": "Ultime 3 buste paga",
+      "statements": "Estratti conto (ultimi 3 mesi)",
+      "quote": "Preventivo o fattura dei lavori",
+      "identity": "Documento d'identità",
+      "sale": "Compromesso di vendita",
+      "other": "Altro documento"
+    },
+    "otherLabel": "Nome se «Altro documento»",
+    "otherPlaceholder": "Es.: attestato del datore di lavoro",
+    "delayLabel": "Da fornire entro",
+    "delays": {
+      "48h": "48 ore",
+      "7d": "7 giorni",
+      "15d": "15 giorni"
+    },
+    "instructionsLabel": "Precisazioni per il cliente (facoltativo)",
+    "instructionsPlaceholder": "Es.: richiesto dalla banca per proseguire l'istruttoria.",
+    "sendDoc": "Inviare la richiesta",
+    "channelsNote": "Il cliente lo vedrà nella sua area e riceverà un'e-mail che lo invita ad accedere (senza il contenuto, per sicurezza).",
+    "payBlocked": "Richiesta di pagamento non disponibile: nessun credito di questo cliente ha un'erogazione confermata. La legge vieta di incassare prima dell'ottenimento del prestito.",
+    "payBlockedLink": "Vedere le erogazioni",
+    "loanLabel": "Credito interessato",
+    "fundsConfirmed": "fondi erogati",
+    "feeKindLabel": "Oggetto",
+    "feeKind": {
+      "BROKER_FEE": "Onorari di mediazione",
+      "COMPLEMENT": "Integrazione onorari"
+    },
+    "amountLabel": "Importo",
+    "dueLabel": "Scadenza",
+    "payNote": "Il cliente paga dalla propria area, con pagamento sicuro intestato allo studio. Nessun IBAN viene mai inviato per messaggio.",
+    "sendPay": "Inviare la richiesta di pagamento",
+    "otherCases": "Altre pratiche senza erogazione confermata: {list}",
+    "templatesLabel": "Modelli",
+    "templates": {
+      "progress": {
+        "label": "Pratica in corso",
+        "subject": "La vostra pratica avanza",
+        "body": "Buongiorno {name},\n\nBuone notizie: diversi finanziatori stanno esaminando la vostra richiesta. Vi ricontatto appena ho una risposta.\n\nCordiali saluti,"
+      },
+      "granted": {
+        "label": "Credito concesso",
+        "subject": "Il vostro credito è concesso",
+        "body": "Buongiorno {name},\n\nIl vostro credito è concesso. Riceverete l'offerta di prestito da firmare nella vostra area.\n\nCordiali saluti,"
+      },
+      "appointment": {
+        "label": "Appuntamento",
+        "subject": "Fissiamo un appuntamento",
+        "body": "Buongiorno {name},\n\nVi propongo una chiamata o videochiamata per fare il punto sulla pratica. Fatemi sapere quale orario vi è comodo.\n\nCordiali saluti,"
+      }
+    },
+    "subjectLabel": "Oggetto",
+    "bodyLabel": "Messaggio",
+    "sendMsg": "Inviare il messaggio",
+    "historyFor": "Storico degli invii · {name}",
+    "historyAll": "Ultimi invii",
+    "historyEmpty": "Nessun invio per ora.",
+    "historyCols": {
+      "date": "Data",
+      "client": "Cliente",
+      "type": "Tipo",
+      "subject": "Oggetto",
+      "by": "Da",
+      "status": "Stato"
+    },
+    "historyStatus": {
+      "received": "Documento ricevuto",
+      "cancelled": "Annullata",
+      "paid": "Pagata",
+      "read": "Letta",
+      "unread": "Inviata · non letta"
+    },
+    "kind": {
+      "document": "Documento",
+      "payment": "Pagamento",
+      "message": "Messaggio"
+    }
+  },
+  "ConsolePage": {
+    "kicker": "Back office · Super admin",
+    "title": "Console super admin",
+    "description": "Gestite il team e gli account clienti, e aiutate un cliente in diretta con il codice che vi comunica al telefono. Ogni azione è registrata.",
+    "tabs": {
+      "help": "Assistenza",
+      "clients": "Clienti",
+      "team": "Team"
+    },
+    "searchPlaceholder": "Cerca un cliente…",
+    "suspend": "Sospendere",
+    "reactivate": "Riattivare",
+    "status": {
+      "ACTIVE": "Attivo",
+      "SUSPENDED": "Sospeso"
+    },
+    "roles": {
+      "AGENT": "Agente",
+      "ADMIN": "Admin",
+      "SUPER_ADMIN": "Super admin"
+    },
+    "rights": {
+      "AGENT": "Pratiche, identità, contratti",
+      "ADMIN": "+ convalide, erogazioni, messaggi",
+      "SUPER_ADMIN": "Tutti i diritti"
+    },
+    "team": {
+      "inviteTitle": "Invitare un membro del team",
+      "name": "Nome",
+      "email": "E-mail",
+      "role": "Ruolo",
+      "invite": "Inviare l'invito",
+      "inviteNote": "La persona riceve un'e-mail con un link (valido 72 h) per scegliere la password. Nessuna password passa da voi.",
+      "listTitle": "Account del team",
+      "colName": "Nome",
+      "colRole": "Ruolo",
+      "colRights": "Diritti",
+      "colLogin": "Ultimo accesso",
+      "colStatus": "Stato",
+      "invitationPending": "Invito inviato",
+      "you": "voi",
+      "resend": "Reinviare l'invito",
+      "suspendNote": "La sospensione blocca subito l'accesso (tutte le sessioni vengono chiuse). L'account e le azioni passate restano nel registro. L'ultimo super admin attivo non può essere sospeso."
+    },
+    "clients": {
+      "colClient": "Cliente",
+      "colCase": "Pratica",
+      "colAccount": "Account",
+      "colBlock": "Blocco segnalato",
+      "assist": "Assistere"
+    },
+    "help": {
+      "asking": "Aiuto richiesto",
+      "pick": "Scegliete nell'elenco il cliente al telefono.",
+      "kicker": "Assistenza",
+      "activeUntil": "Sessione aperta · fino alle {time}",
+      "busy": "Già assistito da {name}",
+      "codeWaiting": "Codice generato, in attesa",
+      "noCode": "Nessun codice attivo",
+      "problem": "Blocco segnalato:",
+      "noProblem": "nessuno",
+      "codeExplain": "Al telefono, chiedete al cliente di aprire «Serve aiuto?» nella sua area e di leggervi il codice a 6 cifre. Il codice vale come consenso per 30 minuti di assistenza.",
+      "codeLabel": "Codice a 6 cifre",
+      "open": "Aprire la sessione",
+      "doTitle": "Cosa potete fare al suo posto",
+      "noPendingDocs": "Nessun documento in attesa per questo cliente.",
+      "uploadFor": "Caricare per lui: {label}",
+      "uploadHint": "Documento ricevuto dal cliente per e-mail o posta.",
+      "upload": "Caricare",
+      "moreActions": "Profilo, richieste di documenti, file:",
+      "openAccount": "aprire la sua scheda",
+      "guideTitle": "Da fare dal cliente, con voi al telefono",
+      "guideExplain": "Questi passaggi impegnano il cliente: deve farli lui. Scegliete una guida, appare subito sul suo schermo.",
+      "end": "Terminare la sessione"
+    },
+    "guidance": {
+      "sign": {
+        "title": "Firmare l'offerta o un documento",
+        "why": "La firma deve venire dal cliente"
+      },
+      "pay": {
+        "title": "Saldare gli onorari",
+        "why": "Il cliente convalida da sé il pagamento"
+      },
+      "identity": {
+        "title": "Verifica dell'identità",
+        "why": "Il documento deve inviarlo il cliente"
+      },
+      "accept": {
+        "title": "Accettare un'offerta",
+        "why": "Il consenso deve venire dal cliente"
+      },
+      "documents": {
+        "title": "Inviare un documento",
+        "why": "Il cliente carica da sé il file"
+      }
+    },
+    "done": {
+      "invited": "Invito inviato.",
+      "invite_resent": "Nuovo invito inviato.",
+      "suspended": "Account sospeso: l'accesso è bloccato.",
+      "reactivated": "Account riattivato.",
+      "session_opened": "Sessione di assistenza aperta per 30 minuti.",
+      "guided": "La guida appare sullo schermo del cliente.",
+      "uploaded": "Documento caricato per il cliente.",
+      "session_ended": "Sessione di assistenza terminata."
+    },
+    "errors": {
+      "not_allowed": "Azione non consentita.",
+      "invalid_input": "Dati non validi.",
+      "email_taken": "Esiste già un account con questa e-mail.",
+      "self": "Non potete modificare il vostro account qui.",
+      "last_super_admin": "Impossibile: è l'ultimo super admin attivo.",
+      "not_found": "Account o richiesta non trovati.",
+      "no_code": "Nessun codice valido per questo cliente: chiedetegli di generarne uno nuovo.",
+      "bad_code": "Codice errato.",
+      "too_many_attempts": "Troppi tentativi: il codice è bloccato. Il cliente deve generarne uno nuovo.",
+      "no_session": "Nessuna sessione di assistenza aperta da voi per questo cliente.",
+      "file": "Scegliete un file (max 10 MB)."
+    },
+    "log": {
+      "title": "Registro delle azioni della console",
+      "empty": "Nessuna azione per ora.",
+      "by": "da {name}",
+      "note": "Registro in sola lettura. Il cliente vede ciò che riguarda il suo account in «Serve aiuto?».",
+      "actions": {
+        "staff_invited": "Membro invitato",
+        "staff_invite_resent": "Invito reinviato",
+        "staff_activated": "Accesso attivato",
+        "account_suspended": "Account sospeso",
+        "account_reactivated": "Account riattivato",
+        "assistance_opened": "Sessione di assistenza aperta (codice cliente)",
+        "assistance_guided": "Cliente guidato passo passo",
+        "assistance_document": "Documento caricato per il cliente",
+        "assistance_ended": "Sessione di assistenza terminata"
+      }
+    },
+    "appStatus": {
+      "DRAFT": "Bozza",
+      "SUBMITTED": "Presentata",
+      "KYC_PENDING": "Identità da verificare",
+      "KYC_VERIFIED": "Identità verificata",
+      "UNDER_REVIEW": "In istruttoria",
+      "PUBLISHED": "Offerta inviata",
+      "OFFER_ACCEPTED": "Offerta accettata",
+      "CONTRACT_SIGNED": "Contratto firmato",
+      "DISBURSED": "Fondi erogati",
+      "REJECTED": "Rifiutata",
+      "CANCELLED": "Annullata"
+    }
+  },
+  "ActivatePage": {
+    "kicker": "Lentific · Back office",
+    "title": "Benvenuto/a {name}",
+    "invalidTitle": "Link non valido",
+    "invalidBody": "Questo link d'invito è scaduto o è già stato usato. Chiedete a un super amministratore di inviarvene un altro.",
+    "intro": "Scegliete la password del vostro account {email}.",
+    "password": "Password",
+    "confirm": "Confermare la password",
+    "rule": "Almeno 10 caratteri. Usate una frase facile da ricordare per voi, difficile da indovinare per gli altri.",
+    "submit": "Attivare il mio accesso",
+    "errors": {
+      "mismatch": "Le due password non coincidono.",
+      "password_short": "La password deve avere almeno 10 caratteri.",
+      "invalid_link": "Questo link non è più valido."
+    }
+  },
+  "ProspectsPage": {
+    "kicker": "Back office · Sito",
+    "title": "Richieste di contatto",
+    "description": "Le richieste di studio gratuito inviate dal sito. Richiamate il potenziale cliente e seguitene lo stato.",
+    "status": {
+      "NEW": "Nuova",
+      "CONTACTED": "Contattato",
+      "CONVERTED": "Diventato cliente",
+      "CLOSED": "Chiusa"
+    },
+    "filters": {
+      "open": "Da gestire",
+      "closed": "Gestite",
+      "all": "Tutte"
+    },
+    "projects": {
+      "MORTGAGE": "Mutuo casa",
+      "CONSOLIDATION": "Consolidamento debiti",
+      "WORKS": "Prestito lavori / consumo",
+      "OTHER": "Altro"
+    },
+    "saved": "Salvato.",
+    "empty": "Nessuna richiesta qui.",
+    "statusLabel": "Stato",
+    "noteLabel": "Nota interna",
+    "notePlaceholder": "Es.: richiamato il 14/11, appuntamento martedì",
+    "save": "Salvare"
   }
 }

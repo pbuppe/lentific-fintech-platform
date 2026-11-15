@@ -70,6 +70,7 @@ export function Simulator() {
         <p className="mt-1 text-sm text-ink-soft">
           {t("totalCost", { total: total.toLocaleString("fr-FR", { maximumFractionDigits: 0 }), rate: rate.toFixed(1) })}
         </p>
+        <p className="mt-2 text-xs text-ink-faint">{t("legal")}</p>
         <a
           href="/signup?role=BORROWER"
           className="mt-4 inline-block rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink"

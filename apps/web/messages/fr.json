@@ -5,7 +5,10 @@
     "simulator": "Simulateur",
     "logout": "Déconnexion",
     "login": "Se connecter",
-    "signup": "Créer un compte"
+    "signup": "Créer un compte",
+    "notifications": "{count, plural, =0 {Notifications} one {# notification non lue} other {# notifications non lues}}",
+    "services": "Nos services",
+    "contact": "Contact"
   },
   "LandingPage": {
     "eyebrow": "Financement participatif · P2P",
@@ -44,55 +47,55 @@
     "borrowerColumnTitle": "Pour un emprunteur",
     "borrowerSteps": [
       {
-        "title": "Simule ton besoin",
+        "title": "Simulez votre besoin",
         "body": "Montant, durée, mensualité estimée, sans engagement, sans compte."
       },
       {
-        "title": "Complète ton profil",
-        "body": "Une seule fois : revenus, charges, situation. Servira à toutes tes demandes."
+        "title": "Complétez votre profil",
+        "body": "Une seule fois : revenus, charges, situation. Il servira pour toutes vos demandes."
       },
       {
-        "title": "Dépose ta demande",
-        "body": "Envoie une pièce d'identité, un agent vérifie ton dossier sous peu."
+        "title": "Déposez votre demande",
+        "body": "Envoyez une pièce d'identité : un agent vérifie votre dossier sous peu."
       },
       {
-        "title": "Reçois une offre",
-        "body": "Le moteur de risque calcule un score, un agent te propose un financement."
+        "title": "Recevez une offre",
+        "body": "Le moteur de risque calcule un score, puis un agent vous propose un financement."
       },
       {
-        "title": "Signe et sois financé",
-        "body": "Accepte l'offre, signe ton contrat, et laisse la marketplace le financer."
+        "title": "Signez et soyez financé",
+        "body": "Acceptez l'offre, signez votre contrat et laissez la marketplace le financer."
       }
     ],
     "applyLinkArrow": "Déposer une demande →",
     "investorColumnTitle": "Pour un investisseur",
     "investorSteps": [
       {
-        "title": "Crée ton compte investisseur",
-        "body": "Renseigne ton profil et ta tolérance au risque."
+        "title": "Créez votre compte investisseur",
+        "body": "Renseignez votre profil et votre tolérance au risque."
       },
       {
-        "title": "Parcours la marketplace",
+        "title": "Parcourez la marketplace",
         "body": "Chaque dossier affiché est déjà vérifié et son contrat signé."
       },
       {
-        "title": "Investis le montant de ton choix",
+        "title": "Investissez le montant de votre choix",
         "body": "Financement fractionné : plusieurs investisseurs par dossier."
       },
       {
-        "title": "Suis ton portefeuille",
+        "title": "Suivez votre portefeuille",
         "body": "Total investi, remboursements reçus, historique, en un coup d'œil."
       }
     ],
     "viewMarketplaceLinkArrow": "Voir la marketplace →",
-    "introBoxTitle": "Besoin d'aller plus vite ? Demande une mise en relation directe (15 €)",
+    "introBoxTitle": "Besoin d'aller plus vite ? Demandez une mise en relation directe ({fee})",
     "introBoxBody": "Plutôt que d'attendre, un emprunteur peut demander le contact direct d'un investisseur (particulier, entreprise ou structure) et inversement. Une fois la demande payée, les coordonnées sont échangées immédiatement dans les deux sens.",
     "introBoxDisclaimer": "Lentific fournit le contact ; ce qui se passe ensuite entre les deux parties a lieu hors de la plateforme et n'engage pas notre responsabilité.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Des dossiers déjà vérifiés, prêts à être financés",
     "viewAll": "Tout voir",
     "noOpportunities": "Aucune opportunité ouverte pour l'instant, le premier dossier signé apparaîtra ici automatiquement.",
-    "noOpportunitiesInCountryHome": "Aucune opportunité ouverte dans ton pays pour l'instant, passe en vue internationale sur la marketplace pour voir toutes les offres.",
+    "noOpportunitiesInCountryHome": "Aucune opportunité ouverte dans votre pays pour l'instant : passez en vue internationale sur la marketplace pour voir toutes les offres.",
     "riskLabel": {
       "low": "Faible",
       "moderate": "Modéré",
@@ -101,7 +104,7 @@
     "riskPill": "Risque {label}",
     "fundedProgress": "{funded} € / {target} € financés ({pct}%)",
     "ctaFinalTitle": "Prêt à commencer ?",
-    "ctaFinalBody": "Crée un compte en moins de deux minutes, que tu cherches un financement ou que tu veuilles investir.",
+    "ctaFinalBody": "Créez un compte en moins de deux minutes, que vous cherchiez un financement ou que vous souhaitiez investir.",
     "becomeInvestor": "Devenir investisseur",
     "footerText": "© {year} Lentific · Plateforme de financement participatif.",
     "footerMarketplace": "Marketplace",
@@ -111,9 +114,9 @@
   "MarketplacePage": {
     "eyebrow": "Marketplace P2P",
     "heroTitle": "Emprunteurs et investisseurs, au même endroit",
-    "heroSubtitle": "D'un côté, des dossiers déjà vérifiés (particuliers comme PME) qui cherchent des investisseurs. De l'autre, des investisseurs (particuliers, entreprises ou structures) qui annoncent le capital qu'ils sont prêts à prêter, pour que tu saches, avant même de déposer une demande, ce qui est disponible.",
+    "heroSubtitle": "D'un côté, des dossiers déjà vérifiés (particuliers comme PME) qui cherchent des investisseurs. De l'autre, des investisseurs (particuliers, entreprises ou structures) qui annoncent le capital qu'ils sont prêts à prêter, pour que vous sachiez, avant même de déposer une demande, ce qui est disponible.",
     "availableCapitalTitle": "Capitaux disponibles chez nos investisseurs",
-    "availableCapitalSubtitle": "Ces investisseurs ont annoncé être prêts à prêter : utile pour estimer tes chances avant de déposer une demande.",
+    "availableCapitalSubtitle": "Ces investisseurs ont annoncé être prêts à prêter : utile pour estimer vos chances avant de déposer une demande.",
     "noListings": "Aucun investisseur n'a publié de capital disponible pour l'instant.",
     "noListingsInCountry": "Aucun investisseur n'a publié de capital disponible dans ce pays pour l'instant, essaie la vue internationale.",
     "amountAvailable": "{amount} € disponibles",
@@ -127,7 +130,7 @@
       "moderate": "Accepte risque modéré et faible",
       "high": "Accepte tous niveaux de risque"
     },
-    "connectCta": "Se connecter pour demander sa mise en relation (15 €)",
+    "connectCta": "Se connecter pour demander sa mise en relation ({fee})",
     "depositCta": "Déposer une demande de financement",
     "signedDossiersTitle": "Dossiers déjà signés, ouverts au financement",
     "signedDossiersSubtitle": "Ces dossiers ont déjà été vérifiés (identité, analyse de risque) et leur contrat a été signé.",
@@ -146,7 +149,7 @@
   },
   "SimulatorPage": {
     "eyebrow": "Simulateur",
-    "title": "Estime ton financement",
+    "title": "Estimez votre financement",
     "subtitle": "Ajuste le montant et la durée pour voir la mensualité et le coût total estimés, avant de déposer une demande.",
     "amountLabel": "Montant souhaité :",
     "durationLabel": "Durée :",
@@ -154,8 +157,9 @@
     "rateLabel": "Taux annuel :",
     "estimationEyebrow": "Estimation",
     "monthlyResult": "{monthly} € / mois",
-    "totalCost": "Coût total estimé : {total} € (taux simulé {rate}%, le taux réel dépend de ton dossier)",
-    "applyCta": "Déposer une demande"
+    "totalCost": "Coût total estimé : {total} € (taux simulé {rate} %, le taux réel dépend de votre dossier)",
+    "applyCta": "Déposer une demande",
+    "legal": "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
   },
   "LoginPage": {
     "brand": "Lentific",
@@ -187,8 +191,17 @@
       "submitApplication": "Déposer une demande",
       "availableInvestors": "Investisseurs disponibles",
       "introductions": "Mises en relation",
-      "myDocuments": "Mes documents"
-    }
+      "myDocuments": "Mes documents",
+      "messages": "Messages",
+      "payments": "Paiements",
+      "notifications": "Notifications",
+      "help": "Besoin d'aide ?"
+    },
+    "sideTitle": "Mon espace",
+    "advisorTitle": "Votre conseiller",
+    "teamTitle": "Une question ?",
+    "teamName": "Notre équipe vous répond",
+    "advisorCta": "Voir mes messages"
   },
   "BorrowerDashboard": {
     "statusLabel": {
@@ -204,36 +217,119 @@
       "REJECTED": "Refusée",
       "CANCELLED": "Annulée"
     },
-    "errorChooseFile": "Choisis un fichier avant d'envoyer.",
-    "pageEyebrow": "apps/web · (borrower)",
+    "errorChooseFile": "Choisissez un fichier avant d'envoyer.",
+    "pageEyebrow": "(borrower)",
     "title": "Espace emprunteur",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
     "pendingDocumentsRequested": "{count, plural, one {demandé} other {demandés}} par notre équipe ({labels}).",
     "sendArrow": "Envoyer →",
     "noApplications": "Aucune demande pour l'instant.",
-    "noApplicationsLink": "Dépose ta première demande",
+    "noApplicationsLink": "Déposez votre première demande",
     "amountDurationPurpose": "{amount} € · {duration} mois · {purpose}",
     "priorityBadge": "★ Dossier prioritaire",
     "slaBreached": ", SLA de 48h dépassé, une relance a été envoyée à notre équipe.",
     "slaDeadline": ", revue garantie avant le {date}.",
-    "priorityButton": "Passer en dossier prioritaire ({fee} €, revue sous 48h)",
+    "priorityButton": "Passer en dossier prioritaire ({fee}, revue sous 48h)",
     "identityRejectedPrompt": "Pièce refusée, envoie un nouveau document :",
-    "identityNeededPrompt": "Envoie une pièce d'identité pour continuer :",
+    "identityNeededPrompt": "Envoyez une pièce d'identité pour continuer :",
     "send": "Envoyer",
     "identityUploadedPending": "Pièce d'identité envoyée, en attente de vérification par un agent.",
     "offerProposed": "Offre proposée : {amount} € sur {duration} mois, taux {rate}%",
     "acceptOffer": "Accepter l'offre",
     "downloadContract": "Télécharger mon contrat (PDF)",
-    "signInstructions": "Imprime-le, signe-le à la main, puis envoie une photo/scan :",
+    "signInstructions": "Imprimez-le, signez-le à la main, puis envoyez une photo ou un scan :",
     "contractUploadedPending": "Contrat signé envoyé, en attente de vérification par un agent.",
-    "contractConfirmed": "Contrat confirmé signé : ton financement est maintenant proposé aux investisseurs."
+    "contractConfirmed": "Contrat confirmé signé : votre financement est maintenant proposé aux investisseurs.",
+    "feePaid": "Paiement reçu, merci. Votre facture est disponible auprès de votre conseiller.",
+    "fundsPending": "Contrat signé : le versement de vos fonds est en cours de vérification par notre équipe.",
+    "fundsDisbursedKicker": "Fonds versés",
+    "fundsDisbursedOn": "Versés le {date} · {beneficiary}",
+    "fundsBeneficiary": {
+      "BORROWER": "sur votre compte",
+      "NOTARY": "à votre notaire",
+      "SUPPLIERS": "aux entreprises, sur factures"
+    },
+    "fundsAvailability": {
+      "AVAILABLE": "Les fonds sont disponibles.",
+      "BANK_CHECKS": "Votre banque finalise ses contrôles habituels avant la mise à disposition.",
+      "NOTARY_CHECKS": "Votre notaire finalise ses vérifications habituelles avant la mise à disposition."
+    },
+    "feeKind": {
+      "BROKER_FEE": "Honoraires de courtage",
+      "COMPLEMENT": "Complément d'honoraires"
+    },
+    "feeStatusPaid": "Payé",
+    "feeStatusDue": "À régler avant le {date}",
+    "feeExplanation": "Dus depuis le versement de votre prêt, selon la convention signée.",
+    "payFee": "Payer par paiement sécurisé",
+    "feeSafetyNote": "Aucun versement ne peut être exigé avant l'obtention de votre prêt. Ne réglez jamais de frais vers un compte communiqué par téléphone ou e-mail.",
+    "greeting": "Bonjour {name}",
+    "greetingSub": "Voici où en sont vos demandes et votre crédit.",
+    "newRequest": "+ Nouvelle demande",
+    "myApplications": "Mes demandes",
+    "submittedOn": "Déposée le {date}",
+    "alerts": {
+      "docEyebrow": "Document demandé",
+      "docDue": "À fournir avant le {date}",
+      "docCta": "Envoyer le document",
+      "feeEyebrow": "Paiement à régler",
+      "feeDue": "À régler avant le {date}",
+      "feeCta": "Voir le détail",
+      "offerEyebrow": "Offre reçue",
+      "offerBody": "Une offre de prêt vous attend.",
+      "offerCta": "Voir l'offre",
+      "signEyebrow": "Contrat à signer",
+      "signBody": "Signez et renvoyez votre contrat.",
+      "signCta": "Signer"
+    },
+    "tracker": {
+      "progress": "Avancement du dossier",
+      "steps": {
+        "request": "Demande",
+        "identity": "Identité",
+        "documents": "Documents",
+        "review": "Étude",
+        "approval": "Accord",
+        "offer": "Offre",
+        "signature": "Signature",
+        "funds": "Fonds"
+      },
+      "missingDocs": "{count, plural, one {# manquant} other {# manquants}}",
+      "stateDone": "Fait",
+      "stateCurrent": "En cours"
+    },
+    "loan": {
+      "kicker": "Crédit en cours · {reference}",
+      "title": "Mon crédit",
+      "inProgress": "Remboursement en cours",
+      "donutLabel": "{pct} % du capital remboursé",
+      "repaidShort": "remboursé",
+      "borrowed": "Montant emprunté",
+      "repaid": "Déjà remboursé",
+      "remaining": "Capital restant dû",
+      "monthly": "Mensualité",
+      "nextDue": "Prochaine échéance",
+      "end": "Fin du prêt",
+      "curveTitle": "Évolution du capital restant dû",
+      "totalInterest": "Coût total des intérêts sur la durée : {amount}",
+      "lastPaid": "Dernières échéances",
+      "upcoming": "Prochaines échéances",
+      "ofWhichInterest": "dont intérêts {amount}",
+      "paid": "Prélevée",
+      "toCome": "À venir",
+      "fullSchedule": "Tableau d'amortissement ({count} mois)",
+      "colDate": "Date",
+      "colPayment": "Échéance",
+      "colInterest": "Intérêts",
+      "colRemaining": "Restant dû"
+    }
   },
   "BorrowerApplication": {
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Déposer une demande",
-    "profileIntroPart1": "Complète d'abord",
-    "profileIntroLink": "ton profil financier",
-    "profileIntroPart2": "si ce n'est pas déjà fait : le moteur de risque en a besoin pour analyser ton dossier.",
+    "profileIntroPart1": "Complétez d'abord",
+    "profileIntroLink": "votre profil financier",
+    "profileIntroPart2": "si ce n'est pas déjà fait : le moteur de risque en a besoin pour analyser votre dossier.",
     "availableFundsAmount": "{amount} €",
     "availableFundsRest": "{count, plural, one {sont actuellement disponibles chez # investisseur prêt} other {sont actuellement disponibles chez # investisseurs prêts}} à financer un dossier comme le tien,",
     "availableFundsLink": "voir le détail",
@@ -250,8 +346,8 @@
   },
   "BorrowerDocuments": {
     "title": "Mes documents",
-    "subtitle": "Documents demandés par notre équipe pour compléter ou vérifier ton dossier.",
-    "errorSelectFile": "Choisis un fichier avant d'envoyer.",
+    "subtitle": "Documents demandés par notre équipe pour compléter ou vérifier votre dossier.",
+    "errorSelectFile": "Choisissez un fichier avant d'envoyer.",
     "pendingHeading": "À déposer",
     "pendingEmpty": "Aucun document en attente pour l'instant.",
     "statusPending": "En attente",
@@ -259,23 +355,56 @@
     "submit": "Envoyer",
     "fulfilledHeading": "Déjà déposés",
     "fulfilledEmpty": "Aucun document déposé pour l'instant.",
-    "viewFile": "voir le fichier"
+    "viewFile": "voir le fichier",
+    "dueBefore": "À fournir avant le {date}",
+    "summary": {
+      "identityTitle": "Vérification d'identité",
+      "identityVerified": "Identité vérifiée",
+      "identityPending": "En cours",
+      "idSteps": {
+        "upload": {
+          "title": "Pièce d'identité",
+          "sub": "Carte ou passeport, recto-verso"
+        },
+        "review": {
+          "title": "Contrôle par notre équipe",
+          "sub": "Comparaison avec vos informations"
+        },
+        "confirmed": {
+          "title": "Identité confirmée",
+          "sub": "Dossier présentable aux prêteurs"
+        }
+      },
+      "identityRejected": "Votre pièce d'identité a été refusée : renvoyez-en une lisible depuis « Mes demandes ».",
+      "identityNote": "Nous ne vous demanderons jamais vos identifiants bancaires ni un code reçu par SMS.",
+      "checklistTitle": "Pièces du dossier",
+      "validatedCount": "{ok} / {total} validées",
+      "identityDoc": "Pièce d'identité",
+      "state": {
+        "ok": "Validé",
+        "wait": "En vérification",
+        "miss": "À envoyer",
+        "rejected": "Refusé"
+      }
+    }
   },
   "BorrowerInvestors": {
     "title": "Investisseurs disponibles",
-    "intro": "Des particuliers, entreprises et structures publient ici le capital qu'ils sont prêts à prêter. Demande à être mis en relation directe (coordonnées échangées immédiatement) pour {fee} €.",
-    "disclaimer": "Une fois mis en relation, les échanges et l'éventuel prêt se déroulent directement entre toi et l'investisseur, hors de la plateforme. Lentific fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
+    "intro": "Des particuliers, entreprises et structures publient ici le capital qu'ils sont prêts à prêter. Demandez une mise en relation directe (coordonnées échangées immédiatement) pour {fee}.",
+    "disclaimer": "Une fois mis en relation, les échanges et l'éventuel prêt se déroulent directement entre vous et l'investisseur, hors de la plateforme. Lentific fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
     "empty": "Aucun capital disponible publié pour l'instant.",
     "defaultInvestorName": "Investisseur",
     "verified": "Vérifié ✓",
     "risk": "Risque {risk}",
     "availability": "<amount>{amountValue} €</amount> disponibles · {rate}% · {duration} mois · environ {monthlyValue} €/mois",
     "alreadyIntroduced": "Mise en relation payée : coordonnées dans <link>Mes mises en relation</link>.",
-    "requestButton": "Demander la mise en relation ({fee} €)"
+    "requestButton": "Demander la mise en relation ({fee})",
+    "introPremium": "Des particuliers, entreprises et structures publient ici le capital qu'ils sont prêts à prêter. Avec votre abonnement Premium, les mises en relation directes (coordonnées échangées immédiatement) sont incluses et illimitées.",
+    "requestButtonPremium": "Demander la mise en relation (incluse dans Premium)"
   },
   "BorrowerIntroductions": {
     "title": "Mes mises en relation",
-    "intro": "Une mise en relation payée révèle le contact dans les deux sens : toi et la personne visée pouvez vous écrire directement.",
+    "intro": "Une mise en relation payée révèle le contact dans les deux sens : vous et la personne visée pouvez vous écrire directement.",
     "disclaimer": "À partir de là, vos échanges et tout ce que vous décidez ensemble ont lieu hors de la plateforme. Lentific a fourni le contact mais n'est pas responsable de ce qui se passe entre vous par la suite.",
     "sentHeading": "Demandes que j'ai envoyées",
     "sentEmpty": "Aucune demande envoyée pour l'instant.",
@@ -285,14 +414,14 @@
     "contact": "Contact : {email}",
     "paymentPending": "Paiement en attente.",
     "receivedHeading": "Demandes reçues",
-    "receivedEmpty": "Personne n'a encore demandé à te contacter.",
-    "receivedRequest": "<name>{nameValue}</name> souhaite être mis en relation avec toi.",
+    "receivedEmpty": "Personne n'a encore demandé à vous contacter.",
+    "receivedRequest": "<name>{nameValue}</name> souhaite être mis en relation avec vous.",
     "formalizeDirectLoan": "Formaliser un prêt direct",
     "viewDirectLoan": "Voir le prêt direct"
   },
   "BorrowerOnboarding": {
     "title": "Mon profil financier",
-    "subtitle": "Ces informations servent au moteur de risque et ne te seront pas redemandées lors d'une prochaine demande.",
+    "subtitle": "Ces informations servent au moteur de risque et ne vous seront pas redemandées lors d'une prochaine demande.",
     "alreadySaved": "Ton profil est déjà enregistré, modifie ce qui a changé puis enregistre à nouveau.",
     "cityLabel": "Ville",
     "postalCodeLabel": "Code postal",
@@ -315,8 +444,11 @@
       "verification": "Vérification",
       "documents": "Mes documents",
       "premium": "Premium",
-      "notifications": "Alertes"
-    }
+      "notifications": "Notifications",
+      "messages": "Messages",
+      "help": "Besoin d'aide ?"
+    },
+    "sideTitle": "Mon espace"
   },
   "InvestorDashboard": {
     "invalidAmount": "Montant invalide.",
@@ -326,7 +458,7 @@
       "high": "Élevé"
     },
     "title": "Marketplace P2P",
-    "intro": "Si tu demandes une mise en relation directe avec un emprunteur, les échanges qui suivent ont lieu hors de la plateforme. Lentific fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
+    "intro": "Si vous demandez une mise en relation directe avec un emprunteur, les échanges qui suivent ont lieu hors de la plateforme. Lentific fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
     "pendingDocumentsRequested": "{count, plural, one {demandé} other {demandés}} par notre équipe ({labels}).",
     "send": "Envoyer →",
@@ -339,10 +471,10 @@
     "invest": "Investir",
     "introductionPaidPrefix": "Mise en relation payée : coordonnées dans",
     "introductionPaidLink": "Mes mises en relation",
-    "requestIntroduction": "Être mis en relation directe avec l'emprunteur ({premium, select, yes {gratuit, Premium} other {{fee} €}})"
+    "requestIntroduction": "Être mis en relation directe avec l'emprunteur ({premium, select, yes {gratuit, Premium} other {{fee}}})"
   },
   "InvestorDocuments": {
-    "chooseFileError": "Choisis un fichier avant d'envoyer.",
+    "chooseFileError": "Choisissez un fichier avant d'envoyer.",
     "title": "Mes documents",
     "description": "Documents demandés par notre équipe, en plus des justificatifs de vérification.",
     "toUpload": "À déposer",
@@ -352,11 +484,12 @@
     "send": "Envoyer",
     "alreadyUploaded": "Déjà déposés",
     "noUploadedDocuments": "Aucun document déposé pour l'instant.",
-    "viewFile": "voir le fichier"
+    "viewFile": "voir le fichier",
+    "dueBefore": "À fournir avant le {date}"
   },
   "InvestorIntroductions": {
     "title": "Mes mises en relation",
-    "description": "Une mise en relation payée révèle le contact dans les deux sens : toi et la personne visée pouvez vous écrire directement.",
+    "description": "Une mise en relation payée révèle le contact dans les deux sens : vous et la personne visée pouvez vous écrire directement.",
     "disclaimer": "À partir de là, vos échanges et tout ce que vous décidez ensemble ont lieu hors de la plateforme. Lentific a fourni le contact mais n'est pas responsable de ce qui se passe entre vous par la suite.",
     "sentTitle": "Demandes que j'ai envoyées",
     "noSentRequests": "Aucune demande envoyée pour l'instant.",
@@ -365,26 +498,26 @@
     "contactInfo": "Contact : {email}",
     "paymentPending": "Paiement en attente.",
     "receivedTitle": "Demandes reçues",
-    "noReceivedRequests": "Personne n'a encore demandé à te contacter.",
-    "wantsToConnect": "souhaite être mis en relation avec toi.",
+    "noReceivedRequests": "Personne n'a encore demandé à vous contacter.",
+    "wantsToConnect": "souhaite être mis en relation avec vous.",
     "formalizeDirectLoan": "Formaliser un prêt direct",
     "viewDirectLoan": "Voir le prêt direct"
   },
   "InvestorNotifications": {
     "eventLabels": {
-      "funding_match_alert": "Un nouveau dossier correspond à ta tolérance au risque",
-      "introduction_paid": "Quelqu'un a payé pour obtenir ton contact",
+      "funding_match_alert": "Un nouveau dossier correspond à votre tolérance au risque",
+      "introduction_paid": "Quelqu'un a payé pour obtenir votre contact",
       "investor_verified": "Ton profil investisseur a été vérifié",
       "investor_rejected": "Ta vérification investisseur a été rejetée",
-      "document_requested": "Un document t'a été demandé"
+      "document_requested": "Un document vous a été demandé"
     },
     "title": "Mes alertes",
-    "subtitle": "Les alertes automatiques sur les nouveaux dossiers correspondant à ton profil sont réservées aux investisseurs Premium.",
+    "subtitle": "Les alertes automatiques sur les nouveaux dossiers correspondant à votre profil sont réservées aux investisseurs Premium.",
     "empty": "Aucune alerte pour l'instant."
   },
   "InvestorOffers": {
     "title": "Mes offres de capital",
-    "subtitle": "Publie un montant que tu es prêt à prêter, avec le taux et la durée que tu préfères : les emprunteurs le voient directement sur la marketplace, avant même de déposer leur demande.",
+    "subtitle": "Publiez un montant que vous êtes prêt à prêter, avec le taux et la durée que vous préférez : les emprunteurs le voient directement sur la marketplace, avant même de déposer leur demande.",
     "publishedHeading": "Offres publiées",
     "empty": "Aucune offre publiée pour l'instant.",
     "amountAvailable": "{amount} € disponibles",
@@ -443,7 +576,7 @@
       "alert": {
         "prefix": "→",
         "bold": "Alerte automatique",
-        "suffix": " dès qu'un nouveau dossier correspond à ta tolérance au risque"
+        "suffix": " dès qu'un nouveau dossier correspond à votre tolérance au risque"
       },
       "verification": {
         "prefix": "→",
@@ -459,11 +592,37 @@
     },
     "cancelButton": "Résilier mon abonnement",
     "reactivateButton": "Réactiver l'abonnement",
-    "subscribeButton": "Passer Premium (15 € simulés maintenant)"
+    "subscribeButton": "Passer Premium (15 € simulés maintenant)",
+    "kicker": "Espace investisseur",
+    "paypalPrice": "{amount} € / mois, prélevés automatiquement par PayPal. Résiliable à tout moment depuis cette page, sans frais.",
+    "statusEnding": "Actif jusqu'à la fin de la période",
+    "nextCharge": "Prochain prélèvement PayPal le {date}.",
+    "pastDue": "Le dernier prélèvement n'a pas abouti : Premium est suspendu. Vérifiez votre moyen de paiement dans votre compte PayPal, ou réabonnez-vous ci-dessous.",
+    "ended": "Abonnement terminé le {date}.",
+    "legacyNote": "Cet abonnement d'essai s'arrêtera le {date}. Pour garder Premium ensuite, réabonnez-vous avec PayPal.",
+    "cancelHint": "Plus aucun prélèvement après la résiliation. Premium reste actif jusqu'au {date}.",
+    "subscribePaypal": "S'abonner avec PayPal · {amount} € / mois",
+    "resubscribePaypal": "Me réabonner avec PayPal · {amount} € / mois",
+    "reactivatePaypal": "Me réabonner avec PayPal",
+    "reactivateHint": "Rien n'est prélevé avant le {date} : le nouvel abonnement prend le relais à la fin de la période déjà payée.",
+    "paypalHint": "Paiement sécurisé par PayPal : compte PayPal ou carte bancaire.",
+    "sandbox": "mode test",
+    "historyHeading": "Historique des prélèvements",
+    "historyEmpty": "Aucun prélèvement pour le moment.",
+    "simulated": "Simulé",
+    "notices": {
+      "active": "Bienvenue en Premium ! Votre abonnement est actif. Prochain prélèvement le {date}.",
+      "deferred": "Réabonnement enregistré. Premium continue sans interruption ; le premier prélèvement aura lieu le {date}.",
+      "cancelled": "Abonnement résilié : plus aucun prélèvement. Premium reste actif jusqu'au {date}.",
+      "checkout_cancelled": "Abonnement annulé sur PayPal : rien n'a été prélevé.",
+      "failed": "PayPal n'a pas confirmé l'abonnement : rien n'a été prélevé. Réessayez ou contactez votre conseiller.",
+      "unavailable": "Le paiement en ligne est momentanément indisponible. Réessayez dans quelques minutes.",
+      "cancel_failed": "La résiliation n'a pas pu être transmise à PayPal. Réessayez dans quelques minutes ; sans résiliation confirmée, contactez votre conseiller."
+    }
   },
   "InvestorVerification": {
     "title": "Vérification de mon profil",
-    "subtitle": "Un investisseur vérifié affiche un badge visible des emprunteurs sur la marketplace, ça rassure et ça distingue ton profil. La vérification est manuelle : un agent examine tes justificatifs.",
+    "subtitle": "Un investisseur vérifié affiche un badge visible des emprunteurs sur la marketplace : cela rassure et distingue votre profil. La vérification est manuelle : un agent examine vos justificatifs.",
     "statusLabels": {
       "UNVERIFIED": "Non vérifié",
       "PENDING_REVIEW": "En attente de vérification",
@@ -471,7 +630,7 @@
       "REJECTED": "Rejeté"
     },
     "rejectionReason": "Motif du rejet : {reason}",
-    "verifiedMessage": "Ton profil est vérifié : le badge apparaît désormais sur tes offres de capital et ton profil de contact.",
+    "verifiedMessage": "Votre profil est vérifié : le badge apparaît désormais sur vos offres de capital et votre profil de contact.",
     "pendingMessage": "Tes justificatifs ont été envoyés, un agent va les examiner. Tu seras notifié une fois la vérification terminée.",
     "incomeDocLabel": "Justificatif de revenus : {name}",
     "fundsDocLabel": "Justificatif de disponibilité des fonds : {name}",
@@ -512,7 +671,7 @@
     "pageTitle": "Formaliser un prêt direct",
     "notFound": "Mise en relation introuvable.",
     "notPaidYet": "Cette mise en relation doit d'abord être payée.",
-    "intro": "Vous avez été mis en relation avec {name}. Renseigne les conditions du prêt que vous avez convenues ensemble pour générer un contrat.",
+    "intro": "Vous avez été mis en relation avec {name}. Renseignez les conditions du prêt que vous avez convenues ensemble pour générer un contrat.",
     "alreadyFormalized": "Un prêt a déjà été formalisé avec {name}.",
     "agreementSummary": "{amount} € sur {duration} mois, taux {rate} %.",
     "downloadContract": "Télécharger le contrat",
@@ -521,5 +680,406 @@
     "rateLabel": "Taux annuel (%)",
     "disclaimer": "Ce contrat est un modèle généré automatiquement. Lentific n'est pas partie au prêt et n'intervient pas dans son remboursement : vérifiez-le avant signature.",
     "submit": "Générer le contrat"
+  },
+  "AccountPending": {
+    "kicker": "Lentific · Mon compte",
+    "titleEmail": "Confirmez votre adresse e-mail",
+    "titleReview": "Votre compte est en cours de validation",
+    "titleRejected": "Inscription non validée",
+    "titleSuspended": "Compte suspendu",
+    "stepSignup": "Confirmer votre adresse e-mail",
+    "stepEmail": "Validation par un administrateur",
+    "stepReview": "Accès à votre espace",
+    "done": "terminé",
+    "inProgress": "en cours",
+    "pillEmail": "E-mail à confirmer",
+    "pillReview": "En attente de validation",
+    "pillRejected": "Refusé",
+    "pillSuspended": "Suspendu",
+    "bodyEmail": "Nous avons envoyé un lien de confirmation à {email}. Cliquez dessus pour confirmer votre adresse. Pensez à vérifier vos courriers indésirables.",
+    "resend": "Renvoyer le lien",
+    "resent": "Un nouveau lien vient de vous être envoyé.",
+    "bodyReview": "Merci, votre adresse e-mail est confirmée. Un administrateur va maintenant examiner votre inscription. Vous recevrez un e-mail dès que votre compte sera activé.",
+    "bodyRejected": "Après examen, votre inscription n'a pas pu être validée.",
+    "reason": "Motif :",
+    "bodySuspended": "L'accès à votre compte a été suspendu. Contactez le support pour en savoir plus."
+  },
+  "VerifyEmail": {
+    "kicker": "Lentific · Confirmation d'e-mail",
+    "titleOk": "Adresse e-mail confirmée",
+    "titleError": "Lien non valide",
+    "pillOk": "Confirmé",
+    "pillError": "Erreur",
+    "bodyVerified": "Merci ! Votre adresse e-mail est confirmée. Un administrateur va maintenant valider votre compte ; vous serez prévenu par e-mail.",
+    "bodyAlready": "Cette adresse e-mail était déjà confirmée.",
+    "bodyExpired": "Ce lien a expiré. Connectez-vous pour en recevoir un nouveau.",
+    "bodyInvalid": "Ce lien n'est pas valide ou a déjà été remplacé par un plus récent. Connectez-vous pour en recevoir un nouveau.",
+    "ctaStatus": "Voir l'état de mon compte",
+    "ctaLogin": "Se connecter"
+  },
+  "ClientInbox": {
+    "kicker": "Mon espace",
+    "notificationsTitle": "Notifications",
+    "unreadCount": "{count, plural, =0 {Tout est lu.} one {# notification non lue} other {# notifications non lues}}",
+    "markAllRead": "Tout marquer comme lu",
+    "notificationsEmpty": "Aucune notification pour l'instant.",
+    "documentRequested": "Document demandé : {label}",
+    "messageFrom": "Message de {name}",
+    "unread": "Non lu",
+    "messagesTitle": "Messages",
+    "messagesSubtitle": "Les messages de votre conseiller et de l'équipe. Vous recevez un e-mail à chaque nouveau message.",
+    "messagesEmpty": "Aucun message pour l'instant.",
+    "team": "L'équipe",
+    "advisorRole": "Votre conseiller",
+    "new": "Nouveau",
+    "safetyNote": "Nous ne vous demanderons jamais vos identifiants, ni de payer vers un compte communiqué par téléphone ou e-mail.",
+    "eventLabels": {
+      "kyc_manual_review_requested": "Votre identité va être vérifiée par notre équipe",
+      "kyc_completed": "Votre identité a été vérifiée",
+      "kyc_rejected": "Votre vérification d'identité n'a pas abouti",
+      "introduction_paid": "Quelqu'un a demandé à entrer en contact avec vous",
+      "investor_verified": "Votre profil investisseur a été vérifié",
+      "investor_rejected": "Votre vérification investisseur a été refusée",
+      "document_requested": "Un document vous a été demandé",
+      "funding_match_alert": "Un nouveau dossier correspond à votre profil",
+      "disbursement_confirmed": "Les fonds de votre prêt ont été versés",
+      "disbursement_funds_available": "Vos fonds sont disponibles",
+      "broker_fee_requested": "Nouvelle demande de paiement",
+      "advisor_message": "Nouveau message",
+      "assistance_started": "Un conseiller a ouvert une session d'assistance",
+      "assistance_document": "Votre conseiller a déposé un document pour vous",
+      "assistance_ended": "Session d'assistance terminée",
+      "subscription_started": "Votre abonnement Premium est actif",
+      "subscription_renewed": "Votre abonnement Premium a été renouvelé",
+      "subscription_past_due": "Le prélèvement de votre abonnement Premium n'a pas abouti",
+      "subscription_ended": "Votre abonnement Premium est terminé"
+    }
+  },
+  "ClientPayments": {
+    "kicker": "Mon espace",
+    "title": "Paiements",
+    "subtitle": "Les demandes de paiement du cabinet et l'historique de vos règlements. Aucun paiement ne peut vous être demandé avant l'obtention de votre prêt.",
+    "paidOk": "Paiement reçu, merci.",
+    "pendingHeading": "À régler",
+    "pendingEmpty": "Aucun paiement en attente.",
+    "feeKind": {
+      "BROKER_FEE": "Honoraires de courtage",
+      "COMPLEMENT": "Complément d'honoraires"
+    },
+    "forApplication": "Dossier {reference}",
+    "dueBy": "Avant le {date}",
+    "feeExplanation": "Dus depuis le versement de votre prêt, selon la convention signée.",
+    "pay": "Payer par paiement sécurisé",
+    "historyHeading": "Historique",
+    "historyEmpty": "Aucun paiement effectué.",
+    "paymentType": {
+      "fee": "Frais",
+      "subscription": "Abonnement"
+    },
+    "paymentStatus": {
+      "PENDING": "En cours",
+      "COMPLETED": "Payé",
+      "FAILED": "Échec",
+      "REFUNDED": "Remboursé"
+    },
+    "safetyNote": "Ne réglez jamais de frais vers un compte communiqué par téléphone ou e-mail : tous vos paiements se font ici.",
+    "paymentPurpose": {
+      "introduction": "Mise en relation",
+      "priority": "Option dossier prioritaire",
+      "premium": "Abonnement Premium"
+    }
+  },
+  "ClientHelp": {
+    "title": "Besoin d'aide ?",
+    "subtitle": "Bloqué sur une étape ? Appelez votre conseiller et donnez-lui un code d'assistance : il pourra vous guider, ou faire certaines démarches pour vous pendant 30 minutes.",
+    "askTitle": "Obtenir un code d'assistance",
+    "problemLabel": "Décrivez votre blocage (facultatif)",
+    "problemPlaceholder": "Ex. : je n'arrive pas à envoyer mes documents",
+    "askNote": "Ne donnez ce code qu'à votre conseiller, pendant un appel que vous avez passé au numéro officiel du cabinet. Nous ne vous demanderons jamais votre mot de passe.",
+    "getCode": "Obtenir mon code",
+    "giveCode": "Donnez ce code à votre conseiller :",
+    "codeValidity": "Valable jusqu'à {time}.",
+    "codeConsent": "En donnant ce code, vous autorisez votre conseiller à vous assister pendant 30 minutes. Tout ce qu'il fait apparaît dans le journal ci-dessous.",
+    "cancel": "Annuler ce code",
+    "activeTitle": "{name}, du cabinet, vous aide en ce moment",
+    "activeBody": "Session d'assistance ouverte jusqu'à {time}.",
+    "guideLabel": "Votre conseiller vous guide :",
+    "guidance": {
+      "sign": "ouvrez « Mes demandes », téléchargez le contrat, signez-le puis renvoyez-le avec le bouton « Envoyer ».",
+      "pay": "ouvrez « Paiements » dans le menu de gauche, puis touchez « Payer par paiement sécurisé ».",
+      "identity": "ouvrez « Mes demandes » et envoyez une photo lisible de votre pièce d'identité, recto et verso.",
+      "accept": "ouvrez « Mes demandes », lisez l'offre proposée puis touchez « Accepter l'offre » si elle vous convient.",
+      "documents": "ouvrez « Mes documents », choisissez le fichier demandé puis touchez « Envoyer »."
+    },
+    "bannerPending": "Code d'assistance actif : donnez-le à votre conseiller.",
+    "bannerSeeCode": "Voir le code",
+    "bannerActive": "{name}, du cabinet, vous aide · jusqu'à {time}",
+    "logTitle": "Ce que l'équipe a fait sur votre compte",
+    "logEmpty": "Rien pour l'instant.",
+    "safety": "Un doute sur un appel ? Raccrochez et rappelez le numéro officiel du cabinet.",
+    "logActions": {
+      "assistance_opened": "Session d'assistance ouverte avec votre code",
+      "assistance_guided": "Vous avez été guidé pas à pas",
+      "assistance_document": "Un document a été déposé pour vous",
+      "assistance_ended": "Session d'assistance terminée",
+      "account_suspended": "Compte suspendu",
+      "account_reactivated": "Compte réactivé"
+    }
+  },
+  "HomeBroker": {
+    "hero": {
+      "eyebrow": "Plateforme de financement participatif",
+      "title": "Votre projet mérite le bon financement.",
+      "lead": "Nous comparons pour vous les offres des banques et des investisseurs de notre plateforme, montons votre dossier et vous accompagnons jusqu'au versement des fonds. Premier échange gratuit et sans engagement.",
+      "ctaStudy": "Demander une étude gratuite",
+      "trust1": "Honoraires dus seulement si votre prêt est obtenu",
+      "trust2": "Suivi de votre dossier en ligne"
+    },
+    "estimator": {
+      "title": "Estimez votre mensualité",
+      "amount": "Montant du projet",
+      "duration": "Durée",
+      "years": "{years} ans",
+      "rate": "Taux indicatif",
+      "result": "Mensualité estimée",
+      "perMonth": "/ mois",
+      "total": "Coût total estimé : {total}",
+      "cta": "Être rappelé gratuitement",
+      "legal": "Estimation indicative, sans valeur contractuelle (hors assurance et frais). Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
+    },
+    "services": {
+      "eyebrow": "Nos services",
+      "title": "Un financement pour chaque projet",
+      "mortgage": {
+        "title": "Crédit immobilier",
+        "body": "Achat, construction ou renégociation : nous défendons votre dossier pour obtenir les meilleures conditions.",
+        "cta": "Demander une étude"
+      },
+      "consolidation": {
+        "title": "Regroupement de crédits",
+        "body": "Une seule mensualité, allégée, pour retrouver de l'air dans votre budget.",
+        "cta": "Demander une étude"
+      },
+      "works": {
+        "title": "Prêt travaux & conso",
+        "body": "Rénovation, véhicule, trésorerie : un crédit adapté, comparé parmi plusieurs prêteurs.",
+        "cta": "Demander une étude"
+      },
+      "crowd": {
+        "title": "Financement participatif",
+        "body": "Des investisseurs vérifiés de notre plateforme financent directement des projets, avec un suivi transparent.",
+        "cta": "Voir la marketplace"
+      }
+    },
+    "about": {
+      "eyebrow": "Le cabinet",
+      "title": "Une plateforme indépendante",
+      "text": "Lentific met en relation particuliers, professionnels et investisseurs pour financer des projets en toute transparence. Indépendants, nous ne sommes liés par aucune exclusivité : nous comparons et défendons votre intérêt.",
+      "points": {
+        "independent": "Aucun prêteur ne nous impose ses offres",
+        "single": "Un interlocuteur unique du début à la fin",
+        "remote": "Rendez-vous en visio et dossier 100 % en ligne",
+        "noFees": "Nos honoraires ne sont dus qu'une fois votre prêt obtenu"
+      }
+    },
+    "faq": {
+      "eyebrow": "Questions fréquentes",
+      "title": "Vous vous demandez…",
+      "cost": {
+        "q": "Combien coûte un courtier ?",
+        "a": "Nos honoraires sont fixés par écrit dès le premier rendez-vous et ne sont dus qu'en cas d'obtention de votre prêt. Aucun versement, de quelque nature que ce soit, ne peut être exigé avant l'obtention d'un ou plusieurs prêts."
+      },
+      "individuals": {
+        "q": "Mon prêt peut-il être financé par des particuliers ?",
+        "a": "Oui, selon votre projet : sur notre marketplace, des investisseurs dont nous avons vérifié l'identité financent des projets, avec un contrat et un suivi comme pour un crédit classique. Méfiez-vous d'un « particulier » qui vous propose un prêt sur Internet en demandant des frais à l'avance : c'est une arnaque fréquente."
+      },
+      "documents": {
+        "q": "Quels documents préparer ?",
+        "a": "Pièce d'identité, trois derniers bulletins de salaire, deux derniers avis d'imposition, trois derniers relevés de compte et, le cas échéant, le compromis de vente ou les devis. Vous les envoyez directement depuis votre espace."
+      },
+      "delay": {
+        "q": "Combien de temps pour obtenir mon prêt ?",
+        "a": "Comptez en général quatre à huit semaines entre le premier échange et l'offre de prêt, selon le prêteur et la complexité du dossier. Avec l'option « Dossier prioritaire », vous pouvez recevoir votre crédit en une à trois semaines maximum. Vous suivez chaque étape en ligne."
+      },
+      "remote": {
+        "q": "Travaillez-vous à distance ?",
+        "a": "Oui. Rendez-vous par téléphone ou en visio, documents envoyés depuis votre espace sécurisé, et assistance en direct si vous êtes bloqué sur une étape."
+      }
+    },
+    "contact": {
+      "eyebrow": "Parlons de votre projet",
+      "title": "Demandez votre étude gratuite",
+      "sub": "Laissez-nous vos coordonnées : un conseiller vous rappelle pour faire le point sur votre projet.",
+      "free": "Étude gratuite",
+      "noCommitment": "Sans engagement",
+      "answer": "Rappel sous 24 h ouvrées",
+      "name": "Nom et prénom",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "project": "Votre projet",
+      "projects": {
+        "MORTGAGE": "Crédit immobilier",
+        "CONSOLIDATION": "Regroupement de crédits",
+        "WORKS": "Prêt travaux / consommation",
+        "OTHER": "Autre"
+      },
+      "amount": "Montant envisagé (facultatif)",
+      "amountPlaceholder": "Ex. : 150000",
+      "message": "Message (facultatif)",
+      "consent": "J'accepte d'être recontacté au sujet de mon projet. Mes données servent uniquement à traiter ma demande et ne sont jamais revendues.",
+      "send": "Envoyer ma demande",
+      "invalid": "Vérifiez vos informations : nom, téléphone, e-mail valides et accord requis.",
+      "thanksTitle": "Merci, votre demande est bien reçue !",
+      "thanksBody": "Un conseiller vous rappelle sous 24 heures ouvrées. Nous ne vous demanderons jamais de paiement avant l'obtention de votre prêt."
+    },
+    "footer": {
+      "phone": "Tél. :",
+      "services": "Nos services",
+      "simulator": "Simulateur",
+      "marketplace": "Marketplace",
+      "faq": "Questions fréquentes",
+      "login": "Espace client",
+      "orias": "Intermédiaire en opérations de banque, immatriculé à l'ORIAS sous le n° {number} (www.orias.fr).",
+      "mediator": "Médiateur de la consommation : {name}.",
+      "creditWarning": "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.",
+      "noFeeBefore": "Aucun versement, de quelque nature que ce soit, ne peut être exigé avant l'obtention d'un ou plusieurs prêts.",
+      "copyright": "© {year} {company}. Tous droits réservés.",
+      "contactPerson": "Votre interlocuteur : {name}"
+    }
+  },
+  "CreditsSummary": {
+    "title": "Mes crédits",
+    "subtitle": "Tous vos crédits, du dossier en étude jusqu'à la mise à disposition des fonds.",
+    "credited": "Montant crédité",
+    "creditedNote": "dont {amount} en cours de mise à disposition",
+    "availableTotal": "Disponible",
+    "verifyingTotal": "En cours de vérification",
+    "requestedOn": "demandé le {date}",
+    "stage": {
+      "study": "En étude",
+      "granted": "Accordé",
+      "verifying": "Versement en cours de vérification",
+      "releasing": "En cours de mise à disposition",
+      "available": "Mis à disposition",
+      "refused": "Refusé",
+      "cancelled": "Annulé"
+    },
+    "detail": {
+      "study": "Votre dossier est étudié par nos conseillers.",
+      "granted": "Crédit accordé, le versement est en préparation.",
+      "verifying": "Le versement a été effectué, nous vérifions le justificatif.",
+      "releasingNotary": "Montant crédité. Votre notaire finalise ses vérifications avant de libérer les fonds.",
+      "releasingBank": "Montant crédité. Votre banque finalise ses contrôles avant de libérer les fonds.",
+      "available": "Les fonds sont à votre disposition.",
+      "availableOn": "Fonds à votre disposition depuis le {date}."
+    }
+  },
+  "PaypalCheckout": {
+    "hint": "Paiement sécurisé par PayPal : compte PayPal ou carte bancaire.",
+    "sandbox": "mode test",
+    "cancelled": "Paiement annulé : rien n'a été prélevé. Vous pouvez réessayer quand vous voulez.",
+    "failed": "Le paiement n'a pas pu être confirmé par PayPal et rien n'a été prélevé. Réessayez ou contactez votre conseiller.",
+    "unavailable": "Le paiement en ligne est momentanément indisponible. Réessayez dans quelques minutes.",
+    "priorityPaid": "Paiement reçu : votre dossier est désormais prioritaire.",
+    "description": {
+      "broker_fee": "Honoraires de courtage, dossier {reference}",
+      "priority": "Option Dossier prioritaire, dossier {reference}",
+      "introduction": "Mise en relation Lentific, réf. {reference}"
+    },
+    "review": "Votre paiement a bien été reçu par PayPal. Notre équipe le vérifie et revient vers vous très rapidement : inutile de payer une seconde fois.",
+    "introductionPaid": "Paiement reçu : la mise en relation est faite, les coordonnées sont visibles dans « Mises en relation ».",
+    "introductionIncluded": "Mise en relation faite, incluse dans votre abonnement Premium : les coordonnées sont visibles dans « Mises en relation »."
+  },
+  "Premium": {
+    "title": "Abonnement Premium",
+    "eyebrow": "Mises en relation illimitées",
+    "statusLabels": {
+      "ACTIVE": "Actif",
+      "CANCELLED": "Terminé",
+      "PAST_DUE": "Paiement échoué"
+    },
+    "statusEnding": "Actif jusqu'à la fin de la période",
+    "nextCharge": "Prochain prélèvement PayPal le {date}.",
+    "renewalAuto": "Renouvellement automatique le {date}.",
+    "renewalCancelled": "Résilié : reste actif jusqu'au {date}, puis s'arrête sans nouveau prélèvement.",
+    "pastDue": "Le dernier prélèvement n'a pas abouti : Premium est suspendu. Vérifiez votre moyen de paiement dans votre compte PayPal, ou réabonnez-vous ci-dessous.",
+    "ended": "Abonnement terminé le {date}.",
+    "legacyNote": "Cet abonnement d'essai s'arrêtera le {date}. Pour garder Premium ensuite, réabonnez-vous avec PayPal.",
+    "featuresHeading": "Ce que Premium vous apporte",
+    "cancelButton": "Résilier mon abonnement",
+    "cancelHint": "Plus aucun prélèvement après la résiliation. Premium reste actif jusqu'au {date}.",
+    "subscribePaypal": "S'abonner avec PayPal · {amount} / mois",
+    "resubscribePaypal": "Me réabonner avec PayPal · {amount} / mois",
+    "reactivatePaypal": "Me réabonner avec PayPal",
+    "reactivateButton": "Réactiver l'abonnement",
+    "subscribeButton": "Passer Premium · {amount} / mois",
+    "reactivateHint": "Rien n'est prélevé avant le {date} : le nouvel abonnement prend le relais à la fin de la période déjà payée.",
+    "paypalHint": "Paiement sécurisé par PayPal : compte PayPal ou carte bancaire. Sans engagement, résiliable en un clic.",
+    "noCommitment": "Sans engagement, résiliable en un clic.",
+    "sandbox": "mode test",
+    "historyHeading": "Historique des prélèvements",
+    "historyEmpty": "Aucun prélèvement pour le moment.",
+    "simulated": "Simulé",
+    "unitLabel": "Sans abonnement",
+    "unitPrice": "{fee} par mise en relation",
+    "unitNote": "Chaque nouveau contact se paie à nouveau.",
+    "premiumLabel": "Avec Premium",
+    "premiumPrice": "{amount} / mois, illimité",
+    "breakEven": "Trois mises en relation à l'unité coûtent déjà presque autant : dès la quatrième, chaque contact supplémentaire est offert.",
+    "notices": {
+      "active": "Bienvenue en Premium ! Votre abonnement est actif. Prochain prélèvement le {date}.",
+      "deferred": "Réabonnement enregistré. Premium continue sans interruption ; le premier prélèvement aura lieu le {date}.",
+      "cancelled": "Abonnement résilié : plus aucun prélèvement. Premium reste actif jusqu'au {date}.",
+      "checkout_cancelled": "Abonnement annulé sur PayPal : rien n'a été prélevé.",
+      "failed": "PayPal n'a pas confirmé l'abonnement : rien n'a été prélevé. Réessayez ou contactez votre conseiller.",
+      "unavailable": "Le paiement en ligne est momentanément indisponible. Réessayez dans quelques minutes.",
+      "cancel_failed": "La résiliation n'a pas pu être transmise à PayPal. Réessayez dans quelques minutes ; si elle n'est toujours pas confirmée, contactez votre conseiller."
+    },
+    "investor": {
+      "kicker": "Espace investisseur",
+      "headline": "Placez votre capital plus vite, sans compter vos mises en relation",
+      "pitch": "Un seul contact ne suffit pas toujours : l'emprunteur a peut-être déjà trouvé son financement, ou son projet ne correspond pas tout à fait à vos critères. Avec Premium, contactez autant d'emprunteurs que vous le souhaitez, comparez les projets et décidez plus vite.",
+      "features": [
+        "Mises en relation illimitées avec les emprunteurs, sans payer chaque contact",
+        "Contactez plusieurs emprunteurs en parallèle pour comparer les projets",
+        "Alerte automatique dès qu'un nouveau dossier correspond à votre tolérance au risque",
+        "Vérification accélérée de votre profil investisseur, sous 48 h",
+        "Badge Premium affiché en plus du badge Vérifié",
+        "Tableau de bord de performance avancé : rendement, taux de défaut, historique"
+      ]
+    },
+    "borrower": {
+      "kicker": "Espace client",
+      "headline": "Multipliez vos chances d'obtenir votre financement rapidement",
+      "pitch": "Chaque investisseur a ses propres critères : montant, durée, type de projet. En ne contactant qu'un investisseur, vous dépendez de sa seule réponse. Avec Premium, contactez autant d'investisseurs que vous le souhaitez, en même temps : vous augmentez vos chances et vous gagnez un temps précieux.",
+      "features": [
+        "Mises en relation illimitées avec les investisseurs, sans payer chaque contact",
+        "Contactez plusieurs investisseurs en même temps au lieu d'attendre les réponses l'une après l'autre",
+        "Comparez les propositions et choisissez celle qui vous convient le mieux",
+        "Sans engagement : résiliable en un clic, sans frais"
+      ],
+      "disclaimer": "Premium facilite la prise de contact avec les investisseurs ; il ne garantit pas l'obtention d'un financement. Un crédit vous engage et doit être remboursé : vérifiez vos capacités de remboursement avant de vous engager."
+    }
+  },
+  "PremiumPromo": {
+    "eyebrow": "Abonnement Premium",
+    "title": "Plus de contacts, plus de chances, moins d'attente",
+    "text": "Une mise en relation coûte {fee}. Avec l'abonnement Premium à {amount} par mois, elles sont illimitées : contactez plusieurs investisseurs ou emprunteurs en parallèle et avancez plus vite.",
+    "borrowerTitle": "Vous cherchez un financement",
+    "borrowerText": "Contactez plusieurs investisseurs à la fois au lieu d'attendre une seule réponse : vous augmentez vos chances d'obtenir rapidement votre financement.",
+    "investorTitle": "Vous souhaitez investir",
+    "investorText": "Contactez autant d'emprunteurs que vous voulez pour comparer les projets et placer votre capital plus vite.",
+    "perMonth": "/ mois",
+    "unlimited": "Mises en relation illimitées · sans engagement",
+    "breakEven": "Dès la 4e mise en relation du mois, chaque contact supplémentaire est offert.",
+    "ctaBorrower": "Je cherche un financement",
+    "ctaInvestor": "Je veux investir",
+    "ctaPremium": "Découvrir Premium",
+    "bannerBorrower": "Ne misez pas tout sur un seul investisseur : avec Premium ({amount} / mois), contactez-en autant que vous voulez.",
+    "bannerInvestor": "Comparez davantage de projets : avec Premium ({amount} / mois), contactez autant d'emprunteurs que vous voulez.",
+    "bannerVisitor": "Mises en relation illimitées avec l'abonnement Premium : {amount} / mois, sans engagement.",
+    "bannerCta": "Voir l'offre",
+    "noGuarantee": "Premium facilite la prise de contact ; il ne garantit pas l'obtention d'un financement.",
+    "navLabel": "Premium"
   }
 }

@@ -3,6 +3,7 @@
  * rouge fonctionnel ET décoratif, jaune fonctionnel (boutons) ET décoratif.
  * Palette v1.1 (assombrie/désaturée + jaune ajouté) ; source unique de vérité
  * pour Tailwind (apps/web, apps/admin) et pour tout composant de packages/ui.
+ * `sand` (états « en attente » des nouveaux écrans) est décliné du jaune Lentific.
  */
 export const colors = {
   bg: "#EEEBE3",
@@ -23,6 +24,9 @@ export const colors = {
   yellow: "#F5C21B", // jaune, fonctionnel (boutons, toujours avec texte noir/ink) ET décoratif
   yellowInk: "#C89A00", // hover/actif sur fond jaune, le texte reste noir
   yellowSoft: "#FCF0C7",
+
+  sand: "#FCF0C7", // états « en attente » (jaune doux Lentific)
+  sandInk: "#6E5200",
 
   success: "#157F45",
   successSoft: "#E5F4EB",

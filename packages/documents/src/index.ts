@@ -87,12 +87,15 @@ export async function requestDocument(input: {
   requestedById: string;
   label: string;
   instructions?: string;
+  dueAt?: Date;
 }) {
   const request = await documentRequestsRepo.create(input);
   await emit("document.requested", {
     requestId: request.id,
     targetUserId: input.targetUserId,
+    requestedById: input.requestedById,
     label: input.label,
+    instructions: input.instructions,
   });
   return request;
 }

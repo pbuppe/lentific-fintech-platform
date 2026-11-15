@@ -37,6 +37,11 @@ export default async function ComptesPage() {
                   <p className="text-xs text-ink-faint">{account.email}</p>
                 </div>
                 <div className="flex items-center gap-2">
+                  {account.accountStatus !== "ACTIVE" && (
+                    <StatusPill tone={account.accountStatus === "REJECTED" || account.accountStatus === "SUSPENDED" ? "risk" : "pending"}>
+                      {t(`accountStatus.${account.accountStatus}`)}
+                    </StatusPill>
+                  )}
                   {account.role === "INVESTOR" && account.investorProfile?.verificationStatus === "VERIFIED" && (
                     <StatusPill tone="ok">{t("verified")}</StatusPill>
                   )}

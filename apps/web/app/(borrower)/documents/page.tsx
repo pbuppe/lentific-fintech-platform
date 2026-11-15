@@ -1,9 +1,10 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { fulfillDocumentRequest, listMyDocumentRequests, getFileUrl } from "@fintech/documents";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
+import { DossierSummary } from "./DossierSummary";
 
 async function fulfillAction(formData: FormData) {
   "use server";
@@ -25,6 +26,7 @@ export default async function DocumentsPage({ searchParams }: { searchParams: { 
   if (!user) redirect("/login");
 
   const t = await getTranslations("BorrowerDocuments");
+  const locale = await getLocale();
   const requests = await listMyDocumentRequests(user.id);
   const pending = requests.filter((r) => r.status === "PENDING");
   const fulfilled = requests.filter((r) => r.status === "FULFILLED");
@@ -35,12 +37,13 @@ export default async function DocumentsPage({ searchParams }: { searchParams: { 
   }
 
   return (
-    <main className="mx-auto max-w-2xl px-6 py-10">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (borrower)</p>
-      <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
+    <main className="mx-auto max-w-4xl px-6 py-10">
+      <h1 className="font-display text-2xl font-semibold text-brand">{t("title")}</h1>
       <p className="mt-2 text-sm text-ink-soft">
         {t("subtitle")}
       </p>
+
+      <DossierSummary userId={user.id} />
 
       {searchParams.error && (
         <p className="mt-4 rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent">{searchParams.error}</p>
@@ -58,6 +61,11 @@ export default async function DocumentsPage({ searchParams }: { searchParams: { 
                 <StatusPill tone="pending">{t("statusPending")}</StatusPill>
               </div>
               {r.instructions && <p className="mt-1 text-xs text-ink-soft">{r.instructions}</p>}
+              {r.dueAt && (
+                <p className="mt-1 text-xs font-semibold text-accent">
+                  {t("dueBefore", { date: new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(r.dueAt) })}
+                </p>
+              )}
               <p className="mt-1 text-xs text-ink-faint">{t("requestedBy", { name: r.requestedBy.name ?? r.requestedBy.email })}</p>
               <form action={fulfillAction} className="mt-3 flex flex-wrap items-center gap-2">
                 <input type="hidden" name="requestId" value={r.id} />

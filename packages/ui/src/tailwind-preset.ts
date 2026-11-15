@@ -24,6 +24,8 @@ export const tailwindPreset = {
         yellow: colors.yellow,
         "yellow-ink": colors.yellowInk,
         "yellow-soft": colors.yellowSoft,
+        sand: colors.sand,
+        "sand-ink": colors.sandInk,
         success: colors.success,
         "success-soft": colors.successSoft,
       },

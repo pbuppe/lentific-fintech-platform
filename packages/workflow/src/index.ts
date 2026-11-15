@@ -48,7 +48,13 @@ export type WorkflowEvent =
   | "subscription.started"
   | "subscription.renewed"
   | "subscription.cancelled"
-  | "application.sla_breached";
+  | "subscription.past_due"
+  | "subscription.ended"
+  | "application.sla_breached"
+  | "disbursement.declared"
+  | "disbursement.confirmed"
+  | "disbursement.funds_available"
+  | "broker_fee.requested";
 
 type Payload = Record<string, unknown>;
 type Handler = (payload: Payload) => Promise<void> | void;

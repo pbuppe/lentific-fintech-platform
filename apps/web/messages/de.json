@@ -5,7 +5,10 @@
     "simulator": "Simulator",
     "logout": "Abmelden",
     "login": "Anmelden",
-    "signup": "Konto erstellen"
+    "signup": "Konto erstellen",
+    "notifications": "{count, plural, =0 {Benachrichtigungen} one {# ungelesene Benachrichtigung} other {# ungelesene Benachrichtigungen}}",
+    "services": "Leistungen",
+    "contact": "Kontakt"
   },
   "LandingPage": {
     "eyebrow": "Crowdfunding · P2P",
@@ -85,7 +88,7 @@
       }
     ],
     "viewMarketplaceLinkArrow": "Marketplace ansehen →",
-    "introBoxTitle": "Muss es schneller gehen? Fordern Sie eine direkte Vermittlung an (15 €)",
+    "introBoxTitle": "Muss es schneller gehen? Fordern Sie eine direkte Vermittlung an ({fee})",
     "introBoxBody": "Statt zu warten, kann ein Kreditnehmer den direkten Kontakt zu einem Investor (Privatperson, Unternehmen oder Organisation) anfordern, und umgekehrt. Sobald die Anfrage bezahlt ist, werden die Kontaktdaten sofort in beide Richtungen ausgetauscht.",
     "introBoxDisclaimer": "Lentific stellt den Kontakt her; was danach zwischen den beiden Parteien geschieht, findet außerhalb der Plattform statt und liegt nicht in unserer Verantwortung.",
     "marketplaceEyebrow": "Marketplace",
@@ -127,7 +130,7 @@
       "moderate": "Akzeptiert moderates und niedriges Risiko",
       "high": "Akzeptiert alle Risikostufen"
     },
-    "connectCta": "Anmelden, um eine Vermittlung anzufordern (15 €)",
+    "connectCta": "Anmelden, um eine Vermittlung anzufordern ({fee})",
     "depositCta": "Finanzierungsantrag stellen",
     "signedDossiersTitle": "Bereits unterschriebene Dossiers, offen für Finanzierung",
     "signedDossiersSubtitle": "Diese Dossiers wurden bereits geprüft (Identität, Risikoanalyse) und ihr Vertrag unterschrieben.",
@@ -155,7 +158,8 @@
     "estimationEyebrow": "Schätzung",
     "monthlyResult": "{monthly} € / Monat",
     "totalCost": "Geschätzte Gesamtkosten: {total} € (simulierter Zinssatz {rate}%, der tatsächliche Zinssatz hängt von Ihrem Dossier ab)",
-    "applyCta": "Antrag stellen"
+    "applyCta": "Antrag stellen",
+    "legal": "Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
   },
   "LoginPage": {
     "brand": "Lentific",
@@ -187,8 +191,17 @@
       "submitApplication": "Antrag stellen",
       "availableInvestors": "Verfügbare Investoren",
       "introductions": "Vermittlungen",
-      "myDocuments": "Meine Dokumente"
-    }
+      "myDocuments": "Meine Dokumente",
+      "messages": "Nachrichten",
+      "payments": "Zahlungen",
+      "notifications": "Benachrichtigungen",
+      "help": "Hilfe"
+    },
+    "sideTitle": "Mein Bereich",
+    "advisorTitle": "Ihr Berater",
+    "teamTitle": "Eine Frage?",
+    "teamName": "Unser Team antwortet Ihnen",
+    "advisorCta": "Meine Nachrichten"
   },
   "BorrowerDashboard": {
     "statusLabel": {
@@ -205,7 +218,7 @@
       "CANCELLED": "Storniert"
     },
     "errorChooseFile": "Wählen Sie eine Datei aus, bevor Sie sie senden.",
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Kreditnehmerbereich",
     "pendingDocumentsCount": "{count, plural, one {# Dokument} other {# Dokumente}}",
     "pendingDocumentsRequested": "{count, plural, one {angefordert} other {angefordert}} von unserem Team ({labels}).",
@@ -216,7 +229,7 @@
     "priorityBadge": "★ Prioritäres Dossier",
     "slaBreached": ", SLA von 48 Stunden überschritten, eine Erinnerung wurde an unser Team gesendet.",
     "slaDeadline": ", garantierte Prüfung vor dem {date}.",
-    "priorityButton": "Zum prioritären Dossier wechseln ({fee} €, Prüfung innerhalb von 48 Stunden)",
+    "priorityButton": "Zum prioritären Dossier wechseln ({fee}, Prüfung innerhalb von 48 Stunden)",
     "identityRejectedPrompt": "Dokument abgelehnt, senden Sie ein neues Dokument:",
     "identityNeededPrompt": "Senden Sie einen Identitätsnachweis, um fortzufahren:",
     "send": "Senden",
@@ -226,10 +239,93 @@
     "downloadContract": "Meinen Vertrag herunterladen (PDF)",
     "signInstructions": "Drucken Sie ihn aus, unterschreiben Sie ihn von Hand und senden Sie dann ein Foto/einen Scan:",
     "contractUploadedPending": "Unterschriebener Vertrag gesendet, wird von einem Mitarbeiter geprüft.",
-    "contractConfirmed": "Vertrag bestätigt unterschrieben: Ihre Finanzierung wird jetzt Investoren angeboten."
+    "contractConfirmed": "Vertrag bestätigt unterschrieben: Ihre Finanzierung wird jetzt Investoren angeboten.",
+    "feePaid": "Zahlung erhalten, vielen Dank. Ihre Rechnung erhalten Sie bei Ihrem Berater.",
+    "fundsPending": "Vertrag unterzeichnet: Unser Team prüft die Auszahlung Ihrer Mittel.",
+    "fundsDisbursedKicker": "Mittel ausgezahlt",
+    "fundsDisbursedOn": "Ausgezahlt am {date} · {beneficiary}",
+    "fundsBeneficiary": {
+      "BORROWER": "auf Ihr Konto",
+      "NOTARY": "an Ihren Notar",
+      "SUPPLIERS": "an die Unternehmen, gegen Rechnung"
+    },
+    "fundsAvailability": {
+      "AVAILABLE": "Die Mittel sind verfügbar.",
+      "BANK_CHECKS": "Ihre Bank schließt ihre üblichen Prüfungen vor der Freigabe ab.",
+      "NOTARY_CHECKS": "Ihr Notar schließt seine üblichen Prüfungen vor der Freigabe ab."
+    },
+    "feeKind": {
+      "BROKER_FEE": "Vermittlungshonorar",
+      "COMPLEMENT": "Honorarergänzung"
+    },
+    "feeStatusPaid": "Bezahlt",
+    "feeStatusDue": "Zu zahlen bis {date}",
+    "feeExplanation": "Fällig seit der Auszahlung Ihres Kredits, gemäß der unterzeichneten Vereinbarung.",
+    "payFee": "Sicher bezahlen",
+    "feeSafetyNote": "Vor Erhalt Ihres Kredits darf keine Zahlung verlangt werden. Zahlen Sie niemals Gebühren auf ein Konto, das Ihnen per Telefon oder E-Mail genannt wurde.",
+    "greeting": "Guten Tag {name}",
+    "greetingSub": "Hier sehen Sie den Stand Ihrer Anfragen und Ihres Kredits.",
+    "newRequest": "+ Neue Anfrage",
+    "myApplications": "Meine Anfragen",
+    "submittedOn": "Eingereicht am {date}",
+    "alerts": {
+      "docEyebrow": "Dokument angefordert",
+      "docDue": "Einzureichen bis {date}",
+      "docCta": "Dokument senden",
+      "feeEyebrow": "Zahlung offen",
+      "feeDue": "Zu zahlen bis {date}",
+      "feeCta": "Details ansehen",
+      "offerEyebrow": "Angebot erhalten",
+      "offerBody": "Ein Kreditangebot wartet auf Sie.",
+      "offerCta": "Angebot ansehen",
+      "signEyebrow": "Vertrag zu unterzeichnen",
+      "signBody": "Unterzeichnen Sie Ihren Vertrag und senden Sie ihn zurück.",
+      "signCta": "Unterzeichnen"
+    },
+    "tracker": {
+      "progress": "Fortschritt des Vorgangs",
+      "steps": {
+        "request": "Anfrage",
+        "identity": "Identität",
+        "documents": "Dokumente",
+        "review": "Prüfung",
+        "approval": "Zusage",
+        "offer": "Angebot",
+        "signature": "Unterschrift",
+        "funds": "Auszahlung"
+      },
+      "missingDocs": "{count} fehlen",
+      "stateDone": "Erledigt",
+      "stateCurrent": "Läuft"
+    },
+    "loan": {
+      "kicker": "Laufender Kredit · {reference}",
+      "title": "Mein Kredit",
+      "inProgress": "Rückzahlung läuft",
+      "donutLabel": "{pct} % des Kapitals zurückgezahlt",
+      "repaidShort": "zurückgezahlt",
+      "borrowed": "Kreditbetrag",
+      "repaid": "Bereits zurückgezahlt",
+      "remaining": "Restschuld",
+      "monthly": "Monatsrate",
+      "nextDue": "Nächste Rate",
+      "end": "Kreditende",
+      "curveTitle": "Entwicklung der Restschuld",
+      "totalInterest": "Gesamte Zinskosten: {amount}",
+      "lastPaid": "Letzte Raten",
+      "upcoming": "Nächste Raten",
+      "ofWhichInterest": "davon Zinsen {amount}",
+      "paid": "Abgebucht",
+      "toCome": "Offen",
+      "fullSchedule": "Tilgungsplan ({count} Monate)",
+      "colDate": "Datum",
+      "colPayment": "Rate",
+      "colInterest": "Zinsen",
+      "colRemaining": "Restschuld"
+    }
   },
   "BorrowerApplication": {
-    "pageEyebrow": "apps/web · (borrower)",
+    "pageEyebrow": "(borrower)",
     "title": "Antrag stellen",
     "profileIntroPart1": "Vervollständigen Sie zuerst",
     "profileIntroLink": "Ihr Finanzprofil",
@@ -259,11 +355,42 @@
     "submit": "Senden",
     "fulfilledHeading": "Bereits hochgeladen",
     "fulfilledEmpty": "Noch keine Dokumente hochgeladen.",
-    "viewFile": "Datei ansehen"
+    "viewFile": "Datei ansehen",
+    "dueBefore": "Einzureichen bis {date}",
+    "summary": {
+      "identityTitle": "Identitätsprüfung",
+      "identityVerified": "Identität bestätigt",
+      "identityPending": "Läuft",
+      "idSteps": {
+        "upload": {
+          "title": "Ausweisdokument",
+          "sub": "Ausweis oder Pass, beidseitig"
+        },
+        "review": {
+          "title": "Prüfung durch unser Team",
+          "sub": "Abgleich mit Ihren Angaben"
+        },
+        "confirmed": {
+          "title": "Identität bestätigt",
+          "sub": "Vorgang bereit für Kreditgeber"
+        }
+      },
+      "identityRejected": "Ihr Ausweisdokument wurde abgelehnt: Senden Sie unter „Meine Anfragen“ ein lesbares.",
+      "identityNote": "Wir fragen nie nach Ihren Bankzugangsdaten oder einem per SMS erhaltenen Code.",
+      "checklistTitle": "Unterlagen des Vorgangs",
+      "validatedCount": "{ok} / {total} geprüft",
+      "identityDoc": "Ausweisdokument",
+      "state": {
+        "ok": "Geprüft",
+        "wait": "In Prüfung",
+        "miss": "Zu senden",
+        "rejected": "Abgelehnt"
+      }
+    }
   },
   "BorrowerInvestors": {
     "title": "Verfügbare Investoren",
-    "intro": "Privatpersonen, Unternehmen und Organisationen veröffentlichen hier das Kapital, das sie zu verleihen bereit sind. Fordern Sie eine direkte Vermittlung (Kontaktdaten sofort ausgetauscht) für {fee} € an.",
+    "intro": "Privatpersonen, Unternehmen und Organisationen veröffentlichen hier das Kapital, das sie zu verleihen bereit sind. Fordern Sie eine direkte Vermittlung (Kontaktdaten sofort ausgetauscht) für {fee} an.",
     "disclaimer": "Nach der Vermittlung finden der Austausch und ein eventueller Kredit direkt zwischen Ihnen und dem Investor statt, außerhalb der Plattform. Lentific stellt den Kontakt her, ist aber nicht verantwortlich für das, was danach zwischen Ihnen geschieht.",
     "empty": "Derzeit kein verfügbares Kapital veröffentlicht.",
     "defaultInvestorName": "Investor",
@@ -271,7 +398,9 @@
     "risk": "Risiko {risk}",
     "availability": "<amount>{amountValue} €</amount> verfügbar · {rate}% · {duration} Monate · etwa {monthlyValue} €/Monat",
     "alreadyIntroduced": "Vermittlung bezahlt: Kontaktdaten unter <link>Meine Vermittlungen</link>.",
-    "requestButton": "Vermittlung anfordern ({fee} €)"
+    "requestButton": "Vermittlung anfordern ({fee})",
+    "introPremium": "Privatpersonen, Unternehmen und Organisationen veröffentlichen hier das Kapital, das sie verleihen möchten. Mit Ihrem Premium-Abo sind direkte Kontaktvermittlungen (sofortiger Austausch der Kontaktdaten) inklusive und unbegrenzt.",
+    "requestButtonPremium": "Kontaktvermittlung anfordern (in Premium enthalten)"
   },
   "BorrowerIntroductions": {
     "title": "Meine Vermittlungen",
@@ -315,8 +444,11 @@
       "verification": "Verifizierung",
       "documents": "Meine Dokumente",
       "premium": "Premium",
-      "notifications": "Benachrichtigungen"
-    }
+      "notifications": "Benachrichtigungen",
+      "messages": "Nachrichten",
+      "help": "Hilfe"
+    },
+    "sideTitle": "Mein Bereich"
   },
   "InvestorDashboard": {
     "invalidAmount": "Ungültiger Betrag.",
@@ -339,7 +471,7 @@
     "invest": "Investieren",
     "introductionPaidPrefix": "Vermittlung bezahlt: Kontaktdaten unter",
     "introductionPaidLink": "Meine Vermittlungen",
-    "requestIntroduction": "Direkte Vermittlung mit dem Kreditnehmer erhalten ({premium, select, yes {kostenlos, Premium} other {{fee} €}})"
+    "requestIntroduction": "Direkte Vermittlung mit dem Kreditnehmer erhalten ({premium, select, yes {kostenlos, Premium} other {{fee}}})"
   },
   "InvestorDocuments": {
     "chooseFileError": "Wählen Sie eine Datei aus, bevor Sie sie senden.",
@@ -352,7 +484,8 @@
     "send": "Senden",
     "alreadyUploaded": "Bereits hochgeladen",
     "noUploadedDocuments": "Derzeit keine hochgeladenen Dokumente.",
-    "viewFile": "Datei ansehen"
+    "viewFile": "Datei ansehen",
+    "dueBefore": "Einzureichen bis {date}"
   },
   "InvestorIntroductions": {
     "title": "Meine Vermittlungen",
@@ -459,7 +592,33 @@
     },
     "cancelButton": "Mein Abonnement kündigen",
     "reactivateButton": "Abonnement reaktivieren",
-    "subscribeButton": "Zu Premium wechseln (jetzt 15 € simuliert)"
+    "subscribeButton": "Zu Premium wechseln (jetzt 15 € simuliert)",
+    "kicker": "Investorenbereich",
+    "paypalPrice": "{amount} € / Monat, automatisch über PayPal abgebucht. Jederzeit kostenlos auf dieser Seite kündbar.",
+    "statusEnding": "Aktiv bis zum Ende des Zeitraums",
+    "nextCharge": "Nächste PayPal-Abbuchung am {date}.",
+    "pastDue": "Die letzte Abbuchung ist fehlgeschlagen: Premium ist ausgesetzt. Prüfen Sie Ihre Zahlungsmethode in Ihrem PayPal-Konto oder schließen Sie unten ein neues Abo ab.",
+    "ended": "Abo beendet am {date}.",
+    "legacyNote": "Dieses Test-Abo endet am {date}. Um Premium danach zu behalten, schließen Sie ein neues Abo mit PayPal ab.",
+    "cancelHint": "Nach der Kündigung erfolgen keine Abbuchungen mehr. Premium bleibt bis zum {date} aktiv.",
+    "subscribePaypal": "Mit PayPal abonnieren · {amount} € / Monat",
+    "resubscribePaypal": "Erneut mit PayPal abonnieren · {amount} € / Monat",
+    "reactivatePaypal": "Erneut mit PayPal abonnieren",
+    "reactivateHint": "Vor dem {date} wird nichts abgebucht: Das neue Abo übernimmt am Ende des bereits bezahlten Zeitraums.",
+    "paypalHint": "Sichere Zahlung über PayPal: PayPal-Konto oder Bankkarte.",
+    "sandbox": "Testmodus",
+    "historyHeading": "Abbuchungsverlauf",
+    "historyEmpty": "Noch keine Abbuchungen.",
+    "simulated": "Simuliert",
+    "notices": {
+      "active": "Willkommen bei Premium! Ihr Abo ist aktiv. Nächste Abbuchung am {date}.",
+      "deferred": "Neues Abo erfasst. Premium läuft ohne Unterbrechung weiter; die erste Abbuchung erfolgt am {date}.",
+      "cancelled": "Abo gekündigt: keine weiteren Abbuchungen. Premium bleibt bis zum {date} aktiv.",
+      "checkout_cancelled": "Abo auf PayPal abgebrochen: Es wurde nichts abgebucht.",
+      "failed": "PayPal hat das Abo nicht bestätigt: Es wurde nichts abgebucht. Bitte versuchen Sie es erneut oder wenden Sie sich an Ihren Berater.",
+      "unavailable": "Die Online-Zahlung ist vorübergehend nicht verfügbar. Bitte versuchen Sie es in einigen Minuten erneut.",
+      "cancel_failed": "Die Kündigung konnte nicht an PayPal übermittelt werden. Bitte versuchen Sie es in einigen Minuten erneut; bleibt sie unbestätigt, wenden Sie sich an Ihren Berater."
+    }
   },
   "InvestorVerification": {
     "title": "Mein Profil verifizieren",
@@ -521,5 +680,406 @@
     "rateLabel": "Jahreszins (%)",
     "disclaimer": "Dieser Vertrag ist eine automatisch erstellte Vorlage. Lentific ist nicht Vertragspartei des Darlehens und ist nicht an dessen Rückzahlung beteiligt: prüfen Sie ihn vor der Unterzeichnung.",
     "submit": "Vertrag erstellen"
+  },
+  "AccountPending": {
+    "kicker": "Lentific · Mein Konto",
+    "titleEmail": "Bestätigen Sie Ihre E-Mail-Adresse",
+    "titleReview": "Ihr Konto wird geprüft",
+    "titleRejected": "Registrierung nicht bestätigt",
+    "titleSuspended": "Konto gesperrt",
+    "stepSignup": "E-Mail-Adresse bestätigen",
+    "stepEmail": "Prüfung durch einen Administrator",
+    "stepReview": "Zugang zu Ihrem Konto",
+    "done": "erledigt",
+    "inProgress": "läuft",
+    "pillEmail": "E-Mail zu bestätigen",
+    "pillReview": "Wartet auf Freigabe",
+    "pillRejected": "Abgelehnt",
+    "pillSuspended": "Gesperrt",
+    "bodyEmail": "Wir haben einen Bestätigungslink an {email} gesendet. Klicken Sie darauf, um Ihre Adresse zu bestätigen. Prüfen Sie auch Ihren Spam-Ordner.",
+    "resend": "Link erneut senden",
+    "resent": "Wir haben Ihnen soeben einen neuen Link gesendet.",
+    "bodyReview": "Danke, Ihre E-Mail-Adresse ist bestätigt. Ein Administrator prüft nun Ihre Registrierung. Sie erhalten eine E-Mail, sobald Ihr Konto freigeschaltet ist.",
+    "bodyRejected": "Nach Prüfung konnte Ihre Registrierung nicht bestätigt werden.",
+    "reason": "Grund:",
+    "bodySuspended": "Der Zugang zu Ihrem Konto wurde gesperrt. Bitte wenden Sie sich an den Support."
+  },
+  "VerifyEmail": {
+    "kicker": "Lentific · E-Mail-Bestätigung",
+    "titleOk": "E-Mail-Adresse bestätigt",
+    "titleError": "Ungültiger Link",
+    "pillOk": "Bestätigt",
+    "pillError": "Fehler",
+    "bodyVerified": "Danke! Ihre E-Mail-Adresse ist bestätigt. Ein Administrator wird Ihr Konto nun freischalten; Sie werden per E-Mail benachrichtigt.",
+    "bodyAlready": "Diese E-Mail-Adresse war bereits bestätigt.",
+    "bodyExpired": "Dieser Link ist abgelaufen. Melden Sie sich an, um einen neuen zu erhalten.",
+    "bodyInvalid": "Dieser Link ist ungültig oder wurde durch einen neueren ersetzt. Melden Sie sich an, um einen neuen zu erhalten.",
+    "ctaStatus": "Kontostatus ansehen",
+    "ctaLogin": "Anmelden"
+  },
+  "ClientInbox": {
+    "kicker": "Mein Bereich",
+    "notificationsTitle": "Benachrichtigungen",
+    "unreadCount": "{count, plural, =0 {Alles gelesen.} one {# ungelesene Benachrichtigung} other {# ungelesene Benachrichtigungen}}",
+    "markAllRead": "Alle als gelesen markieren",
+    "notificationsEmpty": "Noch keine Benachrichtigungen.",
+    "documentRequested": "Angefordertes Dokument: {label}",
+    "messageFrom": "Nachricht von {name}",
+    "unread": "Ungelesen",
+    "messagesTitle": "Nachrichten",
+    "messagesSubtitle": "Nachrichten Ihres Beraters und des Teams. Bei jeder neuen Nachricht erhalten Sie eine E-Mail.",
+    "messagesEmpty": "Noch keine Nachrichten.",
+    "team": "Das Team",
+    "advisorRole": "Ihr Berater",
+    "new": "Neu",
+    "safetyNote": "Wir fragen nie nach Ihren Zugangsdaten oder nach einer Zahlung auf ein per Telefon oder E-Mail genanntes Konto.",
+    "eventLabels": {
+      "kyc_manual_review_requested": "Unser Team prüft Ihre Identität",
+      "kyc_completed": "Ihre Identität wurde bestätigt",
+      "kyc_rejected": "Ihre Identitätsprüfung war nicht erfolgreich",
+      "introduction_paid": "Jemand möchte mit Ihnen Kontakt aufnehmen",
+      "investor_verified": "Ihr Investorprofil wurde geprüft",
+      "investor_rejected": "Ihre Investorprüfung wurde abgelehnt",
+      "document_requested": "Ein Dokument wurde bei Ihnen angefordert",
+      "funding_match_alert": "Ein neuer Vorgang passt zu Ihrem Profil",
+      "disbursement_confirmed": "Ihr Kredit wurde ausgezahlt",
+      "disbursement_funds_available": "Ihre Mittel sind verfügbar",
+      "broker_fee_requested": "Neue Zahlungsaufforderung",
+      "advisor_message": "Neue Nachricht",
+      "assistance_started": "Ein Berater hat eine Unterstützungssitzung geöffnet",
+      "assistance_document": "Ihr Berater hat ein Dokument für Sie hochgeladen",
+      "assistance_ended": "Unterstützungssitzung beendet",
+      "subscription_started": "Ihr Premium-Abo ist aktiv",
+      "subscription_renewed": "Ihr Premium-Abo wurde verlängert",
+      "subscription_past_due": "Die Abbuchung für Ihr Premium-Abo ist fehlgeschlagen",
+      "subscription_ended": "Ihr Premium-Abo ist beendet"
+    }
+  },
+  "ClientPayments": {
+    "kicker": "Mein Bereich",
+    "title": "Zahlungen",
+    "subtitle": "Zahlungsaufforderungen der Kanzlei und Ihr Zahlungsverlauf. Vor Erhalt Ihres Kredits darf keine Zahlung verlangt werden.",
+    "paidOk": "Zahlung erhalten, vielen Dank.",
+    "pendingHeading": "Offen",
+    "pendingEmpty": "Keine offene Zahlung.",
+    "feeKind": {
+      "BROKER_FEE": "Vermittlungshonorar",
+      "COMPLEMENT": "Honorarergänzung"
+    },
+    "forApplication": "Vorgang {reference}",
+    "dueBy": "Bis {date}",
+    "feeExplanation": "Fällig seit der Auszahlung Ihres Kredits, gemäß der unterzeichneten Vereinbarung.",
+    "pay": "Sicher bezahlen",
+    "historyHeading": "Verlauf",
+    "historyEmpty": "Noch keine Zahlungen.",
+    "paymentType": {
+      "fee": "Gebühren",
+      "subscription": "Abonnement"
+    },
+    "paymentStatus": {
+      "PENDING": "In Bearbeitung",
+      "COMPLETED": "Bezahlt",
+      "FAILED": "Fehlgeschlagen",
+      "REFUNDED": "Erstattet"
+    },
+    "safetyNote": "Zahlen Sie niemals Gebühren auf ein per Telefon oder E-Mail genanntes Konto: Alle Zahlungen erfolgen hier.",
+    "paymentPurpose": {
+      "introduction": "Kontaktvermittlung",
+      "priority": "Option vorrangige Bearbeitung",
+      "premium": "Premium-Abo"
+    }
+  },
+  "ClientHelp": {
+    "title": "Brauchen Sie Hilfe?",
+    "subtitle": "Hängen Sie bei einem Schritt fest? Rufen Sie Ihren Berater an und nennen Sie ihm einen Unterstützungscode: Er kann Sie 30 Minuten lang anleiten oder Schritte für Sie erledigen.",
+    "askTitle": "Unterstützungscode erhalten",
+    "problemLabel": "Beschreiben Sie Ihr Problem (optional)",
+    "problemPlaceholder": "Z. B.: Ich kann meine Dokumente nicht hochladen",
+    "askNote": "Geben Sie diesen Code nur Ihrem Berater, während eines Anrufs, den Sie selbst unter der offiziellen Nummer der Kanzlei getätigt haben. Wir fragen nie nach Ihrem Passwort.",
+    "getCode": "Meinen Code erhalten",
+    "giveCode": "Nennen Sie Ihrem Berater diesen Code:",
+    "codeValidity": "Gültig bis {time}.",
+    "codeConsent": "Mit diesem Code erlauben Sie Ihrem Berater, Sie 30 Minuten lang zu unterstützen. Alles, was er tut, erscheint im Protokoll unten.",
+    "cancel": "Diesen Code verwerfen",
+    "activeTitle": "{name} von der Kanzlei hilft Ihnen gerade",
+    "activeBody": "Unterstützungssitzung offen bis {time}.",
+    "guideLabel": "Ihr Berater leitet Sie an:",
+    "guidance": {
+      "sign": "öffnen Sie „Meine Anfragen“, laden Sie den Vertrag herunter, unterschreiben Sie ihn und senden Sie ihn mit „Senden“ zurück.",
+      "pay": "öffnen Sie „Zahlungen“ im linken Menü und tippen Sie auf „Sicher bezahlen“.",
+      "identity": "öffnen Sie „Meine Anfragen“ und laden Sie ein gut lesbares Foto Ihres Ausweises hoch, Vorder- und Rückseite.",
+      "accept": "öffnen Sie „Meine Anfragen“, lesen Sie das Angebot und tippen Sie auf „Angebot annehmen“, wenn es Ihnen passt.",
+      "documents": "öffnen Sie „Meine Dokumente“, wählen Sie die angeforderte Datei und tippen Sie auf „Senden“."
+    },
+    "bannerPending": "Unterstützungscode aktiv: Nennen Sie ihn Ihrem Berater.",
+    "bannerSeeCode": "Code ansehen",
+    "bannerActive": "{name} von der Kanzlei hilft Ihnen · bis {time}",
+    "logTitle": "Was das Team in Ihrem Konto getan hat",
+    "logEmpty": "Noch nichts.",
+    "safety": "Zweifel an einem Anruf? Legen Sie auf und rufen Sie die offizielle Nummer der Kanzlei an.",
+    "logActions": {
+      "assistance_opened": "Unterstützung mit Ihrem Code geöffnet",
+      "assistance_guided": "Sie wurden Schritt für Schritt angeleitet",
+      "assistance_document": "Ein Dokument wurde für Sie hochgeladen",
+      "assistance_ended": "Unterstützung beendet",
+      "account_suspended": "Konto gesperrt",
+      "account_reactivated": "Konto reaktiviert"
+    }
+  },
+  "HomeBroker": {
+    "hero": {
+      "eyebrow": "Crowdlending-Plattform",
+      "title": "Ihr Projekt verdient die richtige Finanzierung.",
+      "lead": "Wir vergleichen für Sie die Angebote von Banken und von Investoren unserer Plattform, stellen Ihre Unterlagen zusammen und begleiten Sie bis zur Auszahlung. Erstgespräch kostenlos und unverbindlich.",
+      "ctaStudy": "Kostenlose Analyse anfragen",
+      "trust1": "Honorar nur bei erhaltenem Kredit",
+      "trust2": "Vorgang online verfolgen"
+    },
+    "estimator": {
+      "title": "Monatsrate berechnen",
+      "amount": "Projektbetrag",
+      "duration": "Laufzeit",
+      "years": "{years} Jahre",
+      "rate": "Richtzins",
+      "result": "Geschätzte Monatsrate",
+      "perMonth": "/ Monat",
+      "total": "Geschätzte Gesamtkosten: {total}",
+      "cta": "Kostenloser Rückruf",
+      "legal": "Unverbindliche Schätzung (ohne Versicherung und Gebühren). Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+    },
+    "services": {
+      "eyebrow": "Unsere Leistungen",
+      "title": "Eine Finanzierung für jedes Projekt",
+      "mortgage": {
+        "title": "Immobilienkredit",
+        "body": "Kauf, Bau oder Umschuldung: Wir vertreten Ihren Antrag für die besten Konditionen.",
+        "cta": "Analyse anfragen"
+      },
+      "consolidation": {
+        "title": "Umschuldung",
+        "body": "Eine einzige, niedrigere Monatsrate für mehr Luft im Budget.",
+        "cta": "Analyse anfragen"
+      },
+      "works": {
+        "title": "Renovierungs- & Konsumkredit",
+        "body": "Renovierung, Fahrzeug, Liquidität: ein passender Kredit, verglichen bei mehreren Kreditgebern.",
+        "cta": "Analyse anfragen"
+      },
+      "crowd": {
+        "title": "Crowdlending",
+        "body": "Geprüfte Investoren unserer Plattform finanzieren Projekte direkt, mit transparenter Nachverfolgung.",
+        "cta": "Zum Marktplatz"
+      }
+    },
+    "about": {
+      "eyebrow": "Die Kanzlei",
+      "title": "Eine unabhängige Plattform",
+      "text": "Lentific bringt Privatpersonen, Unternehmen und Investoren zusammen, um Projekte transparent zu finanzieren. Unabhängig und ohne Exklusivbindung vergleichen wir und vertreten Ihre Interessen.",
+      "points": {
+        "independent": "Kein Kreditgeber zwingt uns seine Angebote auf",
+        "single": "Ein fester Ansprechpartner von Anfang bis Ende",
+        "remote": "Videotermine und vollständig digitale Unterlagen",
+        "noFees": "Unser Honorar ist erst nach Erhalt des Kredits fällig"
+      }
+    },
+    "faq": {
+      "eyebrow": "Häufige Fragen",
+      "title": "Vielleicht fragen Sie sich…",
+      "cost": {
+        "q": "Was kostet ein Vermittler?",
+        "a": "Unser Honorar wird beim ersten Termin schriftlich festgelegt und ist nur fällig, wenn Sie Ihren Kredit erhalten. Vor Erhalt eines oder mehrerer Kredite darf keinerlei Zahlung verlangt werden."
+      },
+      "individuals": {
+        "q": "Kann mein Kredit von Privatpersonen finanziert werden?",
+        "a": "Ja, je nach Projekt: Auf unserem Marktplatz finanzieren Investoren, deren Identität wir geprüft haben, Projekte – mit Vertrag und Nachverfolgung wie bei einem klassischen Kredit. Vorsicht vor „Privatpersonen“, die online Kredite gegen Vorabgebühren anbieten: ein häufiger Betrug."
+      },
+      "documents": {
+        "q": "Welche Unterlagen soll ich vorbereiten?",
+        "a": "Ausweis, die letzten drei Gehaltsabrechnungen, die letzten zwei Steuerbescheide, die letzten drei Kontoauszüge und gegebenenfalls Kaufvorvertrag oder Kostenvoranschläge. Sie laden sie direkt in Ihrem Bereich hoch."
+      },
+      "delay": {
+        "q": "Wie lange dauert es bis zum Kredit?",
+        "a": "Rechnen Sie in der Regel mit vier bis acht Wochen zwischen dem ersten Gespräch und dem Kreditangebot, je nach Kreditgeber und Komplexität der Unterlagen. Mit der Option „Vorrangige Bearbeitung“ können Sie Ihren Kredit innerhalb von höchstens ein bis drei Wochen erhalten. Sie verfolgen jeden Schritt online."
+      },
+      "remote": {
+        "q": "Arbeiten Sie auch aus der Ferne?",
+        "a": "Ja. Termine per Telefon oder Video, Unterlagen über Ihren sicheren Bereich und Live-Unterstützung, wenn Sie nicht weiterkommen."
+      }
+    },
+    "contact": {
+      "eyebrow": "Sprechen wir über Ihr Projekt",
+      "title": "Fordern Sie Ihre kostenlose Analyse an",
+      "sub": "Hinterlassen Sie Ihre Kontaktdaten: Ein Berater ruft Sie zurück.",
+      "free": "Kostenlose Analyse",
+      "noCommitment": "Unverbindlich",
+      "answer": "Rückruf innerhalb eines Werktags",
+      "name": "Vor- und Nachname",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "project": "Ihr Projekt",
+      "projects": {
+        "MORTGAGE": "Immobilienkredit",
+        "CONSOLIDATION": "Umschuldung",
+        "WORKS": "Renovierungs- / Konsumkredit",
+        "OTHER": "Sonstiges"
+      },
+      "amount": "Geplanter Betrag (optional)",
+      "amountPlaceholder": "Z. B. 150000",
+      "message": "Nachricht (optional)",
+      "consent": "Ich bin einverstanden, zu meinem Projekt kontaktiert zu werden. Meine Daten dienen nur der Bearbeitung meiner Anfrage und werden nie verkauft.",
+      "send": "Anfrage senden",
+      "invalid": "Bitte prüfen Sie Ihre Angaben: gültiger Name, Telefon, E-Mail und Einwilligung erforderlich.",
+      "thanksTitle": "Danke, Ihre Anfrage ist eingegangen!",
+      "thanksBody": "Ein Berater ruft Sie innerhalb eines Werktags zurück. Vor Erhalt Ihres Kredits verlangen wir niemals eine Zahlung."
+    },
+    "footer": {
+      "phone": "Tel.:",
+      "services": "Leistungen",
+      "simulator": "Rechner",
+      "marketplace": "Marktplatz",
+      "faq": "FAQ",
+      "login": "Kundenbereich",
+      "orias": "Bankvermittler, beim ORIAS unter Nr. {number} eingetragen (www.orias.fr).",
+      "mediator": "Verbraucherschlichtungsstelle: {name}.",
+      "creditWarning": "Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten.",
+      "noFeeBefore": "Vor Erhalt eines oder mehrerer Kredite darf keinerlei Zahlung verlangt werden.",
+      "copyright": "© {year} {company}. Alle Rechte vorbehalten.",
+      "contactPerson": "Ihr Ansprechpartner: {name}"
+    }
+  },
+  "CreditsSummary": {
+    "title": "Meine Kredite",
+    "subtitle": "Alle Ihre Kredite, von der Prüfung des Antrags bis zur Bereitstellung der Mittel.",
+    "credited": "Gutgeschriebener Betrag",
+    "creditedNote": "davon {amount} in Bereitstellung",
+    "availableTotal": "Verfügbar",
+    "verifyingTotal": "In Prüfung",
+    "requestedOn": "beantragt am {date}",
+    "stage": {
+      "study": "In Prüfung",
+      "granted": "Bewilligt",
+      "verifying": "Auszahlung wird geprüft",
+      "releasing": "In Bereitstellung",
+      "available": "Bereitgestellt",
+      "refused": "Abgelehnt",
+      "cancelled": "Storniert"
+    },
+    "detail": {
+      "study": "Ihr Antrag wird von unseren Beratern geprüft.",
+      "granted": "Kredit bewilligt, die Auszahlung wird vorbereitet.",
+      "verifying": "Die Auszahlung ist erfolgt, wir prüfen den Nachweis.",
+      "releasingNotary": "Betrag gutgeschrieben. Ihr Notar schließt seine Prüfungen ab, bevor er die Mittel freigibt.",
+      "releasingBank": "Betrag gutgeschrieben. Ihre Bank schließt ihre Kontrollen ab, bevor sie die Mittel freigibt.",
+      "available": "Die Mittel stehen Ihnen zur Verfügung.",
+      "availableOn": "Mittel verfügbar seit {date}."
+    }
+  },
+  "PaypalCheckout": {
+    "hint": "Sichere Zahlung über PayPal: PayPal-Konto oder Bankkarte.",
+    "sandbox": "Testmodus",
+    "cancelled": "Zahlung abgebrochen: Es wurde nichts abgebucht. Sie können es jederzeit erneut versuchen.",
+    "failed": "PayPal konnte die Zahlung nicht bestätigen, es wurde nichts abgebucht. Bitte versuchen Sie es erneut oder wenden Sie sich an Ihren Berater.",
+    "unavailable": "Die Online-Zahlung ist vorübergehend nicht verfügbar. Bitte versuchen Sie es in einigen Minuten erneut.",
+    "priorityPaid": "Zahlung erhalten: Ihr Antrag wird jetzt vorrangig bearbeitet.",
+    "description": {
+      "broker_fee": "Vermittlungshonorar, Antrag {reference}",
+      "priority": "Option Vorrangige Bearbeitung, Antrag {reference}",
+      "introduction": "Lentific Kontaktvermittlung, Ref. {reference}"
+    },
+    "review": "PayPal hat Ihre Zahlung erhalten. Unser Team prüft sie und meldet sich sehr bald bei Ihnen: Sie müssen nicht erneut zahlen.",
+    "introductionPaid": "Zahlung erhalten: Die Kontaktvermittlung ist erfolgt, die Kontaktdaten finden Sie unter „Kontaktvermittlungen“.",
+    "introductionIncluded": "Kontaktvermittlung erfolgt, in Ihrem Premium-Abo enthalten: Die Kontaktdaten finden Sie unter „Kontaktvermittlungen“."
+  },
+  "Premium": {
+    "title": "Premium-Abo",
+    "eyebrow": "Unbegrenzte Kontaktvermittlungen",
+    "statusLabels": {
+      "ACTIVE": "Aktiv",
+      "CANCELLED": "Beendet",
+      "PAST_DUE": "Zahlung fehlgeschlagen"
+    },
+    "statusEnding": "Aktiv bis zum Ende des Zeitraums",
+    "nextCharge": "Nächste PayPal-Abbuchung am {date}.",
+    "renewalAuto": "Automatische Verlängerung am {date}.",
+    "renewalCancelled": "Gekündigt: bleibt bis zum {date} aktiv und endet dann ohne weitere Abbuchung.",
+    "pastDue": "Die letzte Abbuchung ist fehlgeschlagen: Premium ist ausgesetzt. Prüfen Sie Ihre Zahlungsmethode in Ihrem PayPal-Konto oder schließen Sie unten ein neues Abo ab.",
+    "ended": "Abo beendet am {date}.",
+    "legacyNote": "Dieses Test-Abo endet am {date}. Um Premium danach zu behalten, schließen Sie ein neues Abo mit PayPal ab.",
+    "featuresHeading": "Was Ihnen Premium bringt",
+    "cancelButton": "Mein Abo kündigen",
+    "cancelHint": "Nach der Kündigung erfolgen keine Abbuchungen mehr. Premium bleibt bis zum {date} aktiv.",
+    "subscribePaypal": "Mit PayPal abonnieren · {amount} / Monat",
+    "resubscribePaypal": "Erneut mit PayPal abonnieren · {amount} / Monat",
+    "reactivatePaypal": "Erneut mit PayPal abonnieren",
+    "reactivateButton": "Abo reaktivieren",
+    "subscribeButton": "Zu Premium wechseln · {amount} / Monat",
+    "reactivateHint": "Vor dem {date} wird nichts abgebucht: Das neue Abo übernimmt am Ende des bereits bezahlten Zeitraums.",
+    "paypalHint": "Sichere Zahlung über PayPal: PayPal-Konto oder Bankkarte. Ohne Vertragsbindung, mit einem Klick kündbar.",
+    "noCommitment": "Ohne Vertragsbindung, mit einem Klick kündbar.",
+    "sandbox": "Testmodus",
+    "historyHeading": "Abbuchungsverlauf",
+    "historyEmpty": "Noch keine Abbuchungen.",
+    "simulated": "Simuliert",
+    "unitLabel": "Ohne Abo",
+    "unitPrice": "{fee} pro Kontaktvermittlung",
+    "unitNote": "Jeder neue Kontakt wird erneut bezahlt.",
+    "premiumLabel": "Mit Premium",
+    "premiumPrice": "{amount} / Monat, unbegrenzt",
+    "breakEven": "Drei einzelne Kontaktvermittlungen kosten schon fast genauso viel: ab der vierten ist jeder weitere Kontakt kostenlos.",
+    "notices": {
+      "active": "Willkommen bei Premium! Ihr Abo ist aktiv. Nächste Abbuchung am {date}.",
+      "deferred": "Neues Abo erfasst. Premium läuft ohne Unterbrechung weiter; die erste Abbuchung erfolgt am {date}.",
+      "cancelled": "Abo gekündigt: keine weiteren Abbuchungen. Premium bleibt bis zum {date} aktiv.",
+      "checkout_cancelled": "Abo auf PayPal abgebrochen: Es wurde nichts abgebucht.",
+      "failed": "PayPal hat das Abo nicht bestätigt: Es wurde nichts abgebucht. Bitte versuchen Sie es erneut oder wenden Sie sich an Ihren Berater.",
+      "unavailable": "Die Online-Zahlung ist vorübergehend nicht verfügbar. Bitte versuchen Sie es in einigen Minuten erneut.",
+      "cancel_failed": "Die Kündigung konnte nicht an PayPal übermittelt werden. Bitte versuchen Sie es in einigen Minuten erneut; bleibt sie unbestätigt, wenden Sie sich an Ihren Berater."
+    },
+    "investor": {
+      "kicker": "Investorenbereich",
+      "headline": "Legen Sie Ihr Kapital schneller an – mit so vielen Kontakten, wie Sie brauchen",
+      "pitch": "Ein einzelner Kontakt reicht nicht immer: Vielleicht hat der Kreditnehmer schon eine Finanzierung gefunden, oder sein Projekt passt nicht ganz zu Ihren Kriterien. Mit Premium kontaktieren Sie so viele Kreditnehmer, wie Sie möchten, vergleichen Projekte und entscheiden schneller.",
+      "features": [
+        "Unbegrenzte Kontaktvermittlungen mit Kreditnehmern, ohne jeden Kontakt zu bezahlen",
+        "Kontaktieren Sie mehrere Kreditnehmer parallel, um Projekte zu vergleichen",
+        "Automatische Benachrichtigung, sobald ein neuer Antrag zu Ihrer Risikobereitschaft passt",
+        "Beschleunigte Prüfung Ihres Investorenprofils innerhalb von 48 Stunden",
+        "Premium-Abzeichen zusätzlich zum Verifiziert-Abzeichen",
+        "Erweitertes Performance-Dashboard: Rendite, Ausfallquote, Verlauf"
+      ]
+    },
+    "borrower": {
+      "kicker": "Kundenbereich",
+      "headline": "Erhöhen Sie Ihre Chancen, Ihre Finanzierung schnell zu erhalten",
+      "pitch": "Jeder Investor hat eigene Kriterien: Betrag, Laufzeit, Art des Projekts. Kontaktieren Sie nur einen Investor, hängen Sie von einer einzigen Antwort ab. Mit Premium kontaktieren Sie gleichzeitig so viele Investoren, wie Sie möchten: Sie erhöhen Ihre Chancen und gewinnen wertvolle Zeit.",
+      "features": [
+        "Unbegrenzte Kontaktvermittlungen mit Investoren, ohne jeden Kontakt zu bezahlen",
+        "Kontaktieren Sie mehrere Investoren gleichzeitig, statt nacheinander auf Antworten zu warten",
+        "Vergleichen Sie die Angebote und wählen Sie das passende",
+        "Ohne Vertragsbindung: mit einem Klick kostenlos kündbar"
+      ],
+      "disclaimer": "Premium erleichtert die Kontaktaufnahme mit Investoren; es garantiert keine Finanzierung. Ein Kredit verpflichtet Sie und muss zurückgezahlt werden: Prüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
+    }
+  },
+  "PremiumPromo": {
+    "eyebrow": "Premium-Abo",
+    "title": "Mehr Kontakte, mehr Chancen, weniger Warten",
+    "text": "Eine Kontaktvermittlung kostet {fee}. Mit dem Premium-Abo für {amount} pro Monat sind sie unbegrenzt: Kontaktieren Sie mehrere Investoren oder Kreditnehmer parallel und kommen Sie schneller voran.",
+    "borrowerTitle": "Sie suchen eine Finanzierung",
+    "borrowerText": "Kontaktieren Sie mehrere Investoren auf einmal, statt auf eine einzige Antwort zu warten: Sie erhöhen Ihre Chancen auf eine schnelle Finanzierung.",
+    "investorTitle": "Sie möchten investieren",
+    "investorText": "Kontaktieren Sie so viele Kreditnehmer, wie Sie möchten, vergleichen Sie Projekte und legen Sie Ihr Kapital schneller an.",
+    "perMonth": "/ Monat",
+    "unlimited": "Unbegrenzte Kontaktvermittlungen · ohne Vertragsbindung",
+    "breakEven": "Ab der 4. Kontaktvermittlung im Monat ist jeder weitere Kontakt kostenlos.",
+    "ctaBorrower": "Ich suche eine Finanzierung",
+    "ctaInvestor": "Ich möchte investieren",
+    "ctaPremium": "Premium entdecken",
+    "bannerBorrower": "Setzen Sie nicht alles auf einen Investor: Mit Premium ({amount} / Monat) kontaktieren Sie so viele, wie Sie möchten.",
+    "bannerInvestor": "Vergleichen Sie mehr Projekte: Mit Premium ({amount} / Monat) kontaktieren Sie so viele Kreditnehmer, wie Sie möchten.",
+    "bannerVisitor": "Unbegrenzte Kontaktvermittlungen mit dem Premium-Abo: {amount} / Monat, ohne Vertragsbindung.",
+    "bannerCta": "Zum Angebot",
+    "noGuarantee": "Premium erleichtert die Kontaktaufnahme; es garantiert keine Finanzierung.",
+    "navLabel": "Premium"
   }
 }

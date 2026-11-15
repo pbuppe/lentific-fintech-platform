@@ -11,7 +11,9 @@ const SESSION_COOKIE_NAME = "lentific_session";
 // produit 2026-09-18, lien secret de création de compte) : sa propre
 // protection est le jeton dans l'URL, vérifié à temps constant côté page,
 // pas cette garde-ci qui exigerait déjà un compte pour en créer un.
-const PUBLIC_PREFIXES = ["/login", "/admin-access"];
+// /activer/[token] : lien d invitation d un membre de l équipe (console super
+// admin, 2026-11-14), protégé par son jeton à usage unique.
+const PUBLIC_PREFIXES = ["/login", "/admin-access", "/activer"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;

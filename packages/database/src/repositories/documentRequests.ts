@@ -5,6 +5,7 @@ export function create(data: {
   requestedById: string;
   label: string;
   instructions?: string;
+  dueAt?: Date;
 }) {
   return prisma.documentRequest.create({ data });
 }

@@ -40,6 +40,10 @@ export type {
   SupportTicket,
   AuditLog,
   DirectLoanAgreement,
+  OutboundEmail,
+  EmailVerificationToken,
+  Disbursement,
+  BrokerFeeRequest,
 } from "@prisma/client";
 
 export {
@@ -58,6 +62,11 @@ export {
   DocumentRequestStatus,
   SubscriptionStatus,
   DirectLoanAgreementStatus,
+  AccountStatus,
+  DisbursementStatus,
+  FundsBeneficiary,
+  FundsAvailability,
+  BrokerFeeStatus,
 } from "@prisma/client";
 
 export * as applicationsRepo from "./repositories/applications";
@@ -75,10 +84,15 @@ export * as sessionsRepo from "./repositories/sessions";
 export * as investorListingsRepo from "./repositories/investorListings";
 export * as introductionsRepo from "./repositories/introductions";
 export * as documentRequestsRepo from "./repositories/documentRequests";
+export * as disbursementsRepo from "./repositories/disbursements";
+export * as notificationsRepo from "./repositories/notifications";
 export * as subscriptionsRepo from "./repositories/subscriptions";
+export * as providerSettingsRepo from "./repositories/providerSettings";
 export * as storedFilesRepo from "./repositories/storedFiles";
 export * as auditLogsRepo from "./repositories/auditLogs";
 export * as countriesRepo from "./repositories/countries";
 export * as pageViewsRepo from "./repositories/pageViews";
 export type { StatsRange } from "./repositories/pageViews";
 export * as directLoanAgreementsRepo from "./repositories/directLoanAgreements";
+export * as outboundEmailsRepo from "./repositories/outboundEmails";
+export * as emailVerificationTokensRepo from "./repositories/emailVerificationTokens";

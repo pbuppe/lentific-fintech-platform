@@ -12,30 +12,38 @@ async function loginAction(formData: FormData) {
   const email = (formData.get("email") as string)?.trim();
   const password = formData.get("password") as string;
 
+  let session: Awaited<ReturnType<typeof signIn>>;
   try {
-    const { token, user } = await signIn({ email, password });
-
-    if (!ADMIN_ROLES.includes(user.role)) {
-      await signOut(token);
-      redirect("/login?error=" + encodeURIComponent("Ce compte n'a pas accès au back-office."));
-    }
-
-    cookies().set(SESSION_COOKIE_NAME, token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 30,
-      path: "/",
-    });
+    session = await signIn({ email, password });
   } catch (error) {
     const message = error instanceof AuthError ? error.message : "Connexion impossible.";
     redirect(`/login?error=${encodeURIComponent(message)}`);
   }
+  const { token, user } = session;
+
+  // redirect() hors du try : sinon l exception de redirection est avalée par le catch.
+  if (!ADMIN_ROLES.includes(user.role)) {
+    await signOut(token);
+    redirect("/login?error=" + encodeURIComponent("Ce compte n'a pas accès au back-office."));
+  }
+  // Compte suspendu depuis la console super admin : pas de session.
+  if (user.accountStatus !== "ACTIVE") {
+    await signOut(token);
+    redirect("/login?error=" + encodeURIComponent("Ce compte est suspendu. Contactez un super administrateur."));
+  }
+
+  cookies().set(SESSION_COOKIE_NAME, token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    maxAge: 60 * 60 * 24 * 30,
+    path: "/",
+  });
 
   redirect("/");
 }
 
-export default async function AdminLoginPage({ searchParams }: { searchParams: { error?: string } }) {
+export default async function AdminLoginPage({ searchParams }: { searchParams: { error?: string; activated?: string } }) {
   const t = await getTranslations("AdminLoginPage");
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
@@ -43,6 +51,9 @@ export default async function AdminLoginPage({ searchParams }: { searchParams: {
       <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
 
       <Card className="mt-6">
+        {searchParams.activated && (
+          <p role="status" className="mb-4 rounded-lg bg-success-soft px-3 py-2 text-sm text-success">{t("activated")}</p>
+        )}
         {searchParams.error && (
           <p className="mb-4 rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent">{searchParams.error}</p>
         )}

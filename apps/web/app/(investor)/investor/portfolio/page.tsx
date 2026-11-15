@@ -4,6 +4,7 @@ import { getPortfolio, listInvestments } from "@fintech/funding";
 import { subscriptionsRepo } from "@fintech/database";
 import { Card, StatusPill, Button } from "@fintech/ui";
 import { getCurrentUser } from "../../../../lib/session";
+import { SpaceKicker } from "../../../components/SpaceKicker";
 
 const STATUS_TONE: Record<string, "ok" | "pending" | "risk"> = {
   ACTIVE: "pending",
@@ -40,7 +41,7 @@ export default async function PortfolioPage() {
 
   return (
     <main className="mx-auto max-w-4xl px-6 py-10">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (investor)</p>
+      <SpaceKicker audience="investor" />
       <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
