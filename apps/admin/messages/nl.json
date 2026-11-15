@@ -187,7 +187,7 @@
     "byLanguage": "Per taal",
     "byCountry": "Per land",
     "noData": "Nog geen gegevens.",
-    "descriptionV2": "Volledige bezoekersanalyse van de website, door ons gehost: wie er online is, vanwaar, met welk apparaat, hoe lang, welke pagina's en welke acties. Er worden geen IP-adressen bewaard.",
+    "descriptionV2": "Volledige bezoekersanalyse van de website: wie er online is, vanwaar (land en stad afgeleid van het IP-adres, dat nooit wordt bewaard), met welk apparaat, hoe lang, welke pagina's en welke acties. Bezoekers die cookies weigeren, worden nog steeds anoniem geteld.",
     "rightNow5": "Online (5 min)",
     "tabs": {
       "overview": "Overzicht",
@@ -201,7 +201,8 @@
       "pagesPerVisit": "Pagina's / bezoek",
       "avgDuration": "Gem. duur",
       "bounceRate": "Bouncepercentage",
-      "members": "Ingelogde leden"
+      "members": "Ingelogde leden",
+      "anonymous": "Anonieme bezoeken (cookies geweigerd)"
     },
     "chart": {
       "title": "Verloop van de bezoeken",
@@ -232,7 +233,9 @@
     },
     "live": {
       "hint": "Bezoekers die de afgelopen 5 minuten actief waren. De pagina ververst zichzelf elke 10 seconden.",
-      "empty": "Er is op dit moment niemand op de website."
+      "empty": "Er is op dit moment niemand op de website.",
+      "anonymousTitle": "Anonieme bezoekers (cookies geweigerd)",
+      "anonymousHint": "Land, stad en apparaat zijn bekend, maar geen traject: deze bezoekers hebben geen cookies geaccepteerd."
     },
     "visit": {
       "anonymous": "Anonieme bezoeker",
@@ -262,6 +265,42 @@
       "empty": "Geen bezoeken in deze periode.",
       "prev": "Recenter",
       "next": "Ouder"
+    },
+    "visitors": {
+      "title": "Bezoekerslijst",
+      "hint": "Eén regel per bezoeker (mensen die cookies hebben geaccepteerd, de enigen die van bezoek tot bezoek herkenbaar zijn): nieuw of terugkerend, aantal bezoeken sinds het eerste, land, bestede tijd en acties. Klik op „Geschiedenis” om terug te gaan tot het allereerste bezoek.",
+      "country": "Land",
+      "action": "Type actie",
+      "anyAction": "Alle",
+      "rows": "Regels",
+      "apply": "Filteren",
+      "empty": "Geen bezoekers voor deze criteria.",
+      "colVisitor": "Bezoeker",
+      "colCountry": "Land",
+      "colDevice": "Apparaat",
+      "colVisits": "Bezoeken",
+      "colFirst": "Eerste bezoek",
+      "colLast": "Laatste bezoek",
+      "colTime": "Tijd op de site",
+      "colPages": "Pagina's",
+      "colActions": "Acties",
+      "new": "Nieuw",
+      "returning": "Terugkerend · {n} bezoeken",
+      "inPeriod": "{n} in de periode",
+      "history": "Geschiedenis"
+    },
+    "visitor": {
+      "back": "Terug naar de statistieken",
+      "kicker": "Bezoekersprofiel",
+      "title": "Bezoeker #{id}",
+      "empty": "Geen bezoeken geregistreerd voor deze bezoeker.",
+      "visits": "Bezoeken",
+      "firstVisit": "Eerste bezoek",
+      "totalTime": "Totale tijd",
+      "pagesActions": "Pagina's · acties",
+      "countries": "Landen",
+      "historyTitle": "Bezoekgeschiedenis",
+      "visitLabel": "Bezoek nr. {n}"
     }
   },
   "AccountValidationPage": {
@@ -753,7 +792,7 @@
       "basis": "Kies de rechtsgrond en vink het bevestigingsvakje aan."
     },
     "templates": {
-      "intro": "Zes formats in de 8 talen van de website. Kies er een, pas de tekst zo nodig aan en sla hem op als campagne.",
+      "intro": "Veertien formats in de 8 talen van de website: korte, opvallende berichten die zin geven om de site te bezoeken, en uitgebreidere sjablonen. Kies er een, pas de tekst zo nodig aan en sla hem op als campagne.",
       "use": "Dit sjabloon gebruiken",
       "preview": "Voorbeeld",
       "names": {
@@ -762,7 +801,15 @@
         "investors": "Investeerders",
         "followup": "Korte herinnering",
         "premium": "Premium-aanbod",
-        "partners": "Partnerschap voor professionals"
+        "partners": "Partnerschap voor professionals",
+        "s_bank": "„Zei uw bank nee?”",
+        "s_minutes": "„2 minuten om het te weten”",
+        "s_monthly": "„Te veel maandlasten?”",
+        "s_works": "„Uw verbouwing kan niet wachten”",
+        "s_invest": "„Uw spaargeld voor echte projecten”",
+        "s_waiting": "„Uw gratis analyse wacht”",
+        "s_question": "„Eén vraag maar”",
+        "s_how": "„Financieren op een andere manier”"
       },
       "uses": {
         "discover": "Eerste contact, alle doelgroepen",
@@ -770,8 +817,19 @@
         "investors": "Mensen die willen investeren",
         "followup": "Enkele dagen na een eerste e-mail",
         "premium": "Al geregistreerde leden",
-        "partners": "Kredietbemiddelaars, makelaars, adviseurs"
-      }
+        "partners": "Kredietbemiddelaars, makelaars, adviseurs",
+        "s_bank": "Mensen bij wie een lening is geweigerd",
+        "s_minutes": "Leidt naar de simulator",
+        "s_monthly": "Leningen samenvoegen",
+        "s_works": "Verbouwingsprojecten",
+        "s_invest": "Toekomstige investeerders",
+        "s_waiting": "Wie de aanvraag niet heeft afgerond",
+        "s_question": "Eerste contact, alle projecten",
+        "s_how": "Uitleggen hoe het platform werkt"
+      },
+      "shortTitle": "Kort en krachtig — voor mensen die u hun adres hebben gegeven",
+      "classicTitle": "Klassieke sjablonen",
+      "shortBadge": "Kort"
     },
     "editor": {
       "newTitle": "Nieuwe campagne",

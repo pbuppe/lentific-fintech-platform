@@ -76,9 +76,10 @@ async function enrich(rows: RawVisit[]): Promise<VisitSummary[]> {
  * après `startedSince`. Durée = temps mesuré sur les pages, ou à défaut l'écart
  * entre la première et la dernière page.
  */
-async function queryVisits(opts: { activeSince: Date; limit: number; offset?: number; device?: string; country?: string }) {
+async function queryVisits(opts: { activeSince: Date; limit: number; offset?: number; device?: string; country?: string; visitorId?: string }) {
   const device = opts.device ?? null;
   const country = opts.country ?? null;
+  const visitor = opts.visitorId ?? null;
   const rows = await prisma.$queryRaw<RawVisit[]>`
     SELECT "sessionId",
       max("visitorId") AS "visitorId",
@@ -106,6 +107,7 @@ async function queryVisits(opts: { activeSince: Date; limit: number; offset?: nu
     HAVING max("createdAt") >= ${opts.activeSince}
       AND (${device}::text IS NULL OR max("deviceType") = ${device}::text)
       AND (${country}::text IS NULL OR max("geoCountryCode") = ${country}::text)
+      AND (${visitor}::text IS NULL OR max("visitorId") = ${visitor}::text)
     ORDER BY max("createdAt") DESC
     LIMIT ${opts.limit} OFFSET ${opts.offset ?? 0}`;
   return enrich(rows);
@@ -246,4 +248,121 @@ export async function visitsSeries(since: Date, unit: "hour" | "day" | "month") 
     FROM "PageView" WHERE "createdAt" >= ${since} AND "sessionId" IS NOT NULL
     GROUP BY bucket ORDER BY bucket ASC`;
   return rows.map((r) => ({ bucket: r.bucket, visits: Number(r.visits) }));
+}
+
+/**
+ * Visites anonymes (cookies refusés ou pas encore acceptés, bandeau du
+ * 2026-11-16) : pages vues sans identifiant, avec pays, ville et appareil.
+ */
+export async function anonymousLive(minutes = 5) {
+  return prisma.pageView.findMany({
+    where: { sessionId: null, visitorId: null, createdAt: { gte: new Date(Date.now() - minutes * 60 * 1000) } },
+    orderBy: { createdAt: "desc" },
+    take: 100,
+    select: { id: true, createdAt: true, path: true, geoCountryCode: true, countryCode: true, city: true, deviceType: true, os: true, browser: true, durationMs: true },
+  });
+}
+
+export function anonymousViewsSince(since: Date) {
+  return prisma.pageView.count({ where: { sessionId: null, visitorId: null, createdAt: { gte: since } } });
+}
+
+// ---------------------------------------------------------------------------
+// Liste des visiteurs et fiche visiteur (demande produit 2026-11-16) : une ligne
+// par visiteur (cookie NEXT_VISITOR_ID, donc visiteurs ayant accepté les
+// cookies), nouveau ou revenant, nombre de visites depuis la première, temps
+// total, actions ; filtres pays / type d'action ; historique complet.
+// ---------------------------------------------------------------------------
+
+export interface VisitorRow {
+  visitorId: string;
+  firstAt: Date;
+  lastAt: Date;
+  totalVisits: number;
+  periodVisits: number;
+  pages: number;
+  durationMs: number;
+  geoCountryCode: string | null;
+  originCountryCode: string | null;
+  city: string | null;
+  deviceType: string | null;
+  os: string | null;
+  browser: string | null;
+  userId: string | null;
+  userName: string | null;
+  actions: { click: number; submit: number; outbound: number; download: number; total: number };
+  lastActions: string[];
+}
+
+export async function visitorsTable(since: Date, opts: { country?: string; action?: string; limit?: number } = {}) {
+  const country = opts.country ?? null;
+  const action = opts.action ?? null;
+  const limit = Math.max(1, Math.min(200, opts.limit ?? 50));
+  const rows = await prisma.$queryRaw<{
+    visitorId: string; lastAt: Date; periodVisits: bigint; pages: bigint; durationMs: bigint | null;
+    geoCountryCode: string | null; originCountryCode: string | null; city: string | null;
+    deviceType: string | null; os: string | null; browser: string | null; userId: string | null;
+  }[]>`
+    SELECT "visitorId",
+      max("createdAt") AS "lastAt",
+      count(DISTINCT "sessionId") AS "periodVisits",
+      count(*) AS pages,
+      coalesce(sum("durationMs"), 0)::bigint AS "durationMs",
+      (array_agg("geoCountryCode" ORDER BY "createdAt" DESC))[1] AS "geoCountryCode",
+      (array_agg("countryCode" ORDER BY "createdAt" DESC))[1] AS "originCountryCode",
+      (array_agg("city" ORDER BY "createdAt" DESC))[1] AS city,
+      (array_agg("deviceType" ORDER BY "createdAt" DESC))[1] AS "deviceType",
+      (array_agg("os" ORDER BY "createdAt" DESC))[1] AS os,
+      (array_agg("browser" ORDER BY "createdAt" DESC))[1] AS browser,
+      max("userId") AS "userId"
+    FROM "PageView" pv
+    WHERE "visitorId" IS NOT NULL AND "sessionId" IS NOT NULL AND "createdAt" >= ${since}
+      AND (${action}::text IS NULL OR EXISTS (
+        SELECT 1 FROM "TrackEvent" e WHERE e."visitorId" = pv."visitorId" AND e."kind" = ${action}::text AND e."createdAt" >= ${since}))
+    GROUP BY "visitorId"
+    HAVING (${country}::text IS NULL OR (array_agg("geoCountryCode" ORDER BY "createdAt" DESC))[1] = ${country}::text)
+    ORDER BY max("createdAt") DESC
+    LIMIT ${limit}`;
+  if (rows.length === 0) return [];
+  const ids = rows.map((r) => r.visitorId);
+  const userIds = [...new Set(rows.map((r) => r.userId).filter((v): v is string => !!v))];
+  const [totals, events, recent, users] = await Promise.all([
+    prisma.$queryRaw<{ visitorId: string; totalVisits: bigint; firstAt: Date }[]>`
+      SELECT "visitorId", count(DISTINCT "sessionId") AS "totalVisits", min("createdAt") AS "firstAt"
+      FROM "PageView" WHERE "visitorId" = ANY(${ids}) AND "sessionId" IS NOT NULL GROUP BY "visitorId"`,
+    prisma.trackEvent.groupBy({ by: ["visitorId", "kind"], where: { visitorId: { in: ids }, createdAt: { gte: since } }, _count: true }),
+    prisma.trackEvent.findMany({ where: { visitorId: { in: ids }, createdAt: { gte: since } }, orderBy: { createdAt: "desc" }, take: 1000, select: { visitorId: true, kind: true, label: true } }),
+    userIds.length ? prisma.user.findMany({ where: { id: { in: userIds } }, select: { id: true, name: true, email: true } }) : Promise.resolve([]),
+  ]);
+  return rows.map<VisitorRow>((r) => {
+    const tot = totals.find((x) => x.visitorId === r.visitorId);
+    const ev = (k: string) => events.find((e) => e.visitorId === r.visitorId && e.kind === k)?._count ?? 0;
+    const actions = { click: ev("click"), submit: ev("submit"), outbound: ev("outbound"), download: ev("download"), total: 0 };
+    actions.total = actions.click + actions.submit + actions.outbound + actions.download;
+    const u = users.find((x) => x.id === r.userId);
+    return {
+      visitorId: r.visitorId,
+      firstAt: tot?.firstAt ?? r.lastAt,
+      lastAt: r.lastAt,
+      totalVisits: Number(tot?.totalVisits ?? r.periodVisits),
+      periodVisits: Number(r.periodVisits),
+      pages: Number(r.pages),
+      durationMs: Number(r.durationMs ?? 0),
+      geoCountryCode: r.geoCountryCode,
+      originCountryCode: r.originCountryCode,
+      city: r.city,
+      deviceType: r.deviceType,
+      os: r.os,
+      browser: r.browser,
+      userId: r.userId,
+      userName: u?.name ?? u?.email ?? null,
+      actions,
+      lastActions: recent.filter((e) => e.visitorId === r.visitorId).slice(0, 3).map((e) => e.label),
+    };
+  });
+}
+
+/** Toutes les visites d'un visiteur, de la plus récente à la toute première. */
+export function visitorHistory(visitorId: string, limit = 100) {
+  return queryVisits({ activeSince: new Date(0), limit, visitorId });
 }

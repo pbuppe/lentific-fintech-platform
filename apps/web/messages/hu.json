@@ -944,7 +944,8 @@
       "creditWarning": "A hitel kötelezettséggel jár, és vissza kell fizetni. Kötelezettségvállalás előtt ellenőrizze visszafizetési képességét.",
       "noFeeBefore": "Egy vagy több hitel megszerzése előtt semmilyen fizetés nem kérhető.",
       "copyright": "© {year} {company}. Minden jog fenntartva.",
-      "contactPerson": "Kapcsolattartó: {name}"
+      "contactPerson": "Kapcsolattartó: {name}",
+      "cookies": "Sütibeállítások"
     }
   },
   "CreditsSummary": {
@@ -1081,5 +1082,11 @@
     "bannerCta": "Az ajánlat megtekintése",
     "noGuarantee": "A Prémium megkönnyíti a kapcsolatfelvételt, de nem garantálja a finanszírozást.",
     "navLabel": "Prémium"
+  },
+  "CookieBanner": {
+    "title": "Adatvédelem",
+    "text": "Hozzájárulása esetén látogatottságmérő sütiket használunk, hogy megértsük, hogyan használják az oldalt (megtekintett oldalak, útvonalak, kattintások), és fejlesszük azt. Ha elutasítja, a látogatást csak névtelenül számoljuk (ország, hozzávetőleges város, eszköztípus), sütik nélkül. Döntését bármikor megváltoztathatja az oldal alján.",
+    "accept": "Elfogadom",
+    "refuse": "Elutasítom"
   }
 }

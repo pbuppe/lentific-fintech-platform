@@ -187,7 +187,7 @@
     "byLanguage": "Nach Sprache",
     "byCountry": "Nach Land",
     "noData": "Noch keine Daten.",
-    "descriptionV2": "Vollständige Besucheranalyse der Website, bei uns gehostet: wer online ist, von wo, mit welchem Gerät, wie lange, welche Seiten und welche Aktionen. Es werden keine IP-Adressen gespeichert.",
+    "descriptionV2": "Vollständige Besucheranalyse der Website: wer online ist, von wo (Land und Stadt aus der IP-Adresse abgeleitet, die nie gespeichert wird), mit welchem Gerät, wie lange, welche Seiten und welche Aktionen. Besucher, die Cookies ablehnen, werden weiterhin anonym gezählt.",
     "rightNow5": "Online (5 Min.)",
     "tabs": {
       "overview": "Übersicht",
@@ -201,7 +201,8 @@
       "pagesPerVisit": "Seiten / Besuch",
       "avgDuration": "Ø Dauer",
       "bounceRate": "Absprungrate",
-      "members": "Angemeldete Mitglieder"
+      "members": "Angemeldete Mitglieder",
+      "anonymous": "Anonyme Besuche (Cookies abgelehnt)"
     },
     "chart": {
       "title": "Entwicklung der Besuche",
@@ -232,7 +233,9 @@
     },
     "live": {
       "hint": "In den letzten 5 Minuten aktive Besucher. Die Seite aktualisiert sich alle 10 Sekunden selbst.",
-      "empty": "Gerade ist niemand auf der Website."
+      "empty": "Gerade ist niemand auf der Website.",
+      "anonymousTitle": "Anonyme Besucher (Cookies abgelehnt)",
+      "anonymousHint": "Land, Stadt und Gerät sind bekannt, der Pfad nicht: Diese Besucher haben keine Cookies akzeptiert."
     },
     "visit": {
       "anonymous": "Anonymer Besucher",
@@ -262,6 +265,42 @@
       "empty": "Keine Besuche in diesem Zeitraum.",
       "prev": "Neuere",
       "next": "Ältere"
+    },
+    "visitors": {
+      "title": "Besucherliste",
+      "hint": "Eine Zeile pro Besucher (Personen, die Cookies akzeptiert haben – nur sie sind von Besuch zu Besuch wiedererkennbar): neu oder wiederkehrend, Anzahl der Besuche seit dem ersten, Land, Verweildauer und Aktionen. Klicken Sie auf „Verlauf“, um bis zum allerersten Besuch zurückzugehen.",
+      "country": "Land",
+      "action": "Aktionstyp",
+      "anyAction": "Alle",
+      "rows": "Zeilen",
+      "apply": "Filtern",
+      "empty": "Keine Besucher für diese Kriterien.",
+      "colVisitor": "Besucher",
+      "colCountry": "Land",
+      "colDevice": "Gerät",
+      "colVisits": "Besuche",
+      "colFirst": "Erster Besuch",
+      "colLast": "Letzter Besuch",
+      "colTime": "Zeit auf der Website",
+      "colPages": "Seiten",
+      "colActions": "Aktionen",
+      "new": "Neu",
+      "returning": "Wiederkehrend · {n} Besuche",
+      "inPeriod": "{n} im Zeitraum",
+      "history": "Verlauf"
+    },
+    "visitor": {
+      "back": "Zurück zur Statistik",
+      "kicker": "Besucherprofil",
+      "title": "Besucher #{id}",
+      "empty": "Für diesen Besucher sind keine Besuche erfasst.",
+      "visits": "Besuche",
+      "firstVisit": "Erster Besuch",
+      "totalTime": "Gesamtzeit",
+      "pagesActions": "Seiten · Aktionen",
+      "countries": "Länder",
+      "historyTitle": "Besuchsverlauf",
+      "visitLabel": "Besuch Nr. {n}"
     }
   },
   "AccountValidationPage": {
@@ -753,7 +792,7 @@
       "basis": "Wählen Sie die Rechtsgrundlage und setzen Sie das Bestätigungshäkchen."
     },
     "templates": {
-      "intro": "Sechs Formate in den 8 Sprachen der Website. Wählen Sie eines, passen Sie den Text bei Bedarf an und speichern Sie ihn als Kampagne.",
+      "intro": "Vierzehn Formate in den 8 Sprachen der Website: kurze, auffällige Nachrichten, die Lust auf einen Besuch der Website machen, und ausführlichere Vorlagen. Wählen Sie eine, passen Sie den Text bei Bedarf an und speichern Sie sie als Kampagne.",
       "use": "Vorlage verwenden",
       "preview": "Vorschau",
       "names": {
@@ -762,7 +801,15 @@
         "investors": "Investoren",
         "followup": "Kurze Erinnerung",
         "premium": "Premium-Angebot",
-        "partners": "Partnerschaft für Fachleute"
+        "partners": "Partnerschaft für Fachleute",
+        "s_bank": "„Ihre Bank hat Nein gesagt?“",
+        "s_minutes": "„2 Minuten, um es zu wissen“",
+        "s_monthly": "„Zu viele Monatsraten?“",
+        "s_works": "„Ihre Renovierung kann nicht warten“",
+        "s_invest": "„Ihr Erspartes für echte Projekte“",
+        "s_waiting": "„Ihre kostenlose Prüfung wartet“",
+        "s_question": "„Nur eine Frage“",
+        "s_how": "„Finanzierung neu gedacht“"
       },
       "uses": {
         "discover": "Erstkontakt, alle Zielgruppen",
@@ -770,8 +817,19 @@
         "investors": "An Geldanlage Interessierte",
         "followup": "Einige Tage nach einer ersten E-Mail",
         "premium": "Bereits registrierte Mitglieder",
-        "partners": "Kreditvermittler, Makler, Berater"
-      }
+        "partners": "Kreditvermittler, Makler, Berater",
+        "s_bank": "Personen mit abgelehntem Kredit",
+        "s_minutes": "Führt zum Rechner",
+        "s_monthly": "Umschuldung",
+        "s_works": "Renovierungsprojekte",
+        "s_invest": "Künftige Investoren",
+        "s_waiting": "Wer seine Anfrage nicht abgeschlossen hat",
+        "s_question": "Erstkontakt, alle Projekte",
+        "s_how": "Funktionsweise der Plattform erklären"
+      },
+      "shortTitle": "Kurz und packend — für Personen, die Ihnen ihre Adresse hinterlassen haben",
+      "classicTitle": "Klassische Vorlagen",
+      "shortBadge": "Kurz"
     },
     "editor": {
       "newTitle": "Neue Kampagne",

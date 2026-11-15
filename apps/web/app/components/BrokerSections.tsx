@@ -1,3 +1,4 @@
+import { CookieSettingsLink } from "./CookieConsent";
 import { getTranslations } from "next-intl/server";
 import { submitContactRequestAction } from "../../lib/actions/contact";
 import { ScrollToHere } from "./ScrollToHere";
@@ -209,6 +210,7 @@ export async function SiteFooter() {
           <a href="/marketplace" className="hover:text-ink">{t("marketplace")}</a>
           <a href="#faq" className="hover:text-ink">{t("faq")}</a>
           <a href="/login" className="hover:text-ink">{t("login")}</a>
+          <CookieSettingsLink label={t("cookies")} />
         </div>
         <div className="text-xs leading-relaxed text-ink-faint">
           {legal.orias && <p>{t("orias", { number: legal.orias })}</p>}

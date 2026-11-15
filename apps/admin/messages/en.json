@@ -187,7 +187,7 @@
     "byLanguage": "By language",
     "byCountry": "By country",
     "noData": "No data yet.",
-    "descriptionV2": "Complete tracking of the site's visitors, hosted by us: who is online, from where, on which device, for how long, which pages and which actions. No IP address is stored.",
+    "descriptionV2": "Complete tracking of the site's visitors: who is online, from where (country and city derived from the IP address, which is never stored), on which device, for how long, which pages and which actions. Visitors who decline cookies are still counted anonymously.",
     "rightNow5": "Online (5 min)",
     "tabs": {
       "overview": "Overview",
@@ -201,7 +201,8 @@
       "pagesPerVisit": "Pages / visit",
       "avgDuration": "Average duration",
       "bounceRate": "Bounce rate",
-      "members": "Signed-in members"
+      "members": "Signed-in members",
+      "anonymous": "Anonymous visits (cookies declined)"
     },
     "chart": {
       "title": "Visits over time",
@@ -232,7 +233,9 @@
     },
     "live": {
       "hint": "Visitors active in the last 5 minutes. The page refreshes itself every 10 seconds.",
-      "empty": "Nobody on the site right now."
+      "empty": "Nobody on the site right now.",
+      "anonymousTitle": "Anonymous visitors (cookies declined)",
+      "anonymousHint": "Country, city and device are known, but no journey: these visitors did not accept cookies."
     },
     "visit": {
       "anonymous": "Anonymous visitor",
@@ -262,6 +265,42 @@
       "empty": "No visits in this period.",
       "prev": "More recent",
       "next": "Older"
+    },
+    "visitors": {
+      "title": "Visitor list",
+      "hint": "One row per visitor (people who accepted cookies, the only ones recognisable from one visit to the next): new or returning, number of visits since the first, country, time spent and actions. Click “History” to go back to their very first visit.",
+      "country": "Country",
+      "action": "Action type",
+      "anyAction": "All",
+      "rows": "Rows",
+      "apply": "Filter",
+      "empty": "No visitors match these criteria.",
+      "colVisitor": "Visitor",
+      "colCountry": "Country",
+      "colDevice": "Device",
+      "colVisits": "Visits",
+      "colFirst": "First visit",
+      "colLast": "Last visit",
+      "colTime": "Time on site",
+      "colPages": "Pages",
+      "colActions": "Actions",
+      "new": "New",
+      "returning": "Returning · {n} visits",
+      "inPeriod": "{n} in the period",
+      "history": "History"
+    },
+    "visitor": {
+      "back": "Back to statistics",
+      "kicker": "Visitor profile",
+      "title": "Visitor #{id}",
+      "empty": "No visits recorded for this visitor.",
+      "visits": "Visits",
+      "firstVisit": "First visit",
+      "totalTime": "Total time",
+      "pagesActions": "Pages · actions",
+      "countries": "Countries",
+      "historyTitle": "Visit history",
+      "visitLabel": "Visit no. {n}"
     }
   },
   "AccountValidationPage": {
@@ -753,7 +792,7 @@
       "basis": "Choose the legal basis and tick the confirmation box."
     },
     "templates": {
-      "intro": "Six formats written in the site's 8 languages. Pick one, adapt the text if needed, then save it as a campaign.",
+      "intro": "Fourteen formats written in the site's 8 languages: short, eye-catching messages that make people want to visit the site, and more detailed templates. Pick one, adapt the text if needed, then save it as a campaign.",
       "use": "Use this template",
       "preview": "Preview",
       "names": {
@@ -762,7 +801,15 @@
         "investors": "Investors",
         "followup": "Short follow-up",
         "premium": "Premium offer",
-        "partners": "Professional partnership"
+        "partners": "Professional partnership",
+        "s_bank": "“Your bank said no?”",
+        "s_minutes": "“2 minutes to find out”",
+        "s_monthly": "“Too many repayments?”",
+        "s_works": "“Your renovation can't wait”",
+        "s_invest": "“Your savings for real projects”",
+        "s_waiting": "“Your free review is waiting”",
+        "s_question": "“Just one question”",
+        "s_how": "“Financing, done differently”"
       },
       "uses": {
         "discover": "First contact, all audiences",
@@ -770,8 +817,19 @@
         "investors": "People interested in investing",
         "followup": "A few days after a first e-mail",
         "premium": "Existing members",
-        "partners": "Brokers, estate agents, advisors"
-      }
+        "partners": "Brokers, estate agents, advisors",
+        "s_bank": "People turned down for a loan",
+        "s_minutes": "Sends people to the simulator",
+        "s_monthly": "Loan consolidation",
+        "s_works": "Renovation projects",
+        "s_invest": "Future investors",
+        "s_waiting": "People who didn't finish their request",
+        "s_question": "First contact, all projects",
+        "s_how": "Explain how the platform works"
+      },
+      "shortTitle": "Short and punchy — for people who left you their address",
+      "classicTitle": "Classic templates",
+      "shortBadge": "Short"
     },
     "editor": {
       "newTitle": "New campaign",

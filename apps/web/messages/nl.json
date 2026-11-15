@@ -944,7 +944,8 @@
       "creditWarning": "Een lening verbindt u en moet worden terugbetaald. Controleer of u de aflossingen kunt dragen voordat u zich verbindt.",
       "noFeeBefore": "Vóór het verkrijgen van een of meer leningen mag geen enkele betaling worden geëist.",
       "copyright": "© {year} {company}. Alle rechten voorbehouden.",
-      "contactPerson": "Uw contactpersoon: {name}"
+      "contactPerson": "Uw contactpersoon: {name}",
+      "cookies": "Cookies beheren"
     }
   },
   "CreditsSummary": {
@@ -1081,5 +1082,11 @@
     "bannerCta": "Bekijk het aanbod",
     "noGuarantee": "Premium maakt contact eenvoudiger; het garandeert geen financiering.",
     "navLabel": "Premium"
+  },
+  "CookieBanner": {
+    "title": "Uw privacy",
+    "text": "Met uw toestemming gebruiken we cookies voor bezoekersmeting om te begrijpen hoe de website wordt gebruikt (bekeken pagina's, trajecten, klikken) en om hem te verbeteren. Als u weigert, tellen we het bezoek alleen anoniem (land, globale stad, type apparaat), zonder cookies. U kunt uw keuze altijd onderaan de pagina wijzigen.",
+    "accept": "Accepteren",
+    "refuse": "Weigeren"
   }
 }

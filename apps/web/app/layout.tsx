@@ -4,6 +4,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 import { SiteHeader } from "./components/SiteHeader";
 import { PageViewTracker } from "./components/PageViewTracker";
+import { CookieConsentBanner } from "./components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Lentific · Financement participatif P2P",
@@ -21,6 +22,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <PageViewTracker />
           <SiteHeader />
           {children}
+          <CookieConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

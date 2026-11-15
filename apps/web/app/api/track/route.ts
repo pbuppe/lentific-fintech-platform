@@ -73,14 +73,16 @@ export async function POST(request: NextRequest) {
     if (type === "ping") {
       const pageViewId = id(body.id);
       const ms = Number(body.ms);
-      if (pageViewId && visitorId && Number.isFinite(ms) && ms > 0) {
+      if (pageViewId && Number.isFinite(ms) && ms > 0) {
         // Plafond à 30 min par page : un onglet oublié ne fausse pas les moyennes.
-        await prisma.pageView.updateMany({ where: { id: pageViewId, visitorId }, data: { durationMs: Math.min(Math.round(ms), 30 * 60 * 1000) } });
+        // Visite anonyme (sans consentement) : seule une page sans identifiant peut être mise à jour.
+        await prisma.pageView.updateMany({ where: { id: pageViewId, visitorId: visitorId ?? null }, data: { durationMs: Math.min(Math.round(ms), 30 * 60 * 1000) } });
       }
       return NextResponse.json({ ok: true });
     }
 
     if (type === "ev") {
+      if (!visitorId) return NextResponse.json({ ok: true }); // actions : uniquement avec consentement
       const kind = ["click", "submit", "outbound", "download"].includes(body.kind) ? body.kind : null;
       const label = str(body.label, 120);
       const path = str(body.path, 500);
@@ -95,7 +97,8 @@ export async function POST(request: NextRequest) {
     const path = str(body.path, 500);
     if (!path) return NextResponse.json({ ok: false }, { status: 400 });
     const { os, deviceType, browser } = parseUserAgent(ua);
-    const user = await getSessionUser(request.cookies.get(SESSION_COOKIE_NAME)?.value).catch(() => null);
+    // Membre connecté : seulement si le visiteur a accepté la mesure d'audience.
+    const user = body.c !== 1 ? null : await getSessionUser(request.cookies.get(SESSION_COOKIE_NAME)?.value).catch(() => null);
     const sw = Number(body.sw);
 
     await pageViewsRepo.record({
