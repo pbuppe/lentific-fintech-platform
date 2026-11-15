@@ -1,3 +1,4 @@
+// Adresses de production : site public https://www.lentific.com, back-office https://admin.lentific.com (ADMIN_URL).
 const path = require("path");
 const createNextIntlPlugin = require("next-intl/plugin");
 
