@@ -15,6 +15,8 @@ const NAV_KEYS = [
   { href: "/mises-en-relation", key: "introductions" },
   { href: "/echeances", key: "installments" },
   { href: "/risk", key: "riskEngine" },
+  // Suivi des visiteurs : agents, admins et super admins (demande produit 2026-11-15).
+  { href: "/statistiques", key: "statistics" },
 ] as const;
 
 // Pouvoir complet sur les comptes (§ demande produit) réservé au super
@@ -34,7 +36,7 @@ const ADMIN_AND_ABOVE_NAV_KEYS = [
   { href: "/validations", key: "accountValidation" },
   { href: "/versements", key: "funds" },
   { href: "/emails", key: "outboundEmails" },
-  { href: "/statistiques", key: "statistics" },
+  { href: "/marketing", key: "marketing" },
 ] as const;
 
 const ADMIN_ROLES = ["AGENT", "ADMIN", "SUPER_ADMIN"];

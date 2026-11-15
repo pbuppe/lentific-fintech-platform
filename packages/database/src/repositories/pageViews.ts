@@ -1,6 +1,16 @@
 import { prisma } from "../client";
 
 export function record(data: {
+  id?: string;
+  sessionId?: string;
+  city?: string;
+  region?: string;
+  deviceType?: string;
+  os?: string;
+  browser?: string;
+  screenWidth?: number;
+  userId?: string;
+  utmSource?: string;
   path: string;
   locale?: string;
   countryCode?: string;
@@ -84,8 +94,11 @@ export async function countTimeSeries(range: StatsRange) {
 
   const points: { key: string; views: number; visitors: number }[] = [];
   if (unit === "hour") {
+    // Les 24 dernières heures, heure en cours comprise.
+    const currentHour = new Date();
+    currentHour.setMinutes(0, 0, 0);
     for (let i = 0; i < 24; i++) {
-      const d = new Date(since.getTime() + i * 60 * 60 * 1000);
+      const d = new Date(currentHour.getTime() - (23 - i) * 60 * 60 * 1000);
       const key = d.toISOString().slice(0, 13);
       const entry = byBucket.get(key);
       points.push({ key, views: entry?.views ?? 0, visitors: entry?.visitors ?? 0 });

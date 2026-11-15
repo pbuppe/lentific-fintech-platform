@@ -14,3 +14,4 @@ backups/
 
 # Mots de passe des comptes de test locaux
 test-accounts.local.txt
+.env*.local

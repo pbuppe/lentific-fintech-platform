@@ -19,7 +19,8 @@
     "clientRequests": "Verzoeken & berichten",
     "console": "Superadmin-console",
     "prospects": "Contactaanvragen",
-    "newProspectsCount": "{count, plural, one {# nieuwe aanvraag} other {# nieuwe aanvragen}}"
+    "newProspectsCount": "{count, plural, one {# nieuwe aanvraag} other {# nieuwe aanvragen}}",
+    "marketing": "E-mailmarketing"
   },
   "AdminLoginPage": {
     "kicker": "Lentific · Back-office",
@@ -185,7 +186,83 @@
     "topPages": "Meest bekeken pagina's",
     "byLanguage": "Per taal",
     "byCountry": "Per land",
-    "noData": "Nog geen gegevens."
+    "noData": "Nog geen gegevens.",
+    "descriptionV2": "Volledige bezoekersanalyse van de website, door ons gehost: wie er online is, vanwaar, met welk apparaat, hoe lang, welke pagina's en welke acties. Er worden geen IP-adressen bewaard.",
+    "rightNow5": "Online (5 min)",
+    "tabs": {
+      "overview": "Overzicht",
+      "live": "Live",
+      "visits": "Bezoekerstrajecten"
+    },
+    "kpi": {
+      "visits": "Bezoeken",
+      "visitors": "Unieke bezoekers",
+      "pageViews": "Paginaweergaven",
+      "pagesPerVisit": "Pagina's / bezoek",
+      "avgDuration": "Gem. duur",
+      "bounceRate": "Bouncepercentage",
+      "members": "Ingelogde leden"
+    },
+    "chart": {
+      "title": "Verloop van de bezoeken",
+      "visits": "Bezoeken",
+      "visitors": "Bezoekers",
+      "views": "Paginaweergaven"
+    },
+    "breakdown": {
+      "devices": "Apparaten",
+      "os": "Besturingssystemen",
+      "browsers": "Browsers",
+      "geo": "Land van verbinding",
+      "origin": "Land van herkomst (browsertaal)",
+      "cities": "Steden",
+      "sources": "Herkomst",
+      "entryPages": "Instappagina's",
+      "actions": "Meest uitgevoerde acties",
+      "unknown": "Onbekend",
+      "avgTime": "Gem. tijd"
+    },
+    "device": {
+      "mobile": "Telefoon",
+      "tablet": "Tablet",
+      "desktop": "Computer",
+      "unknown": "Onbekend apparaat",
+      "androidPhone": "Android-telefoon",
+      "androidTablet": "Android-tablet"
+    },
+    "live": {
+      "hint": "Bezoekers die de afgelopen 5 minuten actief waren. De pagina ververst zichzelf elke 10 seconden.",
+      "empty": "Er is op dit moment niemand op de website."
+    },
+    "visit": {
+      "anonymous": "Anonieme bezoeker",
+      "member": "Lid: {name}",
+      "visitNumber": "{n}e bezoek",
+      "origin": "Herkomst",
+      "unknownCountry": "Onbekend land",
+      "source": "Herkomst",
+      "direct": "Directe toegang",
+      "sourceEmail": "E-mailcampagne",
+      "language": "Taal",
+      "pagesActions": "{pages, plural, one {# pagina} other {# pagina's}} · {actions, plural, one {# actie} other {# acties}}",
+      "currentPage": "Huidige pagina",
+      "lastActivity": "laatste activiteit om {time}",
+      "journey": "Traject bekijken"
+    },
+    "event": {
+      "click": "Klik",
+      "submit": "Formulier verzonden",
+      "outbound": "Externe link",
+      "download": "Download"
+    },
+    "visits": {
+      "filterDevice": "Apparaat",
+      "filterCountry": "Land",
+      "all": "Alle",
+      "empty": "Geen bezoeken in deze periode.",
+      "prev": "Recenter",
+      "next": "Ouder"
+    }
   },
   "AccountValidationPage": {
     "kicker": "Registraties",
@@ -641,5 +718,120 @@
     "noteLabel": "Interne notitie",
     "notePlaceholder": "Bijv. teruggebeld op 14/11, afspraak dinsdag",
     "save": "Opslaan"
+  },
+  "MarketingPage": {
+    "kicker": "Communicatie · Prospectie",
+    "title": "E-mailmarketing",
+    "description": "Verstuur introductie- en promotiemails naar uw contacten op basis van kant-en-klare sjablonen. Elke e-mail bevat een afmeldlink; antwoorden komen binnen op {inbox}.",
+    "stats": {
+      "subscribed": "Ingeschreven contacten",
+      "unsubscribed": "Afgemeld",
+      "today": "Verstuurd in 24 u: {sent} / {limit}",
+      "localMode": "Testmodus: er worden geen e-mails echt verstuurd"
+    },
+    "tabs": {
+      "campaigns": "Campagnes",
+      "templates": "Kant-en-klare sjablonen",
+      "contacts": "Contacten"
+    },
+    "language": "Taal",
+    "flash": {
+      "saved": "Campagne opgeslagen.",
+      "deleted": "Campagne verwijderd.",
+      "testSent": "Testmail verstuurd naar {email}.",
+      "testFailed": "De testmail kon niet worden verstuurd. Zie „Verstuurde e-mails”.",
+      "batchSent": "{n} e-mail(s) verstuurd. Nog te versturen: {left}.",
+      "batchLimited": "{n} e-mail(s) verstuurd. Daglimiet bereikt: ga morgen verder ({left} over).",
+      "batchFailed": "De verzenddienst heeft de batch geweigerd; er is niets verloren, u kunt het opnieuw proberen.",
+      "added": "{a} contact(en) toegevoegd, {s} al aanwezig, {i} ongeldig(e) adres(sen).",
+      "contactUpdated": "Contact bijgewerkt."
+    },
+    "errors": {
+      "invalid": "Controleer onderwerp, tekst en link (moet beginnen met / of https://).",
+      "locked": "Een al verstuurde campagne kan niet meer worden gewijzigd.",
+      "confirm": "Vink het bevestigingsvakje aan voordat u verstuurt.",
+      "basis": "Kies de rechtsgrond en vink het bevestigingsvakje aan."
+    },
+    "templates": {
+      "intro": "Zes formats in de 8 talen van de website. Kies er een, pas de tekst zo nodig aan en sla hem op als campagne.",
+      "use": "Dit sjabloon gebruiken",
+      "preview": "Voorbeeld",
+      "names": {
+        "discover": "Het platform ontdekken",
+        "borrowers": "Kredietnemers: gratis analyse",
+        "investors": "Investeerders",
+        "followup": "Korte herinnering",
+        "premium": "Premium-aanbod",
+        "partners": "Partnerschap voor professionals"
+      },
+      "uses": {
+        "discover": "Eerste contact, alle doelgroepen",
+        "borrowers": "Particulieren met een financieringsproject",
+        "investors": "Mensen die willen investeren",
+        "followup": "Enkele dagen na een eerste e-mail",
+        "premium": "Al geregistreerde leden",
+        "partners": "Kredietbemiddelaars, makelaars, adviseurs"
+      }
+    },
+    "editor": {
+      "newTitle": "Nieuwe campagne",
+      "editTitle": "Campagne bewerken",
+      "startFrom": "Uitgaan van sjabloon",
+      "audience": "Ontvangers: ingeschreven contacten in het {lang} ({count}).",
+      "subject": "Onderwerp",
+      "body": "Tekst",
+      "bodyHelp": "De aanhef („Beste Marie,”) en de ondertekening worden automatisch toegevoegd. Laat een lege regel tussen alinea's.",
+      "ctaLabel": "Tekst van de knop",
+      "ctaUrl": "Link van de knop (pagina van de site, bv. /simulateur, of volledig adres)",
+      "save": "Campagne opslaan",
+      "cancel": "Annuleren"
+    },
+    "list": {
+      "title": "Campagnes",
+      "empty": "Nog geen campagnes. Begin met een sjabloon.",
+      "status": {
+        "DRAFT": "Concept",
+        "SENDING": "Bezig met versturen",
+        "SENT": "Verstuurd"
+      },
+      "counts": "{sent} verstuurd · {left} resterend",
+      "test": "Stuur mij een test",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "confirm": "Ik heb de tekst nagelezen: versturen naar {count} contact(en)",
+      "send": "Versturen",
+      "sendNext": "Volgende batch versturen"
+    },
+    "contacts": {
+      "addTitle": "Contacten toevoegen",
+      "addHelp": "Eén adres per regel. U kunt naam en taal toevoegen: „adres; naam; nl”. Adressen die al bestaan worden overgeslagen.",
+      "defaultLanguage": "Standaardtaal",
+      "basisLabel": "Waarom mag u deze mensen schrijven?",
+      "basis": {
+        "CONSENT": "Zij hebben ingestemd met het ontvangen van onze e-mails (formulier, beurs, schriftelijk verzoek…)",
+        "PROFESSIONAL": "Het zijn zakelijke adressen en het bericht gaat over hun beroep (bemiddelaars, makelaars…)",
+        "CLIENT": "Het zijn bestaande klanten van Lentific"
+      },
+      "basisShort": {
+        "CONSENT": "Toestemming",
+        "PROFESSIONAL": "Zakelijk",
+        "CLIENT": "Klant"
+      },
+      "certify": "Ik bevestig dat deze contacten rechtmatig zijn verkregen en zich op elk moment kunnen afmelden.",
+      "add": "Contacten toevoegen",
+      "empty": "Nog geen contacten.",
+      "colEmail": "Contact",
+      "colLanguage": "Taal",
+      "colBasis": "Rechtsgrond",
+      "colStatus": "Status",
+      "colAdded": "Toegevoegd op",
+      "status": {
+        "SUBSCRIBED": "Ingeschreven",
+        "UNSUBSCRIBED": "Afgemeld",
+        "BOUNCED": "Ongeldig adres"
+      },
+      "unsubscribe": "Afmelden",
+      "delete": "Verwijderen"
+    }
   }
 }

@@ -19,7 +19,8 @@
     "clientRequests": "Richieste e messaggi",
     "console": "Console super admin",
     "prospects": "Richieste di contatto",
-    "newProspectsCount": "{count, plural, one {# nuova richiesta} other {# nuove richieste}}"
+    "newProspectsCount": "{count, plural, one {# nuova richiesta} other {# nuove richieste}}",
+    "marketing": "E-mailing"
   },
   "AdminLoginPage": {
     "kicker": "Lentific · Back-office",
@@ -185,7 +186,83 @@
     "topPages": "Pagine più visitate",
     "byLanguage": "Per lingua",
     "byCountry": "Per paese",
-    "noData": "Nessun dato per ora."
+    "noData": "Nessun dato per ora.",
+    "descriptionV2": "Monitoraggio completo dei visitatori del sito, ospitato da noi: chi è online, da dove, con quale dispositivo, per quanto tempo, quali pagine e quali azioni. Nessun indirizzo IP viene conservato.",
+    "rightNow5": "Online (5 min)",
+    "tabs": {
+      "overview": "Panoramica",
+      "live": "In diretta",
+      "visits": "Percorsi dei visitatori"
+    },
+    "kpi": {
+      "visits": "Visite",
+      "visitors": "Visitatori unici",
+      "pageViews": "Pagine viste",
+      "pagesPerVisit": "Pagine / visita",
+      "avgDuration": "Durata media",
+      "bounceRate": "Frequenza di rimbalzo",
+      "members": "Membri connessi"
+    },
+    "chart": {
+      "title": "Andamento delle visite",
+      "visits": "Visite",
+      "visitors": "Visitatori",
+      "views": "Pagine viste"
+    },
+    "breakdown": {
+      "devices": "Dispositivi",
+      "os": "Sistemi",
+      "browsers": "Browser",
+      "geo": "Paese di connessione",
+      "origin": "Paese d'origine (lingua del browser)",
+      "cities": "Città",
+      "sources": "Provenienza",
+      "entryPages": "Pagine di ingresso",
+      "actions": "Azioni più frequenti",
+      "unknown": "Sconosciuto",
+      "avgTime": "Tempo medio"
+    },
+    "device": {
+      "mobile": "Telefono",
+      "tablet": "Tablet",
+      "desktop": "Computer",
+      "unknown": "Dispositivo sconosciuto",
+      "androidPhone": "Telefono Android",
+      "androidTablet": "Tablet Android"
+    },
+    "live": {
+      "hint": "Visitatori attivi negli ultimi 5 minuti. La pagina si aggiorna da sola ogni 10 secondi.",
+      "empty": "Nessuno sul sito in questo momento."
+    },
+    "visit": {
+      "anonymous": "Visitatore anonimo",
+      "member": "Membro: {name}",
+      "visitNumber": "Visita n. {n}",
+      "origin": "Origine",
+      "unknownCountry": "Paese sconosciuto",
+      "source": "Provenienza",
+      "direct": "Accesso diretto",
+      "sourceEmail": "E-mailing",
+      "language": "Lingua",
+      "pagesActions": "{pages, plural, one {# pagina} other {# pagine}} · {actions, plural, one {# azione} other {# azioni}}",
+      "currentPage": "Pagina attuale",
+      "lastActivity": "ultima attività alle {time}",
+      "journey": "Vedere il percorso"
+    },
+    "event": {
+      "click": "Clic",
+      "submit": "Modulo inviato",
+      "outbound": "Link esterno",
+      "download": "Download"
+    },
+    "visits": {
+      "filterDevice": "Dispositivo",
+      "filterCountry": "Paese",
+      "all": "Tutti",
+      "empty": "Nessuna visita in questo periodo.",
+      "prev": "Più recenti",
+      "next": "Meno recenti"
+    }
   },
   "AccountValidationPage": {
     "kicker": "Registrazioni",
@@ -641,5 +718,120 @@
     "noteLabel": "Nota interna",
     "notePlaceholder": "Es.: richiamato il 14/11, appuntamento martedì",
     "save": "Salvare"
+  },
+  "MarketingPage": {
+    "kicker": "Comunicazione · Prospezione",
+    "title": "E-mailing",
+    "description": "Invii e-mail di presentazione e promozione ai suoi contatti partendo da modelli pronti all'uso. Ogni e-mail contiene un link di disiscrizione; le risposte arrivano a {inbox}.",
+    "stats": {
+      "subscribed": "Contatti iscritti",
+      "unsubscribed": "Disiscritti",
+      "today": "Inviate nelle ultime 24 h: {sent} / {limit}",
+      "localMode": "Modalità test: nessuna e-mail viene inviata"
+    },
+    "tabs": {
+      "campaigns": "Campagne",
+      "templates": "Modelli pronti",
+      "contacts": "Contatti"
+    },
+    "language": "Lingua",
+    "flash": {
+      "saved": "Campagna salvata.",
+      "deleted": "Campagna eliminata.",
+      "testSent": "E-mail di prova inviata a {email}.",
+      "testFailed": "Impossibile inviare l'e-mail di prova. Consulti «E-mail inviate».",
+      "batchSent": "{n} e-mail inviata/e. Restano: {left}.",
+      "batchLimited": "{n} e-mail inviata/e. Limite giornaliero raggiunto: riprenda domani (restano {left}).",
+      "batchFailed": "Il servizio di invio ha rifiutato il lotto; nulla è perso, può riprovare.",
+      "added": "{a} contatto/i aggiunto/i, {s} già presente/i, {i} indirizzo/i non valido/i.",
+      "contactUpdated": "Contatto aggiornato."
+    },
+    "errors": {
+      "invalid": "Controlli oggetto, testo e link (deve iniziare con / o https://).",
+      "locked": "Una campagna già inviata non può più essere modificata.",
+      "confirm": "Spunti la casella di conferma prima dell'invio.",
+      "basis": "Indichi la base giuridica e spunti la casella di conferma."
+    },
+    "templates": {
+      "intro": "Sei formati redatti nelle 8 lingue del sito. Ne scelga uno, adatti il testo se necessario e lo salvi come campagna.",
+      "use": "Usare questo modello",
+      "preview": "Anteprima",
+      "names": {
+        "discover": "Scoprire la piattaforma",
+        "borrowers": "Richiedenti: analisi gratuita",
+        "investors": "Investitori",
+        "followup": "Breve sollecito",
+        "premium": "Offerta Premium",
+        "partners": "Partnership professionisti"
+      },
+      "uses": {
+        "discover": "Primo contatto, tutti i pubblici",
+        "borrowers": "Privati con un progetto di finanziamento",
+        "investors": "Persone interessate a investire",
+        "followup": "Qualche giorno dopo una prima e-mail",
+        "premium": "Membri già iscritti",
+        "partners": "Mediatori, agenti immobiliari, consulenti"
+      }
+    },
+    "editor": {
+      "newTitle": "Nuova campagna",
+      "editTitle": "Modificare la campagna",
+      "startFrom": "Partire dal modello",
+      "audience": "Destinatari: contatti iscritti in {lang} ({count}).",
+      "subject": "Oggetto",
+      "body": "Testo",
+      "bodyHelp": "Il saluto («Gentile Marie,») e la firma vengono aggiunti automaticamente. Lasci una riga vuota tra due paragrafi.",
+      "ctaLabel": "Testo del pulsante",
+      "ctaUrl": "Link del pulsante (pagina del sito, es. /simulateur, o indirizzo completo)",
+      "save": "Salvare la campagna",
+      "cancel": "Annullare"
+    },
+    "list": {
+      "title": "Campagne",
+      "empty": "Nessuna campagna per ora. Inizi da un modello.",
+      "status": {
+        "DRAFT": "Bozza",
+        "SENDING": "Invio in corso",
+        "SENT": "Inviata"
+      },
+      "counts": "{sent} inviata/e · {left} restante/i",
+      "test": "Inviarmi una prova",
+      "edit": "Modificare",
+      "delete": "Eliminare",
+      "confirm": "Ho riletto il testo: inviare a {count} contatto/i",
+      "send": "Inviare",
+      "sendNext": "Inviare il lotto successivo"
+    },
+    "contacts": {
+      "addTitle": "Aggiungere contatti",
+      "addHelp": "Un indirizzo per riga. Può aggiungere nome e lingua: «indirizzo; nome; it». Gli indirizzi già presenti vengono ignorati.",
+      "defaultLanguage": "Lingua predefinita",
+      "basisLabel": "Perché può scrivere a queste persone?",
+      "basis": {
+        "CONSENT": "Hanno accettato di ricevere le nostre e-mail (modulo, fiera, richiesta scritta…)",
+        "PROFESSIONAL": "Sono indirizzi professionali e il messaggio riguarda la loro attività (mediatori, agenti…)",
+        "CLIENT": "Sono clienti attuali di Lentific"
+      },
+      "basisShort": {
+        "CONSENT": "Consenso",
+        "PROFESSIONAL": "Professionista",
+        "CLIENT": "Cliente"
+      },
+      "certify": "Confermo che questi contatti sono stati ottenuti lecitamente e che potranno disiscriversi in qualsiasi momento.",
+      "add": "Aggiungere i contatti",
+      "empty": "Nessun contatto per ora.",
+      "colEmail": "Contatto",
+      "colLanguage": "Lingua",
+      "colBasis": "Base giuridica",
+      "colStatus": "Stato",
+      "colAdded": "Aggiunto il",
+      "status": {
+        "SUBSCRIBED": "Iscritto",
+        "UNSUBSCRIBED": "Disiscritto",
+        "BOUNCED": "Indirizzo non valido"
+      },
+      "unsubscribe": "Disiscrivere",
+      "delete": "Eliminare"
+    }
   }
 }

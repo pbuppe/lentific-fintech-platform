@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { getLocale } from "next-intl/server";
 import { prisma } from "@fintech/database";
+import { sendContactRequestNotice } from "@fintech/auth";
 
 const PROJECTS = ["MORTGAGE", "CONSOLIDATION", "WORKS", "OTHER"];
 
@@ -10,7 +11,8 @@ const PROJECTS = ["MORTGAGE", "CONSOLIDATION", "WORKS", "OTHER"];
  * Formulaire « Demandez votre étude gratuite » du site vitrine (2026-11-14).
  * Pas d'e-mail automatique au prospect (un formulaire public ne doit pas
  * permettre d'envoyer des e-mails à n'importe quelle adresse) : la demande
- * arrive dans le back-office, l'équipe rappelle.
+ * arrive dans le back-office et l'équipe est prévenue sur info@lentific.com
+ * (CONTACT_EMAIL), avec le prospect en adresse de réponse.
  */
 export async function submitContactRequestAction(formData: FormData) {
   const back = (code: string) => redirect(`/?contact=${code}#contact`);
@@ -43,9 +45,12 @@ export async function submitContactRequestAction(formData: FormData) {
     where: { email, createdAt: { gt: new Date(Date.now() - 10 * 60 * 1000) } },
   });
   if (!recent) {
-    await prisma.contactRequest.create({
-      data: { name, email, phone, project, amount, message: message || null, locale: await getLocale(), consentAt: new Date() },
+    const locale = await getLocale();
+    const created = await prisma.contactRequest.create({
+      data: { name, email, phone, project, amount, message: message || null, locale, consentAt: new Date() },
     });
+    // N'échoue jamais (voir sendEmail) : la demande est déjà enregistrée.
+    await sendContactRequestNotice({ id: created.id, name, email, phone, project, amount, message: message || null, locale });
   }
   back("ok");
 }

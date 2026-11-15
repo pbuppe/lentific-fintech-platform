@@ -19,7 +19,8 @@
     "clientRequests": "Requests & messages",
     "console": "Super admin console",
     "prospects": "Contact requests",
-    "newProspectsCount": "{count, plural, one {# new request} other {# new requests}}"
+    "newProspectsCount": "{count, plural, one {# new request} other {# new requests}}",
+    "marketing": "E-mail marketing"
   },
   "AdminLoginPage": {
     "kicker": "Lentific · Back office",
@@ -185,7 +186,83 @@
     "topPages": "Most viewed pages",
     "byLanguage": "By language",
     "byCountry": "By country",
-    "noData": "No data yet."
+    "noData": "No data yet.",
+    "descriptionV2": "Complete tracking of the site's visitors, hosted by us: who is online, from where, on which device, for how long, which pages and which actions. No IP address is stored.",
+    "rightNow5": "Online (5 min)",
+    "tabs": {
+      "overview": "Overview",
+      "live": "Live",
+      "visits": "Visitor journeys"
+    },
+    "kpi": {
+      "visits": "Visits",
+      "visitors": "Unique visitors",
+      "pageViews": "Page views",
+      "pagesPerVisit": "Pages / visit",
+      "avgDuration": "Average duration",
+      "bounceRate": "Bounce rate",
+      "members": "Signed-in members"
+    },
+    "chart": {
+      "title": "Visits over time",
+      "visits": "Visits",
+      "visitors": "Visitors",
+      "views": "Page views"
+    },
+    "breakdown": {
+      "devices": "Devices",
+      "os": "Operating systems",
+      "browsers": "Browsers",
+      "geo": "Connection country",
+      "origin": "Country of origin (browser language)",
+      "cities": "Cities",
+      "sources": "Traffic sources",
+      "entryPages": "Entry pages",
+      "actions": "Most frequent actions",
+      "unknown": "Unknown",
+      "avgTime": "Avg. time"
+    },
+    "device": {
+      "mobile": "Phone",
+      "tablet": "Tablet",
+      "desktop": "Computer",
+      "unknown": "Unknown device",
+      "androidPhone": "Android phone",
+      "androidTablet": "Android tablet"
+    },
+    "live": {
+      "hint": "Visitors active in the last 5 minutes. The page refreshes itself every 10 seconds.",
+      "empty": "Nobody on the site right now."
+    },
+    "visit": {
+      "anonymous": "Anonymous visitor",
+      "member": "Member: {name}",
+      "visitNumber": "{n, selectordinal, one {#st visit} two {#nd visit} few {#rd visit} other {#th visit}}",
+      "origin": "Origin",
+      "unknownCountry": "Unknown country",
+      "source": "Source",
+      "direct": "Direct access",
+      "sourceEmail": "E-mail campaign",
+      "language": "Language",
+      "pagesActions": "{pages, plural, one {# page} other {# pages}} · {actions, plural, one {# action} other {# actions}}",
+      "currentPage": "Current page",
+      "lastActivity": "last activity at {time}",
+      "journey": "See the journey"
+    },
+    "event": {
+      "click": "Click",
+      "submit": "Form sent",
+      "outbound": "Outbound link",
+      "download": "Download"
+    },
+    "visits": {
+      "filterDevice": "Device",
+      "filterCountry": "Country",
+      "all": "All",
+      "empty": "No visits in this period.",
+      "prev": "More recent",
+      "next": "Older"
+    }
   },
   "AccountValidationPage": {
     "kicker": "Registrations",
@@ -641,5 +718,120 @@
     "noteLabel": "Internal note",
     "notePlaceholder": "E.g. called back 14/11, meeting Tuesday",
     "save": "Save"
+  },
+  "MarketingPage": {
+    "kicker": "Communication · Prospecting",
+    "title": "E-mail marketing",
+    "description": "Send introduction and promotional e-mails to your contacts, using ready-made templates. Every e-mail contains an unsubscribe link; replies go to {inbox}.",
+    "stats": {
+      "subscribed": "Subscribed contacts",
+      "unsubscribed": "Unsubscribed",
+      "today": "Sent in the last 24 h: {sent} / {limit}",
+      "localMode": "Test mode: no e-mail is actually sent"
+    },
+    "tabs": {
+      "campaigns": "Campaigns",
+      "templates": "Ready-made templates",
+      "contacts": "Contacts"
+    },
+    "language": "Language",
+    "flash": {
+      "saved": "Campaign saved.",
+      "deleted": "Campaign deleted.",
+      "testSent": "Test e-mail sent to {email}.",
+      "testFailed": "The test e-mail could not be sent. See “Sent e-mails” for details.",
+      "batchSent": "{n} e-mail(s) sent. Still to send: {left}.",
+      "batchLimited": "{n} e-mail(s) sent. Daily limit reached: resume sending tomorrow ({left} left).",
+      "batchFailed": "The batch was refused by the sending service; nothing is lost, you can try again.",
+      "added": "{a} contact(s) added, {s} already present, {i} invalid address(es).",
+      "contactUpdated": "Contact updated."
+    },
+    "errors": {
+      "invalid": "Check the subject, the text and the link (it must start with / or https://).",
+      "locked": "A campaign that has already been sent can no longer be edited.",
+      "confirm": "Tick the confirmation box before sending.",
+      "basis": "Choose the legal basis and tick the confirmation box."
+    },
+    "templates": {
+      "intro": "Six formats written in the site's 8 languages. Pick one, adapt the text if needed, then save it as a campaign.",
+      "use": "Use this template",
+      "preview": "Preview",
+      "names": {
+        "discover": "Discover the platform",
+        "borrowers": "Borrowers: free review",
+        "investors": "Investors",
+        "followup": "Short follow-up",
+        "premium": "Premium offer",
+        "partners": "Professional partnership"
+      },
+      "uses": {
+        "discover": "First contact, all audiences",
+        "borrowers": "Individuals with a financing project",
+        "investors": "People interested in investing",
+        "followup": "A few days after a first e-mail",
+        "premium": "Existing members",
+        "partners": "Brokers, estate agents, advisors"
+      }
+    },
+    "editor": {
+      "newTitle": "New campaign",
+      "editTitle": "Edit campaign",
+      "startFrom": "Start from template",
+      "audience": "Recipients: subscribed contacts in {lang} ({count}).",
+      "subject": "Subject",
+      "body": "Text",
+      "bodyHelp": "The greeting (“Hello Marie,”) and the signature are added automatically. Leave a blank line between paragraphs.",
+      "ctaLabel": "Button text",
+      "ctaUrl": "Button link (site page, e.g. /simulateur, or full address)",
+      "save": "Save campaign",
+      "cancel": "Cancel"
+    },
+    "list": {
+      "title": "Campaigns",
+      "empty": "No campaigns yet. Start from a template above.",
+      "status": {
+        "DRAFT": "Draft",
+        "SENDING": "Sending",
+        "SENT": "Sent"
+      },
+      "counts": "{sent} sent · {left} left",
+      "test": "Send me a test",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirm": "I have proofread the text: send to {count} contact(s)",
+      "send": "Send",
+      "sendNext": "Send next batch"
+    },
+    "contacts": {
+      "addTitle": "Add contacts",
+      "addHelp": "One address per line. You can add the name and language: “address; name; en”. Addresses already in the list are ignored.",
+      "defaultLanguage": "Default language",
+      "basisLabel": "Why are you allowed to write to these people?",
+      "basis": {
+        "CONSENT": "They agreed to receive our e-mails (form, trade fair, written request…)",
+        "PROFESSIONAL": "They are business addresses and the message relates to their profession (brokers, agents…)",
+        "CLIENT": "They are existing Lentific clients"
+      },
+      "basisShort": {
+        "CONSENT": "Consent",
+        "PROFESSIONAL": "Professional",
+        "CLIENT": "Client"
+      },
+      "certify": "I confirm these contacts were obtained lawfully and that they can unsubscribe at any time.",
+      "add": "Add contacts",
+      "empty": "No contacts yet.",
+      "colEmail": "Contact",
+      "colLanguage": "Language",
+      "colBasis": "Legal basis",
+      "colStatus": "Status",
+      "colAdded": "Added on",
+      "status": {
+        "SUBSCRIBED": "Subscribed",
+        "UNSUBSCRIBED": "Unsubscribed",
+        "BOUNCED": "Invalid address"
+      },
+      "unsubscribe": "Unsubscribe",
+      "delete": "Delete"
+    }
   }
 }
