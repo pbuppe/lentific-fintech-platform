@@ -41,7 +41,7 @@ export async function PremiumHomeSection() {
       {!isPremium && (
         <a
           href={href}
-          className={`mt-4 rounded-lg px-4 py-2.5 text-center text-sm font-semibold ${highlight ? "bg-yellow text-white hover:bg-yellow-ink" : "bg-bg text-brand-ink hover:bg-white"}`}
+          className={`mt-4 rounded-lg px-4 py-2.5 text-center text-sm font-semibold ${highlight ? "bg-yellow text-ink hover:bg-yellow-ink" : "bg-bg text-brand-ink hover:bg-white"}`}
         >
           {role ? t("ctaPremium") : cta}
         </a>

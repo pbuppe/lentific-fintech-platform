@@ -69,7 +69,7 @@ export default async function InvestorDocumentsPage({ searchParams }: { searchPa
               <form action={fulfillAction} className="mt-3 flex flex-wrap items-center gap-2">
                 <input type="hidden" name="requestId" value={r.id} />
                 <input type="file" name="file" required className="text-xs" />
-                <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
+                <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
                   {t("send")}
                 </button>
               </form>

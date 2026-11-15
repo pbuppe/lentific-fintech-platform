@@ -1,5 +1,5 @@
 /**
- * Console super admin (demande produit 2026-11-14, maquette SODIVA) :
+ * Console super admin (demande produit 2026-11-14, maquette Lentific) :
  *  - équipe : inviter un membre (il choisit son mot de passe via un lien),
  *    suspendre / réactiver ;
  *  - clients : suspendre / réactiver un compte ;

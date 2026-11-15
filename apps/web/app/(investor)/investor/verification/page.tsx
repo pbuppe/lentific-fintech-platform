@@ -106,7 +106,7 @@ export default async function InvestorVerificationPage({ searchParams }: { searc
               {t("fundsFieldLabel")} <span className="text-xs text-ink-faint">{t("fundsFieldHint")}</span>
               <input type="file" name="proofOfFunds" required className="text-xs" />
             </label>
-            <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
+            <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
               {t("submitButton")}
             </button>
           </form>

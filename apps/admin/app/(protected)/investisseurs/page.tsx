@@ -97,7 +97,7 @@ export default async function InvestorVerificationQueuePage() {
                     <input type="hidden" name="userId" value={profile.userId} />
                     <input type="hidden" name="documentIds" value={documentIds} />
                     <button
-                      className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-white hover:bg-yellow-ink disabled:opacity-50"
+                      className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink disabled:opacity-50"
                       disabled={!complete}
                     >
                       {t("confirmVerification")}

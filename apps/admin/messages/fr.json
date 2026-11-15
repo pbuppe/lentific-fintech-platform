@@ -22,7 +22,7 @@
     "newProspectsCount": "{count, plural, one {# nouvelle demande} other {# nouvelles demandes}}"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Connexion agent",
     "emailLabel": "E-mail",
     "passwordLabel": "Mot de passe",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Demandes de financement",
     "listingsTitle": "Offres de capital publiées",
     "introductionsTitle": "Mises en relation",
-    "introductionsDisclaimer": "Rappel : une fois la mise en relation payée, ce qui se passe entre les deux parties a lieu hors de la plateforme, SODIVA CREDITS n'en est pas responsable.",
+    "introductionsDisclaimer": "Rappel : une fois la mise en relation payée, ce qui se passe entre les deux parties a lieu hors de la plateforme, Lentific n'en est pas responsable.",
     "introSent": "→ a demandé le contact de {name} ({status})",
     "introReceived": "← contact demandé par {name} ({status})",
     "documentsTitle": "Documents déposés",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Vue d'ensemble",
     "title": "Profils mis en relation",
-    "description": "Liste des paires ayant échangé leurs coordonnées via une mise en relation payée. À partir de ce moment, ce qui se passe entre les deux parties a lieu hors de la plateforme, SODIVA CREDITS n'en est pas responsable, seul le contact a été fourni.",
+    "description": "Liste des paires ayant échangé leurs coordonnées via une mise en relation payée. À partir de ce moment, ce qui se passe entre les deux parties a lieu hors de la plateforme, Lentific n'en est pas responsable, seul le contact a été fourni.",
     "empty": "Aucune mise en relation payée pour l'instant.",
     "paid": "Payée",
     "investorToBorrower": "Investisseur vers emprunteur",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Bienvenue {name}",
     "invalidTitle": "Lien non valide",
     "invalidBody": "Ce lien d'invitation a expiré ou a déjà servi. Demandez à un super administrateur de vous renvoyer une invitation.",

@@ -61,7 +61,7 @@ export default async function LoginPage({ searchParams }: { searchParams: { erro
             {t("passwordLabel")}
             <input type="password" name="password" required className="rounded-lg border border-line px-3 py-2.5 text-ink" />
           </label>
-          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
+          <button className="mt-2 rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
             {t("submit")}
           </button>
         </form>

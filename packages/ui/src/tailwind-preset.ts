@@ -31,7 +31,7 @@ export const tailwindPreset = {
       },
       fontFamily: {
         display: ["Fraunces", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        sans: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
         mono: ["'IBM Plex Mono'", "ui-monospace", "monospace"],
       },
     },

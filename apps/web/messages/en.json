@@ -15,7 +15,7 @@
     "heroTitlePart1": "Funding gets shared",
     "heroTitleHighlight": "with trust",
     "heroTitlePart2": ", not by chance.",
-    "heroSubtitle": "SODIVA CREDITS connects individuals, SMEs and organizations seeking funding with investors (individuals, companies or institutions) looking to grow their savings, with every file verified at each step: identity, repayment capacity, signed contract.",
+    "heroSubtitle": "Lentific connects individuals, SMEs and organizations seeking funding with investors (individuals, companies or institutions) looking to grow their savings, with every file verified at each step: identity, repayment capacity, signed contract.",
     "ctaApply": "Submit a request",
     "ctaMarketplace": "View the marketplace",
     "alreadyAccount": "Already have an account? Log in",
@@ -90,7 +90,7 @@
     "viewMarketplaceLinkArrow": "View the marketplace →",
     "introBoxTitle": "Need to move faster? Request a direct introduction ({fee})",
     "introBoxBody": "Rather than waiting, a borrower can request direct contact with an investor (individual, company or organization) and vice versa. Once the request is paid, contact details are exchanged immediately both ways.",
-    "introBoxDisclaimer": "SODIVA CREDITS provides the contact; what happens next between the two parties takes place outside the platform and is not our responsibility.",
+    "introBoxDisclaimer": "Lentific provides the contact; what happens next between the two parties takes place outside the platform and is not our responsibility.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Files already verified, ready to be funded",
     "viewAll": "View all",
@@ -106,7 +106,7 @@
     "ctaFinalTitle": "Ready to get started?",
     "ctaFinalBody": "Create an account in under two minutes, whether you're seeking funding or want to invest.",
     "becomeInvestor": "Become an investor",
-    "footerText": "© {year} SODIVA CREDITS · Crowdfunding platform.",
+    "footerText": "© {year} Lentific · Crowdfunding platform.",
     "footerMarketplace": "Marketplace",
     "footerSimulator": "Simulator",
     "footerLogin": "Log in"
@@ -162,7 +162,7 @@
     "legal": "A loan commits you and must be repaid. Check that you can afford the repayments before committing."
   },
   "LoginPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Log in",
     "noAccountPart1": "Don't have an account yet?",
     "noAccountLink": "Sign up",
@@ -172,7 +172,7 @@
     "genericError": "Unable to log in."
   },
   "SignupPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Create an account",
     "alreadyRegisteredPart1": "Already registered?",
     "alreadyRegisteredLink": "Log in",
@@ -391,7 +391,7 @@
   "BorrowerInvestors": {
     "title": "Available investors",
     "intro": "Individuals, companies, and organizations publish available capital here. Request a direct introduction (contact details shared immediately) for {fee}.",
-    "disclaimer": "Once introduced, all further exchanges and any resulting loan take place directly between you and the investor, outside the platform. SODIVA CREDITS provides the contact but is not responsible for what happens between you afterwards.",
+    "disclaimer": "Once introduced, all further exchanges and any resulting loan take place directly between you and the investor, outside the platform. Lentific provides the contact but is not responsible for what happens between you afterwards.",
     "empty": "No capital currently available.",
     "defaultInvestorName": "Investor",
     "verified": "Verified ✓",
@@ -405,7 +405,7 @@
   "BorrowerIntroductions": {
     "title": "My introductions",
     "intro": "A paid introduction reveals contact details both ways: you and the other person can message each other directly.",
-    "disclaimer": "From there, your exchanges and anything you decide together happen outside the platform. SODIVA CREDITS provided the contact but is not responsible for what happens between you afterwards.",
+    "disclaimer": "From there, your exchanges and anything you decide together happen outside the platform. Lentific provided the contact but is not responsible for what happens between you afterwards.",
     "sentHeading": "Requests I've sent",
     "sentEmpty": "No requests sent yet.",
     "targetTypeInvestor": "investor / lender",
@@ -458,7 +458,7 @@
       "high": "High"
     },
     "title": "P2P Marketplace",
-    "intro": "If you request a direct introduction to a borrower, everything that follows happens outside the platform. SODIVA CREDITS provides the contact but is not responsible for what happens between you afterwards.",
+    "intro": "If you request a direct introduction to a borrower, everything that follows happens outside the platform. Lentific provides the contact but is not responsible for what happens between you afterwards.",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
     "pendingDocumentsRequested": "{count, plural, one {requested} other {requested}} by our team ({labels}).",
     "send": "Send →",
@@ -490,7 +490,7 @@
   "InvestorIntroductions": {
     "title": "My introductions",
     "description": "A paid introduction reveals contact details both ways: you and the other party can write to each other directly.",
-    "disclaimer": "From that point on, your exchanges and anything you decide together happen outside the platform. SODIVA CREDITS provided the contact but is not responsible for what happens between you afterwards.",
+    "disclaimer": "From that point on, your exchanges and anything you decide together happen outside the platform. Lentific provided the contact but is not responsible for what happens between you afterwards.",
     "sentTitle": "Requests I've sent",
     "noSentRequests": "No requests sent for now.",
     "targetTypeApplication": "credit applicant",
@@ -678,11 +678,11 @@
     "amountLabel": "Amount (€)",
     "durationLabel": "Duration (months)",
     "rateLabel": "Annual rate (%)",
-    "disclaimer": "This contract is an automatically generated template. SODIVA CREDITS is not a party to the loan and does not handle its repayment: review it before signing.",
+    "disclaimer": "This contract is an automatically generated template. Lentific is not a party to the loan and does not handle its repayment: review it before signing.",
     "submit": "Generate the contract"
   },
   "AccountPending": {
-    "kicker": "SODIVA CREDITS · My account",
+    "kicker": "Lentific · My account",
     "titleEmail": "Confirm your email address",
     "titleReview": "Your account is being reviewed",
     "titleRejected": "Registration not approved",
@@ -705,7 +705,7 @@
     "bodySuspended": "Access to your account has been suspended. Please contact support for more information."
   },
   "VerifyEmail": {
-    "kicker": "SODIVA CREDITS · Email confirmation",
+    "kicker": "Lentific · Email confirmation",
     "titleOk": "Email address confirmed",
     "titleError": "Invalid link",
     "pillOk": "Confirmed",
@@ -828,7 +828,7 @@
   },
   "HomeBroker": {
     "hero": {
-      "eyebrow": "Credit broker in Troyes · crowdlending",
+      "eyebrow": "Crowdlending platform",
       "title": "Your project deserves the right financing.",
       "lead": "We compare offers from banks and from our platform's investors for you, put your file together and support you until the funds are paid out. First conversation free and without commitment.",
       "ctaStudy": "Request a free study",
@@ -873,8 +873,8 @@
     },
     "about": {
       "eyebrow": "The firm",
-      "title": "A local broker in Troyes",
-      "text": "SODIVA CREDITS helps individuals and businesses in the Aube area find their financing. As independents with no exclusive ties, we compare offers and defend your interests.",
+      "title": "An independent platform",
+      "text": "Lentific connects individuals, businesses and investors to finance projects transparently. As independents with no exclusive ties, we compare offers and defend your interests.",
       "points": {
         "independent": "No lender imposes its offers on us",
         "single": "A single point of contact from start to finish",
@@ -984,7 +984,7 @@
     "description": {
       "broker_fee": "Brokerage fees, application {reference}",
       "priority": "Priority file option, application {reference}",
-      "introduction": "SODIVA CREDITS introduction, ref. {reference}"
+      "introduction": "Lentific introduction, ref. {reference}"
     },
     "review": "PayPal has received your payment. Our team is checking it and will get back to you very soon: there is no need to pay again.",
     "introductionPaid": "Payment received: the introduction is done, the contact details are visible under \"Introductions\".",

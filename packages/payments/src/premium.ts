@@ -48,12 +48,12 @@ async function ensurePremiumPlan(currency: string) {
   const productKey = `paypal:${paypalMode()}:premium-product`;
   let productId = await providerSettingsRepo.get(productKey);
   if (!productId) {
-    productId = await createPaypalProduct("SODIVA CREDITS · Formule Premium");
+    productId = await createPaypalProduct("Lentific · Formule Premium");
     await providerSettingsRepo.set(productKey, productId);
   }
   const planId = await createPaypalMonthlyPlan({
     productId,
-    name: `Abonnement Premium SODIVA CREDITS (${PREMIUM_MONTHLY_AMOUNT} ${currency} / mois)`,
+    name: `Abonnement Premium Lentific (${PREMIUM_MONTHLY_AMOUNT} ${currency} / mois)`,
     amount: PREMIUM_MONTHLY_AMOUNT,
     currency,
   });
@@ -167,7 +167,7 @@ export async function completePremiumCheckout(subscriptionId: string, userId: st
 
   // Ancienne souscription PayPal (suspendue, résiliée…) : on s'assure qu'elle ne prélèvera plus jamais.
   if (current?.provider === "paypal" && current.providerRef && current.providerRef !== subscriptionId) {
-    await cancelPaypalSubscription(current.providerRef, "Remplacée par un nouvel abonnement SODIVA CREDITS").catch((error) =>
+    await cancelPaypalSubscription(current.providerRef, "Remplacée par un nouvel abonnement Lentific").catch((error) =>
       console.error("[payments:paypal] arrêt de l'ancienne souscription impossible", error)
     );
   }
@@ -199,7 +199,7 @@ export async function cancelPremium(userId: string) {
   const sub = await subscriptionsRepo.findForUser(userId);
   if (!sub) return null;
   if (sub.provider === "paypal" && sub.providerRef) {
-    await cancelPaypalSubscription(sub.providerRef, "Résiliation demandée par le client depuis son espace SODIVA CREDITS");
+    await cancelPaypalSubscription(sub.providerRef, "Résiliation demandée par le client depuis son espace Lentific");
   }
   const updated = await subscriptionsRepo.cancel(userId);
   await emit("subscription.cancelled", { userId });

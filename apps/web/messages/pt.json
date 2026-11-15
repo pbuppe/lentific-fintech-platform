@@ -15,7 +15,7 @@
     "heroTitlePart1": "O financiamento reparte-se",
     "heroTitleHighlight": "com confiança",
     "heroTitlePart2": ", não ao acaso.",
-    "heroSubtitle": "A SODIVA CREDITS põe em contacto particulares, PME e entidades que procuram financiamento com investidores (particulares, empresas ou instituições) que querem rentabilizar as suas poupanças, com um processo verificado em cada etapa: identidade, capacidade de reembolso, contrato assinado.",
+    "heroSubtitle": "A Lentific põe em contacto particulares, PME e entidades que procuram financiamento com investidores (particulares, empresas ou instituições) que querem rentabilizar as suas poupanças, com um processo verificado em cada etapa: identidade, capacidade de reembolso, contrato assinado.",
     "ctaApply": "Submeter um pedido",
     "ctaMarketplace": "Ver a marketplace",
     "alreadyAccount": "Já tem conta? Iniciar sessão",
@@ -90,7 +90,7 @@
     "viewMarketplaceLinkArrow": "Ver a marketplace →",
     "introBoxTitle": "Precisa de ir mais depressa? Peça um contacto direto ({fee})",
     "introBoxBody": "Em vez de esperar, um mutuário pode pedir o contacto direto de um investidor (particular, empresa ou entidade) e vice-versa. Assim que o pedido for pago, os dados de contacto são trocados de imediato nos dois sentidos.",
-    "introBoxDisclaimer": "A SODIVA CREDITS fornece o contacto; o que acontece depois entre as duas partes ocorre fora da plataforma e não é da nossa responsabilidade.",
+    "introBoxDisclaimer": "A Lentific fornece o contacto; o que acontece depois entre as duas partes ocorre fora da plataforma e não é da nossa responsabilidade.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Processos já verificados, prontos a ser financiados",
     "viewAll": "Ver tudo",
@@ -106,7 +106,7 @@
     "ctaFinalTitle": "Pronto para começar?",
     "ctaFinalBody": "Crie uma conta em menos de dois minutos, quer procure financiamento quer queira investir.",
     "becomeInvestor": "Tornar-me investidor",
-    "footerText": "© {year} SODIVA CREDITS · Plataforma de financiamento participativo.",
+    "footerText": "© {year} Lentific · Plataforma de financiamento participativo.",
     "footerMarketplace": "Marketplace",
     "footerSimulator": "Simulador",
     "footerLogin": "Iniciar sessão"
@@ -134,9 +134,9 @@
     "depositCta": "Submeter um pedido de financiamento",
     "signedDossiersTitle": "Processos já assinados, abertos a financiamento",
     "signedDossiersSubtitle": "Estes processos já foram verificados (identidade, análise de risco) e o respetivo contrato assinado.",
-    "noOpportunitiesPart1": "Nenhuma oportunidade aberta no momento, volta em breve, ou",
+    "noOpportunitiesPart1": "Nenhuma oportunidade aberta de momento, volte em breve, ou",
     "noOpportunitiesInCountry": "Nenhuma oportunidade aberta neste país no momento, experimenta a vista internacional acima, ou",
-    "noOpportunitiesLink": "submete um pedido de financiamento",
+    "noOpportunitiesLink": "submeta um pedido de financiamento",
     "riskLabel": {
       "low": "Baixo",
       "moderate": "Moderado",
@@ -162,7 +162,7 @@
     "legal": "Um crédito compromete-o e tem de ser reembolsado. Verifique a sua capacidade de reembolso antes de se comprometer."
   },
   "LoginPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Iniciar sessão",
     "noAccountPart1": "Ainda não tem conta?",
     "noAccountLink": "Registe-se",
@@ -172,7 +172,7 @@
     "genericError": "Não foi possível iniciar sessão."
   },
   "SignupPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Criar conta",
     "alreadyRegisteredPart1": "Já tem conta?",
     "alreadyRegisteredLink": "Iniciar sessão",
@@ -230,7 +230,7 @@
     "slaBreached": ", SLA de 48h ultrapassado, foi enviado um alerta à nossa equipa.",
     "slaDeadline": ", revisão garantida antes de {date}.",
     "priorityButton": "Passar a processo prioritário ({fee}, revisão em 48h)",
-    "identityRejectedPrompt": "Documento rejeitado, envia um novo:",
+    "identityRejectedPrompt": "Documento rejeitado, envie um novo:",
     "identityNeededPrompt": "Envie um documento de identificação para continuar:",
     "send": "Enviar",
     "identityUploadedPending": "Documento de identificação enviado, a aguardar verificação por um agente.",
@@ -391,7 +391,7 @@
   "BorrowerInvestors": {
     "title": "Investidores disponíveis",
     "intro": "Particulares, empresas e entidades publicam aqui o capital que estão dispostos a emprestar. Peça um contacto direto (dados de contacto partilhados de imediato) por {fee}.",
-    "disclaimer": "Depois de estabelecido o contacto, as trocas e o eventual empréstimo decorrem diretamente entre si e o investidor, fora da plataforma. A SODIVA CREDITS fornece o contacto mas não é responsável pelo que acontece a seguir entre as partes.",
+    "disclaimer": "Depois de estabelecido o contacto, as trocas e o eventual empréstimo decorrem diretamente entre si e o investidor, fora da plataforma. A Lentific fornece o contacto mas não é responsável pelo que acontece a seguir entre as partes.",
     "empty": "Nenhum capital disponível publicado no momento.",
     "defaultInvestorName": "Investidor",
     "verified": "Verificado ✓",
@@ -405,7 +405,7 @@
   "BorrowerIntroductions": {
     "title": "Os meus contactos",
     "intro": "Um contacto pago revela os dados de contacto nos dois sentidos: você e a outra pessoa podem escrever-se diretamente.",
-    "disclaimer": "A partir daí, as vossas trocas e tudo o que decidirem juntos acontecem fora da plataforma. A SODIVA CREDITS forneceu o contacto mas não é responsável pelo que acontece entre vocês depois.",
+    "disclaimer": "A partir daí, as vossas trocas e tudo o que decidirem juntos acontecem fora da plataforma. A Lentific forneceu o contacto mas não é responsável pelo que acontece entre vocês depois.",
     "sentHeading": "Pedidos que enviei",
     "sentEmpty": "Ainda não foi enviado nenhum pedido.",
     "targetTypeInvestor": "investidor / financiador",
@@ -414,8 +414,8 @@
     "contact": "Contacto: {email}",
     "paymentPending": "Pagamento pendente.",
     "receivedHeading": "Pedidos recebidos",
-    "receivedEmpty": "Ainda ninguém pediu para entrar em contacto contigo.",
-    "receivedRequest": "<name>{nameValue}</name> quer entrar em contacto contigo.",
+    "receivedEmpty": "Ainda ninguém pediu para entrar em contacto consigo.",
+    "receivedRequest": "<name>{nameValue}</name> quer entrar em contacto consigo.",
     "formalizeDirectLoan": "Formalizar um empréstimo direto",
     "viewDirectLoan": "Ver o empréstimo direto"
   },
@@ -458,7 +458,7 @@
       "high": "Elevado"
     },
     "title": "Marketplace P2P",
-    "intro": "Se pedires uma apresentação de contacto direta com um mutuário, as trocas seguintes acontecem fora da plataforma. A SODIVA CREDITS fornece o contacto mas não é responsável pelo que acontece depois entre vocês.",
+    "intro": "Se pedir um contacto direto com um mutuário, as trocas seguintes acontecem fora da plataforma. A Lentific fornece o contacto mas não é responsável pelo que acontece depois entre as partes.",
     "pendingDocumentsCount": "{count, plural, one {# documento} other {# documentos}}",
     "pendingDocumentsRequested": "{count, plural, one {pedido} other {pedidos}} pela nossa equipa ({labels}).",
     "send": "Enviar →",
@@ -490,7 +490,7 @@
   "InvestorIntroductions": {
     "title": "As minhas apresentações de contacto",
     "description": "Um contacto pago revela os dados de contacto nos dois sentidos: você e a outra pessoa podem escrever-se diretamente.",
-    "disclaimer": "A partir daí, as vossas trocas e tudo o que decidirem juntos acontecem fora da plataforma. A SODIVA CREDITS forneceu o contacto mas não é responsável pelo que acontece entre vocês a partir daí.",
+    "disclaimer": "A partir daí, as vossas trocas e tudo o que decidirem juntos acontecem fora da plataforma. A Lentific forneceu o contacto mas não é responsável pelo que acontece entre vocês a partir daí.",
     "sentTitle": "Pedidos que enviei",
     "noSentRequests": "Nenhum pedido enviado por agora.",
     "targetTypeApplication": "candidato a crédito",
@@ -498,8 +498,8 @@
     "contactInfo": "Contacto: {email}",
     "paymentPending": "Pagamento pendente.",
     "receivedTitle": "Pedidos recebidos",
-    "noReceivedRequests": "Ainda ninguém pediu para entrar em contacto contigo.",
-    "wantsToConnect": "deseja entrar em contacto contigo.",
+    "noReceivedRequests": "Ainda ninguém pediu para entrar em contacto consigo.",
+    "wantsToConnect": "deseja entrar em contacto consigo.",
     "formalizeDirectLoan": "Formalizar um empréstimo direto",
     "viewDirectLoan": "Ver o empréstimo direto"
   },
@@ -678,11 +678,11 @@
     "amountLabel": "Montante (€)",
     "durationLabel": "Duração (meses)",
     "rateLabel": "Taxa anual (%)",
-    "disclaimer": "Este contrato é um modelo gerado automaticamente. A SODIVA CREDITS não é parte no empréstimo nem intervém no seu reembolso: revê-o antes de assinar.",
+    "disclaimer": "Este contrato é um modelo gerado automaticamente. A Lentific não é parte no empréstimo nem intervém no seu reembolso: reveja-o antes de assinar.",
     "submit": "Gerar o contrato"
   },
   "AccountPending": {
-    "kicker": "SODIVA CREDITS · A minha conta",
+    "kicker": "Lentific · A minha conta",
     "titleEmail": "Confirme o seu endereço de e-mail",
     "titleReview": "A sua conta está em análise",
     "titleRejected": "Registo não validado",
@@ -705,7 +705,7 @@
     "bodySuspended": "O acesso à sua conta foi suspenso. Contacte o suporte para mais informações."
   },
   "VerifyEmail": {
-    "kicker": "SODIVA CREDITS · Confirmação de e-mail",
+    "kicker": "Lentific · Confirmação de e-mail",
     "titleOk": "E-mail confirmado",
     "titleError": "Link inválido",
     "pillOk": "Confirmado",
@@ -828,7 +828,7 @@
   },
   "HomeBroker": {
     "hero": {
-      "eyebrow": "Intermediário de crédito em Troyes · financiamento colaborativo",
+      "eyebrow": "Plataforma de financiamento colaborativo",
       "title": "O seu projeto merece o financiamento certo.",
       "lead": "Comparamos por si as ofertas dos bancos e dos investidores da nossa plataforma, montamos o seu processo e acompanhamo-lo até ao desembolso. Primeira conversa gratuita e sem compromisso.",
       "ctaStudy": "Pedir um estudo gratuito",
@@ -873,8 +873,8 @@
     },
     "about": {
       "eyebrow": "O gabinete",
-      "title": "Um intermediário de proximidade, em Troyes",
-      "text": "A SODIVA CREDITS acompanha particulares e profissionais do Aube na procura de financiamento. Independentes e sem exclusividade, comparamos e defendemos o seu interesse.",
+      "title": "Uma plataforma independente",
+      "text": "A Lentific põe em contacto particulares, profissionais e investidores para financiar projetos com total transparência. Independentes e sem exclusividade, comparamos e defendemos o seu interesse.",
       "points": {
         "independent": "Nenhum credor nos impõe as suas ofertas",
         "single": "Um único interlocutor do início ao fim",
@@ -984,7 +984,7 @@
     "description": {
       "broker_fee": "Honorários de intermediação, processo {reference}",
       "priority": "Opção Processo prioritário, processo {reference}",
-      "introduction": "Contacto SODIVA CREDITS, ref. {reference}"
+      "introduction": "Contacto Lentific, ref. {reference}"
     },
     "review": "O PayPal recebeu o seu pagamento. A nossa equipa está a verificá-lo e voltará a contactá-lo muito em breve: não é necessário pagar novamente.",
     "introductionPaid": "Pagamento recebido: o contacto está feito, os dados estão visíveis em «Contactos».",

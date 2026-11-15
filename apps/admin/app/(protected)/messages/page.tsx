@@ -9,7 +9,7 @@ import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
 
 /**
- * « Demandes et messages » (demande produit 2026-11-14, maquette SODIVA) :
+ * « Demandes et messages » (demande produit 2026-11-14, maquette Lentific) :
  * un admin ou super admin choisit un client puis lui demande un document,
  * un paiement (seulement après versement confirmé) ou lui écrit un message.
  * Chaque envoi apparaît dans les notifications du client (et dans « Messages »
@@ -467,7 +467,7 @@ function SendRow({ label, note }: { label: string; note: string }) {
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
       <p className="max-w-md text-xs text-ink-faint">{note}</p>
-      <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">{label}</button>
+      <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">{label}</button>
     </div>
   );
 }

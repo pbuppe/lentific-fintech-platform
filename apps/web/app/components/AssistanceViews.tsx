@@ -8,7 +8,7 @@ import { AutoRefresh } from "./AutoRefresh";
 
 /**
  * Bandeau affiché en haut de l'espace client pendant une assistance en
- * direct (maquette SODIVA) : qui aide, jusqu'à quand, et le guidage en cours.
+ * direct (maquette Lentific) : qui aide, jusqu'à quand, et le guidage en cours.
  */
 export async function AssistanceBanner({ userId, helpHref }: { userId: string; helpHref: string }) {
   const assistance = await getClientAssistance(userId);
@@ -92,7 +92,7 @@ export async function HelpView({ userId }: { userId: string }) {
               <textarea name="problem" rows={2} maxLength={300} placeholder={t("problemPlaceholder")} className="rounded-lg border border-line px-3 py-2 text-sm text-ink" />
             </label>
             <p className="text-xs text-ink-faint">{t("askNote")}</p>
-            <button className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">{t("getCode")}</button>
+            <button className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">{t("getCode")}</button>
           </form>
         )}
       </Card>

@@ -77,7 +77,7 @@ export function OfferForm({ action }: { action: (formData: FormData) => void }) 
         </span>
       </div>
 
-      <button className="justify-self-start rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">
+      <button className="justify-self-start rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">
         {t("submit")}
       </button>
     </form>

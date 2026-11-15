@@ -22,7 +22,7 @@
     "newProspectsCount": "{count, plural, one {# nuova richiesta} other {# nuove richieste}}"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Accesso operatore",
     "emailLabel": "E-mail",
     "passwordLabel": "Password",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Richieste di finanziamento",
     "listingsTitle": "Offerte di capitale pubblicate",
     "introductionsTitle": "Messe in contatto",
-    "introductionsDisclaimer": "Promemoria: una volta pagata la messa in contatto, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; SODIVA CREDITS non se ne assume la responsabilità.",
+    "introductionsDisclaimer": "Promemoria: una volta pagata la messa in contatto, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; Lentific non se ne assume la responsabilità.",
     "introSent": "→ ha richiesto il contatto di {name} ({status})",
     "introReceived": "← contatto richiesto da {name} ({status})",
     "documentsTitle": "Documenti caricati",
@@ -139,7 +139,7 @@
   "KycPage": {
     "kicker": "Verifica manuale",
     "title": "Verifica d'identità: da gestire",
-    "description": "Contatta il cliente per verificare il suo documento d'identità, quindi conferma o rifiuta qui sotto.",
+    "description": "Contattate il cliente per verificare il suo documento d'identità, quindi confermate o rifiutate qui sotto.",
     "empty": "Nessuna pratica in attesa di verifica manuale.",
     "pendingContact": "In attesa di contatto",
     "confirmVerification": "Conferma la verifica",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Panoramica",
     "title": "Profili messi in contatto",
-    "description": "Elenco delle coppie che hanno scambiato i propri contatti tramite una messa in contatto pagata. Da quel momento, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; SODIVA CREDITS non se ne assume la responsabilità, è stato fornito solo il contatto.",
+    "description": "Elenco delle coppie che hanno scambiato i propri contatti tramite una messa in contatto pagata. Da quel momento, ciò che avviene tra le due parti si svolge al di fuori della piattaforma; Lentific non se ne assume la responsabilità, è stato fornito solo il contatto.",
     "empty": "Nessuna messa in contatto pagata per ora.",
     "paid": "Pagata",
     "investorToBorrower": "Investitore verso mutuatario",
@@ -207,7 +207,7 @@
     "reasonPlaceholder": "Es.: informazioni incomplete, profilo fuori ambito…",
     "confirmReject": "Conferma il rifiuto",
     "emailPendingTitle": "E-mail non ancora confermata",
-    "emailPendingDescription": "Queste persone non hanno ancora cliccato sul link ricevuto via e-mail. Puoi inviare di nuovo il link o approvare comunque se conosci la persona.",
+    "emailPendingDescription": "Queste persone non hanno ancora cliccato sul link ricevuto via e-mail. Potete inviare di nuovo il link o approvare comunque se conoscete la persona.",
     "emailPendingEmpty": "Nessuna registrazione in attesa di conferma e-mail.",
     "resend": "Invia di nuovo il link",
     "approveAnyway": "Approva comunque",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Back office",
+    "kicker": "Lentific · Back office",
     "title": "Benvenuto/a {name}",
     "invalidTitle": "Link non valido",
     "invalidBody": "Questo link d'invito è scaduto o è già stato usato. Chiedete a un super amministratore di inviarvene un altro.",

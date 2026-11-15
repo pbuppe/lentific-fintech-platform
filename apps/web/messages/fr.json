@@ -15,7 +15,7 @@
     "heroTitlePart1": "Le financement se répartit",
     "heroTitleHighlight": "en confiance",
     "heroTitlePart2": ", pas au hasard.",
-    "heroSubtitle": "SODIVA CREDITS met en relation particuliers, PME et structures qui cherchent un financement avec des investisseurs (particuliers, entreprises ou institutions) qui veulent faire fructifier leur épargne, avec un dossier vérifié à chaque étape : identité, capacité de remboursement, contrat signé.",
+    "heroSubtitle": "Lentific met en relation particuliers, PME et structures qui cherchent un financement avec des investisseurs (particuliers, entreprises ou institutions) qui veulent faire fructifier leur épargne, avec un dossier vérifié à chaque étape : identité, capacité de remboursement, contrat signé.",
     "ctaApply": "Déposer une demande",
     "ctaMarketplace": "Voir la marketplace",
     "alreadyAccount": "Déjà un compte ? Se connecter",
@@ -90,7 +90,7 @@
     "viewMarketplaceLinkArrow": "Voir la marketplace →",
     "introBoxTitle": "Besoin d'aller plus vite ? Demandez une mise en relation directe ({fee})",
     "introBoxBody": "Plutôt que d'attendre, un emprunteur peut demander le contact direct d'un investisseur (particulier, entreprise ou structure) et inversement. Une fois la demande payée, les coordonnées sont échangées immédiatement dans les deux sens.",
-    "introBoxDisclaimer": "SODIVA CREDITS fournit le contact ; ce qui se passe ensuite entre les deux parties a lieu hors de la plateforme et n'engage pas notre responsabilité.",
+    "introBoxDisclaimer": "Lentific fournit le contact ; ce qui se passe ensuite entre les deux parties a lieu hors de la plateforme et n'engage pas notre responsabilité.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Des dossiers déjà vérifiés, prêts à être financés",
     "viewAll": "Tout voir",
@@ -106,7 +106,7 @@
     "ctaFinalTitle": "Prêt à commencer ?",
     "ctaFinalBody": "Créez un compte en moins de deux minutes, que vous cherchiez un financement ou que vous souhaitiez investir.",
     "becomeInvestor": "Devenir investisseur",
-    "footerText": "© {year} SODIVA CREDITS · Plateforme de financement participatif.",
+    "footerText": "© {year} Lentific · Plateforme de financement participatif.",
     "footerMarketplace": "Marketplace",
     "footerSimulator": "Simulateur",
     "footerLogin": "Connexion"
@@ -162,7 +162,7 @@
     "legal": "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
   },
   "LoginPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Se connecter",
     "noAccountPart1": "Pas encore de compte ?",
     "noAccountLink": "S'inscrire",
@@ -172,7 +172,7 @@
     "genericError": "Connexion impossible."
   },
   "SignupPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Créer un compte",
     "alreadyRegisteredPart1": "Déjà inscrit ?",
     "alreadyRegisteredLink": "Se connecter",
@@ -391,7 +391,7 @@
   "BorrowerInvestors": {
     "title": "Investisseurs disponibles",
     "intro": "Des particuliers, entreprises et structures publient ici le capital qu'ils sont prêts à prêter. Demandez une mise en relation directe (coordonnées échangées immédiatement) pour {fee}.",
-    "disclaimer": "Une fois mis en relation, les échanges et l'éventuel prêt se déroulent directement entre vous et l'investisseur, hors de la plateforme. SODIVA CREDITS fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
+    "disclaimer": "Une fois mis en relation, les échanges et l'éventuel prêt se déroulent directement entre vous et l'investisseur, hors de la plateforme. Lentific fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
     "empty": "Aucun capital disponible publié pour l'instant.",
     "defaultInvestorName": "Investisseur",
     "verified": "Vérifié ✓",
@@ -405,7 +405,7 @@
   "BorrowerIntroductions": {
     "title": "Mes mises en relation",
     "intro": "Une mise en relation payée révèle le contact dans les deux sens : vous et la personne visée pouvez vous écrire directement.",
-    "disclaimer": "À partir de là, vos échanges et tout ce que vous décidez ensemble ont lieu hors de la plateforme. SODIVA CREDITS a fourni le contact mais n'est pas responsable de ce qui se passe entre vous par la suite.",
+    "disclaimer": "À partir de là, vos échanges et tout ce que vous décidez ensemble ont lieu hors de la plateforme. Lentific a fourni le contact mais n'est pas responsable de ce qui se passe entre vous par la suite.",
     "sentHeading": "Demandes que j'ai envoyées",
     "sentEmpty": "Aucune demande envoyée pour l'instant.",
     "targetTypeInvestor": "investisseur / prêteur",
@@ -458,7 +458,7 @@
       "high": "Élevé"
     },
     "title": "Marketplace P2P",
-    "intro": "Si vous demandez une mise en relation directe avec un emprunteur, les échanges qui suivent ont lieu hors de la plateforme. SODIVA CREDITS fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
+    "intro": "Si vous demandez une mise en relation directe avec un emprunteur, les échanges qui suivent ont lieu hors de la plateforme. Lentific fournit le contact mais n'est pas responsable de ce qui se passe ensuite entre vous.",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documents}}",
     "pendingDocumentsRequested": "{count, plural, one {demandé} other {demandés}} par notre équipe ({labels}).",
     "send": "Envoyer →",
@@ -490,7 +490,7 @@
   "InvestorIntroductions": {
     "title": "Mes mises en relation",
     "description": "Une mise en relation payée révèle le contact dans les deux sens : vous et la personne visée pouvez vous écrire directement.",
-    "disclaimer": "À partir de là, vos échanges et tout ce que vous décidez ensemble ont lieu hors de la plateforme. SODIVA CREDITS a fourni le contact mais n'est pas responsable de ce qui se passe entre vous par la suite.",
+    "disclaimer": "À partir de là, vos échanges et tout ce que vous décidez ensemble ont lieu hors de la plateforme. Lentific a fourni le contact mais n'est pas responsable de ce qui se passe entre vous par la suite.",
     "sentTitle": "Demandes que j'ai envoyées",
     "noSentRequests": "Aucune demande envoyée pour l'instant.",
     "targetTypeApplication": "demandeur de crédit",
@@ -678,11 +678,11 @@
     "amountLabel": "Montant (€)",
     "durationLabel": "Durée (mois)",
     "rateLabel": "Taux annuel (%)",
-    "disclaimer": "Ce contrat est un modèle généré automatiquement. SODIVA CREDITS n'est pas partie au prêt et n'intervient pas dans son remboursement : vérifiez-le avant signature.",
+    "disclaimer": "Ce contrat est un modèle généré automatiquement. Lentific n'est pas partie au prêt et n'intervient pas dans son remboursement : vérifiez-le avant signature.",
     "submit": "Générer le contrat"
   },
   "AccountPending": {
-    "kicker": "SODIVA CREDITS · Mon compte",
+    "kicker": "Lentific · Mon compte",
     "titleEmail": "Confirmez votre adresse e-mail",
     "titleReview": "Votre compte est en cours de validation",
     "titleRejected": "Inscription non validée",
@@ -705,7 +705,7 @@
     "bodySuspended": "L'accès à votre compte a été suspendu. Contactez le support pour en savoir plus."
   },
   "VerifyEmail": {
-    "kicker": "SODIVA CREDITS · Confirmation d'e-mail",
+    "kicker": "Lentific · Confirmation d'e-mail",
     "titleOk": "Adresse e-mail confirmée",
     "titleError": "Lien non valide",
     "pillOk": "Confirmé",
@@ -828,7 +828,7 @@
   },
   "HomeBroker": {
     "hero": {
-      "eyebrow": "Courtier en crédit à Troyes · financement participatif",
+      "eyebrow": "Plateforme de financement participatif",
       "title": "Votre projet mérite le bon financement.",
       "lead": "Nous comparons pour vous les offres des banques et des investisseurs de notre plateforme, montons votre dossier et vous accompagnons jusqu'au versement des fonds. Premier échange gratuit et sans engagement.",
       "ctaStudy": "Demander une étude gratuite",
@@ -873,8 +873,8 @@
     },
     "about": {
       "eyebrow": "Le cabinet",
-      "title": "Un courtier de proximité, à Troyes",
-      "text": "SODIVA CREDITS accompagne les particuliers et les professionnels de l'Aube dans la recherche de leur financement. Indépendants, nous ne sommes liés par aucune exclusivité : nous comparons et défendons votre intérêt.",
+      "title": "Une plateforme indépendante",
+      "text": "Lentific met en relation particuliers, professionnels et investisseurs pour financer des projets en toute transparence. Indépendants, nous ne sommes liés par aucune exclusivité : nous comparons et défendons votre intérêt.",
       "points": {
         "independent": "Aucun prêteur ne nous impose ses offres",
         "single": "Un interlocuteur unique du début à la fin",
@@ -984,7 +984,7 @@
     "description": {
       "broker_fee": "Honoraires de courtage, dossier {reference}",
       "priority": "Option Dossier prioritaire, dossier {reference}",
-      "introduction": "Mise en relation SODIVA CREDITS, réf. {reference}"
+      "introduction": "Mise en relation Lentific, réf. {reference}"
     },
     "review": "Votre paiement a bien été reçu par PayPal. Notre équipe le vérifie et revient vers vous très rapidement : inutile de payer une seconde fois.",
     "introductionPaid": "Paiement reçu : la mise en relation est faite, les coordonnées sont visibles dans « Mises en relation ».",

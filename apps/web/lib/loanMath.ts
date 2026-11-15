@@ -1,6 +1,6 @@
 /**
  * Calculs de prêt amortissable à mensualités constantes, pour l'espace client
- * (demande produit 2026-11-14, maquette SODIVA : capital restant dû, part
+ * (demande produit 2026-11-14, maquette Lentific : capital restant dû, part
  * d'intérêts, courbe annuelle). Fonctions pures, sans accès base de données.
  */
 

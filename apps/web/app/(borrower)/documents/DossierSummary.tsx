@@ -3,7 +3,7 @@ import { prisma } from "@fintech/database";
 import { Card, StatusPill } from "@fintech/ui";
 
 /**
- * « Mon dossier » (maquette SODIVA) : où en est la vérification d'identité, et
+ * « Mon dossier » (maquette Lentific) : où en est la vérification d'identité, et
  * liste de toutes les pièces du dossier avec leur état, plus une barre
  * d'avancement « X / Y validées ».
  */

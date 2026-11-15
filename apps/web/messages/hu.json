@@ -15,7 +15,7 @@
     "heroTitlePart1": "A finanszírozás elosztása",
     "heroTitleHighlight": "bizalmon alapul",
     "heroTitlePart2": ", nem a véletlenen.",
-    "heroSubtitle": "A SODIVA CREDITS összeköti a finanszírozást kereső magánszemélyeket, kkv-kat és szervezeteket olyan befektetőkkel (magánszemélyek, vállalatok vagy intézmények), akik szeretnék gyarapítani megtakarításaikat, minden lépésben ellenőrzött dossziéval: személyazonosság, visszafizetési képesség, aláírt szerződés.",
+    "heroSubtitle": "A Lentific összeköti a finanszírozást kereső magánszemélyeket, kkv-kat és szervezeteket olyan befektetőkkel (magánszemélyek, vállalatok vagy intézmények), akik szeretnék gyarapítani megtakarításaikat, minden lépésben ellenőrzött dossziéval: személyazonosság, visszafizetési képesség, aláírt szerződés.",
     "ctaApply": "Igénylés benyújtása",
     "ctaMarketplace": "Piactér megtekintése",
     "alreadyAccount": "Már van fiókja? Jelentkezzen be",
@@ -90,7 +90,7 @@
     "viewMarketplaceLinkArrow": "Piactér megtekintése →",
     "introBoxTitle": "Gyorsabban haladna? Kérjen közvetlen kapcsolatfelvételt ({fee})",
     "introBoxBody": "Várakozás helyett a hitelfelvevő közvetlen kapcsolatot kérhet egy befektetővel (magánszemély, vállalat vagy szervezet), és fordítva is. A kérés kifizetése után az elérhetőségek azonnal kicserélődnek mindkét irányban.",
-    "introBoxDisclaimer": "A SODIVA CREDITS biztosítja a kapcsolatot; ami ezután a két fél között történik, a platformon kívül zajlik, és nem tartozik a felelősségünkbe.",
+    "introBoxDisclaimer": "A Lentific biztosítja a kapcsolatot; ami ezután a két fél között történik, a platformon kívül zajlik, és nem tartozik a felelősségünkbe.",
     "marketplaceEyebrow": "Piactér",
     "marketplaceTitle": "Már ellenőrzött dossziék, finanszírozásra készen",
     "viewAll": "Összes megtekintése",
@@ -105,8 +105,8 @@
     "fundedProgress": "{funded} € / {target} € finanszírozva ({pct}%)",
     "ctaFinalTitle": "Készen állsz a kezdésre?",
     "ctaFinalBody": "Hozzon létre fiókot két percen belül, akár finanszírozást keres, akár befektetni szeretne.",
-    "becomeInvestor": "Válj befektetővé",
-    "footerText": "© {year} SODIVA CREDITS · Közösségi finanszírozási platform.",
+    "becomeInvestor": "Váljon befektetővé",
+    "footerText": "© {year} Lentific · Közösségi finanszírozási platform.",
     "footerMarketplace": "Piactér",
     "footerSimulator": "Szimulátor",
     "footerLogin": "Bejelentkezés"
@@ -162,7 +162,7 @@
     "legal": "A hitel kötelezettséggel jár, és vissza kell fizetni. Kötelezettségvállalás előtt ellenőrizze visszafizetési képességét."
   },
   "LoginPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Bejelentkezés",
     "noAccountPart1": "Még nincs fiókja?",
     "noAccountLink": "Regisztráljon",
@@ -172,7 +172,7 @@
     "genericError": "A bejelentkezés sikertelen."
   },
   "SignupPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Fiók létrehozása",
     "alreadyRegisteredPart1": "Már regisztrált?",
     "alreadyRegisteredLink": "Jelentkezzen be",
@@ -391,7 +391,7 @@
   "BorrowerInvestors": {
     "title": "Elérhető befektetők",
     "intro": "Magánszemélyek, vállalkozások és intézmények itt teszik közzé a kölcsönözhető tőkéjüket. Kérjen közvetlen kapcsolatfelvételt (az elérhetőségek azonnal megosztásra kerülnek) {fee} ellenében.",
-    "disclaimer": "A kapcsolatfelvétel után a további egyeztetések és az esetleges kölcsön közvetlenül Ön és a befektető között zajlanak, a platformon kívül. A SODIVA CREDITS biztosítja a kapcsolatot, de nem felelős azért, ami ezt követően a felek között történik.",
+    "disclaimer": "A kapcsolatfelvétel után a további egyeztetések és az esetleges kölcsön közvetlenül Ön és a befektető között zajlanak, a platformon kívül. A Lentific biztosítja a kapcsolatot, de nem felelős azért, ami ezt követően a felek között történik.",
     "empty": "Jelenleg nincs elérhető tőke közzétéve.",
     "defaultInvestorName": "Befektető",
     "verified": "Ellenőrzött ✓",
@@ -405,7 +405,7 @@
   "BorrowerIntroductions": {
     "title": "Kapcsolatfelvételeim",
     "intro": "A kifizetett kapcsolatfelvétel mindkét irányban felfedi az elérhetőségeket: Ön és a másik fél közvetlenül írhatnak egymásnak.",
-    "disclaimer": "Innentől az egyeztetések és minden, amiről közösen döntenek, a platformon kívül történik. A SODIVA CREDITS biztosította a kapcsolatot, de nem felelős azért, ami ezt követően a felek között történik.",
+    "disclaimer": "Innentől az egyeztetések és minden, amiről közösen döntenek, a platformon kívül történik. A Lentific biztosította a kapcsolatot, de nem felelős azért, ami ezt követően a felek között történik.",
     "sentHeading": "Általam küldött kérések",
     "sentEmpty": "Még nincs elküldött kérés.",
     "targetTypeInvestor": "befektető / hitelező",
@@ -458,7 +458,7 @@
       "high": "Magas"
     },
     "title": "P2P piactér",
-    "intro": "Ha közvetlen kapcsolatfelvételt kér egy hitelfelvevővel, az azt követő egyeztetések a platformon kívül zajlanak. A SODIVA CREDITS biztosítja a kapcsolatot, de nem felelős azért, ami ezután a felek között történik.",
+    "intro": "Ha közvetlen kapcsolatfelvételt kér egy hitelfelvevővel, az azt követő egyeztetések a platformon kívül zajlanak. A Lentific biztosítja a kapcsolatot, de nem felelős azért, ami ezután a felek között történik.",
     "pendingDocumentsCount": "{count, plural, one {# dokumentum} other {# dokumentum}}",
     "pendingDocumentsRequested": "{count, plural, one {kérve} other {kérve}} csapatunk által ({labels}).",
     "send": "Küldés →",
@@ -490,7 +490,7 @@
   "InvestorIntroductions": {
     "title": "Kapcsolatfelvételeim",
     "description": "Egy kifizetett kapcsolatfelvétel mindkét irányban felfedi az elérhetőségeket: Ön és a célszemély közvetlenül írhatnak egymásnak.",
-    "disclaimer": "Ettől kezdve az egyeztetések és minden, amiről közösen döntenek, a platformon kívül zajlik. A SODIVA CREDITS biztosította a kapcsolatot, de nem felelős azért, ami ezután a felek között történik.",
+    "disclaimer": "Ettől kezdve az egyeztetések és minden, amiről közösen döntenek, a platformon kívül zajlik. A Lentific biztosította a kapcsolatot, de nem felelős azért, ami ezután a felek között történik.",
     "sentTitle": "Az általam küldött kérések",
     "noSentRequests": "Jelenleg nincs elküldött kérés.",
     "targetTypeApplication": "hitelkérelmező",
@@ -678,11 +678,11 @@
     "amountLabel": "Összeg (€)",
     "durationLabel": "Futamidő (hónap)",
     "rateLabel": "Éves kamat (%)",
-    "disclaimer": "Ez a szerződés egy automatikusan generált minta. A SODIVA CREDITS nem részese a kölcsönnek, és nem vesz részt a törlesztésében: aláírás előtt ellenőrizd.",
+    "disclaimer": "Ez a szerződés egy automatikusan generált minta. A Lentific nem részese a kölcsönnek, és nem vesz részt a törlesztésében: aláírás előtt ellenőrizze.",
     "submit": "Szerződés létrehozása"
   },
   "AccountPending": {
-    "kicker": "SODIVA CREDITS · Fiókom",
+    "kicker": "Lentific · Fiókom",
     "titleEmail": "Erősítse meg e-mail-címét",
     "titleReview": "Fiókja jóváhagyásra vár",
     "titleRejected": "A regisztrációt nem hagytuk jóvá",
@@ -705,7 +705,7 @@
     "bodySuspended": "Fiókjához való hozzáférését felfüggesztettük. További információért forduljon az ügyfélszolgálathoz."
   },
   "VerifyEmail": {
-    "kicker": "SODIVA CREDITS · E-mail megerősítése",
+    "kicker": "Lentific · E-mail megerősítése",
     "titleOk": "E-mail-cím megerősítve",
     "titleError": "Érvénytelen link",
     "pillOk": "Megerősítve",
@@ -828,7 +828,7 @@
   },
   "HomeBroker": {
     "hero": {
-      "eyebrow": "Hitelközvetítő Troyes-ban · közösségi finanszírozás",
+      "eyebrow": "Közösségi finanszírozási platform",
       "title": "Projektje a megfelelő finanszírozást érdemli.",
       "lead": "Összehasonlítjuk Önnek a bankok és platformunk befektetőinek ajánlatait, összeállítjuk az anyagát, és a folyósításig kísérjük. Az első beszélgetés ingyenes és kötelezettségmentes.",
       "ctaStudy": "Ingyenes elemzés kérése",
@@ -873,8 +873,8 @@
     },
     "about": {
       "eyebrow": "Az iroda",
-      "title": "Helyi közvetítő Troyes-ban",
-      "text": "A SODIVA CREDITS az Aube megyei magánszemélyeket és vállalkozásokat segíti finanszírozásuk megtalálásában. Függetlenek vagyunk, kizárólagosság nélkül: összehasonlítunk és az Ön érdekét képviseljük.",
+      "title": "Független platform",
+      "text": "A Lentific magánszemélyeket, vállalkozásokat és befektetőket hoz össze projektek átlátható finanszírozására. Függetlenek vagyunk, kizárólagosság nélkül: összehasonlítunk és az Ön érdekét képviseljük.",
       "points": {
         "independent": "Egyetlen hitelező sem kényszeríti ránk ajánlatát",
         "single": "Egyetlen kapcsolattartó az elejétől a végéig",
@@ -984,7 +984,7 @@
     "description": {
       "broker_fee": "Közvetítői díj, {reference} ügy",
       "priority": "Elsőbbségi ügyintézés, {reference} ügy",
-      "introduction": "SODIVA CREDITS kapcsolatfelvétel, hiv. {reference}"
+      "introduction": "Lentific kapcsolatfelvétel, hiv. {reference}"
     },
     "review": "A PayPal megkapta a fizetését. Csapatunk ellenőrzi, és hamarosan jelentkezik: nem kell újra fizetnie.",
     "introductionPaid": "A fizetés megérkezett: a kapcsolatfelvétel megtörtént, az elérhetőségek a „Kapcsolatfelvételek” menüpontban láthatók.",

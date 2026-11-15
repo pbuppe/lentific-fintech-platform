@@ -1,38 +1,35 @@
 /**
- * Design tokens SODIVA CREDITS (lot 6 de l'intégration de la maquette, 2026-11-14) :
- * vert profond dominant, fond crème, sable pour les états « en attente », rouge
- * brique pour les alertes. Source unique de vérité pour Tailwind (apps/web,
- * apps/admin) et pour tout composant de packages/ui.
- *
- * Les noms de jetons historiques sont conservés pour ne pas toucher aux écrans :
- * `brand` = vert SODIVA ; `yellow` = couleur des boutons d'action principale
- * (vert, texte clair) ; `accent` = rouge brique ; `sand` = états en attente.
+ * Design tokens Lentific : bleu dominant (moins vif, plus profond), blanc cassé,
+ * rouge fonctionnel ET décoratif, jaune fonctionnel (boutons) ET décoratif.
+ * Palette v1.1 (assombrie/désaturée + jaune ajouté) ; source unique de vérité
+ * pour Tailwind (apps/web, apps/admin) et pour tout composant de packages/ui.
+ * `sand` (états « en attente » des nouveaux écrans) est décliné du jaune Lentific.
  */
 export const colors = {
-  bg: "#F4F1EA",
+  bg: "#EEEBE3",
   surface: "#FFFFFF",
-  surfaceAlt: "#FAF7F1",
-  ink: "#1F2A24",
-  inkSoft: "#4E5A54",
-  inkFaint: "#6B756F",
-  line: "#E8DFCE",
+  surfaceAlt: "#F6F3EC",
+  ink: "#171B2B",
+  inkSoft: "#545B6E",
+  inkFaint: "#8A8F9E",
+  line: "#E2DDD0",
 
-  brand: "#2F5D46",
-  brandInk: "#1F3F2F",
-  brandSoft: "#DCE7DD",
+  brand: "#2E4A9E", // bleu dominant, moins vif et plus foncé que la v1.0
+  brandInk: "#1C2F6B",
+  brandSoft: "#E4E8F5",
 
-  accent: "#B8432F",
-  accentSoft: "#FCEDE9",
+  accent: "#C4293A", // rouge, fonctionnel (alertes) ET décoratif (traits, soulignés, formes)
+  accentSoft: "#FBE7E7",
 
-  yellow: "#2F5D46", // bouton d'action principal (texte clair)
-  yellowInk: "#1F3F2F", // survol du bouton principal
-  yellowSoft: "#FBF3E2",
+  yellow: "#F5C21B", // jaune, fonctionnel (boutons, toujours avec texte noir/ink) ET décoratif
+  yellowInk: "#C89A00", // hover/actif sur fond jaune, le texte reste noir
+  yellowSoft: "#FCF0C7",
 
-  sand: "#F6E7C8",
-  sandInk: "#6B4E12",
+  sand: "#FCF0C7", // états « en attente » (jaune doux Lentific)
+  sandInk: "#6E5200",
 
-  success: "#1F6B45",
-  successSoft: "#DCE7DD",
+  success: "#157F45",
+  successSoft: "#E5F4EB",
 } as const;
 
 export type ColorToken = keyof typeof colors;

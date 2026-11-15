@@ -4,7 +4,7 @@ import { ScrollToHere } from "./ScrollToHere";
 
 /**
  * Sections « courtier » du site vitrine (demande produit 2026-11-14, maquette
- * SODIVA) : services, le cabinet, questions fréquentes, demande d'étude
+ * Lentific) : services, le cabinet, questions fréquentes, demande d'étude
  * gratuite et pied de page avec les mentions légales.
  */
 
@@ -160,7 +160,7 @@ export async function ContactSection({ status }: { status?: string }) {
                 <input type="checkbox" name="consent" required className="mt-0.5 accent-brand" />
                 <span>{t("consent")}</span>
               </label>
-              <button className="rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink">{t("send")}</button>
+              <button className="rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink">{t("send")}</button>
             </form>
           )}
         </div>
@@ -189,7 +189,7 @@ export async function SiteFooter() {
     <footer className="border-t border-line bg-surface px-6 py-10 text-sm text-ink-soft sm:px-12">
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
         <div>
-          <p className="font-sans text-sm font-bold uppercase tracking-wide text-ink">{legal.company ?? "SODIVA CREDITS"}</p>
+          <p className="font-sans text-sm font-bold uppercase tracking-wide text-ink">{legal.company ?? "Lentific"}</p>
           {legal.address && <p className="mt-2">{legal.address}</p>}
           {legal.phone && (
             <p>
@@ -217,7 +217,7 @@ export async function SiteFooter() {
           <p className="mt-2">{t("noFeeBefore")}</p>
         </div>
       </div>
-      <p className="mx-auto mt-8 max-w-5xl text-xs text-ink-faint">{t("copyright", { year: new Date().getFullYear(), company: legal.company ?? "SODIVA CREDITS" })}</p>
+      <p className="mx-auto mt-8 max-w-5xl text-xs text-ink-faint">{t("copyright", { year: new Date().getFullYear(), company: legal.company ?? "Lentific" })}</p>
     </footer>
   );
 }

@@ -22,7 +22,7 @@
     "newProspectsCount": "{count, plural, one {# new request} other {# new requests}}"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back office",
+    "kicker": "Lentific · Back office",
     "title": "Agent sign-in",
     "emailLabel": "Email",
     "passwordLabel": "Password",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Financing requests",
     "listingsTitle": "Published capital offers",
     "introductionsTitle": "Introductions",
-    "introductionsDisclaimer": "Reminder: once an introduction has been paid for, whatever happens between the two parties takes place outside the platform, and SODIVA CREDITS is not responsible for it.",
+    "introductionsDisclaimer": "Reminder: once an introduction has been paid for, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it.",
     "introSent": "→ requested contact for {name} ({status})",
     "introReceived": "← contact requested by {name} ({status})",
     "documentsTitle": "Uploaded documents",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Overview",
     "title": "Introduced profiles",
-    "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and SODIVA CREDITS is not responsible for it, only the contact was provided.",
+    "description": "List of pairs who exchanged contact details via a paid introduction. From that point on, whatever happens between the two parties takes place outside the platform, and Lentific is not responsible for it, only the contact was provided.",
     "empty": "No paid introductions yet.",
     "paid": "Paid",
     "investorToBorrower": "Investor to borrower",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Back office",
+    "kicker": "Lentific · Back office",
     "title": "Welcome {name}",
     "invalidTitle": "Invalid link",
     "invalidBody": "This invitation link has expired or has already been used. Ask a super administrator to send you a new one.",

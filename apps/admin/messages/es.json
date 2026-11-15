@@ -22,7 +22,7 @@
     "newProspectsCount": "{count, plural, one {# solicitud nueva} other {# solicitudes nuevas}}"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Acceso de agente",
     "emailLabel": "Correo electrónico",
     "passwordLabel": "Contraseña",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Solicitudes de financiación",
     "listingsTitle": "Ofertas de capital publicadas",
     "introductionsTitle": "Puestas en contacto",
-    "introductionsDisclaimer": "Recordatorio: una vez pagada la puesta en contacto, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; SODIVA CREDITS no se hace responsable.",
+    "introductionsDisclaimer": "Recordatorio: una vez pagada la puesta en contacto, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; Lentific no se hace responsable.",
     "introSent": "→ solicitó el contacto de {name} ({status})",
     "introReceived": "← contacto solicitado por {name} ({status})",
     "documentsTitle": "Documentos aportados",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Vista general",
     "title": "Perfiles puestos en contacto",
-    "description": "Lista de pares que intercambiaron sus datos de contacto mediante una puesta en contacto pagada. A partir de ese momento, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; SODIVA CREDITS no se hace responsable, solo se proporcionó el contacto.",
+    "description": "Lista de pares que intercambiaron sus datos de contacto mediante una puesta en contacto pagada. A partir de ese momento, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; Lentific no se hace responsable, solo se proporcionó el contacto.",
     "empty": "Todavía no hay puestas en contacto pagadas.",
     "paid": "Pagada",
     "investorToBorrower": "Inversor hacia prestatario",
@@ -207,7 +207,7 @@
     "reasonPlaceholder": "Ej.: información incompleta, perfil fuera de alcance…",
     "confirmReject": "Confirmar el rechazo",
     "emailPendingTitle": "Correo aún no confirmado",
-    "emailPendingDescription": "Estas personas aún no han hecho clic en el enlace recibido. Puedes reenviarlo o validar igualmente si conoces a la persona.",
+    "emailPendingDescription": "Estas personas aún no han hecho clic en el enlace recibido. Puede reenviarlo o validar igualmente si conoce a la persona.",
     "emailPendingEmpty": "Ningún registro pendiente de confirmación de correo.",
     "resend": "Reenviar el enlace",
     "approveAnyway": "Validar igualmente",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Bienvenido/a {name}",
     "invalidTitle": "Enlace no válido",
     "invalidBody": "Este enlace de invitación ha caducado o ya se ha usado. Pida a un superadministrador que le envíe otro.",

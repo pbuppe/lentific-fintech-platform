@@ -3,8 +3,8 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 type Variant = "primary" | "light" | "ghost" | "link";
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-yellow text-white hover:bg-yellow-ink",
-  // Bouton crème pour les fonds verts (hero), maquette SODIVA.
+  primary: "bg-yellow text-ink hover:bg-yellow-ink",
+  // Bouton clair pour les fonds bleus (hero).
   light: "bg-bg text-brand-ink hover:bg-white",
   ghost: "border border-line text-ink hover:bg-surface-alt",
   link: "text-brand-ink underline decoration-accent underline-offset-4 font-semibold",

@@ -15,7 +15,7 @@
     "heroTitlePart1": "Financiering wordt verdeeld",
     "heroTitleHighlight": "op basis van vertrouwen",
     "heroTitlePart2": ", niet toevallig.",
-    "heroSubtitle": "SODIVA CREDITS brengt particulieren, mkb-bedrijven en organisaties die op zoek zijn naar financiering in contact met investeerders (particulieren, bedrijven of instellingen) die hun spaargeld willen laten renderen, met een dossier dat in elke stap wordt geverifieerd: identiteit, terugbetalingscapaciteit, ondertekend contract.",
+    "heroSubtitle": "Lentific brengt particulieren, mkb-bedrijven en organisaties die op zoek zijn naar financiering in contact met investeerders (particulieren, bedrijven of instellingen) die hun spaargeld willen laten renderen, met een dossier dat in elke stap wordt geverifieerd: identiteit, terugbetalingscapaciteit, ondertekend contract.",
     "ctaApply": "Dien een aanvraag in",
     "ctaMarketplace": "Bekijk de marketplace",
     "alreadyAccount": "Al een account? Inloggen",
@@ -90,7 +90,7 @@
     "viewMarketplaceLinkArrow": "Bekijk de marketplace →",
     "introBoxTitle": "Moet het sneller gaan? Vraag een directe introductie aan ({fee})",
     "introBoxBody": "In plaats van te wachten, kan een lener direct contact aanvragen met een investeerder (particulier, bedrijf of organisatie) en omgekeerd. Zodra de aanvraag betaald is, worden de contactgegevens onmiddellijk in beide richtingen uitgewisseld.",
-    "introBoxDisclaimer": "SODIVA CREDITS verzorgt het contact; wat daarna tussen de twee partijen gebeurt, vindt plaats buiten het platform en valt niet onder onze verantwoordelijkheid.",
+    "introBoxDisclaimer": "Lentific verzorgt het contact; wat daarna tussen de twee partijen gebeurt, vindt plaats buiten het platform en valt niet onder onze verantwoordelijkheid.",
     "marketplaceEyebrow": "Marketplace",
     "marketplaceTitle": "Al geverifieerde dossiers, klaar om gefinancierd te worden",
     "viewAll": "Alles bekijken",
@@ -106,7 +106,7 @@
     "ctaFinalTitle": "Klaar om te beginnen?",
     "ctaFinalBody": "Maak in minder dan twee minuten een account aan, of u nu financiering zoekt of wilt investeren.",
     "becomeInvestor": "Word investeerder",
-    "footerText": "© {year} SODIVA CREDITS · Crowdfundingplatform.",
+    "footerText": "© {year} Lentific · Crowdfundingplatform.",
     "footerMarketplace": "Marketplace",
     "footerSimulator": "Simulator",
     "footerLogin": "Inloggen"
@@ -162,7 +162,7 @@
     "legal": "Een lening verbindt u en moet worden terugbetaald. Controleer of u de aflossingen kunt dragen voordat u zich verbindt."
   },
   "LoginPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Inloggen",
     "noAccountPart1": "Nog geen account?",
     "noAccountLink": "Registreren",
@@ -172,7 +172,7 @@
     "genericError": "Inloggen niet gelukt."
   },
   "SignupPage": {
-    "brand": "SODIVA CREDITS",
+    "brand": "Lentific",
     "title": "Account aanmaken",
     "alreadyRegisteredPart1": "Al geregistreerd?",
     "alreadyRegisteredLink": "Inloggen",
@@ -391,7 +391,7 @@
   "BorrowerInvestors": {
     "title": "Beschikbare investeerders",
     "intro": "Particulieren, bedrijven en organisaties publiceren hier het kapitaal dat ze bereid zijn uit te lenen. Vraag een directe introductie aan (contactgegevens direct uitgewisseld) voor {fee}.",
-    "disclaimer": "Zodra u geïntroduceerd bent, verlopen de uitwisselingen en de eventuele lening rechtstreeks tussen u en de investeerder, buiten het platform om. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen beide partijen gebeurt.",
+    "disclaimer": "Zodra u geïntroduceerd bent, verlopen de uitwisselingen en de eventuele lening rechtstreeks tussen u en de investeerder, buiten het platform om. Lentific verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen beide partijen gebeurt.",
     "empty": "Op dit moment geen beschikbaar kapitaal gepubliceerd.",
     "defaultInvestorName": "Investeerder",
     "verified": "Geverifieerd ✓",
@@ -405,7 +405,7 @@
   "BorrowerIntroductions": {
     "title": "Mijn introducties",
     "intro": "Een betaalde introductie onthult de contactgegevens in beide richtingen: u en de andere persoon kunnen elkaar rechtstreeks schrijven.",
-    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. SODIVA CREDITS heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. Lentific heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "sentHeading": "Verzoeken die ik heb verstuurd",
     "sentEmpty": "Op dit moment geen verzonden verzoeken.",
     "targetTypeInvestor": "investeerder / kredietverstrekker",
@@ -458,7 +458,7 @@
       "high": "Hoog"
     },
     "title": "P2P Marketplace",
-    "intro": "Als u een directe introductie met een lener aanvraagt, vinden alle uitwisselingen die daarop volgen plaats buiten het platform. SODIVA CREDITS verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen beide partijen gebeurt.",
+    "intro": "Als u een directe introductie met een lener aanvraagt, vinden alle uitwisselingen die daarop volgen plaats buiten het platform. Lentific verzorgt het contact maar is niet verantwoordelijk voor wat daarna tussen beide partijen gebeurt.",
     "pendingDocumentsCount": "{count, plural, one {# document} other {# documenten}}",
     "pendingDocumentsRequested": "{count, plural, one {gevraagd} other {gevraagd}} door ons team ({labels}).",
     "send": "Versturen →",
@@ -490,7 +490,7 @@
   "InvestorIntroductions": {
     "title": "Mijn introducties",
     "description": "Een betaalde introductie onthult de contactgegevens in beide richtingen: u en de andere partij kunnen elkaar rechtstreeks schrijven.",
-    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. SODIVA CREDITS heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
+    "disclaimer": "Vanaf dat moment vinden jullie uitwisselingen en alles wat jullie samen besluiten plaats buiten het platform. Lentific heeft het contact verzorgd maar is niet verantwoordelijk voor wat daarna tussen jullie gebeurt.",
     "sentTitle": "Verzoeken die ik heb verstuurd",
     "noSentRequests": "Op dit moment geen verzonden verzoeken.",
     "targetTypeApplication": "kredietaanvrager",
@@ -678,11 +678,11 @@
     "amountLabel": "Bedrag (€)",
     "durationLabel": "Looptijd (maanden)",
     "rateLabel": "Jaarlijkse rente (%)",
-    "disclaimer": "Dit contract is een automatisch gegenereerd model. SODIVA CREDITS is geen partij bij de lening en komt niet tussen bij de terugbetaling: controleer het voor ondertekening.",
+    "disclaimer": "Dit contract is een automatisch gegenereerd model. Lentific is geen partij bij de lening en komt niet tussen bij de terugbetaling: controleer het voor ondertekening.",
     "submit": "Contract genereren"
   },
   "AccountPending": {
-    "kicker": "SODIVA CREDITS · Mijn account",
+    "kicker": "Lentific · Mijn account",
     "titleEmail": "Bevestig uw e-mailadres",
     "titleReview": "Uw account wordt beoordeeld",
     "titleRejected": "Registratie niet goedgekeurd",
@@ -705,7 +705,7 @@
     "bodySuspended": "De toegang tot uw account is opgeschort. Neem contact op met support voor meer informatie."
   },
   "VerifyEmail": {
-    "kicker": "SODIVA CREDITS · E-mailbevestiging",
+    "kicker": "Lentific · E-mailbevestiging",
     "titleOk": "E-mailadres bevestigd",
     "titleError": "Ongeldige link",
     "pillOk": "Bevestigd",
@@ -828,7 +828,7 @@
   },
   "HomeBroker": {
     "hero": {
-      "eyebrow": "Kredietbemiddelaar in Troyes · crowdlending",
+      "eyebrow": "Crowdlendingplatform",
       "title": "Uw project verdient de juiste financiering.",
       "lead": "Wij vergelijken voor u de aanbiedingen van banken en van investeerders op ons platform, stellen uw dossier samen en begeleiden u tot de uitbetaling. Eerste gesprek gratis en vrijblijvend.",
       "ctaStudy": "Gratis studie aanvragen",
@@ -873,8 +873,8 @@
     },
     "about": {
       "eyebrow": "Het kantoor",
-      "title": "Een bemiddelaar dichtbij, in Troyes",
-      "text": "SODIVA CREDITS begeleidt particulieren en professionals in de Aube bij het vinden van financiering. Onafhankelijk en zonder exclusiviteit vergelijken wij en verdedigen wij uw belang.",
+      "title": "Een onafhankelijk platform",
+      "text": "Lentific brengt particulieren, professionals en investeerders samen om projecten transparant te financieren. Onafhankelijk en zonder exclusiviteit vergelijken wij en verdedigen wij uw belang.",
       "points": {
         "independent": "Geen enkele kredietgever legt ons zijn aanbod op",
         "single": "Eén aanspreekpunt van begin tot eind",
@@ -984,7 +984,7 @@
     "description": {
       "broker_fee": "Bemiddelingskosten, dossier {reference}",
       "priority": "Optie Prioritair dossier, dossier {reference}",
-      "introduction": "SODIVA CREDITS-kennismaking, ref. {reference}"
+      "introduction": "Lentific-kennismaking, ref. {reference}"
     },
     "review": "PayPal heeft uw betaling ontvangen. Ons team controleert deze en neemt zeer snel contact met u op: u hoeft niet opnieuw te betalen.",
     "introductionPaid": "Betaling ontvangen: de kennismaking is gelegd, de contactgegevens staan onder \"Kennismakingen\".",

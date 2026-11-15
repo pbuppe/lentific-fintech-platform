@@ -23,7 +23,7 @@ import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
 
 /**
- * Console super admin (demande produit 2026-11-14, maquette SODIVA) : équipe,
+ * Console super admin (demande produit 2026-11-14, maquette Lentific) : équipe,
  * comptes clients et assistance en direct avec le code donné par le client.
  */
 
@@ -128,7 +128,7 @@ async function endSessionAction(formData: FormData) {
 }
 
 const inputClass = "w-full min-w-0 rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink";
-const btnPrimary = "rounded-lg bg-yellow px-3.5 py-2 text-sm font-semibold text-white hover:bg-yellow-ink";
+const btnPrimary = "rounded-lg bg-yellow px-3.5 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink";
 const btnGhost = "rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-ink hover:border-brand";
 const btnDanger = "rounded-lg border border-accent/40 px-3 py-1.5 text-xs font-semibold text-accent hover:bg-accent-soft";
 

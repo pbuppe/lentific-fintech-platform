@@ -6,8 +6,8 @@ import { SiteHeader } from "./components/SiteHeader";
 import { PageViewTracker } from "./components/PageViewTracker";
 
 export const metadata: Metadata = {
-  title: "SODIVA CREDITS · Courtier en crédit",
-  description: "Courtier en crédit et financement participatif : nous comparons les offres, montons votre dossier et vous accompagnons jusqu'au versement des fonds.",
+  title: "Lentific · Financement participatif P2P",
+  description: "Le financement se répartit en confiance, pas au hasard.",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

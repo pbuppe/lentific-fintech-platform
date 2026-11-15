@@ -22,7 +22,7 @@
     "newProspectsCount": "{count, plural, one {# pedido novo} other {# pedidos novos}}"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Acesso de agente",
     "emailLabel": "E-mail",
     "passwordLabel": "Palavra-passe",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Pedidos de financiamento",
     "listingsTitle": "Ofertas de capital publicadas",
     "introductionsTitle": "Apresentações",
-    "introductionsDisclaimer": "Lembrete: uma vez paga a apresentação, o que acontece entre as duas partes decorre fora da plataforma; a SODIVA CREDITS não se responsabiliza.",
+    "introductionsDisclaimer": "Lembrete: uma vez paga a apresentação, o que acontece entre as duas partes decorre fora da plataforma; a Lentific não se responsabiliza.",
     "introSent": "→ pediu o contacto de {name} ({status})",
     "introReceived": "← contacto pedido por {name} ({status})",
     "documentsTitle": "Documentos carregados",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Visão geral",
     "title": "Perfis apresentados",
-    "description": "Lista dos pares que trocaram os seus contactos através de uma apresentação paga. A partir desse momento, o que acontece entre as duas partes decorre fora da plataforma; a SODIVA CREDITS não se responsabiliza, apenas o contacto foi fornecido.",
+    "description": "Lista dos pares que trocaram os seus contactos através de uma apresentação paga. A partir desse momento, o que acontece entre as duas partes decorre fora da plataforma; a Lentific não se responsabiliza, apenas o contacto foi fornecido.",
     "empty": "Ainda não há apresentações pagas.",
     "paid": "Paga",
     "investorToBorrower": "Investidor para mutuário",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Bem-vindo/a {name}",
     "invalidTitle": "Ligação inválida",
     "invalidBody": "Esta ligação de convite expirou ou já foi usada. Peça a um superadministrador que lhe envie outra.",

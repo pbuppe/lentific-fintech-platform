@@ -27,10 +27,10 @@ export async function SiteHeader() {
     <header className="flex flex-wrap items-center justify-between gap-y-2 border-b border-line bg-surface px-6 py-3 sm:px-12">
       <div className="flex items-center gap-8">
         <a href="/" className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand font-display text-base font-semibold text-white">
-            S
+          <div className="flex h-6 w-6 items-center justify-center rounded-md bg-accent font-display text-sm font-bold text-white">
+            L
           </div>
-          <span className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-wide text-ink">SODIVA CREDITS</span>
+          <span className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-wide text-ink">Lentific</span>
         </a>
         <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-ink-soft lg:flex">
           <a href="/#services" className="hover:text-ink">{t("services")}</a>
@@ -78,7 +78,7 @@ export async function SiteHeader() {
             <a href="/login" className="px-2 py-1.5 text-ink-soft hover:text-ink">
               {t("login")}
             </a>
-            <a href="/signup" className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
+            <a href="/signup" className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
               {t("signup")}
             </a>
           </div>

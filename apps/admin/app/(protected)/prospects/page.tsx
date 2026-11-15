@@ -7,7 +7,7 @@ import { getCurrentUser } from "../../../lib/session";
 
 /**
  * Demandes d'étude gratuite reçues par le site vitrine (2026-11-14, maquette
- * SODIVA). L'équipe rappelle le prospect, suit le statut et garde une note.
+ * Lentific). L'équipe rappelle le prospect, suit le statut et garde une note.
  */
 
 const STATUSES = ["NEW", "CONTACTED", "CONVERTED", "CLOSED"] as const;
@@ -124,7 +124,7 @@ export default async function ProspectsPage({ searchParams }: { searchParams: { 
                     {t("noteLabel")}
                     <input name="note" defaultValue={r.note ?? ""} maxLength={2000} placeholder={t("notePlaceholder")} className="rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink" />
                   </label>
-                  <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">{t("save")}</button>
+                  <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">{t("save")}</button>
                 </form>
               </Card>
             </section>

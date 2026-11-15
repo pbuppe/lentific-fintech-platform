@@ -20,7 +20,7 @@ import { getCurrentUser } from "../../../lib/session";
 
 /**
  * Versement des fonds et honoraires (demande produit 2026-11-14, maquette
- * SODIVA CREDITS « Validation du crédit et des fonds »). Double validation :
+ * Lentific « Validation du crédit et des fonds »). Double validation :
  * un admin déclare, un super admin différent confirme ; les honoraires ne se
  * débloquent qu'après la confirmation.
  */
@@ -291,7 +291,7 @@ export default async function FundsPage({ searchParams }: { searchParams: { erro
                         <input type="file" name="proof" required accept=".pdf,.jpg,.jpeg,.png" className="text-xs" />
                         <span className="font-normal text-ink-faint">{t("proofHint")}</span>
                       </label>
-                      <button className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">
+                      <button className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
                         {t("declare")}
                       </button>
                     </form>
@@ -332,7 +332,7 @@ export default async function FundsPage({ searchParams }: { searchParams: { erro
                         <div className="flex flex-wrap items-start gap-3">
                           <form action={confirmAction}>
                             <input type="hidden" name="applicationId" value={c.id} />
-                            <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">
+                            <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
                               {t("confirm")}
                             </button>
                           </form>
@@ -395,7 +395,7 @@ export default async function FundsPage({ searchParams }: { searchParams: { erro
                           {t("feeDueLabel")}
                           <input type="date" name="dueDate" required min={today} defaultValue={inThirtyDays} className={inputClass} />
                         </label>
-                        <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">
+                        <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
                           {t("requestFee")}
                         </button>
                       </form>

@@ -1,6 +1,6 @@
 /**
  * Versement des fonds et honoraires de courtage (demande produit 2026-11-14,
- * reprise de la maquette SODIVA CREDITS « Validation du crédit et des fonds »).
+ * reprise de la maquette Lentific « Validation du crédit et des fonds »).
  *
  * Règles :
  *  - le versement ne peut être déclaré que sur un dossier au contrat signé ;

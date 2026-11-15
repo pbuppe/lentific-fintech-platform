@@ -22,7 +22,7 @@
     "newProspectsCount": "{count, plural, one {# neue Anfrage} other {# neue Anfragen}}"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back-Office",
+    "kicker": "Lentific · Back-Office",
     "title": "Mitarbeiteranmeldung",
     "emailLabel": "E-Mail",
     "passwordLabel": "Passwort",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Finanzierungsanträge",
     "listingsTitle": "Veröffentlichte Kapitalangebote",
     "introductionsTitle": "Vermittlungen",
-    "introductionsDisclaimer": "Hinweis: Sobald eine Vermittlung bezahlt wurde, findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, SODIVA CREDITS übernimmt dafür keine Verantwortung.",
+    "introductionsDisclaimer": "Hinweis: Sobald eine Vermittlung bezahlt wurde, findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, Lentific übernimmt dafür keine Verantwortung.",
     "introSent": "→ hat den Kontakt von {name} angefordert ({status})",
     "introReceived": "← Kontakt angefordert von {name} ({status})",
     "documentsTitle": "Hochgeladene Dokumente",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Übersicht",
     "title": "Vermittelte Profile",
-    "description": "Liste der Paare, die ihre Kontaktdaten über eine bezahlte Vermittlung ausgetauscht haben. Ab diesem Zeitpunkt findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, SODIVA CREDITS übernimmt dafür keine Verantwortung, es wurde lediglich der Kontakt hergestellt.",
+    "description": "Liste der Paare, die ihre Kontaktdaten über eine bezahlte Vermittlung ausgetauscht haben. Ab diesem Zeitpunkt findet das, was zwischen den beiden Parteien geschieht, außerhalb der Plattform statt, Lentific übernimmt dafür keine Verantwortung, es wurde lediglich der Kontakt hergestellt.",
     "empty": "Noch keine bezahlten Vermittlungen.",
     "paid": "Bezahlt",
     "investorToBorrower": "Investor zu Kreditnehmer",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Backoffice",
+    "kicker": "Lentific · Backoffice",
     "title": "Willkommen {name}",
     "invalidTitle": "Ungültiger Link",
     "invalidBody": "Dieser Einladungslink ist abgelaufen oder wurde bereits verwendet. Bitten Sie einen Super-Administrator um eine neue Einladung.",

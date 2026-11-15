@@ -64,11 +64,11 @@ export default async function ProtectedLayout({ children }: { children: React.Re
     <div className="grid min-h-screen grid-cols-[220px_1fr]">
       <nav className="flex flex-col gap-6 bg-brand p-5 text-white">
         <div className="flex items-center gap-2 px-1">
-          <div className="flex h-6 w-6 items-center justify-center rounded-md bg-white text-brand font-display text-sm font-bold">
-            S
+          <div className="flex h-6 w-6 items-center justify-center rounded-md bg-accent font-display text-sm font-bold">
+            L
           </div>
           <div>
-            <div className="font-sans text-sm font-bold uppercase tracking-wide">SODIVA CREDITS</div>
+            <div className="font-sans text-sm font-bold uppercase tracking-wide">Lentific</div>
             <div className="font-mono text-[9px] uppercase tracking-widest text-white/60">{t("backOffice")}</div>
           </div>
         </div>

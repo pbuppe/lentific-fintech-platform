@@ -130,7 +130,7 @@ export default async function AccountValidationPage({
               <div className="mt-4 flex flex-wrap items-start gap-3">
                 <form action={approveAction}>
                   <input type="hidden" name="userId" value={account.id} />
-                  <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">
+                  <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
                     {t("approve")}
                   </button>
                 </form>

@@ -67,7 +67,7 @@ export default async function PaymentsPage({ searchParams }: { searchParams: { p
               <form action={payBrokerFeeAction} className="mt-3">
                 <input type="hidden" name="feeId" value={fee.id} />
                 <input type="hidden" name="back" value="/paiements" />
-                <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">{t("pay")}</button>
+                <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">{t("pay")}</button>
                 <PaypalHint />
               </form>
             </Card>

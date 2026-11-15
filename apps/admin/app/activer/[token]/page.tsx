@@ -55,7 +55,7 @@ export default async function ActivatePage({ params, searchParams }: { params: {
               <input type="password" name="confirm" required minLength={10} autoComplete="new-password" className="rounded-lg border border-line px-3 py-2 text-sm text-ink" />
             </label>
             <p className="text-xs text-ink-faint">{t("rule")}</p>
-            <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">{t("submit")}</button>
+            <button className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">{t("submit")}</button>
           </form>
         )}
       </Card>

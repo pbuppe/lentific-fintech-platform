@@ -22,7 +22,7 @@
     "newProspectsCount": "{count, plural, one {# nieuwe aanvraag} other {# nieuwe aanvragen}}"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back-office",
+    "kicker": "Lentific · Back-office",
     "title": "Aanmelden medewerker",
     "emailLabel": "E-mail",
     "passwordLabel": "Wachtwoord",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Financieringsaanvragen",
     "listingsTitle": "Gepubliceerde kapitaalaanbiedingen",
     "introductionsTitle": "Introducties",
-    "introductionsDisclaimer": "Herinnering: zodra de introductie betaald is, vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, SODIVA CREDITS is daar niet verantwoordelijk voor.",
+    "introductionsDisclaimer": "Herinnering: zodra de introductie betaald is, vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, Lentific is daar niet verantwoordelijk voor.",
     "introSent": "→ heeft het contact van {name} aangevraagd ({status})",
     "introReceived": "← contact aangevraagd door {name} ({status})",
     "documentsTitle": "Ingediende documenten",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Overzicht",
     "title": "Geïntroduceerde profielen",
-    "description": "Lijst van paren die hun contactgegevens hebben uitgewisseld via een betaalde introductie. Vanaf dat moment vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, SODIVA CREDITS is daar niet verantwoordelijk voor, alleen het contact is verzorgd.",
+    "description": "Lijst van paren die hun contactgegevens hebben uitgewisseld via een betaalde introductie. Vanaf dat moment vindt wat er tussen de twee partijen gebeurt plaats buiten het platform, Lentific is daar niet verantwoordelijk voor, alleen het contact is verzorgd.",
     "empty": "Op dit moment geen betaalde introducties.",
     "paid": "Betaald",
     "investorToBorrower": "Investeerder naar lener",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Backoffice",
+    "kicker": "Lentific · Backoffice",
     "title": "Welkom {name}",
     "invalidTitle": "Ongeldige link",
     "invalidBody": "Deze uitnodigingslink is verlopen of al gebruikt. Vraag een superbeheerder om een nieuwe.",

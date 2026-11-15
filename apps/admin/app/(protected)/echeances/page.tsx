@@ -57,7 +57,7 @@ export default async function EcheancesPage() {
                   <input type="hidden" name="loanId" value={r.loanId} />
                   <input type="hidden" name="userId" value={application.borrowerId} />
                   <input type="hidden" name="amount" value={Number(r.amount)} />
-                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-white hover:bg-yellow-ink">
+                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink">
                     {t("confirmPayment")}
                   </button>
                 </form>

@@ -118,7 +118,7 @@ export async function PremiumView({ userId, audience, notice: rawNotice }: { use
             </form>
           ) : (
             <form action={subscribePremiumAction}>
-              <button className="w-full rounded-lg bg-yellow px-5 py-3 text-sm font-semibold text-white hover:bg-yellow-ink sm:w-auto">
+              <button className="w-full rounded-lg bg-yellow px-5 py-3 text-sm font-semibold text-ink hover:bg-yellow-ink sm:w-auto">
                 {paypal
                   ? isActive
                     ? t("reactivatePaypal")

@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "LandingPage" });
   const title = `${t("heroTitlePart1")} ${t("heroTitleHighlight")}${t("heroTitlePart2")}`;
   return {
-    title: `SODIVA CREDITS · ${title}`,
+    title: `Lentific · ${title}`,
     description: t("heroSubtitle"),
   };
 }

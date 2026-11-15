@@ -97,7 +97,7 @@ export async function createPaypalOrder(input: {
       payment_source: {
         paypal: {
           experience_context: {
-            brand_name: "SODIVA CREDITS",
+            brand_name: "Lentific",
             user_action: "PAY_NOW",
             shipping_preference: "NO_SHIPPING",
             return_url: input.returnUrl,
@@ -199,7 +199,7 @@ export async function createPaypalSubscription(input: {
       custom_id: input.customId,
       ...(input.startTime ? { start_time: input.startTime.toISOString() } : {}),
       application_context: {
-        brand_name: "SODIVA CREDITS",
+        brand_name: "Lentific",
         shipping_preference: "NO_SHIPPING",
         user_action: "SUBSCRIBE_NOW",
         return_url: input.returnUrl,

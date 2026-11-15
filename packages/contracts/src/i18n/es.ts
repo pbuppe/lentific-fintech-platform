@@ -14,7 +14,7 @@ export const es: ContractStrings = {
   mp_mainSubtitle: "Redactado en aplicación de los artículos L.548-1 y siguientes y R.548-1 y siguientes del Código Monetario y Financiero francés",
   mp_intermediaryHeading: "EL INTERMEDIARIO EN FINANCIACIÓN PARTICIPATIVA",
   mp_intermediaryText:
-    "La sociedad SODIVA CREDITS, [forma societaria a completar], con capital social de [montante] euros, [domicilio social a completar], inscrita en el RCS (Registro Mercantil francés) de [ciudad] con el número [SIREN a confirmar], inscrita ante la ORIAS en calidad de intermediario en financiación participativa con el número [número ORIAS a confirmar], en adelante «el Intermediario» o «SODIVA CREDITS», actuando en calidad de mandatario de los Prestamistas, sin ser ella misma parte prestamista.",
+    "La sociedad Lentific, [forma societaria a completar], con capital social de [montante] euros, [domicilio social a completar], inscrita en el RCS (Registro Mercantil francés) de [ciudad] con el número [SIREN a confirmar], inscrita ante la ORIAS en calidad de intermediario en financiación participativa con el número [número ORIAS a confirmar], en adelante «el Intermediario» o «Lentific», actuando en calidad de mandatario de los Prestamistas, sin ser ella misma parte prestamista.",
   mp_borrowerHeading: "EL PRESTATARIO",
   mp_borrowerText: "{name} ({email}){cityPart}, actuando con carácter profesional, en adelante «el Prestatario».",
   mp_borrowerCityPart: ", con domicilio en {city}",
@@ -23,13 +23,13 @@ export const es: ContractStrings = {
     "Las personas físicas o jurídicas cuya identidad, datos de contacto y cuota individualmente prestada figuran en el Anexo 3 (Boletines de suscripción), actuando cada Prestamista individualmente y sin solidaridad entre ellos, en adelante colectivamente los «Prestamistas».",
   mp_preambleHeading: "PREÁMBULO",
   mp_preambleText1:
-    "El Prestatario ha presentado en la plataforma SODIVA CREDITS una solicitud de financiación por un importe de {amount} destinada a un uso profesional. Este expediente ha sido objeto de una verificación de identidad, de un análisis de la capacidad de reembolso por el motor de riesgo de la Plataforma{riskPart}, y posteriormente de una revisión por un gestor habilitado, tras la cual se estableció una oferta que fue aceptada por el Prestatario.",
+    "El Prestatario ha presentado en la plataforma Lentific una solicitud de financiación por un importe de {amount} destinada a un uso profesional. Este expediente ha sido objeto de una verificación de identidad, de un análisis de la capacidad de reembolso por el motor de riesgo de la Plataforma{riskPart}, y posteriormente de una revisión por un gestor habilitado, tras la cual se estableció una oferta que fue aceptada por el Prestatario.",
   mp_preambleRiskPart: " (puntuación obtenida: {score}/100)",
   mp_preambleText2:
     "El presente contrato formaliza las condiciones de esta financiación, asegurada por uno o varios Prestamistas en el marketplace P2P de la Plataforma, en las condiciones de financiación fraccionada descritas en el Artículo 5.",
   mp_art1Title: "DEFINICIONES",
   mp_art1Items: [
-    "«Plataforma» designa el sitio web y la aplicación explotados por SODIVA CREDITS.",
+    "«Plataforma» designa el sitio web y la aplicación explotados por Lentific.",
     "«Financiación participativa mediante préstamo» (crowdlending) designa la operación por la cual uno o varios Prestamistas conceden un préstamo remunerado al Prestatario, de conformidad con los artículos L.548-1 y siguientes del Código Monetario y Financiero francés.",
     "«TAE» designa la tasa anual equivalente.",
     "«Cuadro de Amortización» designa la tabla de amortización que figura en el Anexo 1.",
@@ -104,7 +104,7 @@ export const es: ContractStrings = {
   mp_art16Text:
     "El presente contrato se rige por el derecho francés. Cualquier controversia relativa a su validez, interpretación o ejecución se someterá a la competencia exclusiva de los tribunales franceses territorialmente competentes, sin perjuicio de las normas de orden público aplicables.",
   mp_signBorrowerLabel: "El Prestatario",
-  mp_signIntermediaryLabel: "Por el Intermediario, SODIVA CREDITS",
+  mp_signIntermediaryLabel: "Por el Intermediario, Lentific",
   mp_annex1Title: "ANEXO 1 - CUADRO DE AMORTIZACIÓN",
   mp_annex1Subtitle: "Préstamo de {amount} · {duration} cuotas mensuales · tipo fijo {rate} % · cuota mensual {monthly}",
   mp_annex1Headers: ["N.º", "Fecha", "Capital", "Intereses", "Cuota", "Capital pendiente"],
@@ -124,11 +124,11 @@ export const es: ContractStrings = {
   mp_annex3Text:
     "El/la abajo firmante [Nombre del Prestamista], declara suscribir la financiación del Prestatario designado en el presente documento por un importe de [importe] EUR, y reconoce haber tomado conocimiento y aceptado sin reservas la totalidad de las estipulaciones del presente contrato con referencia {reference}, en particular la advertencia sobre los riesgos que figura en el Artículo 10.",
   mp_footerNote:
-    "Documento generado automáticamente por la plataforma SODIVA CREDITS a partir del expediente {reference}. Las menciones señaladas como «a confirmar» deben completarse con los datos reales de inscripción de la sociedad y ser validadas por un abogado antes de su puesta en producción. Estructura establecida por referencia a los artículos L.548-1 y siguientes y R.548-1 y siguientes (en particular R.548-6) del Código Monetario y Financiero francés.",
+    "Documento generado automáticamente por la plataforma Lentific a partir del expediente {reference}. Las menciones señaladas como «a confirmar» deben completarse con los datos reales de inscripción de la sociedad y ser validadas por un abogado antes de su puesta en producción. Estructura establecida por referencia a los artículos L.548-1 y siguientes y R.548-1 y siguientes (en particular R.548-6) del Código Monetario y Financiero francés.",
 
   dl_pdfTitle: "Contrato de préstamo directo - {reference}",
   dl_mainTitle: "CONTRATO DE PRÉSTAMO ENTRE PARTICULARES",
-  dl_mainSubtitle: "Préstamo directo celebrado entre las partes a raíz de una puesta en contacto a través de la plataforma SODIVA CREDITS",
+  dl_mainSubtitle: "Préstamo directo celebrado entre las partes a raíz de una puesta en contacto a través de la plataforma Lentific",
   dl_borrowerHeading: "EL PRESTATARIO",
   dl_borrowerText: "{name} ({email}){cityPart}, en adelante «el Prestatario».",
   dl_borrowerCityPart: ", con domicilio en {city}",
@@ -136,7 +136,7 @@ export const es: ContractStrings = {
   dl_lenderText: "{name} ({email}), en adelante «el Prestamista».",
   dl_preambleHeading: "PREÁMBULO",
   dl_preambleText:
-    "{borrowerName} y {lenderName} han sido puestos en contacto a través de la plataforma SODIVA CREDITS, mediante el pago de los gastos de puesta en contacto previstos por la Plataforma. Las Partes han acordado, al margen de cualquier financiación fraccionada o intermediación regulada por la Plataforma, celebrar directamente entre ellas el presente contrato de préstamo por un importe de {amount}. SODIVA CREDITS no es prestamista, ni prestatario, ni intermediario en financiación participativa en relación con el presente contrato: su función se limita a haber puesto en contacto a las Partes y a la generación del presente documento.",
+    "{borrowerName} y {lenderName} han sido puestos en contacto a través de la plataforma Lentific, mediante el pago de los gastos de puesta en contacto previstos por la Plataforma. Las Partes han acordado, al margen de cualquier financiación fraccionada o intermediación regulada por la Plataforma, celebrar directamente entre ellas el presente contrato de préstamo por un importe de {amount}. Lentific no es prestamista, ni prestatario, ni intermediario en financiación participativa en relación con el presente contrato: su función se limita a haber puesto en contacto a las Partes y a la generación del presente documento.",
   dl_art1Title: "OBJETO DEL CONTRATO",
   dl_art1Text:
     "El presente contrato fija las condiciones en las que el Prestamista concede al Prestatario, de manera directa, un préstamo de dinero remunerado, así como las modalidades de su reembolso.",
@@ -160,16 +160,16 @@ export const es: ContractStrings = {
   dl_art7Text: "El Prestamista reconoce haber sido informado y advertido sobre los riesgos inherentes a un préstamo directo a un particular, y en particular:",
   dl_art7Items: [
     "el riesgo de pérdida total o parcial del capital prestado en caso de incumplimiento del Prestatario;",
-    "la ausencia de toda garantía de reembolso por parte de SODIVA CREDITS, que no es ni prestamista, ni garante, ni asegurador, ni intermediario en financiación participativa en relación con el presente contrato;",
+    "la ausencia de toda garantía de reembolso por parte de Lentific, que no es ni prestamista, ni garante, ni asegurador, ni intermediario en financiación participativa en relación con el presente contrato;",
     "el riesgo de iliquidez de las cantidades prestadas antes del vencimiento acordado;",
     "la conveniencia de hacer revisar el presente contrato por un profesional del derecho antes de la firma, dado que este documento es únicamente un modelo.",
   ],
-  dl_art8Title: "FUNCIÓN DE SODIVA CREDITS",
+  dl_art8Title: "FUNCIÓN DE LENTIFIC",
   dl_art8Text:
-    "SODIVA CREDITS no es parte, en ningún concepto, del presente contrato, no garantiza ni el capital ni los intereses, y su función se limita a haber puesto en contacto a las Partes. Lo que suceda entre las Partes a partir de la firma del presente contrato tiene lugar fuera de la Plataforma y no compromete la responsabilidad de SODIVA CREDITS.",
+    "Lentific no es parte, en ningún concepto, del presente contrato, no garantiza ni el capital ni los intereses, y su función se limita a haber puesto en contacto a las Partes. Lo que suceda entre las Partes a partir de la firma del presente contrato tiene lugar fuera de la Plataforma y no compromete la responsabilidad de Lentific.",
   dl_art9Title: "DATOS DE CARÁCTER PERSONAL",
   dl_art9Text:
-    "Los datos personales intercambiados en el marco de la puesta en contacto han sido tratados por SODIVA CREDITS de conformidad con el RGPD; las Partes son las únicas responsables del tratamiento que realicen de los datos de la otra Parte una vez puestas en contacto.",
+    "Los datos personales intercambiados en el marco de la puesta en contacto han sido tratados por Lentific de conformidad con el RGPD; las Partes son las únicas responsables del tratamiento que realicen de los datos de la otra Parte una vez puestas en contacto.",
   dl_art10Title: "DERECHO APLICABLE Y JURISDICCIÓN COMPETENTE",
   dl_art10Text:
     "El presente contrato se rige por el derecho francés. Cualquier controversia relativa a su validez, interpretación o ejecución se someterá a la competencia exclusiva de los tribunales franceses territorialmente competentes, sin perjuicio de las normas de orden público aplicables.",
@@ -179,5 +179,5 @@ export const es: ContractStrings = {
   dl_annex1Subtitle: "Préstamo de {amount} · {duration} cuotas mensuales · tipo fijo {rate} % · cuota mensual {monthly}",
   dl_annex1Headers: ["N.º", "Fecha", "Capital", "Intereses", "Cuota", "Capital pendiente"],
   dl_footerNote:
-    "Documento generado automáticamente por la plataforma SODIVA CREDITS a partir de la puesta en contacto con referencia {reference}. Este contrato es un MODELO: debe ser validado por un profesional del derecho antes de la firma, en particular en lo relativo a su eventual calificación como crédito al consumo (Artículo 4).",
+    "Documento generado automáticamente por la plataforma Lentific a partir de la puesta en contacto con referencia {reference}. Este contrato es un MODELO: debe ser validado por un profesional del derecho antes de la firma, en particular en lo relativo a su eventual calificación como crédito al consumo (Artículo 4).",
 };

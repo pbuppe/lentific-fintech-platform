@@ -4,7 +4,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SODIVA CREDITS · Back-office",
+  title: "Lentific · Back-office",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

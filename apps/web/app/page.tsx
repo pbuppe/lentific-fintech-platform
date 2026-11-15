@@ -42,7 +42,7 @@ export default async function LandingPage({ searchParams }: { searchParams: { co
 
   return (
     <main>
-      {/* Hero (maquette SODIVA : message courtier + estimation de mensualité) */}
+      {/* Hero (maquette Lentific : message courtier + estimation de mensualité) */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand to-brand-ink px-6 py-14 text-white sm:px-12 sm:py-20">
         <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-sand/20 blur-3xl" />
         <div className="relative mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[1.15fr_1fr]">

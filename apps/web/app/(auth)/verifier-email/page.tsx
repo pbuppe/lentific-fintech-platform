@@ -32,7 +32,7 @@ export default async function VerifyEmailPage({ searchParams }: { searchParams: 
         </p>
         <a
           href={user ? "/compte-en-attente" : "/login"}
-          className="mt-4 inline-block rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-white hover:bg-yellow-ink"
+          className="mt-4 inline-block rounded-lg bg-yellow px-4 py-2.5 text-sm font-semibold text-ink hover:bg-yellow-ink"
         >
           {user ? t("ctaStatus") : t("ctaLogin")}
         </a>

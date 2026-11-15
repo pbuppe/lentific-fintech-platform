@@ -658,7 +658,7 @@ model Permission {
 }
 
 // Centre de notifications de l'espace client (demande produit 2026-11-14,
-// maquette SODIVA « Demandes et messages ») : en plus des événements
+// maquette Lentific « Demandes et messages ») : en plus des événements
 // automatiques (event seul, libellé traduit à l'affichage), un conseiller peut
 // envoyer une demande de document, de paiement ou un message. kind/title/body
 // portent alors le contenu, senderId le conseiller, refId l'objet lié
@@ -754,7 +754,7 @@ model PageView {
 
 // ---------------------------------------------------------------------------
 // Versement des fonds et honoraires de courtage (demande produit 2026-11-14,
-// reprise de la maquette SODIVA CREDITS). Double validation : un admin déclare
+// reprise de la maquette Lentific). Double validation : un admin déclare
 // le versement avec une preuve (avis de déblocage), puis un SUPER_ADMIN
 // différent le confirme. Les honoraires ne peuvent être demandés qu'une fois
 // le versement confirmé : aucun paiement ne peut être exigé d'un emprunteur
@@ -826,7 +826,7 @@ model BrokerFeeRequest {
 }
 
 // ---------------------------------------------------------------------------
-// Console super admin (demande produit 2026-11-14, maquette SODIVA)
+// Console super admin (demande produit 2026-11-14, maquette Lentific)
 // ---------------------------------------------------------------------------
 
 // Invitation d'un membre de l'équipe : le super admin crée le compte sans mot
@@ -868,7 +868,7 @@ model AssistanceSession {
 
 // ---------------------------------------------------------------------------
 // Demandes d'étude gratuite du site vitrine (demande produit 2026-11-14,
-// maquette SODIVA « Demandez votre étude gratuite »). Traitées par l'équipe
+// maquette Lentific « Demandez votre étude gratuite »). Traitées par l'équipe
 // dans le back-office (onglet « Demandes de contact »).
 // ---------------------------------------------------------------------------
 

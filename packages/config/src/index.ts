@@ -28,6 +28,6 @@ export const env = {
   adminUrl: () => process.env.ADMIN_URL ?? "http://localhost:3001",
 };
 
-export const APP_NAME = "SODIVA CREDITS";
+export const APP_NAME = "Lentific";
 
 export const SUPPORTED_ROLES = ["BORROWER", "INVESTOR", "AGENT", "ADMIN", "SUPER_ADMIN"] as const;

@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
-/** Estimation de mensualité du site vitrine (maquette SODIVA), purement indicative. */
+/** Estimation de mensualité du site vitrine (maquette Lentific), purement indicative. */
 function monthlyPayment(amount: number, months: number, ratePct: number) {
   const r = ratePct / 12 / 100;
   return r === 0 ? amount / months : (amount * r) / (1 - Math.pow(1 + r, -months));
@@ -48,7 +48,7 @@ export function HeroEstimator() {
         </p>
         <p className="mt-1 text-xs text-ink-soft">{t("total", { total: fmt(monthly * years * 12) })}</p>
       </div>
-      <a href="#contact" className="mt-4 block rounded-lg bg-yellow px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-yellow-ink">
+      <a href="#contact" className="mt-4 block rounded-lg bg-yellow px-4 py-2.5 text-center text-sm font-semibold text-ink hover:bg-yellow-ink">
         {t("cta")}
       </a>
       <p className="mt-3 text-[11px] leading-snug text-ink-faint">{t("legal")}</p>

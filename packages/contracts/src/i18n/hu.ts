@@ -15,7 +15,7 @@ export const hu: ContractStrings = {
     "A francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei alapján készült",
   mp_intermediaryHeading: "A KÖZÖSSÉGI FINANSZÍROZÁS KÖZVETÍTŐJE",
   mp_intermediaryText:
-    "A SODIVA CREDITS társaság, [kiegészítendő: társasági forma], [kiegészítendő: összeg] euró alaptőkével, [kiegészítendő: székhely címe], a [város] RCS-nél (a francia cégjegyzékben) [megerősítendő: SIREN-szám] szám alatt bejegyezve, az ORIAS-nál közösségi finanszírozási közvetítőként [megerősítendő: ORIAS-szám] szám alatt nyilvántartva, a továbbiakban: „a Közvetítő” vagy „SODIVA CREDITS”, amely a Kölcsönadók megbízottjaként jár el, anélkül hogy maga kölcsönadó félként szerepelne.",
+    "A Lentific társaság, [kiegészítendő: társasági forma], [kiegészítendő: összeg] euró alaptőkével, [kiegészítendő: székhely címe], a [város] RCS-nél (a francia cégjegyzékben) [megerősítendő: SIREN-szám] szám alatt bejegyezve, az ORIAS-nál közösségi finanszírozási közvetítőként [megerősítendő: ORIAS-szám] szám alatt nyilvántartva, a továbbiakban: „a Közvetítő” vagy „Lentific”, amely a Kölcsönadók megbízottjaként jár el, anélkül hogy maga kölcsönadó félként szerepelne.",
   mp_borrowerHeading: "AZ ADÓS",
   mp_borrowerText: "{name} ({email}){cityPart}, szakmai minőségében eljárva, a továbbiakban: „az Adós”.",
   mp_borrowerCityPart: ", lakóhelye: {city}",
@@ -24,13 +24,13 @@ export const hu: ContractStrings = {
     "Azok a természetes vagy jogi személyek, akiknek személyazonossága, elérhetőségei és az általuk egyénileg kölcsönzött részesedés a 3. mellékletben (Jegyzési ívek) szerepel, amely Kölcsönadók mindegyike egyénileg és egymás között egyetemlegesség nélkül jár el, a továbbiakban együttesen: „a Kölcsönadók”.",
   mp_preambleHeading: "PREAMBULUM",
   mp_preambleText1:
-    "Az Adós a SODIVA CREDITS platformon {amount} összegű, szakmai célú felhasználásra szánt finanszírozási kérelmet nyújtott be. Ez az ügyirat személyazonosság-ellenőrzésen, a Platform kockázatelemző motorja által végzett visszafizetési képesség vizsgálatán{riskPart}, majd egy arra jogosult ügyintéző általi felülvizsgálaton esett át, amelynek eredményeként ajánlat került kidolgozásra, amelyet az Adós elfogadott.",
+    "Az Adós a Lentific platformon {amount} összegű, szakmai célú felhasználásra szánt finanszírozási kérelmet nyújtott be. Ez az ügyirat személyazonosság-ellenőrzésen, a Platform kockázatelemző motorja által végzett visszafizetési képesség vizsgálatán{riskPart}, majd egy arra jogosult ügyintéző általi felülvizsgálaton esett át, amelynek eredményeként ajánlat került kidolgozásra, amelyet az Adós elfogadott.",
   mp_preambleRiskPart: " (elért pontszám: {score}/100)",
   mp_preambleText2:
     "A jelen szerződés rögzíti e finanszírozás feltételeit, amelyet egy vagy több Kölcsönadó biztosít a Platform P2P piacterén, az 5. Cikkben leírt megosztott finanszírozási feltételek szerint.",
   mp_art1Title: "FOGALOMMEGHATÁROZÁSOK",
   mp_art1Items: [
-    "„a Platform” a SODIVA CREDITS által üzemeltetett weboldalt és alkalmazást jelenti.",
+    "„a Platform” a Lentific által üzemeltetett weboldalt és alkalmazást jelenti.",
     "„a kölcsönalapú közösségi finanszírozás” (crowdlending) azt a műveletet jelenti, amelynek keretében egy vagy több Kölcsönadó kamatozó kölcsönt nyújt az Adósnak, a francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő cikkeivel összhangban.",
     "„a THM” a teljes hiteldíj mutatót jelenti.",
     "„a Törlesztési Ütemterv” az 1. mellékletben szereplő törlesztési táblázatot jelenti.",
@@ -105,7 +105,7 @@ export const hu: ContractStrings = {
   mp_art16Text:
     "A jelen szerződésre a francia jog irányadó. Az érvényességével, értelmezésével vagy teljesítésével kapcsolatos bármely jogvita a területileg illetékes francia bíróságok kizárólagos hatáskörébe tartozik, az alkalmazandó közrendi szabályok fenntartásával.",
   mp_signBorrowerLabel: "Az Adós",
-  mp_signIntermediaryLabel: "A Közvetítő nevében, SODIVA CREDITS",
+  mp_signIntermediaryLabel: "A Közvetítő nevében, Lentific",
   mp_annex1Title: "1. MELLÉKLET - TÖRLESZTÉSI ÜTEMTERV",
   mp_annex1Subtitle: "{amount} összegű kölcsön · {duration} havi törlesztőrészlet · {rate} %-os rögzített kamatláb · havi törlesztőrészlet: {monthly}",
   mp_annex1Headers: ["Törl.szám", "Dátum", "Tőke", "Kamat", "Törlesztőrészlet", "Egyenleg"],
@@ -125,11 +125,11 @@ export const hu: ContractStrings = {
   mp_annex3Text:
     "Alulírott [Kölcsönadó neve] kijelentem, hogy jegyzem a jelen okiratban megjelölt Adós finanszírozását [összeg] EUR összegben, és elismerem, hogy megismertem és fenntartás nélkül elfogadtam a {reference} hivatkozási számú jelen szerződés valamennyi rendelkezését, különös tekintettel a 10. Cikkben szereplő kockázati figyelmeztetésre.",
   mp_footerNote:
-    "Ezt a dokumentumot a SODIVA CREDITS platform automatikusan generálta a {reference} ügyirat alapján. A „megerősítendő” jelöléssel ellátott adatokat a társaság tényleges cégbejegyzési adataival kell kiegészíteni, és éles használatba állítás előtt ügyvéddel kell egyeztetni. A szerkezet a francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei (különösen az R.548-6. cikk) alapján készült.",
+    "Ezt a dokumentumot a Lentific platform automatikusan generálta a {reference} ügyirat alapján. A „megerősítendő” jelöléssel ellátott adatokat a társaság tényleges cégbejegyzési adataival kell kiegészíteni, és éles használatba állítás előtt ügyvéddel kell egyeztetni. A szerkezet a francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei (különösen az R.548-6. cikk) alapján készült.",
 
   dl_pdfTitle: "Közvetlen kölcsönszerződés - {reference}",
   dl_mainTitle: "MAGÁNSZEMÉLYEK KÖZÖTTI KÖLCSÖNSZERZŐDÉS",
-  dl_mainSubtitle: "A Felek között közvetlenül létrejött kölcsön, a SODIVA CREDITS platformon keresztül történő kapcsolatba hozást követően",
+  dl_mainSubtitle: "A Felek között közvetlenül létrejött kölcsön, a Lentific platformon keresztül történő kapcsolatba hozást követően",
   dl_borrowerHeading: "AZ ADÓS",
   dl_borrowerText: "{name} ({email}){cityPart}, a továbbiakban: „az Adós”.",
   dl_borrowerCityPart: ", lakóhelye: {city}",
@@ -137,7 +137,7 @@ export const hu: ContractStrings = {
   dl_lenderText: "{name} ({email}), a továbbiakban: „a Kölcsönadó”.",
   dl_preambleHeading: "PREAMBULUM",
   dl_preambleText:
-    "{borrowerName} és {lenderName} a SODIVA CREDITS platformon keresztül kerültek kapcsolatba egymással, a Platform által előírt kapcsolatba hozási díj megfizetése ellenében. A Felek megállapodtak abban, hogy a Platform által szabályozott bármely megosztott finanszírozáson vagy közvetítésen kívül, közvetlenül egymás között kötik meg a jelen, {amount} összegű kölcsönszerződést. A SODIVA CREDITS a jelen szerződés tekintetében nem kölcsönadó, nem adós és nem közösségi finanszírozási közvetítő: szerepe kizárólag a Felek kapcsolatba hozására és a jelen dokumentum előállítására korlátozódik.",
+    "{borrowerName} és {lenderName} a Lentific platformon keresztül kerültek kapcsolatba egymással, a Platform által előírt kapcsolatba hozási díj megfizetése ellenében. A Felek megállapodtak abban, hogy a Platform által szabályozott bármely megosztott finanszírozáson vagy közvetítésen kívül, közvetlenül egymás között kötik meg a jelen, {amount} összegű kölcsönszerződést. A Lentific a jelen szerződés tekintetében nem kölcsönadó, nem adós és nem közösségi finanszírozási közvetítő: szerepe kizárólag a Felek kapcsolatba hozására és a jelen dokumentum előállítására korlátozódik.",
   dl_art1Title: "A SZERZŐDÉS TÁRGYA",
   dl_art1Text:
     "A jelen szerződés rögzíti azokat a feltételeket, amelyek szerint a Kölcsönadó közvetlenül kamatozó pénzkölcsönt nyújt az Adósnak, valamint annak visszafizetési módját.",
@@ -161,16 +161,16 @@ export const hu: ContractStrings = {
   dl_art7Text: "A Kölcsönadó elismeri, hogy tájékoztatták és figyelmeztették a magánszemélynek nyújtott közvetlen kölcsönnel járó kockázatokra, így különösen:",
   dl_art7Items: [
     "a kölcsönzött tőke teljes vagy részleges elvesztésének kockázatáról az Adós nemteljesítése esetén;",
-    "arról, hogy a SODIVA CREDITS semmilyen garanciát nem vállal a visszafizetésre, mivel a jelen szerződés tekintetében nem kölcsönadó, nem kezes, nem biztosító és nem közösségi finanszírozási közvetítő;",
+    "arról, hogy a Lentific semmilyen garanciát nem vállal a visszafizetésre, mivel a jelen szerződés tekintetében nem kölcsönadó, nem kezes, nem biztosító és nem közösségi finanszírozási közvetítő;",
     "a kölcsönzött összegek illikviditásának kockázatáról a megállapodott lejárat előtt;",
     "annak hasznosságáról, hogy a jelen szerződést aláírás előtt jogi szakemberrel ellenőriztessék, mivel ez a dokumentum kizárólag minta.",
   ],
-  dl_art8Title: "A SODIVA CREDITS SZEREPE",
+  dl_art8Title: "A LENTIFIC SZEREPE",
   dl_art8Text:
-    "A SODIVA CREDITS semmilyen minőségben nem részes fele a jelen szerződésnek, nem szavatolja sem a tőkét, sem a kamatokat, és szerepe kizárólag a Felek kapcsolatba hozására korlátozódik. Mindaz, ami a Felek között a jelen szerződés aláírásától kezdve történik, a Platformon kívül zajlik, és nem vonja maga után a SODIVA CREDITS felelősségét.",
+    "A Lentific semmilyen minőségben nem részes fele a jelen szerződésnek, nem szavatolja sem a tőkét, sem a kamatokat, és szerepe kizárólag a Felek kapcsolatba hozására korlátozódik. Mindaz, ami a Felek között a jelen szerződés aláírásától kezdve történik, a Platformon kívül zajlik, és nem vonja maga után a Lentific felelősségét.",
   dl_art9Title: "SZEMÉLYES ADATOK",
   dl_art9Text:
-    "A kapcsolatba hozás keretében megosztott személyes adatokat a SODIVA CREDITS a GDPR-nak megfelelően kezelte; a Felek kizárólagosan felelősek a másik Fél adatainak az általuk a kapcsolatba hozást követően végzett kezeléséért.",
+    "A kapcsolatba hozás keretében megosztott személyes adatokat a Lentific a GDPR-nak megfelelően kezelte; a Felek kizárólagosan felelősek a másik Fél adatainak az általuk a kapcsolatba hozást követően végzett kezeléséért.",
   dl_art10Title: "ALKALMAZANDÓ JOG ÉS ILLETÉKES BÍRÓSÁG",
   dl_art10Text:
     "A jelen szerződésre a francia jog irányadó. Az érvényességével, értelmezésével vagy teljesítésével kapcsolatos bármely jogvita a területileg illetékes francia bíróságok kizárólagos hatáskörébe tartozik, az alkalmazandó közrendi szabályok fenntartásával.",
@@ -180,5 +180,5 @@ export const hu: ContractStrings = {
   dl_annex1Subtitle: "{amount} összegű kölcsön · {duration} havi törlesztőrészlet · {rate} %-os rögzített kamatláb · havi törlesztőrészlet: {monthly}",
   dl_annex1Headers: ["Törl.szám", "Dátum", "Tőke", "Kamat", "Törlesztőrészlet", "Egyenleg"],
   dl_footerNote:
-    "Ezt a dokumentumot a SODIVA CREDITS platform automatikusan generálta a {reference} hivatkozási számú kapcsolatba hozás alapján. Ez a szerződés MINTA: aláírás előtt jogi szakemberrel jóváhagyandó, különös tekintettel az esetleges fogyasztói hitelnek minősítésre (4. Cikk).",
+    "Ezt a dokumentumot a Lentific platform automatikusan generálta a {reference} hivatkozási számú kapcsolatba hozás alapján. Ez a szerződés MINTA: aláírás előtt jogi szakemberrel jóváhagyandó, különös tekintettel az esetleges fogyasztói hitelnek minősítésre (4. Cikk).",
 };

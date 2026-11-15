@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 /**
- * Suivi du dossier en 8 étapes (maquette SODIVA) : Demande, Identité,
+ * Suivi du dossier en 8 étapes (maquette Lentific) : Demande, Identité,
  * Documents, Étude, Accord, Offre, Signature, Fonds. Calculé à partir du
  * statut de la demande, des pièces demandées et du versement des fonds.
  */

@@ -22,7 +22,7 @@
     "newProspectsCount": "{count} új kérés"
   },
   "AdminLoginPage": {
-    "kicker": "SODIVA CREDITS · Back office",
+    "kicker": "Lentific · Back office",
     "title": "Ügyintézői bejelentkezés",
     "emailLabel": "E-mail",
     "passwordLabel": "Jelszó",
@@ -79,7 +79,7 @@
     "applicationsTitle": "Finanszírozási kérelmek",
     "listingsTitle": "Közzétett tőkeajánlatok",
     "introductionsTitle": "Kapcsolatba hozások",
-    "introductionsDisclaimer": "Emlékeztető: a kapcsolatba hozás kifizetése után a két fél között történtek a platformon kívül zajlanak, ezekért a SODIVA CREDITS nem vállal felelősséget.",
+    "introductionsDisclaimer": "Emlékeztető: a kapcsolatba hozás kifizetése után a két fél között történtek a platformon kívül zajlanak, ezekért a Lentific nem vállal felelősséget.",
     "introSent": "→ kapcsolatot kért vele: {name} ({status})",
     "introReceived": "← kapcsolatot kérte tőle: {name} ({status})",
     "documentsTitle": "Feltöltött dokumentumok",
@@ -149,7 +149,7 @@
   "IntroductionsPage": {
     "kicker": "Áttekintés",
     "title": "Kapcsolatba hozott profilok",
-    "description": "Azon párok listája, akik kifizetett kapcsolatba hozás révén kicserélték elérhetőségeiket. Ettől a pillanattól kezdve a két fél között történtek a platformon kívül zajlanak, ezekért a SODIVA CREDITS nem vállal felelősséget, kizárólag a kapcsolatfelvételi adatokat biztosította.",
+    "description": "Azon párok listája, akik kifizetett kapcsolatba hozás révén kicserélték elérhetőségeiket. Ettől a pillanattól kezdve a két fél között történtek a platformon kívül zajlanak, ezekért a Lentific nem vállal felelősséget, kizárólag a kapcsolatfelvételi adatokat biztosította.",
     "empty": "Egyelőre nincs kifizetett kapcsolatba hozás.",
     "paid": "Kifizetve",
     "investorToBorrower": "Befektetőtől hitelfelvevő felé",
@@ -599,7 +599,7 @@
     }
   },
   "ActivatePage": {
-    "kicker": "SODIVA CREDITS · Back office",
+    "kicker": "Lentific · Back office",
     "title": "Üdvözöljük, {name}",
     "invalidTitle": "Érvénytelen link",
     "invalidBody": "A meghívó link lejárt vagy már felhasználták. Kérjen új meghívót egy szuperadminisztrátortól.",

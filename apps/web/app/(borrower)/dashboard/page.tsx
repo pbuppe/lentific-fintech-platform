@@ -136,7 +136,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
     if (contract) contractUrlByApplication.set(app.id, await getContractDownloadUrl(contract.storageKey));
   }
 
-  // Cartes d'alerte en tête de page (maquette SODIVA) : ce que le client doit faire maintenant.
+  // Cartes d'alerte en tête de page (maquette Lentific) : ce que le client doit faire maintenant.
   const pendingFees = applications.flatMap((a) => a.brokerFees.filter((f) => f.status === "PENDING").map((f) => ({ ...f, currency: a.currency.code })));
   const alerts: Array<{ key: string; tone: "urgent" | "info"; eyebrow: string; title: string; body?: string; cta: string; href: string }> = [];
   for (const r of pendingDocumentRequests.slice(0, 3)) {
@@ -194,7 +194,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
           </h1>
           <p className="mt-1 text-sm text-ink-soft">{t("greetingSub")}</p>
         </div>
-        <a href="/demande" className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-white hover:bg-yellow-ink">
+        <a href="/demande" className="rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
           {t("newRequest")}
         </a>
       </div>
@@ -312,7 +312,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                         : t("identityNeededPrompt")}
                     </span>
                     <input type="file" name="identityDoc" required className="text-xs" />
-                    <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
+                    <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
                       {t("send")}
                     </button>
                   </form>
@@ -329,7 +329,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                     </p>
                     <form action={acceptOfferAction} className="mt-2">
                       <input type="hidden" name="offerId" value={publishedOffer.id} />
-                      <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
+                      <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
                         {t("acceptOffer")}
                       </button>
                     </form>
@@ -356,7 +356,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                         {t("signInstructions")}
                       </span>
                       <input type="file" name="signedContract" required className="text-xs" />
-                      <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
+                      <button className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
                         {t("send")}
                       </button>
                     </form>
@@ -413,7 +413,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                             <form action={payBrokerFeeAction} className="mt-2">
                               <input type="hidden" name="feeId" value={fee.id} />
                               <input type="hidden" name="back" value="/dashboard" />
-                              <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
+                              <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
                                 {t("payFee")}
                               </button>
                               <PaypalHint />

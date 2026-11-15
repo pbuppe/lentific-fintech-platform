@@ -112,7 +112,7 @@ export default async function ContractsQueuePage() {
                 <form action={confirmAction}>
                   <input type="hidden" name="signatureId" value={sig.id} />
                   <input type="hidden" name="contractId" value={sig.contractId} />
-                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-white hover:bg-yellow-ink">
+                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink">
                     {t("confirmSignature")}
                   </button>
                 </form>

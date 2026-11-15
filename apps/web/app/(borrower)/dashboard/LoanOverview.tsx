@@ -3,7 +3,7 @@ import { colors } from "@fintech/ui/src/tokens";
 import { amortization, remainingAfter } from "../../../lib/loanMath";
 
 /**
- * « Mon crédit » (maquette SODIVA) : part remboursée, chiffres clés, capital
+ * « Mon crédit » (maquette Lentific) : part remboursée, chiffres clés, capital
  * restant dû par année, dernières / prochaines échéances et tableau
  * d'amortissement complet. Les échéances payées viennent de la base
  * (Repayment) ; tant qu'aucune n'est enregistrée, rien n'est compté comme payé.

@@ -92,7 +92,7 @@ export default async function AdminDashboard() {
               {app.status === "KYC_VERIFIED" && (
                 <form action={reviewAction} className="mt-3">
                   <input type="hidden" name="applicationId" value={app.id} />
-                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-white hover:bg-yellow-ink">
+                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink">
                     {t("startAnalysis")}
                   </button>
                 </form>
@@ -132,7 +132,7 @@ export default async function AdminDashboard() {
                     />
                   </label>
                   <input type="hidden" name="applicationId" value={app.id} />
-                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-white hover:bg-yellow-ink">
+                  <button className="rounded-lg bg-yellow px-3.5 py-2 text-xs font-semibold text-ink hover:bg-yellow-ink">
                     {t("createOffer")}
                   </button>
                 </form>
