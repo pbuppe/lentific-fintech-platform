@@ -58,9 +58,9 @@ try {
   }
   console.log(`Compte : ${email} (${user.role})`);
 
-  const pwd = await askHidden("Nouveau mot de passe (12 caractères minimum) : ");
-  if (pwd.length < 12) {
-    console.error("Trop court : 12 caractères minimum. Rien n'a été changé.");
+  const pwd = await askHidden("Nouveau mot de passe (10 caractères minimum) : ");
+  if (pwd.length < 10) {
+    console.error("Trop court : 10 caractères minimum. Rien n'a été changé.");
     process.exit(1);
   }
   if (pwd === "Demo1234!") {

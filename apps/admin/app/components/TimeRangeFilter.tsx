@@ -7,13 +7,13 @@ const RANGES: { value: StatsRange; labelKey: string }[] = [
   { value: "1y", labelKey: "range1y" },
 ];
 
-export function TimeRangeFilter({ current, t }: { current: StatsRange; t: (key: string) => string }) {
+export function TimeRangeFilter({ current, t, extra = "" }: { current: StatsRange; t: (key: string) => string; extra?: string }) {
   return (
     <div className="flex flex-wrap gap-1.5">
       {RANGES.map((r) => (
         <a
           key={r.value}
-          href={`/statistiques?range=${r.value}`}
+          href={`/statistiques?range=${r.value}${extra}`}
           className={
             r.value === current
               ? "rounded-full bg-brand px-3 py-1.5 text-xs font-semibold text-white"

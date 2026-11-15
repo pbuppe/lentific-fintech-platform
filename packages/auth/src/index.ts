@@ -24,6 +24,7 @@ import {
 } from "@fintech/database";
 import { sendVerifyEmail, sendAccountApprovedEmail, sendAccountRejectedEmail, webBaseUrl, webUrlInLocale } from "./mailer";
 
+export { sendContactRequestNotice, contactInbox } from "./mailer";
 export { sendEmail, webBaseUrl, sendClientNoticeEmail,
   sendPremiumPaymentFailedEmail, type ClientNoticeKind } from "./mailer";
 
@@ -337,3 +338,4 @@ export async function bootstrapAdminAccount(input: {
   return user;
 }
 export * from "./console";
+export * from "./marketing";

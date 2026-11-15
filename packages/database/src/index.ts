@@ -92,6 +92,8 @@ export * as storedFilesRepo from "./repositories/storedFiles";
 export * as auditLogsRepo from "./repositories/auditLogs";
 export * as countriesRepo from "./repositories/countries";
 export * as pageViewsRepo from "./repositories/pageViews";
+export * as visitAnalyticsRepo from "./repositories/visitAnalytics";
+export type { VisitSummary, JourneyStep } from "./repositories/visitAnalytics";
 export type { StatsRange } from "./repositories/pageViews";
 export * as directLoanAgreementsRepo from "./repositories/directLoanAgreements";
 export * as outboundEmailsRepo from "./repositories/outboundEmails";

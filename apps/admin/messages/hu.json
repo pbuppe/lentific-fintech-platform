@@ -19,7 +19,8 @@
     "clientRequests": "Kérések és üzenetek",
     "console": "Szuperadmin konzol",
     "prospects": "Kapcsolatfelvételek",
-    "newProspectsCount": "{count} új kérés"
+    "newProspectsCount": "{count} új kérés",
+    "marketing": "E-mail marketing"
   },
   "AdminLoginPage": {
     "kicker": "Lentific · Back office",
@@ -185,7 +186,83 @@
     "topPages": "Legnézettebb oldalak",
     "byLanguage": "Nyelv szerint",
     "byCountry": "Ország szerint",
-    "noData": "Még nincs adat."
+    "noData": "Még nincs adat.",
+    "descriptionV2": "Az oldal látogatóinak teljes követése, saját tárhelyen: ki van online, honnan, milyen eszközzel, mennyi ideig, mely oldalakon és milyen műveletekkel. IP-címet nem tárolunk.",
+    "rightNow5": "Online (5 perc)",
+    "tabs": {
+      "overview": "Áttekintés",
+      "live": "Élő",
+      "visits": "Látogatói útvonalak"
+    },
+    "kpi": {
+      "visits": "Látogatások",
+      "visitors": "Egyedi látogatók",
+      "pageViews": "Oldalmegtekintések",
+      "pagesPerVisit": "Oldal / látogatás",
+      "avgDuration": "Átlagos időtartam",
+      "bounceRate": "Visszafordulási arány",
+      "members": "Bejelentkezett tagok"
+    },
+    "chart": {
+      "title": "Látogatások alakulása",
+      "visits": "Látogatások",
+      "visitors": "Látogatók",
+      "views": "Oldalmegtekintések"
+    },
+    "breakdown": {
+      "devices": "Eszközök",
+      "os": "Rendszerek",
+      "browsers": "Böngészők",
+      "geo": "Csatlakozás országa",
+      "origin": "Származási ország (böngésző nyelve)",
+      "cities": "Városok",
+      "sources": "Forrás",
+      "entryPages": "Belépő oldalak",
+      "actions": "Leggyakoribb műveletek",
+      "unknown": "Ismeretlen",
+      "avgTime": "Átlagos idő"
+    },
+    "device": {
+      "mobile": "Telefon",
+      "tablet": "Táblagép",
+      "desktop": "Számítógép",
+      "unknown": "Ismeretlen eszköz",
+      "androidPhone": "Android telefon",
+      "androidTablet": "Android táblagép"
+    },
+    "live": {
+      "hint": "Az elmúlt 5 percben aktív látogatók. Az oldal 10 másodpercenként magától frissül.",
+      "empty": "Jelenleg senki sincs az oldalon."
+    },
+    "visit": {
+      "anonymous": "Névtelen látogató",
+      "member": "Tag: {name}",
+      "visitNumber": "{n}. látogatás",
+      "origin": "Származás",
+      "unknownCountry": "Ismeretlen ország",
+      "source": "Forrás",
+      "direct": "Közvetlen elérés",
+      "sourceEmail": "E-mail kampány",
+      "language": "Nyelv",
+      "pagesActions": "{pages} oldal · {actions} művelet",
+      "currentPage": "Jelenlegi oldal",
+      "lastActivity": "utolsó aktivitás: {time}",
+      "journey": "Útvonal megtekintése"
+    },
+    "event": {
+      "click": "Kattintás",
+      "submit": "Űrlap elküldve",
+      "outbound": "Kimenő link",
+      "download": "Letöltés"
+    },
+    "visits": {
+      "filterDevice": "Eszköz",
+      "filterCountry": "Ország",
+      "all": "Mind",
+      "empty": "Ebben az időszakban nincs látogatás.",
+      "prev": "Újabbak",
+      "next": "Régebbiek"
+    }
   },
   "AccountValidationPage": {
     "kicker": "Regisztrációk",
@@ -641,5 +718,120 @@
     "noteLabel": "Belső megjegyzés",
     "notePlaceholder": "Pl.: visszahívva 11.14., találkozó kedden",
     "save": "Mentés"
+  },
+  "MarketingPage": {
+    "kicker": "Kommunikáció · Ügyfélszerzés",
+    "title": "E-mail marketing",
+    "description": "Küldjön bemutatkozó és promóciós e-maileket kapcsolatainak kész sablonok alapján. Minden e-mail tartalmaz leiratkozási linket; a válaszok a(z) {inbox} címre érkeznek.",
+    "stats": {
+      "subscribed": "Feliratkozott kapcsolatok",
+      "unsubscribed": "Leiratkozottak",
+      "today": "Elküldve 24 óra alatt: {sent} / {limit}",
+      "localMode": "Tesztmód: valójában egy e-mail sem megy ki"
+    },
+    "tabs": {
+      "campaigns": "Kampányok",
+      "templates": "Kész sablonok",
+      "contacts": "Kapcsolatok"
+    },
+    "language": "Nyelv",
+    "flash": {
+      "saved": "Kampány mentve.",
+      "deleted": "Kampány törölve.",
+      "testSent": "Teszt e-mail elküldve ide: {email}.",
+      "testFailed": "A teszt e-mailt nem sikerült elküldeni. Részletek az „Elküldött e-mailek” oldalon.",
+      "batchSent": "{n} e-mail elküldve. Hátravan: {left}.",
+      "batchLimited": "{n} e-mail elküldve. Elérte a napi korlátot: holnap folytathatja ({left} van hátra).",
+      "batchFailed": "A küldőszolgáltatás elutasította a csomagot; semmi sem veszett el, próbálja újra.",
+      "added": "{a} kapcsolat hozzáadva, {s} már szerepelt, {i} érvénytelen cím.",
+      "contactUpdated": "Kapcsolat frissítve."
+    },
+    "errors": {
+      "invalid": "Ellenőrizze a tárgyat, a szöveget és a linket (/ vagy https:// kezdetű legyen).",
+      "locked": "A már elküldött kampány nem módosítható.",
+      "confirm": "Küldés előtt jelölje be a megerősítő négyzetet.",
+      "basis": "Adja meg a jogalapot, és jelölje be a megerősítő négyzetet."
+    },
+    "templates": {
+      "intro": "Hat formátum az oldal 8 nyelvén. Válasszon egyet, szükség esetén igazítsa a szöveget, majd mentse kampányként.",
+      "use": "Sablon használata",
+      "preview": "Előnézet",
+      "names": {
+        "discover": "A platform bemutatása",
+        "borrowers": "Hitelfelvevők: ingyenes elemzés",
+        "investors": "Befektetők",
+        "followup": "Rövid emlékeztető",
+        "premium": "Premium ajánlat",
+        "partners": "Szakmai partnerség"
+      },
+      "uses": {
+        "discover": "Első megkeresés, minden célcsoport",
+        "borrowers": "Finanszírozási tervvel rendelkező magánszemélyek",
+        "investors": "Befektetés iránt érdeklődők",
+        "followup": "Néhány nappal az első e-mail után",
+        "premium": "Már regisztrált tagok",
+        "partners": "Hitelközvetítők, ingatlanosok, tanácsadók"
+      }
+    },
+    "editor": {
+      "newTitle": "Új kampány",
+      "editTitle": "Kampány módosítása",
+      "startFrom": "Kiindulás sablonból",
+      "audience": "Címzettek: a(z) {lang} nyelvű feliratkozott kapcsolatok ({count}).",
+      "subject": "Tárgy",
+      "body": "Szöveg",
+      "bodyHelp": "A megszólítás („Kedves Marie!”) és az aláírás automatikusan bekerül. A bekezdések közé hagyjon üres sort.",
+      "ctaLabel": "Gomb szövege",
+      "ctaUrl": "Gomb linkje (oldal, pl. /simulateur, vagy teljes cím)",
+      "save": "Kampány mentése",
+      "cancel": "Mégse"
+    },
+    "list": {
+      "title": "Kampányok",
+      "empty": "Még nincs kampány. Kezdje egy sablonnal.",
+      "status": {
+        "DRAFT": "Piszkozat",
+        "SENDING": "Küldés folyamatban",
+        "SENT": "Elküldve"
+      },
+      "counts": "{sent} elküldve · {left} hátravan",
+      "test": "Teszt küldése nekem",
+      "edit": "Módosítás",
+      "delete": "Törlés",
+      "confirm": "Átolvastam a szöveget: küldés {count} kapcsolatnak",
+      "send": "Küldés",
+      "sendNext": "Következő csomag küldése"
+    },
+    "contacts": {
+      "addTitle": "Kapcsolatok hozzáadása",
+      "addHelp": "Soronként egy cím. Megadhatja a nevet és a nyelvet is: „cím; név; hu”. A már szereplő címeket kihagyjuk.",
+      "defaultLanguage": "Alapértelmezett nyelv",
+      "basisLabel": "Miért írhat ezeknek a személyeknek?",
+      "basis": {
+        "CONSENT": "Hozzájárultak e-mailjeink fogadásához (űrlap, kiállítás, írásbeli kérés…)",
+        "PROFESSIONAL": "Üzleti címek, és az üzenet a szakmájukhoz kapcsolódik (közvetítők, ügynökök…)",
+        "CLIENT": "A Lentific meglévő ügyfelei"
+      },
+      "basisShort": {
+        "CONSENT": "Hozzájárulás",
+        "PROFESSIONAL": "Szakmai",
+        "CLIENT": "Ügyfél"
+      },
+      "certify": "Megerősítem, hogy ezeket a kapcsolatokat jogszerűen szereztük, és bármikor leiratkozhatnak.",
+      "add": "Kapcsolatok hozzáadása",
+      "empty": "Még nincs kapcsolat.",
+      "colEmail": "Kapcsolat",
+      "colLanguage": "Nyelv",
+      "colBasis": "Jogalap",
+      "colStatus": "Állapot",
+      "colAdded": "Hozzáadva",
+      "status": {
+        "SUBSCRIBED": "Feliratkozott",
+        "UNSUBSCRIBED": "Leiratkozott",
+        "BOUNCED": "Érvénytelen cím"
+      },
+      "unsubscribe": "Leiratkoztatás",
+      "delete": "Törlés"
+    }
   }
 }

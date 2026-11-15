@@ -18,6 +18,8 @@ export interface EmailMessage {
   html: string;
   kind: string;
   userId?: string | null;
+  /** Adresse de réponse (ex. le prospect, pour répondre directement depuis info@). */
+  replyTo?: string;
 }
 
 async function deliver(msg: EmailMessage): Promise<{ status: "LOCAL" | "SENT" | "FAILED"; error?: string }> {
@@ -29,7 +31,7 @@ async function deliver(msg: EmailMessage): Promise<{ status: "LOCAL" | "SENT" | 
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ from, to: [msg.to], subject: msg.subject, text: msg.text, html: msg.html }),
+      body: JSON.stringify({ from, to: [msg.to], subject: msg.subject, text: msg.text, html: msg.html, ...(msg.replyTo ? { reply_to: msg.replyTo } : {}) }),
     });
     if (!res.ok) return { status: "FAILED", error: `${res.status} ${await res.text()}`.slice(0, 500) };
     return { status: "SENT" };
@@ -46,7 +48,8 @@ export async function sendEmail(msg: EmailMessage) {
   } else if (result.status === "FAILED") {
     console.error(`[mailer] échec d'envoi ${msg.kind} → ${msg.to} : ${result.error}`);
   }
-  await outboundEmailsRepo.create({ ...msg, status: result.status, error: result.error ?? null });
+  const { replyTo: _replyTo, ...logged } = msg;
+  await outboundEmailsRepo.create({ ...logged, status: result.status, error: result.error ?? null });
   return result;
 }
 
@@ -216,12 +219,12 @@ export function webUrlInLocale(path: string, locale: string | null | undefined) 
   return `${url}${path.includes("?") ? "&" : "?"}lang=${locale}`;
 }
 
-function escapeHtml(s: string) {
+export function escapeHtml(s: string) {
   return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 }
 
 /** Mise en page commune, compatible avec les clients e-mail (tableaux + styles en ligne). */
-function layout(paragraphs: string[], button?: { label: string; url: string }, signature = "", footnote = "") {
+export function layout(paragraphs: string[], button?: { label: string; url: string }, signature = "", footnote = "") {
   const body = paragraphs.map((p) => `<p style="margin:0 0 16px;font-size:15px;line-height:1.55;color:#1f2433">${p}</p>`).join("");
   const btn = button
     ? `<p style="margin:24px 0"><a href="${button.url}" style="display:inline-block;background:#F5C21B;color:#171B2B;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:8px;font-size:15px">${escapeHtml(button.label)}</a></p>
@@ -441,4 +444,60 @@ export function sendStaffInviteEmail(user: Recipient, url: string, inviterName: 
   const text = [t.hello(name), "", body, "", url, "", n.expiry, "", t.signature].join("\n");
   const html = layout([escapeHtml(t.hello(name)), escapeHtml(body)], { label: n.button, url }, t.signature, escapeHtml(n.expiry));
   return sendEmail({ to: user.email, subject: n.subject, text, html, kind: "staff.invite", userId: user.id });
+}
+
+// ---------------------------------------------------------------------------
+// Formulaire de contact du site → boîte de l'équipe (demande produit 2026-11-15)
+// ---------------------------------------------------------------------------
+
+/** Boîte qui reçoit les demandes du formulaire de contact (CONTACT_EMAIL, sinon info@lentific.com). */
+export function contactInbox() {
+  return (process.env.CONTACT_EMAIL || "info@lentific.com").trim();
+}
+
+const PROJECT_LABELS: Record<string, string> = {
+  MORTGAGE: "Crédit immobilier",
+  CONSOLIDATION: "Rachat / regroupement de crédits",
+  WORKS: "Financement de travaux",
+  OTHER: "Autre projet",
+};
+
+/**
+ * Prévient l'équipe d'une nouvelle demande du formulaire de contact. En interne,
+ * donc en français ; « Répondre » écrit directement au prospect (reply-to).
+ */
+export function sendContactRequestNotice(req: {
+  id: string; name: string; email: string; phone: string; project: string;
+  amount: number | null; message: string | null; locale: string | null;
+}) {
+  const project = PROJECT_LABELS[req.project] ?? req.project;
+  const amount = req.amount != null ? new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(req.amount) : "—";
+  const rows: [string, string][] = [
+    ["Nom", req.name], ["E-mail", req.email], ["Téléphone", req.phone], ["Projet", project],
+    ["Montant", amount], ["Langue du site", (req.locale ?? "fr").toUpperCase()],
+  ];
+  const adminUrl = (process.env.ADMIN_URL ?? "http://localhost:3001").replace(/\/$/, "") + "/prospects";
+  const text = [
+    "Nouvelle demande reçue par le formulaire de contact du site.", "",
+    ...rows.map(([k, v]) => `${k} : ${v}`), "",
+    "Message :", req.message || "(aucun)", "",
+    `Répondez directement à cet e-mail pour écrire à ${req.name}.`,
+    `Suivi dans le back-office : ${adminUrl}`,
+  ].join("\n");
+  const table = rows.map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0;color:#6b7080;font-size:14px">${k}</td><td style="padding:4px 0;font-size:14px;color:#1f2433"><strong>${escapeHtml(v)}</strong></td></tr>`).join("");
+  const html = layout(
+    [
+      "Nouvelle demande reçue par le formulaire de contact du site.",
+      `<table role="presentation" cellpadding="0" cellspacing="0">${table}</table>`,
+      `<strong>Message :</strong><br>${escapeHtml(req.message || "(aucun)").replace(/\n/g, "<br>")}`,
+      `Répondez directement à cet e-mail pour écrire à ${escapeHtml(req.name)}.`,
+    ],
+    { label: "Ouvrir dans le back-office", url: adminUrl },
+    "Lentific"
+  );
+  return sendEmail({
+    to: contactInbox(),
+    subject: `Nouvelle demande de contact – ${req.name} (${project})`,
+    text, html, kind: "contact.request", replyTo: req.email,
+  });
 }

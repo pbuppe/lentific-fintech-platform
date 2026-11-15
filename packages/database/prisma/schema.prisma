@@ -744,9 +744,23 @@ model PageView {
   // "5 personnes qui ont vu 1 page chacune" (§ demande produit 2026-09-18 :
   // visiteurs uniques par jour, visiteurs actifs sur les 30 dernières minutes).
   visitorId   String?
+  // Suivi détaillé type Matomo (demande produit 2026-11-15) : visite (session
+  // de navigation, 30 min d'inactivité), ville/région (en-têtes Vercel),
+  // appareil déduit du navigateur, temps passé sur la page, membre connecté.
+  sessionId   String?
+  city        String?
+  region      String?
+  deviceType  String?  // mobile | tablet | desktop
+  os          String?  // Android | iOS | Windows | macOS | Linux | ChromeOS
+  browser     String?
+  screenWidth Int?
+  durationMs  Int?
+  userId      String?
+  utmSource   String?
   createdAt   DateTime @default(now())
 
   @@index([createdAt])
+  @@index([sessionId])
   @@index([path])
   @@index([visitorId])
   @@index([geoCountryCode])
@@ -897,4 +911,101 @@ model ContactRequest {
 
   @@index([status, createdAt])
   @@index([email])
+}
+
+// ---------------------------------------------------------------------------
+// E-mailing marketing (demande produit 2026-11-15) : contacts de prospection,
+// campagnes envoyées depuis le back-office (admin / super admin), suivi des
+// envois et désinscription en un clic (lien dans chaque e-mail).
+// ---------------------------------------------------------------------------
+
+enum MarketingContactStatus {
+  SUBSCRIBED
+  UNSUBSCRIBED
+  BOUNCED
+}
+
+// Base légale de l'envoi, exigée à l'ajout d'un contact (RGPD / ePrivacy) :
+// CONSENT = la personne a accepté de recevoir nos e-mails ;
+// PROFESSIONAL = adresse professionnelle, message en rapport avec son métier ;
+// CLIENT = client existant, offre de services analogues.
+enum MarketingLegalBasis {
+  CONSENT
+  PROFESSIONAL
+  CLIENT
+}
+
+enum MarketingCampaignStatus {
+  DRAFT
+  SENDING
+  SENT
+}
+
+model MarketingContact {
+  id               String                 @id @default(cuid())
+  email            String                 @unique
+  name             String?
+  locale           String                 @default("fr")
+  basis            MarketingLegalBasis
+  source           String                 @default("MANUAL") // MANUAL | IMPORT
+  status           MarketingContactStatus @default(SUBSCRIBED)
+  unsubscribeToken String                 @unique
+  addedById        String?
+  createdAt        DateTime               @default(now())
+  unsubscribedAt   DateTime?
+  sends            MarketingSend[]
+
+  @@index([status, createdAt])
+}
+
+model MarketingCampaign {
+  id           String                  @id @default(cuid())
+  templateKey  String?
+  locale       String                  @default("fr")
+  subject      String
+  body         String                  // texte brut, paragraphes séparés par une ligne vide ; {prenom} remplacé
+  ctaLabel     String?
+  ctaUrl       String?
+  status       MarketingCampaignStatus @default(DRAFT)
+  sentCount    Int                     @default(0)
+  failedCount  Int                     @default(0)
+  createdById  String
+  createdAt    DateTime                @default(now())
+  updatedAt    DateTime                @updatedAt
+  sentAt       DateTime?
+  sends        MarketingSend[]
+
+  @@index([createdAt])
+}
+
+model MarketingSend {
+  id         String            @id @default(cuid())
+  campaignId String
+  contactId  String
+  status     String            // SENT | FAILED | LOCAL
+  error      String?
+  createdAt  DateTime          @default(now())
+  campaign   MarketingCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  contact    MarketingContact  @relation(fields: [contactId], references: [id], onDelete: Cascade)
+
+  @@unique([campaignId, contactId])
+  @@index([createdAt])
+}
+
+// Actions des visiteurs sur le site (clics sur boutons/liens, envois de
+// formulaires, liens sortants) pour le parcours de chaque visite (demande
+// produit 2026-11-15). Aucune saisie de formulaire n'est enregistrée.
+model TrackEvent {
+  id         String   @id @default(cuid())
+  visitorId  String?
+  sessionId  String?
+  pageViewId String?
+  path       String
+  kind       String   // click | submit | outbound | download
+  label      String
+  target     String?
+  createdAt  DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([createdAt])
 }

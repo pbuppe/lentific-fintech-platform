@@ -113,7 +113,7 @@ export async function ContactSection({ status }: { status?: string }) {
               <p className="mt-2 text-sm text-ink-soft">{t("thanksBody")}</p>
             </div>
           ) : (
-            <form action={submitContactRequestAction} className="grid gap-3">
+            <form action={submitContactRequestAction} className="grid gap-3" data-track="Demande d’étude gratuite (formulaire de contact)">
               {status === "invalid" && (
                 <p role="alert" className="rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent">{t("invalid")}</p>
               )}
