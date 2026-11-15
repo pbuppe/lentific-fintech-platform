@@ -31,3 +31,34 @@ export function listDue(now: Date) {
     where: { status: { in: ["ACTIVE", "PAST_DUE"] }, currentPeriodEnd: { lte: now } },
   });
 }
+
+// ---------------------------------------------------------------------------
+// Abonnement PayPal (provider = "paypal", providerRef = identifiant I-… chez PayPal)
+// ---------------------------------------------------------------------------
+
+/** Active (ou réactive) l'abonnement PayPal d'un utilisateur. */
+export function activatePaypal(data: { userId: string; tier: string; amount: number; providerRef: string; currentPeriodEnd: Date }) {
+  const fields = {
+    tier: data.tier,
+    amount: data.amount,
+    status: "ACTIVE" as const,
+    cancelledAt: null,
+    provider: "paypal",
+    providerRef: data.providerRef,
+    currentPeriodEnd: data.currentPeriodEnd,
+    lastSyncedAt: new Date(),
+  };
+  return prisma.subscription.upsert({
+    where: { userId: data.userId },
+    create: { userId: data.userId, ...fields },
+    update: fields,
+  });
+}
+
+export function findByProviderRef(providerRef: string) {
+  return prisma.subscription.findUnique({ where: { providerRef } });
+}
+
+export function updateSync(id: string, data: { status?: "ACTIVE" | "CANCELLED" | "PAST_DUE"; currentPeriodEnd?: Date; cancelledAt?: Date | null }) {
+  return prisma.subscription.update({ where: { id }, data: { ...data, lastSyncedAt: new Date() } });
+}

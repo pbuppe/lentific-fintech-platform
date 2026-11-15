@@ -3,16 +3,22 @@ import { revalidatePath } from "next/cache";
 import { getTranslations } from "next-intl/server";
 import { prisma, subscriptionsRepo } from "@fintech/database";
 import { listOpportunities, invest } from "@fintech/funding";
-import { requestAndPayIntroduction, listSentBy, INTRODUCTION_FEE } from "@fintech/introductions";
+import { listSentBy } from "@fintech/introductions";
+import { requestIntroduction } from "../../../../lib/introductionCheckout";
+import { commercialPrices } from "../../../../lib/price";
 import { listMyDocumentRequests } from "@fintech/documents";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../../lib/session";
+import { SpaceKicker } from "../../../components/SpaceKicker";
+import { PremiumBanner } from "../../../components/PremiumPromo";
+import { PaymentNotice } from "../../../components/PaymentNotice";
 
 async function investAction(formData: FormData) {
   "use server";
   const user = await getCurrentUser();
   if (!user) redirect("/login");
   const t = await getTranslations("InvestorDashboard");
+  const { fee } = await commercialPrices();
 
   const opportunityId = formData.get("opportunityId") as string;
   const amount = Number(formData.get("amount"));
@@ -32,22 +38,23 @@ async function requestIntroductionAction(formData: FormData) {
 
   const targetUserId = formData.get("targetUserId") as string;
   const targetId = formData.get("applicationId") as string;
-  const eur = await prisma.currency.findUniqueOrThrow({ where: { code: "EUR" } });
-
-  await requestAndPayIntroduction({
-    requesterId: user.id,
-    targetUserId,
-    targetType: "APPLICATION",
-    targetId,
-    currencyId: eur.id,
-  });
+  let result: Awaited<ReturnType<typeof requestIntroduction>>;
+  try {
+    result = await requestIntroduction({ userId: user.id, targetUserId, targetType: "APPLICATION", targetId, back: "/investor/dashboard" });
+  } catch (error) {
+    console.error("[paypal] mise en relation : paiement impossible à démarrer", error);
+    redirect("/investor/dashboard?payment=unavailable");
+  }
+  if ("redirectTo" in result) redirect(result.redirectTo);
   revalidatePath("/investor/dashboard");
+  redirect(`/investor/dashboard?introduction=${result.done === "included" ? "included" : "1"}`);
 }
 
-export default async function InvestorDashboard({ searchParams }: { searchParams: { error?: string } }) {
+export default async function InvestorDashboard({ searchParams }: { searchParams: { error?: string; payment?: string; introduction?: string } }) {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
   const t = await getTranslations("InvestorDashboard");
+  const { fee } = await commercialPrices();
   const RISK_LABEL: Record<string, string> = t.raw("riskLabel");
 
   const [opportunities, sentIntroductions, documentRequests, subscription] = await Promise.all([
@@ -65,7 +72,7 @@ export default async function InvestorDashboard({ searchParams }: { searchParams
   return (
     <main className="mx-auto max-w-4xl px-6 py-10">
       <div className="mb-6">
-        <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (investor)</p>
+        <SpaceKicker audience="investor" />
         <h1 className="relative mt-1 inline-block font-display text-2xl font-semibold text-brand after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:w-9 after:rounded after:bg-accent">
           {t("title")}
         </h1>
@@ -92,6 +99,8 @@ export default async function InvestorDashboard({ searchParams }: { searchParams
         </a>
       )}
 
+      <PremiumBanner className="mb-6" />
+      <PaymentNotice payment={searchParams.payment} introduction={searchParams.introduction} />
       {searchParams.error && (
         <p className="mb-4 rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent">{searchParams.error}</p>
       )}
@@ -143,7 +152,7 @@ export default async function InvestorDashboard({ searchParams }: { searchParams
                       required
                       className="w-40 rounded-lg border border-line px-3 py-1.5 text-sm text-ink"
                     />
-                    <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
+                    <button className="rounded-lg bg-yellow px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-yellow-ink">
                       {t("invest")}
                     </button>
                   </form>
@@ -163,7 +172,7 @@ export default async function InvestorDashboard({ searchParams }: { searchParams
                       <input type="hidden" name="targetUserId" value={application.borrowerId} />
                       <input type="hidden" name="applicationId" value={application.id} />
                       <button className="rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-ink-soft hover:border-brand hover:text-brand-ink">
-                        {t("requestIntroduction", { premium: isPremium ? "yes" : "no", fee: INTRODUCTION_FEE })}
+                        {t("requestIntroduction", { premium: isPremium ? "yes" : "no", fee })}
                       </button>
                     </form>
                   )}

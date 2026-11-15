@@ -14,7 +14,7 @@ export const de: ContractStrings = {
   mp_mainSubtitle: "Erstellt in Anwendung der Artikel L.548-1 ff. und R.548-1 ff. des französischen Währungs- und Finanzgesetzbuchs (Code monétaire et financier)",
   mp_intermediaryHeading: "DER VERMITTLER FÜR KREDITBASIERTE SCHWARMFINANZIERUNG",
   mp_intermediaryText:
-    "Die Gesellschaft Lentific, [Gesellschaftsform zu vervollständigen] mit einem Kapital von [Betrag] Euro, [Sitz der Gesellschaft zu vervollständigen], eingetragen im Handelsregister (RCS) von [Stadt] unter der Nummer [SIREN zu bestätigen], bei der ORIAS als Vermittler für kreditbasierte Schwarmfinanzierung unter der Nummer [ORIAS-Nummer zu bestätigen] registriert, im Folgenden „der Vermittler“ oder „Lentific“ genannt, handelnd als Bevollmächtigter der Darlehensgeber, ohne selbst Darlehensgeberin zu sein.",
+    "Die Gesellschaft SODIVA CREDITS, [Gesellschaftsform zu vervollständigen] mit einem Kapital von [Betrag] Euro, [Sitz der Gesellschaft zu vervollständigen], eingetragen im Handelsregister (RCS) von [Stadt] unter der Nummer [SIREN zu bestätigen], bei der ORIAS als Vermittler für kreditbasierte Schwarmfinanzierung unter der Nummer [ORIAS-Nummer zu bestätigen] registriert, im Folgenden „der Vermittler“ oder „SODIVA CREDITS“ genannt, handelnd als Bevollmächtigter der Darlehensgeber, ohne selbst Darlehensgeberin zu sein.",
   mp_borrowerHeading: "DER DARLEHENSNEHMER",
   mp_borrowerText: "{name} ({email}){cityPart}, handelnd zu gewerblichen Zwecken, im Folgenden „der Darlehensnehmer“ genannt.",
   mp_borrowerCityPart: ", wohnhaft in {city}",
@@ -23,13 +23,13 @@ export const de: ContractStrings = {
     "Die natürlichen oder juristischen Personen, deren Identität, Kontaktdaten und individuell verliehener Anteil in Anlage 3 (Zeichnungsscheine) aufgeführt sind, wobei jeder Darlehensgeber individuell und ohne gesamtschuldnerische Haftung untereinander handelt, im Folgenden gemeinsam „die Darlehensgeber“ genannt.",
   mp_preambleHeading: "PRÄAMBEL",
   mp_preambleText1:
-    "Der Darlehensnehmer hat auf der Plattform Lentific einen Finanzierungsantrag über einen Betrag von {amount} zu gewerblichen Zwecken gestellt. Dieser Antrag wurde einer Identitätsprüfung sowie einer Analyse der Rückzahlungsfähigkeit durch die Risikoengine der Plattform{riskPart} unterzogen und anschließend von einem befugten Sachbearbeiter geprüft; im Anschluss daran wurde ein Angebot erstellt und vom Darlehensnehmer angenommen.",
+    "Der Darlehensnehmer hat auf der Plattform SODIVA CREDITS einen Finanzierungsantrag über einen Betrag von {amount} zu gewerblichen Zwecken gestellt. Dieser Antrag wurde einer Identitätsprüfung sowie einer Analyse der Rückzahlungsfähigkeit durch die Risikoengine der Plattform{riskPart} unterzogen und anschließend von einem befugten Sachbearbeiter geprüft; im Anschluss daran wurde ein Angebot erstellt und vom Darlehensnehmer angenommen.",
   mp_preambleRiskPart: " (erzielter Score: {score}/100)",
   mp_preambleText2:
     "Der vorliegende Vertrag legt die Bedingungen dieser Finanzierung fest, die durch einen oder mehrere Darlehensgeber auf dem P2P-Marktplatz der Plattform unter den in Artikel 5 beschriebenen Bedingungen der gestückelten Finanzierung gewährleistet wird.",
   mp_art1Title: "DEFINITIONEN",
   mp_art1Items: [
-    "„Plattform“ bezeichnet die von Lentific betriebene Website und Anwendung.",
+    "„Plattform“ bezeichnet die von SODIVA CREDITS betriebene Website und Anwendung.",
     "„Kreditbasierte Schwarmfinanzierung“ (Crowdlending) bezeichnet den Vorgang, bei dem ein oder mehrere Darlehensgeber dem Darlehensnehmer gemäß den Artikeln L.548-1 ff. des französischen Währungs- und Finanzgesetzbuchs ein verzinsliches Darlehen gewähren.",
     "„Effektiver Jahreszins“ bezeichnet den jährlichen effektiven Gesamtzinssatz.",
     "„Tilgungsplan“ bezeichnet die in Anlage 1 aufgeführte Tilgungstabelle.",
@@ -104,7 +104,7 @@ export const de: ContractStrings = {
   mp_art16Text:
     "Der vorliegende Vertrag unterliegt französischem Recht. Jeder Streitfall bezüglich seiner Gültigkeit, Auslegung oder Erfüllung unterliegt der ausschließlichen Zuständigkeit der örtlich zuständigen französischen Gerichte, vorbehaltlich der anwendbaren zwingenden Rechtsvorschriften.",
   mp_signBorrowerLabel: "Der Darlehensnehmer",
-  mp_signIntermediaryLabel: "Für den Vermittler, Lentific",
+  mp_signIntermediaryLabel: "Für den Vermittler, SODIVA CREDITS",
   mp_annex1Title: "ANLAGE 1 - TILGUNGSPLAN",
   mp_annex1Subtitle: "Darlehen über {amount} · {duration} Monatsraten · fester Zinssatz {rate} % · Monatsrate {monthly}",
   mp_annex1Headers: ["Rate", "Datum", "Kapital", "Zinsen", "Monatsrate", "Restschuld"],
@@ -124,11 +124,11 @@ export const de: ContractStrings = {
   mp_annex3Text:
     "Ich, der/die Unterzeichnende [Name des Darlehensgebers], erkläre, die Finanzierung des in diesem Vertrag bezeichneten Darlehensnehmers in Höhe von [Betrag] EUR zu zeichnen, und bestätige, von sämtlichen Bestimmungen des vorliegenden Vertrags mit dem Aktenzeichen {reference}, insbesondere dem in Artikel 10 enthaltenen Risikohinweis, Kenntnis genommen und diese vorbehaltlos akzeptiert zu haben.",
   mp_footerNote:
-    "Dokument automatisch von der Plattform Lentific auf Grundlage der Akte {reference} erstellt. Die als „zu bestätigen“ gekennzeichneten Angaben sind mit den tatsächlichen Registrierungsdaten der Gesellschaft zu vervollständigen und vor jeder Produktivsetzung von einem Rechtsanwalt zu prüfen. Struktur erstellt unter Bezugnahme auf die Artikel L.548-1 ff. und R.548-1 ff. (insbesondere R.548-6) des französischen Währungs- und Finanzgesetzbuchs.",
+    "Dokument automatisch von der Plattform SODIVA CREDITS auf Grundlage der Akte {reference} erstellt. Die als „zu bestätigen“ gekennzeichneten Angaben sind mit den tatsächlichen Registrierungsdaten der Gesellschaft zu vervollständigen und vor jeder Produktivsetzung von einem Rechtsanwalt zu prüfen. Struktur erstellt unter Bezugnahme auf die Artikel L.548-1 ff. und R.548-1 ff. (insbesondere R.548-6) des französischen Währungs- und Finanzgesetzbuchs.",
 
   dl_pdfTitle: "Direkter Darlehensvertrag - {reference}",
   dl_mainTitle: "DARLEHENSVERTRAG ZWISCHEN PRIVATPERSONEN",
-  dl_mainSubtitle: "Direktes Darlehen, das zwischen den Parteien nach einer Vermittlung über die Plattform Lentific geschlossen wurde",
+  dl_mainSubtitle: "Direktes Darlehen, das zwischen den Parteien nach einer Vermittlung über die Plattform SODIVA CREDITS geschlossen wurde",
   dl_borrowerHeading: "DER DARLEHENSNEHMER",
   dl_borrowerText: "{name} ({email}){cityPart}, im Folgenden „der Darlehensnehmer“ genannt.",
   dl_borrowerCityPart: ", wohnhaft in {city}",
@@ -136,7 +136,7 @@ export const de: ContractStrings = {
   dl_lenderText: "{name} ({email}), im Folgenden „der Darlehensgeber“ genannt.",
   dl_preambleHeading: "PRÄAMBEL",
   dl_preambleText:
-    "{borrowerName} und {lenderName} wurden über die Plattform Lentific gegen Zahlung der von der Plattform vorgesehenen Vermittlungsgebühr miteinander in Kontakt gebracht. Die Parteien haben vereinbart, außerhalb jeder gestückelten Finanzierung oder von der Plattform regulierten Vermittlung, den vorliegenden Darlehensvertrag über einen Betrag von {amount} unmittelbar untereinander abzuschließen. Lentific ist im Rahmen des vorliegenden Vertrags weder Darlehensgeber noch Darlehensnehmer noch Vermittler für kreditbasierte Schwarmfinanzierung: Ihre Rolle beschränkt sich darauf, die Parteien miteinander in Kontakt gebracht und das vorliegende Dokument erstellt zu haben.",
+    "{borrowerName} und {lenderName} wurden über die Plattform SODIVA CREDITS gegen Zahlung der von der Plattform vorgesehenen Vermittlungsgebühr miteinander in Kontakt gebracht. Die Parteien haben vereinbart, außerhalb jeder gestückelten Finanzierung oder von der Plattform regulierten Vermittlung, den vorliegenden Darlehensvertrag über einen Betrag von {amount} unmittelbar untereinander abzuschließen. SODIVA CREDITS ist im Rahmen des vorliegenden Vertrags weder Darlehensgeber noch Darlehensnehmer noch Vermittler für kreditbasierte Schwarmfinanzierung: Ihre Rolle beschränkt sich darauf, die Parteien miteinander in Kontakt gebracht und das vorliegende Dokument erstellt zu haben.",
   dl_art1Title: "VERTRAGSGEGENSTAND",
   dl_art1Text:
     "Der vorliegende Vertrag legt die Bedingungen fest, unter denen der Darlehensgeber dem Darlehensnehmer unmittelbar ein verzinsliches Gelddarlehen gewährt, sowie die Modalitäten von dessen Rückzahlung.",
@@ -160,16 +160,16 @@ export const de: ContractStrings = {
   dl_art7Text: "Der Darlehensgeber bestätigt, über die mit einem direkten Darlehen an eine Privatperson verbundenen Risiken informiert und gewarnt worden zu sein, insbesondere über:",
   dl_art7Items: [
     "das Risiko eines vollständigen oder teilweisen Verlusts des verliehenen Kapitals im Falle eines Zahlungsausfalls des Darlehensnehmers;",
-    "das Fehlen jeglicher Rückzahlungsgarantie durch Lentific, die im Rahmen des vorliegenden Vertrags weder Darlehensgeberin noch Bürgin noch Versicherin noch Vermittlerin für kreditbasierte Schwarmfinanzierung ist;",
+    "das Fehlen jeglicher Rückzahlungsgarantie durch SODIVA CREDITS, die im Rahmen des vorliegenden Vertrags weder Darlehensgeberin noch Bürgin noch Versicherin noch Vermittlerin für kreditbasierte Schwarmfinanzierung ist;",
     "das Risiko der Illiquidität der verliehenen Beträge vor dem vereinbarten Fälligkeitstermin;",
     "die Empfehlung, den vorliegenden Vertrag vor der Unterzeichnung von einem Rechtsberater prüfen zu lassen, da es sich bei diesem Dokument lediglich um ein Muster handelt.",
   ],
-  dl_art8Title: "ROLLE VON LENTIFIC",
+  dl_art8Title: "ROLLE VON SODIVA CREDITS",
   dl_art8Text:
-    "Lentific ist in keiner Weise Partei des vorliegenden Vertrags, garantiert weder das Kapital noch die Zinsen, und ihre Rolle beschränkt sich darauf, die Parteien miteinander in Kontakt gebracht zu haben. Was zwischen den Parteien ab der Unterzeichnung des vorliegenden Vertrags geschieht, findet außerhalb der Plattform statt und begründet keine Haftung von Lentific.",
+    "SODIVA CREDITS ist in keiner Weise Partei des vorliegenden Vertrags, garantiert weder das Kapital noch die Zinsen, und ihre Rolle beschränkt sich darauf, die Parteien miteinander in Kontakt gebracht zu haben. Was zwischen den Parteien ab der Unterzeichnung des vorliegenden Vertrags geschieht, findet außerhalb der Plattform statt und begründet keine Haftung von SODIVA CREDITS.",
   dl_art9Title: "PERSONENBEZOGENE DATEN",
   dl_art9Text:
-    "Die im Rahmen der Vermittlung ausgetauschten personenbezogenen Daten wurden von Lentific gemäß der DSGVO verarbeitet; nach erfolgter Vermittlung tragen die Parteien allein die Verantwortung für die Verarbeitung der Daten der jeweils anderen Partei.",
+    "Die im Rahmen der Vermittlung ausgetauschten personenbezogenen Daten wurden von SODIVA CREDITS gemäß der DSGVO verarbeitet; nach erfolgter Vermittlung tragen die Parteien allein die Verantwortung für die Verarbeitung der Daten der jeweils anderen Partei.",
   dl_art10Title: "ANWENDBARES RECHT UND ZUSTÄNDIGER GERICHTSSTAND",
   dl_art10Text:
     "Der vorliegende Vertrag unterliegt französischem Recht. Jeder Streitfall bezüglich seiner Gültigkeit, Auslegung oder Erfüllung unterliegt der ausschließlichen Zuständigkeit der örtlich zuständigen französischen Gerichte, vorbehaltlich der anwendbaren zwingenden Rechtsvorschriften.",
@@ -179,5 +179,5 @@ export const de: ContractStrings = {
   dl_annex1Subtitle: "Darlehen über {amount} · {duration} Monatsraten · fester Zinssatz {rate} % · Monatsrate {monthly}",
   dl_annex1Headers: ["Rate", "Datum", "Kapital", "Zinsen", "Monatsrate", "Restschuld"],
   dl_footerNote:
-    "Dokument automatisch von der Plattform Lentific auf Grundlage der unter dem Aktenzeichen {reference} erfassten Vermittlung erstellt. Dieser Vertrag ist ein MUSTER: vor Unterzeichnung von einem Rechtsberater zu bestätigen, insbesondere hinsichtlich der etwaigen Einstufung als Verbraucherkredit (Artikel 4).",
+    "Dokument automatisch von der Plattform SODIVA CREDITS auf Grundlage der unter dem Aktenzeichen {reference} erfassten Vermittlung erstellt. Dieser Vertrag ist ein MUSTER: vor Unterzeichnung von einem Rechtsberater zu bestätigen, insbesondere hinsichtlich der etwaigen Einstufung als Verbraucherkredit (Artikel 4).",
 };

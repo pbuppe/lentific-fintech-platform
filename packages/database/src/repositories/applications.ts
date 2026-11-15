@@ -16,8 +16,11 @@ export function listByBorrower(borrowerId: string) {
   return prisma.application.findMany({
     where: { borrowerId },
     include: {
-      offers: { include: { loan: { include: { fundingOpportunity: true } } } },
+      offers: { include: { loan: { include: { fundingOpportunity: true, repayments: { orderBy: { dueDate: "asc" } } } } } },
       documents: true,
+      currency: true,
+      disbursement: true,
+      brokerFees: { where: { status: { not: "CANCELLED" } }, orderBy: { createdAt: "desc" } },
     },
     orderBy: { createdAt: "desc" },
   });
@@ -33,7 +36,7 @@ export function setScore(applicationId: string, score: number) {
 
 const SLA_PENDING_STATUSES: ApplicationStatus[] = ["SUBMITTED", "KYC_PENDING", "KYC_VERIFIED", "UNDER_REVIEW"];
 
-/** Active l'option "Dossier Prioritaire" (49 €, payée d'avance) : SLA de 48h sur la revue. */
+/** Active l'option "Dossier Prioritaire" (49,90 €, payée d'avance) : SLA de 48h sur la revue. */
 export function setPriority(applicationId: string, slaDeadline: Date) {
   return prisma.application.update({
     where: { id: applicationId },

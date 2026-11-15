@@ -1,13 +1,16 @@
 import { listOpportunities, listOpenInvestorListings } from "@fintech/funding";
+import { commercialPrices } from "../../lib/price";
 import { buildSchedule } from "@fintech/loans";
 import { Card, StatusPill, Button } from "@fintech/ui";
 import { getTranslations } from "next-intl/server";
 import { getPreferredCountry } from "../../lib/country";
 import { CountryFilter } from "../components/CountryFilter";
 import { CountryBadge } from "../components/CountryBadge";
+import { PremiumBanner } from "../components/PremiumPromo";
 
 export default async function PublicMarketplacePage() {
   const t = await getTranslations("MarketplacePage");
+  const { fee } = await commercialPrices();
   const RISK_LABEL = t.raw("riskLabel") as Record<string, string>;
   const RISK_APPETITE_LABEL = t.raw("riskAppetiteLabel") as Record<string, string>;
   const country = getPreferredCountry();
@@ -32,6 +35,7 @@ export default async function PublicMarketplacePage() {
           </p>
         </div>
       </section>
+      <div className="mx-auto max-w-5xl px-6 pt-6 sm:px-12"><PremiumBanner /></div>
 
       <section className="mx-auto max-w-5xl px-6 py-10 sm:px-12">
         <h2 className="font-display text-xl font-semibold text-ink">{t("availableCapitalTitle")}</h2>
@@ -77,7 +81,7 @@ export default async function PublicMarketplacePage() {
                   </p>
                   <p className="mt-2 text-xs text-ink-faint">{RISK_APPETITE_LABEL[listing.riskAppetite] ?? listing.riskAppetite}</p>
                   <Button variant="ghost" href="/login" className="mt-3 inline-block text-center text-xs">
-                    {t("connectCta")}
+                    {t("connectCta", { fee })}
                   </Button>
                 </Card>
               );

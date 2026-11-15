@@ -10,17 +10,27 @@
     "riskEngine": "Motor de riesgo",
     "accountsSuperAdmin": "Cuentas (superadministrador)",
     "statistics": "Estadísticas",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "accountValidation": "Cuentas por validar",
+    "outboundEmails": "Correos enviados",
+    "pendingCount": "{count} cuenta(s) pendiente(s)",
+    "funds": "Desembolsos y honorarios",
+    "pendingFundsCount": "{count, plural, one {# desembolso por confirmar} other {# desembolsos por confirmar}}",
+    "clientRequests": "Solicitudes y mensajes",
+    "console": "Consola superadmin",
+    "prospects": "Solicitudes de contacto",
+    "newProspectsCount": "{count, plural, one {# solicitud nueva} other {# solicitudes nuevas}}"
   },
   "AdminLoginPage": {
-    "kicker": "Lentific · Back-office",
+    "kicker": "SODIVA CREDITS · Back-office",
     "title": "Acceso de agente",
     "emailLabel": "Correo electrónico",
     "passwordLabel": "Contraseña",
-    "submit": "Iniciar sesión"
+    "submit": "Iniciar sesión",
+    "activated": "Su acceso está activado: inicie sesión con su nueva contraseña."
   },
   "CasesQueuePage": {
-    "kicker": "apps/admin · back-office",
+    "kicker": "Back-office",
     "title": "Cola de expedientes",
     "pendingCount": "{count, plural, one {# expediente pendiente} other {# expedientes pendientes}}",
     "empty": "No hay expedientes pendientes por ahora.",
@@ -41,17 +51,24 @@
     }
   },
   "AccountsPage": {
-    "kicker": "apps/admin · superadministrador",
+    "kicker": "Superadministrador",
     "title": "Cuentas",
     "description": "Vista completa de cada cuenta de prestatario o inversor: perfil, documentos, solicitudes de documentos, puestas en contacto.",
     "empty": "Todavía no hay cuentas.",
     "verified": "Verificado",
     "roleBorrower": "Prestatario",
-    "roleInvestor": "Inversor"
+    "roleInvestor": "Inversor",
+    "accountStatus": {
+      "PENDING_EMAIL": "Correo por confirmar",
+      "PENDING_REVIEW": "Por validar",
+      "ACTIVE": "Activo",
+      "REJECTED": "Rechazado",
+      "SUSPENDED": "Suspendido"
+    }
   },
   "AccountDetailPage": {
     "backToAccounts": "← Volver a las cuentas",
-    "kicker": "apps/admin · superadministrador",
+    "kicker": "Superadministrador",
     "phoneNotProvided": "teléfono no indicado",
     "roleBorrower": "Prestatario",
     "roleInvestor": "Inversor",
@@ -62,7 +79,7 @@
     "applicationsTitle": "Solicitudes de financiación",
     "listingsTitle": "Ofertas de capital publicadas",
     "introductionsTitle": "Puestas en contacto",
-    "introductionsDisclaimer": "Recordatorio: una vez pagada la puesta en contacto, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; Lentific no se hace responsable.",
+    "introductionsDisclaimer": "Recordatorio: una vez pagada la puesta en contacto, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; SODIVA CREDITS no se hace responsable.",
     "introSent": "→ solicitó el contacto de {name} ({status})",
     "introReceived": "← contacto solicitado por {name} ({status})",
     "documentsTitle": "Documentos aportados",
@@ -72,7 +89,7 @@
     "documentLabel": "Documento solicitado",
     "documentPlaceholder": "Ej. Justificante de domicilio",
     "instructionsLabel": "Precisiones (opcional)",
-    "instructionsPlaceholder": "Ej. de menos de 3 meses, a tu nombre",
+    "instructionsPlaceholder": "Ej. de menos de 3 meses, a su nombre",
     "sendRequest": "Enviar solicitud",
     "alreadySentTitle": "Solicitudes ya enviadas",
     "requestStatus": {
@@ -82,7 +99,7 @@
     }
   },
   "ContractsPage": {
-    "kicker": "apps/admin · firma manual",
+    "kicker": "Firma manual",
     "title": "Contratos firmados: por verificar",
     "description": "El cliente imprimió, firmó a mano y subió su contrato. Revisa el documento antes de confirmar.",
     "empty": "No hay contratos pendientes de verificación.",
@@ -92,12 +109,12 @@
     "confirmSignature": "Confirmar la firma",
     "reject": "Rechazar",
     "bilateralEligibleTitle": "Préstamos aptos para un contrato bilateral",
-    "bilateralEligibleDescription": "Estos préstamos están financiados por un solo inversor: puedes regenerar su contrato en versión bilateral directa, nombrando a ese inversor, en lugar del contrato marketplace estándar.",
+    "bilateralEligibleDescription": "Estos préstamos están financiados por un solo inversor: puede regenerar su contrato en versión bilateral directa, nombrando a ese inversor, en lugar del contrato marketplace estándar.",
     "bilateralEligibleMeta": "{borrower} toma prestado de {lender}",
     "regenerateBilateral": "Regenerar como contrato bilateral"
   },
   "InstallmentsPage": {
-    "kicker": "apps/admin · cobro",
+    "kicker": "Cobro",
     "title": "Cuotas por cobrar",
     "description": "Confirma una mensualidad recibida del prestatario: se redistribuye automáticamente entre los inversores del préstamo, a prorrata de su parte, y alimenta su panel de rendimiento.",
     "empty": "No hay cuotas pendientes por ahora.",
@@ -107,7 +124,7 @@
     "confirmPayment": "Confirmar el pago recibido"
   },
   "InvestorVerificationPage": {
-    "kicker": "apps/admin · verificación manual",
+    "kicker": "Verificación manual",
     "title": "Verificación de inversores: por tramitar",
     "description": "Examina el justificante de ingresos y el justificante de disponibilidad de fondos, y luego confirma o rechaza a continuación.",
     "empty": "No hay inversores pendientes de verificación.",
@@ -120,7 +137,7 @@
     "missingDocumentNote": "Falta un justificante: no se puede confirmar hasta que se hayan aportado ambos."
   },
   "KycPage": {
-    "kicker": "apps/admin · verificación manual",
+    "kicker": "Verificación manual",
     "title": "Verificación de identidad: por tramitar",
     "description": "Contacta con el cliente para verificar su documento de identidad y luego confirma o rechaza a continuación.",
     "empty": "No hay expedientes pendientes de verificación manual.",
@@ -130,16 +147,16 @@
     "noApplicationNote": "Este documento no está vinculado a ninguna solicitud: no se puede avanzar en el expediente."
   },
   "IntroductionsPage": {
-    "kicker": "apps/admin · vista general",
+    "kicker": "Vista general",
     "title": "Perfiles puestos en contacto",
-    "description": "Lista de pares que intercambiaron sus datos de contacto mediante una puesta en contacto pagada. A partir de ese momento, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; Lentific no se hace responsable, solo se proporcionó el contacto.",
+    "description": "Lista de pares que intercambiaron sus datos de contacto mediante una puesta en contacto pagada. A partir de ese momento, lo que ocurra entre ambas partes tiene lugar fuera de la plataforma; SODIVA CREDITS no se hace responsable, solo se proporcionó el contacto.",
     "empty": "Todavía no hay puestas en contacto pagadas.",
     "paid": "Pagada",
     "investorToBorrower": "Inversor hacia prestatario",
     "borrowerToInvestor": "Prestatario hacia inversor"
   },
   "RiskEnginePage": {
-    "kicker": "apps/admin · riesgo",
+    "kicker": "Riesgo",
     "title": "Motor de riesgo",
     "demoDescription": "Ejemplo calculado por <code1>assessRisk()</code1> de <code2>@fintech/risk</code2> para el expediente de demostración (18.500 € / 24 meses):",
     "scoreLabel": "Puntuación",
@@ -147,7 +164,7 @@
     "riskLevelLabel": "Nivel de riesgo"
   },
   "StatisticsPage": {
-    "kicker": "apps/admin · estadísticas",
+    "kicker": "Estadísticas",
     "title": "Estadísticas de visitas",
     "description": "Un seguimiento de visitas ligero y autoalojado, integrado en la plataforma. No es Matomo: Matomo necesita una cuenta Matomo Cloud o un alojamiento aparte, a configurar por separado si se desea.",
     "rightNow": "Ahora mismo",
@@ -169,5 +186,460 @@
     "byLanguage": "Por idioma",
     "byCountry": "Por país",
     "noData": "Todavía no hay datos."
+  },
+  "AccountValidationPage": {
+    "kicker": "Registros",
+    "title": "Cuentas por validar",
+    "description": "Ningún prestatario ni inversor accede a su espacio antes de su validación. Revise cada registro y valide o rechace con un motivo; la persona recibe un correo.",
+    "doneApproved": "Cuenta validada. Se ha enviado un correo de activación.",
+    "doneRejected": "Registro rechazado. La persona ha sido avisada por correo.",
+    "doneResent": "Nuevo enlace de confirmación enviado.",
+    "toReviewTitle": "Correo confirmado, pendiente de su decisión",
+    "toReviewEmpty": "Ningún registro pendiente de validación.",
+    "roleBorrower": "Prestatario",
+    "roleInvestor": "Inversor",
+    "signedUpAt": "Registrado el",
+    "emailVerifiedAt": "Correo confirmado el",
+    "country": "País",
+    "approve": "Validar la cuenta",
+    "reject": "Rechazar…",
+    "reasonLabel": "Motivo del rechazo (se envía a la persona)",
+    "reasonPlaceholder": "Ej.: información incompleta, perfil fuera de alcance…",
+    "confirmReject": "Confirmar el rechazo",
+    "emailPendingTitle": "Correo aún no confirmado",
+    "emailPendingDescription": "Estas personas aún no han hecho clic en el enlace recibido. Puedes reenviarlo o validar igualmente si conoces a la persona.",
+    "emailPendingEmpty": "Ningún registro pendiente de confirmación de correo.",
+    "resend": "Reenviar el enlace",
+    "approveAnyway": "Validar igualmente",
+    "rejectedTitle": "Registros rechazados"
+  },
+  "OutboundEmailsPage": {
+    "kicker": "Comunicación",
+    "title": "Correos enviados",
+    "descriptionLocal": "Aún no hay ningún servicio de envío conectado: los correos no se envían realmente, se guardan aquí para poder probar los recorridos (por ejemplo, hacer clic en un enlace de confirmación).",
+    "descriptionLive": "Los últimos 50 correos enviados por la plataforma.",
+    "empty": "Ningún correo por ahora.",
+    "to": "Para:",
+    "statusSent": "Enviado",
+    "statusLocal": "Local (no enviado)",
+    "statusFailed": "Error"
+  },
+  "FundsPage": {
+    "kicker": "Back-office · Créditos concedidos",
+    "title": "Desembolsos y honorarios",
+    "description": "Certifique el desembolso de cada crédito firmado. Un admin lo declara con la prueba del prestamista y luego un superadministrador distinto lo confirma. Los honorarios solo pueden solicitarse después de esta confirmación.",
+    "empty": "Todavía no hay créditos firmados.",
+    "section1": "1 · Crédito concedido",
+    "grantedSummary": "{amount} · tipo {rate} % · {months} meses · contrato firmado",
+    "section2": "2 · Certificar el desembolso",
+    "doubleValidationNote": "Doble validación: un admin declara con prueba y un superadmin distinto confirma.",
+    "proofRejected": "Prueba rechazada: {reason}. Declare de nuevo con un documento legible.",
+    "beneficiaryLabel": "Fondos pagados a",
+    "availabilityLabel": "Disponibilidad para el prestatario",
+    "fundsDateLabel": "Fecha del desembolso",
+    "lenderReferenceLabel": "Referencia del prestamista",
+    "proofLabel": "Aviso de desembolso",
+    "proofHint": "Certificado del prestamista o del notario · PDF, JPG o PNG, 10 MB máx.",
+    "declare": "Declarar fondos desembolsados",
+    "declaredBy": "Declarado por",
+    "confirmedBy": "Confirmado por",
+    "confirm": "Confirmar el desembolso",
+    "rejectProof": "Rechazar la prueba…",
+    "reasonLabel": "Motivo del rechazo",
+    "reasonPlaceholder": "Ej.: aviso ilegible, importe distinto de la oferta…",
+    "confirmReject": "Rechazar la prueba",
+    "waitingSuperAdmin": "Pendiente de confirmación por un superadministrador.",
+    "waitingOtherSuperAdmin": "Usted declaró este desembolso: otro superadministrador debe confirmarlo. Nadie valida su propia declaración.",
+    "markAvailableBank": "El banco ha puesto los fondos a disposición",
+    "markAvailableNotary": "El notario ha puesto los fondos a disposición",
+    "section3": "3 · Solicitar los honorarios",
+    "feesLocked": "No disponible hasta que se confirme el desembolso: no se puede exigir ningún pago antes de obtener el préstamo.",
+    "feesUnlocked": "Desembolso certificado: puede solicitar los honorarios previstos en el convenio, aunque el banco o el notario no hayan terminado sus comprobaciones.",
+    "feeKindLabel": "Concepto",
+    "feeAmountLabel": "Importe ({currency})",
+    "feeDueLabel": "Vencimiento",
+    "requestFee": "Enviar la solicitud de pago",
+    "feePaymentNote": "El cliente paga desde su espacio, mediante pago seguro a nombre del despacho. Nunca se envía un IBAN por mensaje.",
+    "feeDue": "vence el {date}",
+    "cancelFee": "Anular",
+    "noFeesYet": "No se ha enviado ninguna solicitud de honorarios.",
+    "auditTitle": "Registro de auditoría ({count})",
+    "steps": {
+      "granted": "Concedido",
+      "grantedSub": "Contrato firmado",
+      "declared": "Desembolso declarado",
+      "declaredSub": "Por un admin",
+      "declaredWaiting": "Espera superadmin",
+      "confirmed": "Fondos desembolsados",
+      "confirmedSub": "Certificado",
+      "available": "Puesta a disposición",
+      "availableSub": "Fondos disponibles",
+      "fees": "Honorarios",
+      "feesSub": "Solicitud posible"
+    },
+    "status": {
+      "toDeclare": "Por desembolsar",
+      "declared": "Por confirmar",
+      "confirmed": "Fondos desembolsados",
+      "rejected": "Prueba rechazada"
+    },
+    "beneficiary": {
+      "BORROWER": "Cuenta del prestatario",
+      "NOTARY": "Notaría",
+      "SUPPLIERS": "Empresas, contra facturas"
+    },
+    "availability": {
+      "AVAILABLE": "Disponibles de inmediato",
+      "BANK_CHECKS": "Controles en curso en el banco",
+      "NOTARY_CHECKS": "En la notaría, comprobaciones en curso"
+    },
+    "feeKind": {
+      "BROKER_FEE": "Honorarios de intermediación",
+      "COMPLEMENT": "Complemento de honorarios"
+    },
+    "feeStatus": {
+      "PENDING": "Pendiente",
+      "PAID": "Pagado",
+      "CANCELLED": "Anulado"
+    },
+    "errors": {
+      "not_allowed": "No tiene permiso para esta acción.",
+      "not_signed": "Este expediente no tiene contrato firmado.",
+      "already_declared": "El desembolso de este expediente ya se ha declarado.",
+      "invalid_input": "Algunos datos no son válidos. Revise el formulario.",
+      "not_declared": "No hay ningún desembolso pendiente de confirmación en este expediente.",
+      "same_person": "Usted declaró este desembolso: otro superadministrador debe confirmarlo.",
+      "reason_required": "Indique el motivo del rechazo (mínimo 3 caracteres).",
+      "not_confirmed": "El desembolso aún no está confirmado.",
+      "fees_locked": "Los honorarios solo pueden solicitarse tras confirmar el desembolso.",
+      "not_pending": "Esta solicitud de honorarios ya no está pendiente.",
+      "proof_missing": "Adjunte el aviso de desembolso (10 MB máx.)."
+    },
+    "done": {
+      "declared": "Desembolso declarado. Ahora debe confirmarlo un superadministrador.",
+      "confirmed": "Desembolso confirmado. El cliente ve sus fondos y los honorarios quedan desbloqueados.",
+      "rejected": "Prueba rechazada. El admin debe declarar de nuevo el desembolso.",
+      "available": "Fondos marcados como disponibles para el cliente.",
+      "fee_requested": "Solicitud de honorarios enviada al cliente.",
+      "fee_cancelled": "Solicitud de honorarios anulada."
+    },
+    "audit": {
+      "disbursement": {
+        "declared": "Desembolso declarado",
+        "confirmed": "Desembolso confirmado",
+        "proof_rejected": "Prueba de desembolso rechazada",
+        "funds_available": "Fondos puestos a disposición"
+      },
+      "broker_fee": {
+        "requested": "Honorarios solicitados",
+        "cancelled": "Solicitud de honorarios anulada",
+        "paid": "Honorarios pagados por el cliente"
+      }
+    }
+  },
+  "ClientRequestsPage": {
+    "kicker": "Back-office · Relación con el cliente",
+    "title": "Solicitudes y mensajes",
+    "description": "Solicite un documento o un pago, o escriba a un cliente. El envío aparece al instante en su espacio (notificaciones, y la sección «Mensajes» para un mensaje), y un correo le invita a conectarse.",
+    "done": {
+      "doc": "Solicitud enviada a {name}. Aparece en sus documentos por entregar.",
+      "pay": "Solicitud de pago enviada a {name}.",
+      "msg": "Mensaje enviado a {name}. Se le ha avisado por correo."
+    },
+    "errors": {
+      "doc_missing": "Elija al menos un documento (e indique el nombre para «Otro documento»).",
+      "fees_locked": "No es posible solicitar un pago: los fondos de este cliente aún no se han desembolsado y confirmado.",
+      "invalid": "Importe o vencimiento no válido.",
+      "msg_missing": "El asunto y el mensaje son obligatorios.",
+      "client": "Cliente no encontrado."
+    },
+    "searchPlaceholder": "Buscar un cliente…",
+    "clientsCount": "{count, plural, one {# cliente} other {# clientes}}",
+    "roleInvestor": "Inversor",
+    "roleBorrower": "Prestatario",
+    "noClients": "Ningún cliente encontrado.",
+    "pickClient": "Elija un cliente de la lista para enviarle una solicitud o un mensaje.",
+    "recipient": "Destinatario",
+    "tabs": {
+      "doc": "Solicitar un documento",
+      "pay": "Solicitar un pago",
+      "msg": "Mensaje"
+    },
+    "docTypesLabel": "Documentos solicitados",
+    "docTypes": {
+      "tax": "Última declaración de la renta",
+      "address": "Justificante de domicilio de menos de 3 meses",
+      "payslips": "Últimas 3 nóminas",
+      "statements": "Extractos bancarios (últimos 3 meses)",
+      "quote": "Presupuesto o factura de las obras",
+      "identity": "Documento de identidad",
+      "sale": "Contrato de arras",
+      "other": "Otro documento"
+    },
+    "otherLabel": "Nombre si «Otro documento»",
+    "otherPlaceholder": "Ej.: certificado de empresa",
+    "delayLabel": "A entregar en",
+    "delays": {
+      "48h": "48 horas",
+      "7d": "7 días",
+      "15d": "15 días"
+    },
+    "instructionsLabel": "Precisiones para el cliente (opcional)",
+    "instructionsPlaceholder": "Ej.: solicitado por el banco para continuar el estudio.",
+    "sendDoc": "Enviar la solicitud",
+    "channelsNote": "El cliente lo verá en su espacio y recibirá un correo invitándole a conectarse (sin el contenido, por seguridad).",
+    "payBlocked": "Solicitud de pago no disponible: ningún crédito de este cliente tiene un desembolso confirmado. La ley prohíbe cobrar antes de obtener el préstamo.",
+    "payBlockedLink": "Ver desembolsos",
+    "loanLabel": "Crédito afectado",
+    "fundsConfirmed": "fondos desembolsados",
+    "feeKindLabel": "Concepto",
+    "feeKind": {
+      "BROKER_FEE": "Honorarios de intermediación",
+      "COMPLEMENT": "Complemento de honorarios"
+    },
+    "amountLabel": "Importe",
+    "dueLabel": "Vencimiento",
+    "payNote": "El cliente paga desde su espacio, mediante pago seguro a nombre del despacho. Nunca se envía un IBAN por mensaje.",
+    "sendPay": "Enviar la solicitud de pago",
+    "otherCases": "Otros expedientes sin desembolso confirmado: {list}",
+    "templatesLabel": "Plantillas",
+    "templates": {
+      "progress": {
+        "label": "Expediente en curso",
+        "subject": "Su expediente avanza",
+        "body": "Hola {name}:\n\nBuenas noticias: varios prestamistas están estudiando su solicitud. Le informaré en cuanto tenga una respuesta.\n\nUn cordial saludo,"
+      },
+      "granted": {
+        "label": "Crédito concedido",
+        "subject": "Su crédito ha sido concedido",
+        "body": "Hola {name}:\n\nSu crédito ha sido concedido. Recibirá la oferta de préstamo para firmar en su espacio.\n\nUn cordial saludo,"
+      },
+      "appointment": {
+        "label": "Cita",
+        "subject": "Concertemos una cita",
+        "body": "Hola {name}:\n\nLe propongo una llamada o videollamada para revisar su expediente. Indíqueme qué horario le conviene.\n\nUn cordial saludo,"
+      }
+    },
+    "subjectLabel": "Asunto",
+    "bodyLabel": "Mensaje",
+    "sendMsg": "Enviar el mensaje",
+    "historyFor": "Historial de envíos · {name}",
+    "historyAll": "Últimos envíos",
+    "historyEmpty": "Ningún envío por ahora.",
+    "historyCols": {
+      "date": "Fecha",
+      "client": "Cliente",
+      "type": "Tipo",
+      "subject": "Asunto",
+      "by": "Por",
+      "status": "Estado"
+    },
+    "historyStatus": {
+      "received": "Documento recibido",
+      "cancelled": "Anulada",
+      "paid": "Pagada",
+      "read": "Leída",
+      "unread": "Enviada · sin leer"
+    },
+    "kind": {
+      "document": "Documento",
+      "payment": "Pago",
+      "message": "Mensaje"
+    }
+  },
+  "ConsolePage": {
+    "kicker": "Back-office · Superadmin",
+    "title": "Consola de superadmin",
+    "description": "Gestione el equipo y las cuentas de clientes, y ayude a un cliente en directo con el código que le da por teléfono. Cada acción queda registrada.",
+    "tabs": {
+      "help": "Asistencia",
+      "clients": "Clientes",
+      "team": "Equipo"
+    },
+    "searchPlaceholder": "Buscar un cliente…",
+    "suspend": "Suspender",
+    "reactivate": "Reactivar",
+    "status": {
+      "ACTIVE": "Activo",
+      "SUSPENDED": "Suspendido"
+    },
+    "roles": {
+      "AGENT": "Agente",
+      "ADMIN": "Admin",
+      "SUPER_ADMIN": "Superadmin"
+    },
+    "rights": {
+      "AGENT": "Expedientes, identidad, contratos",
+      "ADMIN": "+ validaciones, desembolsos, mensajes",
+      "SUPER_ADMIN": "Todos los derechos"
+    },
+    "team": {
+      "inviteTitle": "Invitar a un miembro del equipo",
+      "name": "Nombre",
+      "email": "Correo",
+      "role": "Rol",
+      "invite": "Enviar la invitación",
+      "inviteNote": "La persona recibe un correo con un enlace (válido 72 h) para elegir su contraseña. Ninguna contraseña pasa por usted.",
+      "listTitle": "Cuentas del equipo",
+      "colName": "Nombre",
+      "colRole": "Rol",
+      "colRights": "Derechos",
+      "colLogin": "Última conexión",
+      "colStatus": "Estado",
+      "invitationPending": "Invitación enviada",
+      "you": "usted",
+      "resend": "Reenviar la invitación",
+      "suspendNote": "Suspender corta el acceso de inmediato (se cierran todas las sesiones). La cuenta y sus acciones pasadas quedan en el registro. El último superadmin activo no puede suspenderse."
+    },
+    "clients": {
+      "colClient": "Cliente",
+      "colCase": "Expediente",
+      "colAccount": "Cuenta",
+      "colBlock": "Bloqueo indicado",
+      "assist": "Asistir"
+    },
+    "help": {
+      "asking": "Ayuda solicitada",
+      "pick": "Elija en la lista al cliente que está al teléfono.",
+      "kicker": "Asistencia",
+      "activeUntil": "Sesión abierta · hasta las {time}",
+      "busy": "Ya asistido por {name}",
+      "codeWaiting": "Código generado, en espera",
+      "noCode": "Sin código activo",
+      "problem": "Bloqueo indicado:",
+      "noProblem": "ninguno",
+      "codeExplain": "Por teléfono, pida al cliente que abra «¿Necesita ayuda?» en su espacio y le lea su código de 6 cifras. Este código vale como acuerdo para 30 minutos de asistencia.",
+      "codeLabel": "Código de 6 cifras",
+      "open": "Abrir la sesión",
+      "doTitle": "Lo que puede hacer en su lugar",
+      "noPendingDocs": "Ningún documento pendiente para este cliente.",
+      "uploadFor": "Depositar en su lugar: {label}",
+      "uploadHint": "Documento recibido del cliente por correo o correo postal.",
+      "upload": "Depositar",
+      "moreActions": "Perfil, solicitudes de documentos, archivos:",
+      "openAccount": "abrir su ficha",
+      "guideTitle": "A hacer por el cliente, con usted al teléfono",
+      "guideExplain": "Estos pasos comprometen al cliente: debe hacerlos él. Elija una guía y aparecerá enseguida en su pantalla.",
+      "end": "Terminar la sesión"
+    },
+    "guidance": {
+      "sign": {
+        "title": "Firmar la oferta o un documento",
+        "why": "La firma debe venir del cliente"
+      },
+      "pay": {
+        "title": "Pagar honorarios",
+        "why": "El cliente valida el pago él mismo"
+      },
+      "identity": {
+        "title": "Verificación de identidad",
+        "why": "El documento debe enviarlo el cliente"
+      },
+      "accept": {
+        "title": "Aceptar una oferta",
+        "why": "El consentimiento debe venir del cliente"
+      },
+      "documents": {
+        "title": "Enviar un documento",
+        "why": "El cliente sube el archivo él mismo"
+      }
+    },
+    "done": {
+      "invited": "Invitación enviada.",
+      "invite_resent": "Nueva invitación enviada.",
+      "suspended": "Cuenta suspendida: el acceso está cortado.",
+      "reactivated": "Cuenta reactivada.",
+      "session_opened": "Sesión de asistencia abierta durante 30 minutos.",
+      "guided": "La guía aparece en la pantalla del cliente.",
+      "uploaded": "Documento depositado para el cliente.",
+      "session_ended": "Sesión de asistencia terminada."
+    },
+    "errors": {
+      "not_allowed": "Acción no autorizada.",
+      "invalid_input": "Datos no válidos.",
+      "email_taken": "Ya existe una cuenta con este correo.",
+      "self": "No puede modificar su propia cuenta aquí.",
+      "last_super_admin": "Imposible: es el último superadmin activo.",
+      "not_found": "Cuenta o solicitud no encontrada.",
+      "no_code": "No hay código válido para este cliente: pídale que genere uno nuevo.",
+      "bad_code": "Código incorrecto.",
+      "too_many_attempts": "Demasiados intentos: el código está bloqueado. El cliente debe generar uno nuevo.",
+      "no_session": "No hay sesión de asistencia abierta por usted para este cliente.",
+      "file": "Elija un archivo (10 MB máx.)."
+    },
+    "log": {
+      "title": "Registro de acciones de la consola",
+      "empty": "Ninguna acción por ahora.",
+      "by": "por {name}",
+      "note": "Registro de solo lectura. El cliente ve lo que afecta a su cuenta en «¿Necesita ayuda?».",
+      "actions": {
+        "staff_invited": "Miembro invitado",
+        "staff_invite_resent": "Invitación reenviada",
+        "staff_activated": "Acceso activado",
+        "account_suspended": "Cuenta suspendida",
+        "account_reactivated": "Cuenta reactivada",
+        "assistance_opened": "Sesión de asistencia abierta (código del cliente)",
+        "assistance_guided": "Cliente guiado paso a paso",
+        "assistance_document": "Documento depositado para el cliente",
+        "assistance_ended": "Sesión de asistencia terminada"
+      }
+    },
+    "appStatus": {
+      "DRAFT": "Borrador",
+      "SUBMITTED": "Presentado",
+      "KYC_PENDING": "Identidad por verificar",
+      "KYC_VERIFIED": "Identidad verificada",
+      "UNDER_REVIEW": "En estudio",
+      "PUBLISHED": "Oferta enviada",
+      "OFFER_ACCEPTED": "Oferta aceptada",
+      "CONTRACT_SIGNED": "Contrato firmado",
+      "DISBURSED": "Fondos desembolsados",
+      "REJECTED": "Rechazado",
+      "CANCELLED": "Anulado"
+    }
+  },
+  "ActivatePage": {
+    "kicker": "SODIVA CREDITS · Back-office",
+    "title": "Bienvenido/a {name}",
+    "invalidTitle": "Enlace no válido",
+    "invalidBody": "Este enlace de invitación ha caducado o ya se ha usado. Pida a un superadministrador que le envíe otro.",
+    "intro": "Elija la contraseña de su cuenta {email}.",
+    "password": "Contraseña",
+    "confirm": "Confirmar la contraseña",
+    "rule": "Mínimo 10 caracteres. Use una frase fácil de recordar para usted y difícil de adivinar para otros.",
+    "submit": "Activar mi acceso",
+    "errors": {
+      "mismatch": "Las dos contraseñas no coinciden.",
+      "password_short": "La contraseña debe tener al menos 10 caracteres.",
+      "invalid_link": "Este enlace ya no es válido."
+    }
+  },
+  "ProspectsPage": {
+    "kicker": "Back-office · Web",
+    "title": "Solicitudes de contacto",
+    "description": "Las solicitudes de estudio gratuito enviadas desde la web. Llame al cliente potencial y siga su estado.",
+    "status": {
+      "NEW": "Nueva",
+      "CONTACTED": "Contactado",
+      "CONVERTED": "Ya es cliente",
+      "CLOSED": "Cerrada"
+    },
+    "filters": {
+      "open": "Por tratar",
+      "closed": "Tratadas",
+      "all": "Todas"
+    },
+    "projects": {
+      "MORTGAGE": "Crédito hipotecario",
+      "CONSOLIDATION": "Reunificación de deudas",
+      "WORKS": "Préstamo reformas / consumo",
+      "OTHER": "Otro"
+    },
+    "saved": "Guardado.",
+    "empty": "Ninguna solicitud aquí.",
+    "statusLabel": "Estado",
+    "noteLabel": "Nota interna",
+    "notePlaceholder": "Ej.: llamado el 14/11, cita el martes",
+    "save": "Guardar"
   }
 }

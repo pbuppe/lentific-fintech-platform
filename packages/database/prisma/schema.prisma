@@ -26,6 +26,18 @@ enum Role {
   SUPER_ADMIN
 }
 
+// Cycle de vie d'un compte public (emprunteur/investisseur) — demande produit
+// 2026-11-14 : e-mail confirmé PUIS validation par un administrateur avant
+// tout accès à l'espace client. ACTIVE par défaut pour les comptes internes
+// (agents/admins) et les comptes existants au moment de la migration.
+enum AccountStatus {
+  PENDING_EMAIL   // inscrit, lien de confirmation d'e-mail pas encore cliqué
+  PENDING_REVIEW  // e-mail confirmé, en attente d'un administrateur
+  ACTIVE          // validé : accès complet
+  REJECTED        // refusé par un administrateur (motif dans accountRejectionReason)
+  SUSPENDED       // accès coupé après coup
+}
+
 model User {
   id               String   @id @default(cuid())
   email            String   @unique
@@ -42,6 +54,13 @@ model User {
   // cookie au moment T). Posée par LanguageSwitcher quand une session existe,
   // et à l'inscription. Absente => français par défaut.
   preferredLocale  String?
+  accountStatus          AccountStatus @default(ACTIVE)
+  emailVerifiedAt        DateTime?
+  accountReviewedAt      DateTime?
+  accountReviewedById    String?
+  accountRejectionReason String?
+  emailVerificationTokens EmailVerificationToken[]
+  outboundEmails   OutboundEmail[]
   borrowerProfile  BorrowerProfile?
   investorProfile  InvestorProfile?
   applications     Application[]
@@ -51,10 +70,15 @@ model User {
   introductionsReceived IntroductionRequest[] @relation("IntroductionTarget")
   documentRequestsReceived DocumentRequest[] @relation("DocumentRequestTarget")
   documentRequestsSent     DocumentRequest[] @relation("DocumentRequestRequester")
+  brokerFeeRequests        BrokerFeeRequest[]
   subscription     Subscription?
   payments         Payment[]
   documents        Document[]
-  notifications    Notification[]
+  notifications    Notification[] @relation("NotificationRecipient")
+  notificationsSent Notification[] @relation("NotificationSender")
+  accountSetupTokens AccountSetupToken[]
+  assistanceAsClient AssistanceSession[] @relation("AssistanceClient")
+  assistanceAsStaff  AssistanceSession[] @relation("AssistanceStaff")
   supportTickets   SupportTicket[]
   auditLogs        AuditLog[]
   sessions         Session[]
@@ -67,6 +91,40 @@ model User {
 
   @@index([role])
   @@index([tenantId])
+  @@index([accountStatus])
+}
+
+// Lien de confirmation d'e-mail. Seule l'empreinte SHA-256 du jeton est
+// stockée : une fuite de la base ne permet pas de confirmer un compte.
+model EmailVerificationToken {
+  id        String    @id @default(cuid())
+  userId    String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// Journal de tous les e-mails émis par la plateforme. Sans fournisseur
+// configuré (RESEND_API_KEY absent), status = LOCAL : l'e-mail n'est pas
+// envoyé mais reste lisible dans le back-office (onglet "E-mails envoyés").
+model OutboundEmail {
+  id        String   @id @default(cuid())
+  userId    String?
+  to        String
+  subject   String
+  text      String
+  html      String
+  kind      String   // ex. "account.verify_email", "account.approved"
+  status    String   // LOCAL | SENT | FAILED
+  error     String?
+  createdAt DateTime @default(now())
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
 }
 
 // Session légère maison (§ décision produit : pas de fournisseur d'auth externe
@@ -152,9 +210,11 @@ model Application {
   documents     Document[]
   offers        Offer[]
   statusHistory ApplicationStatusLog[]
+  disbursement  Disbursement?
+  brokerFees    BrokerFeeRequest[]
   createdAt     DateTime            @default(now())
 
-  // Option payante "Dossier Prioritaire" (49 €, payée d'avance au dépôt,
+  // Option payante "Dossier Prioritaire" (49,90 €, payée d'avance au dépôt,
   // indépendamment du résultat, jamais un success-fee) : traitement sous 48h
   // garanties, suivi par slaDeadline pour la file d'attente back-office.
   priority            Boolean   @default(false)
@@ -410,6 +470,7 @@ model DocumentRequest {
   instructions  String?
   status        DocumentRequestStatus @default(PENDING)
   documentId    String?               @unique
+  dueAt         DateTime?             // « à fournir sous 48 h / 7 / 15 jours »
   createdAt     DateTime              @default(now())
   fulfilledAt   DateTime?
 
@@ -464,6 +525,12 @@ model Payment {
   type       String // disbursement | repayment | fee | payout | subscription
   status     PaymentStatus @default(PENDING)
   provider   String
+  // Paiement en ligne (PayPal) : référence de la commande chez le prestataire,
+  // ce que le paiement règle (broker_fee | priority) et l id concerné.
+  providerRef String?      @unique
+  purpose    String?
+  targetId   String?
+  capturedAt DateTime?
   createdAt  DateTime      @default(now())
   user       User          @relation(fields: [userId], references: [id])
   currency   Currency      @relation(fields: [currencyId], references: [id])
@@ -515,7 +582,18 @@ model Subscription {
   startedAt        DateTime           @default(now())
   currentPeriodEnd DateTime
   cancelledAt      DateTime?
+  // Abonnement PayPal : identifiant chez PayPal (I-…) ; null = ancien abonnement simulé.
+  provider         String?
+  providerRef      String?            @unique
+  lastSyncedAt     DateTime?
   user             User               @relation(fields: [userId], references: [id])
+}
+
+/// Réglages techniques créés automatiquement (ex. identifiant du plan PayPal Premium).
+model ProviderSetting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
 }
 
 // ---------------------------------------------------------------------------
@@ -579,14 +657,30 @@ model Permission {
   role     RoleDefinition @relation(fields: [roleId], references: [id])
 }
 
+// Centre de notifications de l'espace client (demande produit 2026-11-14,
+// maquette SODIVA « Demandes et messages ») : en plus des événements
+// automatiques (event seul, libellé traduit à l'affichage), un conseiller peut
+// envoyer une demande de document, de paiement ou un message. kind/title/body
+// portent alors le contenu, senderId le conseiller, refId l'objet lié
+// (DocumentRequest, BrokerFeeRequest) pour suivre son statut.
 model Notification {
   id        String    @id @default(cuid())
   userId    String
   channel   String
   event     String
+  kind      String?   // document | payment | message | null (événement automatique)
+  title     String?
+  body      String?
+  link      String?
+  senderId  String?
+  refId     String?
   readAt    DateTime?
   createdAt DateTime  @default(now())
-  user      User      @relation(fields: [userId], references: [id])
+  user      User      @relation("NotificationRecipient", fields: [userId], references: [id])
+  sender    User?     @relation("NotificationSender", fields: [senderId], references: [id])
+
+  @@index([userId, readAt])
+  @@index([senderId])
 }
 
 model Conversation {
@@ -656,4 +750,151 @@ model PageView {
   @@index([path])
   @@index([visitorId])
   @@index([geoCountryCode])
+}
+
+// ---------------------------------------------------------------------------
+// Versement des fonds et honoraires de courtage (demande produit 2026-11-14,
+// reprise de la maquette SODIVA CREDITS). Double validation : un admin déclare
+// le versement avec une preuve (avis de déblocage), puis un SUPER_ADMIN
+// différent le confirme. Les honoraires ne peuvent être demandés qu'une fois
+// le versement confirmé : aucun paiement ne peut être exigé d'un emprunteur
+// avant l'obtention de son prêt.
+// ---------------------------------------------------------------------------
+
+enum DisbursementStatus {
+  DECLARED  // déclaré par un admin, en attente d'un super admin
+  CONFIRMED // preuve contrôlée et confirmée : dossier DISBURSED
+  REJECTED  // preuve refusée, l'admin doit redéclarer
+}
+
+enum FundsBeneficiary {
+  BORROWER  // compte de l'emprunteur
+  NOTARY    // étude notariale
+  SUPPLIERS // entreprises, sur factures
+}
+
+enum FundsAvailability {
+  AVAILABLE     // disponibles immédiatement
+  BANK_CHECKS   // contrôles en cours à la banque
+  NOTARY_CHECKS // chez le notaire, vérifications en cours
+}
+
+model Disbursement {
+  id              String             @id @default(cuid())
+  applicationId   String             @unique
+  status          DisbursementStatus @default(DECLARED)
+  beneficiary     FundsBeneficiary
+  availability    FundsAvailability
+  fundsDate       DateTime
+  lenderReference String
+  proofStorageKey String
+  proofFileName   String
+  declaredById    String
+  declaredAt      DateTime           @default(now())
+  confirmedById   String?
+  confirmedAt     DateTime?
+  rejectionReason String?
+  availableAt     DateTime?
+  application     Application        @relation(fields: [applicationId], references: [id])
+
+  @@index([status])
+}
+
+enum BrokerFeeStatus {
+  PENDING
+  PAID
+  CANCELLED
+}
+
+model BrokerFeeRequest {
+  id            String          @id @default(cuid())
+  applicationId String
+  userId        String
+  kind          String          // BROKER_FEE | COMPLEMENT
+  amount        Decimal
+  dueDate       DateTime
+  status        BrokerFeeStatus @default(PENDING)
+  createdById   String
+  createdAt     DateTime        @default(now())
+  paidAt        DateTime?
+  paymentId     String?
+  application   Application     @relation(fields: [applicationId], references: [id])
+  user          User            @relation(fields: [userId], references: [id])
+
+  @@index([applicationId])
+  @@index([userId, status])
+}
+
+// ---------------------------------------------------------------------------
+// Console super admin (demande produit 2026-11-14, maquette SODIVA)
+// ---------------------------------------------------------------------------
+
+// Invitation d'un membre de l'équipe : le super admin crée le compte sans mot
+// de passe, la personne choisit le sien via ce lien (empreinte SHA-256 seule
+// en base, valable 72 h, usage unique).
+model AccountSetupToken {
+  id        String    @id @default(cuid())
+  userId    String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// Assistance en direct : le client génère dans son espace un code à 6 chiffres
+// (valable 10 min) et le donne au téléphone ; ce code vaut accord pour une
+// session de 30 min pendant laquelle l'équipe agit pour lui ou le guide.
+model AssistanceSession {
+  id            String    @id @default(cuid())
+  clientId      String
+  codeHash      String
+  codeExpiresAt DateTime
+  problem       String?
+  attempts      Int       @default(0)
+  staffId       String?
+  startedAt     DateTime?
+  expiresAt     DateTime?
+  endedAt       DateTime?
+  guidance      String?   // clé du guidage affiché chez le client (sign, pay, identity, accept)
+  createdAt     DateTime  @default(now())
+  client        User      @relation("AssistanceClient", fields: [clientId], references: [id])
+  staff         User?     @relation("AssistanceStaff", fields: [staffId], references: [id])
+
+  @@index([clientId, createdAt])
+}
+
+// ---------------------------------------------------------------------------
+// Demandes d'étude gratuite du site vitrine (demande produit 2026-11-14,
+// maquette SODIVA « Demandez votre étude gratuite »). Traitées par l'équipe
+// dans le back-office (onglet « Demandes de contact »).
+// ---------------------------------------------------------------------------
+
+enum ContactRequestStatus {
+  NEW
+  CONTACTED
+  CONVERTED
+  CLOSED
+}
+
+model ContactRequest {
+  id          String               @id @default(cuid())
+  name        String
+  email       String
+  phone       String
+  project     String               // MORTGAGE | CONSOLIDATION | WORKS | OTHER
+  amount      Decimal?
+  message     String?
+  locale      String?
+  consentAt   DateTime
+  status      ContactRequestStatus @default(NEW)
+  note        String?
+  handledById String?
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  @@index([status, createdAt])
+  @@index([email])
 }

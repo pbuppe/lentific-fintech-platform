@@ -18,6 +18,7 @@ export async function registerNodeHandlers() {
     import("@fintech/signatures"),
     import("@fintech/notifications"),
     import("@fintech/funding"),
+    import("./lib/premiumNotices"),
   ]);
   console.log(
     "[instrumentation] handlers workflow enregistrés (applications, kyc, loans, contracts, signatures, notifications, funding)"

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { formatPrice } from "../../../lib/price";
+import { INTRODUCTION_FEE } from "@fintech/introductions";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Button } from "@fintech/ui";
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "LandingPage" });
   const title = `${t("heroTitlePart1")} ${t("heroTitleHighlight")}${t("heroTitlePart2")}`;
   return {
-    title: `Lentific · ${title}`,
+    title: `SODIVA CREDITS · ${title}`,
     description: t("heroSubtitle"),
   };
 }
@@ -66,15 +68,15 @@ export default async function LocaleLandingPage({ params }: Props) {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand to-brand-ink px-6 py-16 text-white sm:px-12 sm:py-20">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-sand/20 blur-3xl" />
         <div className="relative mx-auto max-w-3xl">
           <p className="mb-4 font-mono text-xs uppercase tracking-widest text-white/70">{t("eyebrow")}</p>
           <h1 className="font-display text-4xl font-semibold text-balance sm:text-5xl">
-            {t("heroTitlePart1")} <span className="text-[#FF9AA2]">{t("heroTitleHighlight")}</span>{t("heroTitlePart2")}
+            {t("heroTitlePart1")} <span className="text-sand">{t("heroTitleHighlight")}</span>{t("heroTitlePart2")}
           </h1>
           <p className="mt-4 max-w-xl text-white/80">{t("heroSubtitle")}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button variant="primary" href="/signup?role=BORROWER">{t("ctaApply")}</Button>
+            <Button variant="light" href="/signup?role=BORROWER">{t("ctaApply")}</Button>
             <Button variant="ghost" href="/marketplace" className="border-white/30 text-white hover:bg-white/10">
               {t("ctaMarketplace")}
             </Button>
@@ -143,7 +145,7 @@ export default async function LocaleLandingPage({ params }: Props) {
           </div>
 
           <div className="mt-10 rounded-xl border border-line bg-surface-alt p-5">
-            <p className="font-display text-sm font-semibold text-ink">{t("introBoxTitle")}</p>
+            <p className="font-display text-sm font-semibold text-ink">{t("introBoxTitle", { fee: formatPrice(INTRODUCTION_FEE, locale) })}</p>
             <p className="mt-1 text-sm text-ink-soft">{t("introBoxBody")}</p>
             <p className="mt-2 text-xs text-ink-faint">{t("introBoxDisclaimer")}</p>
           </div>

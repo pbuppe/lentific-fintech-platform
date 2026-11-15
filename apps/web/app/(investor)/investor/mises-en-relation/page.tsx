@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server";
 import { listSentBy, listReceivedBy } from "@fintech/introductions";
 import { Card } from "@fintech/ui";
 import { getCurrentUser } from "../../../../lib/session";
+import { SpaceKicker } from "../../../components/SpaceKicker";
+import { PremiumBanner } from "../../../components/PremiumPromo";
 
 export default async function InvestorIntroductionsPage() {
   const user = await getCurrentUser();
@@ -13,8 +15,9 @@ export default async function InvestorIntroductionsPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-10">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (investor)</p>
+      <SpaceKicker audience="investor" />
       <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
+      <PremiumBanner className="mt-4" />
       <p className="mt-2 text-sm text-ink-soft">
         {t("description")}
       </p>

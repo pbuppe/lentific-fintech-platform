@@ -1,11 +1,16 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getTranslations } from "next-intl/server";
-import { prisma } from "@fintech/database";
+import { prisma, subscriptionsRepo } from "@fintech/database";
 import { listOpenInvestorListings } from "@fintech/funding";
-import { requestAndPayIntroduction, listSentBy, INTRODUCTION_FEE } from "@fintech/introductions";
+import { listSentBy } from "@fintech/introductions";
+import { requestIntroduction } from "../../../lib/introductionCheckout";
+import { commercialPrices } from "../../../lib/price";
 import { Card } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
+import { SpaceKicker } from "../../components/SpaceKicker";
+import { PremiumBanner } from "../../components/PremiumPromo";
+import { PaymentNotice } from "../../components/PaymentNotice";
 
 function monthlyPayment(amount: number, durationMonths: number, ratePercent: number) {
   const monthlyRate = ratePercent / 12 / 100;
@@ -20,23 +25,26 @@ async function requestIntroductionAction(formData: FormData) {
 
   const targetUserId = formData.get("targetUserId") as string;
   const targetId = formData.get("listingId") as string;
-  const eur = await prisma.currency.findUniqueOrThrow({ where: { code: "EUR" } });
-
-  await requestAndPayIntroduction({
-    requesterId: user.id,
-    targetUserId,
-    targetType: "INVESTOR_LISTING",
-    targetId,
-    currencyId: eur.id,
-  });
+  let result: Awaited<ReturnType<typeof requestIntroduction>>;
+  try {
+    result = await requestIntroduction({ userId: user.id, targetUserId, targetType: "INVESTOR_LISTING", targetId, back: "/investisseurs" });
+  } catch (error) {
+    console.error("[paypal] mise en relation : paiement impossible à démarrer", error);
+    redirect("/investisseurs?payment=unavailable");
+  }
+  if ("redirectTo" in result) redirect(result.redirectTo);
   revalidatePath("/investisseurs");
+  redirect(`/investisseurs?introduction=${result.done === "included" ? "included" : "1"}`);
 }
 
-export default async function InvestisseursPage() {
+export default async function InvestisseursPage({ searchParams }: { searchParams: { payment?: string; introduction?: string } }) {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
 
   const t = await getTranslations("BorrowerInvestors");
+  const { fee } = await commercialPrices();
+  const RISK_LABEL = (await getTranslations("InvestorDashboard")).raw("riskLabel") as Record<string, string>;
+  const isPremium = (await subscriptionsRepo.findForUser(user.id))?.status === "ACTIVE";
   const [listings, sentIntroductions] = await Promise.all([
     listOpenInvestorListings(),
     listSentBy(user.id).catch(() => []),
@@ -47,10 +55,12 @@ export default async function InvestisseursPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-10">
-      <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">apps/web · (borrower)</p>
+      <SpaceKicker audience="borrower" />
       <h1 className="mt-1 font-display text-2xl font-semibold text-ink">{t("title")}</h1>
+      <div className="mt-4"><PaymentNotice payment={searchParams.payment} introduction={searchParams.introduction} /></div>
+      <PremiumBanner className="mt-4" />
       <p className="mt-2 text-sm text-ink-soft">
-        {t("intro", { fee: INTRODUCTION_FEE })}
+        {isPremium ? t("introPremium") : t("intro", { fee })}
       </p>
       <p className="mt-2 text-xs text-ink-faint">
         {t("disclaimer")}
@@ -79,7 +89,7 @@ export default async function InvestisseursPage() {
                     )}
                   </h3>
                   <span className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-semibold text-brand-ink">
-                    {t("risk", { risk: listing.riskAppetite })}
+                    {t("risk", { risk: RISK_LABEL[String(listing.riskAppetite).toLowerCase()] ?? listing.riskAppetite })}
                   </span>
                 </div>
                 <p className="mt-2 text-sm text-ink-soft">
@@ -107,7 +117,7 @@ export default async function InvestisseursPage() {
                     <input type="hidden" name="targetUserId" value={listing.investorId} />
                     <input type="hidden" name="listingId" value={listing.id} />
                     <button className="rounded-lg border border-line px-3 py-1.5 text-xs font-semibold text-ink-soft hover:border-brand hover:text-brand-ink">
-                      {t("requestButton", { fee: INTRODUCTION_FEE })}
+                      {isPremium ? t("requestButtonPremium") : t("requestButton", { fee })}
                     </button>
                   </form>
                 )}
