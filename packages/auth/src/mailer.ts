@@ -203,6 +203,19 @@ export function webBaseUrl() {
   return (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 }
 
+const LINK_LOCALES = ["fr", "en", "es", "it", "hu", "pt", "de", "nl"];
+
+/**
+ * Lien du site public dans la langue du client (?lang=xx) : la page ouverte
+ * depuis l'e-mail s'affiche dans la langue choisie à l'inscription, même si le
+ * lien est ouvert sur un autre appareil ou navigateur (middleware de apps/web).
+ */
+export function webUrlInLocale(path: string, locale: string | null | undefined) {
+  const url = `${webBaseUrl()}${path}`;
+  if (!locale || !LINK_LOCALES.includes(locale)) return url;
+  return `${url}${path.includes("?") ? "&" : "?"}lang=${locale}`;
+}
+
 function escapeHtml(s: string) {
   return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 }
@@ -248,7 +261,7 @@ export function sendVerifyEmail(user: Recipient, verifyUrl: string) {
 export function sendAccountApprovedEmail(user: Recipient) {
   const t = textsFor(user.preferredLocale);
   const name = user.name ?? user.email;
-  const url = `${webBaseUrl()}/login`;
+  const url = webUrlInLocale("/login", user.preferredLocale);
   const text = [t.hello(name), "", t.approvedBody, "", url, "", t.signature].join("\n");
   const html = layout([escapeHtml(t.hello(name)), escapeHtml(t.approvedBody)], { label: t.approvedButton, url }, t.signature);
   return sendEmail({ to: user.email, subject: t.approvedSubject, text, html, kind: "account.approved", userId: user.id });
@@ -373,7 +386,7 @@ export function sendClientNoticeEmail(user: Recipient & { role?: string }, kind:
   const name = user.name ?? user.email;
   // Les pages de l espace investisseur sont sous /investor (sauf les paiements, propres à l emprunteur).
   const prefix = user.role === "INVESTOR" && kind !== "payment" ? "/investor" : "";
-  const url = `${webBaseUrl()}${prefix}${NOTICE_PATH[kind]}`;
+  const url = webUrlInLocale(`${prefix}${NOTICE_PATH[kind]}`, user.preferredLocale);
   const body = n.body[kind](senderName);
   const text = [t.hello(name), "", body, "", url, "", n.safety, "", t.signature].join("\n");
   const html = layout([escapeHtml(t.hello(name)), escapeHtml(body)], { label: n.button, url }, t.signature, escapeHtml(n.safety));
@@ -399,7 +412,7 @@ export function sendPremiumPaymentFailedEmail(user: Recipient) {
   const t = textsFor(user.preferredLocale);
   const n = PREMIUM_FAILED_TEXTS[(user.preferredLocale ?? "fr") as Locale] ?? PREMIUM_FAILED_TEXTS.fr;
   const name = user.name ?? user.email;
-  const url = `${webBaseUrl()}/investor/premium`;
+  const url = webUrlInLocale("/investor/premium", user.preferredLocale);
   const text = [t.hello(name), "", n.body, "", url, "", n.safety, "", t.signature].join("\n");
   const html = layout([escapeHtml(t.hello(name)), escapeHtml(n.body)], { label: n.button, url }, t.signature, escapeHtml(n.safety));
   return sendEmail({ to: user.email, subject: n.subject, text, html, kind: "client.premium_payment_failed", userId: user.id });

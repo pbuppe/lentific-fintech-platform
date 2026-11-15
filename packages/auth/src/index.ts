@@ -22,7 +22,7 @@ import {
   type Role,
   type AccountStatus,
 } from "@fintech/database";
-import { sendVerifyEmail, sendAccountApprovedEmail, sendAccountRejectedEmail, webBaseUrl } from "./mailer";
+import { sendVerifyEmail, sendAccountApprovedEmail, sendAccountRejectedEmail, webBaseUrl, webUrlInLocale } from "./mailer";
 
 export { sendEmail, webBaseUrl, sendClientNoticeEmail,
   sendPremiumPaymentFailedEmail, type ClientNoticeKind } from "./mailer";
@@ -152,7 +152,7 @@ export async function issueEmailVerification(user: {
   await emailVerificationTokensRepo.invalidateAllForUser(user.id);
   const token = generateToken();
   await emailVerificationTokensRepo.create(user.id, hashToken(token), new Date(Date.now() + EMAIL_VERIFICATION_DURATION_MS));
-  const url = `${webBaseUrl()}/verifier-email?token=${token}`;
+  const url = webUrlInLocale(`/verifier-email?token=${token}`, user.preferredLocale);
   await sendVerifyEmail(user, url);
 }
 
