@@ -13,7 +13,7 @@ const SESSION_COOKIE_NAME = "lentific_session";
 // pas cette garde-ci qui exigerait déjà un compte pour en créer un.
 // /activer/[token] : lien d invitation d un membre de l équipe (console super
 // admin, 2026-11-14), protégé par son jeton à usage unique.
-const PUBLIC_PREFIXES = ["/login", "/admin-access", "/activer"];
+const PUBLIC_PREFIXES = ["/login", "/admin-access", "/activer", "/robots.txt"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -21,10 +21,16 @@ export function middleware(request: NextRequest) {
   const isPublic = PUBLIC_PREFIXES.some((p) => pathname === p || pathname.startsWith(p + "/"));
 
   if (!hasSession && !isPublic) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    const redirect = NextResponse.redirect(new URL("/login", request.url));
+    redirect.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    return redirect;
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  // Back-office interne : jamais indexé ni suivi par les moteurs de recherche,
+  // quelle que soit la page (en plus de robots.txt et des balises meta).
+  response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+  return response;
 }
 
 export const config = {

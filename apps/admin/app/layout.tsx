@@ -5,6 +5,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Lentific · Back-office",
+  // Back-office interne : aucune page ne doit apparaître dans un moteur de recherche.
+  robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

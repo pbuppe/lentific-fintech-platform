@@ -16,6 +16,13 @@ import { prisma } from "../src/client";
 const DEMO_PASSWORD = "Demo1234!";
 
 async function main() {
+  // Garde-fou (2026-11-15) : la base de production (neondb) contient de vrais
+  // utilisateurs et les comptes de démonstration y ont des mots de passe privés.
+  // Ce script remettrait le mot de passe public ci-dessus : il refuse donc de
+  // s'exécuter sur elle, sauf demande explicite (SEED_ALLOW_PRODUCTION=1).
+  if (/\/neondb(\?|$)/.test(process.env.DATABASE_URL ?? "") && process.env.SEED_ALLOW_PRODUCTION !== "1") {
+    throw new Error("Seed refusé : la base cible est la production (neondb). Utilisez une base de développement.");
+  }
   const passwordHash = await bcrypt.hash(DEMO_PASSWORD, 10);
 
   // Devises d'abord (Country.currencyId les référence). Noter que le seed

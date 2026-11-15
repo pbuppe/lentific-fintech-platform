@@ -17,14 +17,31 @@ import { NextResponse, type NextRequest } from "next/server";
 const SESSION_COOKIE_NAME = "lentific_session";
 const PROTECTED_PREFIXES = ["/dashboard", "/investor"];
 const LOCALE_LANDING_PAGE = /^\/(fr|en|es|it|hu|pt|de|nl)\/[^/]+$/;
+const SUPPORTED = ["fr", "en", "es", "it", "hu", "pt", "de", "nl"];
+const ONE_YEAR = 60 * 60 * 24 * 365;
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Garde légère (Edge, pas de Prisma ici) : la vraie vérification du jeton
   // et du rôle se fait dans chaque page protégée (ex. (borrower)/dashboard).
+  // Lien envoyé par e-mail (?lang=xx, voir webUrlInLocale dans packages/auth) :
+  // la page s'affiche dans la langue du client, et la suite de sa visite aussi.
+  const langParam = request.nextUrl.searchParams.get("lang");
+  const linkLocale = langParam && SUPPORTED.includes(langParam) ? langParam : null;
+
   if (PROTECTED_PREFIXES.some((p) => pathname.startsWith(p)) && !request.cookies.has(SESSION_COOKIE_NAME)) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    const login = new URL("/login", request.url);
+    if (linkLocale) login.searchParams.set("lang", linkLocale);
+    return NextResponse.redirect(login);
+  }
+
+  if (linkLocale) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-forced-locale", linkLocale);
+    const response = NextResponse.next({ request: { headers: requestHeaders } });
+    response.cookies.set("NEXT_LOCALE", linkLocale, { path: "/", maxAge: ONE_YEAR, sameSite: "lax" });
+    return response;
   }
 
   const localeMatch = pathname.match(LOCALE_LANDING_PAGE);
