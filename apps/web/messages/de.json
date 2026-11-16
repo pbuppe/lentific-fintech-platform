@@ -946,7 +946,8 @@
       "copyright": "© {year} {company}. Alle Rechte vorbehalten.",
       "contactPerson": "Ihr Ansprechpartner: {name}",
       "cookies": "Cookies verwalten",
-      "privacy": "Datenschutz"
+      "privacy": "Datenschutz",
+      "companyNumber": "Eingetragen im Vereinigten Königreich (Companies House), Nr. {number}"
     }
   },
   "CreditsSummary": {

@@ -2,6 +2,7 @@ import { CookieSettingsLink } from "./CookieConsent";
 import { getTranslations } from "next-intl/server";
 import { submitContactRequestAction } from "../../lib/actions/contact";
 import { ScrollToHere } from "./ScrollToHere";
+import { legalIdentity } from "../../lib/legal";
 
 /**
  * Sections « courtier » du site vitrine (demande produit 2026-11-14, maquette
@@ -177,20 +178,13 @@ export async function ContactSection({ status }: { status?: string }) {
  */
 export async function SiteFooter() {
   const t = await getTranslations("HomeBroker.footer");
-  const legal = {
-    company: process.env.SITE_COMPANY_NAME,
-    orias: process.env.SITE_ORIAS_NUMBER,
-    address: process.env.SITE_ADDRESS,
-    phone: process.env.SITE_PHONE,
-    email: process.env.SITE_CONTACT_EMAIL,
-    mediator: process.env.SITE_MEDIATOR,
-    manager: process.env.SITE_MANAGER,
-  };
+  const legal = legalIdentity();
   return (
     <footer className="border-t border-line bg-surface px-6 py-10 text-sm text-ink-soft sm:px-12">
       <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
         <div>
           <p className="font-sans text-sm font-bold uppercase tracking-wide text-ink">{legal.company ?? "Lentific"}</p>
+          {legal.companyNumber && <p className="mt-1 text-xs">{t("companyNumber", { number: legal.companyNumber })}</p>}
           {legal.address && <p className="mt-2">{legal.address}</p>}
           {legal.phone && (
             <p>
