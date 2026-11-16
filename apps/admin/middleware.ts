@@ -13,7 +13,8 @@ const SESSION_COOKIE_NAME = "lentific_session";
 // pas cette garde-ci qui exigerait déjà un compte pour en créer un.
 // /activer/[token] : lien d invitation d un membre de l équipe (console super
 // admin, 2026-11-14), protégé par son jeton à usage unique.
-const PUBLIC_PREFIXES = ["/login", "/admin-access", "/activer", "/robots.txt"];
+// Icônes de l'onglet (favicon) : visibles aussi sur la page de connexion.
+const PUBLIC_PREFIXES = ["/login", "/admin-access", "/activer", "/robots.txt", "/icon.svg", "/apple-icon.png"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
