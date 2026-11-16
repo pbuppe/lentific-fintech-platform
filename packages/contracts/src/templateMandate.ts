@@ -50,7 +50,6 @@ export async function renderMandatePdf(data: MandateData): Promise<Uint8Array> {
 
   f.subheading(t.bm_brokerHeading);
   f.para(fmt(t.bm_brokerText, { company: id.company, companyNumber: id.companyNumber, address: id.address, oriasPart: id.orias ? fmt(t.bm_oriasPart, { orias: id.orias }) : "" }));
-  if (!id.orias) f.calloutToConfirm(t.bm_statusCallout, t.calloutPrefix);
 
   f.subheading(t.bm_clientHeading);
   f.para(fmt(t.bm_clientText, { name: data.clientName, email: data.clientEmail }));

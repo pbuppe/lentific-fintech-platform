@@ -124,7 +124,7 @@ export const fr: ContractStrings = {
   mp_annex3Title: "ANNEXE 3 - BULLETIN DE SOUSCRIPTION (MODÈLE)",
   mp_annex3Text:
     "Je soussigné(e) [Nom du Prêteur], déclare souscrire au financement de l'Emprunteur désigné aux présentes pour un montant de [montant] EUR, et reconnais avoir pris connaissance et accepté sans réserve l'intégralité des stipulations du présent contrat référencé {reference}, notamment l'avertissement sur les risques figurant à l'Article 10.",
-  mp_footerNote: "Document généré automatiquement par la plateforme Lentific à partir du dossier {reference}. Les mentions signalées « à confirmer » doivent être arbitrées par un avocat avant toute mise en production. Structure établie par référence aux articles L.548-1 et s. et R.548-1 et s. (notamment R.548-6) du Code monétaire et financier.",
+  mp_footerNote: "Document généré automatiquement par la plateforme Lentific à partir du dossier {reference}. Structure établie par référence aux articles L.548-1 et s. et R.548-1 et s. (notamment R.548-6) du Code monétaire et financier.",
 
   dl_pdfTitle: "Contrat de prêt direct - {reference}",
   dl_mainTitle: "CONTRAT DE PRÊT ENTRE PARTICULIERS",
@@ -210,7 +210,7 @@ export const fr: ContractStrings = {
   bm_signClientLabel: "Le Mandant",
   bm_signBrokerLabel: "Pour le Mandataire, {company}",
   bm_signHint: "Date, signature et mention manuscrite « Bon pour mandat »",
-  bm_footerNote: "Document généré automatiquement par la plateforme Lentific pour la demande {reference}. Ce mandat est un MODÈLE : les mentions signalées « à confirmer » doivent être arbitrées par un juriste avant usage réel.",
+  bm_footerNote: "Document généré automatiquement par la plateforme Lentific pour la demande {reference}.",
   bm_requestLabel: "Mandat de recherche de financement signé ({reference})",
   bm_requestInstructions: "Téléchargez votre mandat dans la rubrique « Documents à signer » ci-dessous, datez-le, signez-le avec la mention « Bon pour mandat », puis renvoyez-le ici (photo ou scan).",
 };
