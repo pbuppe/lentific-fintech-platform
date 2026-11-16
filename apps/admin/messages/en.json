@@ -59,7 +59,15 @@
     "mandateView": "View the mandate",
     "mandateDone": "Mandate generated and sent to the client.",
     "mandateError": "Invalid fee amount.",
-    "feeFromMandate": "Fees set in the mandate: {amount}"
+    "feeFromMandate": "Fees set in the mandate: {amount}",
+    "rejectTitle": "Decline the case",
+    "rejectReasonLabel": "Reason given to the client",
+    "rejectReasonPlaceholder": "E.g. debt ratio too high after reviewing income",
+    "rejectButton": "Decline and inform the client",
+    "rejectDone": "Case declined: the client received the reason in their messages and by e-mail.",
+    "rejectError": "Please give a reason (at least 5 characters).",
+    "rejectNoticeTitle": "Your request {reference} was not approved",
+    "rejectNoticeBody": "After reviewing your file, we are unable to proceed with your financing request {reference}.\n\nReason: {reason}\n\nNo fee is due. You can reply here if you would like to discuss it or submit a new request later."
   },
   "AccountsPage": {
     "kicker": "Super admin",

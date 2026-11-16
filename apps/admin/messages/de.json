@@ -59,7 +59,15 @@
     "mandateView": "Auftrag ansehen",
     "mandateDone": "Auftrag erstellt und an den Kunden gesendet.",
     "mandateError": "Ungültiger Honorarbetrag.",
-    "feeFromMandate": "Im Auftrag vereinbartes Honorar: {amount}"
+    "feeFromMandate": "Im Auftrag vereinbartes Honorar: {amount}",
+    "rejectTitle": "Akte ablehnen",
+    "rejectReasonLabel": "Dem Kunden mitgeteilter Grund",
+    "rejectReasonPlaceholder": "Z. B. zu hohe Verschuldungsquote nach Prüfung der Einkünfte",
+    "rejectButton": "Ablehnen und Kunden informieren",
+    "rejectDone": "Akte abgelehnt: Der Kunde hat den Grund in seinen Nachrichten und per E-Mail erhalten.",
+    "rejectError": "Bitte geben Sie einen Grund an (mindestens 5 Zeichen).",
+    "rejectNoticeTitle": "Ihre Anfrage {reference} wurde nicht angenommen",
+    "rejectNoticeBody": "Nach Prüfung Ihrer Akte können wir Ihrer Finanzierungsanfrage {reference} leider nicht stattgeben.\n\nGrund: {reason}\n\nEs ist kein Honorar fällig. Sie können uns hier antworten, wenn Sie darüber sprechen oder später eine neue Anfrage stellen möchten."
   },
   "AccountsPage": {
     "kicker": "Super-Admin",

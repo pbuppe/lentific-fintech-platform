@@ -59,7 +59,15 @@
     "mandateView": "Ver o mandato",
     "mandateDone": "Mandato gerado e enviado ao cliente.",
     "mandateError": "Montante de honorários inválido.",
-    "feeFromMandate": "Honorários previstos no mandato: {amount}"
+    "feeFromMandate": "Honorários previstos no mandato: {amount}",
+    "rejectTitle": "Recusar o processo",
+    "rejectReasonLabel": "Motivo comunicado ao cliente",
+    "rejectReasonPlaceholder": "Ex.: taxa de esforço demasiado elevada após análise dos rendimentos",
+    "rejectButton": "Recusar e informar o cliente",
+    "rejectDone": "Processo recusado: o cliente recebeu o motivo nas mensagens e por e-mail.",
+    "rejectError": "Indique um motivo (pelo menos 5 caracteres).",
+    "rejectNoticeTitle": "O seu pedido {reference} não foi aceite",
+    "rejectNoticeBody": "Após análise do seu processo, não nos é possível dar seguimento favorável ao seu pedido de financiamento {reference}.\n\nMotivo: {reason}\n\nNão são devidos honorários. Pode responder-nos aqui se quiser falar sobre isso ou apresentar um novo pedido mais tarde."
   },
   "AccountsPage": {
     "kicker": "Superadministrador",

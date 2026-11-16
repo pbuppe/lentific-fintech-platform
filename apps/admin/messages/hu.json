@@ -59,7 +59,15 @@
     "mandateView": "Megbízás megtekintése",
     "mandateDone": "A megbízás elkészült és elküldtük az ügyfélnek.",
     "mandateError": "Érvénytelen díjösszeg.",
-    "feeFromMandate": "A megbízásban rögzített díj: {amount}"
+    "feeFromMandate": "A megbízásban rögzített díj: {amount}",
+    "rejectTitle": "Ügy elutasítása",
+    "rejectReasonLabel": "Az ügyfélnek közölt indok",
+    "rejectReasonPlaceholder": "Pl.: a jövedelmek elemzése után túl magas eladósodottsági arány",
+    "rejectButton": "Elutasítás és az ügyfél értesítése",
+    "rejectDone": "Az ügy elutasítva: az ügyfél üzenetben és e-mailben megkapta az indokot.",
+    "rejectError": "Adjon meg indokot (legalább 5 karakter).",
+    "rejectNoticeTitle": "{reference} számú kérelmét nem tudtuk elfogadni",
+    "rejectNoticeBody": "Ügyirata elemzése után nem tudunk kedvezően dönteni a(z) {reference} számú finanszírozási kérelméről.\n\nIndok: {reason}\n\nÖnnek semmilyen díjat nem kell fizetnie. Itt válaszolhat, ha szeretné megbeszélni, vagy később új kérelmet nyújthat be."
   },
   "AccountsPage": {
     "kicker": "Szuperadmin",

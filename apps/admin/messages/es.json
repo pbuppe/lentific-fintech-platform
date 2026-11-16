@@ -59,7 +59,15 @@
     "mandateView": "Ver el mandato",
     "mandateDone": "Mandato generado y enviado al cliente.",
     "mandateError": "Importe de honorarios no válido.",
-    "feeFromMandate": "Honorarios previstos en el mandato: {amount}"
+    "feeFromMandate": "Honorarios previstos en el mandato: {amount}",
+    "rejectTitle": "Rechazar el expediente",
+    "rejectReasonLabel": "Motivo comunicado al cliente",
+    "rejectReasonPlaceholder": "Ej.: nivel de endeudamiento demasiado alto tras analizar los ingresos",
+    "rejectButton": "Rechazar e informar al cliente",
+    "rejectDone": "Expediente rechazado: el cliente ha recibido el motivo en sus mensajes y por correo.",
+    "rejectError": "Indique un motivo (al menos 5 caracteres).",
+    "rejectNoticeTitle": "Su solicitud {reference} no ha sido aceptada",
+    "rejectNoticeBody": "Tras analizar su expediente, no podemos dar curso favorable a su solicitud de financiación {reference}.\n\nMotivo: {reason}\n\nNo se le debe ningún honorario. Puede respondernos aquí si desea hablarlo o presentar una nueva solicitud más adelante."
   },
   "AccountsPage": {
     "kicker": "Superadministrador",

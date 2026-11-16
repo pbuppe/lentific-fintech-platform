@@ -59,7 +59,15 @@
     "mandateView": "Opdracht bekijken",
     "mandateDone": "Opdracht opgesteld en naar de klant verzonden.",
     "mandateError": "Ongeldig honorariumbedrag.",
-    "feeFromMandate": "Honorarium volgens de opdracht: {amount}"
+    "feeFromMandate": "Honorarium volgens de opdracht: {amount}",
+    "rejectTitle": "Dossier weigeren",
+    "rejectReasonLabel": "Reden meegedeeld aan de klant",
+    "rejectReasonPlaceholder": "Bijv.: schuldratio te hoog na analyse van de inkomsten",
+    "rejectButton": "Weigeren en klant informeren",
+    "rejectDone": "Dossier geweigerd: de klant heeft de reden ontvangen in zijn berichten en per e-mail.",
+    "rejectError": "Geef een reden op (minstens 5 tekens).",
+    "rejectNoticeTitle": "Uw aanvraag {reference} is niet aanvaard",
+    "rejectNoticeBody": "Na analyse van uw dossier kunnen wij helaas niet ingaan op uw financieringsaanvraag {reference}.\n\nReden: {reason}\n\nEr is geen honorarium verschuldigd. U kunt ons hier antwoorden als u erover wilt praten of later een nieuwe aanvraag wilt indienen."
   },
   "AccountsPage": {
     "kicker": "Super administrator",

@@ -59,7 +59,15 @@
     "mandateView": "Vedi il mandato",
     "mandateDone": "Mandato generato e inviato al cliente.",
     "mandateError": "Importo degli onorari non valido.",
-    "feeFromMandate": "Onorari previsti dal mandato: {amount}"
+    "feeFromMandate": "Onorari previsti dal mandato: {amount}",
+    "rejectTitle": "Rifiuta la pratica",
+    "rejectReasonLabel": "Motivo comunicato al cliente",
+    "rejectReasonPlaceholder": "Es.: rapporto di indebitamento troppo elevato dopo l'analisi dei redditi",
+    "rejectButton": "Rifiuta e informa il cliente",
+    "rejectDone": "Pratica rifiutata: il cliente ha ricevuto il motivo nei messaggi e via e-mail.",
+    "rejectError": "Indicate un motivo (almeno 5 caratteri).",
+    "rejectNoticeTitle": "La vostra richiesta {reference} non è stata accolta",
+    "rejectNoticeBody": "Dopo l'analisi della vostra pratica, non siamo in grado di dare seguito favorevole alla vostra richiesta di finanziamento {reference}.\n\nMotivo: {reason}\n\nNon è dovuto alcun onorario. Potete risponderci qui se desiderate parlarne o presentare una nuova richiesta in seguito."
   },
   "AccountsPage": {
     "kicker": "Super amministratore",

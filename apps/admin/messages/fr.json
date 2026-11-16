@@ -59,7 +59,15 @@
     "mandateView": "Voir le mandat",
     "mandateDone": "Mandat généré et envoyé au client.",
     "mandateError": "Montant d'honoraires invalide.",
-    "feeFromMandate": "Honoraires prévus au mandat : {amount}"
+    "feeFromMandate": "Honoraires prévus au mandat : {amount}",
+    "rejectTitle": "Refuser le dossier",
+    "rejectReasonLabel": "Motif communiqué au client",
+    "rejectReasonPlaceholder": "Ex. : taux d'endettement trop élevé après analyse des revenus",
+    "rejectButton": "Refuser et informer le client",
+    "rejectDone": "Dossier refusé : le client a reçu le motif dans ses messages et par e-mail.",
+    "rejectError": "Indiquez un motif (au moins 5 caractères).",
+    "rejectNoticeTitle": "Votre demande {reference} n'a pas été retenue",
+    "rejectNoticeBody": "Après analyse de votre dossier, nous ne sommes pas en mesure de donner une suite favorable à votre demande de financement {reference}.\n\nMotif : {reason}\n\nAucun honoraire ne vous est dû. Vous pouvez nous répondre ici si vous souhaitez en parler ou déposer une nouvelle demande plus tard."
   },
   "AccountsPage": {
     "kicker": "Super administrateur",
