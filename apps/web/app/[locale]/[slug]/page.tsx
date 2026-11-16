@@ -8,6 +8,9 @@ import { SUPPORTED_LOCALES, type Locale } from "../../../i18n/locales";
 import { LOCALE_TO_COUNTRY } from "../../../i18n/countries";
 import { LOCALE_TO_SLUG } from "../../../i18n/slugs";
 import { LocaleCookieSetter } from "../../components/LocaleCookieSetter";
+import { CREDIT_PAGE_KEYS, CREDIT_PAGE_SLUGS, creditPageFromSlug, creditPagePath } from "../../../i18n/creditPages";
+import { pageMetadata, languageAlternates, SITE_URL } from "../../../lib/seo";
+import { CreditPage } from "./CreditPage";
 
 /**
  * Page de destination par langue (§ demande produit 2026-09-18) : une URL
@@ -28,14 +31,37 @@ const STEP_NUMBERS = ["01", "02", "03", "04", "05"];
 type Props = { params: { locale: string; slug: string } };
 
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({ locale, slug: LOCALE_TO_SLUG[locale] }));
+  return SUPPORTED_LOCALES.flatMap((locale) => [
+    { locale, slug: LOCALE_TO_SLUG[locale] },
+    // Pages par type de crédit (SEO, 2026-11-16), voir i18n/creditPages.ts.
+    ...CREDIT_PAGE_KEYS.map((k) => ({ locale, slug: CREDIT_PAGE_SLUGS[k][locale] })),
+  ]);
 }
 
 function isValidRoute(params: { locale: string; slug: string }): params is { locale: Locale; slug: string } {
   return SUPPORTED_LOCALES.includes(params.locale as Locale) && LOCALE_TO_SLUG[params.locale as Locale] === params.slug;
 }
 
+function creditRoute(params: { locale: string; slug: string }) {
+  if (!SUPPORTED_LOCALES.includes(params.locale as Locale)) return null;
+  const key = creditPageFromSlug(params.locale as Locale, params.slug);
+  return key ? { locale: params.locale as Locale, key } : null;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const credit = creditRoute(params);
+  if (credit) {
+    const t = await getTranslations({ locale: credit.locale, namespace: `CreditPages.${credit.key}` });
+    const seo = await getTranslations({ locale: credit.locale, namespace: "Seo" });
+    return pageMetadata({
+      locale: credit.locale,
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      keywords: seo("keywords"),
+      path: creditPagePath(credit.key, credit.locale),
+      pathFor: (l) => creditPagePath(credit.key, l),
+    });
+  }
   if (!isValidRoute(params)) return {};
   const locale = params.locale as Locale;
   const t = await getTranslations({ locale, namespace: "LandingPage" });
@@ -43,10 +69,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Lentific · ${title}`,
     description: t("heroSubtitle"),
+    alternates: {
+      canonical: `${SITE_URL}/${locale}/${LOCALE_TO_SLUG[locale]}`,
+      languages: languageAlternates((l) => `/${l}/${LOCALE_TO_SLUG[l]}`),
+    },
   };
 }
 
 export default async function LocaleLandingPage({ params }: Props) {
+  const credit = creditRoute(params);
+  if (credit) {
+    return (
+      <>
+        <LocaleCookieSetter locale={credit.locale} country={LOCALE_TO_COUNTRY[credit.locale]} />
+        <CreditPage locale={credit.locale} pageKey={credit.key} />
+      </>
+    );
+  }
   if (!isValidRoute(params)) notFound();
   const locale = params.locale as Locale;
   const country = LOCALE_TO_COUNTRY[locale];

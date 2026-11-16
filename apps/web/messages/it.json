@@ -1102,5 +1102,178 @@
     "accept": "Accettare",
     "refuse": "Rifiutare",
     "learnMore": "Per saperne di più"
+  },
+  "Seo": {
+    "homeTitle": "Mediatore creditizio online: mutui, consolidamento debiti e prestiti personali",
+    "homeDescription": "Lentific confronta per voi le offerte di banche e investitori verificati: mutui casa, consolidamento debiti, prestiti per ristrutturazione, prestiti personali e finanziamento partecipativo. Analisi gratuita, onorari solo se ottenete il prestito.",
+    "simulatorTitle": "Simulatore di prestito gratuito: calcolate la vostra rata",
+    "simulatorDescription": "Calcolate in pochi secondi la rata mensile, il costo totale e il tasso del vostro mutuo, prestito personale o prestito per ristrutturazione. Simulazione gratuita e senza impegno.",
+    "marketplaceTitle": "Finanziamento partecipativo: progetti da finanziare e investitori",
+    "marketplaceDescription": "Scoprite i progetti da finanziare e i capitali offerti da investitori verificati sulla piattaforma di finanziamento partecipativo Lentific.",
+    "keywords": "prestito, credito, mediatore creditizio, mutuo, mutuo casa, consolidamento debiti, prestito personale, prestito ristrutturazione, credito al consumo, finanziamento, crowdlending, prestito tra privati, simulatore prestito"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · mediatore creditizio online",
+      "pointsTitle": "Perché scegliere Lentific",
+      "faqTitle": "Domande frequenti",
+      "ctaTitle": "Parliamo del vostro progetto",
+      "ctaText": "Analisi gratuita e senza impegno. I nostri onorari sono dovuti solo se ottenete il prestito.",
+      "ctaButton": "Richiedere un'analisi gratuita",
+      "simulator": "Calcolare la mia rata",
+      "otherServices": "Le nostre altre soluzioni di finanziamento"
+    },
+    "mortgage": {
+      "metaTitle": "Mutuo casa: confrontate le offerte e ottenete il tasso migliore",
+      "metaDescription": "Acquisto, costruzione o surroga: Lentific confronta le offerte di mutuo di più banche e prepara la vostra pratica. Analisi gratuita, onorari solo se il mutuo viene concesso.",
+      "h1": "Mutuo casa: il finanziamento giusto per la vostra casa",
+      "intro": "Acquisto della prima casa, investimento da mettere a reddito, costruzione o surroga: confrontiamo le offerte di più banche, prepariamo una pratica solida e la sosteniamo per ottenere le condizioni migliori.",
+      "points": [
+        {
+          "t": "Più banche a confronto",
+          "b": "Siamo indipendenti e non legati ad alcun istituto: presentiamo la vostra pratica dove ha più possibilità di ottenere un buon tasso."
+        },
+        {
+          "t": "Una pratica preparata per voi",
+          "b": "Raccogliamo i documenti, valorizziamo il vostro profilo e prepariamo il dialogo con la banca."
+        },
+        {
+          "t": "Monitoraggio online, passo dopo passo",
+          "b": "Dalla richiesta all'erogazione dei fondi, seguite l'avanzamento dal vostro spazio."
+        },
+        {
+          "t": "Onorari a risultato",
+          "b": "I nostri onorari sono fissati per iscritto fin dall'inizio e sono dovuti solo una volta ottenuto il mutuo."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quali documenti servono per un mutuo?",
+          "a": "Documento d'identità, ultime tre buste paga, ultime due dichiarazioni dei redditi, ultimi tre estratti conto e il compromesso o i preventivi. Li inviate dal vostro spazio sicuro."
+        },
+        {
+          "q": "Quanto tempo serve per ottenere un mutuo?",
+          "a": "In genere da quattro a otto settimane tra il primo contatto e l'offerta di mutuo, secondo la banca e la complessità della pratica."
+        },
+        {
+          "q": "Potete rinegoziare un mutuo in corso?",
+          "a": "Sì. Confrontiamo il vostro mutuo attuale con le offerte del mercato e vi diciamo se conviene rinegoziarlo o passare a un'altra banca con la surroga."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Consolidamento debiti: un'unica rata più leggera",
+      "metaDescription": "Riunite i vostri prestiti in uno solo per ridurre la rata mensile e respirare. Analisi gratuita di Lentific, onorari solo se l'operazione va a buon fine.",
+      "h1": "Consolidamento debiti: un'unica rata per respirare",
+      "intro": "Prestiti al consumo, finanziamento auto, mutuo, scoperti: esaminiamo tutti i vostri prestiti e cerchiamo una soluzione che li riunisca in uno solo, con una rata adatta al vostro bilancio.",
+      "points": [
+        {
+          "t": "Un'unica rata",
+          "b": "Un solo prestito, un solo addebito: il bilancio familiare diventa più semplice da gestire."
+        },
+        {
+          "t": "Una rata più leggera",
+          "b": "Regolando la durata, la rata può scendere sensibilmente. Vi mostriamo anche l'effetto sul costo totale."
+        },
+        {
+          "t": "Un'analisi completa e onesta",
+          "b": "Vi diciamo chiaramente se il consolidamento vi conviene e, in caso contrario, perché."
+        },
+        {
+          "t": "Nessun costo anticipato",
+          "b": "Nessun pagamento può essere richiesto prima dell'ottenimento del prestito: i nostri onorari sono dovuti solo in caso di successo."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quali prestiti si possono consolidare?",
+          "a": "Prestiti al consumo, carte revolving, finanziamenti auto, prestiti personali e, a seconda dei casi, il mutuo e altri debiti."
+        },
+        {
+          "q": "Il consolidamento costa di più?",
+          "a": "Allungare la durata riduce la rata ma può aumentare il costo totale. Vi presentiamo entrambe le cifre prima di ogni decisione."
+        },
+        {
+          "q": "Quanto tempo richiede un consolidamento debiti?",
+          "a": "A seconda della pratica, qualche settimana tra il primo contatto e l'erogazione. Seguite ogni fase online."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Prestito personale e per ristrutturazione: confrontate e finanziate il vostro progetto",
+      "metaDescription": "Ristrutturazione, auto, liquidità: Lentific confronta le offerte di prestiti personali e per ristrutturazione di più finanziatori. Simulazione e analisi gratuite.",
+      "h1": "Prestito personale e per ristrutturazione: finanziate i vostri progetti",
+      "intro": "Riqualificazione energetica, ampliamento, acquisto di un'auto o bisogno di liquidità: troviamo un prestito adatto al vostro progetto, confrontato tra più finanziatori, con una rata che rispetta il vostro bilancio.",
+      "points": [
+        {
+          "t": "Più finanziatori a confronto",
+          "b": "Banche e investitori verificati della nostra piattaforma: vedete le offerte una accanto all'altra."
+        },
+        {
+          "t": "Una risposta rapida",
+          "b": "Pratica 100% online e, con l'opzione «Pratica prioritaria», il prestito può essere ottenuto in una-tre settimane."
+        },
+        {
+          "t": "Una rata sotto controllo",
+          "b": "Il simulatore vi dà una stima immediata; il vostro consulente la adatta alla vostra situazione reale."
+        },
+        {
+          "t": "Un unico interlocutore",
+          "b": "Un consulente segue la vostra pratica dall'inizio alla fine, per telefono o in videochiamata."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Che differenza c'è tra prestito per ristrutturazione e prestito personale?",
+          "a": "Il prestito per ristrutturazione è legato a lavori precisi, su preventivo; il prestito personale è di libero utilizzo. Vi orientiamo verso la formula più vantaggiosa."
+        },
+        {
+          "q": "Posso calcolare la rata prima di fare richiesta?",
+          "a": "Sì, il simulatore del sito è gratuito e senza impegno. Fornisce una stima indicativa, esclusi assicurazione e spese."
+        },
+        {
+          "q": "Un prestito mi impegna?",
+          "a": "Sì. Un prestito vi impegna e deve essere rimborsato. Verificate la vostra capacità di rimborso prima di impegnarvi: vi aiutiamo a farlo."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Finanziamento partecipativo: finanziate il vostro progetto con investitori verificati",
+      "metaDescription": "Sul marketplace Lentific, investitori con identità verificata finanziano progetti, con contratto e monitoraggio come per un prestito tradizionale.",
+      "h1": "Finanziamento partecipativo: investitori verificati finanziano il vostro progetto",
+      "intro": "Il vostro progetto può essere finanziato anche direttamente dagli investitori della nostra piattaforma. Ogni investitore è verificato, ogni finanziamento ha un contratto e seguite tutto dal vostro spazio.",
+      "points": [
+        {
+          "t": "Investitori verificati",
+          "b": "Controlliamo l'identità e la capacità di prestito degli investitori prima che possano finanziare un progetto."
+        },
+        {
+          "t": "Un contratto in piena regola",
+          "b": "Il contratto è generato automaticamente nella vostra lingua, con il piano di rimborso completo."
+        },
+        {
+          "t": "Un monitoraggio trasparente",
+          "b": "Importo raccolto, investitori, scadenze: tutto è visibile nel vostro spazio."
+        },
+        {
+          "t": "Per mutuatari e investitori",
+          "b": "Avete capitali? Pubblicate la vostra offerta e scoprite i progetti da finanziare."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Il mio prestito può essere finanziato da privati?",
+          "a": "Sì, a seconda del progetto: sul nostro marketplace, investitori di cui abbiamo verificato l'identità finanziano progetti, con contratto e monitoraggio come per un prestito tradizionale."
+        },
+        {
+          "q": "Come evitare le truffe dei prestiti tra privati?",
+          "a": "Diffidate di un «privato» che vi propone un prestito su Internet chiedendo spese anticipate: è una truffa frequente. Su Lentific gli investitori sono verificati."
+        },
+        {
+          "q": "Come diventare investitore?",
+          "a": "Create un account investitore, fate verificare la vostra identità e la provenienza dei fondi, poi consultate i progetti del marketplace."
+        }
+      ]
+    }
   }
 }

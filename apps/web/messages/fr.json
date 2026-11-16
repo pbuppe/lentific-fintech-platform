@@ -1102,5 +1102,178 @@
     "accept": "Accepter",
     "refuse": "Refuser",
     "learnMore": "En savoir plus"
+  },
+  "Seo": {
+    "homeTitle": "Courtier en crédit en ligne : prêt immobilier, regroupement de crédits, prêt personnel",
+    "homeDescription": "Lentific compare pour vous les offres des banques et d'investisseurs vérifiés : crédit immobilier, rachat et regroupement de crédits, prêt travaux, prêt personnel et financement participatif. Étude gratuite, honoraires seulement si votre prêt est obtenu.",
+    "simulatorTitle": "Simulateur de crédit gratuit : calculez votre mensualité",
+    "simulatorDescription": "Calculez en quelques secondes la mensualité, le coût total et le taux de votre crédit immobilier, prêt personnel ou prêt travaux. Simulation gratuite et sans engagement.",
+    "marketplaceTitle": "Financement participatif : projets à financer et investisseurs",
+    "marketplaceDescription": "Découvrez les projets à financer et les capitaux proposés par des investisseurs vérifiés sur la plateforme de financement participatif Lentific.",
+    "keywords": "crédit, prêt, courtier en crédit, crédit immobilier, prêt immobilier, regroupement de crédits, rachat de crédit, prêt personnel, prêt travaux, crédit à la consommation, financement, financement participatif, prêt entre particuliers, simulation de crédit"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · courtier en crédit en ligne",
+      "pointsTitle": "Pourquoi passer par Lentific",
+      "faqTitle": "Questions fréquentes",
+      "ctaTitle": "Parlons de votre projet",
+      "ctaText": "Étude gratuite et sans engagement. Nos honoraires ne sont dus que si votre prêt est obtenu.",
+      "ctaButton": "Demander une étude gratuite",
+      "simulator": "Simuler ma mensualité",
+      "otherServices": "Nos autres solutions de financement"
+    },
+    "mortgage": {
+      "metaTitle": "Crédit immobilier : comparez les offres et obtenez le meilleur taux",
+      "metaDescription": "Achat, construction ou renégociation : Lentific compare les offres de prêt immobilier des banques et monte votre dossier. Étude gratuite, honoraires seulement si votre crédit est obtenu.",
+      "h1": "Crédit immobilier : le bon prêt pour votre projet",
+      "intro": "Achat de votre résidence principale, investissement locatif, construction ou renégociation : nous comparons pour vous les offres de plusieurs banques, montons un dossier solide et le défendons pour obtenir les meilleures conditions.",
+      "points": [
+        {
+          "t": "Plusieurs banques comparées",
+          "b": "Indépendants, nous ne sommes liés à aucun établissement : nous présentons votre dossier là où il a le plus de chances d'obtenir un bon taux."
+        },
+        {
+          "t": "Un dossier monté pour vous",
+          "b": "Nous rassemblons les pièces, mettons en valeur votre profil et préparons les échanges avec la banque."
+        },
+        {
+          "t": "Suivi en ligne, étape par étape",
+          "b": "De la demande jusqu'au versement des fonds chez le notaire, vous suivez l'avancement depuis votre espace."
+        },
+        {
+          "t": "Honoraires au succès",
+          "b": "Nos honoraires sont fixés par écrit dès le départ et ne sont dus qu'une fois votre prêt obtenu."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quels documents faut-il pour un crédit immobilier ?",
+          "a": "Pièce d'identité, trois derniers bulletins de salaire, deux derniers avis d'imposition, trois derniers relevés de compte et le compromis de vente ou les devis. Vous les envoyez depuis votre espace sécurisé."
+        },
+        {
+          "q": "Combien de temps pour obtenir mon prêt immobilier ?",
+          "a": "Comptez en général quatre à huit semaines entre le premier échange et l'offre de prêt, selon la banque et la complexité du dossier."
+        },
+        {
+          "q": "Pouvez-vous renégocier un crédit immobilier en cours ?",
+          "a": "Oui. Nous comparons votre prêt actuel aux offres du marché et vous indiquons si une renégociation ou un rachat par une autre banque est intéressant."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Regroupement de crédits : une seule mensualité, allégée",
+      "metaDescription": "Regroupez vos crédits en un seul prêt pour réduire votre mensualité et retrouver de l'air dans votre budget. Étude gratuite par Lentific, honoraires seulement si l'opération aboutit.",
+      "h1": "Regroupement de crédits : une seule mensualité pour souffler",
+      "intro": "Crédits à la consommation, prêt auto, crédit immobilier, découverts : nous étudions l'ensemble de vos prêts et cherchons une solution qui les réunit en un seul, avec une mensualité adaptée à votre budget.",
+      "points": [
+        {
+          "t": "Une seule mensualité",
+          "b": "Un seul prêt, un seul prélèvement : votre budget devient plus simple à suivre."
+        },
+        {
+          "t": "Une mensualité allégée",
+          "b": "En ajustant la durée, la mensualité peut baisser nettement. Nous vous montrons aussi l'effet sur le coût total."
+        },
+        {
+          "t": "Une étude complète et honnête",
+          "b": "Nous vous disons clairement si le regroupement est intéressant pour vous, et sinon pourquoi."
+        },
+        {
+          "t": "Aucun frais d'avance",
+          "b": "Aucun versement ne peut être exigé avant l'obtention de votre prêt : nos honoraires ne sont dus qu'en cas de succès."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quels crédits peut-on regrouper ?",
+          "a": "Crédits à la consommation, crédits renouvelables, prêt auto, prêt personnel et, selon les cas, crédit immobilier et dettes diverses."
+        },
+        {
+          "q": "Le regroupement coûte-t-il plus cher ?",
+          "a": "Allonger la durée réduit la mensualité mais peut augmenter le coût total. Nous vous présentons les deux chiffres avant toute décision."
+        },
+        {
+          "q": "Combien de temps prend un regroupement de crédits ?",
+          "a": "Selon le dossier, quelques semaines entre le premier échange et le déblocage des fonds. Vous suivez chaque étape en ligne."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Prêt travaux et prêt personnel : comparez et financez votre projet",
+      "metaDescription": "Rénovation, véhicule, trésorerie : Lentific compare les offres de prêt travaux et de prêt personnel de plusieurs prêteurs. Simulation et étude gratuites.",
+      "h1": "Prêt travaux et prêt personnel : financez vos projets",
+      "intro": "Rénovation énergétique, agrandissement, achat d'un véhicule ou besoin de trésorerie : nous trouvons un crédit adapté à votre projet, comparé parmi plusieurs prêteurs, avec une mensualité qui respecte votre budget.",
+      "points": [
+        {
+          "t": "Plusieurs prêteurs comparés",
+          "b": "Banques et investisseurs vérifiés de notre plateforme : vous voyez les offres côte à côte."
+        },
+        {
+          "t": "Une réponse rapide",
+          "b": "Dossier 100 % en ligne, et avec l'option « Dossier prioritaire » votre crédit peut être obtenu en une à trois semaines."
+        },
+        {
+          "t": "Une mensualité maîtrisée",
+          "b": "Le simulateur vous donne une estimation immédiate ; votre conseiller l'ajuste à votre situation réelle."
+        },
+        {
+          "t": "Un interlocuteur unique",
+          "b": "Un conseiller suit votre dossier du début à la fin, par téléphone ou en visio."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quelle différence entre prêt travaux et prêt personnel ?",
+          "a": "Le prêt travaux est affecté à des travaux précis, sur devis ; le prêt personnel est libre d'utilisation. Nous vous orientons vers la formule la plus avantageuse."
+        },
+        {
+          "q": "Puis-je simuler ma mensualité avant de faire une demande ?",
+          "a": "Oui, le simulateur du site est gratuit et sans engagement. Il donne une estimation indicative, hors assurance et frais."
+        },
+        {
+          "q": "Un crédit m'engage-t-il ?",
+          "a": "Oui. Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager : nous vous y aidons."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Financement participatif : financez votre projet avec des investisseurs vérifiés",
+      "metaDescription": "Sur la marketplace Lentific, des investisseurs dont l'identité est vérifiée financent des projets, avec un contrat et un suivi comme pour un crédit classique.",
+      "h1": "Financement participatif : des investisseurs vérifiés financent votre projet",
+      "intro": "Votre projet peut aussi être financé directement par des investisseurs de notre plateforme. Chaque investisseur est vérifié, chaque financement fait l'objet d'un contrat, et vous suivez tout depuis votre espace.",
+      "points": [
+        {
+          "t": "Investisseurs vérifiés",
+          "b": "Nous contrôlons l'identité et la capacité de prêt des investisseurs avant qu'ils puissent financer un projet."
+        },
+        {
+          "t": "Un contrat en bonne et due forme",
+          "b": "Le contrat est généré automatiquement dans votre langue, avec l'échéancier complet."
+        },
+        {
+          "t": "Un suivi transparent",
+          "b": "Montant collecté, investisseurs, échéances : tout est visible dans votre espace."
+        },
+        {
+          "t": "Pour emprunteurs et investisseurs",
+          "b": "Vous avez des capitaux ? Publiez votre offre et découvrez les projets à financer."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Mon prêt peut-il être financé par des particuliers ?",
+          "a": "Oui, selon votre projet : sur notre marketplace, des investisseurs dont nous avons vérifié l'identité financent des projets, avec un contrat et un suivi comme pour un crédit classique."
+        },
+        {
+          "q": "Comment éviter les arnaques au prêt entre particuliers ?",
+          "a": "Méfiez-vous d'un « particulier » qui vous propose un prêt sur Internet en demandant des frais à l'avance : c'est une arnaque fréquente. Sur Lentific, les investisseurs sont vérifiés."
+        },
+        {
+          "q": "Comment devenir investisseur ?",
+          "a": "Créez un compte investisseur, faites vérifier votre identité et la provenance de vos fonds, puis consultez les projets de la marketplace."
+        }
+      ]
+    }
   }
 }

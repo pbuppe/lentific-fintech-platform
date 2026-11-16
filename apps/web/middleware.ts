@@ -16,7 +16,8 @@ import { NextResponse, type NextRequest } from "next/server";
  */
 const SESSION_COOKIE_NAME = "lentific_session";
 const PROTECTED_PREFIXES = ["/dashboard", "/investor"];
-const LOCALE_LANDING_PAGE = /^\/(fr|en|es|it|hu|pt|de|nl)\/[^/]+$/;
+// /fr, /de… (accueil par langue, indexable) et /fr/xxx (pages par langue : destination, types de crédit).
+const LOCALE_LANDING_PAGE = /^\/(fr|en|es|it|hu|pt|de|nl)(?:\/[^/]+)?\/?$/;
 const SUPPORTED = ["fr", "en", "es", "it", "hu", "pt", "de", "nl"];
 const ONE_YEAR = 60 * 60 * 24 * 365;
 

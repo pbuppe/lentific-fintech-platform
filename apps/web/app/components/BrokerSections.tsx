@@ -1,5 +1,7 @@
 import { CookieSettingsLink } from "./CookieConsent";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { CREDIT_PAGE_KEYS, creditPagePath } from "../../i18n/creditPages";
+import type { Locale } from "../../i18n/locales";
 import { submitContactRequestAction } from "../../lib/actions/contact";
 import { ScrollToHere } from "./ScrollToHere";
 import { legalIdentity } from "../../lib/legal";
@@ -178,6 +180,8 @@ export async function ContactSection({ status }: { status?: string }) {
  */
 export async function SiteFooter() {
   const t = await getTranslations("HomeBroker.footer");
+  const ts = await getTranslations("HomeBroker.services");
+  const locale = (await getLocale()) as Locale;
   const legal = legalIdentity();
   return (
     <footer className="border-t border-line bg-surface px-6 py-10 text-sm text-ink-soft sm:px-12">
@@ -200,6 +204,12 @@ export async function SiteFooter() {
         </div>
         <div className="grid content-start gap-1.5">
           <a href="#services" className="hover:text-ink">{t("services")}</a>
+          {/* Liens vers les pages par type de crédit (SEO : maillage interne, dans la langue de la page). */}
+          {CREDIT_PAGE_KEYS.map((k) => (
+            <a key={k} href={creditPagePath(k, locale)} className="pl-3 text-xs hover:text-ink">
+              {ts(`${k}.title`)}
+            </a>
+          ))}
           <a href="/simulateur" className="hover:text-ink">{t("simulator")}</a>
           <a href="/marketplace" className="hover:text-ink">{t("marketplace")}</a>
           <a href="#faq" className="hover:text-ink">{t("faq")}</a>

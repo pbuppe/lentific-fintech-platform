@@ -1102,5 +1102,178 @@
     "accept": "Elfogadom",
     "refuse": "Elutasítom",
     "learnMore": "Bővebben"
+  },
+  "Seo": {
+    "homeTitle": "Online hitelközvetítő: lakáshitel, adósságrendezés és személyi kölcsön",
+    "homeDescription": "A Lentific összehasonlítja Ön helyett a bankok és ellenőrzött befektetők ajánlatait: lakáshitel, adósságrendező hitel, felújítási hitel, személyi kölcsön és közösségi finanszírozás. Ingyenes felmérés, díj csak sikeres hitel esetén.",
+    "simulatorTitle": "Ingyenes hitelkalkulátor: számolja ki a havi törlesztőt",
+    "simulatorDescription": "Számolja ki másodpercek alatt lakáshitele, személyi kölcsöne vagy felújítási hitele havi törlesztőrészletét, teljes költségét és kamatát. Ingyenes, kötelezettség nélküli kalkuláció.",
+    "marketplaceTitle": "Közösségi finanszírozás: finanszírozandó projektek és befektetők",
+    "marketplaceDescription": "Ismerje meg a finanszírozást kereső projekteket és az ellenőrzött befektetők által kínált tőkét a Lentific közösségi finanszírozási platformon.",
+    "keywords": "hitel, kölcsön, hitelközvetítő, lakáshitel, jelzáloghitel, adósságrendező hitel, személyi kölcsön, felújítási hitel, fogyasztási hitel, finanszírozás, vállalkozói hitel, közösségi finanszírozás, hitelkalkulátor"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · online hitelközvetítő",
+      "pointsTitle": "Miért a Lentific?",
+      "faqTitle": "Gyakori kérdések",
+      "ctaTitle": "Beszéljünk a terveiről",
+      "ctaText": "Ingyenes, kötelezettség nélküli felmérés. Díjunkat csak akkor kell megfizetnie, ha megkapja a hitelt.",
+      "ctaButton": "Ingyenes felmérést kérek",
+      "simulator": "Havi törlesztő kiszámítása",
+      "otherServices": "További finanszírozási megoldásaink"
+    },
+    "mortgage": {
+      "metaTitle": "Lakáshitel: hasonlítsa össze az ajánlatokat, és kapja meg a legjobb kamatot",
+      "metaDescription": "Vásárlás, építés vagy hitelkiváltás: a Lentific összehasonlítja több bank lakáshitel-ajánlatát, és összeállítja az Ön ügyiratát. Ingyenes felmérés, díj csak sikeres hitel esetén.",
+      "h1": "Lakáshitel: a megfelelő hitel az otthonához",
+      "intro": "Saját otthon vásárlása, kiadási célú befektetés, építés vagy meglévő hitel kiváltása: összehasonlítjuk több bank ajánlatát, erős ügyiratot állítunk össze, és képviseljük, hogy a legjobb feltételeket kapja.",
+      "points": [
+        {
+          "t": "Több bank összehasonlítva",
+          "b": "Függetlenek vagyunk, egyetlen bankhoz sem kötődünk: oda nyújtjuk be ügyiratát, ahol a legnagyobb esélye van jó kamatra."
+        },
+        {
+          "t": "Ügyiratát mi állítjuk össze",
+          "b": "Összegyűjtjük a dokumentumokat, kiemeljük erősségeit, és előkészítjük az egyeztetést a bankkal."
+        },
+        {
+          "t": "Online követés lépésről lépésre",
+          "b": "A kérelemtől a folyósításig ügyfélfiókjában követheti az előrehaladást."
+        },
+        {
+          "t": "Sikerdíj",
+          "b": "Díjunkat már az elején írásban rögzítjük, és csak a hitel megszerzése után kell megfizetni."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Milyen dokumentumok kellenek a lakáshitelhez?",
+          "a": "Személyi igazolvány, az utolsó három bérjegyzék, az utolsó két adóbevallás, az utolsó három bankszámlakivonat, valamint az adásvételi előszerződés vagy az árajánlatok. Ezeket biztonságos ügyfélfiókjából küldheti el."
+        },
+        {
+          "q": "Mennyi idő alatt kaphatok lakáshitelt?",
+          "a": "Általában négy-nyolc hét telik el az első egyeztetés és a hitelajánlat között, a banktól és az ügy összetettségétől függően."
+        },
+        {
+          "q": "Ki tudják váltani meglévő lakáshitelemet?",
+          "a": "Igen. Összevetjük jelenlegi hitelét a piaci ajánlatokkal, és megmondjuk, megéri-e újratárgyalni vagy másik bankhoz váltani."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Adósságrendező hitel: egyetlen, alacsonyabb havi törlesztő",
+      "metaDescription": "Vonja össze hiteleit egyetlen kölcsönbe, csökkentse havi törlesztőjét, és tehermentesítse a családi kasszát. Ingyenes felmérés a Lentifictől, díj csak sikeres ügylet esetén.",
+      "h1": "Adósságrendező hitel: egyetlen törlesztő, több levegő",
+      "intro": "Fogyasztási hitelek, autóhitel, lakáshitel, folyószámlahitel: áttekintjük összes tartozását, és olyan megoldást keresünk, amely egyetlen hitelbe vonja össze őket, a költségvetéséhez illő törlesztővel.",
+      "points": [
+        {
+          "t": "Egyetlen törlesztőrészlet",
+          "b": "Egy hitel, egy terhelés: a költségvetése könnyebben követhető."
+        },
+        {
+          "t": "Alacsonyabb havi törlesztő",
+          "b": "A futamidő módosításával a törlesztő jelentősen csökkenhet. A teljes költségre gyakorolt hatást is megmutatjuk."
+        },
+        {
+          "t": "Teljes és őszinte felmérés",
+          "b": "Világosan megmondjuk, megéri-e Önnek az adósságrendezés, és ha nem, miért nem."
+        },
+        {
+          "t": "Nincs előre fizetendő díj",
+          "b": "A hitel megszerzése előtt semmilyen fizetés nem követelhető: díjunk csak siker esetén jár."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Mely hiteleket lehet összevonni?",
+          "a": "Fogyasztási hiteleket, hitelkártya-tartozást, autóhitelt, személyi kölcsönt, és esettől függően lakáshitelt és egyéb tartozásokat."
+        },
+        {
+          "q": "Drágább az adósságrendezés?",
+          "a": "A hosszabb futamidő csökkenti a törlesztőt, de növelheti a teljes költséget. Döntés előtt mindkét számot megmutatjuk."
+        },
+        {
+          "q": "Mennyi ideig tart az adósságrendezés?",
+          "a": "Az ügytől függően néhány hét az első egyeztetéstől a folyósításig. Minden lépést online követhet."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Személyi kölcsön és felújítási hitel: hasonlítson és finanszírozzon",
+      "metaDescription": "Felújítás, autó, likviditás: a Lentific több hitelező személyi kölcsön- és felújítási hitelajánlatát hasonlítja össze. Ingyenes kalkuláció és felmérés.",
+      "h1": "Személyi kölcsön és felújítási hitel: valósítsa meg terveit",
+      "intro": "Energetikai korszerűsítés, bővítés, autóvásárlás vagy likviditási igény: a tervéhez illő hitelt keresünk több hitelező ajánlatai közül, a költségvetését tiszteletben tartó törlesztővel.",
+      "points": [
+        {
+          "t": "Több hitelező összehasonlítva",
+          "b": "Bankok és platformunk ellenőrzött befektetői: az ajánlatokat egymás mellett látja."
+        },
+        {
+          "t": "Gyors válasz",
+          "b": "100%-ban online ügyintézés, és az „Elsőbbségi ügy” opcióval hitelét egy-három hét alatt megkaphatja."
+        },
+        {
+          "t": "Kézben tartott törlesztő",
+          "b": "A kalkulátor azonnali becslést ad; tanácsadója a valós helyzetéhez igazítja."
+        },
+        {
+          "t": "Egyetlen kapcsolattartó",
+          "b": "Egy tanácsadó kíséri ügyét az elejétől a végéig, telefonon vagy videóhívásban."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Mi a különbség a felújítási hitel és a személyi kölcsön között?",
+          "a": "A felújítási hitel konkrét munkákhoz kötött, árajánlat alapján; a személyi kölcsön szabadon felhasználható. Segítünk kiválasztani az előnyösebbet."
+        },
+        {
+          "q": "Kiszámolhatom a törlesztőt a kérelem előtt?",
+          "a": "Igen, az oldal kalkulátora ingyenes és kötelezettség nélküli. Tájékoztató becslést ad, biztosítás és díjak nélkül."
+        },
+        {
+          "q": "Kötelezettséget jelent egy hitel?",
+          "a": "Igen. A hitel kötelezettséggel jár, és vissza kell fizetni. Mielőtt vállalja, ellenőrizze visszafizetési képességét: ebben segítünk."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Közösségi finanszírozás: ellenőrzött befektetők finanszírozzák tervét",
+      "metaDescription": "A Lentific piacterén ellenőrzött személyazonosságú befektetők finanszíroznak projekteket, szerződéssel és követéssel, akár egy hagyományos hitelnél.",
+      "h1": "Közösségi finanszírozás: ellenőrzött befektetők finanszírozzák projektjét",
+      "intro": "Projektjét platformunk befektetői közvetlenül is finanszírozhatják. Minden befektetőt ellenőrzünk, minden finanszírozáshoz szerződés tartozik, és mindent ügyfélfiókjából követhet.",
+      "points": [
+        {
+          "t": "Ellenőrzött befektetők",
+          "b": "Ellenőrizzük a befektetők személyazonosságát és hitelezési képességét, mielőtt projektet finanszírozhatnak."
+        },
+        {
+          "t": "Szabályos szerződés",
+          "b": "A szerződés automatikusan az Ön nyelvén készül el, teljes törlesztési ütemtervvel."
+        },
+        {
+          "t": "Átlátható követés",
+          "b": "Összegyűjtött összeg, befektetők, törlesztések: minden látható az ügyfélfiókjában."
+        },
+        {
+          "t": "Hitelfelvevőknek és befektetőknek",
+          "b": "Van tőkéje? Tegye közzé ajánlatát, és fedezze fel a finanszírozásra váró projekteket."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Finanszírozhatják magánszemélyek a hitelemet?",
+          "a": "Igen, a projekttől függően: piacterünkön olyan befektetők finanszíroznak projekteket, akiknek személyazonosságát ellenőriztük, szerződéssel és követéssel, akár egy hagyományos hitelnél."
+        },
+        {
+          "q": "Hogyan kerülhetem el a magánkölcsön-csalásokat?",
+          "a": "Legyen óvatos, ha egy „magánszemély” az interneten kölcsönt kínál, és előre díjat kér: ez gyakori csalás. A Lentificen a befektetők ellenőrzöttek."
+        },
+        {
+          "q": "Hogyan lehetek befektető?",
+          "a": "Hozzon létre befektetői fiókot, ellenőriztesse személyazonosságát és pénze eredetét, majd böngéssze a piactér projektjeit."
+        }
+      ]
+    }
   }
 }

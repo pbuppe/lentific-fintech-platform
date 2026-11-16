@@ -1102,5 +1102,178 @@
     "accept": "Aceitar",
     "refuse": "Recusar",
     "learnMore": "Saber mais"
+  },
+  "Seo": {
+    "homeTitle": "Intermediário de crédito online: crédito habitação, consolidação de créditos e crédito pessoal",
+    "homeDescription": "A Lentific compara por si as ofertas de bancos e investidores verificados: crédito habitação, consolidação de créditos, crédito para obras, crédito pessoal e financiamento colaborativo. Estudo gratuito, honorários só se obtiver o seu crédito.",
+    "simulatorTitle": "Simulador de crédito gratuito: calcule a sua prestação",
+    "simulatorDescription": "Calcule em segundos a prestação mensal, o custo total e a taxa do seu crédito habitação, crédito pessoal ou crédito para obras. Simulação gratuita e sem compromisso.",
+    "marketplaceTitle": "Financiamento colaborativo: projetos a financiar e investidores",
+    "marketplaceDescription": "Descubra os projetos que procuram financiamento e os capitais oferecidos por investidores verificados na plataforma de financiamento colaborativo Lentific.",
+    "keywords": "crédito, empréstimo, intermediário de crédito, crédito habitação, consolidação de créditos, crédito pessoal, crédito para obras, crédito ao consumo, financiamento, crowdlending, empréstimo entre particulares, simulador de crédito"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · intermediário de crédito online",
+      "pointsTitle": "Porquê escolher a Lentific",
+      "faqTitle": "Perguntas frequentes",
+      "ctaTitle": "Vamos falar do seu projeto",
+      "ctaText": "Estudo gratuito e sem compromisso. Os nossos honorários só são devidos se obtiver o seu crédito.",
+      "ctaButton": "Pedir um estudo gratuito",
+      "simulator": "Simular a minha prestação",
+      "otherServices": "As nossas outras soluções de financiamento"
+    },
+    "mortgage": {
+      "metaTitle": "Crédito habitação: compare as ofertas e obtenha a melhor taxa",
+      "metaDescription": "Compra, construção ou transferência de crédito: a Lentific compara as ofertas de crédito habitação de vários bancos e prepara o seu processo. Estudo gratuito, honorários só se obtiver o crédito.",
+      "h1": "Crédito habitação: o empréstimo certo para a sua casa",
+      "intro": "Compra de habitação própria, investimento para arrendar, construção ou transferência do seu crédito atual: comparamos as ofertas de vários bancos, preparamos um processo sólido e defendemo-lo para obter as melhores condições.",
+      "points": [
+        {
+          "t": "Vários bancos comparados",
+          "b": "Somos independentes e não estamos ligados a nenhuma instituição: apresentamos o seu processo onde tem mais hipóteses de obter uma boa taxa."
+        },
+        {
+          "t": "Um processo preparado por nós",
+          "b": "Reunimos os documentos, valorizamos o seu perfil e preparamos as conversas com o banco."
+        },
+        {
+          "t": "Acompanhamento online, passo a passo",
+          "b": "Do pedido ao desembolso dos fundos, acompanha o andamento a partir do seu espaço."
+        },
+        {
+          "t": "Honorários em caso de sucesso",
+          "b": "Os nossos honorários são fixados por escrito desde o início e só são devidos depois de obtido o seu crédito."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Que documentos são precisos para um crédito habitação?",
+          "a": "Documento de identificação, os três últimos recibos de vencimento, as duas últimas declarações de IRS, os três últimos extratos bancários e o contrato-promessa ou os orçamentos. Envia-os a partir do seu espaço seguro."
+        },
+        {
+          "q": "Quanto tempo demora a obter um crédito habitação?",
+          "a": "Em geral, quatro a oito semanas entre o primeiro contacto e a proposta de crédito, conforme o banco e a complexidade do processo."
+        },
+        {
+          "q": "Podem renegociar um crédito habitação em curso?",
+          "a": "Sim. Comparamos o seu crédito atual com as ofertas do mercado e indicamos se compensa renegociar ou transferir para outro banco."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Consolidação de créditos: uma só prestação, mais leve",
+      "metaDescription": "Junte os seus créditos num só para reduzir a prestação mensal e aliviar o orçamento. Estudo gratuito da Lentific, honorários só se a operação se concretizar.",
+      "h1": "Consolidação de créditos: uma só prestação para respirar",
+      "intro": "Créditos ao consumo, crédito automóvel, crédito habitação, descobertos: analisamos todos os seus créditos e procuramos uma solução que os junte num só, com uma prestação adaptada ao seu orçamento.",
+      "points": [
+        {
+          "t": "Uma só prestação",
+          "b": "Um só crédito, um só débito: o seu orçamento fica mais fácil de gerir."
+        },
+        {
+          "t": "Uma prestação mais leve",
+          "b": "Ajustando o prazo, a prestação pode baixar bastante. Mostramos também o efeito no custo total."
+        },
+        {
+          "t": "Uma análise completa e honesta",
+          "b": "Dizemos-lhe claramente se a consolidação lhe compensa e, se não, porquê."
+        },
+        {
+          "t": "Sem custos antecipados",
+          "b": "Nenhum pagamento pode ser exigido antes de obter o crédito: os nossos honorários só são devidos em caso de sucesso."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Que créditos se podem consolidar?",
+          "a": "Créditos ao consumo, cartões de crédito, crédito automóvel, crédito pessoal e, conforme o caso, crédito habitação e outras dívidas."
+        },
+        {
+          "q": "A consolidação fica mais cara?",
+          "a": "Alargar o prazo reduz a prestação mas pode aumentar o custo total. Mostramos-lhe os dois valores antes de qualquer decisão."
+        },
+        {
+          "q": "Quanto tempo demora uma consolidação de créditos?",
+          "a": "Conforme o processo, algumas semanas entre o primeiro contacto e o desembolso. Acompanha cada etapa online."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Crédito pessoal e crédito para obras: compare e financie o seu projeto",
+      "metaDescription": "Obras, automóvel, tesouraria: a Lentific compara as ofertas de crédito pessoal e de crédito para obras de vários credores. Simulação e estudo gratuitos.",
+      "h1": "Crédito pessoal e crédito para obras: financie os seus projetos",
+      "intro": "Renovação energética, ampliação, compra de automóvel ou necessidade de tesouraria: encontramos um crédito adaptado ao seu projeto, comparado entre vários credores, com uma prestação que respeita o seu orçamento.",
+      "points": [
+        {
+          "t": "Vários credores comparados",
+          "b": "Bancos e investidores verificados da nossa plataforma: vê as ofertas lado a lado."
+        },
+        {
+          "t": "Uma resposta rápida",
+          "b": "Processo 100% online e, com a opção «Processo prioritário», o seu crédito pode ser obtido em uma a três semanas."
+        },
+        {
+          "t": "Uma prestação controlada",
+          "b": "O simulador dá-lhe uma estimativa imediata; o seu consultor ajusta-a à sua situação real."
+        },
+        {
+          "t": "Um único interlocutor",
+          "b": "Um consultor acompanha o seu processo do início ao fim, por telefone ou videochamada."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Qual a diferença entre crédito para obras e crédito pessoal?",
+          "a": "O crédito para obras destina-se a trabalhos concretos, com orçamento; o crédito pessoal é de utilização livre. Orientamo-lo para a fórmula mais vantajosa."
+        },
+        {
+          "q": "Posso simular a prestação antes de fazer o pedido?",
+          "a": "Sim, o simulador do site é gratuito e sem compromisso. Dá uma estimativa indicativa, sem seguros nem encargos."
+        },
+        {
+          "q": "Um crédito compromete-me?",
+          "a": "Sim. Um crédito compromete-o e tem de ser reembolsado. Verifique a sua capacidade de reembolso antes de se comprometer: ajudamo-lo a fazê-lo."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Financiamento colaborativo: financie o seu projeto com investidores verificados",
+      "metaDescription": "No marketplace da Lentific, investidores com identidade verificada financiam projetos, com contrato e acompanhamento como num crédito tradicional.",
+      "h1": "Financiamento colaborativo: investidores verificados financiam o seu projeto",
+      "intro": "O seu projeto também pode ser financiado diretamente por investidores da nossa plataforma. Cada investidor é verificado, cada financiamento tem contrato e acompanha tudo a partir do seu espaço.",
+      "points": [
+        {
+          "t": "Investidores verificados",
+          "b": "Verificamos a identidade e a capacidade de empréstimo dos investidores antes de poderem financiar um projeto."
+        },
+        {
+          "t": "Um contrato como deve ser",
+          "b": "O contrato é gerado automaticamente no seu idioma, com o plano de pagamentos completo."
+        },
+        {
+          "t": "Um acompanhamento transparente",
+          "b": "Montante angariado, investidores, prestações: tudo é visível no seu espaço."
+        },
+        {
+          "t": "Para mutuários e investidores",
+          "b": "Tem capital? Publique a sua oferta e descubra os projetos a financiar."
+        }
+      ],
+      "faq": [
+        {
+          "q": "O meu crédito pode ser financiado por particulares?",
+          "a": "Sim, conforme o projeto: no nosso marketplace, investidores cuja identidade verificámos financiam projetos, com contrato e acompanhamento como num crédito tradicional."
+        },
+        {
+          "q": "Como evitar burlas de empréstimos entre particulares?",
+          "a": "Desconfie de um «particular» que lhe propõe um empréstimo na Internet pedindo encargos antecipados: é uma burla frequente. Na Lentific, os investidores são verificados."
+        },
+        {
+          "q": "Como me torno investidor?",
+          "a": "Crie uma conta de investidor, faça verificar a sua identidade e a origem dos fundos e consulte os projetos do marketplace."
+        }
+      ]
+    }
   }
 }
