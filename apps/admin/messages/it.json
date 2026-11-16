@@ -59,7 +59,15 @@
     "mandateView": "Vedi il mandato",
     "mandateDone": "Mandato generato e inviato al cliente.",
     "mandateError": "Importo degli onorari non valido.",
-    "feeFromMandate": "Onorari previsti dal mandato: {amount}"
+    "feeFromMandate": "Onorari previsti dal mandato: {amount}",
+    "rejectTitle": "Rifiuta la pratica",
+    "rejectReasonLabel": "Motivo comunicato al cliente",
+    "rejectReasonPlaceholder": "Es.: rapporto di indebitamento troppo elevato dopo l'analisi dei redditi",
+    "rejectButton": "Rifiuta e informa il cliente",
+    "rejectDone": "Pratica rifiutata: il cliente ha ricevuto il motivo nei messaggi e via e-mail.",
+    "rejectError": "Indicate un motivo (almeno 5 caratteri).",
+    "rejectNoticeTitle": "La vostra richiesta {reference} non è stata accolta",
+    "rejectNoticeBody": "Dopo l'analisi della vostra pratica, non siamo in grado di dare seguito favorevole alla vostra richiesta di finanziamento {reference}.\n\nMotivo: {reason}\n\nNon è dovuto alcun onorario. Potete risponderci qui se desiderate parlarne o presentare una nuova richiesta in seguito."
   },
   "AccountsPage": {
     "kicker": "Super amministratore",
@@ -365,7 +373,7 @@
     "fundsDateLabel": "Data dell'erogazione",
     "lenderReferenceLabel": "Riferimento del finanziatore",
     "proofLabel": "Avviso di erogazione",
-    "proofHint": "Attestazione del finanziatore o del notaio · PDF, JPG o PNG, max 10 MB.",
+    "proofHint": "Attestazione del finanziatore o del notaio · PDF, JPG o PNG, max 4 MB.",
     "declare": "Dichiarare i fondi erogati",
     "declaredBy": "Dichiarato da",
     "confirmedBy": "Confermato da",
@@ -439,7 +447,7 @@
       "not_confirmed": "L'erogazione non è ancora confermata.",
       "fees_locked": "Gli onorari possono essere richiesti solo dopo la conferma dell'erogazione.",
       "not_pending": "Questa richiesta di onorari non è più in attesa.",
-      "proof_missing": "Allegate l'avviso di erogazione (max 10 MB)."
+      "proof_missing": "Allegate l'avviso di erogazione (max 4 MB)."
     },
     "done": {
       "declared": "Erogazione dichiarata. Ora un super amministratore deve confermarla.",
@@ -598,7 +606,7 @@
     "rights": {
       "AGENT": "Pratiche, identità, contratti",
       "ADMIN": "+ convalide, erogazioni, messaggi",
-      "SUPER_ADMIN": "Tutti i diritti"
+      "SUPER_ADMIN": "Tutti i diritti: team (creare, rinominare, cambiare ruolo, eliminare), clienti, pratiche, erogazioni"
     },
     "team": {
       "inviteTitle": "Invitare un membro del team",
@@ -616,7 +624,13 @@
       "invitationPending": "Invito inviato",
       "you": "voi",
       "resend": "Reinviare l'invito",
-      "suspendNote": "La sospensione blocca subito l'accesso (tutte le sessioni vengono chiuse). L'account e le azioni passate restano nel registro. L'ultimo super admin attivo non può essere sospeso."
+      "suspendNote": "La sospensione blocca subito l'accesso (tutte le sessioni vengono chiuse). L'account e le azioni passate restano nel registro. L'ultimo super admin attivo non può essere sospeso.",
+      "edit": "Modifica",
+      "save": "Salva",
+      "rename": "Rinomina",
+      "delete": "Elimina",
+      "deleteConfirm": "Conferma l'eliminazione",
+      "deleteNote": "L'account viene rimosso dal team e non può più accedere; le sue azioni passate restano nel registro."
     },
     "clients": {
       "colClient": "Cliente",
@@ -679,20 +693,23 @@
       "session_opened": "Sessione di assistenza aperta per 30 minuti.",
       "guided": "La guida appare sullo schermo del cliente.",
       "uploaded": "Documento caricato per il cliente.",
-      "session_ended": "Sessione di assistenza terminata."
+      "session_ended": "Sessione di assistenza terminata.",
+      "renamed": "Nome modificato.",
+      "role_changed": "Ruolo modificato: la persona deve accedere di nuovo.",
+      "deleted": "Account eliminato."
     },
     "errors": {
       "not_allowed": "Azione non consentita.",
       "invalid_input": "Dati non validi.",
       "email_taken": "Esiste già un account con questa e-mail.",
-      "self": "Non potete modificare il vostro account qui.",
+      "self": "Non potete eliminare il vostro account né cambiare il vostro ruolo.",
       "last_super_admin": "Impossibile: è l'ultimo super admin attivo.",
       "not_found": "Account o richiesta non trovati.",
       "no_code": "Nessun codice valido per questo cliente: chiedetegli di generarne uno nuovo.",
       "bad_code": "Codice errato.",
       "too_many_attempts": "Troppi tentativi: il codice è bloccato. Il cliente deve generarne uno nuovo.",
       "no_session": "Nessuna sessione di assistenza aperta da voi per questo cliente.",
-      "file": "Scegliete un file (max 10 MB)."
+      "file": "Scegliete un file (max 4 MB)."
     },
     "log": {
       "title": "Registro delle azioni della console",
@@ -902,5 +919,9 @@
       "unsubscribe": "Disiscrivere",
       "delete": "Eliminare"
     }
+  },
+  "Upload": {
+    "sending": "Invio in corso…",
+    "tooLarge": "Questo file supera i 4 MB. Riducetelo (scansione a 150 dpi, PDF compresso o foto) e riprovate."
   }
 }

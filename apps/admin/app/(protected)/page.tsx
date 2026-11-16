@@ -1,7 +1,8 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getTranslations, getLocale } from "next-intl/server";
-import { listQueueByStatus, reviewApplication, createOffer } from "@fintech/applications";
+import { prisma, notificationsRepo } from "@fintech/database";
+import { listQueueByStatus, reviewApplication, createOffer, rejectApplication } from "@fintech/applications";
 import { generateBrokerMandate, latestBrokerMandates } from "@fintech/contracts";
 import { sendClientNoticeEmail } from "@fintech/auth";
 import { getFileUrl } from "@fintech/documents";
@@ -51,7 +52,38 @@ async function mandateAction(formData: FormData) {
   redirect(`/?mandate=done#${applicationId}`);
 }
 
-export default async function AdminDashboard({ searchParams }: { searchParams: { mandate?: string } }) {
+const CLIENT_LOCALES = ["fr", "en", "es", "it", "hu", "pt", "de", "nl"];
+
+/** Refus après analyse : statut « Refusée », motif envoyé au client (message + e-mail, dans sa langue). */
+async function rejectAction(formData: FormData) {
+  "use server";
+  const staff = await getCurrentUser();
+  if (!staff || !["ADMIN", "SUPER_ADMIN"].includes(staff.role)) redirect("/");
+  const applicationId = formData.get("applicationId") as string;
+  const reason = String(formData.get("reason") ?? "").trim().slice(0, 1000);
+  if (reason.length < 5) redirect(`/?reject=error#${applicationId}`);
+  const application = await rejectApplication(applicationId, staff.id, reason);
+  const client = await prisma.user.findUniqueOrThrow({
+    where: { id: application.borrowerId },
+    select: { id: true, email: true, name: true, role: true, preferredLocale: true },
+  });
+  const clientLocale = CLIENT_LOCALES.includes(client.preferredLocale ?? "") ? client.preferredLocale! : "fr";
+  const tClient = await getTranslations({ locale: clientLocale, namespace: "CasesQueuePage" });
+  await notificationsRepo.create({
+    userId: client.id,
+    event: "application.rejected",
+    kind: "message",
+    title: tClient("rejectNoticeTitle", { reference: application.reference }),
+    body: tClient("rejectNoticeBody", { reference: application.reference, reason }),
+    link: "/messages",
+    senderId: staff.id,
+  });
+  await sendClientNoticeEmail(client, "message", staff.name ?? staff.email);
+  revalidatePath("/");
+  redirect("/?reject=done");
+}
+
+export default async function AdminDashboard({ searchParams }: { searchParams: { mandate?: string; reject?: string } }) {
   const t = await getTranslations("CasesQueuePage");
   const locale = await getLocale();
   const STATUS_LABEL: Record<string, string> = {
@@ -91,6 +123,12 @@ export default async function AdminDashboard({ searchParams }: { searchParams: {
 
       {searchParams.mandate === "done" && (
         <p role="status" className="mb-4 rounded-lg bg-success-soft px-3 py-2 text-sm text-success">{t("mandateDone")}</p>
+      )}
+      {searchParams.reject === "done" && (
+        <p role="status" className="mb-4 rounded-lg bg-success-soft px-3 py-2 text-sm text-success">{t("rejectDone")}</p>
+      )}
+      {searchParams.reject === "error" && (
+        <p role="alert" className="mb-4 rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent">{t("rejectError")}</p>
       )}
       {searchParams.mandate === "error" && (
         <p role="alert" className="mb-4 rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent">{t("mandateError")}</p>
@@ -217,6 +255,27 @@ export default async function AdminDashboard({ searchParams }: { searchParams: {
                   </div>
                 );
               })()}
+
+              <details className="mt-3 rounded-lg border border-line p-3">
+                <summary className="cursor-pointer text-xs font-semibold text-accent">{t("rejectTitle")}</summary>
+                <form action={rejectAction} className="mt-2 grid gap-2">
+                  <input type="hidden" name="applicationId" value={app.id} />
+                  <label className="grid gap-1 text-xs text-ink-soft">
+                    {t("rejectReasonLabel")}
+                    <textarea
+                      name="reason"
+                      required
+                      minLength={5}
+                      rows={2}
+                      placeholder={t("rejectReasonPlaceholder")}
+                      className="rounded-md border border-line px-2 py-1.5 text-sm text-ink"
+                    />
+                  </label>
+                  <button className="justify-self-start rounded-lg border border-accent px-3.5 py-2 text-xs font-semibold text-accent hover:bg-accent-soft">
+                    {t("rejectButton")}
+                  </button>
+                </form>
+              </details>
             </Card>
           ))}
         </div>

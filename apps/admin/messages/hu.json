@@ -59,7 +59,15 @@
     "mandateView": "Megbízás megtekintése",
     "mandateDone": "A megbízás elkészült és elküldtük az ügyfélnek.",
     "mandateError": "Érvénytelen díjösszeg.",
-    "feeFromMandate": "A megbízásban rögzített díj: {amount}"
+    "feeFromMandate": "A megbízásban rögzített díj: {amount}",
+    "rejectTitle": "Ügy elutasítása",
+    "rejectReasonLabel": "Az ügyfélnek közölt indok",
+    "rejectReasonPlaceholder": "Pl.: a jövedelmek elemzése után túl magas eladósodottsági arány",
+    "rejectButton": "Elutasítás és az ügyfél értesítése",
+    "rejectDone": "Az ügy elutasítva: az ügyfél üzenetben és e-mailben megkapta az indokot.",
+    "rejectError": "Adjon meg indokot (legalább 5 karakter).",
+    "rejectNoticeTitle": "{reference} számú kérelmét nem tudtuk elfogadni",
+    "rejectNoticeBody": "Ügyirata elemzése után nem tudunk kedvezően dönteni a(z) {reference} számú finanszírozási kérelméről.\n\nIndok: {reason}\n\nÖnnek semmilyen díjat nem kell fizetnie. Itt válaszolhat, ha szeretné megbeszélni, vagy később új kérelmet nyújthat be."
   },
   "AccountsPage": {
     "kicker": "Szuperadmin",
@@ -365,7 +373,7 @@
     "fundsDateLabel": "Folyósítás dátuma",
     "lenderReferenceLabel": "Hitelezői hivatkozás",
     "proofLabel": "Folyósítási értesítő",
-    "proofHint": "A hitelező vagy a közjegyző igazolása · PDF, JPG vagy PNG, max. 10 MB.",
+    "proofHint": "A hitelező vagy a közjegyző igazolása · PDF, JPG vagy PNG, max. 4 MB.",
     "declare": "Folyósítás bejelentése",
     "declaredBy": "Bejelentette",
     "confirmedBy": "Megerősítette",
@@ -439,7 +447,7 @@
       "not_confirmed": "A folyósítás még nincs megerősítve.",
       "fees_locked": "Díjat csak a folyósítás megerősítése után lehet kérni.",
       "not_pending": "Ez a díjkérés már nem függőben lévő.",
-      "proof_missing": "Csatolja a folyósítási értesítőt (max. 10 MB)."
+      "proof_missing": "Csatolja a folyósítási értesítőt (max. 4 MB)."
     },
     "done": {
       "declared": "Folyósítás bejelentve. Most egy szuperadminisztrátornak kell megerősítenie.",
@@ -598,7 +606,7 @@
     "rights": {
       "AGENT": "Ügyek, azonosítás, szerződések",
       "ADMIN": "+ jóváhagyások, folyósítások, üzenetek",
-      "SUPER_ADMIN": "Minden jogosultság"
+      "SUPER_ADMIN": "Minden jog: csapat (létrehozás, átnevezés, szerepkör, törlés), ügyfelek, ügyek, folyósítások"
     },
     "team": {
       "inviteTitle": "Csapattag meghívása",
@@ -616,7 +624,13 @@
       "invitationPending": "Meghívó elküldve",
       "you": "Ön",
       "resend": "Meghívó újraküldése",
-      "suspendNote": "A felfüggesztés azonnal megszünteti a hozzáférést (minden munkamenet bezárul). A fiók és korábbi műveletei a naplóban maradnak. Az utolsó aktív szuperadmin nem függeszthető fel."
+      "suspendNote": "A felfüggesztés azonnal megszünteti a hozzáférést (minden munkamenet bezárul). A fiók és korábbi műveletei a naplóban maradnak. Az utolsó aktív szuperadmin nem függeszthető fel.",
+      "edit": "Szerkesztés",
+      "save": "Mentés",
+      "rename": "Átnevezés",
+      "delete": "Törlés",
+      "deleteConfirm": "Törlés megerősítése",
+      "deleteNote": "A fiók kikerül a csapatból, és többé nem tud bejelentkezni; korábbi műveletei a naplóban maradnak."
     },
     "clients": {
       "colClient": "Ügyfél",
@@ -679,20 +693,23 @@
       "session_opened": "Segítségnyújtási munkamenet megnyitva 30 percre.",
       "guided": "Az útmutató megjelent az ügyfél képernyőjén.",
       "uploaded": "Dokumentum feltöltve az ügyfél helyett.",
-      "session_ended": "Segítségnyújtás befejezve."
+      "session_ended": "Segítségnyújtás befejezve.",
+      "renamed": "Név módosítva.",
+      "role_changed": "Szerepkör módosítva: az érintettnek újra be kell jelentkeznie.",
+      "deleted": "Fiók törölve."
     },
     "errors": {
       "not_allowed": "Nem engedélyezett művelet.",
       "invalid_input": "Érvénytelen adatok.",
       "email_taken": "Ezzel az e-mail-címmel már van fiók.",
-      "self": "A saját fiókját itt nem módosíthatja.",
+      "self": "Saját fiókját nem törölheti, és saját szerepkörét nem módosíthatja.",
       "last_super_admin": "Nem lehetséges: ő az utolsó aktív szuperadmin.",
       "not_found": "A fiók vagy kérés nem található.",
       "no_code": "Nincs érvényes kód: kérje meg az ügyfelet, hogy kérjen újat.",
       "bad_code": "Hibás kód.",
       "too_many_attempts": "Túl sok próbálkozás: a kód letiltva. Az ügyfélnek újat kell kérnie.",
       "no_session": "Nincs Ön által nyitott munkamenet ennél az ügyfélnél.",
-      "file": "Válasszon fájlt (max. 10 MB)."
+      "file": "Válasszon fájlt (max. 4 MB)."
     },
     "log": {
       "title": "Konzol műveleti napló",
@@ -902,5 +919,9 @@
       "unsubscribe": "Leiratkoztatás",
       "delete": "Törlés"
     }
+  },
+  "Upload": {
+    "sending": "Küldés folyamatban…",
+    "tooLarge": "Ez a fájl nagyobb 4 MB-nál. Csökkentse a méretét (150 dpi-s szkennelés, tömörített PDF vagy fénykép), majd próbálja újra."
   }
 }

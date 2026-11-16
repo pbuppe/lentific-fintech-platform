@@ -59,7 +59,15 @@
     "mandateView": "View the mandate",
     "mandateDone": "Mandate generated and sent to the client.",
     "mandateError": "Invalid fee amount.",
-    "feeFromMandate": "Fees set in the mandate: {amount}"
+    "feeFromMandate": "Fees set in the mandate: {amount}",
+    "rejectTitle": "Decline the case",
+    "rejectReasonLabel": "Reason given to the client",
+    "rejectReasonPlaceholder": "E.g. debt ratio too high after reviewing income",
+    "rejectButton": "Decline and inform the client",
+    "rejectDone": "Case declined: the client received the reason in their messages and by e-mail.",
+    "rejectError": "Please give a reason (at least 5 characters).",
+    "rejectNoticeTitle": "Your request {reference} was not approved",
+    "rejectNoticeBody": "After reviewing your file, we are unable to proceed with your financing request {reference}.\n\nReason: {reason}\n\nNo fee is due. You can reply here if you would like to discuss it or submit a new request later."
   },
   "AccountsPage": {
     "kicker": "Super admin",
@@ -365,7 +373,7 @@
     "fundsDateLabel": "Disbursement date",
     "lenderReferenceLabel": "Lender reference",
     "proofLabel": "Release notice",
-    "proofHint": "Certificate from the lender or notary · PDF, JPG or PNG, 10 MB max.",
+    "proofHint": "Certificate from the lender or notary · PDF, JPG or PNG, 4 MB max.",
     "declare": "Declare funds disbursed",
     "declaredBy": "Declared by",
     "confirmedBy": "Confirmed by",
@@ -439,7 +447,7 @@
       "not_confirmed": "The disbursement is not confirmed yet.",
       "fees_locked": "Fees can only be requested once the disbursement is confirmed.",
       "not_pending": "This fee request is no longer pending.",
-      "proof_missing": "Attach the release notice (10 MB max)."
+      "proof_missing": "Attach the release notice (4 MB max)."
     },
     "done": {
       "declared": "Disbursement declared. A super administrator must now confirm it.",
@@ -598,7 +606,7 @@
     "rights": {
       "AGENT": "Cases, ID, contracts",
       "ADMIN": "+ approvals, disbursements, messages",
-      "SUPER_ADMIN": "All rights"
+      "SUPER_ADMIN": "All rights: team (create, rename, change role, delete), clients, cases, disbursements"
     },
     "team": {
       "inviteTitle": "Invite a team member",
@@ -616,7 +624,13 @@
       "invitationPending": "Invitation sent",
       "you": "you",
       "resend": "Resend invitation",
-      "suspendNote": "Suspending cuts access immediately (all sessions are closed). The account and its past actions stay in the log. The last active super admin cannot be suspended."
+      "suspendNote": "Suspending cuts access immediately (all sessions are closed). The account and its past actions stay in the log. The last active super admin cannot be suspended.",
+      "edit": "Edit",
+      "save": "Save",
+      "rename": "Rename",
+      "delete": "Delete",
+      "deleteConfirm": "Confirm deletion",
+      "deleteNote": "The account is removed from the team and can no longer sign in; its past actions remain in the log."
     },
     "clients": {
       "colClient": "Client",
@@ -679,20 +693,23 @@
       "session_opened": "Assistance session open for 30 minutes.",
       "guided": "The guide is showing on the client's screen.",
       "uploaded": "Document uploaded for the client.",
-      "session_ended": "Assistance session ended."
+      "session_ended": "Assistance session ended.",
+      "renamed": "Name updated.",
+      "role_changed": "Role changed: the person must sign in again.",
+      "deleted": "Account deleted."
     },
     "errors": {
       "not_allowed": "Action not allowed.",
       "invalid_input": "Invalid information.",
       "email_taken": "An account already exists with this e-mail.",
-      "self": "You cannot change your own account here.",
+      "self": "You cannot delete your own account or change your own role.",
       "last_super_admin": "Not possible: this is the last active super admin.",
       "not_found": "Account or request not found.",
       "no_code": "No valid code for this client: ask them to generate a new one.",
       "bad_code": "Wrong code.",
       "too_many_attempts": "Too many attempts: this code is blocked. The client must generate a new one.",
       "no_session": "No assistance session opened by you for this client.",
-      "file": "Choose a file (10 MB max)."
+      "file": "Choose a file (4 MB max)."
     },
     "log": {
       "title": "Console action log",
@@ -902,5 +919,9 @@
       "unsubscribe": "Unsubscribe",
       "delete": "Delete"
     }
+  },
+  "Upload": {
+    "sending": "Sending…",
+    "tooLarge": "This file is larger than 4 MB. Reduce it (150 dpi scan, compressed PDF or photo) and try again."
   }
 }

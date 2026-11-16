@@ -10,6 +10,7 @@ import {
   contractsRepo,
   signaturesRepo,
   type ApplicationStatus,
+  auditLogsRepo,
 } from "@fintech/database";
 import { assessRisk } from "@fintech/risk";
 import { emit, registerHandler } from "@fintech/workflow";
@@ -162,6 +163,28 @@ export async function checkSlaBreaches() {
     });
   }
   return overdue.length;
+}
+
+/**
+ * Refus d'un dossier après analyse (demande produit 2026-11-16) : possible
+ * tant qu'aucune offre n'a été acceptée. Le motif est conservé dans le
+ * journal d'audit ; le back-office l'adresse aussi au client par message.
+ */
+export const REJECTABLE_STATUSES = ["SUBMITTED", "KYC_PENDING", "KYC_VERIFIED", "UNDER_REVIEW", "PUBLISHED"] as const;
+
+export async function rejectApplication(applicationId: string, actorId: string, reason: string) {
+  const application = await applicationsRepo.findById(applicationId);
+  if (!application) throw new Error("Demande introuvable.");
+  if (!(REJECTABLE_STATUSES as readonly string[]).includes(application.status)) throw new Error("not_rejectable");
+  await applicationsRepo.transitionStatus(applicationId, "REJECTED", actorId);
+  await auditLogsRepo.create({
+    userId: actorId,
+    action: "application.rejected",
+    entity: `Application:${applicationId}`,
+    before: { status: application.status },
+    after: { status: "REJECTED", reason },
+  });
+  return application;
 }
 
 // Une fois le KYC confirmé par un agent, la demande avance automatiquement.

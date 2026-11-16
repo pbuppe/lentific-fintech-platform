@@ -59,7 +59,15 @@
     "mandateView": "Ver o mandato",
     "mandateDone": "Mandato gerado e enviado ao cliente.",
     "mandateError": "Montante de honorários inválido.",
-    "feeFromMandate": "Honorários previstos no mandato: {amount}"
+    "feeFromMandate": "Honorários previstos no mandato: {amount}",
+    "rejectTitle": "Recusar o processo",
+    "rejectReasonLabel": "Motivo comunicado ao cliente",
+    "rejectReasonPlaceholder": "Ex.: taxa de esforço demasiado elevada após análise dos rendimentos",
+    "rejectButton": "Recusar e informar o cliente",
+    "rejectDone": "Processo recusado: o cliente recebeu o motivo nas mensagens e por e-mail.",
+    "rejectError": "Indique um motivo (pelo menos 5 caracteres).",
+    "rejectNoticeTitle": "O seu pedido {reference} não foi aceite",
+    "rejectNoticeBody": "Após análise do seu processo, não nos é possível dar seguimento favorável ao seu pedido de financiamento {reference}.\n\nMotivo: {reason}\n\nNão são devidos honorários. Pode responder-nos aqui se quiser falar sobre isso ou apresentar um novo pedido mais tarde."
   },
   "AccountsPage": {
     "kicker": "Superadministrador",
@@ -365,7 +373,7 @@
     "fundsDateLabel": "Data do desembolso",
     "lenderReferenceLabel": "Referência do credor",
     "proofLabel": "Aviso de desembolso",
-    "proofHint": "Atestado do credor ou do notário · PDF, JPG ou PNG, máx. 10 MB.",
+    "proofHint": "Atestado do credor ou do notário · PDF, JPG ou PNG, máx. 4 MB.",
     "declare": "Declarar fundos desembolsados",
     "declaredBy": "Declarado por",
     "confirmedBy": "Confirmado por",
@@ -439,7 +447,7 @@
       "not_confirmed": "O desembolso ainda não está confirmado.",
       "fees_locked": "Os honorários só podem ser pedidos após a confirmação do desembolso.",
       "not_pending": "Este pedido de honorários já não está pendente.",
-      "proof_missing": "Anexe o aviso de desembolso (máx. 10 MB)."
+      "proof_missing": "Anexe o aviso de desembolso (máx. 4 MB)."
     },
     "done": {
       "declared": "Desembolso declarado. Um superadministrador tem agora de o confirmar.",
@@ -598,7 +606,7 @@
     "rights": {
       "AGENT": "Processos, identidade, contratos",
       "ADMIN": "+ validações, desembolsos, mensagens",
-      "SUPER_ADMIN": "Todos os direitos"
+      "SUPER_ADMIN": "Todos os direitos: equipa (criar, mudar o nome, alterar o papel, eliminar), clientes, processos, desembolsos"
     },
     "team": {
       "inviteTitle": "Convidar um membro da equipa",
@@ -616,7 +624,13 @@
       "invitationPending": "Convite enviado",
       "you": "você",
       "resend": "Reenviar o convite",
-      "suspendNote": "Suspender corta o acesso de imediato (todas as sessões são fechadas). A conta e as suas ações passadas ficam no registo. O último superadmin ativo não pode ser suspenso."
+      "suspendNote": "Suspender corta o acesso de imediato (todas as sessões são fechadas). A conta e as suas ações passadas ficam no registo. O último superadmin ativo não pode ser suspenso.",
+      "edit": "Modificar",
+      "save": "Guardar",
+      "rename": "Mudar o nome",
+      "delete": "Eliminar",
+      "deleteConfirm": "Confirmar a eliminação",
+      "deleteNote": "A conta é retirada da equipa e deixa de poder iniciar sessão; as suas ações passadas ficam no registo."
     },
     "clients": {
       "colClient": "Cliente",
@@ -679,20 +693,23 @@
       "session_opened": "Sessão de assistência aberta por 30 minutos.",
       "guided": "A orientação aparece no ecrã do cliente.",
       "uploaded": "Documento depositado para o cliente.",
-      "session_ended": "Sessão de assistência terminada."
+      "session_ended": "Sessão de assistência terminada.",
+      "renamed": "Nome alterado.",
+      "role_changed": "Papel alterado: a pessoa tem de voltar a iniciar sessão.",
+      "deleted": "Conta eliminada."
     },
     "errors": {
       "not_allowed": "Ação não autorizada.",
       "invalid_input": "Dados inválidos.",
       "email_taken": "Já existe uma conta com este e-mail.",
-      "self": "Não pode alterar a sua própria conta aqui.",
+      "self": "Não pode eliminar a sua própria conta nem alterar o seu próprio papel.",
       "last_super_admin": "Impossível: é o último superadmin ativo.",
       "not_found": "Conta ou pedido não encontrado.",
       "no_code": "Nenhum código válido para este cliente: peça-lhe para gerar um novo.",
       "bad_code": "Código incorreto.",
       "too_many_attempts": "Demasiadas tentativas: o código está bloqueado. O cliente tem de gerar um novo.",
       "no_session": "Nenhuma sessão de assistência aberta por si para este cliente.",
-      "file": "Escolha um ficheiro (máx. 10 MB)."
+      "file": "Escolha um ficheiro (máx. 4 MB)."
     },
     "log": {
       "title": "Registo das ações da consola",
@@ -902,5 +919,9 @@
       "unsubscribe": "Cancelar subscrição",
       "delete": "Eliminar"
     }
+  },
+  "Upload": {
+    "sending": "A enviar…",
+    "tooLarge": "Este ficheiro tem mais de 4 MB. Reduza-o (digitalização a 150 dpi, PDF comprimido ou fotografia) e tente novamente."
   }
 }

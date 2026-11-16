@@ -59,7 +59,15 @@
     "mandateView": "Opdracht bekijken",
     "mandateDone": "Opdracht opgesteld en naar de klant verzonden.",
     "mandateError": "Ongeldig honorariumbedrag.",
-    "feeFromMandate": "Honorarium volgens de opdracht: {amount}"
+    "feeFromMandate": "Honorarium volgens de opdracht: {amount}",
+    "rejectTitle": "Dossier weigeren",
+    "rejectReasonLabel": "Reden meegedeeld aan de klant",
+    "rejectReasonPlaceholder": "Bijv.: schuldratio te hoog na analyse van de inkomsten",
+    "rejectButton": "Weigeren en klant informeren",
+    "rejectDone": "Dossier geweigerd: de klant heeft de reden ontvangen in zijn berichten en per e-mail.",
+    "rejectError": "Geef een reden op (minstens 5 tekens).",
+    "rejectNoticeTitle": "Uw aanvraag {reference} is niet aanvaard",
+    "rejectNoticeBody": "Na analyse van uw dossier kunnen wij helaas niet ingaan op uw financieringsaanvraag {reference}.\n\nReden: {reason}\n\nEr is geen honorarium verschuldigd. U kunt ons hier antwoorden als u erover wilt praten of later een nieuwe aanvraag wilt indienen."
   },
   "AccountsPage": {
     "kicker": "Super administrator",
@@ -365,7 +373,7 @@
     "fundsDateLabel": "Datum van uitbetaling",
     "lenderReferenceLabel": "Referentie kredietgever",
     "proofLabel": "Uitbetalingsbericht",
-    "proofHint": "Attest van de kredietgever of notaris · PDF, JPG of PNG, max. 10 MB.",
+    "proofHint": "Attest van de kredietgever of notaris · PDF, JPG of PNG, max. 4 MB.",
     "declare": "Uitbetaling melden",
     "declaredBy": "Gemeld door",
     "confirmedBy": "Bevestigd door",
@@ -439,7 +447,7 @@
       "not_confirmed": "De uitbetaling is nog niet bevestigd.",
       "fees_locked": "Honoraria kunnen pas na bevestigde uitbetaling worden gevraagd.",
       "not_pending": "Dit honorariumverzoek staat niet meer open.",
-      "proof_missing": "Voeg het uitbetalingsbericht toe (max. 10 MB)."
+      "proof_missing": "Voeg het uitbetalingsbericht toe (max. 4 MB)."
     },
     "done": {
       "declared": "Uitbetaling gemeld. Een superbeheerder moet ze nu bevestigen.",
@@ -598,7 +606,7 @@
     "rights": {
       "AGENT": "Dossiers, identiteit, contracten",
       "ADMIN": "+ goedkeuringen, uitbetalingen, berichten",
-      "SUPER_ADMIN": "Alle rechten"
+      "SUPER_ADMIN": "Alle rechten: team (aanmaken, hernoemen, rol wijzigen, verwijderen), klanten, dossiers, uitbetalingen"
     },
     "team": {
       "inviteTitle": "Teamlid uitnodigen",
@@ -616,7 +624,13 @@
       "invitationPending": "Uitnodiging verstuurd",
       "you": "u",
       "resend": "Uitnodiging opnieuw sturen",
-      "suspendNote": "Schorsen sluit de toegang onmiddellijk af (alle sessies worden gesloten). Het account en zijn eerdere acties blijven in het logboek. De laatste actieve superadmin kan niet worden geschorst."
+      "suspendNote": "Schorsen sluit de toegang onmiddellijk af (alle sessies worden gesloten). Het account en zijn eerdere acties blijven in het logboek. De laatste actieve superadmin kan niet worden geschorst.",
+      "edit": "Wijzigen",
+      "save": "Opslaan",
+      "rename": "Naam wijzigen",
+      "delete": "Verwijderen",
+      "deleteConfirm": "Verwijdering bevestigen",
+      "deleteNote": "Het account wordt uit het team gehaald en kan niet meer inloggen; eerdere acties blijven in het logboek."
     },
     "clients": {
       "colClient": "Klant",
@@ -679,20 +693,23 @@
       "session_opened": "Assistentiesessie geopend voor 30 minuten.",
       "guided": "De begeleiding verschijnt op het scherm van de klant.",
       "uploaded": "Document voor de klant geüpload.",
-      "session_ended": "Assistentiesessie beëindigd."
+      "session_ended": "Assistentiesessie beëindigd.",
+      "renamed": "Naam gewijzigd.",
+      "role_changed": "Rol gewijzigd: de persoon moet opnieuw inloggen.",
+      "deleted": "Account verwijderd."
     },
     "errors": {
       "not_allowed": "Actie niet toegestaan.",
       "invalid_input": "Ongeldige gegevens.",
       "email_taken": "Er bestaat al een account met dit e-mailadres.",
-      "self": "U kunt uw eigen account hier niet wijzigen.",
+      "self": "U kunt uw eigen account niet verwijderen en uw eigen rol niet wijzigen.",
       "last_super_admin": "Onmogelijk: dit is de laatste actieve superadmin.",
       "not_found": "Account of verzoek niet gevonden.",
       "no_code": "Geen geldige code voor deze klant: vraag hem een nieuwe aan te maken.",
       "bad_code": "Onjuiste code.",
       "too_many_attempts": "Te veel pogingen: de code is geblokkeerd. De klant moet een nieuwe aanmaken.",
       "no_session": "Geen door u geopende sessie voor deze klant.",
-      "file": "Kies een bestand (max. 10 MB)."
+      "file": "Kies een bestand (max. 4 MB)."
     },
     "log": {
       "title": "Logboek van console-acties",
@@ -902,5 +919,9 @@
       "unsubscribe": "Afmelden",
       "delete": "Verwijderen"
     }
+  },
+  "Upload": {
+    "sending": "Bezig met verzenden…",
+    "tooLarge": "Dit bestand is groter dan 4 MB. Verklein het (scan op 150 dpi, gecomprimeerde pdf of foto) en probeer opnieuw."
   }
 }

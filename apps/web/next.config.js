@@ -27,6 +27,9 @@ const nextConfig = {
     "@fintech/workflow",
   ],
   experimental: {
+    // Envois de fichiers (justificatifs, contrats signés, preuves de versement) :
+    // 1 Mo par défaut, trop peu pour un scan ou une photo ; Vercel plafonne à 4,5 Mo.
+    serverActions: { bodySizeLimit: "4mb" },
     // Le monorepo pnpm a des packages en dehors de apps/web, nécessaire pour que
     // Next.js résolve correctement les workspaces (§ arborescence).
     externalDir: true,

@@ -59,7 +59,15 @@
     "mandateView": "Auftrag ansehen",
     "mandateDone": "Auftrag erstellt und an den Kunden gesendet.",
     "mandateError": "Ungültiger Honorarbetrag.",
-    "feeFromMandate": "Im Auftrag vereinbartes Honorar: {amount}"
+    "feeFromMandate": "Im Auftrag vereinbartes Honorar: {amount}",
+    "rejectTitle": "Akte ablehnen",
+    "rejectReasonLabel": "Dem Kunden mitgeteilter Grund",
+    "rejectReasonPlaceholder": "Z. B. zu hohe Verschuldungsquote nach Prüfung der Einkünfte",
+    "rejectButton": "Ablehnen und Kunden informieren",
+    "rejectDone": "Akte abgelehnt: Der Kunde hat den Grund in seinen Nachrichten und per E-Mail erhalten.",
+    "rejectError": "Bitte geben Sie einen Grund an (mindestens 5 Zeichen).",
+    "rejectNoticeTitle": "Ihre Anfrage {reference} wurde nicht angenommen",
+    "rejectNoticeBody": "Nach Prüfung Ihrer Akte können wir Ihrer Finanzierungsanfrage {reference} leider nicht stattgeben.\n\nGrund: {reason}\n\nEs ist kein Honorar fällig. Sie können uns hier antworten, wenn Sie darüber sprechen oder später eine neue Anfrage stellen möchten."
   },
   "AccountsPage": {
     "kicker": "Super-Admin",
@@ -365,7 +373,7 @@
     "fundsDateLabel": "Auszahlungsdatum",
     "lenderReferenceLabel": "Referenz des Kreditgebers",
     "proofLabel": "Auszahlungsmitteilung",
-    "proofHint": "Bescheinigung des Kreditgebers oder Notars · PDF, JPG oder PNG, max. 10 MB.",
+    "proofHint": "Bescheinigung des Kreditgebers oder Notars · PDF, JPG oder PNG, max. 4 MB.",
     "declare": "Auszahlung melden",
     "declaredBy": "Gemeldet von",
     "confirmedBy": "Bestätigt von",
@@ -439,7 +447,7 @@
       "not_confirmed": "Die Auszahlung ist noch nicht bestätigt.",
       "fees_locked": "Honorare können erst nach bestätigter Auszahlung angefordert werden.",
       "not_pending": "Diese Honoraranforderung ist nicht mehr offen.",
-      "proof_missing": "Fügen Sie die Auszahlungsmitteilung bei (max. 10 MB)."
+      "proof_missing": "Fügen Sie die Auszahlungsmitteilung bei (max. 4 MB)."
     },
     "done": {
       "declared": "Auszahlung gemeldet. Nun muss ein Super-Administrator sie bestätigen.",
@@ -598,7 +606,7 @@
     "rights": {
       "AGENT": "Vorgänge, Identität, Verträge",
       "ADMIN": "+ Freigaben, Auszahlungen, Nachrichten",
-      "SUPER_ADMIN": "Alle Rechte"
+      "SUPER_ADMIN": "Alle Rechte: Team (anlegen, umbenennen, Rolle ändern, löschen), Kunden, Akten, Auszahlungen"
     },
     "team": {
       "inviteTitle": "Teammitglied einladen",
@@ -616,7 +624,13 @@
       "invitationPending": "Einladung gesendet",
       "you": "Sie",
       "resend": "Einladung erneut senden",
-      "suspendNote": "Eine Sperre beendet den Zugang sofort (alle Sitzungen werden geschlossen). Konto und frühere Aktionen bleiben im Protokoll. Der letzte aktive Super-Admin kann nicht gesperrt werden."
+      "suspendNote": "Eine Sperre beendet den Zugang sofort (alle Sitzungen werden geschlossen). Konto und frühere Aktionen bleiben im Protokoll. Der letzte aktive Super-Admin kann nicht gesperrt werden.",
+      "edit": "Bearbeiten",
+      "save": "Speichern",
+      "rename": "Umbenennen",
+      "delete": "Löschen",
+      "deleteConfirm": "Löschen bestätigen",
+      "deleteNote": "Das Konto wird aus dem Team entfernt und kann sich nicht mehr anmelden; seine bisherigen Aktionen bleiben im Protokoll."
     },
     "clients": {
       "colClient": "Kunde",
@@ -679,20 +693,23 @@
       "session_opened": "Unterstützungssitzung für 30 Minuten geöffnet.",
       "guided": "Die Anleitung erscheint auf dem Bildschirm des Kunden.",
       "uploaded": "Dokument für den Kunden hochgeladen.",
-      "session_ended": "Unterstützungssitzung beendet."
+      "session_ended": "Unterstützungssitzung beendet.",
+      "renamed": "Name geändert.",
+      "role_changed": "Rolle geändert: die Person muss sich neu anmelden.",
+      "deleted": "Konto gelöscht."
     },
     "errors": {
       "not_allowed": "Aktion nicht erlaubt.",
       "invalid_input": "Ungültige Angaben.",
       "email_taken": "Mit dieser E-Mail existiert bereits ein Konto.",
-      "self": "Sie können Ihr eigenes Konto hier nicht ändern.",
+      "self": "Sie können Ihr eigenes Konto nicht löschen und Ihre eigene Rolle nicht ändern.",
       "last_super_admin": "Nicht möglich: Das ist der letzte aktive Super-Admin.",
       "not_found": "Konto oder Anfrage nicht gefunden.",
       "no_code": "Kein gültiger Code für diesen Kunden: Bitten Sie ihn, einen neuen zu erzeugen.",
       "bad_code": "Falscher Code.",
       "too_many_attempts": "Zu viele Versuche: Der Code ist gesperrt. Der Kunde muss einen neuen erzeugen.",
       "no_session": "Keine von Ihnen geöffnete Sitzung für diesen Kunden.",
-      "file": "Wählen Sie eine Datei (max. 10 MB)."
+      "file": "Wählen Sie eine Datei (max. 4 MB)."
     },
     "log": {
       "title": "Protokoll der Konsolenaktionen",
@@ -902,5 +919,9 @@
       "unsubscribe": "Abmelden",
       "delete": "Löschen"
     }
+  },
+  "Upload": {
+    "sending": "Wird gesendet…",
+    "tooLarge": "Diese Datei ist größer als 4 MB. Verkleinern Sie sie (Scan mit 150 dpi, komprimiertes PDF oder Foto) und versuchen Sie es erneut."
   }
 }
