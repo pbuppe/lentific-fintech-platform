@@ -182,7 +182,8 @@
     "emailLabel": "E-mail",
     "passwordLabel": "Wachtwoord (minimaal 8 tekens)",
     "submit": "Account aanmaken",
-    "genericError": "Het account kon niet worden aangemaakt."
+    "genericError": "Het account kon niet worden aangemaakt.",
+    "countryLabel": "Land van verblijf"
   },
   "BorrowerLayout": {
     "nav": {

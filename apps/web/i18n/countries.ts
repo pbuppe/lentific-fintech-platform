@@ -1,6 +1,11 @@
 import type { Locale } from "./locales";
 
-export const SUPPORTED_COUNTRIES = ["FR", "GB", "ES", "IT", "HU", "PT", "DE", "NL"] as const;
+import { WORLD_COUNTRIES } from "./worldCountries";
+
+// Tous les pays proposés (2026-11-16 : monde entier sauf Afrique), voir worldCountries.ts.
+export const SUPPORTED_COUNTRIES = WORLD_COUNTRIES;
+// Pays des 8 langues du site, affichés en tête du choix de pays.
+export const PRIMARY_COUNTRIES = ["FR", "GB", "ES", "IT", "HU", "PT", "DE", "NL"] as const;
 export type CountryCode = (typeof SUPPORTED_COUNTRIES)[number];
 
 // Un pays "par défaut" par langue prise en charge, utilisé pour pré-remplir
@@ -18,26 +23,4 @@ export const LOCALE_TO_COUNTRY: Record<Locale, CountryCode> = {
   pt: "PT",
   de: "DE",
   nl: "NL",
-};
-
-export const COUNTRY_FLAGS: Record<CountryCode, string> = {
-  FR: "🇫🇷",
-  GB: "🇬🇧",
-  ES: "🇪🇸",
-  IT: "🇮🇹",
-  HU: "🇭🇺",
-  PT: "🇵🇹",
-  DE: "🇩🇪",
-  NL: "🇳🇱",
-};
-
-export const COUNTRY_CURRENCY: Record<CountryCode, string> = {
-  FR: "EUR",
-  GB: "GBP",
-  ES: "EUR",
-  IT: "EUR",
-  HU: "HUF",
-  PT: "EUR",
-  DE: "EUR",
-  NL: "EUR",
 };

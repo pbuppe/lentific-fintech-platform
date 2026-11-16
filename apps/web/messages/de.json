@@ -182,7 +182,8 @@
     "emailLabel": "E-Mail",
     "passwordLabel": "Passwort (mindestens 8 Zeichen)",
     "submit": "Konto erstellen",
-    "genericError": "Konto konnte nicht erstellt werden."
+    "genericError": "Konto konnte nicht erstellt werden.",
+    "countryLabel": "Wohnsitzland"
   },
   "BorrowerLayout": {
     "nav": {

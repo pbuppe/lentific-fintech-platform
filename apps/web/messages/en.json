@@ -182,7 +182,8 @@
     "emailLabel": "Email",
     "passwordLabel": "Password (minimum 8 characters)",
     "submit": "Create my account",
-    "genericError": "Unable to create the account."
+    "genericError": "Unable to create the account.",
+    "countryLabel": "Country of residence"
   },
   "BorrowerLayout": {
     "nav": {
