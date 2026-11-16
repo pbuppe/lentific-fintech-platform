@@ -386,7 +386,11 @@
         "miss": "Te versturen",
         "rejected": "Geweigerd"
       }
-    }
+    },
+    "toSignHeading": "Te ondertekenen documenten",
+    "toSignHint": "Download ze, onderteken ze en stuur ze terug via het bijbehorende verzoek hierboven.",
+    "toSignMandate": "Opdracht tot het zoeken van financiering · {reference}",
+    "download": "Downloaden (PDF)"
   },
   "BorrowerInvestors": {
     "title": "Beschikbare investeerders",

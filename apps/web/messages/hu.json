@@ -386,7 +386,11 @@
         "miss": "Küldendő",
         "rejected": "Elutasítva"
       }
-    }
+    },
+    "toSignHeading": "Aláírandó dokumentumok",
+    "toSignHint": "Töltse le, írja alá, majd küldje vissza a fenti megfelelő kérésen keresztül.",
+    "toSignMandate": "Finanszírozás-felkutatási megbízás · {reference}",
+    "download": "Letöltés (PDF)"
   },
   "BorrowerInvestors": {
     "title": "Elérhető befektetők",

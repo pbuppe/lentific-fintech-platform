@@ -20,7 +20,8 @@
  */
 import { PDFDocument } from "pdf-lib";
 import { buildSchedule } from "@fintech/loans";
-import { Flow, fmt, money, embedFonts, MARGIN, PAGE_WIDTH, PAGE_HEIGHT, CONTENT_WIDTH, INK, MUTED, ACCENT, LINE } from "./pdfKit";
+import { Flow, fmt, money, embedFonts, MARGIN, PAGE_WIDTH, CONTENT_WIDTH, INK, MUTED, ACCENT, LINE, BRAND, decoratePages } from "./pdfKit";
+import { legalIdentity } from "@fintech/database";
 import { getContractStrings, type ContractLocale } from "./i18n";
 import { rgb } from "pdf-lib";
 
@@ -40,6 +41,7 @@ export interface ContractData {
 export async function renderContractPdf(data: ContractData): Promise<Uint8Array> {
   const t = getContractStrings(data.locale);
   const dateLocale = (data.locale as string) ?? "fr";
+  const rateStr = data.rate.toLocaleString(dateLocale, { maximumFractionDigits: 2 });
 
   const pdf = await PDFDocument.create();
   pdf.setTitle(fmt(t.mp_pdfTitle, { reference: data.reference }));
@@ -62,8 +64,10 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
   f.page.drawText(t.mp_mainSubtitle, { x: MARGIN, y: f.y, size: 8.5, font: italic, color: MUTED });
   f.y -= 24;
 
+  const id = legalIdentity();
   f.subheading(t.mp_intermediaryHeading);
-  f.para(t.mp_intermediaryText);
+  f.para(fmt(t.mp_intermediaryText, { company: id.company, companyNumber: id.companyNumber, address: id.address, oriasPart: id.orias ? fmt(t.mp_oriasPart, { orias: id.orias }) : "" }));
+  if (!id.orias) f.calloutToConfirm(t.mp_statusCallout, t.calloutPrefix);
 
   f.subheading(t.mp_borrowerHeading);
   const cityPart = data.borrowerCity ? fmt(t.mp_borrowerCityPart, { city: data.borrowerCity }) : "";
@@ -95,7 +99,7 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
   f.termsTable([
     [t.mp_art4RowLabels[0], money(data.amount)],
     [t.mp_art4RowLabels[1], `${data.durationMonths} ${t.durationUnit}`],
-    [t.mp_art4RowLabels[2], `${data.rate} %`],
+    [t.mp_art4RowLabels[2], `${rateStr} %`],
     [t.mp_art4RowLabels[3], money(monthly)],
     [t.mp_art4RowLabels[4], money(totalInterest)],
     [t.mp_art4RowLabels[5], money(totalCost)],
@@ -148,28 +152,25 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
   f.page.drawLine({ start: { x: PAGE_WIDTH - MARGIN - 190, y: f.y }, end: { x: PAGE_WIDTH - MARGIN, y: f.y }, thickness: 0.7, color: MUTED });
   f.y -= 13;
   f.page.drawText(t.mp_signBorrowerLabel, { x: MARGIN, y: f.y, size: 9, font: bold, color: INK });
-  f.page.drawText(t.mp_signIntermediaryLabel, { x: PAGE_WIDTH - MARGIN - 190, y: f.y, size: 9, font: bold, color: INK });
+  f.page.drawText(fmt(t.mp_signIntermediaryLabel, { company: id.company }), { x: PAGE_WIDTH - MARGIN - 190, y: f.y, size: 9, font: bold, color: INK });
   f.y -= 12;
   f.page.drawText(data.borrowerName, { x: MARGIN, y: f.y, size: 8.5, font, color: MUTED });
   f.page.drawText(t.signElectronic, { x: PAGE_WIDTH - MARGIN - 190, y: f.y, size: 8.5, font, color: MUTED });
 
   // --- Annexe 1 : échéancier -------------------------------------------------------------
   f.newAnnexPage(t.mp_annex1Title);
-  f.page.drawText(fmt(t.mp_annex1Subtitle, { amount: money(data.amount), duration: data.durationMonths, rate: data.rate, monthly: money(monthly) }), { x: MARGIN, y: f.y, size: 8.5, font, color: MUTED });
+  f.page.drawText(fmt(t.mp_annex1Subtitle, { amount: money(data.amount), duration: data.durationMonths, rate: rateStr, monthly: money(monthly) }), { x: MARGIN, y: f.y, size: 8.5, font, color: MUTED });
   f.y -= 20;
 
   const colX = [MARGIN, MARGIN + 38, MARGIN + 135, MARGIN + 230, MARGIN + 320, MARGIN + 405];
-  f.page.drawRectangle({ x: MARGIN - 4, y: f.y - 4, width: CONTENT_WIDTH + 8, height: 16, color: INK });
+  f.page.drawRectangle({ x: MARGIN - 4, y: f.y - 4, width: CONTENT_WIDTH + 8, height: 16, color: BRAND });
   t.mp_annex1Headers.forEach((h, i) => f.page.drawText(h, { x: colX[i], y: f.y, size: 7.5, font: bold, color: rgb(1, 1, 1) }));
   f.y -= 16;
 
   const monthlyRate = data.rate / 12 / 100;
   let balance = data.amount;
   schedule.forEach((row, i) => {
-    if (f.y < MARGIN + 20) {
-      f.page = pdf.addPage([PAGE_WIDTH, PAGE_HEIGHT]);
-      f.y = PAGE_HEIGHT - MARGIN;
-    }
+    if (f.y < MARGIN + 20) f.newPage();
     const interest = balance * monthlyRate;
     const principal = row.amount - interest;
     balance = Math.max(0, balance - principal);
@@ -186,7 +187,7 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
     [t.mp_annex2RowLabels[0], data.borrowerName],
     [t.mp_annex2RowLabels[1], money(data.amount)],
     [t.mp_annex2RowLabels[2], `${data.durationMonths} ${t.durationUnit}`],
-    [t.mp_annex2RowLabels[3], `${data.rate} % / an`],
+    [t.mp_annex2RowLabels[3], `${rateStr} %`],
     [t.mp_annex2RowLabels[4], money(monthly)],
     [t.mp_annex2RowLabels[5], money(totalCost)],
     [t.mp_annex2RowLabels[6], data.riskScore != null ? `${data.riskScore} / 100` : t.noScoreAvailable],
@@ -200,5 +201,6 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
   f.y -= 30;
   f.para(fmt(t.mp_footerNote, { reference: data.reference }), { size: 7, color: MUTED, f: italic });
 
+  decoratePages(pdf, { font, bold }, { reference: data.reference, docLabel: t.mp_pdfTitle.split(" - ")[0] });
   return pdf.save();
 }

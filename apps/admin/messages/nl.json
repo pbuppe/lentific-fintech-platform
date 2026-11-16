@@ -49,7 +49,17 @@
       "kycPending": "Identiteit in afwachting",
       "kycVerified": "Identiteit geverifieerd",
       "underReview": "In behandeling"
-    }
+    },
+    "mandateTitle": "Opdracht tot het zoeken van financiering",
+    "mandateHint": "Stel het honorarium van het dossier vast: de opdracht wordt opgesteld in de taal van de klant, toegevoegd aan zijn omgeving en hij ontvangt per e-mail een verzoek tot ondertekening.",
+    "mandateFeeLabel": "Honorarium (€)",
+    "mandateGenerate": "Opdracht opstellen en verzenden",
+    "mandateRegenerate": "Corrigeren en opnieuw verzenden",
+    "mandateSent": "Opdracht verzonden op {date} · honorarium {amount}",
+    "mandateView": "Opdracht bekijken",
+    "mandateDone": "Opdracht opgesteld en naar de klant verzonden.",
+    "mandateError": "Ongeldig honorariumbedrag.",
+    "feeFromMandate": "Honorarium volgens de opdracht: {amount}"
   },
   "AccountsPage": {
     "kicker": "Super administrator",
@@ -451,7 +461,8 @@
         "cancelled": "Honorariumverzoek geannuleerd",
         "paid": "Honoraria betaald door de klant"
       }
-    }
+    },
+    "feeFromMandate": "Honorarium volgens de opdracht: {amount}"
   },
   "ClientRequestsPage": {
     "kicker": "Backoffice · Klantrelatie",

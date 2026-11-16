@@ -21,6 +21,8 @@ export interface ContractStrings {
   mp_mainSubtitle: string;
   mp_intermediaryHeading: string;
   mp_intermediaryText: string;
+  mp_oriasPart: string; // {orias}
+  mp_statusCallout: string;
   mp_borrowerHeading: string;
   mp_borrowerText: string; // {name} {email} {cityPart}
   mp_borrowerCityPart: string; // {city}
@@ -124,4 +126,37 @@ export interface ContractStrings {
   dl_annex1Subtitle: string;
   dl_annex1Headers: string[];
   dl_footerNote: string; // {reference}
+
+  // --- Mandat de recherche de financement (courtage) ---
+  bm_pdfTitle: string;
+  bm_mainTitle: string;
+  bm_mainSubtitle: string;
+  bm_brokerHeading: string;
+  bm_brokerText: string;
+  bm_oriasPart: string;
+  bm_statusCallout: string;
+  bm_clientHeading: string;
+  bm_clientText: string;
+  bm_art1Title: string;
+  bm_art1Text: string;
+  bm_art2Title: string;
+  bm_art2Text: string;
+  bm_art3Title: string;
+  bm_art3Text: string;
+  bm_art4Title: string;
+  bm_art4Text: string;
+  bm_art5Title: string;
+  bm_art5Text: string;
+  bm_art6Title: string;
+  bm_art6Text: string;
+  bm_art7Title: string;
+  bm_art7Text: string;
+  bm_art8Title: string;
+  bm_art8Text: string;
+  bm_signClientLabel: string;
+  bm_signBrokerLabel: string;
+  bm_signHint: string;
+  bm_footerNote: string;
+  bm_requestLabel: string;
+  bm_requestInstructions: string;
 }

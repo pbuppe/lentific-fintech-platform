@@ -13,8 +13,9 @@ export const de: ContractStrings = {
   mp_mainTitle: "DARLEHENSVERTRAG ÜBER KREDITBASIERTE SCHWARMFINANZIERUNG",
   mp_mainSubtitle: "Erstellt in Anwendung der Artikel L.548-1 ff. und R.548-1 ff. des französischen Währungs- und Finanzgesetzbuchs (Code monétaire et financier)",
   mp_intermediaryHeading: "DER VERMITTLER FÜR KREDITBASIERTE SCHWARMFINANZIERUNG",
-  mp_intermediaryText:
-    "Die Gesellschaft Lentific, [Gesellschaftsform zu vervollständigen] mit einem Kapital von [Betrag] Euro, [Sitz der Gesellschaft zu vervollständigen], eingetragen im Handelsregister (RCS) von [Stadt] unter der Nummer [SIREN zu bestätigen], bei der ORIAS als Vermittler für kreditbasierte Schwarmfinanzierung unter der Nummer [ORIAS-Nummer zu bestätigen] registriert, im Folgenden „der Vermittler“ oder „Lentific“ genannt, handelnd als Bevollmächtigter der Darlehensgeber, ohne selbst Darlehensgeberin zu sein.",
+  mp_intermediaryText: "Die Gesellschaft {company}, eine in England und Wales gegründete Gesellschaft mit beschränkter Haftung (private limited company), eingetragen beim britischen Handelsregister (Companies House) unter der Nummer {companyNumber}, mit Sitz in {address}, Betreiberin der Plattform Lentific{oriasPart}, im Folgenden „der Vermittler“ oder „Lentific“ genannt, handelnd als Bevollmächtigter der Darlehensgeber, ohne selbst Darlehensgeberin zu sein.",
+  mp_oriasPart: ", bei der ORIAS unter der Nummer {orias} registriert",
+  mp_statusCallout: "aufsichtsrechtlicher Status des Vermittlers für verzinsliche kreditbasierte Schwarmfinanzierung (Zulassung als Schwarmfinanzierungsdienstleister nach der Verordnung (EU) 2020/1503 oder sonstiger anwendbarer Status) und die entsprechende Registrierungsnummer.",
   mp_borrowerHeading: "DER DARLEHENSNEHMER",
   mp_borrowerText: "{name} ({email}){cityPart}, handelnd zu gewerblichen Zwecken, im Folgenden „der Darlehensnehmer“ genannt.",
   mp_borrowerCityPart: ", wohnhaft in {city}",
@@ -104,7 +105,7 @@ export const de: ContractStrings = {
   mp_art16Text:
     "Der vorliegende Vertrag unterliegt französischem Recht. Jeder Streitfall bezüglich seiner Gültigkeit, Auslegung oder Erfüllung unterliegt der ausschließlichen Zuständigkeit der örtlich zuständigen französischen Gerichte, vorbehaltlich der anwendbaren zwingenden Rechtsvorschriften.",
   mp_signBorrowerLabel: "Der Darlehensnehmer",
-  mp_signIntermediaryLabel: "Für den Vermittler, Lentific",
+  mp_signIntermediaryLabel: "Für den Vermittler, {company}",
   mp_annex1Title: "ANLAGE 1 - TILGUNGSPLAN",
   mp_annex1Subtitle: "Darlehen über {amount} · {duration} Monatsraten · fester Zinssatz {rate} % · Monatsrate {monthly}",
   mp_annex1Headers: ["Rate", "Datum", "Kapital", "Zinsen", "Monatsrate", "Restschuld"],
@@ -123,8 +124,7 @@ export const de: ContractStrings = {
   mp_annex3Title: "ANLAGE 3 - ZEICHNUNGSSCHEIN (MUSTER)",
   mp_annex3Text:
     "Ich, der/die Unterzeichnende [Name des Darlehensgebers], erkläre, die Finanzierung des in diesem Vertrag bezeichneten Darlehensnehmers in Höhe von [Betrag] EUR zu zeichnen, und bestätige, von sämtlichen Bestimmungen des vorliegenden Vertrags mit dem Aktenzeichen {reference}, insbesondere dem in Artikel 10 enthaltenen Risikohinweis, Kenntnis genommen und diese vorbehaltlos akzeptiert zu haben.",
-  mp_footerNote:
-    "Dokument automatisch von der Plattform Lentific auf Grundlage der Akte {reference} erstellt. Die als „zu bestätigen“ gekennzeichneten Angaben sind mit den tatsächlichen Registrierungsdaten der Gesellschaft zu vervollständigen und vor jeder Produktivsetzung von einem Rechtsanwalt zu prüfen. Struktur erstellt unter Bezugnahme auf die Artikel L.548-1 ff. und R.548-1 ff. (insbesondere R.548-6) des französischen Währungs- und Finanzgesetzbuchs.",
+  mp_footerNote: "Dokument automatisch von der Plattform Lentific auf Grundlage der Akte {reference} erstellt. Die als „zu bestätigen“ gekennzeichneten Angaben sind vor jeder Produktivsetzung von einem Rechtsanwalt zu prüfen. Struktur erstellt unter Bezugnahme auf die Artikel L.548-1 ff. und R.548-1 ff. (insbesondere R.548-6) des französischen Währungs- und Finanzgesetzbuchs.",
 
   dl_pdfTitle: "Direkter Darlehensvertrag - {reference}",
   dl_mainTitle: "DARLEHENSVERTRAG ZWISCHEN PRIVATPERSONEN",
@@ -180,4 +180,37 @@ export const de: ContractStrings = {
   dl_annex1Headers: ["Rate", "Datum", "Kapital", "Zinsen", "Monatsrate", "Restschuld"],
   dl_footerNote:
     "Dokument automatisch von der Plattform Lentific auf Grundlage der unter dem Aktenzeichen {reference} erfassten Vermittlung erstellt. Dieser Vertrag ist ein MUSTER: vor Unterzeichnung von einem Rechtsberater zu bestätigen, insbesondere hinsichtlich der etwaigen Einstufung als Verbraucherkredit (Artikel 4).",
+
+  // --- Mandat de recherche de financement (courtage, honoraires au cas par cas) ---
+  bm_pdfTitle: "Auftrag zur Finanzierungssuche - {reference}",
+  bm_mainTitle: "AUFTRAG ZUR FINANZIERUNGSSUCHE",
+  bm_mainSubtitle: "Auftrag und Honorarvereinbarung: Honorar nur bei erfolgreicher Finanzierung fällig",
+  bm_brokerHeading: "DER BEAUFTRAGTE",
+  bm_brokerText: "Die Gesellschaft {company}, eine in England und Wales gegründete Gesellschaft mit beschränkter Haftung (private limited company), eingetragen beim britischen Handelsregister (Companies House) unter der Nummer {companyNumber}, mit Sitz in {address}, Betreiberin der Plattform Lentific{oriasPart}, im Folgenden „der Beauftragte“ oder „Lentific“ genannt.",
+  bm_oriasPart: ", bei der ORIAS als Vermittler von Bank- und Zahlungsdienstleistungen unter der Nummer {orias} registriert",
+  bm_statusCallout: "Status des Beauftragten als Kreditvermittler (ORIAS-Registrierung oder Gleichwertiges im Land des Auftraggebers), Registrierungsnummer und Berufshaftpflichtversicherung sind hier anzugeben.",
+  bm_clientHeading: "DER AUFTRAGGEBER",
+  bm_clientText: "{name} ({email}), im Folgenden „der Auftraggeber“ genannt.",
+  bm_art1Title: "GEGENSTAND DES AUFTRAGS",
+  bm_art1Text: "Der Auftraggeber beauftragt den Beauftragten, der dies annimmt, eine oder mehrere Finanzierungen entsprechend seiner Anfrage mit der Referenz {reference} zu suchen, zu vergleichen und ihm vorzustellen: {amount} über {duration} Monate. Der Beauftragte erstellt die Akte, legt sie Kreditinstituten und Investoren der Plattform Lentific vor und begleitet den Auftraggeber bis zur Auszahlung der Mittel.",
+  bm_art2Title: "PFLICHTEN DES BEAUFTRAGTEN",
+  bm_art2Text: "Der Beauftragte handelt loyal und sorgfältig im Interesse des Auftraggebers. Er informiert ihn über den Fortgang der Akte, stellt ihm die erhaltenen Angebote mit ihren Merkmalen vor und weist ihn auf die Folgen einer Kreditverpflichtung hin. Er schuldet ein sorgfältiges Bemühen und garantiert nicht, dass eine Finanzierung zustande kommt.",
+  bm_art3Title: "PFLICHTEN DES AUFTRAGGEBERS",
+  bm_art3Text: "Der Auftraggeber stellt zutreffende, vollständige und aktuelle Informationen sowie die angeforderten Nachweise zur Verfügung. Es steht ihm vollkommen frei, jedes ihm vorgestellte Finanzierungsangebot anzunehmen oder abzulehnen.",
+  bm_art4Title: "HONORAR",
+  bm_art4Text: "Als Vergütung für seine Tätigkeit erhält der Beauftragte ein Honorar in Höhe von {fee}. Dieses Honorar ist nur bei tatsächlichem Zustandekommen einer Finanzierung geschuldet und wird erst nach Auszahlung der Mittel fällig. Vor dem Erhalt eines oder mehrerer Darlehen darf vom Auftraggeber keinerlei Zahlung verlangt werden. Kommt keine Finanzierung zustande, ist kein Honorar geschuldet.",
+  bm_art5Title: "LAUFZEIT UND KÜNDIGUNG",
+  bm_art5Text: "Dieser Auftrag wird mit seiner Unterzeichnung wirksam und endet mit der Auszahlung der Mittel. Jede Partei kann ihn jederzeit schriftlich, ohne Kosten oder Entschädigung, beenden, solange der Auftraggeber kein Finanzierungsangebot angenommen hat.",
+  bm_art6Title: "WIDERRUFSRECHT",
+  bm_art6Text: "Da dieser Auftrag im Fernabsatz geschlossen wird, kann der Auftraggeber ihn binnen vierzehn Kalendertagen ab Unterzeichnung ohne Angabe von Gründen und ohne Kosten widerrufen, indem er an {email} schreibt.",
+  bm_art7Title: "PERSONENBEZOGENE DATEN",
+  bm_art7Text: "Die Daten des Auftraggebers werden vom Beauftragten zur Durchführung dieses Auftrags verarbeitet und nur an die für die Finanzierung angefragten Kreditgeber und Investoren übermittelt, gemäß der auf lentific.com veröffentlichten Datenschutzerklärung.",
+  bm_art8Title: "BESCHWERDEN UND ANWENDBARES RECHT",
+  bm_art8Text: "Beschwerden können an {email} gerichtet werden. Dieser Auftrag unterliegt französischem Recht, unbeschadet zwingender, günstigerer Bestimmungen des Rechts des Landes, in dem der Auftraggeber seinen gewöhnlichen Aufenthalt hat.",
+  bm_signClientLabel: "Der Auftraggeber",
+  bm_signBrokerLabel: "Für den Beauftragten, {company}",
+  bm_signHint: "Datum, Unterschrift und der handschriftliche Vermerk „Auftrag erteilt“",
+  bm_footerNote: "Dokument automatisch von der Plattform Lentific für die Anfrage {reference} erstellt. Dieser Auftrag ist ein MUSTER: die als „zu bestätigen“ gekennzeichneten Angaben sind vor der tatsächlichen Verwendung von einem Juristen zu prüfen.",
+  bm_requestLabel: "Unterschriebener Auftrag zur Finanzierungssuche ({reference})",
+  bm_requestInstructions: "Laden Sie Ihren Auftrag im Bereich „Zu unterschreibende Dokumente“ unten herunter, datieren und unterschreiben Sie ihn mit dem Vermerk „Auftrag erteilt“ und laden Sie ihn hier hoch (Foto oder Scan).",
 };

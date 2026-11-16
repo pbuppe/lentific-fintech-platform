@@ -15,6 +15,7 @@ import {
   DISBURSEMENT_DECLARER_ROLES,
 } from "@fintech/applications";
 import { uploadRaw, getFileUrl } from "@fintech/documents";
+import { latestBrokerMandates } from "@fintech/contracts";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
 
@@ -150,6 +151,9 @@ export default async function FundsPage({ searchParams }: { searchParams: { erro
       proofUrl: c.disbursement ? await getFileUrl(c.disbursement.proofStorageKey) : null,
     }))
   );
+
+  // Honoraires fixés dans le mandat de recherche de financement : proposés par défaut.
+  const mandates = await latestBrokerMandates(cases.map((c) => c.id)).catch(() => new Map());
 
   const today = new Date().toISOString().slice(0, 10);
   const inThirtyDays = new Date(Date.now() + 30 * 86400000).toISOString().slice(0, 10);
@@ -378,6 +382,11 @@ export default async function FundsPage({ searchParams }: { searchParams: { erro
                   ) : (
                     <>
                       <p className="mt-0.5 text-xs text-ink-faint">{t("feesUnlocked")}</p>
+                      {mandates.get(c.id) && (
+                        <p className="mt-1 text-xs font-semibold text-brand-ink">
+                          {t("feeFromMandate", { amount: money(mandates.get(c.id)!.fee, mandates.get(c.id)!.currency) })}
+                        </p>
+                      )}
                       <form action={feeAction} className="mt-3 flex flex-wrap items-end gap-3">
                         <input type="hidden" name="applicationId" value={c.id} />
                         <label className={labelClass}>
@@ -389,7 +398,7 @@ export default async function FundsPage({ searchParams }: { searchParams: { erro
                         </label>
                         <label className={labelClass}>
                           {t("feeAmountLabel", { currency })}
-                          <input type="number" name="amount" required min={1} max={100000} step="0.01" className={`${inputClass} w-32`} />
+                          <input type="number" name="amount" required min={1} max={100000} step="0.01" defaultValue={mandates.get(c.id)?.fee} className={`${inputClass} w-32`} />
                         </label>
                         <label className={labelClass}>
                           {t("feeDueLabel")}

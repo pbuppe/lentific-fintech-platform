@@ -13,8 +13,9 @@ export const fr: ContractStrings = {
   mp_mainTitle: "CONTRAT DE PRÊT DE FINANCEMENT PARTICIPATIF",
   mp_mainSubtitle: "Établi en application des articles L.548-1 et s. et R.548-1 et s. du Code monétaire et financier",
   mp_intermediaryHeading: "L'INTERMÉDIAIRE EN FINANCEMENT PARTICIPATIF",
-  mp_intermediaryText:
-    "La société Lentific, [forme sociale à compléter] au capital de [montant] euros, [adresse du siège social à compléter], immatriculée au RCS de [ville] sous le numéro [SIREN à confirmer], immatriculée auprès de l'ORIAS en qualité d'intermédiaire en financement participatif sous le numéro [numéro ORIAS à confirmer], ci-après « l'Intermédiaire » ou « Lentific », agissant en qualité de mandataire des Prêteurs, sans être elle-même partie prêteuse.",
+  mp_intermediaryText: "La société {company}, société de droit d'Angleterre et du pays de Galles (private limited company) immatriculée au Registre des sociétés (Companies House) sous le numéro {companyNumber}, dont le siège social est situé {address}, exploitant la plateforme Lentific{oriasPart}, ci-après « l'Intermédiaire » ou « Lentific », agissant en qualité de mandataire des Prêteurs, sans être elle-même partie prêteuse.",
+  mp_oriasPart: ", immatriculée auprès de l'ORIAS sous le numéro {orias}",
+  mp_statusCallout: "statut réglementaire de l'Intermédiaire pour le financement participatif par prêt rémunéré (agrément de prestataire de services de financement participatif au sens du règlement (UE) 2020/1503, ou autre statut applicable) et numéro d'immatriculation correspondant.",
   mp_borrowerHeading: "L'EMPRUNTEUR",
   mp_borrowerText: "{name} ({email}){cityPart}, agissant à titre professionnel, ci-après « l'Emprunteur ».",
   mp_borrowerCityPart: ", domicilié(e) à {city}",
@@ -104,7 +105,7 @@ export const fr: ContractStrings = {
   mp_art16Text:
     "Le présent contrat est soumis au droit français. Tout litige relatif à sa validité, son interprétation ou son exécution sera soumis à la compétence exclusive des tribunaux français territorialement compétents, sous réserve des règles d'ordre public applicables.",
   mp_signBorrowerLabel: "L'Emprunteur",
-  mp_signIntermediaryLabel: "Pour l'Intermédiaire, Lentific",
+  mp_signIntermediaryLabel: "Pour l'Intermédiaire, {company}",
   mp_annex1Title: "ANNEXE 1 - ÉCHÉANCIER DE REMBOURSEMENT",
   mp_annex1Subtitle: "Prêt de {amount} · {duration} mensualités · taux fixe {rate} % · mensualité {monthly}",
   mp_annex1Headers: ["Éch.", "Date", "Capital", "Intérêts", "Mensualité", "Restant dû"],
@@ -123,8 +124,7 @@ export const fr: ContractStrings = {
   mp_annex3Title: "ANNEXE 3 - BULLETIN DE SOUSCRIPTION (MODÈLE)",
   mp_annex3Text:
     "Je soussigné(e) [Nom du Prêteur], déclare souscrire au financement de l'Emprunteur désigné aux présentes pour un montant de [montant] EUR, et reconnais avoir pris connaissance et accepté sans réserve l'intégralité des stipulations du présent contrat référencé {reference}, notamment l'avertissement sur les risques figurant à l'Article 10.",
-  mp_footerNote:
-    "Document généré automatiquement par la plateforme Lentific à partir du dossier {reference}. Les mentions signalées « à confirmer » doivent être complétées avec les données d'immatriculation réelles de la société et arbitrées par un avocat avant toute mise en production. Structure établie par référence aux articles L.548-1 et s. et R.548-1 et s. (notamment R.548-6) du Code monétaire et financier.",
+  mp_footerNote: "Document généré automatiquement par la plateforme Lentific à partir du dossier {reference}. Les mentions signalées « à confirmer » doivent être arbitrées par un avocat avant toute mise en production. Structure établie par référence aux articles L.548-1 et s. et R.548-1 et s. (notamment R.548-6) du Code monétaire et financier.",
 
   dl_pdfTitle: "Contrat de prêt direct - {reference}",
   dl_mainTitle: "CONTRAT DE PRÊT ENTRE PARTICULIERS",
@@ -180,4 +180,37 @@ export const fr: ContractStrings = {
   dl_annex1Headers: ["Éch.", "Date", "Capital", "Intérêts", "Mensualité", "Restant dû"],
   dl_footerNote:
     "Document généré automatiquement par la plateforme Lentific à partir de la mise en relation référencée {reference}. Ce contrat est un MODÈLE : à faire valider par un professionnel du droit avant signature, notamment sur la qualification éventuelle en crédit à la consommation (Article 4).",
+
+  // --- Mandat de recherche de financement (courtage, honoraires au cas par cas) ---
+  bm_pdfTitle: "Mandat de recherche de financement - {reference}",
+  bm_mainTitle: "MANDAT DE RECHERCHE DE FINANCEMENT",
+  bm_mainSubtitle: "Mandat et convention d'honoraires : honoraires dus uniquement en cas d'obtention du financement",
+  bm_brokerHeading: "LE MANDATAIRE",
+  bm_brokerText: "La société {company}, société de droit d'Angleterre et du pays de Galles (private limited company) immatriculée au Registre des sociétés (Companies House) sous le numéro {companyNumber}, dont le siège social est situé {address}, exploitant la plateforme Lentific{oriasPart}, ci-après « le Mandataire » ou « Lentific ».",
+  bm_oriasPart: ", immatriculée auprès de l'ORIAS en qualité d'intermédiaire en opérations de banque et en services de paiement sous le numéro {orias}",
+  bm_statusCallout: "statut d'intermédiaire en opérations de banque du Mandataire (immatriculation ORIAS ou équivalent dans le pays du Mandant), numéro d'immatriculation et assurance de responsabilité civile professionnelle à mentionner ici.",
+  bm_clientHeading: "LE MANDANT",
+  bm_clientText: "{name} ({email}), ci-après « le Mandant ».",
+  bm_art1Title: "OBJET DU MANDAT",
+  bm_art1Text: "Le Mandant confie au Mandataire, qui l'accepte, la mission de rechercher, comparer et lui présenter un ou plusieurs financements correspondant à sa demande référencée {reference} : {amount} sur {duration} mois. Le Mandataire monte le dossier, le présente aux établissements prêteurs et aux investisseurs de la plateforme Lentific, et accompagne le Mandant jusqu'au versement des fonds.",
+  bm_art2Title: "OBLIGATIONS DU MANDATAIRE",
+  bm_art2Text: "Le Mandataire agit avec loyauté et diligence dans l'intérêt du Mandant. Il l'informe de l'avancement du dossier, lui présente les offres obtenues avec leurs caractéristiques et attire son attention sur les conséquences d'un engagement de crédit. Il est tenu d'une obligation de moyens et ne garantit pas l'obtention d'un financement.",
+  bm_art3Title: "OBLIGATIONS DU MANDANT",
+  bm_art3Text: "Le Mandant fournit des informations exactes, complètes et à jour, ainsi que les justificatifs demandés. Il reste entièrement libre d'accepter ou de refuser toute offre de financement qui lui est présentée.",
+  bm_art4Title: "HONORAIRES",
+  bm_art4Text: "En rémunération de sa mission, le Mandataire percevra des honoraires d'un montant de {fee}. Ces honoraires ne sont dus qu'en cas d'obtention effective d'un financement et ne deviennent exigibles qu'après le versement des fonds. Aucun versement, de quelque nature que ce soit, ne peut être exigé du Mandant avant l'obtention d'un ou plusieurs prêts. Si aucun financement n'est obtenu, aucun honoraire n'est dû.",
+  bm_art5Title: "DURÉE ET RÉSILIATION",
+  bm_art5Text: "Le présent mandat prend effet à sa signature et prend fin au versement des fonds. Chacune des parties peut y mettre fin à tout moment, par écrit, sans frais ni indemnité, tant qu'aucune offre de financement n'a été acceptée par le Mandant.",
+  bm_art6Title: "DROIT DE RÉTRACTATION",
+  bm_art6Text: "Le présent mandat étant conclu à distance, le Mandant dispose d'un délai de quatorze jours calendaires à compter de sa signature pour se rétracter, sans avoir à motiver sa décision ni à supporter de frais, en écrivant à {email}.",
+  bm_art7Title: "DONNÉES PERSONNELLES",
+  bm_art7Text: "Les données du Mandant sont traitées par le Mandataire pour l'exécution du présent mandat et ne sont transmises qu'aux prêteurs et investisseurs sollicités pour son financement, conformément à la politique de confidentialité publiée sur lentific.com.",
+  bm_art8Title: "RÉCLAMATIONS ET DROIT APPLICABLE",
+  bm_art8Text: "Toute réclamation peut être adressée à {email}. Le présent mandat est soumis au droit français, sans préjudice des dispositions impératives plus protectrices de la loi du pays de résidence habituelle du Mandant.",
+  bm_signClientLabel: "Le Mandant",
+  bm_signBrokerLabel: "Pour le Mandataire, {company}",
+  bm_signHint: "Date, signature et mention manuscrite « Bon pour mandat »",
+  bm_footerNote: "Document généré automatiquement par la plateforme Lentific pour la demande {reference}. Ce mandat est un MODÈLE : les mentions signalées « à confirmer » doivent être arbitrées par un juriste avant usage réel.",
+  bm_requestLabel: "Mandat de recherche de financement signé ({reference})",
+  bm_requestInstructions: "Téléchargez votre mandat dans la rubrique « Documents à signer » ci-dessous, datez-le, signez-le avec la mention « Bon pour mandat », puis renvoyez-le ici (photo ou scan).",
 };

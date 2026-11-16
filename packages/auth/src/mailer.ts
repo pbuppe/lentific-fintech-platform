@@ -9,7 +9,7 @@
  *    le parcours en local sans fournisseur.
  * Pour changer de fournisseur plus tard : remplacer deliver() uniquement.
  */
-import { outboundEmailsRepo } from "@fintech/database";
+import { outboundEmailsRepo, legalIdentity } from "@fintech/database";
 
 export interface EmailMessage {
   to: string;
@@ -40,8 +40,15 @@ async function deliver(msg: EmailMessage): Promise<{ status: "LOCAL" | "SENT" | 
   }
 }
 
+/** Version texte : même mention légale que le pied HTML. */
+export function withTextFooter<T extends { text: string }>(msg: T): T {
+  const footer = companyFooter();
+  return msg.text.includes(footer) ? msg : { ...msg, text: `${msg.text}\n\n--\n${footer}` };
+}
+
 /** N'échoue jamais : un e-mail raté ne doit pas casser une inscription ou une validation. */
-export async function sendEmail(msg: EmailMessage) {
+export async function sendEmail(input: EmailMessage) {
+  const msg = withTextFooter(input);
   const result = await deliver(msg);
   if (result.status === "LOCAL") {
     console.log(`[mailer] (local, non envoyé) ${msg.kind} → ${msg.to} : ${msg.subject}`);
@@ -223,6 +230,12 @@ export function escapeHtml(s: string) {
   return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 }
 
+/** Mention légale en pied de chaque e-mail (identité de la société exploitante). */
+export function companyFooter() {
+  const id = legalIdentity();
+  return `Lentific · ${id.company} · Company number ${id.companyNumber} · ${id.address} · ${id.email}`;
+}
+
 /** Mise en page commune, compatible avec les clients e-mail (tableaux + styles en ligne). */
 export function layout(paragraphs: string[], button?: { label: string; url: string }, signature = "", footnote = "") {
   const body = paragraphs.map((p) => `<p style="margin:0 0 16px;font-size:15px;line-height:1.55;color:#1f2433">${p}</p>`).join("");
@@ -234,11 +247,13 @@ export function layout(paragraphs: string[], button?: { label: string; url: stri
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EEEBE3;padding:32px 16px"><tr><td align="center">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:12px;padding:32px">
 <tr><td>
-<p style="margin:0 0 24px;font-size:13px;font-weight:700;letter-spacing:2px;color:#2E4A9E">LENTIFIC</p>
+<p style="margin:0 0 24px"><img src="${webBaseUrl()}/email/lentific-logo.png" width="168" height="40" alt="Lentific" style="display:block;border:0;height:40px;width:168px"></p>
 ${body}${btn}
 ${footnote ? `<p style="margin:0 0 16px;font-size:13px;line-height:1.5;color:#6b7080">${footnote}</p>` : ""}
 <p style="margin:24px 0 0;font-size:14px;color:#1f2433">${escapeHtml(signature)}</p>
-</td></tr></table></td></tr></table></body></html>`;
+</td></tr></table>
+<p style="max-width:560px;margin:16px auto 0;font-size:11px;line-height:1.5;color:#8a8e9a;text-align:center">${escapeHtml(companyFooter())}</p>
+</td></tr></table></body></html>`;
 }
 
 interface Recipient {

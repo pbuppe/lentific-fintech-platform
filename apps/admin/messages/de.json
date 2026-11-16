@@ -49,7 +49,17 @@
       "kycPending": "Identität ausstehend",
       "kycVerified": "Identität verifiziert",
       "underReview": "Wird geprüft"
-    }
+    },
+    "mandateTitle": "Auftrag zur Finanzierungssuche",
+    "mandateHint": "Legen Sie das Honorar für die Akte fest: Der Auftrag wird in der Sprache des Kunden erstellt, in seinem Kundenbereich abgelegt und eine Unterschriftsanfrage wird ihm per E-Mail gesendet.",
+    "mandateFeeLabel": "Honorar (€)",
+    "mandateGenerate": "Auftrag erstellen und senden",
+    "mandateRegenerate": "Korrigieren und erneut senden",
+    "mandateSent": "Auftrag gesendet am {date} · Honorar {amount}",
+    "mandateView": "Auftrag ansehen",
+    "mandateDone": "Auftrag erstellt und an den Kunden gesendet.",
+    "mandateError": "Ungültiger Honorarbetrag.",
+    "feeFromMandate": "Im Auftrag vereinbartes Honorar: {amount}"
   },
   "AccountsPage": {
     "kicker": "Super-Admin",
@@ -451,7 +461,8 @@
         "cancelled": "Honoraranforderung storniert",
         "paid": "Honorare vom Kunden bezahlt"
       }
-    }
+    },
+    "feeFromMandate": "Im Auftrag vereinbartes Honorar: {amount}"
   },
   "ClientRequestsPage": {
     "kicker": "Backoffice · Kundenbeziehung",

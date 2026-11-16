@@ -13,8 +13,9 @@ export const es: ContractStrings = {
   mp_mainTitle: "CONTRATO DE PRÉSTAMO DE FINANCIACIÓN PARTICIPATIVA",
   mp_mainSubtitle: "Redactado en aplicación de los artículos L.548-1 y siguientes y R.548-1 y siguientes del Código Monetario y Financiero francés",
   mp_intermediaryHeading: "EL INTERMEDIARIO EN FINANCIACIÓN PARTICIPATIVA",
-  mp_intermediaryText:
-    "La sociedad Lentific, [forma societaria a completar], con capital social de [montante] euros, [domicilio social a completar], inscrita en el RCS (Registro Mercantil francés) de [ciudad] con el número [SIREN a confirmar], inscrita ante la ORIAS en calidad de intermediario en financiación participativa con el número [número ORIAS a confirmar], en adelante «el Intermediario» o «Lentific», actuando en calidad de mandatario de los Prestamistas, sin ser ella misma parte prestamista.",
+  mp_intermediaryText: "La sociedad {company}, sociedad de responsabilidad limitada (private limited company) constituida en Inglaterra y Gales e inscrita en el Registro Mercantil británico (Companies House) con el número {companyNumber}, con domicilio social en {address}, que explota la plataforma Lentific{oriasPart}, en adelante «el Intermediario» o «Lentific», actuando en calidad de mandatario de los Prestamistas, sin ser ella misma parte prestamista.",
+  mp_oriasPart: ", inscrita ante la ORIAS con el número {orias}",
+  mp_statusCallout: "estatuto reglamentario del Intermediario para la financiación participativa mediante préstamos remunerados (autorización como proveedor de servicios de financiación participativa conforme al Reglamento (UE) 2020/1503, u otro estatuto aplicable) y número de registro correspondiente.",
   mp_borrowerHeading: "EL PRESTATARIO",
   mp_borrowerText: "{name} ({email}){cityPart}, actuando con carácter profesional, en adelante «el Prestatario».",
   mp_borrowerCityPart: ", con domicilio en {city}",
@@ -104,7 +105,7 @@ export const es: ContractStrings = {
   mp_art16Text:
     "El presente contrato se rige por el derecho francés. Cualquier controversia relativa a su validez, interpretación o ejecución se someterá a la competencia exclusiva de los tribunales franceses territorialmente competentes, sin perjuicio de las normas de orden público aplicables.",
   mp_signBorrowerLabel: "El Prestatario",
-  mp_signIntermediaryLabel: "Por el Intermediario, Lentific",
+  mp_signIntermediaryLabel: "Por el Intermediario, {company}",
   mp_annex1Title: "ANEXO 1 - CUADRO DE AMORTIZACIÓN",
   mp_annex1Subtitle: "Préstamo de {amount} · {duration} cuotas mensuales · tipo fijo {rate} % · cuota mensual {monthly}",
   mp_annex1Headers: ["N.º", "Fecha", "Capital", "Intereses", "Cuota", "Capital pendiente"],
@@ -123,8 +124,7 @@ export const es: ContractStrings = {
   mp_annex3Title: "ANEXO 3 - BOLETÍN DE SUSCRIPCIÓN (MODELO)",
   mp_annex3Text:
     "El/la abajo firmante [Nombre del Prestamista], declara suscribir la financiación del Prestatario designado en el presente documento por un importe de [importe] EUR, y reconoce haber tomado conocimiento y aceptado sin reservas la totalidad de las estipulaciones del presente contrato con referencia {reference}, en particular la advertencia sobre los riesgos que figura en el Artículo 10.",
-  mp_footerNote:
-    "Documento generado automáticamente por la plataforma Lentific a partir del expediente {reference}. Las menciones señaladas como «a confirmar» deben completarse con los datos reales de inscripción de la sociedad y ser validadas por un abogado antes de su puesta en producción. Estructura establecida por referencia a los artículos L.548-1 y siguientes y R.548-1 y siguientes (en particular R.548-6) del Código Monetario y Financiero francés.",
+  mp_footerNote: "Documento generado automáticamente por la plataforma Lentific a partir del expediente {reference}. Las menciones señaladas como «a confirmar» deben ser validadas por un abogado antes de su puesta en producción. Estructura establecida por referencia a los artículos L.548-1 y siguientes y R.548-1 y siguientes (en particular R.548-6) del Código Monetario y Financiero francés.",
 
   dl_pdfTitle: "Contrato de préstamo directo - {reference}",
   dl_mainTitle: "CONTRATO DE PRÉSTAMO ENTRE PARTICULARES",
@@ -180,4 +180,37 @@ export const es: ContractStrings = {
   dl_annex1Headers: ["N.º", "Fecha", "Capital", "Intereses", "Cuota", "Capital pendiente"],
   dl_footerNote:
     "Documento generado automáticamente por la plataforma Lentific a partir de la puesta en contacto con referencia {reference}. Este contrato es un MODELO: debe ser validado por un profesional del derecho antes de la firma, en particular en lo relativo a su eventual calificación como crédito al consumo (Artículo 4).",
+
+  // --- Mandat de recherche de financement (courtage, honoraires au cas par cas) ---
+  bm_pdfTitle: "Mandato de búsqueda de financiación - {reference}",
+  bm_mainTitle: "MANDATO DE BÚSQUEDA DE FINANCIACIÓN",
+  bm_mainSubtitle: "Mandato y acuerdo de honorarios: honorarios debidos únicamente si se obtiene la financiación",
+  bm_brokerHeading: "EL MANDATARIO",
+  bm_brokerText: "La sociedad {company}, sociedad de responsabilidad limitada (private limited company) constituida en Inglaterra y Gales e inscrita en el Registro Mercantil británico (Companies House) con el número {companyNumber}, con domicilio social en {address}, que explota la plataforma Lentific{oriasPart}, en adelante «el Mandatario» o «Lentific».",
+  bm_oriasPart: ", inscrita ante la ORIAS como intermediario en operaciones bancarias y servicios de pago con el número {orias}",
+  bm_statusCallout: "estatuto de intermediario de crédito del Mandatario (inscripción ORIAS o equivalente en el país del Mandante), número de registro y seguro de responsabilidad civil profesional que deben indicarse aquí.",
+  bm_clientHeading: "EL MANDANTE",
+  bm_clientText: "{name} ({email}), en adelante «el Mandante».",
+  bm_art1Title: "OBJETO DEL MANDATO",
+  bm_art1Text: "El Mandante encarga al Mandatario, que lo acepta, la misión de buscar, comparar y presentarle una o varias financiaciones correspondientes a su solicitud con referencia {reference}: {amount} a {duration} meses. El Mandatario prepara el expediente, lo presenta a las entidades prestamistas y a los inversores de la plataforma Lentific, y acompaña al Mandante hasta el desembolso de los fondos.",
+  bm_art2Title: "OBLIGACIONES DEL MANDATARIO",
+  bm_art2Text: "El Mandatario actúa con lealtad y diligencia en interés del Mandante. Le informa del avance del expediente, le presenta las ofertas obtenidas con sus características y llama su atención sobre las consecuencias de un compromiso de crédito. Está sujeto a una obligación de medios y no garantiza la obtención de una financiación.",
+  bm_art3Title: "OBLIGACIONES DEL MANDANTE",
+  bm_art3Text: "El Mandante proporciona información exacta, completa y actualizada, así como los justificantes solicitados. Sigue siendo totalmente libre de aceptar o rechazar cualquier oferta de financiación que se le presente.",
+  bm_art4Title: "HONORARIOS",
+  bm_art4Text: "Como remuneración de su misión, el Mandatario percibirá unos honorarios de {fee}. Estos honorarios solo se deben si se obtiene efectivamente una financiación y solo son exigibles tras el desembolso de los fondos. No puede exigirse al Mandante ningún pago, de ninguna naturaleza, antes de la obtención de uno o varios préstamos. Si no se obtiene ninguna financiación, no se debe ningún honorario.",
+  bm_art5Title: "DURACIÓN Y RESOLUCIÓN",
+  bm_art5Text: "El presente mandato surte efecto con su firma y finaliza con el desembolso de los fondos. Cada una de las partes puede ponerle fin en cualquier momento, por escrito, sin gastos ni indemnización, mientras el Mandante no haya aceptado ninguna oferta de financiación.",
+  bm_art6Title: "DERECHO DE DESISTIMIENTO",
+  bm_art6Text: "Al celebrarse el presente mandato a distancia, el Mandante dispone de un plazo de catorce días naturales a partir de su firma para desistir, sin necesidad de justificar su decisión ni soportar gastos, escribiendo a {email}.",
+  bm_art7Title: "DATOS PERSONALES",
+  bm_art7Text: "Los datos del Mandante son tratados por el Mandatario para la ejecución del presente mandato y solo se transmiten a los prestamistas e inversores consultados para su financiación, conforme a la política de privacidad publicada en lentific.com.",
+  bm_art8Title: "RECLAMACIONES Y LEY APLICABLE",
+  bm_art8Text: "Cualquier reclamación puede dirigirse a {email}. El presente mandato se rige por el derecho francés, sin perjuicio de las disposiciones imperativas más protectoras de la ley del país de residencia habitual del Mandante.",
+  bm_signClientLabel: "El Mandante",
+  bm_signBrokerLabel: "Por el Mandatario, {company}",
+  bm_signHint: "Fecha, firma y la mención manuscrita «Conforme con el mandato»",
+  bm_footerNote: "Documento generado automáticamente por la plataforma Lentific para la solicitud {reference}. Este mandato es un MODELO: las menciones señaladas como «a confirmar» deben ser validadas por un jurista antes de su uso real.",
+  bm_requestLabel: "Mandato de búsqueda de financiación firmado ({reference})",
+  bm_requestInstructions: "Descargue su mandato en la sección «Documentos para firmar» más abajo, féchelo, fírmelo con la mención «Conforme con el mandato» y envíelo aquí (foto o escaneo).",
 };

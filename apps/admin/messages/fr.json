@@ -49,7 +49,17 @@
       "kycPending": "Identité en attente",
       "kycVerified": "Identité vérifiée",
       "underReview": "En revue"
-    }
+    },
+    "mandateTitle": "Mandat de recherche de financement",
+    "mandateHint": "Fixez les honoraires du dossier : le mandat est généré dans la langue du client, ajouté à son espace et une demande de signature lui est envoyée par e-mail.",
+    "mandateFeeLabel": "Honoraires (€)",
+    "mandateGenerate": "Générer et envoyer le mandat",
+    "mandateRegenerate": "Corriger et renvoyer",
+    "mandateSent": "Mandat envoyé le {date} · honoraires {amount}",
+    "mandateView": "Voir le mandat",
+    "mandateDone": "Mandat généré et envoyé au client.",
+    "mandateError": "Montant d'honoraires invalide.",
+    "feeFromMandate": "Honoraires prévus au mandat : {amount}"
   },
   "AccountsPage": {
     "kicker": "Super administrateur",
@@ -451,7 +461,8 @@
         "cancelled": "Demande d'honoraires annulée",
         "paid": "Honoraires payés par le client"
       }
-    }
+    },
+    "feeFromMandate": "Honoraires prévus au mandat : {amount}"
   },
   "ClientRequestsPage": {
     "kicker": "Back-office · Relation client",
