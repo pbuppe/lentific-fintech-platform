@@ -27,18 +27,18 @@ export default async function InvestorLayout({ children }: { children: React.Rea
 
   // Même organisation que l'espace emprunteur : découverte en haut, compte à gauche.
   const top = [
-    { href: "/investor/dashboard", label: t("nav.marketplace") },
-    { href: "/investor/mises-en-relation", label: t("nav.introductions") },
+    { href: "/investor/dashboard", label: t("nav.marketplace"), icon: "store" as const },
+    { href: "/investor/mises-en-relation", label: t("nav.introductions"), icon: "handshake" as const },
   ];
   const side = [
-    { href: "/investor/portfolio", label: t("nav.portfolio") },
-    { href: "/investor/offres", label: t("nav.capitalOffers") },
-    { href: "/investor/documents", label: t("nav.documents"), badge: pendingDocs },
-    { href: "/investor/messages", label: t("nav.messages"), badge: unreadMessages },
-    { href: "/investor/notifications", label: t("nav.notifications"), badge: unread },
-    { href: "/investor/aide", label: t("nav.help") },
-    { href: "/investor/verification", label: t("nav.verification") },
-    { href: "/investor/premium", label: t("nav.premium") },
+    { href: "/investor/portfolio", label: t("nav.portfolio"), icon: "pieChart" as const },
+    { href: "/investor/offres", label: t("nav.capitalOffers"), icon: "coins" as const },
+    { href: "/investor/documents", label: t("nav.documents"), icon: "file" as const, badge: pendingDocs },
+    { href: "/investor/messages", label: t("nav.messages"), icon: "message" as const, badge: unreadMessages },
+    { href: "/investor/notifications", label: t("nav.notifications"), icon: "bell" as const, badge: unread },
+    { href: "/investor/aide", label: t("nav.help"), icon: "help" as const },
+    { href: "/investor/verification", label: t("nav.verification"), icon: "shieldCheck" as const },
+    { href: "/investor/premium", label: t("nav.premium"), icon: "star" as const },
   ];
 
   return (

@@ -5,3 +5,5 @@ export { Card } from "./Card";
 export { StatusPill } from "./StatusPill";
 export { LogoMark } from "./LogoMark";
 export { tailwindPreset } from "./tailwind-preset";
+export { Icon, ICON_NAMES } from "./Icon";
+export type { IconName } from "./Icon";

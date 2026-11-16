@@ -1,6 +1,7 @@
+import type { IconName } from "@fintech/ui";
 import { AccountNavLink } from "./AccountNavLink";
 
-export type NavItem = { href: string; label: string; badge?: number };
+export type NavItem = { href: string; label: string; badge?: number; icon?: IconName };
 
 /**
  * Mise en page de l'espace client (demande produit 2026-11-14) : quelques

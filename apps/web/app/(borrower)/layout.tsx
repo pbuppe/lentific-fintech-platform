@@ -37,19 +37,19 @@ export default async function BorrowerLayout({ children }: { children: React.Rea
   // financement ; tout ce qui concerne le compte du client va dans le menu
   // latéral gauche.
   const top = [
-    { href: "/investisseurs", label: t("nav.availableInvestors") },
-    { href: "/mises-en-relation", label: t("nav.introductions") },
+    { href: "/investisseurs", label: t("nav.availableInvestors"), icon: "users" as const },
+    { href: "/mises-en-relation", label: t("nav.introductions"), icon: "handshake" as const },
   ];
   const side = [
-    { href: "/dashboard", label: t("nav.myApplications") },
-    { href: "/demande", label: t("nav.submitApplication") },
-    { href: "/documents", label: t("nav.myDocuments"), badge: pendingDocs },
-    { href: "/messages", label: t("nav.messages"), badge: unreadMessages },
-    { href: "/paiements", label: t("nav.payments"), badge: pendingFees },
-    { href: "/notifications", label: t("nav.notifications"), badge: unread },
-    { href: "/premium", label: `★ ${(await getTranslations("PremiumPromo"))("navLabel")}` },
-    { href: "/aide", label: t("nav.help") },
-    { href: "/onboarding", label: t("nav.myProfile") },
+    { href: "/dashboard", label: t("nav.myApplications"), icon: "folder" as const },
+    { href: "/demande", label: t("nav.submitApplication"), icon: "filePlus" as const },
+    { href: "/documents", label: t("nav.myDocuments"), icon: "file" as const, badge: pendingDocs },
+    { href: "/messages", label: t("nav.messages"), icon: "message" as const, badge: unreadMessages },
+    { href: "/paiements", label: t("nav.payments"), icon: "card" as const, badge: pendingFees },
+    { href: "/notifications", label: t("nav.notifications"), icon: "bell" as const, badge: unread },
+    { href: "/premium", label: (await getTranslations("PremiumPromo"))("navLabel"), icon: "star" as const },
+    { href: "/aide", label: t("nav.help"), icon: "help" as const },
+    { href: "/onboarding", label: t("nav.myProfile"), icon: "user" as const },
   ];
 
   return (

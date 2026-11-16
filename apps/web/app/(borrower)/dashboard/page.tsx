@@ -9,7 +9,7 @@ import { recordPriorityFee, isPaypalConfigured } from "@fintech/payments";
 import { beginPaypalPayment } from "../../../lib/paypalCheckout";
 import { contractsRepo, prisma } from "@fintech/database";
 import { getContractDownloadUrl } from "@fintech/contracts";
-import { Card, StatusPill } from "@fintech/ui";
+import { Card, StatusPill, Icon, type IconName } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
 import { ApplicationTracker } from "./ApplicationTracker";
 import { LoanOverview } from "./LoanOverview";
@@ -149,6 +149,8 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
 
   // Cartes d'alerte en tête de page (maquette Lentific) : ce que le client doit faire maintenant.
   const pendingFees = applications.flatMap((a) => a.brokerFees.filter((f) => f.status === "PENDING").map((f) => ({ ...f, currency: a.currency.code })));
+  // Icône de chaque encadré d'action (iconographie, 2026-11-16).
+  const ALERT_ICON: Record<string, IconName> = { doc: "file", fee: "card", offer: "checkCircle", sign: "fileSignature" };
   const alerts: Array<{ key: string; tone: "urgent" | "info"; eyebrow: string; title: string; body?: string; cta: string; href: string }> = [];
   for (const r of pendingDocumentRequests.slice(0, 3)) {
     alerts.push({
@@ -229,7 +231,8 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                 a.tone === "urgent" ? "border-accent/30 bg-accent-soft" : "border-line bg-surface-alt"
               }`}
             >
-              <span className={`text-[11px] font-bold uppercase tracking-wide ${a.tone === "urgent" ? "text-accent" : "text-yellow-ink"}`}>
+              <span className={`flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide ${a.tone === "urgent" ? "text-accent" : "text-yellow-ink"}`}>
+                <Icon name={ALERT_ICON[a.key.split("-")[0]] ?? "bell"} size={16} />
                 {a.eyebrow}
               </span>
               <span className="mt-1 block font-display text-base font-semibold text-ink">{a.title}</span>
