@@ -182,7 +182,8 @@
     "emailLabel": "E-mail cím",
     "passwordLabel": "Jelszó (legalább 8 karakter)",
     "submit": "Fiók létrehozása",
-    "genericError": "A fiók létrehozása sikertelen."
+    "genericError": "A fiók létrehozása sikertelen.",
+    "countryLabel": "Lakóhely országa"
   },
   "BorrowerLayout": {
     "nav": {

@@ -1,7 +1,9 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
-import { prisma } from "@fintech/database";
+import { countriesRepo } from "@fintech/database";
+import { SUPPORTED_COUNTRIES, PRIMARY_COUNTRIES } from "../../../i18n/countries";
+import { getPreferredCountry } from "../../../lib/country";
 import { signUp, SESSION_COOKIE_NAME, AuthError } from "@fintech/auth";
 import { Card } from "@fintech/ui";
 
@@ -12,14 +14,17 @@ async function signupAction(formData: FormData) {
   const password = formData.get("password") as string;
   const name = (formData.get("name") as string)?.trim();
   const role = formData.get("role") as "BORROWER" | "INVESTOR";
+  // Pays du compte (2026-11-16 : ouverture à tous les pays proposés, hors Afrique).
+  const countryInput = String(formData.get("country") ?? "FR").toUpperCase();
+  const countryCode = (SUPPORTED_COUNTRIES as readonly string[]).includes(countryInput) ? countryInput : "FR";
 
   try {
-    const france = await prisma.country.findUniqueOrThrow({ where: { code: "FR" } });
     // Langue active à l'inscription, mémorisée pour que tout document généré
     // plus tard (ex. contrat) — et l'e-mail de confirmation envoyé tout de
     // suite — parte de cette préférence plutôt que du français (§ 2026-09-18).
     const locale = await getLocale();
-    const { token } = await signUp({ email, password, name, role, countryId: france.id, locale });
+    const country = await countriesRepo.findOrCreateByCode(countryCode, locale);
+    const { token } = await signUp({ email, password, name, role, countryId: country.id, locale });
 
     cookies().set(SESSION_COOKIE_NAME, token, {
       httpOnly: true,
@@ -45,6 +50,15 @@ export default async function SignupPage({
 }) {
   const defaultRole = searchParams.role === "INVESTOR" ? "INVESTOR" : "BORROWER";
   const t = await getTranslations("SignupPage");
+  const pageLocale = await getLocale();
+  const regionNames = new Intl.DisplayNames([pageLocale], { type: "region" });
+  const nameOf = (code: string) => regionNames.of(code) ?? code;
+  const primary = PRIMARY_COUNTRIES.map((code) => ({ code, name: nameOf(code) }));
+  const rest = SUPPORTED_COUNTRIES.filter((c) => !(PRIMARY_COUNTRIES as readonly string[]).includes(c))
+    .map((code) => ({ code, name: nameOf(code) }))
+    .sort((a, b) => a.name.localeCompare(b.name, pageLocale));
+  const countryOptions = [...primary, ...rest];
+  const defaultCountry = getPreferredCountry() ?? "FR";
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 py-16">
@@ -72,6 +86,16 @@ export default async function SignupPage({
           <label className="grid gap-1 text-sm text-ink-soft">
             {t("nameLabel")}
             <input name="name" required className="rounded-lg border border-line px-3 py-2.5 text-ink" />
+          </label>
+          <label className="grid gap-1 text-sm text-ink-soft">
+            {t("countryLabel")}
+            <select name="country" defaultValue={defaultCountry} className="rounded-lg border border-line bg-white px-3 py-2.5 text-ink">
+              {countryOptions.map((c) => (
+                <option key={c.code} value={c.code}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
           </label>
           <label className="grid gap-1 text-sm text-ink-soft">
             {t("emailLabel")}

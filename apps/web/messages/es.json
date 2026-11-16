@@ -182,7 +182,8 @@
     "emailLabel": "Correo electrónico",
     "passwordLabel": "Contraseña (mínimo 8 caracteres)",
     "submit": "Crear mi cuenta",
-    "genericError": "No se pudo crear la cuenta."
+    "genericError": "No se pudo crear la cuenta.",
+    "countryLabel": "País de residencia"
   },
   "BorrowerLayout": {
     "nav": {
