@@ -322,6 +322,13 @@
       "colPayment": "Aflossing",
       "colInterest": "Rente",
       "colRemaining": "Openstaand"
+    },
+    "rejected": {
+      "title": "Uw aanvraag is niet aanvaard.",
+      "reason": "Reden: {reason}",
+      "noFee": "Er is geen honorarium verschuldigd. U kunt uw adviseur antwoorden of een nieuwe aanvraag indienen wanneer uw situatie veranderd is.",
+      "messages": "Het bericht van uw adviseur lezen",
+      "newRequest": "Een nieuwe aanvraag indienen"
     }
   },
   "BorrowerApplication": {

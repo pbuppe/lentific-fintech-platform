@@ -322,6 +322,13 @@
       "colPayment": "Részlet",
       "colInterest": "Kamat",
       "colRemaining": "Fennálló"
+    },
+    "rejected": {
+      "title": "Kérelmét nem tudtuk elfogadni.",
+      "reason": "Indok: {reason}",
+      "noFee": "Önnek semmilyen díjat nem kell fizetnie. Válaszolhat tanácsadójának, vagy új kérelmet nyújthat be, ha helyzete megváltozott.",
+      "messages": "Tanácsadója üzenetének elolvasása",
+      "newRequest": "Új kérelem benyújtása"
     }
   },
   "BorrowerApplication": {

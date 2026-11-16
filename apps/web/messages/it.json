@@ -322,6 +322,13 @@
       "colPayment": "Rata",
       "colInterest": "Interessi",
       "colRemaining": "Residuo"
+    },
+    "rejected": {
+      "title": "La vostra richiesta non è stata accolta.",
+      "reason": "Motivo: {reason}",
+      "noFee": "Non è dovuto alcun onorario. Potete rispondere al vostro consulente o presentare una nuova richiesta quando la vostra situazione sarà cambiata.",
+      "messages": "Leggere il messaggio del consulente",
+      "newRequest": "Presentare una nuova richiesta"
     }
   },
   "BorrowerApplication": {

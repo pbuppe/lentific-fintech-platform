@@ -322,6 +322,13 @@
       "colPayment": "Échéance",
       "colInterest": "Intérêts",
       "colRemaining": "Restant dû"
+    },
+    "rejected": {
+      "title": "Votre demande n'a pas été retenue.",
+      "reason": "Motif : {reason}",
+      "noFee": "Aucun honoraire n'est dû. Vous pouvez répondre à votre conseiller ou déposer une nouvelle demande quand votre situation aura évolué.",
+      "messages": "Lire le message de votre conseiller",
+      "newRequest": "Faire une nouvelle demande"
     }
   },
   "BorrowerApplication": {
