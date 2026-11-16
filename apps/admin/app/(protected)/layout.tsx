@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { LogoMark } from "@fintech/ui";
+import { LogoMark, Icon, type IconName } from "@fintech/ui";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { signOut, SESSION_COOKIE_NAME } from "@fintech/auth";
@@ -9,36 +9,36 @@ import { getCurrentUser } from "../../lib/session";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 
 const NAV_KEYS = [
-  { href: "/", key: "cases" },
-  { href: "/kyc", key: "kyc" },
-  { href: "/investisseurs", key: "investorVerification" },
-  { href: "/contracts", key: "contracts" },
-  { href: "/mises-en-relation", key: "introductions" },
-  { href: "/echeances", key: "installments" },
-  { href: "/risk", key: "riskEngine" },
+  { href: "/", key: "cases", icon: "folder" },
+  { href: "/kyc", key: "kyc", icon: "idCard" },
+  { href: "/investisseurs", key: "investorVerification", icon: "shieldCheck" },
+  { href: "/contracts", key: "contracts", icon: "fileSignature" },
+  { href: "/mises-en-relation", key: "introductions", icon: "handshake" },
+  { href: "/echeances", key: "installments", icon: "calendar" },
+  { href: "/risk", key: "riskEngine", icon: "gauge" },
   // Suivi des visiteurs : agents, admins et super admins (demande produit 2026-11-15).
-  { href: "/statistiques", key: "statistics" },
-] as const;
+  { href: "/statistiques", key: "statistics", icon: "barChart" },
+] as const satisfies ReadonlyArray<{ href: string; key: string; icon: IconName }>;
 
 // Pouvoir complet sur les comptes (§ demande produit) réservé au super
 // administrateur, pas aux simples agents/admins.
 const SUPER_ADMIN_NAV_KEYS = [
-  { href: "/console", key: "console" },
-  { href: "/comptes", key: "accountsSuperAdmin" },
-] as const;
+  { href: "/console", key: "console", icon: "crown" },
+  { href: "/comptes", key: "accountsSuperAdmin", icon: "key" },
+] as const satisfies ReadonlyArray<{ href: string; key: string; icon: IconName }>;
 
 // Statistiques de visite (§ demande produit 2026-09-18) : "dans les comptes
 // super admin ... et dans le compte admin", donc admin/super admin, pas agent.
 // Validation des inscriptions + journal des e-mails (demande produit
 // 2026-11-14) : décision d'administrateur, pas d'agent.
 const ADMIN_AND_ABOVE_NAV_KEYS = [
-  { href: "/prospects", key: "prospects" },
-  { href: "/messages", key: "clientRequests" },
-  { href: "/validations", key: "accountValidation" },
-  { href: "/versements", key: "funds" },
-  { href: "/emails", key: "outboundEmails" },
-  { href: "/marketing", key: "marketing" },
-] as const;
+  { href: "/prospects", key: "prospects", icon: "phone" },
+  { href: "/messages", key: "clientRequests", icon: "message" },
+  { href: "/validations", key: "accountValidation", icon: "userCheck" },
+  { href: "/versements", key: "funds", icon: "banknote" },
+  { href: "/emails", key: "outboundEmails", icon: "mail" },
+  { href: "/marketing", key: "marketing", icon: "megaphone" },
+] as const satisfies ReadonlyArray<{ href: string; key: string; icon: IconName }>;
 
 const ADMIN_ROLES = ["AGENT", "ADMIN", "SUPER_ADMIN"];
 
@@ -78,8 +78,9 @@ export default async function ProtectedLayout({ children }: { children: React.Re
             <a
               key={item.href}
               href={item.href}
-              className="rounded-md px-2.5 py-2 text-sm font-medium text-white/85 hover:bg-white/10"
+              className="flex items-center gap-2.5 rounded-md px-2.5 py-2 text-sm font-medium text-white/85 hover:bg-white/10"
             >
+              <Icon name={item.icon} size={18} className="text-white/70" />
               {t(item.key)}
             </a>
           ))}
@@ -90,7 +91,10 @@ export default async function ProtectedLayout({ children }: { children: React.Re
                 href={item.href}
                 className="flex items-center justify-between rounded-md px-2.5 py-2 text-sm font-medium text-white/85 hover:bg-white/10"
               >
-                {t(item.key)}
+                <span className="flex items-center gap-2.5">
+                  <Icon name={item.icon} size={18} className="text-white/70" />
+                  {t(item.key)}
+                </span>
                 {item.href === "/validations" && pendingAccounts > 0 && (
                   <span
                     className="rounded-full bg-accent px-2 py-0.5 text-[11px] font-bold text-white"
@@ -119,20 +123,25 @@ export default async function ProtectedLayout({ children }: { children: React.Re
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-md border border-white/20 px-2.5 py-2 text-sm font-medium text-white hover:bg-white/10"
+                className="flex items-center gap-2.5 rounded-md border border-white/20 px-2.5 py-2 text-sm font-medium text-white hover:bg-white/10"
               >
+                <Icon name={item.icon} size={18} className="text-yellow" />
                 {t(item.key)}
               </a>
             ))}
         </div>
         <div className="mt-auto border-t border-white/15 pt-4">
-          <p className="truncate px-1 text-xs text-white/70">{user.name ?? user.email}</p>
+          <p className="flex items-center gap-1.5 truncate px-1 text-xs text-white/70">
+            <Icon name="user" size={14} />
+            {user.name ?? user.email}
+          </p>
           <p className="px-1 font-mono text-[10px] uppercase tracking-widest text-white/45">{user.role}</p>
           <div className="mt-3">
             <LanguageSwitcher />
           </div>
           <form action={logoutAction} className="mt-2">
-            <button className="w-full rounded-md px-2.5 py-2 text-left text-sm font-medium text-white/85 hover:bg-white/10">
+            <button className="flex w-full items-center gap-2.5 rounded-md px-2.5 py-2 text-left text-sm font-medium text-white/85 hover:bg-white/10">
+              <Icon name="logout" size={18} className="text-white/70" />
               {t("logout")}
             </button>
           </form>

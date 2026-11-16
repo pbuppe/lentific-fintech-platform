@@ -1,15 +1,15 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { notificationsRepo } from "@fintech/database";
-import { Card } from "@fintech/ui";
+import { Card, Icon, type IconName } from "@fintech/ui";
 import { openNotificationAction, markAllNotificationsReadAction } from "../../lib/actions/clientInbox";
 
 type InboxUser = { id: string; role: string };
 
-const KIND_STYLE: Record<string, { icon: string; className: string }> = {
-  message: { icon: "✉", className: "bg-brand-soft text-brand-ink" },
-  document: { icon: "!", className: "bg-accent-soft text-accent" },
-  payment: { icon: "€", className: "bg-sand text-sand-ink" },
-  system: { icon: "✓", className: "bg-success-soft text-success" },
+const KIND_STYLE: Record<string, { icon: IconName; className: string }> = {
+  message: { icon: "message", className: "bg-brand-soft text-brand-ink" },
+  document: { icon: "file", className: "bg-accent-soft text-accent" },
+  payment: { icon: "card", className: "bg-sand text-sand-ink" },
+  system: { icon: "bell", className: "bg-success-soft text-success" },
 };
 
 /** Centre de notifications : événements automatiques + envois de l'équipe. */
@@ -61,7 +61,7 @@ export async function NotificationsView({ user }: { user: InboxUser }) {
                     }`}
                   >
                     <span aria-hidden className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${style.className}`}>
-                      {style.icon}
+                      <Icon name={style.icon} size={16} />
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="flex flex-wrap items-baseline justify-between gap-2">
