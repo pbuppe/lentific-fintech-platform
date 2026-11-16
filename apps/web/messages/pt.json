@@ -322,6 +322,13 @@
       "colPayment": "Prestação",
       "colInterest": "Juros",
       "colRemaining": "Em dívida"
+    },
+    "rejected": {
+      "title": "O seu pedido não foi aceite.",
+      "reason": "Motivo: {reason}",
+      "noFee": "Não são devidos honorários. Pode responder ao seu consultor ou apresentar um novo pedido quando a sua situação tiver mudado.",
+      "messages": "Ler a mensagem do seu consultor",
+      "newRequest": "Apresentar um novo pedido"
     }
   },
   "BorrowerApplication": {

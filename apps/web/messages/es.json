@@ -322,6 +322,13 @@
       "colPayment": "Cuota",
       "colInterest": "Intereses",
       "colRemaining": "Pendiente"
+    },
+    "rejected": {
+      "title": "Su solicitud no ha sido aceptada.",
+      "reason": "Motivo: {reason}",
+      "noFee": "No se debe ningún honorario. Puede responder a su asesor o presentar una nueva solicitud cuando su situación haya cambiado.",
+      "messages": "Leer el mensaje de su asesor",
+      "newRequest": "Presentar una nueva solicitud"
     }
   },
   "BorrowerApplication": {

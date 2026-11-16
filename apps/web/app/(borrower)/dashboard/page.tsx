@@ -122,6 +122,17 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
   ]);
   const pendingDocumentRequests = documentRequests.filter((r) => r.status === "PENDING");
 
+  // Motif des dossiers refusés après analyse (journal d’audit, voir rejectApplication).
+  const stoppedIds = applications.filter((a) => a.status === "REJECTED" || a.status === "CANCELLED").map((a) => a.id);
+  const rejectionLogs = stoppedIds.length
+    ? await prisma.auditLog.findMany({
+        where: { action: "application.rejected", entity: { in: stoppedIds.map((id) => `Application:${id}`) } },
+        orderBy: { createdAt: "desc" },
+      })
+    : [];
+  const rejectionReason = (id: string) =>
+    ((rejectionLogs.find((l) => l.entity === `Application:${id}`)?.after ?? {}) as { reason?: string }).reason;
+
   // Retrouve, pour chaque demande dont l'offre a été acceptée, la signature en
   // attente (le contrat n'a pas de relation Prisma directe vers Loan, voir
   // packages/applications getApplicationDetail pour la même traversée).
@@ -258,7 +269,8 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
             const identityNeedsUpload =
               (app.status === "SUBMITTED" || app.status === "KYC_PENDING") &&
               (!identityDoc || identityDoc.status === "REJECTED");
-            const publishedOffer = app.offers.find((o) => o.status === "PENDING");
+            const stopped = app.status === "REJECTED" || app.status === "CANCELLED";
+            const publishedOffer = stopped ? undefined : app.offers.find((o) => o.status === "PENDING");
             const acceptedOffer = app.offers.find((o) => o.status === "ACCEPTED");
             const signedContractDoc = app.documents.find((d) => d.type === "signed_contract");
             const needsSignatureUpload = app.status === "OFFER_ACCEPTED" && !signedContractDoc && acceptedOffer?.loan;
@@ -276,17 +288,34 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                 </p>
                 <p className="text-xs text-ink-faint">{t("submittedOn", { date: dateFmt.format(app.createdAt) })}</p>
 
-                <ApplicationTracker
-                  status={app.status}
-                  pendingDocs={pendingDocumentRequests.length}
-                  fundsConfirmed={app.disbursement?.status === "CONFIRMED"}
-                  stopped={app.status === "REJECTED" || app.status === "CANCELLED"}
-                />
+                {stopped ? (
+                  <div className="mt-4 rounded-lg border border-accent/30 bg-accent-soft p-4">
+                    <p className="text-sm font-semibold text-accent">{t("rejected.title")}</p>
+                    {rejectionReason(app.id) && (
+                      <p className="mt-1 text-sm text-ink">{t("rejected.reason", { reason: rejectionReason(app.id)! })}</p>
+                    )}
+                    <p className="mt-2 text-xs text-ink-soft">{t("rejected.noFee")}</p>
+                    <p className="mt-3 flex flex-wrap gap-3 text-xs font-semibold">
+                      <a href="/messages" className="text-brand-ink underline">{t("rejected.messages")}</a>
+                      <a href="/demande" className="text-brand-ink underline">{t("rejected.newRequest")}</a>
+                    </p>
+                  </div>
+                ) : (
+                  <ApplicationTracker
+                    status={app.status}
+                    pendingDocs={pendingDocumentRequests.length}
+                    fundsConfirmed={app.disbursement?.status === "CONFIRMED"}
+                    stopped={false}
+                  />
+                )}
 
                 {app.priority ? (
                   <p className="mt-2 text-xs font-semibold text-yellow-ink">
                     {t("priorityBadge")}
-                    {app.slaBreachedAt
+                    {/* Le délai de 48 h ne concerne que l'étude : plus de mention une fois le dossier tranché. */}
+                    {!["SUBMITTED", "KYC_PENDING", "KYC_VERIFIED", "UNDER_REVIEW"].includes(app.status)
+                      ? ""
+                      : app.slaBreachedAt
                       ? t("slaBreached")
                       : app.slaDeadline
                         ? t("slaDeadline", { date: app.slaDeadline.toLocaleString("fr-FR") })
@@ -318,7 +347,7 @@ export default async function BorrowerDashboard({ searchParams }: { searchParams
                   </form>
                 )}
 
-                {!identityNeedsUpload && identityDoc?.status === "UPLOADED" && (
+                {!stopped && !identityNeedsUpload && identityDoc?.status === "UPLOADED" && (
                   <p className="mt-3 text-xs text-ink-faint">{t("identityUploadedPending")}</p>
                 )}
 

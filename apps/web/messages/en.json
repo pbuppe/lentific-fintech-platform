@@ -322,6 +322,13 @@
       "colPayment": "Payment",
       "colInterest": "Interest",
       "colRemaining": "Outstanding"
+    },
+    "rejected": {
+      "title": "Your request was not approved.",
+      "reason": "Reason: {reason}",
+      "noFee": "No fee is due. You can reply to your adviser or submit a new request when your situation has changed.",
+      "messages": "Read your adviser's message",
+      "newRequest": "Submit a new request"
     }
   },
   "BorrowerApplication": {

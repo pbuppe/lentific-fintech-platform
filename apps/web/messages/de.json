@@ -322,6 +322,13 @@
       "colPayment": "Rate",
       "colInterest": "Zinsen",
       "colRemaining": "Restschuld"
+    },
+    "rejected": {
+      "title": "Ihre Anfrage wurde nicht angenommen.",
+      "reason": "Grund: {reason}",
+      "noFee": "Es ist kein Honorar fällig. Sie können Ihrem Berater antworten oder eine neue Anfrage stellen, wenn sich Ihre Situation geändert hat.",
+      "messages": "Nachricht Ihres Beraters lesen",
+      "newRequest": "Neue Anfrage stellen"
     }
   },
   "BorrowerApplication": {
