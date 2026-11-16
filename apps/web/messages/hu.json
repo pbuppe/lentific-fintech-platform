@@ -946,7 +946,8 @@
       "copyright": "© {year} {company}. Minden jog fenntartva.",
       "contactPerson": "Kapcsolattartó: {name}",
       "cookies": "Sütibeállítások",
-      "privacy": "Adatvédelem"
+      "privacy": "Adatvédelem",
+      "companyNumber": "Az Egyesült Királyságban bejegyzett társaság (Companies House), cégjegyzékszám: {number}"
     }
   },
   "CreditsSummary": {

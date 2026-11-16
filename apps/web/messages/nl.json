@@ -946,7 +946,8 @@
       "copyright": "© {year} {company}. Alle rechten voorbehouden.",
       "contactPerson": "Uw contactpersoon: {name}",
       "cookies": "Cookies beheren",
-      "privacy": "Privacy"
+      "privacy": "Privacy",
+      "companyNumber": "Ingeschreven in het Verenigd Koninkrijk (Companies House) nr. {number}"
     }
   },
   "CreditsSummary": {

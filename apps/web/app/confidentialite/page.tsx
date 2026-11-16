@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
-import { contactInbox } from "@fintech/auth";
+import { legalIdentity } from "../../lib/legal";
 import { CookieSettingsLink } from "../components/CookieConsent";
 import { SiteFooter } from "../components/BrokerSections";
 import { PRIVACY, UPDATED_AT, type Block } from "./content";
 
 /**
  * Politique de confidentialité et cookies (demande produit 2026-11-16), dans
- * la langue du visiteur. Identité du responsable : SITE_COMPANY_NAME /
- * SITE_ADDRESS / SITE_CONTACT_EMAIL si renseignés, sinon « Lentific » et
- * l'adresse de contact (info@lentific.com).
+ * la langue du visiteur. Identité du responsable : lib/legal.ts.
  */
 async function text() {
   const locale = await getLocale();
@@ -23,10 +21,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function PrivacyPage() {
   const { locale, p } = await text();
-  const company = process.env.SITE_COMPANY_NAME || "Lentific";
-  const address = process.env.SITE_ADDRESS;
-  const email = process.env.SITE_CONTACT_EMAIL || contactInbox();
-  const controller = address ? `${company}, ${address}` : company;
+  const id = legalIdentity();
+  const email = id.email;
+  const controller = [id.company, id.companyNumber && p.reg.replace("{n}", id.companyNumber), id.address].filter(Boolean).join(", ");
   const date = new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(new Date(`${UPDATED_AT}T12:00:00Z`));
 
   const fill = (s: string) => {

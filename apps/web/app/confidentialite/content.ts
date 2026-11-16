@@ -3,12 +3,12 @@
  * les 8 langues du site. Il décrit le fonctionnement réel de la plateforme
  * (données collectées, prestataires, cookies, durées) : à tenir à jour si l'un
  * de ces points change. {controller} et {email} sont remplacés à l'affichage
- * par l'identité configurée (SITE_COMPANY_NAME, SITE_ADDRESS,
- * SITE_CONTACT_EMAIL) ; rien d'autre n'est inventé.
+ * par l'identité légale (lib/legal.ts).
  */
 export type Block = string | { ul: string[] } | { table: { head: string[]; rows: string[][] } };
 export type PrivacyText = {
   meta: string;
+  reg: string;
   kicker: string;
   title: string;
   updated: string;
@@ -22,6 +22,7 @@ export const UPDATED_AT = "2026-11-16";
 
 const fr: PrivacyText = {
   meta: "Politique de confidentialité et cookies",
+  reg: "société immatriculée au Royaume-Uni (Companies House) sous le n° {n}",
   kicker: "Lentific · Vos données",
   title: "Politique de confidentialité",
   updated: "Dernière mise à jour : {date}",
@@ -84,7 +85,7 @@ const fr: PrivacyText = {
     {
       h: "5. Transferts hors de l'Union européenne",
       body: [
-        "Certains de nos prestataires (notamment Vercel, Resend et PayPal) sont des sociétés américaines et peuvent traiter des données hors de l'Union européenne. Ces transferts sont encadrés par les garanties prévues par le RGPD : clauses contractuelles types de la Commission européenne ou certification au « Data Privacy Framework » UE–États-Unis.",
+        "Certains de nos prestataires (notamment Vercel, Resend et PayPal) sont des sociétés américaines et peuvent traiter des données hors de l'Union européenne. Ces transferts sont encadrés par les garanties prévues par le RGPD : clauses contractuelles types de la Commission européenne ou certification au « Data Privacy Framework » UE–États-Unis. Notre société est établie au Royaume-Uni, qui bénéficie d'une décision d'adéquation de la Commission européenne : vos données y sont protégées à un niveau équivalent à celui de l'Union européenne. Notre base de données est, elle, hébergée dans l'Union européenne (Francfort).",
       ],
     },
     {
@@ -129,7 +130,7 @@ const fr: PrivacyText = {
       body: [
         "Vous pouvez à tout moment demander à accéder à vos données, les faire corriger ou supprimer, en limiter l'utilisation, vous opposer à leur utilisation (notamment à nos e-mails d'information, sans avoir à vous justifier), en recevoir une copie dans un format courant, retirer votre accord, et nous indiquer ce que nous devons faire de vos données après votre décès.",
         "Pour cela, écrivez-nous à {email}. Nous vous répondons dans un délai d'un mois. Si nous avons un doute raisonnable sur votre identité, nous pourrons vous demander de la confirmer. Certaines données ne peuvent pas être supprimées avant la fin des durées imposées par la loi (partie 6).",
-        "Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir l'autorité de protection des données de votre pays ; en France, la CNIL (www.cnil.fr).",
+        "Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir l'autorité de protection des données de votre pays ; en France, la CNIL (www.cnil.fr). Notre société étant établie au Royaume-Uni, vous pouvez aussi vous adresser à l'autorité britannique, l'ICO (ico.org.uk).",
       ],
     },
     {
@@ -151,6 +152,7 @@ const fr: PrivacyText = {
 
 const en: PrivacyText = {
   meta: "Privacy and cookie policy",
+  reg: "a company registered in the United Kingdom (Companies House) under number {n}",
   kicker: "Lentific · Your data",
   title: "Privacy policy",
   updated: "Last updated: {date}",
@@ -211,7 +213,7 @@ const en: PrivacyText = {
     {
       h: "5. Transfers outside the European Union",
       body: [
-        "Some of our providers (in particular Vercel, Resend and PayPal) are US companies and may process data outside the European Union. These transfers are covered by the safeguards provided by the GDPR: European Commission standard contractual clauses or certification under the EU–US Data Privacy Framework.",
+        "Some of our providers (in particular Vercel, Resend and PayPal) are US companies and may process data outside the European Union. These transfers are covered by the safeguards provided by the GDPR: European Commission standard contractual clauses or certification under the EU–US Data Privacy Framework. Our company is established in the United Kingdom, which benefits from an adequacy decision of the European Commission: your data is protected there to a level equivalent to that of the European Union. Our database itself is hosted in the European Union (Frankfurt).",
       ],
     },
     {
@@ -256,7 +258,7 @@ const en: PrivacyText = {
       body: [
         "At any time you can ask to access your data, have it corrected or deleted, restrict its use, object to its use (in particular to our newsletters, without having to give a reason), receive a copy in a common format, withdraw your consent, and tell us what to do with your data after your death.",
         "To do so, write to us at {email}. We reply within one month. If we have reasonable doubts about your identity, we may ask you to confirm it. Some data cannot be deleted before the end of the periods required by law (section 6).",
-        "If you believe your rights are not being respected, you can lodge a complaint with the data protection authority of your country; in France, the CNIL (www.cnil.fr).",
+        "If you believe your rights are not being respected, you can lodge a complaint with the data protection authority of your country; in France, the CNIL (www.cnil.fr). As our company is established in the United Kingdom, you can also contact the UK authority, the ICO (ico.org.uk).",
       ],
     },
     {
@@ -278,6 +280,7 @@ const en: PrivacyText = {
 
 const es: PrivacyText = {
   meta: "Política de privacidad y cookies",
+  reg: "sociedad registrada en el Reino Unido (Companies House) con el n.º {n}",
   kicker: "Lentific · Sus datos",
   title: "Política de privacidad",
   updated: "Última actualización: {date}",
@@ -338,7 +341,7 @@ const es: PrivacyText = {
     {
       h: "5. Transferencias fuera de la Unión Europea",
       body: [
-        "Algunos de nuestros proveedores (en particular Vercel, Resend y PayPal) son empresas estadounidenses y pueden tratar datos fuera de la Unión Europea. Estas transferencias están amparadas por las garantías previstas en el RGPD: cláusulas contractuales tipo de la Comisión Europea o certificación en el «Data Privacy Framework» UE-EE. UU.",
+        "Algunos de nuestros proveedores (en particular Vercel, Resend y PayPal) son empresas estadounidenses y pueden tratar datos fuera de la Unión Europea. Estas transferencias están amparadas por las garantías previstas en el RGPD: cláusulas contractuales tipo de la Comisión Europea o certificación en el «Data Privacy Framework» UE-EE. UU. Nuestra sociedad está establecida en el Reino Unido, que cuenta con una decisión de adecuación de la Comisión Europea: allí sus datos están protegidos a un nivel equivalente al de la Unión Europea. Nuestra base de datos, por su parte, está alojada en la Unión Europea (Fráncfort).",
       ],
     },
     {
@@ -383,7 +386,7 @@ const es: PrivacyText = {
       body: [
         "En cualquier momento puede solicitar el acceso a sus datos, su rectificación o supresión, la limitación de su uso, oponerse a su uso (en particular a nuestros correos informativos, sin necesidad de justificarse), recibir una copia en un formato habitual, retirar su consentimiento e indicarnos qué hacer con sus datos tras su fallecimiento.",
         "Para ello, escríbanos a {email}. Le respondemos en el plazo de un mes. Si tenemos dudas razonables sobre su identidad, podremos pedirle que la confirme. Algunos datos no pueden suprimirse antes de que finalicen los plazos exigidos por la ley (apartado 6).",
-        "Si considera que no se respetan sus derechos, puede presentar una reclamación ante la autoridad de protección de datos de su país; en España, la AEPD (www.aepd.es); en Francia, la CNIL (www.cnil.fr).",
+        "Si considera que no se respetan sus derechos, puede presentar una reclamación ante la autoridad de protección de datos de su país; en España, la AEPD (www.aepd.es); en Francia, la CNIL (www.cnil.fr). Como nuestra sociedad está establecida en el Reino Unido, también puede dirigirse a la autoridad británica, la ICO (ico.org.uk).",
       ],
     },
     {
@@ -405,6 +408,7 @@ const es: PrivacyText = {
 
 const it: PrivacyText = {
   meta: "Informativa sulla privacy e sui cookie",
+  reg: "società registrata nel Regno Unito (Companies House) con il n. {n}",
   kicker: "Lentific · I suoi dati",
   title: "Informativa sulla privacy",
   updated: "Ultimo aggiornamento: {date}",
@@ -465,7 +469,7 @@ const it: PrivacyText = {
     {
       h: "5. Trasferimenti al di fuori dell'Unione europea",
       body: [
-        "Alcuni dei nostri fornitori (in particolare Vercel, Resend e PayPal) sono società statunitensi e possono trattare dati al di fuori dell'Unione europea. Questi trasferimenti sono coperti dalle garanzie previste dal GDPR: clausole contrattuali tipo della Commissione europea o certificazione al «Data Privacy Framework» UE-USA.",
+        "Alcuni dei nostri fornitori (in particolare Vercel, Resend e PayPal) sono società statunitensi e possono trattare dati al di fuori dell'Unione europea. Questi trasferimenti sono coperti dalle garanzie previste dal GDPR: clausole contrattuali tipo della Commissione europea o certificazione al «Data Privacy Framework» UE-USA. La nostra società ha sede nel Regno Unito, che beneficia di una decisione di adeguatezza della Commissione europea: i suoi dati vi sono protetti a un livello equivalente a quello dell'Unione europea. Il nostro database è invece ospitato nell'Unione europea (Francoforte).",
       ],
     },
     {
@@ -510,7 +514,7 @@ const it: PrivacyText = {
       body: [
         "In qualsiasi momento può chiedere di accedere ai suoi dati, di rettificarli o cancellarli, di limitarne l'uso, di opporsi al loro uso (in particolare alle nostre e-mail informative, senza doverne indicare il motivo), di riceverne una copia in un formato di uso comune, di revocare il consenso e di indicarci cosa fare dei suoi dati dopo il decesso.",
         "Per farlo, ci scriva a {email}. Rispondiamo entro un mese. Se abbiamo ragionevoli dubbi sulla sua identità, potremo chiederle di confermarla. Alcuni dati non possono essere cancellati prima della scadenza dei termini previsti dalla legge (sezione 6).",
-        "Se ritiene che i suoi diritti non siano rispettati, può presentare reclamo all'autorità di protezione dei dati del suo paese; in Italia, il Garante per la protezione dei dati personali (www.garanteprivacy.it); in Francia, la CNIL (www.cnil.fr).",
+        "Se ritiene che i suoi diritti non siano rispettati, può presentare reclamo all'autorità di protezione dei dati del suo paese; in Italia, il Garante per la protezione dei dati personali (www.garanteprivacy.it); in Francia, la CNIL (www.cnil.fr). Poiché la nostra società ha sede nel Regno Unito, può rivolgersi anche all'autorità britannica, l'ICO (ico.org.uk).",
       ],
     },
     {
@@ -532,6 +536,7 @@ const it: PrivacyText = {
 
 const hu: PrivacyText = {
   meta: "Adatvédelmi és sütikezelési tájékoztató",
+  reg: "az Egyesült Királyságban (Companies House) {n} számon bejegyzett társaság",
   kicker: "Lentific · Az Ön adatai",
   title: "Adatvédelmi tájékoztató",
   updated: "Utolsó frissítés: {date}",
@@ -592,7 +597,7 @@ const hu: PrivacyText = {
     {
       h: "5. Adattovábbítás az Európai Unión kívülre",
       body: [
-        "Egyes szolgáltatóink (különösen a Vercel, a Resend és a PayPal) amerikai vállalatok, és az Európai Unión kívül is kezelhetnek adatokat. Ezekre a továbbításokra a GDPR által előírt garanciák vonatkoznak: az Európai Bizottság általános szerződési feltételei vagy az EU–USA „Data Privacy Framework” szerinti tanúsítás.",
+        "Egyes szolgáltatóink (különösen a Vercel, a Resend és a PayPal) amerikai vállalatok, és az Európai Unión kívül is kezelhetnek adatokat. Ezekre a továbbításokra a GDPR által előírt garanciák vonatkoznak: az Európai Bizottság általános szerződési feltételei vagy az EU–USA „Data Privacy Framework” szerinti tanúsítás. Társaságunk az Egyesült Királyságban működik, amelyre az Európai Bizottság megfelelőségi határozata vonatkozik: adatai ott az Európai Unióval egyenértékű védelemben részesülnek. Adatbázisunkat ugyanakkor az Európai Unióban (Frankfurtban) tároljuk.",
       ],
     },
     {
@@ -637,7 +642,7 @@ const hu: PrivacyText = {
       body: [
         "Bármikor kérheti adataihoz való hozzáférést, azok helyesbítését vagy törlését, kezelésük korlátozását, tiltakozhat kezelésük ellen (különösen tájékoztató e-mailjeink ellen, indoklás nélkül), kérheti adatai másolatát általánosan használt formátumban, visszavonhatja hozzájárulását, és rendelkezhet adatairól halála esetére.",
         "Ehhez írjon nekünk: {email}. Egy hónapon belül válaszolunk. Ha személyazonosságát illetően megalapozott kétségünk merül fel, kérhetjük annak megerősítését. Egyes adatok a jogszabályban előírt határidők lejárta előtt nem törölhetők (6. pont).",
-        "Ha úgy véli, hogy jogai sérültek, panaszt tehet országa adatvédelmi hatóságánál; Magyarországon a NAIH-nál (www.naih.hu), Franciaországban a CNIL-nél (www.cnil.fr).",
+        "Ha úgy véli, hogy jogai sérültek, panaszt tehet országa adatvédelmi hatóságánál; Magyarországon a NAIH-nál (www.naih.hu), Franciaországban a CNIL-nél (www.cnil.fr). Mivel társaságunk az Egyesült Királyságban működik, a brit hatósághoz, az ICO-hoz (ico.org.uk) is fordulhat.",
       ],
     },
     {
@@ -659,6 +664,7 @@ const hu: PrivacyText = {
 
 const pt: PrivacyText = {
   meta: "Política de privacidade e de cookies",
+  reg: "sociedade registada no Reino Unido (Companies House) sob o n.º {n}",
   kicker: "Lentific · Os seus dados",
   title: "Política de privacidade",
   updated: "Última atualização: {date}",
@@ -719,7 +725,7 @@ const pt: PrivacyText = {
     {
       h: "5. Transferências para fora da União Europeia",
       body: [
-        "Alguns dos nossos prestadores (em particular Vercel, Resend e PayPal) são empresas norte-americanas e podem tratar dados fora da União Europeia. Estas transferências estão abrangidas pelas garantias previstas no RGPD: cláusulas contratuais-tipo da Comissão Europeia ou certificação no «Data Privacy Framework» UE-EUA.",
+        "Alguns dos nossos prestadores (em particular Vercel, Resend e PayPal) são empresas norte-americanas e podem tratar dados fora da União Europeia. Estas transferências estão abrangidas pelas garantias previstas no RGPD: cláusulas contratuais-tipo da Comissão Europeia ou certificação no «Data Privacy Framework» UE-EUA. A nossa sociedade está estabelecida no Reino Unido, que beneficia de uma decisão de adequação da Comissão Europeia: os seus dados estão aí protegidos a um nível equivalente ao da União Europeia. A nossa base de dados está, por sua vez, alojada na União Europeia (Frankfurt).",
       ],
     },
     {
@@ -764,7 +770,7 @@ const pt: PrivacyText = {
       body: [
         "Pode, a qualquer momento, pedir para aceder aos seus dados, retificá-los ou apagá-los, limitar a sua utilização, opor-se à sua utilização (em particular aos nossos e-mails informativos, sem ter de se justificar), receber uma cópia num formato corrente, retirar o seu consentimento e indicar-nos o que fazer com os seus dados após a sua morte.",
         "Para isso, escreva-nos para {email}. Respondemos no prazo de um mês. Se tivermos dúvidas razoáveis sobre a sua identidade, poderemos pedir-lhe que a confirme. Alguns dados não podem ser apagados antes do fim dos prazos exigidos por lei (secção 6).",
-        "Se considerar que os seus direitos não são respeitados, pode apresentar reclamação à autoridade de proteção de dados do seu país; em Portugal, a CNPD (www.cnpd.pt); em França, a CNIL (www.cnil.fr).",
+        "Se considerar que os seus direitos não são respeitados, pode apresentar reclamação à autoridade de proteção de dados do seu país; em Portugal, a CNPD (www.cnpd.pt); em França, a CNIL (www.cnil.fr). Como a nossa sociedade está estabelecida no Reino Unido, pode também dirigir-se à autoridade britânica, a ICO (ico.org.uk).",
       ],
     },
     {
@@ -786,6 +792,7 @@ const pt: PrivacyText = {
 
 const de: PrivacyText = {
   meta: "Datenschutz- und Cookie-Richtlinie",
+  reg: "eine im Vereinigten Königreich (Companies House) unter der Nummer {n} eingetragene Gesellschaft",
   kicker: "Lentific · Ihre Daten",
   title: "Datenschutzerklärung",
   updated: "Zuletzt aktualisiert: {date}",
@@ -846,7 +853,7 @@ const de: PrivacyText = {
     {
       h: "5. Übermittlungen außerhalb der Europäischen Union",
       body: [
-        "Einige unserer Dienstleister (insbesondere Vercel, Resend und PayPal) sind US-Unternehmen und können Daten außerhalb der Europäischen Union verarbeiten. Diese Übermittlungen sind durch die in der DSGVO vorgesehenen Garantien abgesichert: Standardvertragsklauseln der Europäischen Kommission oder Zertifizierung nach dem EU-US „Data Privacy Framework“.",
+        "Einige unserer Dienstleister (insbesondere Vercel, Resend und PayPal) sind US-Unternehmen und können Daten außerhalb der Europäischen Union verarbeiten. Diese Übermittlungen sind durch die in der DSGVO vorgesehenen Garantien abgesichert: Standardvertragsklauseln der Europäischen Kommission oder Zertifizierung nach dem EU-US „Data Privacy Framework“. Unser Unternehmen hat seinen Sitz im Vereinigten Königreich, für das ein Angemessenheitsbeschluss der Europäischen Kommission gilt: Ihre Daten sind dort auf einem dem der Europäischen Union gleichwertigen Niveau geschützt. Unsere Datenbank selbst wird in der Europäischen Union (Frankfurt) gehostet.",
       ],
     },
     {
@@ -891,7 +898,7 @@ const de: PrivacyText = {
       body: [
         "Sie können jederzeit Auskunft über Ihre Daten verlangen, sie berichtigen oder löschen lassen, ihre Verarbeitung einschränken, der Verarbeitung widersprechen (insbesondere unseren Informations-E-Mails, ohne Begründung), eine Kopie in einem gängigen Format erhalten, Ihre Einwilligung widerrufen und uns mitteilen, was nach Ihrem Tod mit Ihren Daten geschehen soll.",
         "Schreiben Sie uns dazu an {email}. Wir antworten innerhalb eines Monats. Bei begründeten Zweifeln an Ihrer Identität können wir Sie bitten, diese zu bestätigen. Manche Daten dürfen vor Ablauf der gesetzlichen Fristen nicht gelöscht werden (Abschnitt 6).",
-        "Wenn Sie der Ansicht sind, dass Ihre Rechte nicht gewahrt werden, können Sie sich bei der Datenschutzaufsichtsbehörde Ihres Landes beschweren; in Frankreich bei der CNIL (www.cnil.fr).",
+        "Wenn Sie der Ansicht sind, dass Ihre Rechte nicht gewahrt werden, können Sie sich bei der Datenschutzaufsichtsbehörde Ihres Landes beschweren; in Frankreich bei der CNIL (www.cnil.fr). Da unser Unternehmen seinen Sitz im Vereinigten Königreich hat, können Sie sich auch an die britische Behörde ICO (ico.org.uk) wenden.",
       ],
     },
     {
@@ -913,6 +920,7 @@ const de: PrivacyText = {
 
 const nl: PrivacyText = {
   meta: "Privacy- en cookiebeleid",
+  reg: "een vennootschap ingeschreven in het Verenigd Koninkrijk (Companies House) onder nummer {n}",
   kicker: "Lentific · Uw gegevens",
   title: "Privacybeleid",
   updated: "Laatst bijgewerkt: {date}",
@@ -973,7 +981,7 @@ const nl: PrivacyText = {
     {
       h: "5. Doorgifte buiten de Europese Unie",
       body: [
-        "Sommige van onze dienstverleners (met name Vercel, Resend en PayPal) zijn Amerikaanse bedrijven en kunnen gegevens buiten de Europese Unie verwerken. Deze doorgiften vallen onder de waarborgen van de AVG: standaardcontractbepalingen van de Europese Commissie of certificering onder het EU-VS „Data Privacy Framework”.",
+        "Sommige van onze dienstverleners (met name Vercel, Resend en PayPal) zijn Amerikaanse bedrijven en kunnen gegevens buiten de Europese Unie verwerken. Deze doorgiften vallen onder de waarborgen van de AVG: standaardcontractbepalingen van de Europese Commissie of certificering onder het EU-VS „Data Privacy Framework”. Onze vennootschap is gevestigd in het Verenigd Koninkrijk, waarvoor een adequaatheidsbesluit van de Europese Commissie geldt: uw gegevens worden daar beschermd op een niveau dat gelijkwaardig is aan dat van de Europese Unie. Onze database zelf wordt gehost in de Europese Unie (Frankfurt).",
       ],
     },
     {
@@ -1018,7 +1026,7 @@ const nl: PrivacyText = {
       body: [
         "U kunt op elk moment vragen om inzage in uw gegevens, ze laten corrigeren of verwijderen, het gebruik ervan beperken, bezwaar maken tegen het gebruik (met name tegen onze informatieve e-mails, zonder opgave van redenen), een kopie in een gangbaar formaat ontvangen, uw toestemming intrekken en ons laten weten wat er na uw overlijden met uw gegevens moet gebeuren.",
         "Schrijf ons daarvoor op {email}. Wij antwoorden binnen een maand. Als wij redelijke twijfel hebben over uw identiteit, kunnen wij u vragen die te bevestigen. Sommige gegevens kunnen niet worden verwijderd vóór het einde van de wettelijke termijnen (deel 6).",
-        "Als u vindt dat uw rechten niet worden gerespecteerd, kunt u een klacht indienen bij de gegevensbeschermingsautoriteit van uw land; in Nederland de Autoriteit Persoonsgegevens (www.autoriteitpersoonsgegevens.nl), in België de Gegevensbeschermingsautoriteit (www.gegevensbeschermingsautoriteit.be), in Frankrijk de CNIL (www.cnil.fr).",
+        "Als u vindt dat uw rechten niet worden gerespecteerd, kunt u een klacht indienen bij de gegevensbeschermingsautoriteit van uw land; in Nederland de Autoriteit Persoonsgegevens (www.autoriteitpersoonsgegevens.nl), in België de Gegevensbeschermingsautoriteit (www.gegevensbeschermingsautoriteit.be), in Frankrijk de CNIL (www.cnil.fr). Omdat onze vennootschap in het Verenigd Koninkrijk is gevestigd, kunt u zich ook tot de Britse autoriteit wenden, de ICO (ico.org.uk).",
       ],
     },
     {
