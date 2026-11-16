@@ -67,7 +67,6 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
   const id = legalIdentity();
   f.subheading(t.mp_intermediaryHeading);
   f.para(fmt(t.mp_intermediaryText, { company: id.company, companyNumber: id.companyNumber, address: id.address, oriasPart: id.orias ? fmt(t.mp_oriasPart, { orias: id.orias }) : "" }));
-  if (!id.orias) f.calloutToConfirm(t.mp_statusCallout, t.calloutPrefix);
 
   f.subheading(t.mp_borrowerHeading);
   const cityPart = data.borrowerCity ? fmt(t.mp_borrowerCityPart, { city: data.borrowerCity }) : "";
@@ -115,11 +114,9 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
 
   f.heading(t.mp_art7Title, 7, t.articleWord);
   f.para(t.mp_art7Text);
-  f.calloutToConfirm(t.mp_art7Callout, t.calloutPrefix);
 
   f.heading(t.mp_art8Title, 8, t.articleWord);
   f.para(t.mp_art8Text);
-  f.calloutToConfirm(t.mp_art8Callout, t.calloutPrefix);
 
   f.heading(t.mp_art9Title, 9, t.articleWord);
   f.para(t.mp_art9Text);
@@ -134,16 +131,13 @@ export async function renderContractPdf(data: ContractData): Promise<Uint8Array>
   f.heading(t.mp_art12Title, 12, t.articleWord);
   f.para(t.mp_art12Text);
 
-  f.heading(t.mp_art13Title, 13, t.articleWord);
-  f.calloutToConfirm(t.mp_art13Callout, t.calloutPrefix);
-
-  f.heading(t.mp_art14Title, 14, t.articleWord);
+  f.heading(t.mp_art14Title, 13, t.articleWord);
   f.para(t.mp_art14Text);
 
-  f.heading(t.mp_art15Title, 15, t.articleWord);
+  f.heading(t.mp_art15Title, 14, t.articleWord);
   f.para(t.mp_art15Text);
 
-  f.heading(t.mp_art16Title, 16, t.articleWord);
+  f.heading(t.mp_art16Title, 15, t.articleWord);
   f.para(t.mp_art16Text);
 
   // --- Signatures -------------------------------------------------------------

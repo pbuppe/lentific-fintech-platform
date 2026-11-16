@@ -125,7 +125,7 @@ export const hu: ContractStrings = {
   mp_annex3Title: "3. MELLÉKLET - JEGYZÉSI ÍV (MINTA)",
   mp_annex3Text:
     "Alulírott [Kölcsönadó neve] kijelentem, hogy jegyzem a jelen okiratban megjelölt Adós finanszírozását [összeg] EUR összegben, és elismerem, hogy megismertem és fenntartás nélkül elfogadtam a {reference} hivatkozási számú jelen szerződés valamennyi rendelkezését, különös tekintettel a 10. Cikkben szereplő kockázati figyelmeztetésre.",
-  mp_footerNote: "Ezt a dokumentumot a Lentific platform automatikusan generálta a {reference} ügyirat alapján. A „megerősítendő” jelöléssel ellátott adatokat éles használatba állítás előtt ügyvéddel kell egyeztetni. A szerkezet a francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei (különösen az R.548-6. cikk) alapján készült.",
+  mp_footerNote: "Ezt a dokumentumot a Lentific platform automatikusan generálta a {reference} ügyirat alapján. A szerkezet a francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei (különösen az R.548-6. cikk) alapján készült.",
 
   dl_pdfTitle: "Közvetlen kölcsönszerződés - {reference}",
   dl_mainTitle: "MAGÁNSZEMÉLYEK KÖZÖTTI KÖLCSÖNSZERZŐDÉS",
@@ -211,7 +211,7 @@ export const hu: ContractStrings = {
   bm_signClientLabel: "A Megbízó",
   bm_signBrokerLabel: "A Megbízott nevében, {company}",
   bm_signHint: "Dátum, aláírás és a kézzel írt „A megbízást elfogadom” megjegyzés",
-  bm_footerNote: "Ezt a dokumentumot a Lentific platform automatikusan generálta a(z) {reference} kérelemhez. Ez a megbízás MINTA: a „megerősítendő” jelöléssel ellátott adatokat valós használat előtt jogásszal kell egyeztetni.",
+  bm_footerNote: "Ezt a dokumentumot a Lentific platform automatikusan generálta a(z) {reference} kérelemhez.",
   bm_requestLabel: "Aláírt finanszírozás-felkutatási megbízás ({reference})",
   bm_requestInstructions: "Töltse le megbízását az alábbi „Aláírandó dokumentumok” részből, dátumozza, írja alá „A megbízást elfogadom” megjegyzéssel, majd töltse fel ide (fénykép vagy szkennelt kép).",
 };

@@ -124,7 +124,7 @@ export const it: ContractStrings = {
   mp_annex3Title: "ALLEGATO 3 - MODULO DI SOTTOSCRIZIONE (MODELLO)",
   mp_annex3Text:
     "Il sottoscritto/La sottoscritta [Nome del Mutuante], dichiara di sottoscrivere il finanziamento del Mutuatario indicato nel presente atto per un importo di [importo] EUR, e riconosce di aver preso visione e accettato senza riserve l'integralità delle disposizioni del presente contratto contraddistinto dal riferimento {reference}, in particolare l'avvertenza sui rischi riportata all'Articolo 10.",
-  mp_footerNote: "Documento generato automaticamente dalla piattaforma Lentific a partire dalla pratica {reference}. Le indicazioni contrassegnate «da confermare» devono essere sottoposte alla valutazione di un avvocato prima di qualsiasi messa in produzione. Struttura redatta con riferimento agli articoli L.548-1 e ss. e R.548-1 e ss. (in particolare R.548-6) del Codice Monetario e Finanziario francese.",
+  mp_footerNote: "Documento generato automaticamente dalla piattaforma Lentific a partire dalla pratica {reference}. Struttura redatta con riferimento agli articoli L.548-1 e ss. e R.548-1 e ss. (in particolare R.548-6) del Codice Monetario e Finanziario francese.",
 
   dl_pdfTitle: "Contratto di prestito diretto - {reference}",
   dl_mainTitle: "CONTRATTO DI PRESTITO TRA PRIVATI",
@@ -210,7 +210,7 @@ export const it: ContractStrings = {
   bm_signClientLabel: "Il Mandante",
   bm_signBrokerLabel: "Per il Mandatario, {company}",
   bm_signHint: "Data, firma e la dicitura manoscritta «Per accettazione del mandato»",
-  bm_footerNote: "Documento generato automaticamente dalla piattaforma Lentific per la richiesta {reference}. Questo mandato è un MODELLO: le indicazioni contrassegnate «da confermare» devono essere valutate da un giurista prima dell'uso reale.",
+  bm_footerNote: "Documento generato automaticamente dalla piattaforma Lentific per la richiesta {reference}.",
   bm_requestLabel: "Mandato di ricerca di finanziamento firmato ({reference})",
   bm_requestInstructions: "Scaricate il vostro mandato nella sezione «Documenti da firmare» qui sotto, datatelo, firmatelo con la dicitura «Per accettazione del mandato» e inviatelo qui (foto o scansione).",
 };

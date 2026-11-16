@@ -124,7 +124,7 @@ export const es: ContractStrings = {
   mp_annex3Title: "ANEXO 3 - BOLETÍN DE SUSCRIPCIÓN (MODELO)",
   mp_annex3Text:
     "El/la abajo firmante [Nombre del Prestamista], declara suscribir la financiación del Prestatario designado en el presente documento por un importe de [importe] EUR, y reconoce haber tomado conocimiento y aceptado sin reservas la totalidad de las estipulaciones del presente contrato con referencia {reference}, en particular la advertencia sobre los riesgos que figura en el Artículo 10.",
-  mp_footerNote: "Documento generado automáticamente por la plataforma Lentific a partir del expediente {reference}. Las menciones señaladas como «a confirmar» deben ser validadas por un abogado antes de su puesta en producción. Estructura establecida por referencia a los artículos L.548-1 y siguientes y R.548-1 y siguientes (en particular R.548-6) del Código Monetario y Financiero francés.",
+  mp_footerNote: "Documento generado automáticamente por la plataforma Lentific a partir del expediente {reference}. Estructura establecida por referencia a los artículos L.548-1 y siguientes y R.548-1 y siguientes (en particular R.548-6) del Código Monetario y Financiero francés.",
 
   dl_pdfTitle: "Contrato de préstamo directo - {reference}",
   dl_mainTitle: "CONTRATO DE PRÉSTAMO ENTRE PARTICULARES",
@@ -210,7 +210,7 @@ export const es: ContractStrings = {
   bm_signClientLabel: "El Mandante",
   bm_signBrokerLabel: "Por el Mandatario, {company}",
   bm_signHint: "Fecha, firma y la mención manuscrita «Conforme con el mandato»",
-  bm_footerNote: "Documento generado automáticamente por la plataforma Lentific para la solicitud {reference}. Este mandato es un MODELO: las menciones señaladas como «a confirmar» deben ser validadas por un jurista antes de su uso real.",
+  bm_footerNote: "Documento generado automáticamente por la plataforma Lentific para la solicitud {reference}.",
   bm_requestLabel: "Mandato de búsqueda de financiación firmado ({reference})",
   bm_requestInstructions: "Descargue su mandato en la sección «Documentos para firmar» más abajo, féchelo, fírmelo con la mención «Conforme con el mandato» y envíelo aquí (foto o escaneo).",
 };

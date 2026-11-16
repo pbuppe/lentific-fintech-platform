@@ -124,7 +124,7 @@ export const pt: ContractStrings = {
   mp_annex3Title: "ANEXO 3 - BOLETIM DE SUBSCRIÇÃO (MODELO)",
   mp_annex3Text:
     "Eu, abaixo assinado(a), [Nome do Mutuante], declaro subscrever o financiamento do Mutuário designado no presente documento, pelo montante de [montante] EUR, e reconheço ter tomado conhecimento e aceitado, sem reservas, a totalidade das estipulações do presente contrato referenciado {reference}, nomeadamente a advertência sobre os riscos constante do Artigo 10.",
-  mp_footerNote: "Documento gerado automaticamente pela plataforma Lentific a partir do processo {reference}. As menções assinaladas «a confirmar» devem ser validadas por um advogado antes de qualquer utilização em produção. Estrutura estabelecida por referência aos artigos L.548-1 e seguintes e R.548-1 e seguintes (nomeadamente R.548-6) do Código Monetário e Financeiro francês.",
+  mp_footerNote: "Documento gerado automaticamente pela plataforma Lentific a partir do processo {reference}. Estrutura estabelecida por referência aos artigos L.548-1 e seguintes e R.548-1 e seguintes (nomeadamente R.548-6) do Código Monetário e Financeiro francês.",
 
   dl_pdfTitle: "Contrato de mútuo direto - {reference}",
   dl_mainTitle: "CONTRATO DE MÚTUO ENTRE PARTICULARES",
@@ -210,7 +210,7 @@ export const pt: ContractStrings = {
   bm_signClientLabel: "O Mandante",
   bm_signBrokerLabel: "Pelo Mandatário, {company}",
   bm_signHint: "Data, assinatura e a menção manuscrita «Aceito o mandato»",
-  bm_footerNote: "Documento gerado automaticamente pela plataforma Lentific para o pedido {reference}. Este mandato é um MODELO: as menções assinaladas «a confirmar» devem ser validadas por um jurista antes da utilização real.",
+  bm_footerNote: "Documento gerado automaticamente pela plataforma Lentific para o pedido {reference}.",
   bm_requestLabel: "Mandato de procura de financiamento assinado ({reference})",
   bm_requestInstructions: "Descarregue o seu mandato na secção «Documentos a assinar» abaixo, date-o, assine-o com a menção «Aceito o mandato» e envie-o aqui (fotografia ou digitalização).",
 };

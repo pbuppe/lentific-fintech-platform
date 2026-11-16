@@ -81,7 +81,6 @@ export async function renderDirectContractPdf(data: DirectContractData): Promise
 
   f.heading(t.dl_art4Title, 4, t.articleWord);
   f.para(t.dl_art4Text);
-  f.calloutToConfirm(t.dl_art4Callout, t.calloutPrefix);
 
   f.heading(t.dl_art5Title, 5, t.articleWord);
   f.para(t.dl_art5Text);

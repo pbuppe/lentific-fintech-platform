@@ -124,7 +124,7 @@ export const de: ContractStrings = {
   mp_annex3Title: "ANLAGE 3 - ZEICHNUNGSSCHEIN (MUSTER)",
   mp_annex3Text:
     "Ich, der/die Unterzeichnende [Name des Darlehensgebers], erkläre, die Finanzierung des in diesem Vertrag bezeichneten Darlehensnehmers in Höhe von [Betrag] EUR zu zeichnen, und bestätige, von sämtlichen Bestimmungen des vorliegenden Vertrags mit dem Aktenzeichen {reference}, insbesondere dem in Artikel 10 enthaltenen Risikohinweis, Kenntnis genommen und diese vorbehaltlos akzeptiert zu haben.",
-  mp_footerNote: "Dokument automatisch von der Plattform Lentific auf Grundlage der Akte {reference} erstellt. Die als „zu bestätigen“ gekennzeichneten Angaben sind vor jeder Produktivsetzung von einem Rechtsanwalt zu prüfen. Struktur erstellt unter Bezugnahme auf die Artikel L.548-1 ff. und R.548-1 ff. (insbesondere R.548-6) des französischen Währungs- und Finanzgesetzbuchs.",
+  mp_footerNote: "Dokument automatisch von der Plattform Lentific auf Grundlage der Akte {reference} erstellt. Struktur erstellt unter Bezugnahme auf die Artikel L.548-1 ff. und R.548-1 ff. (insbesondere R.548-6) des französischen Währungs- und Finanzgesetzbuchs.",
 
   dl_pdfTitle: "Direkter Darlehensvertrag - {reference}",
   dl_mainTitle: "DARLEHENSVERTRAG ZWISCHEN PRIVATPERSONEN",
@@ -210,7 +210,7 @@ export const de: ContractStrings = {
   bm_signClientLabel: "Der Auftraggeber",
   bm_signBrokerLabel: "Für den Beauftragten, {company}",
   bm_signHint: "Datum, Unterschrift und der handschriftliche Vermerk „Auftrag erteilt“",
-  bm_footerNote: "Dokument automatisch von der Plattform Lentific für die Anfrage {reference} erstellt. Dieser Auftrag ist ein MUSTER: die als „zu bestätigen“ gekennzeichneten Angaben sind vor der tatsächlichen Verwendung von einem Juristen zu prüfen.",
+  bm_footerNote: "Dokument automatisch von der Plattform Lentific für die Anfrage {reference} erstellt.",
   bm_requestLabel: "Unterschriebener Auftrag zur Finanzierungssuche ({reference})",
   bm_requestInstructions: "Laden Sie Ihren Auftrag im Bereich „Zu unterschreibende Dokumente“ unten herunter, datieren und unterschreiben Sie ihn mit dem Vermerk „Auftrag erteilt“ und laden Sie ihn hier hoch (Foto oder Scan).",
 };

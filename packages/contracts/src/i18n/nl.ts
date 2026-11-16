@@ -124,7 +124,7 @@ export const nl: ContractStrings = {
   mp_annex3Title: "BIJLAGE 3 - INSCHRIJVINGSFORMULIER (MODEL)",
   mp_annex3Text:
     "Ondergetekende, [Naam van de Kredietgever], verklaart in te schrijven op de financiering van de in deze overeenkomst aangeduide Kredietnemer voor een bedrag van [bedrag] EUR, en erkent kennis te hebben genomen van en zonder voorbehoud alle bepalingen van deze overeenkomst met referentie {reference} te hebben aanvaard, met inbegrip van de waarschuwing inzake risico's opgenomen in Artikel 10.",
-  mp_footerNote: "Document automatisch gegenereerd door het platform Lentific op basis van dossier {reference}. De met „ter bevestiging” aangeduide vermeldingen dienen vóór enige inproductiename door een advocaat te worden beoordeeld. Structuur opgesteld met verwijzing naar de artikelen L.548-1 e.v. en R.548-1 e.v. (met name R.548-6) van het Franse Wetboek van Monetair en Financieel Recht.",
+  mp_footerNote: "Document automatisch gegenereerd door het platform Lentific op basis van dossier {reference}. Structuur opgesteld met verwijzing naar de artikelen L.548-1 e.v. en R.548-1 e.v. (met name R.548-6) van het Franse Wetboek van Monetair en Financieel Recht.",
 
   dl_pdfTitle: "Directe leningsovereenkomst - {reference}",
   dl_mainTitle: "LENINGSOVEREENKOMST TUSSEN PARTICULIEREN",
@@ -210,7 +210,7 @@ export const nl: ContractStrings = {
   bm_signClientLabel: "De Opdrachtgever",
   bm_signBrokerLabel: "Voor de Opdrachtnemer, {company}",
   bm_signHint: "Datum, handtekening en de handgeschreven vermelding „Voor akkoord opdracht”",
-  bm_footerNote: "Document automatisch gegenereerd door het platform Lentific voor aanvraag {reference}. Deze opdracht is een MODEL: de met „ter bevestiging” aangeduide vermeldingen moeten vóór werkelijk gebruik door een jurist worden beoordeeld.",
+  bm_footerNote: "Document automatisch gegenereerd door het platform Lentific voor aanvraag {reference}.",
   bm_requestLabel: "Ondertekende opdracht tot het zoeken van financiering ({reference})",
   bm_requestInstructions: "Download uw opdracht in het onderdeel „Te ondertekenen documenten” hieronder, dateer en onderteken haar met de vermelding „Voor akkoord opdracht” en upload haar hier (foto of scan).",
 };
