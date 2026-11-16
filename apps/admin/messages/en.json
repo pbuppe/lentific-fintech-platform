@@ -49,7 +49,17 @@
       "kycPending": "Identity pending",
       "kycVerified": "Identity verified",
       "underReview": "Under review"
-    }
+    },
+    "mandateTitle": "Financing search mandate",
+    "mandateHint": "Set the fees for this case: the mandate is generated in the client's language, added to their account and a signature request is e-mailed to them.",
+    "mandateFeeLabel": "Fees (€)",
+    "mandateGenerate": "Generate and send the mandate",
+    "mandateRegenerate": "Correct and resend",
+    "mandateSent": "Mandate sent on {date} · fees {amount}",
+    "mandateView": "View the mandate",
+    "mandateDone": "Mandate generated and sent to the client.",
+    "mandateError": "Invalid fee amount.",
+    "feeFromMandate": "Fees set in the mandate: {amount}"
   },
   "AccountsPage": {
     "kicker": "Super admin",
@@ -451,7 +461,8 @@
         "cancelled": "Fee request cancelled",
         "paid": "Fees paid by the client"
       }
-    }
+    },
+    "feeFromMandate": "Fees set in the mandate: {amount}"
   },
   "ClientRequestsPage": {
     "kicker": "Back office · Client relations",

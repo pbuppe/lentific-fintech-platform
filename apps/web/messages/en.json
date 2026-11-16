@@ -386,7 +386,11 @@
         "miss": "To send",
         "rejected": "Rejected"
       }
-    }
+    },
+    "toSignHeading": "Documents to sign",
+    "toSignHint": "Download, sign and send them back through the matching request above.",
+    "toSignMandate": "Financing search mandate · {reference}",
+    "download": "Download (PDF)"
   },
   "BorrowerInvestors": {
     "title": "Available investors",

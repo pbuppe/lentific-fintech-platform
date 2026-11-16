@@ -24,14 +24,26 @@ import {
   usersRepo,
   fundingRepo,
   directLoanAgreementsRepo,
+  auditLogsRepo,
+  prisma,
 } from "@fintech/database";
-import { uploadRaw, getFileUrl } from "@fintech/documents";
+import { uploadRaw, getFileUrl, uploadDocument, requestDocument } from "@fintech/documents";
 import { registerHandler, emit } from "@fintech/workflow";
 import { renderContractPdf } from "./template";
 import { renderDirectContractPdf } from "./templateDirect";
+import { renderMandatePdf } from "./templateMandate";
+import { getContractStrings } from "./i18n";
+import { fmt } from "./pdfKit";
+
+export { renderContractPdf } from "./template";
+export { renderDirectContractPdf } from "./templateDirect";
+export { renderMandatePdf } from "./templateMandate";
 
 const CURRENT_TEMPLATE_VERSION = "v1.0";
 const DIRECT_TEMPLATE_VERSION = "direct-v1.0";
+const MANDATE_TEMPLATE_VERSION = "mandat-v1.0";
+/** Type de Document du mandat généré (le scan signé revient via une DocumentRequest). */
+export const BROKER_MANDATE_DOC_TYPE = "broker_mandate";
 
 export async function generateContract(loanId: string) {
   const loan = await loansRepo.findById(loanId);
@@ -150,3 +162,77 @@ registerHandler("loan.created", async (payload) => {
   const contract = await generateContract(loanId);
   await emit("contract.generated", { contractId: contract.id, loanId, applicationId });
 });
+
+/**
+ * Mandat de recherche de financement (demande produit 2026-11-16) : généré
+ * dès que le conseiller fixe les honoraires du dossier dans le back-office.
+ * Le PDF est rangé dans les documents du client (type broker_mandate), et une
+ * demande de document « mandat signé » lui est adressée : il le télécharge,
+ * le signe et le renvoie depuis son espace (même parcours que les autres
+ * pièces). Re-générer (honoraires corrigés) crée une nouvelle version.
+ */
+export async function generateBrokerMandate(input: { applicationId: string; fee: number; actorId: string }) {
+  if (!Number.isFinite(input.fee) || input.fee <= 0 || input.fee > 100000) throw new Error("invalid_fee");
+  const application = await prisma.application.findUnique({
+    where: { id: input.applicationId },
+    include: { borrower: true, currency: true },
+  });
+  if (!application) throw new Error("Demande introuvable.");
+  const fee = Math.round(input.fee * 100) / 100;
+  const borrower = application.borrower;
+  const locale = borrower.preferredLocale;
+
+  const pdfBytes = await renderMandatePdf({
+    reference: application.reference,
+    clientName: borrower.name ?? borrower.email,
+    clientEmail: borrower.email,
+    amount: Number(application.amount),
+    durationMonths: application.durationMonths,
+    fee,
+    currency: application.currency.code,
+    generatedAt: new Date(),
+    locale,
+  });
+
+  const document = await uploadDocument({
+    ownerId: borrower.id,
+    applicationId: application.id,
+    type: BROKER_MANDATE_DOC_TYPE,
+    fileName: `mandat-${application.reference}-${MANDATE_TEMPLATE_VERSION}.pdf`,
+    content: pdfBytes,
+  });
+
+  const t = getContractStrings(locale);
+  const request = await requestDocument({
+    targetUserId: borrower.id,
+    requestedById: input.actorId,
+    label: fmt(t.bm_requestLabel, { reference: application.reference }),
+    instructions: t.bm_requestInstructions,
+  });
+
+  await auditLogsRepo.create({
+    userId: input.actorId,
+    action: "broker_mandate.generated",
+    entity: `Application:${application.id}`,
+    after: { documentId: document.id, requestId: request.id, fee, currency: application.currency.code, templateVersion: MANDATE_TEMPLATE_VERSION },
+  });
+  return { document, request, fee, borrower };
+}
+
+/** Dernier mandat généré pour chaque dossier (honoraires, date, lien du PDF). */
+export async function latestBrokerMandates(applicationIds: string[]) {
+  if (applicationIds.length === 0) return new Map<string, { fee: number; currency: string; generatedAt: Date; storageKey: string | null }>();
+  const logs = await prisma.auditLog.findMany({
+    where: { action: "broker_mandate.generated", entity: { in: applicationIds.map((id) => `Application:${id}`) } },
+    orderBy: { createdAt: "desc" },
+  });
+  const result = new Map<string, { fee: number; currency: string; generatedAt: Date; storageKey: string | null }>();
+  for (const log of logs) {
+    const applicationId = log.entity.slice("Application:".length);
+    if (result.has(applicationId)) continue;
+    const after = (log.after ?? {}) as { documentId?: string; fee?: number; currency?: string };
+    const doc = after.documentId ? await prisma.document.findUnique({ where: { id: after.documentId } }) : null;
+    result.set(applicationId, { fee: Number(after.fee ?? 0), currency: after.currency ?? "EUR", generatedAt: log.createdAt, storageKey: doc?.storageKey ?? null });
+  }
+  return result;
+}

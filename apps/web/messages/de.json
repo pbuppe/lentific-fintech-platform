@@ -386,7 +386,11 @@
         "miss": "Zu senden",
         "rejected": "Abgelehnt"
       }
-    }
+    },
+    "toSignHeading": "Zu unterschreibende Dokumente",
+    "toSignHint": "Laden Sie sie herunter, unterschreiben Sie sie und senden Sie sie über die entsprechende Anfrage oben zurück.",
+    "toSignMandate": "Auftrag zur Finanzierungssuche · {reference}",
+    "download": "Herunterladen (PDF)"
   },
   "BorrowerInvestors": {
     "title": "Verfügbare Investoren",

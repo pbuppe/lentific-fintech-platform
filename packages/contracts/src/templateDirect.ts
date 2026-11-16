@@ -11,7 +11,8 @@
  */
 import { PDFDocument, rgb } from "pdf-lib";
 import { buildSchedule } from "@fintech/loans";
-import { Flow, fmt, money, embedFonts, MARGIN, PAGE_WIDTH, PAGE_HEIGHT, CONTENT_WIDTH, INK, MUTED, ACCENT, LINE } from "./pdfKit";
+import { Flow, fmt, money, embedFonts, MARGIN, PAGE_WIDTH, CONTENT_WIDTH, INK, MUTED, ACCENT, LINE, BRAND, decoratePages } from "./pdfKit";
+import { legalIdentity } from "@fintech/database";
 import { getContractStrings, type ContractLocale } from "./i18n";
 
 export interface DirectContractData {
@@ -31,6 +32,7 @@ export interface DirectContractData {
 export async function renderDirectContractPdf(data: DirectContractData): Promise<Uint8Array> {
   const t = getContractStrings(data.locale);
   const dateLocale = (data.locale as string) ?? "fr";
+  const rateStr = data.rate.toLocaleString(dateLocale, { maximumFractionDigits: 2 });
 
   const pdf = await PDFDocument.create();
   pdf.setTitle(fmt(t.dl_pdfTitle, { reference: data.reference }));
@@ -69,7 +71,7 @@ export async function renderDirectContractPdf(data: DirectContractData): Promise
   f.termsTable([
     [t.dl_art2RowLabels[0], money(data.amount)],
     [t.dl_art2RowLabels[1], `${data.durationMonths} ${t.durationUnit}`],
-    [t.dl_art2RowLabels[2], `${data.rate} %`],
+    [t.dl_art2RowLabels[2], `${rateStr} %`],
     [t.dl_art2RowLabels[3], money(monthly)],
     [t.dl_art2RowLabels[4], money(totalCost)],
   ]);
@@ -113,21 +115,18 @@ export async function renderDirectContractPdf(data: DirectContractData): Promise
 
   // --- Annexe 1 : échéancier -------------------------------------------------------------
   f.newAnnexPage(t.dl_annex1Title);
-  f.page.drawText(fmt(t.dl_annex1Subtitle, { amount: money(data.amount), duration: data.durationMonths, rate: data.rate, monthly: money(monthly) }), { x: MARGIN, y: f.y, size: 8.5, font, color: MUTED });
+  f.page.drawText(fmt(t.dl_annex1Subtitle, { amount: money(data.amount), duration: data.durationMonths, rate: rateStr, monthly: money(monthly) }), { x: MARGIN, y: f.y, size: 8.5, font, color: MUTED });
   f.y -= 20;
 
   const colX = [MARGIN, MARGIN + 38, MARGIN + 135, MARGIN + 230, MARGIN + 320, MARGIN + 405];
-  f.page.drawRectangle({ x: MARGIN - 4, y: f.y - 4, width: CONTENT_WIDTH + 8, height: 16, color: INK });
+  f.page.drawRectangle({ x: MARGIN - 4, y: f.y - 4, width: CONTENT_WIDTH + 8, height: 16, color: BRAND });
   t.dl_annex1Headers.forEach((h, i) => f.page.drawText(h, { x: colX[i], y: f.y, size: 7.5, font: bold, color: rgb(1, 1, 1) }));
   f.y -= 16;
 
   const monthlyRate = data.rate / 12 / 100;
   let balance = data.amount;
   schedule.forEach((row, i) => {
-    if (f.y < MARGIN + 20) {
-      f.page = pdf.addPage([PAGE_WIDTH, PAGE_HEIGHT]);
-      f.y = PAGE_HEIGHT - MARGIN;
-    }
+    if (f.y < MARGIN + 20) f.newPage();
     const interest = balance * monthlyRate;
     const principal = row.amount - interest;
     balance = Math.max(0, balance - principal);
@@ -141,5 +140,6 @@ export async function renderDirectContractPdf(data: DirectContractData): Promise
   f.y -= 20;
   f.para(fmt(t.dl_footerNote, { reference: data.reference }), { size: 7, color: MUTED, f: italic });
 
+  decoratePages(pdf, { font, bold }, { reference: data.reference, docLabel: t.dl_pdfTitle.split(" - ")[0] });
   return pdf.save();
 }

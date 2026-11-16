@@ -386,7 +386,11 @@
         "miss": "À envoyer",
         "rejected": "Refusé"
       }
-    }
+    },
+    "toSignHeading": "Documents à signer",
+    "toSignHint": "Téléchargez, signez puis renvoyez-les via la demande correspondante ci-dessus.",
+    "toSignMandate": "Mandat de recherche de financement · {reference}",
+    "download": "Télécharger (PDF)"
   },
   "BorrowerInvestors": {
     "title": "Investisseurs disponibles",

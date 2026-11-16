@@ -14,8 +14,9 @@ export const hu: ContractStrings = {
   mp_mainSubtitle:
     "A francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei alapján készült",
   mp_intermediaryHeading: "A KÖZÖSSÉGI FINANSZÍROZÁS KÖZVETÍTŐJE",
-  mp_intermediaryText:
-    "A Lentific társaság, [kiegészítendő: társasági forma], [kiegészítendő: összeg] euró alaptőkével, [kiegészítendő: székhely címe], a [város] RCS-nél (a francia cégjegyzékben) [megerősítendő: SIREN-szám] szám alatt bejegyezve, az ORIAS-nál közösségi finanszírozási közvetítőként [megerősítendő: ORIAS-szám] szám alatt nyilvántartva, a továbbiakban: „a Közvetítő” vagy „Lentific”, amely a Kölcsönadók megbízottjaként jár el, anélkül hogy maga kölcsönadó félként szerepelne.",
+  mp_intermediaryText: "A(z) {company}, Angliában és Walesben bejegyzett korlátolt felelősségű társaság (private limited company), az angol cégnyilvántartásban (Companies House) {companyNumber} cégjegyzékszám alatt nyilvántartva, székhelye: {address}, a Lentific platform üzemeltetője{oriasPart}, a továbbiakban: „a Közvetítő” vagy „Lentific”, amely a Kölcsönadók megbízottjaként jár el, anélkül hogy maga kölcsönadó félként szerepelne.",
+  mp_oriasPart: ", az ORIAS-nál {orias} szám alatt nyilvántartva",
+  mp_statusCallout: "a Közvetítő szabályozói státusza a kamatozó kölcsönalapú közösségi finanszírozáshoz (közösségi finanszírozási szolgáltatói engedély az (EU) 2020/1503 rendelet szerint, vagy más alkalmazandó státusz) és a megfelelő nyilvántartási szám.",
   mp_borrowerHeading: "AZ ADÓS",
   mp_borrowerText: "{name} ({email}){cityPart}, szakmai minőségében eljárva, a továbbiakban: „az Adós”.",
   mp_borrowerCityPart: ", lakóhelye: {city}",
@@ -105,7 +106,7 @@ export const hu: ContractStrings = {
   mp_art16Text:
     "A jelen szerződésre a francia jog irányadó. Az érvényességével, értelmezésével vagy teljesítésével kapcsolatos bármely jogvita a területileg illetékes francia bíróságok kizárólagos hatáskörébe tartozik, az alkalmazandó közrendi szabályok fenntartásával.",
   mp_signBorrowerLabel: "Az Adós",
-  mp_signIntermediaryLabel: "A Közvetítő nevében, Lentific",
+  mp_signIntermediaryLabel: "A Közvetítő nevében, {company}",
   mp_annex1Title: "1. MELLÉKLET - TÖRLESZTÉSI ÜTEMTERV",
   mp_annex1Subtitle: "{amount} összegű kölcsön · {duration} havi törlesztőrészlet · {rate} %-os rögzített kamatláb · havi törlesztőrészlet: {monthly}",
   mp_annex1Headers: ["Törl.szám", "Dátum", "Tőke", "Kamat", "Törlesztőrészlet", "Egyenleg"],
@@ -124,8 +125,7 @@ export const hu: ContractStrings = {
   mp_annex3Title: "3. MELLÉKLET - JEGYZÉSI ÍV (MINTA)",
   mp_annex3Text:
     "Alulírott [Kölcsönadó neve] kijelentem, hogy jegyzem a jelen okiratban megjelölt Adós finanszírozását [összeg] EUR összegben, és elismerem, hogy megismertem és fenntartás nélkül elfogadtam a {reference} hivatkozási számú jelen szerződés valamennyi rendelkezését, különös tekintettel a 10. Cikkben szereplő kockázati figyelmeztetésre.",
-  mp_footerNote:
-    "Ezt a dokumentumot a Lentific platform automatikusan generálta a {reference} ügyirat alapján. A „megerősítendő” jelöléssel ellátott adatokat a társaság tényleges cégbejegyzési adataival kell kiegészíteni, és éles használatba állítás előtt ügyvéddel kell egyeztetni. A szerkezet a francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei (különösen az R.548-6. cikk) alapján készült.",
+  mp_footerNote: "Ezt a dokumentumot a Lentific platform automatikusan generálta a {reference} ügyirat alapján. A „megerősítendő” jelöléssel ellátott adatokat éles használatba állítás előtt ügyvéddel kell egyeztetni. A szerkezet a francia Monetáris és Pénzügyi Törvénykönyv L.548-1. és azt követő, valamint R.548-1. és azt követő cikkei (különösen az R.548-6. cikk) alapján készült.",
 
   dl_pdfTitle: "Közvetlen kölcsönszerződés - {reference}",
   dl_mainTitle: "MAGÁNSZEMÉLYEK KÖZÖTTI KÖLCSÖNSZERZŐDÉS",
@@ -181,4 +181,37 @@ export const hu: ContractStrings = {
   dl_annex1Headers: ["Törl.szám", "Dátum", "Tőke", "Kamat", "Törlesztőrészlet", "Egyenleg"],
   dl_footerNote:
     "Ezt a dokumentumot a Lentific platform automatikusan generálta a {reference} hivatkozási számú kapcsolatba hozás alapján. Ez a szerződés MINTA: aláírás előtt jogi szakemberrel jóváhagyandó, különös tekintettel az esetleges fogyasztói hitelnek minősítésre (4. Cikk).",
+
+  // --- Mandat de recherche de financement (courtage, honoraires au cas par cas) ---
+  bm_pdfTitle: "Finanszírozás-felkutatási megbízás - {reference}",
+  bm_mainTitle: "FINANSZÍROZÁS-FELKUTATÁSI MEGBÍZÁS",
+  bm_mainSubtitle: "Megbízás és díjmegállapodás: díj kizárólag a finanszírozás megszerzése esetén fizetendő",
+  bm_brokerHeading: "A MEGBÍZOTT",
+  bm_brokerText: "A(z) {company}, Angliában és Walesben bejegyzett korlátolt felelősségű társaság (private limited company), az angol cégnyilvántartásban (Companies House) {companyNumber} cégjegyzékszám alatt nyilvántartva, székhelye: {address}, a Lentific platform üzemeltetője{oriasPart}, a továbbiakban: „a Megbízott” vagy „Lentific”.",
+  bm_oriasPart: ", az ORIAS-nál banki és pénzforgalmi szolgáltatási közvetítőként {orias} szám alatt nyilvántartva",
+  bm_statusCallout: "a Megbízott hitelközvetítői státusza (ORIAS-nyilvántartás vagy azzal egyenértékű nyilvántartás a Megbízó országában), nyilvántartási száma és szakmai felelősségbiztosítása itt feltüntetendő.",
+  bm_clientHeading: "A MEGBÍZÓ",
+  bm_clientText: "{name} ({email}), a továbbiakban: „a Megbízó”.",
+  bm_art1Title: "A MEGBÍZÁS TÁRGYA",
+  bm_art1Text: "A Megbízó megbízza a Megbízottat, aki a megbízást elfogadja, hogy kutasson fel, hasonlítson össze és mutasson be számára egy vagy több, a(z) {reference} hivatkozási számú kérelmének megfelelő finanszírozást: {amount}, {duration} hónapra. A Megbízott összeállítja az ügyiratot, bemutatja azt a hitelintézeteknek és a Lentific platform befektetőinek, és a folyósításig segíti a Megbízót.",
+  bm_art2Title: "A MEGBÍZOTT KÖTELEZETTSÉGEI",
+  bm_art2Text: "A Megbízott a Megbízó érdekében lojálisan és gondosan jár el. Tájékoztatja az ügyirat előrehaladásáról, bemutatja a kapott ajánlatokat azok jellemzőivel, és felhívja figyelmét a hitelkötelezettség következményeire. Gondossági kötelezettség terheli, a finanszírozás megszerzését nem garantálja.",
+  bm_art3Title: "A MEGBÍZÓ KÖTELEZETTSÉGEI",
+  bm_art3Text: "A Megbízó pontos, teljes és naprakész információkat, valamint a kért igazoló dokumentumokat bocsátja rendelkezésre. Teljesen szabadon dönthet bármely bemutatott finanszírozási ajánlat elfogadásáról vagy elutasításáról.",
+  bm_art4Title: "DÍJAZÁS",
+  bm_art4Text: "Tevékenységéért a Megbízottat {fee} összegű díj illeti meg. A díj kizárólag a finanszírozás tényleges megszerzése esetén jár, és csak a folyósítást követően válik esedékessé. A Megbízótól egy vagy több kölcsön megszerzése előtt semmilyen jellegű fizetés nem követelhető. Ha finanszírozás nem jön létre, díj nem jár.",
+  bm_art5Title: "IDŐTARTAM ÉS MEGSZÜNTETÉS",
+  bm_art5Text: "Ez a megbízás aláírásával lép hatályba, és a folyósítással szűnik meg. Bármelyik fél bármikor, írásban, költség és kártérítés nélkül megszüntetheti, amíg a Megbízó finanszírozási ajánlatot nem fogadott el.",
+  bm_art6Title: "ELÁLLÁSI JOG",
+  bm_art6Text: "Mivel ez a megbízás távollévők között jön létre, a Megbízó az aláírástól számított tizennégy naptári napon belül indokolás és költség nélkül elállhat, ha erről a(z) {email} címre írásban értesítést küld.",
+  bm_art7Title: "SZEMÉLYES ADATOK",
+  bm_art7Text: "A Megbízó adatait a Megbízott e megbízás teljesítése céljából kezeli, és azokat kizárólag a finanszírozásra megkeresett hitelezőknek és befektetőknek továbbítja, a lentific.com oldalon közzétett adatvédelmi tájékoztatónak megfelelően.",
+  bm_art8Title: "PANASZOK ÉS ALKALMAZANDÓ JOG",
+  bm_art8Text: "Panasz a(z) {email} címre küldhető. E megbízásra a francia jog az irányadó, a Megbízó szokásos tartózkodási helye szerinti ország jogának kedvezőbb kógens rendelkezéseinek sérelme nélkül.",
+  bm_signClientLabel: "A Megbízó",
+  bm_signBrokerLabel: "A Megbízott nevében, {company}",
+  bm_signHint: "Dátum, aláírás és a kézzel írt „A megbízást elfogadom” megjegyzés",
+  bm_footerNote: "Ezt a dokumentumot a Lentific platform automatikusan generálta a(z) {reference} kérelemhez. Ez a megbízás MINTA: a „megerősítendő” jelöléssel ellátott adatokat valós használat előtt jogásszal kell egyeztetni.",
+  bm_requestLabel: "Aláírt finanszírozás-felkutatási megbízás ({reference})",
+  bm_requestInstructions: "Töltse le megbízását az alábbi „Aláírandó dokumentumok” részből, dátumozza, írja alá „A megbízást elfogadom” megjegyzéssel, majd töltse fel ide (fénykép vagy szkennelt kép).",
 };

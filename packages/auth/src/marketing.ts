@@ -19,7 +19,7 @@
  */
 import { randomBytes } from "node:crypto";
 import { prisma } from "@fintech/database";
-import { sendEmail, layout, escapeHtml, webBaseUrl, webUrlInLocale, contactInbox } from "./mailer";
+import { sendEmail, layout, escapeHtml, companyFooter, webBaseUrl, webUrlInLocale, contactInbox } from "./mailer";
 import { SHORT_TEMPLATES, SHORT_TEMPLATE_KEYS, SHORT_TEMPLATE_PATHS } from "./marketingShortTemplates";
 
 export const MARKETING_LOCALES = ["fr", "en", "es", "it", "hu", "pt", "de", "nl"] as const;
@@ -398,6 +398,7 @@ export function renderMarketingEmail(
     greeting, "", ...paragraphs.flatMap((p) => [p, ""]),
     ...(button ? [`${button.label} : ${button.url}`, ""] : []),
     c.signature, "", c.reply, c.why, `${c.unsubscribe} : ${unsub}`,
+    "", "--", companyFooter(),
   ].join("\n");
   return { subject: campaign.subject, html, text, unsubscribe: oneClickUnsubscribeUrl(contact.unsubscribeToken) };
 }

@@ -69,6 +69,7 @@ export {
   BrokerFeeStatus,
 } from "@prisma/client";
 
+export { legalIdentity, type LegalIdentity } from "./legal";
 export * as applicationsRepo from "./repositories/applications";
 export * as loansRepo from "./repositories/loans";
 export * as usersRepo from "./repositories/users";

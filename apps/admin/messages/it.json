@@ -49,7 +49,17 @@
       "kycPending": "Identità in attesa",
       "kycVerified": "Identità verificata",
       "underReview": "In revisione"
-    }
+    },
+    "mandateTitle": "Mandato di ricerca di finanziamento",
+    "mandateHint": "Fissate gli onorari della pratica: il mandato viene generato nella lingua del cliente, aggiunto al suo spazio e gli viene inviata via e-mail una richiesta di firma.",
+    "mandateFeeLabel": "Onorari (€)",
+    "mandateGenerate": "Genera e invia il mandato",
+    "mandateRegenerate": "Correggi e reinvia",
+    "mandateSent": "Mandato inviato il {date} · onorari {amount}",
+    "mandateView": "Vedi il mandato",
+    "mandateDone": "Mandato generato e inviato al cliente.",
+    "mandateError": "Importo degli onorari non valido.",
+    "feeFromMandate": "Onorari previsti dal mandato: {amount}"
   },
   "AccountsPage": {
     "kicker": "Super amministratore",
@@ -451,7 +461,8 @@
         "cancelled": "Richiesta di onorari annullata",
         "paid": "Onorari pagati dal cliente"
       }
-    }
+    },
+    "feeFromMandate": "Onorari previsti dal mandato: {amount}"
   },
   "ClientRequestsPage": {
     "kicker": "Back office · Relazione clienti",

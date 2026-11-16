@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getTranslations, getLocale } from "next-intl/server";
 import { fulfillDocumentRequest, listMyDocumentRequests, getFileUrl } from "@fintech/documents";
+import { prisma } from "@fintech/database";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
 import { DossierSummary } from "./DossierSummary";
@@ -30,6 +31,16 @@ export default async function DocumentsPage({ searchParams }: { searchParams: { 
   const requests = await listMyDocumentRequests(user.id);
   const pending = requests.filter((r) => r.status === "PENDING");
   const fulfilled = requests.filter((r) => r.status === "FULFILLED");
+
+  // Documents à signer générés par la plateforme (mandat de recherche de financement).
+  const toSign = await prisma.document.findMany({
+    where: { ownerId: user.id, type: "broker_mandate" },
+    include: { application: { select: { reference: true } } },
+    orderBy: { id: "desc" },
+  });
+  const latestToSign = toSign.filter((d, i) => toSign.findIndex((x) => x.applicationId === d.applicationId) === i);
+  const toSignUrls = new Map<string, string>();
+  for (const d of latestToSign) toSignUrls.set(d.id, await getFileUrl(d.storageKey));
 
   const documentUrls = new Map<string, string>();
   for (const r of fulfilled) {
@@ -77,6 +88,25 @@ export default async function DocumentsPage({ searchParams }: { searchParams: { 
             </Card>
           ))}
         </div>
+      )}
+
+      {latestToSign.length > 0 && (
+        <>
+          <h2 className="mt-8 font-display text-lg text-ink">{t("toSignHeading")}</h2>
+          <p className="mt-1 text-xs text-ink-soft">{t("toSignHint")}</p>
+          <div className="mt-3 grid gap-3">
+            {latestToSign.map((d) => (
+              <Card key={d.id}>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="font-display text-sm font-semibold text-ink">{t("toSignMandate", { reference: d.application?.reference ?? "" })}</p>
+                  <a href={toSignUrls.get(d.id)} target="_blank" rel="noreferrer" className="rounded-lg bg-yellow px-3 py-1.5 text-xs font-semibold text-ink hover:bg-yellow-ink">
+                    {t("download")}
+                  </a>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </>
       )}
 
       <h2 className="mt-8 font-display text-lg text-ink">{t("fulfilledHeading")}</h2>

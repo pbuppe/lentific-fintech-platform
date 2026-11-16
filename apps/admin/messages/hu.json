@@ -49,7 +49,17 @@
       "kycPending": "Azonosítás folyamatban",
       "kycVerified": "Azonosítás igazolva",
       "underReview": "Elbírálás alatt"
-    }
+    },
+    "mandateTitle": "Finanszírozás-felkutatási megbízás",
+    "mandateHint": "Adja meg az ügy díját: a megbízás az ügyfél nyelvén készül el, bekerül az ügyfélfiókjába, és e-mailben aláírási kérést kap.",
+    "mandateFeeLabel": "Díj (€)",
+    "mandateGenerate": "Megbízás létrehozása és küldése",
+    "mandateRegenerate": "Javítás és újraküldés",
+    "mandateSent": "Megbízás elküldve: {date} · díj: {amount}",
+    "mandateView": "Megbízás megtekintése",
+    "mandateDone": "A megbízás elkészült és elküldtük az ügyfélnek.",
+    "mandateError": "Érvénytelen díjösszeg.",
+    "feeFromMandate": "A megbízásban rögzített díj: {amount}"
   },
   "AccountsPage": {
     "kicker": "Szuperadmin",
@@ -451,7 +461,8 @@
         "cancelled": "Díjkérés visszavonva",
         "paid": "Díjat az ügyfél kifizette"
       }
-    }
+    },
+    "feeFromMandate": "A megbízásban rögzített díj: {amount}"
   },
   "ClientRequestsPage": {
     "kicker": "Back office · Ügyfélkapcsolat",

@@ -13,8 +13,9 @@ export const nl: ContractStrings = {
   mp_mainTitle: "LENINGSOVEREENKOMST VOOR KREDIETGEBASEERDE CROWDFUNDING",
   mp_mainSubtitle: "Opgesteld overeenkomstig de artikelen L.548-1 e.v. en R.548-1 e.v. van het Franse Wetboek van Monetair en Financieel Recht",
   mp_intermediaryHeading: "DE INTERMEDIAIR VOOR KREDIETGEBASEERDE CROWDFUNDING",
-  mp_intermediaryText:
-    "De vennootschap Lentific, [rechtsvorm aan te vullen] met een kapitaal van [bedrag] euro, [adres van de maatschappelijke zetel aan te vullen], ingeschreven in het RCS (het Franse handelsregister) van [stad] onder nummer [SIREN ter bevestiging], ingeschreven bij ORIAS als intermediair voor kredietgebaseerde crowdfunding onder nummer [ORIAS-nummer ter bevestiging], hierna „de Intermediair” of „Lentific”, handelend als lasthebber van de Kredietgevers, zonder zelf partij te zijn als kredietgever.",
+  mp_intermediaryText: "De vennootschap {company}, een in Engeland en Wales opgerichte besloten vennootschap (private limited company), ingeschreven in het Britse handelsregister (Companies House) onder nummer {companyNumber}, met maatschappelijke zetel te {address}, exploitant van het platform Lentific{oriasPart}, hierna „de Intermediair” of „Lentific”, handelend als lasthebber van de Kredietgevers, zonder zelf partij te zijn als kredietgever.",
+  mp_oriasPart: ", ingeschreven bij ORIAS onder nummer {orias}",
+  mp_statusCallout: "toezichtrechtelijke status van de Intermediair voor rentedragende kredietgebaseerde crowdfunding (vergunning als crowdfundingdienstverlener op grond van Verordening (EU) 2020/1503, of een andere toepasselijke status) en het bijbehorende registratienummer.",
   mp_borrowerHeading: "DE KREDIETNEMER",
   mp_borrowerText: "{name} ({email}){cityPart}, handelend in de uitoefening van een beroep of bedrijf, hierna „de Kredietnemer”.",
   mp_borrowerCityPart: ", woonachtig te {city}",
@@ -104,7 +105,7 @@ export const nl: ContractStrings = {
   mp_art16Text:
     "Deze overeenkomst is onderworpen aan Frans recht. Elk geschil met betrekking tot de geldigheid, de uitlegging of de uitvoering ervan wordt onderworpen aan de exclusieve bevoegdheid van de territoriaal bevoegde Franse rechtbanken, onder voorbehoud van de toepasselijke regels van openbare orde.",
   mp_signBorrowerLabel: "De Kredietnemer",
-  mp_signIntermediaryLabel: "Voor de Intermediair, Lentific",
+  mp_signIntermediaryLabel: "Voor de Intermediair, {company}",
   mp_annex1Title: "BIJLAGE 1 - AFLOSSINGSSCHEMA",
   mp_annex1Subtitle: "Lening van {amount} · {duration} maandelijkse termijnen · vaste rentevoet {rate} % · maandelijkse aflossing {monthly}",
   mp_annex1Headers: ["Term.", "Datum", "Kapitaal", "Rente", "Termijnbedrag", "Resterend saldo"],
@@ -123,8 +124,7 @@ export const nl: ContractStrings = {
   mp_annex3Title: "BIJLAGE 3 - INSCHRIJVINGSFORMULIER (MODEL)",
   mp_annex3Text:
     "Ondergetekende, [Naam van de Kredietgever], verklaart in te schrijven op de financiering van de in deze overeenkomst aangeduide Kredietnemer voor een bedrag van [bedrag] EUR, en erkent kennis te hebben genomen van en zonder voorbehoud alle bepalingen van deze overeenkomst met referentie {reference} te hebben aanvaard, met inbegrip van de waarschuwing inzake risico's opgenomen in Artikel 10.",
-  mp_footerNote:
-    "Document automatisch gegenereerd door het platform Lentific op basis van dossier {reference}. De met „ter bevestiging” aangeduide vermeldingen dienen te worden aangevuld met de werkelijke registratiegegevens van de vennootschap en te worden beoordeeld door een advocaat vóór enige inproductiename. Structuur opgesteld met verwijzing naar de artikelen L.548-1 e.v. en R.548-1 e.v. (met name R.548-6) van het Franse Wetboek van Monetair en Financieel Recht.",
+  mp_footerNote: "Document automatisch gegenereerd door het platform Lentific op basis van dossier {reference}. De met „ter bevestiging” aangeduide vermeldingen dienen vóór enige inproductiename door een advocaat te worden beoordeeld. Structuur opgesteld met verwijzing naar de artikelen L.548-1 e.v. en R.548-1 e.v. (met name R.548-6) van het Franse Wetboek van Monetair en Financieel Recht.",
 
   dl_pdfTitle: "Directe leningsovereenkomst - {reference}",
   dl_mainTitle: "LENINGSOVEREENKOMST TUSSEN PARTICULIEREN",
@@ -180,4 +180,37 @@ export const nl: ContractStrings = {
   dl_annex1Headers: ["Term.", "Datum", "Kapitaal", "Rente", "Termijnbedrag", "Resterend saldo"],
   dl_footerNote:
     "Document automatisch gegenereerd door het platform Lentific op basis van de bemiddeling met referentie {reference}. Deze overeenkomst is een MODEL: te laten valideren door een juridisch professional vóór ondertekening, met name met betrekking tot de eventuele kwalificatie als consumentenkrediet (Artikel 4).",
+
+  // --- Mandat de recherche de financement (courtage, honoraires au cas par cas) ---
+  bm_pdfTitle: "Opdracht tot het zoeken van financiering - {reference}",
+  bm_mainTitle: "OPDRACHT TOT HET ZOEKEN VAN FINANCIERING",
+  bm_mainSubtitle: "Opdracht en honorariumovereenkomst: honorarium alleen verschuldigd als de financiering wordt verkregen",
+  bm_brokerHeading: "DE OPDRACHTNEMER",
+  bm_brokerText: "De vennootschap {company}, een in Engeland en Wales opgerichte besloten vennootschap (private limited company), ingeschreven in het Britse handelsregister (Companies House) onder nummer {companyNumber}, met maatschappelijke zetel te {address}, exploitant van het platform Lentific{oriasPart}, hierna „de Opdrachtnemer” of „Lentific”.",
+  bm_oriasPart: ", ingeschreven bij ORIAS als bemiddelaar in bank- en betaaldiensten onder nummer {orias}",
+  bm_statusCallout: "status van de Opdrachtnemer als kredietbemiddelaar (ORIAS-inschrijving of gelijkwaardig in het land van de Opdrachtgever), registratienummer en beroepsaansprakelijkheidsverzekering hier te vermelden.",
+  bm_clientHeading: "DE OPDRACHTGEVER",
+  bm_clientText: "{name} ({email}), hierna „de Opdrachtgever”.",
+  bm_art1Title: "VOORWERP VAN DE OPDRACHT",
+  bm_art1Text: "De Opdrachtgever geeft de Opdrachtnemer, die aanvaardt, de opdracht om een of meer financieringen te zoeken, te vergelijken en voor te stellen die overeenstemmen met zijn aanvraag met referentie {reference}: {amount} over {duration} maanden. De Opdrachtnemer stelt het dossier samen, legt het voor aan kredietinstellingen en aan investeerders van het platform Lentific en begeleidt de Opdrachtgever tot de uitbetaling van de middelen.",
+  bm_art2Title: "VERPLICHTINGEN VAN DE OPDRACHTNEMER",
+  bm_art2Text: "De Opdrachtnemer handelt loyaal en zorgvuldig in het belang van de Opdrachtgever. Hij houdt hem op de hoogte van de voortgang van het dossier, legt hem de verkregen aanbiedingen met hun kenmerken voor en wijst hem op de gevolgen van een kredietverbintenis. Hij heeft een inspanningsverplichting en garandeert niet dat een financiering wordt verkregen.",
+  bm_art3Title: "VERPLICHTINGEN VAN DE OPDRACHTGEVER",
+  bm_art3Text: "De Opdrachtgever verstrekt juiste, volledige en actuele informatie en de gevraagde bewijsstukken. Hij blijft volledig vrij om elk voorgesteld financieringsaanbod te aanvaarden of te weigeren.",
+  bm_art4Title: "HONORARIUM",
+  bm_art4Text: "Als vergoeding voor zijn opdracht ontvangt de Opdrachtnemer een honorarium van {fee}. Dit honorarium is alleen verschuldigd als daadwerkelijk een financiering wordt verkregen en wordt pas opeisbaar na de uitbetaling van de middelen. Vóór het verkrijgen van een of meer leningen mag van de Opdrachtgever geen enkele betaling, van welke aard ook, worden verlangd. Wordt geen financiering verkregen, dan is geen honorarium verschuldigd.",
+  bm_art5Title: "DUUR EN BEËINDIGING",
+  bm_art5Text: "Deze opdracht gaat in bij ondertekening en eindigt bij de uitbetaling van de middelen. Elke partij kan haar op elk moment schriftelijk beëindigen, zonder kosten of schadevergoeding, zolang de Opdrachtgever geen financieringsaanbod heeft aanvaard.",
+  bm_art6Title: "HERROEPINGSRECHT",
+  bm_art6Text: "Aangezien deze opdracht op afstand wordt gesloten, beschikt de Opdrachtgever over veertien kalenderdagen vanaf de ondertekening om haar te herroepen, zonder opgave van redenen en zonder kosten, door te schrijven naar {email}.",
+  bm_art7Title: "PERSOONSGEGEVENS",
+  bm_art7Text: "De gegevens van de Opdrachtgever worden door de Opdrachtnemer verwerkt voor de uitvoering van deze opdracht en worden alleen doorgegeven aan de kredietgevers en investeerders die voor de financiering worden benaderd, overeenkomstig het privacybeleid op lentific.com.",
+  bm_art8Title: "KLACHTEN EN TOEPASSELIJK RECHT",
+  bm_art8Text: "Klachten kunnen worden gericht aan {email}. Op deze opdracht is Frans recht van toepassing, onverminderd de dwingende, gunstigere bepalingen van het recht van het land waar de Opdrachtgever gewoonlijk verblijft.",
+  bm_signClientLabel: "De Opdrachtgever",
+  bm_signBrokerLabel: "Voor de Opdrachtnemer, {company}",
+  bm_signHint: "Datum, handtekening en de handgeschreven vermelding „Voor akkoord opdracht”",
+  bm_footerNote: "Document automatisch gegenereerd door het platform Lentific voor aanvraag {reference}. Deze opdracht is een MODEL: de met „ter bevestiging” aangeduide vermeldingen moeten vóór werkelijk gebruik door een jurist worden beoordeeld.",
+  bm_requestLabel: "Ondertekende opdracht tot het zoeken van financiering ({reference})",
+  bm_requestInstructions: "Download uw opdracht in het onderdeel „Te ondertekenen documenten” hieronder, dateer en onderteken haar met de vermelding „Voor akkoord opdracht” en upload haar hier (foto of scan).",
 };

@@ -1,7 +1,12 @@
+import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { listQueueByStatus, reviewApplication, createOffer } from "@fintech/applications";
+import { generateBrokerMandate, latestBrokerMandates } from "@fintech/contracts";
+import { sendClientNoticeEmail } from "@fintech/auth";
+import { getFileUrl } from "@fintech/documents";
 import { Card, StatusPill } from "@fintech/ui";
+import { getCurrentUser } from "../../lib/session";
 
 const QUEUE_STATUSES = ["SUBMITTED", "KYC_PENDING", "KYC_VERIFIED", "UNDER_REVIEW"] as const;
 
@@ -27,8 +32,28 @@ async function createOfferAction(formData: FormData) {
   revalidatePath("/");
 }
 
-export default async function AdminDashboard() {
+/**
+ * Mandat de recherche de financement (demande produit 2026-11-16) : le
+ * conseiller fixe les honoraires du dossier, le mandat PDF est généré dans la
+ * langue du client, rangé dans son espace avec une demande de signature, et
+ * un e-mail l'invite à le signer.
+ */
+async function mandateAction(formData: FormData) {
+  "use server";
+  const staff = await getCurrentUser();
+  if (!staff || !["ADMIN", "SUPER_ADMIN"].includes(staff.role)) redirect("/");
+  const applicationId = formData.get("applicationId") as string;
+  const fee = Number(String(formData.get("fee") ?? "").replace(/\s/g, "").replace(",", "."));
+  if (!Number.isFinite(fee) || fee <= 0 || fee > 100000) redirect(`/?mandate=error#${applicationId}`);
+  const { borrower } = await generateBrokerMandate({ applicationId, fee, actorId: staff.id });
+  await sendClientNoticeEmail(borrower, "document", staff.name ?? staff.email);
+  revalidatePath("/");
+  redirect(`/?mandate=done#${applicationId}`);
+}
+
+export default async function AdminDashboard({ searchParams }: { searchParams: { mandate?: string } }) {
   const t = await getTranslations("CasesQueuePage");
+  const locale = await getLocale();
   const STATUS_LABEL: Record<string, string> = {
     SUBMITTED: t("status.submitted"),
     KYC_PENDING: t("status.kycPending"),
@@ -44,6 +69,12 @@ export default async function AdminDashboard() {
     return 0;
   });
 
+  const mandates = await latestBrokerMandates(all.map((a) => a.id)).catch(() => new Map());
+  const mandateUrls = new Map<string, string>();
+  for (const [id, m] of mandates) if (m.storageKey) mandateUrls.set(id, await getFileUrl(m.storageKey));
+  const fmtMoney = (value: number, currency: string) =>
+    new Intl.NumberFormat(locale, { style: "currency", currency, maximumFractionDigits: 2 }).format(value);
+
   return (
     <div className="mx-auto max-w-4xl px-8 py-10">
       <div className="mb-6 flex items-center justify-between">
@@ -58,6 +89,13 @@ export default async function AdminDashboard() {
         </span>
       </div>
 
+      {searchParams.mandate === "done" && (
+        <p role="status" className="mb-4 rounded-lg bg-success-soft px-3 py-2 text-sm text-success">{t("mandateDone")}</p>
+      )}
+      {searchParams.mandate === "error" && (
+        <p role="alert" className="mb-4 rounded-lg bg-accent-soft px-3 py-2 text-sm text-accent">{t("mandateError")}</p>
+      )}
+
       {all.length === 0 ? (
         <Card>
           <p className="text-sm text-ink-soft">{t("empty")}</p>
@@ -65,7 +103,7 @@ export default async function AdminDashboard() {
       ) : (
         <div className="grid gap-3">
           {all.map((app) => (
-            <Card key={app.id} accented={app.priority}>
+            <Card key={app.id} accented={app.priority} className="scroll-mt-6" id={app.id}>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-mono text-xs text-ink-faint">
@@ -137,6 +175,48 @@ export default async function AdminDashboard() {
                   </button>
                 </form>
               )}
+
+              {(() => {
+                const m = mandates.get(app.id);
+                return (
+                  <div className="mt-3 rounded-lg border border-line p-3">
+                    <p className="text-xs font-semibold text-ink">{t("mandateTitle")}</p>
+                    {m ? (
+                      <p className="mt-1 text-xs text-ink-soft">
+                        {t("mandateSent", { date: new Intl.DateTimeFormat(locale, { dateStyle: "medium" }).format(m.generatedAt), amount: fmtMoney(m.fee, m.currency) })}
+                        {mandateUrls.has(app.id) && (
+                          <>
+                            {" · "}
+                            <a href={mandateUrls.get(app.id)} target="_blank" rel="noreferrer" className="text-brand-ink underline">
+                              {t("mandateView")}
+                            </a>
+                          </>
+                        )}
+                      </p>
+                    ) : (
+                      <p className="mt-1 text-xs text-ink-faint">{t("mandateHint")}</p>
+                    )}
+                    <form action={mandateAction} className="mt-2 flex flex-wrap items-end gap-2">
+                      <input type="hidden" name="applicationId" value={app.id} />
+                      <label className="grid gap-1 text-xs text-ink-soft">
+                        {t("mandateFeeLabel")}
+                        <input
+                          type="number"
+                          name="fee"
+                          min="1"
+                          step="0.01"
+                          required
+                          defaultValue={m ? m.fee : undefined}
+                          className="w-28 rounded-md border border-line px-2 py-1.5 text-sm text-ink"
+                        />
+                      </label>
+                      <button className="rounded-lg border border-line px-3.5 py-2 text-xs font-semibold text-ink hover:bg-surface-alt">
+                        {m ? t("mandateRegenerate") : t("mandateGenerate")}
+                      </button>
+                    </form>
+                  </div>
+                );
+              })()}
             </Card>
           ))}
         </div>
