@@ -7,6 +7,9 @@ import {
   inviteStaff,
   resendStaffInvite,
   setStaffStatus,
+  renameAccount,
+  changeStaffRole,
+  deleteStaffAccount,
   setClientStatus,
   listClientsForConsole,
   getClientAssistance,
@@ -27,7 +30,7 @@ import { getCurrentUser } from "../../../lib/session";
  * comptes clients et assistance en direct avec le code donné par le client.
  */
 
-const MAX_FILE_BYTES = 10 * 1024 * 1024;
+const MAX_FILE_BYTES = 4 * 1024 * 1024;
 
 async function requireSuperAdmin() {
   const user = await getCurrentUser();
@@ -72,6 +75,34 @@ async function staffStatusAction(formData: FormData) {
   const actor = await requireSuperAdmin();
   const status = formData.get("status") === "ACTIVE" ? "ACTIVE" : "SUSPENDED";
   await run(() => setStaffStatus(actor, String(formData.get("userId")), status), "/console?tab=team", status === "ACTIVE" ? "reactivated" : "suspended");
+}
+
+async function renameAction(formData: FormData) {
+  "use server";
+  const actor = await requireSuperAdmin();
+  const back = String(formData.get("back") ?? "/console?tab=team");
+  await run(() => renameAccount(actor, String(formData.get("userId")), String(formData.get("name") ?? "")), back, "renamed");
+}
+
+async function staffEditAction(formData: FormData) {
+  "use server";
+  const actor = await requireSuperAdmin();
+  const userId = String(formData.get("userId"));
+  await run(
+    async () => {
+      await renameAccount(actor, userId, String(formData.get("name") ?? ""));
+      const role = String(formData.get("role") ?? "");
+      if (role && userId !== actor.id) await changeStaffRole(actor, userId, role);
+    },
+    "/console?tab=team",
+    "renamed"
+  );
+}
+
+async function deleteStaffAction(formData: FormData) {
+  "use server";
+  const actor = await requireSuperAdmin();
+  await run(() => deleteStaffAccount(actor, String(formData.get("userId"))), "/console?tab=team", "deleted");
 }
 
 async function clientStatusAction(formData: FormData) {
@@ -166,7 +197,7 @@ export default async function ConsolePage({
 
   const statusPill = (s: string) =>
     s === "ACTIVE" ? <StatusPill tone="ok">{t("status.ACTIVE")}</StatusPill> : <StatusPill tone="risk">{t(`status.${s}` as "status.SUSPENDED")}</StatusPill>;
-  const knownDone = ["invited", "invite_resent", "suspended", "reactivated", "session_opened", "guided", "uploaded", "session_ended"];
+  const knownDone = ["invited", "invite_resent", "suspended", "reactivated", "renamed", "role_changed", "deleted", "session_opened", "guided", "uploaded", "session_ended"];
   const knownErrors = ["not_allowed", "invalid_input", "email_taken", "self", "last_super_admin", "not_found", "no_code", "bad_code", "too_many_attempts", "no_session", "file"];
 
   return (
@@ -247,6 +278,27 @@ export default async function ConsolePage({
                       </td>
                       <td className="py-2.5 pr-3">{statusPill(s.accountStatus)}</td>
                       <td className="whitespace-nowrap py-2.5 text-right">
+                        <details className="mb-1 inline-block text-left align-top">
+                          <summary className={`${btnGhost} cursor-pointer list-none`}>{t("team.edit")}</summary>
+                          <form action={staffEditAction} className="mt-2 grid w-56 gap-2 rounded-lg border border-line bg-white p-3">
+                            <input type="hidden" name="userId" value={s.id} />
+                            <label className="grid gap-1 text-xs font-semibold text-ink-soft">
+                              {t("team.name")}
+                              <input name="name" required minLength={2} maxLength={80} defaultValue={s.name ?? ""} className={inputClass} />
+                            </label>
+                            {s.id !== me.id && (
+                              <label className="grid gap-1 text-xs font-semibold text-ink-soft">
+                                {t("team.role")}
+                                <select name="role" defaultValue={s.role} className={inputClass}>
+                                  {(["AGENT", "ADMIN", "SUPER_ADMIN"] as const).map((r) => (
+                                    <option key={r} value={r}>{t(`roles.${r}`)}</option>
+                                  ))}
+                                </select>
+                              </label>
+                            )}
+                            <button className={btnPrimary}>{t("team.save")}</button>
+                          </form>
+                        </details>{" "}
                         {s.id === me.id ? (
                           <span className="text-xs text-ink-faint">{t("team.you")}</span>
                         ) : (
@@ -264,6 +316,14 @@ export default async function ConsolePage({
                                 {s.accountStatus === "SUSPENDED" ? t("reactivate") : t("suspend")}
                               </button>
                             </form>
+                            <details className="text-left">
+                              <summary className={`${btnDanger} cursor-pointer list-none`}>{t("team.delete")}</summary>
+                              <form action={deleteStaffAction} className="mt-2 grid w-56 gap-2 rounded-lg border border-accent/40 bg-white p-3">
+                                <input type="hidden" name="userId" value={s.id} />
+                                <p className="whitespace-normal text-xs text-ink-soft">{t("team.deleteNote")}</p>
+                                <button className={btnDanger}>{t("team.deleteConfirm")}</button>
+                              </form>
+                            </details>
                           </span>
                         )}
                       </td>
@@ -312,6 +372,15 @@ export default async function ConsolePage({
                       </td>
                       <td className="whitespace-nowrap py-2.5 text-right">
                         <span className="inline-flex gap-2">
+                          <details className="text-left">
+                            <summary className={`${btnGhost} cursor-pointer list-none`}>{t("team.rename")}</summary>
+                            <form action={renameAction} className="mt-2 grid w-56 gap-2 rounded-lg border border-line bg-white p-3">
+                              <input type="hidden" name="userId" value={c.id} />
+                              <input type="hidden" name="back" value={`/console?tab=clients${searchParams.q ? `&q=${encodeURIComponent(searchParams.q)}` : ""}`} />
+                              <input name="name" required minLength={2} maxLength={80} defaultValue={c.name ?? ""} className={inputClass} />
+                              <button className={btnPrimary}>{t("team.save")}</button>
+                            </form>
+                          </details>
                           <a href={`/console?tab=help&client=${c.id}`} className={btnPrimary.replace("px-3.5 py-2", "px-3 py-1.5 text-xs")}>
                             {t("clients.assist")}
                           </a>

@@ -373,7 +373,7 @@
     "fundsDateLabel": "Date du versement",
     "lenderReferenceLabel": "Référence du prêteur",
     "proofLabel": "Avis de déblocage",
-    "proofHint": "Attestation du prêteur ou du notaire · PDF, JPG ou PNG, 10 Mo max.",
+    "proofHint": "Attestation du prêteur ou du notaire · PDF, JPG ou PNG, 4 Mo max.",
     "declare": "Déclarer les fonds versés",
     "declaredBy": "Déclaré par",
     "confirmedBy": "Confirmé par",
@@ -447,7 +447,7 @@
       "not_confirmed": "Le versement n'est pas encore confirmé.",
       "fees_locked": "Les honoraires ne peuvent être demandés qu'après la confirmation du versement.",
       "not_pending": "Cette demande d'honoraires n'est plus en attente.",
-      "proof_missing": "Joignez l'avis de déblocage (10 Mo max)."
+      "proof_missing": "Joignez l'avis de déblocage (4 Mo max)."
     },
     "done": {
       "declared": "Versement déclaré. Un super administrateur doit maintenant le confirmer.",
@@ -606,7 +606,7 @@
     "rights": {
       "AGENT": "Dossiers, identité, contrats",
       "ADMIN": "+ validations, versements, messages",
-      "SUPER_ADMIN": "Tous les droits"
+      "SUPER_ADMIN": "Tous les droits : équipe (créer, renommer, changer le rôle, supprimer), clients, dossiers, versements"
     },
     "team": {
       "inviteTitle": "Inviter un membre de l'équipe",
@@ -624,7 +624,13 @@
       "invitationPending": "Invitation envoyée",
       "you": "vous",
       "resend": "Renvoyer l'invitation",
-      "suspendNote": "Suspendre coupe l'accès immédiatement (toutes les sessions sont fermées). Le compte et ses actions passées restent dans le journal. Le dernier super admin actif ne peut pas être suspendu."
+      "suspendNote": "Suspendre coupe l'accès immédiatement (toutes les sessions sont fermées). Le compte et ses actions passées restent dans le journal. Le dernier super admin actif ne peut pas être suspendu.",
+      "edit": "Modifier",
+      "save": "Enregistrer",
+      "rename": "Renommer",
+      "delete": "Supprimer",
+      "deleteConfirm": "Confirmer la suppression",
+      "deleteNote": "Le compte est retiré de l'équipe et ne peut plus se connecter ; ses actions passées restent dans le journal."
     },
     "clients": {
       "colClient": "Client",
@@ -687,20 +693,23 @@
       "session_opened": "Session d'assistance ouverte pour 30 minutes.",
       "guided": "Le guidage s'affiche sur l'écran du client.",
       "uploaded": "Document déposé pour le client.",
-      "session_ended": "Session d'assistance terminée."
+      "session_ended": "Session d'assistance terminée.",
+      "renamed": "Nom modifié.",
+      "role_changed": "Rôle modifié : la personne doit se reconnecter.",
+      "deleted": "Compte supprimé."
     },
     "errors": {
       "not_allowed": "Action non autorisée.",
       "invalid_input": "Informations invalides.",
       "email_taken": "Un compte existe déjà avec cet e-mail.",
-      "self": "Vous ne pouvez pas modifier votre propre compte ici.",
+      "self": "Vous ne pouvez pas supprimer votre propre compte ni changer votre propre rôle.",
       "last_super_admin": "Impossible : c'est le dernier super admin actif.",
       "not_found": "Compte ou demande introuvable.",
       "no_code": "Aucun code valide pour ce client : demandez-lui d'en générer un nouveau.",
       "bad_code": "Code incorrect.",
       "too_many_attempts": "Trop d'essais : ce code est bloqué. Le client doit en générer un nouveau.",
       "no_session": "Aucune session d'assistance ouverte par vous pour ce client.",
-      "file": "Choisissez un fichier (10 Mo max)."
+      "file": "Choisissez un fichier (4 Mo max)."
     },
     "log": {
       "title": "Journal des actions de la console",
@@ -910,5 +919,9 @@
       "unsubscribe": "Désinscrire",
       "delete": "Supprimer"
     }
+  },
+  "Upload": {
+    "sending": "Envoi en cours…",
+    "tooLarge": "Ce fichier dépasse 4 Mo. Réduisez-le (scan en 150 dpi, PDF compressé ou photo) puis réessayez."
   }
 }

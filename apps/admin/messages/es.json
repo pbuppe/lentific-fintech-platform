@@ -373,7 +373,7 @@
     "fundsDateLabel": "Fecha del desembolso",
     "lenderReferenceLabel": "Referencia del prestamista",
     "proofLabel": "Aviso de desembolso",
-    "proofHint": "Certificado del prestamista o del notario · PDF, JPG o PNG, 10 MB máx.",
+    "proofHint": "Certificado del prestamista o del notario · PDF, JPG o PNG, 4 MB máx.",
     "declare": "Declarar fondos desembolsados",
     "declaredBy": "Declarado por",
     "confirmedBy": "Confirmado por",
@@ -447,7 +447,7 @@
       "not_confirmed": "El desembolso aún no está confirmado.",
       "fees_locked": "Los honorarios solo pueden solicitarse tras confirmar el desembolso.",
       "not_pending": "Esta solicitud de honorarios ya no está pendiente.",
-      "proof_missing": "Adjunte el aviso de desembolso (10 MB máx.)."
+      "proof_missing": "Adjunte el aviso de desembolso (4 MB máx.)."
     },
     "done": {
       "declared": "Desembolso declarado. Ahora debe confirmarlo un superadministrador.",
@@ -606,7 +606,7 @@
     "rights": {
       "AGENT": "Expedientes, identidad, contratos",
       "ADMIN": "+ validaciones, desembolsos, mensajes",
-      "SUPER_ADMIN": "Todos los derechos"
+      "SUPER_ADMIN": "Todos los derechos: equipo (crear, renombrar, cambiar el rol, eliminar), clientes, expedientes, desembolsos"
     },
     "team": {
       "inviteTitle": "Invitar a un miembro del equipo",
@@ -624,7 +624,13 @@
       "invitationPending": "Invitación enviada",
       "you": "usted",
       "resend": "Reenviar la invitación",
-      "suspendNote": "Suspender corta el acceso de inmediato (se cierran todas las sesiones). La cuenta y sus acciones pasadas quedan en el registro. El último superadmin activo no puede suspenderse."
+      "suspendNote": "Suspender corta el acceso de inmediato (se cierran todas las sesiones). La cuenta y sus acciones pasadas quedan en el registro. El último superadmin activo no puede suspenderse.",
+      "edit": "Modificar",
+      "save": "Guardar",
+      "rename": "Renombrar",
+      "delete": "Eliminar",
+      "deleteConfirm": "Confirmar la eliminación",
+      "deleteNote": "La cuenta se retira del equipo y ya no puede iniciar sesión; sus acciones pasadas permanecen en el registro."
     },
     "clients": {
       "colClient": "Cliente",
@@ -687,20 +693,23 @@
       "session_opened": "Sesión de asistencia abierta durante 30 minutos.",
       "guided": "La guía aparece en la pantalla del cliente.",
       "uploaded": "Documento depositado para el cliente.",
-      "session_ended": "Sesión de asistencia terminada."
+      "session_ended": "Sesión de asistencia terminada.",
+      "renamed": "Nombre modificado.",
+      "role_changed": "Rol modificado: la persona debe volver a iniciar sesión.",
+      "deleted": "Cuenta eliminada."
     },
     "errors": {
       "not_allowed": "Acción no autorizada.",
       "invalid_input": "Datos no válidos.",
       "email_taken": "Ya existe una cuenta con este correo.",
-      "self": "No puede modificar su propia cuenta aquí.",
+      "self": "No puede eliminar su propia cuenta ni cambiar su propio rol.",
       "last_super_admin": "Imposible: es el último superadmin activo.",
       "not_found": "Cuenta o solicitud no encontrada.",
       "no_code": "No hay código válido para este cliente: pídale que genere uno nuevo.",
       "bad_code": "Código incorrecto.",
       "too_many_attempts": "Demasiados intentos: el código está bloqueado. El cliente debe generar uno nuevo.",
       "no_session": "No hay sesión de asistencia abierta por usted para este cliente.",
-      "file": "Elija un archivo (10 MB máx.)."
+      "file": "Elija un archivo (4 MB máx.)."
     },
     "log": {
       "title": "Registro de acciones de la consola",
@@ -910,5 +919,9 @@
       "unsubscribe": "Dar de baja",
       "delete": "Eliminar"
     }
+  },
+  "Upload": {
+    "sending": "Enviando…",
+    "tooLarge": "Este archivo supera los 4 MB. Redúzcalo (escaneo a 150 ppp, PDF comprimido o foto) y vuelva a intentarlo."
   }
 }

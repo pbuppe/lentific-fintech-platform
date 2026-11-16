@@ -39,9 +39,12 @@ function audit(actor: Actor, action: string, targetId: string, after?: object) {
 
 // --- Équipe ------------------------------------------------------------------
 
+/** Suffixe des comptes supprimés (anonymisés, gardés pour le journal d'audit). */
+export const DELETED_EMAIL_DOMAIN = "@deleted.lentific.invalid";
+
 export async function listStaff() {
   const staff = await prisma.user.findMany({
-    where: { role: { in: STAFF_ROLES } },
+    where: { role: { in: STAFF_ROLES }, NOT: { email: { endsWith: DELETED_EMAIL_DOMAIN } } },
     select: { id: true, name: true, email: true, role: true, accountStatus: true, passwordHash: true, createdAt: true },
     orderBy: [{ role: "desc" }, { name: "asc" }],
   });
@@ -122,6 +125,64 @@ async function setStatus(actor: Actor, userId: string, status: "ACTIVE" | "SUSPE
   // Une suspension coupe l'accès immédiatement : toutes les sessions ouvertes sont fermées.
   if (status === "SUSPENDED") await prisma.session.deleteMany({ where: { userId } });
   await audit(actor, status === "SUSPENDED" ? "account_suspended" : "account_reactivated", userId, { role: target.role });
+}
+
+/** Le super admin peut renommer n'importe quel compte, y compris le sien. */
+export async function renameAccount(actor: Actor, userId: string, rawName: string) {
+  requireSuperAdmin(actor);
+  const name = rawName.trim().replace(/\s+/g, " ");
+  if (name.length < 2 || name.length > 80) throw new ConsoleError("invalid_input");
+  const target = await prisma.user.findUnique({ where: { id: userId } });
+  if (!target || target.email.endsWith(DELETED_EMAIL_DOMAIN)) throw new ConsoleError("not_found");
+  await prisma.user.update({ where: { id: userId }, data: { name } });
+  await audit(actor, "account_renamed", userId, { from: target.name, to: name });
+}
+
+async function otherActiveSuperAdmins(userId: string) {
+  return prisma.user.count({
+    where: { role: "SUPER_ADMIN", accountStatus: "ACTIVE", id: { not: userId }, NOT: { email: { endsWith: DELETED_EMAIL_DOMAIN } } },
+  });
+}
+
+/** Changer le rôle d'un membre de l'équipe (agent, admin, super admin). */
+export async function changeStaffRole(actor: Actor, userId: string, role: string) {
+  requireSuperAdmin(actor);
+  if (userId === actor.id) throw new ConsoleError("self");
+  if (!(STAFF_ROLES as string[]).includes(role)) throw new ConsoleError("invalid_input");
+  const target = await prisma.user.findFirst({ where: { id: userId, role: { in: STAFF_ROLES } } });
+  if (!target) throw new ConsoleError("not_found");
+  if (target.role === role) return;
+  if (target.role === "SUPER_ADMIN" && (await otherActiveSuperAdmins(userId)) === 0) throw new ConsoleError("last_super_admin");
+  await prisma.user.update({ where: { id: userId }, data: { role: role as Role } });
+  // Les droits changent : la personne se reconnecte avec son nouveau rôle.
+  await prisma.session.deleteMany({ where: { userId } });
+  await audit(actor, "role_changed", userId, { from: target.role, to: role });
+}
+
+/**
+ * Supprimer un compte de l'équipe (super admins compris). Le compte est
+ * anonymisé plutôt qu'effacé : ses actions passées restent rattachées dans le
+ * journal d'audit, mais il disparaît de la liste, ne peut plus se connecter
+ * et son adresse e-mail redevient libre pour une nouvelle invitation.
+ */
+export async function deleteStaffAccount(actor: Actor, userId: string) {
+  requireSuperAdmin(actor);
+  if (userId === actor.id) throw new ConsoleError("self");
+  const target = await prisma.user.findFirst({ where: { id: userId, role: { in: STAFF_ROLES } } });
+  if (!target || target.email.endsWith(DELETED_EMAIL_DOMAIN)) throw new ConsoleError("not_found");
+  if (target.role === "SUPER_ADMIN" && (await otherActiveSuperAdmins(userId)) === 0) throw new ConsoleError("last_super_admin");
+  await prisma.session.deleteMany({ where: { userId } });
+  await prisma.accountSetupToken.deleteMany({ where: { userId } });
+  await prisma.user.update({
+    where: { id: userId },
+    data: {
+      email: `deleted-${userId}${DELETED_EMAIL_DOMAIN}`,
+      name: `${target.name ?? "—"} (supprimé)`,
+      passwordHash: null,
+      accountStatus: "SUSPENDED",
+    },
+  });
+  await audit(actor, "account_deleted", userId, { email: target.email, role: target.role });
 }
 
 export const setStaffStatus = (actor: Actor, userId: string, status: "ACTIVE" | "SUSPENDED") => setStatus(actor, userId, status, STAFF_ROLES);

@@ -18,6 +18,7 @@ import { uploadRaw, getFileUrl } from "@fintech/documents";
 import { latestBrokerMandates } from "@fintech/contracts";
 import { Card, StatusPill } from "@fintech/ui";
 import { getCurrentUser } from "../../../lib/session";
+import { FileField, PendingButton, MAX_UPLOAD_BYTES } from "../../components/UploadGuard";
 
 /**
  * Versement des fonds et honoraires (demande produit 2026-11-14, maquette
@@ -26,7 +27,7 @@ import { getCurrentUser } from "../../../lib/session";
  * débloquent qu'après la confirmation.
  */
 
-const MAX_PROOF_BYTES = 10 * 1024 * 1024;
+const MAX_PROOF_BYTES = MAX_UPLOAD_BYTES;
 
 async function requireStaff() {
   const user = await getCurrentUser();
@@ -125,6 +126,7 @@ const fieldClass = `${inputClass} w-full min-w-0`;
 export default async function FundsPage({ searchParams }: { searchParams: { error?: string; done?: string } }) {
   const me = await requireStaff();
   const t = await getTranslations("FundsPage");
+  const tu = await getTranslations("Upload");
   const locale = await getLocale();
   const dateFmt = new Intl.DateTimeFormat(locale, { dateStyle: "medium" });
   const dateTimeFmt = new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeStyle: "short" });
@@ -292,12 +294,12 @@ export default async function FundsPage({ searchParams }: { searchParams: { erro
                       </div>
                       <label className={labelClass}>
                         {t("proofLabel")}
-                        <input type="file" name="proof" required accept=".pdf,.jpg,.jpeg,.png" className="text-xs" />
+                        <FileField name="proof" accept=".pdf,.jpg,.jpeg,.png" tooLarge={tu("tooLarge")} className="text-xs" />
                         <span className="font-normal text-ink-faint">{t("proofHint")}</span>
                       </label>
-                      <button className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
+                      <PendingButton pendingLabel={tu("sending")} className="justify-self-start rounded-lg bg-yellow px-4 py-2 text-sm font-semibold text-ink hover:bg-yellow-ink">
                         {t("declare")}
-                      </button>
+                      </PendingButton>
                     </form>
                   )}
 
