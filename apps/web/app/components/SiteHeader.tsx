@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { LogoMark } from "@fintech/ui";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { signOut, SESSION_COOKIE_NAME } from "@fintech/auth";
@@ -27,10 +28,8 @@ export async function SiteHeader() {
     <header className="flex flex-wrap items-center justify-between gap-y-2 border-b border-line bg-surface px-6 py-3 sm:px-12">
       <div className="flex items-center gap-8">
         <a href="/" className="flex items-center gap-2">
-          <div className="flex h-6 w-6 items-center justify-center rounded-md bg-accent font-display text-sm font-bold text-white">
-            L
-          </div>
-          <span className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-wide text-ink">Lentific</span>
+          <LogoMark size={30} />
+          <span className="whitespace-nowrap font-display text-xl font-semibold text-brand-ink">Lentific</span>
         </a>
         <nav className="hidden items-center gap-5 whitespace-nowrap text-sm text-ink-soft lg:flex">
           <a href="/#services" className="hover:text-ink">{t("services")}</a>
