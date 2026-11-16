@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+import { getLocale } from "next-intl/server";
+import { pageMetadata } from "../../lib/seo";
+import type { Locale } from "../../i18n/locales";
 import { listOpportunities, listOpenInvestorListings } from "@fintech/funding";
 import { commercialPrices } from "../../lib/price";
 import { buildSchedule } from "@fintech/loans";
@@ -7,6 +11,13 @@ import { getPreferredCountry } from "../../lib/country";
 import { CountryFilter } from "../components/CountryFilter";
 import { CountryBadge } from "../components/CountryBadge";
 import { PremiumBanner } from "../components/PremiumPromo";
+
+/** SEO (2026-11-16) : titre et description dans la langue du visiteur. */
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Seo");
+  const locale = (await getLocale()) as Locale;
+  return pageMetadata({ locale, title: t("marketplaceTitle"), description: t("marketplaceDescription"), keywords: t("keywords"), path: "/marketplace" });
+}
 
 export default async function PublicMarketplacePage() {
   const t = await getTranslations("MarketplacePage");

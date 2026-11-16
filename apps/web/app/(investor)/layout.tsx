@@ -4,6 +4,10 @@ import { notificationsRepo, prisma } from "@fintech/database";
 import { getSignedInUser } from "../../lib/session";
 import { AccountShell } from "../components/AccountShell";
 import { AssistanceBanner } from "../components/AssistanceViews";
+import { NOINDEX } from "../../lib/seo";
+
+// Espace investisseur privé : jamais indexé (SEO, 2026-11-16).
+export const metadata = NOINDEX;
 
 export default async function InvestorLayout({ children }: { children: React.ReactNode }) {
   const user = await getSignedInUser();

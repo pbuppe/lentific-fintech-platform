@@ -1102,5 +1102,178 @@
     "accept": "Accept",
     "refuse": "Decline",
     "learnMore": "Learn more"
+  },
+  "Seo": {
+    "homeTitle": "Online loan broker: mortgages, debt consolidation and personal loans",
+    "homeDescription": "Lentific compares offers from banks and verified investors for you: mortgages, debt consolidation, home improvement loans, personal loans and crowdlending. Free assessment, fees only if your loan is approved.",
+    "simulatorTitle": "Free loan calculator: work out your monthly payment",
+    "simulatorDescription": "Calculate the monthly payment, total cost and rate of your mortgage, personal loan or home improvement loan in seconds. Free, no-obligation simulation.",
+    "marketplaceTitle": "Crowdlending: projects to fund and investors",
+    "marketplaceDescription": "Browse projects seeking funding and capital offered by verified investors on the Lentific crowdlending platform.",
+    "keywords": "loan, credit, loan broker, mortgage, home loan, debt consolidation, personal loan, home improvement loan, consumer credit, financing, business loan, crowdlending, peer-to-peer lending, loan calculator"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · online loan broker",
+      "pointsTitle": "Why choose Lentific",
+      "faqTitle": "Frequently asked questions",
+      "ctaTitle": "Let's talk about your project",
+      "ctaText": "Free, no-obligation assessment. Our fees are only due if your loan is approved.",
+      "ctaButton": "Request a free assessment",
+      "simulator": "Estimate my monthly payment",
+      "otherServices": "Our other financing solutions"
+    },
+    "mortgage": {
+      "metaTitle": "Mortgages: compare offers and get the best rate",
+      "metaDescription": "Buying, building or remortgaging: Lentific compares mortgage offers from several banks and prepares your application. Free assessment, fees only if your loan is approved.",
+      "h1": "Mortgages: the right loan for your home",
+      "intro": "Buying your home, a buy-to-let investment, building or remortgaging: we compare offers from several banks, prepare a strong application and negotiate to get you the best terms.",
+      "points": [
+        {
+          "t": "Several banks compared",
+          "b": "As an independent broker we are tied to no lender: we place your application where it has the best chance of a good rate."
+        },
+        {
+          "t": "Your application prepared for you",
+          "b": "We gather the documents, present your profile at its best and handle the discussions with the bank."
+        },
+        {
+          "t": "Online tracking, step by step",
+          "b": "From the request to the release of funds, you follow progress from your personal space."
+        },
+        {
+          "t": "Success-based fees",
+          "b": "Our fees are set in writing from the start and are only due once your loan is approved."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What documents do I need for a mortgage?",
+          "a": "ID, your last three payslips, your last two tax notices, your last three bank statements and the purchase agreement or quotes. You upload them from your secure space."
+        },
+        {
+          "q": "How long does it take to get a mortgage?",
+          "a": "Usually four to eight weeks between the first call and the loan offer, depending on the bank and the complexity of the file."
+        },
+        {
+          "q": "Can you renegotiate an existing mortgage?",
+          "a": "Yes. We compare your current loan with market offers and tell you whether renegotiating or switching to another bank is worthwhile."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Debt consolidation: one lower monthly payment",
+      "metaDescription": "Combine your loans into a single loan to reduce your monthly payment and ease your budget. Free assessment by Lentific, fees only if it goes through.",
+      "h1": "Debt consolidation: one monthly payment to breathe again",
+      "intro": "Consumer loans, car loan, mortgage, overdrafts: we review all your borrowing and look for a solution that combines it into one loan, with a monthly payment that fits your budget.",
+      "points": [
+        {
+          "t": "One monthly payment",
+          "b": "One loan, one direct debit: your budget becomes easier to manage."
+        },
+        {
+          "t": "A lower monthly payment",
+          "b": "By adjusting the term, the monthly payment can drop significantly. We also show you the effect on the total cost."
+        },
+        {
+          "t": "A full, honest review",
+          "b": "We tell you clearly whether consolidation makes sense for you, and if not, why."
+        },
+        {
+          "t": "No upfront fees",
+          "b": "No payment can be required before your loan is approved: our fees are only due if we succeed."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which loans can be consolidated?",
+          "a": "Consumer loans, revolving credit, car loans, personal loans and, depending on the case, mortgages and other debts."
+        },
+        {
+          "q": "Does consolidation cost more?",
+          "a": "A longer term lowers the monthly payment but can increase the total cost. We show you both figures before you decide."
+        },
+        {
+          "q": "How long does debt consolidation take?",
+          "a": "Depending on the file, a few weeks between the first call and the release of funds. You follow each step online."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Personal and home improvement loans: compare and fund your project",
+      "metaDescription": "Renovation, car, cash flow: Lentific compares personal and home improvement loan offers from several lenders. Free simulation and assessment.",
+      "h1": "Personal and home improvement loans: fund your plans",
+      "intro": "Energy renovation, an extension, buying a car or a cash need: we find a loan suited to your project, compared across several lenders, with a monthly payment that respects your budget.",
+      "points": [
+        {
+          "t": "Several lenders compared",
+          "b": "Banks and verified investors on our platform: you see the offers side by side."
+        },
+        {
+          "t": "A fast answer",
+          "b": "A 100% online application, and with the “Priority file” option your loan can be obtained in one to three weeks."
+        },
+        {
+          "t": "A controlled monthly payment",
+          "b": "The calculator gives you an instant estimate; your adviser adjusts it to your actual situation."
+        },
+        {
+          "t": "One point of contact",
+          "b": "One adviser follows your file from start to finish, by phone or video call."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the difference between a home improvement loan and a personal loan?",
+          "a": "A home improvement loan is tied to specific works, based on quotes; a personal loan can be used freely. We point you to the most advantageous option."
+        },
+        {
+          "q": "Can I estimate my monthly payment before applying?",
+          "a": "Yes, the calculator on the site is free and without obligation. It gives an indicative estimate, excluding insurance and fees."
+        },
+        {
+          "q": "Is a loan a commitment?",
+          "a": "Yes. A loan is a commitment and must be repaid. Check that you can afford the repayments before committing: we help you do so."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Crowdlending: fund your project with verified investors",
+      "metaDescription": "On the Lentific marketplace, investors whose identity has been verified fund projects, with a contract and tracking just like a traditional loan.",
+      "h1": "Crowdlending: verified investors fund your project",
+      "intro": "Your project can also be funded directly by investors on our platform. Every investor is verified, every loan comes with a contract, and you follow everything from your personal space.",
+      "points": [
+        {
+          "t": "Verified investors",
+          "b": "We check investors' identity and lending capacity before they can fund a project."
+        },
+        {
+          "t": "A proper contract",
+          "b": "The contract is generated automatically in your language, with the full repayment schedule."
+        },
+        {
+          "t": "Transparent tracking",
+          "b": "Amount raised, investors, repayments: everything is visible in your space."
+        },
+        {
+          "t": "For borrowers and investors",
+          "b": "Have capital to lend? Publish your offer and discover projects to fund."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can my loan be funded by individuals?",
+          "a": "Yes, depending on your project: on our marketplace, investors whose identity we have verified fund projects, with a contract and tracking just like a traditional loan."
+        },
+        {
+          "q": "How can I avoid peer-to-peer loan scams?",
+          "a": "Be wary of an “individual” offering you a loan online and asking for fees upfront: it is a common scam. On Lentific, investors are verified."
+        },
+        {
+          "q": "How do I become an investor?",
+          "a": "Create an investor account, have your identity and source of funds verified, then browse the projects on the marketplace."
+        }
+      ]
+    }
   }
 }

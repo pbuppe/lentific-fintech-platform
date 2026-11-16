@@ -1102,5 +1102,178 @@
     "accept": "Akzeptieren",
     "refuse": "Ablehnen",
     "learnMore": "Mehr erfahren"
+  },
+  "Seo": {
+    "homeTitle": "Online-Kreditvermittler: Baufinanzierung, Umschuldung und Privatkredit",
+    "homeDescription": "Lentific vergleicht für Sie die Angebote von Banken und geprüften Investoren: Baufinanzierung, Umschuldung, Modernisierungskredit, Privatkredit und Crowdlending. Kostenlose Prüfung, Honorar nur bei Kreditzusage.",
+    "simulatorTitle": "Kostenloser Kreditrechner: Monatsrate berechnen",
+    "simulatorDescription": "Berechnen Sie in Sekunden Monatsrate, Gesamtkosten und Zinssatz Ihrer Baufinanzierung, Ihres Privatkredits oder Modernisierungskredits. Kostenlos und unverbindlich.",
+    "marketplaceTitle": "Crowdlending: Projekte zur Finanzierung und Investoren",
+    "marketplaceDescription": "Entdecken Sie Projekte, die eine Finanzierung suchen, und das Kapital geprüfter Investoren auf der Crowdlending-Plattform Lentific.",
+    "keywords": "Kredit, Darlehen, Kreditvermittler, Baufinanzierung, Immobilienkredit, Umschuldung, Privatkredit, Ratenkredit, Modernisierungskredit, Finanzierung, Geschäftskredit, Crowdlending, Privatdarlehen, Kreditrechner"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · Online-Kreditvermittler",
+      "pointsTitle": "Warum Lentific",
+      "faqTitle": "Häufige Fragen",
+      "ctaTitle": "Sprechen wir über Ihr Vorhaben",
+      "ctaText": "Kostenlose und unverbindliche Prüfung. Unser Honorar ist nur fällig, wenn Sie Ihren Kredit erhalten.",
+      "ctaButton": "Kostenlose Prüfung anfragen",
+      "simulator": "Monatsrate berechnen",
+      "otherServices": "Unsere weiteren Finanzierungslösungen"
+    },
+    "mortgage": {
+      "metaTitle": "Baufinanzierung: Angebote vergleichen und den besten Zins sichern",
+      "metaDescription": "Kauf, Neubau oder Anschlussfinanzierung: Lentific vergleicht die Baufinanzierungsangebote mehrerer Banken und bereitet Ihre Unterlagen vor. Kostenlose Prüfung, Honorar nur bei Kreditzusage.",
+      "h1": "Baufinanzierung: der passende Kredit für Ihr Zuhause",
+      "intro": "Kauf des Eigenheims, Kapitalanlage zur Vermietung, Neubau oder Anschlussfinanzierung: Wir vergleichen die Angebote mehrerer Banken, erstellen eine überzeugende Akte und vertreten sie, damit Sie die besten Konditionen erhalten.",
+      "points": [
+        {
+          "t": "Mehrere Banken im Vergleich",
+          "b": "Wir sind unabhängig und an keine Bank gebunden: Wir reichen Ihre Akte dort ein, wo sie die besten Chancen auf einen guten Zins hat."
+        },
+        {
+          "t": "Ihre Akte für Sie vorbereitet",
+          "b": "Wir sammeln die Unterlagen, stellen Ihr Profil optimal dar und bereiten die Gespräche mit der Bank vor."
+        },
+        {
+          "t": "Online-Verfolgung Schritt für Schritt",
+          "b": "Von der Anfrage bis zur Auszahlung verfolgen Sie den Fortschritt in Ihrem Kundenbereich."
+        },
+        {
+          "t": "Erfolgshonorar",
+          "b": "Unser Honorar wird von Anfang an schriftlich festgelegt und ist erst nach Ihrer Kreditzusage fällig."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welche Unterlagen brauche ich für eine Baufinanzierung?",
+          "a": "Ausweis, die letzten drei Gehaltsabrechnungen, die letzten zwei Steuerbescheide, die letzten drei Kontoauszüge sowie Kaufvertragsentwurf oder Kostenvoranschläge. Sie laden sie in Ihrem gesicherten Bereich hoch."
+        },
+        {
+          "q": "Wie lange dauert eine Baufinanzierung?",
+          "a": "In der Regel vier bis acht Wochen zwischen dem ersten Gespräch und dem Kreditangebot, je nach Bank und Komplexität der Akte."
+        },
+        {
+          "q": "Können Sie einen laufenden Immobilienkredit neu verhandeln?",
+          "a": "Ja. Wir vergleichen Ihren aktuellen Kredit mit den Marktangeboten und sagen Ihnen, ob sich eine Umschuldung oder ein Bankwechsel lohnt."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Umschuldung: eine einzige, niedrigere Monatsrate",
+      "metaDescription": "Fassen Sie Ihre Kredite zu einem zusammen, um Ihre Monatsrate zu senken und Ihr Budget zu entlasten. Kostenlose Prüfung durch Lentific, Honorar nur bei Erfolg.",
+      "h1": "Umschuldung: eine Monatsrate, mehr Luft",
+      "intro": "Konsumkredite, Autokredit, Immobilienkredit, Dispo: Wir prüfen alle Ihre Kredite und suchen eine Lösung, die sie zu einem einzigen zusammenfasst – mit einer Rate, die zu Ihrem Budget passt.",
+      "points": [
+        {
+          "t": "Eine einzige Rate",
+          "b": "Ein Kredit, eine Abbuchung: Ihr Budget wird übersichtlicher."
+        },
+        {
+          "t": "Eine niedrigere Monatsrate",
+          "b": "Durch Anpassung der Laufzeit kann die Rate deutlich sinken. Wir zeigen Ihnen auch die Auswirkung auf die Gesamtkosten."
+        },
+        {
+          "t": "Eine vollständige, ehrliche Prüfung",
+          "b": "Wir sagen Ihnen klar, ob sich eine Umschuldung für Sie lohnt – und wenn nicht, warum."
+        },
+        {
+          "t": "Keine Vorabkosten",
+          "b": "Vor der Kreditzusage darf keinerlei Zahlung verlangt werden: Unser Honorar ist nur im Erfolgsfall fällig."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welche Kredite können zusammengefasst werden?",
+          "a": "Konsumkredite, Rahmenkredite, Autokredite, Privatkredite und je nach Fall der Immobilienkredit sowie sonstige Schulden."
+        },
+        {
+          "q": "Ist eine Umschuldung teurer?",
+          "a": "Eine längere Laufzeit senkt die Rate, kann aber die Gesamtkosten erhöhen. Wir zeigen Ihnen beide Zahlen vor jeder Entscheidung."
+        },
+        {
+          "q": "Wie lange dauert eine Umschuldung?",
+          "a": "Je nach Akte einige Wochen zwischen dem ersten Gespräch und der Auszahlung. Sie verfolgen jeden Schritt online."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Privatkredit und Modernisierungskredit: vergleichen und Vorhaben finanzieren",
+      "metaDescription": "Renovierung, Auto, Liquidität: Lentific vergleicht die Angebote mehrerer Kreditgeber für Privat- und Modernisierungskredite. Kostenlose Berechnung und Prüfung.",
+      "h1": "Privatkredit und Modernisierungskredit: Ihre Pläne finanzieren",
+      "intro": "Energetische Sanierung, Anbau, Autokauf oder Liquiditätsbedarf: Wir finden einen Kredit, der zu Ihrem Vorhaben passt, verglichen unter mehreren Kreditgebern, mit einer Rate, die Ihr Budget respektiert.",
+      "points": [
+        {
+          "t": "Mehrere Kreditgeber im Vergleich",
+          "b": "Banken und geprüfte Investoren unserer Plattform: Sie sehen die Angebote nebeneinander."
+        },
+        {
+          "t": "Eine schnelle Antwort",
+          "b": "Akte zu 100 % online, und mit der Option „Vorrangige Akte“ kann Ihr Kredit in ein bis drei Wochen bewilligt werden."
+        },
+        {
+          "t": "Eine Rate unter Kontrolle",
+          "b": "Der Rechner liefert sofort eine Schätzung; Ihr Berater passt sie an Ihre tatsächliche Situation an."
+        },
+        {
+          "t": "Ein fester Ansprechpartner",
+          "b": "Ein Berater begleitet Ihre Akte von Anfang bis Ende, per Telefon oder Videoanruf."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Was ist der Unterschied zwischen Modernisierungskredit und Privatkredit?",
+          "a": "Der Modernisierungskredit ist an bestimmte Arbeiten laut Kostenvoranschlag gebunden; der Privatkredit ist frei verwendbar. Wir zeigen Ihnen die günstigere Variante."
+        },
+        {
+          "q": "Kann ich meine Monatsrate vor der Anfrage berechnen?",
+          "a": "Ja, der Rechner auf der Website ist kostenlos und unverbindlich. Er liefert eine unverbindliche Schätzung ohne Versicherung und Gebühren."
+        },
+        {
+          "q": "Verpflichtet mich ein Kredit?",
+          "a": "Ja. Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten: Wir helfen Ihnen dabei."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Crowdlending: Ihr Vorhaben mit geprüften Investoren finanzieren",
+      "metaDescription": "Auf dem Lentific-Marktplatz finanzieren Investoren mit geprüfter Identität Projekte, mit Vertrag und Begleitung wie bei einem klassischen Kredit.",
+      "h1": "Crowdlending: geprüfte Investoren finanzieren Ihr Projekt",
+      "intro": "Ihr Projekt kann auch direkt von Investoren unserer Plattform finanziert werden. Jeder Investor wird geprüft, jede Finanzierung erhält einen Vertrag, und Sie verfolgen alles in Ihrem Kundenbereich.",
+      "points": [
+        {
+          "t": "Geprüfte Investoren",
+          "b": "Wir prüfen Identität und Kreditkapazität der Investoren, bevor sie ein Projekt finanzieren können."
+        },
+        {
+          "t": "Ein ordentlicher Vertrag",
+          "b": "Der Vertrag wird automatisch in Ihrer Sprache erstellt, mit vollständigem Tilgungsplan."
+        },
+        {
+          "t": "Transparente Begleitung",
+          "b": "Gesammelter Betrag, Investoren, Raten: alles ist in Ihrem Bereich sichtbar."
+        },
+        {
+          "t": "Für Kreditnehmer und Investoren",
+          "b": "Sie haben Kapital? Veröffentlichen Sie Ihr Angebot und entdecken Sie Projekte, die eine Finanzierung suchen."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kann mein Kredit von Privatpersonen finanziert werden?",
+          "a": "Ja, je nach Projekt: Auf unserem Marktplatz finanzieren Investoren, deren Identität wir geprüft haben, Projekte – mit Vertrag und Begleitung wie bei einem klassischen Kredit."
+        },
+        {
+          "q": "Wie vermeide ich Betrug bei Privatkrediten?",
+          "a": "Seien Sie vorsichtig bei einer „Privatperson“, die Ihnen im Internet einen Kredit anbietet und Vorabgebühren verlangt: eine häufige Betrugsmasche. Bei Lentific sind die Investoren geprüft."
+        },
+        {
+          "q": "Wie werde ich Investor?",
+          "a": "Legen Sie ein Investorenkonto an, lassen Sie Ihre Identität und die Herkunft Ihrer Mittel prüfen und sehen Sie sich die Projekte auf dem Marktplatz an."
+        }
+      ]
+    }
   }
 }

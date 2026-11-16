@@ -8,8 +8,20 @@ import { CountryBadge } from "./components/CountryBadge";
 import { HeroEstimator } from "./components/HeroEstimator";
 import { ServicesSection, AboutSection, FaqSection, ContactSection, SiteFooter } from "./components/BrokerSections";
 import { PremiumHomeSection } from "./components/PremiumPromo";
+import { SeoJsonLd } from "./components/SeoJsonLd";
+import type { Metadata } from "next";
+import { getLocale } from "next-intl/server";
+import { pageMetadata } from "../lib/seo";
+import type { Locale } from "../i18n/locales";
 
 const STEP_NUMBERS = ["01", "02", "03", "04", "05"];
+
+/** « / » : version par défaut (x-default) de l accueil, reliée aux 8 adresses par langue. */
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  const t = await getTranslations("Seo");
+  return pageMetadata({ locale, title: t("homeTitle"), description: t("homeDescription"), keywords: t("keywords"), path: "/", pathFor: (l) => `/${l}`, xDefault: "/" });
+}
 
 export default async function LandingPage({ searchParams }: { searchParams: { contact?: string } }) {
   const t = await getTranslations("LandingPage");
@@ -42,6 +54,7 @@ export default async function LandingPage({ searchParams }: { searchParams: { co
 
   return (
     <main>
+      <SeoJsonLd />
       {/* Hero (maquette Lentific : message courtier + estimation de mensualité) */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand to-brand-ink px-6 py-14 text-white sm:px-12 sm:py-20">
         <div className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-sand/20 blur-3xl" />

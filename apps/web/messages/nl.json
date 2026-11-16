@@ -1102,5 +1102,178 @@
     "accept": "Accepteren",
     "refuse": "Weigeren",
     "learnMore": "Meer informatie"
+  },
+  "Seo": {
+    "homeTitle": "Online kredietbemiddelaar: hypotheek, schulden samenvoegen en persoonlijke lening",
+    "homeDescription": "Lentific vergelijkt voor u de aanbiedingen van banken en geverifieerde investeerders: hypotheek, leningen oversluiten en samenvoegen, verbouwingslening, persoonlijke lening en crowdfunding. Gratis analyse, honorarium alleen als uw lening wordt toegekend.",
+    "simulatorTitle": "Gratis leningsimulator: bereken uw maandlast",
+    "simulatorDescription": "Bereken in enkele seconden de maandlast, totale kosten en rente van uw hypotheek, persoonlijke lening of verbouwingslening. Gratis en vrijblijvend.",
+    "marketplaceTitle": "Crowdfunding: projecten om te financieren en investeerders",
+    "marketplaceDescription": "Ontdek projecten die financiering zoeken en het kapitaal van geverifieerde investeerders op het crowdfundingplatform Lentific.",
+    "keywords": "lening, krediet, kredietbemiddelaar, hypotheek, woonkrediet, leningen samenvoegen, persoonlijke lening, verbouwingslening, consumentenkrediet, financiering, bedrijfslening, crowdfunding, lening tussen particulieren, leningsimulator"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · online kredietbemiddelaar",
+      "pointsTitle": "Waarom Lentific",
+      "faqTitle": "Veelgestelde vragen",
+      "ctaTitle": "Laten we het over uw project hebben",
+      "ctaText": "Gratis en vrijblijvende analyse. Ons honorarium is alleen verschuldigd als u uw lening krijgt.",
+      "ctaButton": "Gratis analyse aanvragen",
+      "simulator": "Mijn maandlast berekenen",
+      "otherServices": "Onze andere financieringsoplossingen"
+    },
+    "mortgage": {
+      "metaTitle": "Hypotheek: vergelijk aanbiedingen en krijg de beste rente",
+      "metaDescription": "Aankoop, nieuwbouw of oversluiten: Lentific vergelijkt de hypotheekaanbiedingen van meerdere banken en stelt uw dossier op. Gratis analyse, honorarium alleen als uw lening wordt toegekend.",
+      "h1": "Hypotheek: de juiste lening voor uw woning",
+      "intro": "Aankoop van uw eigen woning, beleggingspand, nieuwbouw of het oversluiten van uw huidige lening: wij vergelijken de aanbiedingen van meerdere banken, stellen een sterk dossier op en verdedigen het om de beste voorwaarden te krijgen.",
+      "points": [
+        {
+          "t": "Meerdere banken vergeleken",
+          "b": "We zijn onafhankelijk en aan geen enkele bank gebonden: we dienen uw dossier in waar het de meeste kans op een goede rente heeft."
+        },
+        {
+          "t": "Uw dossier voor u opgesteld",
+          "b": "We verzamelen de documenten, zetten uw profiel goed neer en bereiden de gesprekken met de bank voor."
+        },
+        {
+          "t": "Online opvolging, stap voor stap",
+          "b": "Van de aanvraag tot de uitbetaling volgt u de voortgang in uw persoonlijke omgeving."
+        },
+        {
+          "t": "Honorarium bij succes",
+          "b": "Ons honorarium wordt vanaf het begin schriftelijk vastgelegd en is pas verschuldigd zodra uw lening is toegekend."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welke documenten heb ik nodig voor een hypotheek?",
+          "a": "Identiteitsbewijs, uw laatste drie loonstroken, uw laatste twee belastingaanslagen, uw laatste drie rekeningafschriften en de koopovereenkomst of offertes. U uploadt ze in uw beveiligde omgeving."
+        },
+        {
+          "q": "Hoe lang duurt het om een hypotheek te krijgen?",
+          "a": "Meestal vier tot acht weken tussen het eerste gesprek en het leningaanbod, afhankelijk van de bank en de complexiteit van het dossier."
+        },
+        {
+          "q": "Kunt u een lopende hypotheek heronderhandelen?",
+          "a": "Ja. We vergelijken uw huidige lening met de aanbiedingen op de markt en vertellen u of heronderhandelen of oversluiten naar een andere bank de moeite waard is."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Leningen samenvoegen: één lagere maandlast",
+      "metaDescription": "Voeg uw leningen samen tot één lening om uw maandlast te verlagen en uw budget te ontlasten. Gratis analyse door Lentific, honorarium alleen als het lukt.",
+      "h1": "Leningen samenvoegen: één maandlast, meer ademruimte",
+      "intro": "Consumentenkredieten, autolening, hypotheek, rood staan: we bekijken al uw leningen en zoeken een oplossing die ze samenvoegt tot één, met een maandlast die bij uw budget past.",
+      "points": [
+        {
+          "t": "Eén maandlast",
+          "b": "Eén lening, één afschrijving: uw budget wordt overzichtelijker."
+        },
+        {
+          "t": "Een lagere maandlast",
+          "b": "Door de looptijd aan te passen kan de maandlast flink dalen. We tonen u ook het effect op de totale kosten."
+        },
+        {
+          "t": "Een volledige, eerlijke analyse",
+          "b": "We zeggen u duidelijk of samenvoegen voor u interessant is, en zo niet, waarom."
+        },
+        {
+          "t": "Geen kosten vooraf",
+          "b": "Vóór de toekenning van uw lening mag geen enkele betaling worden geëist: ons honorarium is alleen bij succes verschuldigd."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Welke leningen kunnen worden samengevoegd?",
+          "a": "Consumentenkredieten, doorlopende kredieten, autoleningen, persoonlijke leningen en, afhankelijk van het geval, de hypotheek en andere schulden."
+        },
+        {
+          "q": "Is samenvoegen duurder?",
+          "a": "Een langere looptijd verlaagt de maandlast maar kan de totale kosten verhogen. We tonen u beide bedragen vóór elke beslissing."
+        },
+        {
+          "q": "Hoe lang duurt het samenvoegen van leningen?",
+          "a": "Afhankelijk van het dossier enkele weken tussen het eerste gesprek en de uitbetaling. U volgt elke stap online."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Persoonlijke lening en verbouwingslening: vergelijk en financier uw project",
+      "metaDescription": "Verbouwing, auto, liquiditeit: Lentific vergelijkt de aanbiedingen van meerdere kredietgevers voor persoonlijke leningen en verbouwingsleningen. Gratis simulatie en analyse.",
+      "h1": "Persoonlijke lening en verbouwingslening: financier uw plannen",
+      "intro": "Energiezuinige renovatie, uitbouw, aankoop van een auto of behoefte aan liquiditeit: we vinden een lening die bij uw project past, vergeleken tussen meerdere kredietgevers, met een maandlast die uw budget respecteert.",
+      "points": [
+        {
+          "t": "Meerdere kredietgevers vergeleken",
+          "b": "Banken en geverifieerde investeerders van ons platform: u ziet de aanbiedingen naast elkaar."
+        },
+        {
+          "t": "Een snel antwoord",
+          "b": "Dossier 100% online, en met de optie „Prioritair dossier” kan uw lening binnen één tot drie weken worden toegekend."
+        },
+        {
+          "t": "Een beheerste maandlast",
+          "b": "De simulator geeft meteen een schatting; uw adviseur stemt die af op uw werkelijke situatie."
+        },
+        {
+          "t": "Eén aanspreekpunt",
+          "b": "Eén adviseur volgt uw dossier van begin tot eind, telefonisch of via videogesprek."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Wat is het verschil tussen een verbouwingslening en een persoonlijke lening?",
+          "a": "Een verbouwingslening is gekoppeld aan specifieke werken op basis van offertes; een persoonlijke lening is vrij te besteden. We wijzen u de voordeligste formule aan."
+        },
+        {
+          "q": "Kan ik mijn maandlast berekenen voordat ik aanvraag?",
+          "a": "Ja, de simulator op de site is gratis en vrijblijvend. Hij geeft een indicatieve schatting, zonder verzekering en kosten."
+        },
+        {
+          "q": "Verbindt een lening mij?",
+          "a": "Ja. Een lening verbindt u en moet worden terugbetaald. Controleer of u de aflossingen kunt dragen voordat u zich verbindt: wij helpen u daarbij."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Crowdfunding: financier uw project met geverifieerde investeerders",
+      "metaDescription": "Op de marktplaats van Lentific financieren investeerders met een geverifieerde identiteit projecten, met een contract en opvolging zoals bij een klassieke lening.",
+      "h1": "Crowdfunding: geverifieerde investeerders financieren uw project",
+      "intro": "Uw project kan ook rechtstreeks worden gefinancierd door investeerders van ons platform. Elke investeerder wordt geverifieerd, elke financiering krijgt een contract en u volgt alles in uw persoonlijke omgeving.",
+      "points": [
+        {
+          "t": "Geverifieerde investeerders",
+          "b": "We controleren de identiteit en de leencapaciteit van investeerders voordat ze een project kunnen financieren."
+        },
+        {
+          "t": "Een degelijk contract",
+          "b": "Het contract wordt automatisch in uw taal opgesteld, met het volledige aflossingsschema."
+        },
+        {
+          "t": "Transparante opvolging",
+          "b": "Opgehaald bedrag, investeerders, aflossingen: alles is zichtbaar in uw omgeving."
+        },
+        {
+          "t": "Voor kredietnemers en investeerders",
+          "b": "Hebt u kapitaal? Publiceer uw aanbod en ontdek projecten die financiering zoeken."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Kan mijn lening door particulieren worden gefinancierd?",
+          "a": "Ja, afhankelijk van uw project: op onze marktplaats financieren investeerders van wie we de identiteit hebben geverifieerd projecten, met een contract en opvolging zoals bij een klassieke lening."
+        },
+        {
+          "q": "Hoe vermijd ik oplichting bij leningen tussen particulieren?",
+          "a": "Wees op uw hoede voor een „particulier” die u online een lening aanbiedt en vooraf kosten vraagt: een veelvoorkomende oplichting. Bij Lentific zijn de investeerders geverifieerd."
+        },
+        {
+          "q": "Hoe word ik investeerder?",
+          "a": "Maak een investeerdersaccount aan, laat uw identiteit en de herkomst van uw middelen verifiëren en bekijk daarna de projecten op de marktplaats."
+        }
+      ]
+    }
   }
 }

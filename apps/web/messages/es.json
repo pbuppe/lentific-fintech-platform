@@ -1102,5 +1102,178 @@
     "accept": "Aceptar",
     "refuse": "Rechazar",
     "learnMore": "Más información"
+  },
+  "Seo": {
+    "homeTitle": "Bróker de créditos online: hipotecas, reunificación de deudas y préstamos personales",
+    "homeDescription": "Lentific compara por usted las ofertas de bancos e inversores verificados: hipotecas, reunificación de deudas, préstamos para reformas, préstamos personales y financiación participativa. Estudio gratuito, honorarios solo si obtiene su préstamo.",
+    "simulatorTitle": "Simulador de préstamos gratuito: calcule su cuota mensual",
+    "simulatorDescription": "Calcule en segundos la cuota, el coste total y el tipo de su hipoteca, préstamo personal o préstamo para reformas. Simulación gratuita y sin compromiso.",
+    "marketplaceTitle": "Financiación participativa: proyectos para financiar e inversores",
+    "marketplaceDescription": "Descubra los proyectos que buscan financiación y los capitales ofrecidos por inversores verificados en la plataforma de financiación participativa Lentific.",
+    "keywords": "préstamo, crédito, bróker hipotecario, hipoteca, préstamo hipotecario, reunificación de deudas, préstamo personal, préstamo para reformas, crédito al consumo, financiación, crowdlending, préstamo entre particulares, simulador de préstamos"
+  },
+  "CreditPages": {
+    "common": {
+      "eyebrow": "Lentific · bróker de créditos online",
+      "pointsTitle": "Por qué elegir Lentific",
+      "faqTitle": "Preguntas frecuentes",
+      "ctaTitle": "Hablemos de su proyecto",
+      "ctaText": "Estudio gratuito y sin compromiso. Nuestros honorarios solo se pagan si obtiene su préstamo.",
+      "ctaButton": "Solicitar un estudio gratuito",
+      "simulator": "Calcular mi cuota",
+      "otherServices": "Nuestras otras soluciones de financiación"
+    },
+    "mortgage": {
+      "metaTitle": "Hipoteca: compare ofertas y consiga el mejor tipo de interés",
+      "metaDescription": "Compra, construcción o mejora de hipoteca: Lentific compara las ofertas hipotecarias de varios bancos y prepara su expediente. Estudio gratuito, honorarios solo si obtiene su préstamo.",
+      "h1": "Hipoteca: el préstamo adecuado para su vivienda",
+      "intro": "Compra de su vivienda habitual, inversión para alquilar, construcción o mejora de su hipoteca actual: comparamos las ofertas de varios bancos, preparamos un expediente sólido y lo defendemos para conseguir las mejores condiciones.",
+      "points": [
+        {
+          "t": "Varios bancos comparados",
+          "b": "Somos independientes y no estamos ligados a ninguna entidad: presentamos su expediente donde tiene más posibilidades de obtener un buen tipo."
+        },
+        {
+          "t": "Un expediente preparado para usted",
+          "b": "Reunimos los documentos, destacamos su perfil y preparamos las conversaciones con el banco."
+        },
+        {
+          "t": "Seguimiento online, paso a paso",
+          "b": "Desde la solicitud hasta el desembolso de los fondos, sigue el avance desde su espacio."
+        },
+        {
+          "t": "Honorarios por éxito",
+          "b": "Nuestros honorarios se fijan por escrito desde el principio y solo se pagan una vez obtenido su préstamo."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué documentos necesito para una hipoteca?",
+          "a": "Documento de identidad, las tres últimas nóminas, las dos últimas declaraciones de la renta, los tres últimos extractos bancarios y el contrato de arras o los presupuestos. Los envía desde su espacio seguro."
+        },
+        {
+          "q": "¿Cuánto se tarda en conseguir una hipoteca?",
+          "a": "Por lo general, de cuatro a ocho semanas entre el primer contacto y la oferta de préstamo, según el banco y la complejidad del expediente."
+        },
+        {
+          "q": "¿Pueden mejorar mi hipoteca actual?",
+          "a": "Sí. Comparamos su préstamo actual con las ofertas del mercado y le indicamos si le conviene renegociarlo o cambiar de banco."
+        }
+      ]
+    },
+    "consolidation": {
+      "metaTitle": "Reunificación de deudas: una sola cuota más baja",
+      "metaDescription": "Agrupe sus préstamos en uno solo para reducir su cuota mensual y aliviar su presupuesto. Estudio gratuito de Lentific, honorarios solo si la operación sale adelante.",
+      "h1": "Reunificación de deudas: una sola cuota para respirar",
+      "intro": "Créditos al consumo, préstamo de coche, hipoteca, descubiertos: estudiamos todos sus préstamos y buscamos una solución que los agrupe en uno solo, con una cuota adaptada a su presupuesto.",
+      "points": [
+        {
+          "t": "Una sola cuota",
+          "b": "Un solo préstamo, un solo cargo: su presupuesto es más fácil de controlar."
+        },
+        {
+          "t": "Una cuota más baja",
+          "b": "Ajustando el plazo, la cuota puede bajar de forma notable. También le mostramos el efecto en el coste total."
+        },
+        {
+          "t": "Un estudio completo y honesto",
+          "b": "Le decimos con claridad si la reunificación le conviene y, si no, por qué."
+        },
+        {
+          "t": "Sin gastos por adelantado",
+          "b": "No se le puede exigir ningún pago antes de obtener su préstamo: nuestros honorarios solo se pagan en caso de éxito."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué préstamos se pueden reunificar?",
+          "a": "Créditos al consumo, tarjetas revolving, préstamos de coche, préstamos personales y, según el caso, la hipoteca y otras deudas."
+        },
+        {
+          "q": "¿La reunificación sale más cara?",
+          "a": "Alargar el plazo reduce la cuota pero puede aumentar el coste total. Le mostramos ambas cifras antes de cualquier decisión."
+        },
+        {
+          "q": "¿Cuánto tarda una reunificación de deudas?",
+          "a": "Según el expediente, unas semanas entre el primer contacto y el desembolso. Sigue cada etapa online."
+        }
+      ]
+    },
+    "works": {
+      "metaTitle": "Préstamo personal y para reformas: compare y financie su proyecto",
+      "metaDescription": "Reformas, coche, liquidez: Lentific compara las ofertas de préstamos personales y para reformas de varios prestamistas. Simulación y estudio gratuitos.",
+      "h1": "Préstamo personal y para reformas: financie sus proyectos",
+      "intro": "Rehabilitación energética, ampliación, compra de un coche o necesidad de liquidez: encontramos un préstamo adaptado a su proyecto, comparado entre varios prestamistas, con una cuota que respeta su presupuesto.",
+      "points": [
+        {
+          "t": "Varios prestamistas comparados",
+          "b": "Bancos e inversores verificados de nuestra plataforma: ve las ofertas una al lado de otra."
+        },
+        {
+          "t": "Una respuesta rápida",
+          "b": "Expediente 100 % online y, con la opción «Expediente prioritario», su préstamo puede obtenerse en una a tres semanas."
+        },
+        {
+          "t": "Una cuota bajo control",
+          "b": "El simulador le da una estimación inmediata; su asesor la ajusta a su situación real."
+        },
+        {
+          "t": "Un único interlocutor",
+          "b": "Un asesor sigue su expediente de principio a fin, por teléfono o videollamada."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Qué diferencia hay entre un préstamo para reformas y un préstamo personal?",
+          "a": "El préstamo para reformas se destina a obras concretas, según presupuesto; el préstamo personal es de libre uso. Le orientamos hacia la fórmula más ventajosa."
+        },
+        {
+          "q": "¿Puedo calcular mi cuota antes de solicitarlo?",
+          "a": "Sí, el simulador del sitio es gratuito y sin compromiso. Ofrece una estimación orientativa, sin seguro ni gastos."
+        },
+        {
+          "q": "¿Un préstamo me compromete?",
+          "a": "Sí. Un préstamo le compromete y debe devolverse. Compruebe su capacidad de reembolso antes de comprometerse: le ayudamos a hacerlo."
+        }
+      ]
+    },
+    "crowd": {
+      "metaTitle": "Financiación participativa: financie su proyecto con inversores verificados",
+      "metaDescription": "En la marketplace de Lentific, inversores con identidad verificada financian proyectos, con contrato y seguimiento como en un préstamo tradicional.",
+      "h1": "Financiación participativa: inversores verificados financian su proyecto",
+      "intro": "Su proyecto también puede ser financiado directamente por inversores de nuestra plataforma. Cada inversor está verificado, cada financiación tiene su contrato y usted lo sigue todo desde su espacio.",
+      "points": [
+        {
+          "t": "Inversores verificados",
+          "b": "Comprobamos la identidad y la capacidad de préstamo de los inversores antes de que puedan financiar un proyecto."
+        },
+        {
+          "t": "Un contrato en regla",
+          "b": "El contrato se genera automáticamente en su idioma, con el calendario de pagos completo."
+        },
+        {
+          "t": "Un seguimiento transparente",
+          "b": "Importe recaudado, inversores, vencimientos: todo es visible en su espacio."
+        },
+        {
+          "t": "Para prestatarios e inversores",
+          "b": "¿Tiene capital? Publique su oferta y descubra los proyectos que buscan financiación."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Pueden financiar mi préstamo particulares?",
+          "a": "Sí, según su proyecto: en nuestra marketplace, inversores cuya identidad hemos verificado financian proyectos, con contrato y seguimiento como en un préstamo tradicional."
+        },
+        {
+          "q": "¿Cómo evitar las estafas de préstamos entre particulares?",
+          "a": "Desconfíe de un «particular» que le ofrece un préstamo por Internet pidiéndole gastos por adelantado: es una estafa frecuente. En Lentific, los inversores están verificados."
+        },
+        {
+          "q": "¿Cómo hacerse inversor?",
+          "a": "Cree una cuenta de inversor, haga verificar su identidad y el origen de sus fondos, y consulte los proyectos de la marketplace."
+        }
+      ]
+    }
   }
 }
