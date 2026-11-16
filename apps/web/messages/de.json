@@ -945,7 +945,8 @@
       "noFeeBefore": "Vor Erhalt eines oder mehrerer Kredite darf keinerlei Zahlung verlangt werden.",
       "copyright": "© {year} {company}. Alle Rechte vorbehalten.",
       "contactPerson": "Ihr Ansprechpartner: {name}",
-      "cookies": "Cookies verwalten"
+      "cookies": "Cookies verwalten",
+      "privacy": "Datenschutz"
     }
   },
   "CreditsSummary": {
@@ -1087,6 +1088,7 @@
     "title": "Ihre Privatsphäre",
     "text": "Mit Ihrer Einwilligung verwenden wir Cookies zur Reichweitenmessung, um zu verstehen, wie die Website genutzt wird (aufgerufene Seiten, Pfade, Klicks), und sie zu verbessern. Wenn Sie ablehnen, zählen wir den Besuch nur anonym (Land, ungefähre Stadt, Gerätetyp), ohne Cookies. Sie können Ihre Wahl jederzeit unten auf der Seite ändern.",
     "accept": "Akzeptieren",
-    "refuse": "Ablehnen"
+    "refuse": "Ablehnen",
+    "learnMore": "Mehr erfahren"
   }
 }

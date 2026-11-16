@@ -210,6 +210,7 @@ export async function SiteFooter() {
           <a href="/marketplace" className="hover:text-ink">{t("marketplace")}</a>
           <a href="#faq" className="hover:text-ink">{t("faq")}</a>
           <a href="/login" className="hover:text-ink">{t("login")}</a>
+          <a href="/confidentialite" className="hover:text-ink">{t("privacy")}</a>
           <CookieSettingsLink label={t("cookies")} />
         </div>
         <div className="text-xs leading-relaxed text-ink-faint">

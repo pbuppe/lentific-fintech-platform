@@ -945,7 +945,8 @@
       "noFeeBefore": "Nenhum pagamento, de qualquer natureza, pode ser exigido antes da obtenção de um ou mais empréstimos.",
       "copyright": "© {year} {company}. Todos os direitos reservados.",
       "contactPerson": "O seu interlocutor: {name}",
-      "cookies": "Gerir cookies"
+      "cookies": "Gerir cookies",
+      "privacy": "Privacidade"
     }
   },
   "CreditsSummary": {
@@ -1087,6 +1088,7 @@
     "title": "A sua privacidade",
     "text": "Com o seu consentimento, utilizamos cookies de medição de audiência para perceber como o site é utilizado (páginas vistas, percursos, cliques) e melhorá-lo. Se recusar, apenas contamos a visita de forma anónima (país, cidade aproximada, tipo de dispositivo), sem cookies. Pode mudar de ideias a qualquer momento no fundo da página.",
     "accept": "Aceitar",
-    "refuse": "Recusar"
+    "refuse": "Recusar",
+    "learnMore": "Saber mais"
   }
 }

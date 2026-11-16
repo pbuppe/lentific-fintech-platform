@@ -22,7 +22,7 @@ function getOrCreateVisitorId(): string {
   const existing = readCookie(VISITOR_COOKIE_NAME);
   if (existing) return existing;
   const id = crypto.randomUUID();
-  document.cookie = `${VISITOR_COOKIE_NAME}=${id}; path=/; max-age=63072000; samesite=lax`; // 2 ans
+  document.cookie = `${VISITOR_COOKIE_NAME}=${id}; path=/; max-age=34128000; samesite=lax`; // 13 mois (durée maximale recommandée par la CNIL)
   return id;
 }
 

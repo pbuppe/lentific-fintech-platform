@@ -945,7 +945,8 @@
       "noFeeBefore": "Aucun versement, de quelque nature que ce soit, ne peut être exigé avant l'obtention d'un ou plusieurs prêts.",
       "copyright": "© {year} {company}. Tous droits réservés.",
       "contactPerson": "Votre interlocuteur : {name}",
-      "cookies": "Gérer les cookies"
+      "cookies": "Gérer les cookies",
+      "privacy": "Confidentialité"
     }
   },
   "CreditsSummary": {
@@ -1087,6 +1088,7 @@
     "title": "Votre vie privée",
     "text": "Avec votre accord, nous utilisons des cookies de mesure d'audience pour comprendre comment le site est utilisé (pages consultées, parcours, clics) et l'améliorer. Si vous refusez, nous comptons seulement la visite de façon anonyme (pays, ville approximative, type d'appareil), sans cookie. Vous pouvez changer d'avis à tout moment en bas de page.",
     "accept": "Accepter",
-    "refuse": "Refuser"
+    "refuse": "Refuser",
+    "learnMore": "En savoir plus"
   }
 }

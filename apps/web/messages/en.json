@@ -945,7 +945,8 @@
       "noFeeBefore": "No payment of any kind may be required before one or more loans are obtained.",
       "copyright": "© {year} {company}. All rights reserved.",
       "contactPerson": "Your contact: {name}",
-      "cookies": "Manage cookies"
+      "cookies": "Manage cookies",
+      "privacy": "Privacy"
     }
   },
   "CreditsSummary": {
@@ -1087,6 +1088,7 @@
     "title": "Your privacy",
     "text": "With your consent, we use audience measurement cookies to understand how the site is used (pages viewed, journeys, clicks) and to improve it. If you decline, we only count the visit anonymously (country, approximate city, device type), without cookies. You can change your mind at any time at the bottom of the page.",
     "accept": "Accept",
-    "refuse": "Decline"
+    "refuse": "Decline",
+    "learnMore": "Learn more"
   }
 }
