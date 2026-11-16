@@ -945,7 +945,8 @@
       "noFeeBefore": "Vóór het verkrijgen van een of meer leningen mag geen enkele betaling worden geëist.",
       "copyright": "© {year} {company}. Alle rechten voorbehouden.",
       "contactPerson": "Uw contactpersoon: {name}",
-      "cookies": "Cookies beheren"
+      "cookies": "Cookies beheren",
+      "privacy": "Privacy"
     }
   },
   "CreditsSummary": {
@@ -1087,6 +1088,7 @@
     "title": "Uw privacy",
     "text": "Met uw toestemming gebruiken we cookies voor bezoekersmeting om te begrijpen hoe de website wordt gebruikt (bekeken pagina's, trajecten, klikken) en om hem te verbeteren. Als u weigert, tellen we het bezoek alleen anoniem (land, globale stad, type apparaat), zonder cookies. U kunt uw keuze altijd onderaan de pagina wijzigen.",
     "accept": "Accepteren",
-    "refuse": "Weigeren"
+    "refuse": "Weigeren",
+    "learnMore": "Meer informatie"
   }
 }

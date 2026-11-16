@@ -945,7 +945,8 @@
       "noFeeBefore": "Egy vagy több hitel megszerzése előtt semmilyen fizetés nem kérhető.",
       "copyright": "© {year} {company}. Minden jog fenntartva.",
       "contactPerson": "Kapcsolattartó: {name}",
-      "cookies": "Sütibeállítások"
+      "cookies": "Sütibeállítások",
+      "privacy": "Adatvédelem"
     }
   },
   "CreditsSummary": {
@@ -1087,6 +1088,7 @@
     "title": "Adatvédelem",
     "text": "Hozzájárulása esetén látogatottságmérő sütiket használunk, hogy megértsük, hogyan használják az oldalt (megtekintett oldalak, útvonalak, kattintások), és fejlesszük azt. Ha elutasítja, a látogatást csak névtelenül számoljuk (ország, hozzávetőleges város, eszköztípus), sütik nélkül. Döntését bármikor megváltoztathatja az oldal alján.",
     "accept": "Elfogadom",
-    "refuse": "Elutasítom"
+    "refuse": "Elutasítom",
+    "learnMore": "Bővebben"
   }
 }

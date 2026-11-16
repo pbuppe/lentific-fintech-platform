@@ -53,7 +53,7 @@ export function CookieConsentBanner() {
     <div role="dialog" aria-live="polite" aria-label={t("title")} className="fixed inset-x-0 bottom-0 z-50 p-3 sm:p-4">
       <div className="mx-auto max-w-3xl rounded-2xl border border-line bg-white p-4 shadow-xl sm:p-5">
         <p className="font-display text-base font-semibold text-ink">{t("title")}</p>
-        <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{t("text")}</p>
+        <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{t("text")}{" "}<a href="/confidentialite" className="font-semibold text-brand underline">{t("learnMore")}</a></p>
         <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:justify-end">
           <button type="button" onClick={() => choose("essential")} className="rounded-lg border border-ink/20 bg-white px-4 py-2.5 text-sm font-semibold text-ink hover:bg-surface-alt">
             {t("refuse")}

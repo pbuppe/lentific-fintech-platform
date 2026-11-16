@@ -23,5 +23,12 @@ export async function GET(request: NextRequest) {
   const eur = await prisma.currency.findUnique({ where: { code: "EUR" } });
   const subscriptions = eur ? await processDueSubscriptions(eur.id) : 0;
   const slaBreaches = await checkSlaBreaches();
-  return NextResponse.json({ ok: true, subscriptions, slaBreaches });
+  // Statistiques de visite conservées 25 mois (politique de confidentialité, /confidentialite).
+  const cutoff = new Date();
+  cutoff.setMonth(cutoff.getMonth() - 25);
+  const [oldEvents, oldViews] = await Promise.all([
+    prisma.trackEvent.deleteMany({ where: { createdAt: { lt: cutoff } } }),
+    prisma.pageView.deleteMany({ where: { createdAt: { lt: cutoff } } }),
+  ]);
+  return NextResponse.json({ ok: true, subscriptions, slaBreaches, purgedStats: oldEvents.count + oldViews.count });
 }
