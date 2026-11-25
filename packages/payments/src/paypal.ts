@@ -73,29 +73,6 @@ async function call<T>(path: string, init: { method: string; body?: unknown; req
   return json;
 }
 
-/**
- * Compte PayPal relié aux identifiants (page temporaire super admin
- * /verification-paypal). Crée une commande de 1 EUR qui n'est JAMAIS
- * approuvée ni capturée (aucun argent ne bouge, elle expire seule chez
- * PayPal) et lit le bénéficiaire que PayPal y renseigne automatiquement.
- */
-export async function getPaypalPayeeAccount() {
-  const created = await call<{ id: string }>("/v2/checkout/orders", {
-    method: "POST",
-    body: {
-      intent: "CAPTURE",
-      purchase_units: [{ amount: { currency_code: "EUR", value: "1.00" }, description: "Vérification du compte (non payée)" }],
-    },
-  });
-  // La réponse de création est minimale : on relit la commande complète.
-  const order = await call<{ purchase_units?: Array<{ payee?: { email_address?: string; merchant_id?: string } }> }>(
-    `/v2/checkout/orders/${created.id}`,
-    { method: "GET" },
-  );
-  const payee = order.purchase_units?.[0]?.payee ?? {};
-  return { email: payee.email_address ?? null, merchantId: payee.merchant_id ?? null, mode: paypalMode() };
-}
-
 export async function createPaypalOrder(input: {
   amount: number;
   currency: string;
