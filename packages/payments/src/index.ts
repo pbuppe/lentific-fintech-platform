@@ -90,7 +90,7 @@ export async function applyPriority(applicationId: string) {
 // isPaypalConfigured() est faux et les pages gardent le paiement simulé.
 // ---------------------------------------------------------------------------
 
-export { isPaypalConfigured, paypalMode, PaypalError, getPaypalPayeeAccount } from "./paypal";
+export { isPaypalConfigured, paypalMode, PaypalError } from "./paypal";
 export {
   PREMIUM_TIER,
   BORROWER_PREMIUM_TIER,
